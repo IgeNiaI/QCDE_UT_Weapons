@@ -16,8 +16,8 @@ Actor TriboltPickup : CustomInventory 15604
 	Radius 20
 	Scale 0.6
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTBioRifle" // "Picked up a Tribolt."
-	Tag "$TAG_UTBioRifle" // "Tribolt"
+	Inventory.PickupMessage "$GOT_UTBioRifle"
+	Tag "$TAG_UTBioRifle"
 	Inventory.RespawnTics 35
 	States
 	{
@@ -74,9 +74,9 @@ Actor QCTribolt : QCWeapon
 	Weapon.AmmoGive 30
 	Weapon.AmmoType "QCBoltAmmo"
 	Weapon.AmmoType2 "QCBoltAmmo"
-	Inventory.PickupMessage "$GOT_UTBioRifle" // "Picked up a Tribolt."
-	Obituary "$OB_UTBioRifle" // "%o was bolted by %k."
-	Tag "$TAG_UTBioRifle" // "Tribolt"
+	Inventory.PickupMessage "$GOT_UTBioRifle"
+	Obituary "$OB_UTBioRifle"
+	Tag "$TAG_UTBioRifle"
 	Scale 0.6
 	States
 	{
@@ -654,7 +654,7 @@ Actor QCTriboltDM : QCTribolt
 {	
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTBioRifle" // "Tribolt (DM)"
+	Tag "$TAG_UTBioRifle"
 	Weapon.AmmoGive 20
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 2

@@ -17,8 +17,8 @@ Actor RailgunPickup : CustomInventory 15607
 	Radius 20
 	Scale 0.63
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTLightningGun" // "Picked up a Railgun."
-	Tag "$TAG_UTLightningGun" // "Railgun"
+	Inventory.PickupMessage "$GOT_UTLightningGun"
+	Tag "$TAG_UTLightningGun"
 	Inventory.RespawnTics 35
 	States
 	{
@@ -77,9 +77,9 @@ Actor QCRailGun : QCWeapon
 	Weapon.AmmoGive1 15
 	Weapon.AmmoUse1 1
 	Weapon.SelectionOrder 1400
-	Inventory.PickupMessage "$GOT_UTLightningGun" // "Picked up a Railgun."
-	Tag "$TAG_UTLightningGun" // "Railgun"
-	Obituary "$OB_UTLightningGun" // "%o was railed by %k."
+	Inventory.PickupMessage "$GOT_UTLightningGun"
+	Tag "$TAG_UTLightningGun"
+	Obituary "$OB_UTLightningGun"
 	Decal "LGDecal"
 	Scale 0.63
 	Weapon.KickBack 90
@@ -1344,7 +1344,7 @@ Actor QCRailGunDM : QCRailGun
 {	
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTLightningGun" // "Railgun (DM)"
+	Tag "$TAG_UTLightningGun"
 	Weapon.AmmoGive1 15
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 1
@@ -1372,7 +1372,7 @@ Actor LightningGunPuff
 	Radius 10
 	Scale 0.35
 	Renderstyle Add
-	Obituary "$OB_UTLightningGun" // "%o was electrified by %k." // variation line
+	Obituary "$OB_UTLightningGun"
 	+FORCEXYBILLBOARD
 	+DONTSPLASH
 	DamageType "Electric"

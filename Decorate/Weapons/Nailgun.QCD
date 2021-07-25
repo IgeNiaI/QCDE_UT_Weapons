@@ -13,8 +13,8 @@ Actor NailgunPickup : CustomInventory
 	Radius 20
 	Scale 0.5
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTPulseMini" // "Picked up a Nailgun."
-	Tag "$TAG_UTPulseMini" // "Nailgun"
+	Inventory.PickupMessage "$GOT_UTPulseMini"
+	Tag "$TAG_UTPulseMini"
 	States
 	{
 	Spawn:
@@ -69,9 +69,9 @@ Actor QCNailgun : QCWeapon
 	Weapon.AmmoGive 50
 	Weapon.AmmoType "QCNailAmmo"
 	+INVENTORY.UNDROPPABLE
-	Obituary "$OB_UTPulseMini" // "%o was nailed by %k."
-	Inventory.PickupMessage "$GOT_UTPulseMini" // "Picked up a Nailgun."
-	Tag "$TAG_UTPulseMini" // "Nailgun"
+	Obituary "$OB_UTPulseMini"
+	Inventory.PickupMessage "$GOT_UTPulseMini"
+	Tag "$TAG_UTPulseMini"
 	Scale 0.5
 	States
 	{
@@ -175,7 +175,7 @@ Actor QCNailgunDM : QCNailgun
 {	
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTPulseMini" // "Nailgun (DM)"
+	Tag "$TAG_UTPulseMini"
 	Weapon.AmmoGive 100
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 10
@@ -187,7 +187,7 @@ Actor UTPulseWeak : FastProjectile
 {
 	Projectile
 	+FORCEXYBILLBOARD
-	Obituary "$OB_UTPulseMini" // "%o was nailed by %k."
+	Obituary "$OB_UTPulseMini"
 	Speed 52
 	Radius 4
 	Height 9

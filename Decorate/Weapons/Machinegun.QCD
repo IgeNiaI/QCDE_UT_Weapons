@@ -11,8 +11,8 @@ Actor MachinegunPickup : CustomInventory
 {
 	Scale 0.5
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTAssaltRifle" // "Picked up the Machinegun."
-	Tag "$TAG_UTAssaltRifle" // "Machinegun"
+	Inventory.PickupMessage "$GOT_UTAssaltRifle"
+	Tag "$TAG_UTAssaltRifle"
 	States
 	{
 	Spawn:
@@ -62,10 +62,10 @@ Actor QCMachineGun : QCWeapon
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 50
 	Weapon.AmmoType "QCBulletAmmo"
-	Obituary "$OB_UTAssaltRifle" // "%o was riddled with holes by %k."
+	Obituary "$OB_UTAssaltRifle"
 	+INVENTORY.UNDROPPABLE
-	Inventory.PickupMessage "$GOT_UTAssaltRifle" // "Picked up the Machinegun."
-	Tag "$TAG_UTAssaltRifle" // "Machinegun"
+	Inventory.PickupMessage "$GOT_UTAssaltRifle"
+	Tag "$TAG_UTAssaltRifle"
 	States
 	{
  	Spawn:
@@ -166,7 +166,7 @@ Actor QCMachineGunDM : QCMachineGun
 {	
 	+WEAPON.NOAUTOAIM
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTAssaltRifle" // "Machinegun (DM)"
+	Tag "$TAG_UTAssaltRifle"
 	Weapon.AmmoGive 100
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 10

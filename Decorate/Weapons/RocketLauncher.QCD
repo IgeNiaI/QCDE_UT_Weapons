@@ -16,8 +16,8 @@ Actor RocketLauncherPickup : CustomInventory 15605
 	Radius 20
 	Scale 0.69
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTRocketLauncher" // "Picked up a Rocket Launcher."
-	Tag "$TAG_UTRocketLauncher" // "RocketLauncher"
+	Inventory.PickupMessage "$GOT_UTRocketLauncher"
+	Tag "$TAG_UTRocketLauncher"
 	Inventory.RespawnTics 35
 	States
 	{
@@ -74,9 +74,9 @@ Actor QCRocketLauncher : QCWeapon
 	Weapon.AmmoGive 12
 	Weapon.AmmoType "QCRocketAmmo"
 	Weapon.AmmoType2 "QCRocketAmmo"
-	Inventory.PickupMessage "$GOT_UTRocketLauncher" // "Picked up a Rocket Launcher."
-	Obituary "$OB_UTRocketLauncher" // "%o embraced %k's rockets."
-	Tag "$TAG_UTRocketLauncher" // "Rocket Launcher"
+	Inventory.PickupMessage "$GOT_UTRocketLauncher"
+	Obituary "$OB_UTRocketLauncher"
+	Tag "$TAG_UTRocketLauncher"
 	Scale 0.69
 	States
 	{
@@ -757,7 +757,7 @@ Actor QCRocketLauncherDM : QCRocketLauncher
 {	
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTRocketLauncher" // "Rocket Launcher (DM)"
+	Tag "$TAG_UTRocketLauncher"
 	Weapon.AmmoGive 12
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 1
@@ -777,7 +777,7 @@ Actor UTRocketMissile
 	Speed 34
 	Damage (15)
 	Scale 0.6
-	Obituary "$OB_UTRocketLauncher" // "%o rode %k's rocket."
+	Obituary "$OB_UTRocketLauncher"
 	SeeSound ""
 	DeathSound "UTDE/Weapons/RocketLauncher/RocketExplo"
 	Decal "D4ExploScorch"

@@ -16,8 +16,8 @@ Actor ShotgunPickup : CustomInventory 15601
 	Radius 20
 	Scale 0.55
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTFlakMini" // "Picked up a Shotgun."
-	Tag "$TAG_UTFlakMini" // "Shotgun"
+	Inventory.PickupMessage "$GOT_UTFlakMini"
+	Tag "$TAG_UTFlakMini"
 	Inventory.RespawnTics 175
 	States
 	{
@@ -82,9 +82,9 @@ Actor QCShotgun : QCWeapon
 	Weapon.AmmoUse 1
 	Weapon.AmmoGive 15
 	Weapon.AmmoType "QCShellAmmo"
-	Obituary "$OB_UTFlakMini" // "%o was shot down by %k."
-	Inventory.PickupMessage "$GOT_UTFlakMini" // "Picked up a Shotgun."
-	Tag "$TAG_UTFlakMini" // "Shotgun"
+	Obituary "$OB_UTFlakMini"
+	Inventory.PickupMessage "$GOT_UTFlakMini"
+	Tag "$TAG_UTFlakMini"
 	Scale 0.55
 	States
 	{
@@ -207,7 +207,7 @@ Actor QCShotgunDM : QCShotgun
 {	
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTFlakMini" // "Shotgun (DM)"
+	Tag "$TAG_UTFlakMini"
 	Weapon.AmmoGive 15
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 2

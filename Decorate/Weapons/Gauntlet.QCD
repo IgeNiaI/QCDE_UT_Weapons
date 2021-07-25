@@ -11,9 +11,9 @@ Actor QCGauntlet : QCWeapon
 	Weapon.SwaySpeed 1.6
 	Weapon.Kickback 0
 	Weapon.SelectionOrder 2000
-	Inventory.PickupMessage "$GOT_UTImpactHammer" // "Picked up the Gauntlet."
-	Obituary "$OB_UTImpactHammer" // "%o got shredded by %k's gauntlet."
-	Tag "$TAG_UTImpactHammer" // "Gauntlet"
+	Inventory.PickupMessage "$GOT_UTImpactHammer"
+	Obituary "$OB_UTImpactHammer"
+	Tag "$TAG_UTImpactHammer"
 	+INVENTORY.UNDROPPABLE
 	+WEAPON.MELEEWEAPON
 	Weapon.KickBack 64
@@ -734,7 +734,7 @@ Actor GauntletPuff_DM
 	Renderstyle Add
 	Decal "GauntletDecal"
 	Scale 0.35
-	Obituary "$OB_UTImpactHammer" // "%o was pummeled by %k." // variation line
+	Obituary "$OB_UTImpactHammer"
 	States
 	{
 	Spawn:	//Hit non bleeder
@@ -765,7 +765,7 @@ Actor GauntletPuff_DM_NoFX
 	+PUFFGETSOWNER
 	+PUFFONACTORS
 	+FORCEXYBILLBOARD
-	Obituary "$OB_UTImpactHammer" // "%o tried to stop %k's rotating blade with a wrong limb." // variation line
+	Obituary "$OB_UTImpactHammer"
 	States
 	{
 	Spawn:

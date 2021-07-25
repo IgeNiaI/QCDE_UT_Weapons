@@ -16,8 +16,8 @@ Actor SuperShotgunPickup : CustomInventory 15602
 	Radius 20
 	Scale 0.66
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTFlakCannon" // "Picked up a Super Shotgun."
-	Tag "$TAG_UTFlakCannon" // "Super Shotgun"
+	Inventory.PickupMessage "$GOT_UTFlakCannon"
+	Tag "$TAG_UTFlakCannon"
 	Inventory.RespawnTics 35
 	States
 	{
@@ -440,7 +440,7 @@ Actor QCSuperShotgunDM : QCSuperShotgun
 	Weapon.AmmoUse 1
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTFlakCannon" // "Super Shotgun (DM)"
+	Tag "$TAG_UTFlakCannon"
 	Weapon.AmmoGive 15
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 2

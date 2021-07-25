@@ -16,8 +16,8 @@ Actor SuperNailgunPickup : CustomInventory 15603
 	Radius 20
 	Scale 0.67
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTPulseGun" // "Picked up a Super Nailgun."
-	Tag "$TAG_UTPulseGun" // "Super Nailgun"
+	Inventory.PickupMessage "$GOT_UTPulseGun"
+	Tag "$TAG_UTPulseGun"
 	Inventory.RespawnTics 35
 	States
 	{
@@ -82,9 +82,9 @@ Actor QCSuperNailgun : QCWeapon
 	Weapon.AmmoGive 100
 	Weapon.AmmoType "QCNailAmmo"
 	Weapon.AmmoType2 "QCNailAmmo"
-	Obituary "$OB_UTPulseGunAlt" // "%o was perforated by %k."
-	Inventory.PickupMessage "$GOT_UTPulseGun" // "Picked up a Super Nailgun."
-	Tag "$TAG_UTPulseGun" // "Super Nailgun"
+	Obituary "$OB_UTPulseGunAlt"
+	Inventory.PickupMessage "$GOT_UTPulseGun"
+	Tag "$TAG_UTPulseGun"
 	Scale 0.67
 	States
 	{
@@ -241,7 +241,7 @@ Actor QCSuperNailgunDM : QCSuperNailgun
 {	
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTPulseGun" // "Super Nailgun (DM)"
+	Tag "$TAG_UTPulseGun"
 	Weapon.AmmoGive 100
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 15
@@ -252,7 +252,7 @@ Actor UTPulseStrong : FastProjectile
 {
 	Projectile
 	+FORCEXYBILLBOARD
-	Obituary "$OB_UTPulseGun" // "%o was nailed by %k."
+	Obituary "$OB_UTPulseGun"
 	Speed 52
 	Radius 4
 	Height 9
@@ -287,7 +287,7 @@ Actor PulseBeamPuff
 	+PUFFONACTORS
 	Scale 0.35
 	Renderstyle Add
-	Obituary "$OB_UTPulseGunAlt" // "%o was electrified by %k." // variation line
+	Obituary "$OB_UTPulseGunAlt"
 	+FORCEXYBILLBOARD
 	+DONTSPLASH
 	Decal "Q4PlasmaBlack"

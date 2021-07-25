@@ -16,8 +16,8 @@ Actor BFGPickup : CustomInventory 15608
 	Radius 20
 	Scale 0.65
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTRedeemer" // "Picked up the BFG10k."
-	Tag "$TAG_UTRedeemer" // "BFG 10k"
+	Inventory.PickupMessage "$GOT_UTRedeemer"
+	Tag "$TAG_UTRedeemer"
 	Inventory.RespawnTics 2100	//60sec
 
 	States
@@ -69,10 +69,10 @@ Actor QCBFG : QCWeapon
 	Weapon.AmmoGive 1
 	Weapon.AmmoType "QCBFGAmmo"
 	Weapon.AmmoType2 "QCBFGAmmo"
-	Obituary "$OB_UTRedeemer" // "%o was melted by %k's BFG."
+	Obituary "$OB_UTRedeemer"
 	+WEAPON.WIMPY_WEAPON
-	Inventory.PickupMessage "$GOT_UTRedeemer" // "Picked up the BFG 10k."
-	Tag "$TAG_UTRedeemer" // "BFG 10k"
+	Inventory.PickupMessage "$GOT_UTRedeemer"
+	Tag "$TAG_UTRedeemer"
 	Scale 0.65
 	States
 	{
@@ -206,7 +206,7 @@ Actor QCBFGDM : QCBFG
 {	
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTRedeemer" // "BFG 10k (DM)"
+	Tag "$TAG_UTRedeemer"
 	Weapon.SelectionOrder 666 // highest
 	Weapon.AmmoGive 1
 	Weapon.AmmoDmScale 1.0
@@ -227,7 +227,7 @@ Actor UTRedeemerMissile
 	Speed 16
 	Damage 0
 	Scale 0.6
-	Obituary "$OB_UTRedeemer" // "%o rode %k's rocket."
+	Obituary "$OB_UTRedeemer"
 	SeeSound ""
 	DeathSound "UTDE/Weapons/Redeemer/RocketExplo"
 	Decal "D4ExploScorch"

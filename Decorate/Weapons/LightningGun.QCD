@@ -20,8 +20,8 @@ Actor LightningGunPickup : CustomInventory 15606
 	Radius 20
 	Scale 0.62
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTShockRifle" // "Picked up a Lightning Gun."
-	Tag "$TAG_UTShockRifle" // "Lightning Gun"
+	Inventory.PickupMessage "$GOT_UTShockRifle"
+	Tag "$TAG_UTShockRifle"
 	Inventory.RespawnTics 35
 	States
 	{
@@ -79,9 +79,9 @@ Actor QCLightningGun : QCWeapon
 	Weapon.AmmoType2 "QCCoilAmmo"
 	Weapon.SelectionOrder 1300
 	Weapon.KickBack 200
-	Obituary "$OB_UTShockRifle" // "%o was electrocuted by %k."
-	Inventory.PickupMessage "$GOT_UTShockRifle" // "Picked up a Lightning Gun."
-	Tag "$TAG_UTShockRifle" // "Lightning Gun"
+	Obituary "$OB_UTShockRifle"
+	Inventory.PickupMessage "$GOT_UTShockRifle"
+	Tag "$TAG_UTShockRifle"
 	Scale 0.62
 	States
 	{
@@ -239,7 +239,7 @@ Actor QCLightningGunDM : QCLightningGun
 {	
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTShockRifle" // "Lightning Gun (DM)"
+	Tag "$TAG_UTShockRifle"
 	Weapon.AmmoGive1 20
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 2

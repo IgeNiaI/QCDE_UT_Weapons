@@ -15,10 +15,10 @@ Actor HeavyMachinegunPickup : CustomInventory 15600
 	Height 48
 	Radius 20
 	Scale 0.64
-	Inventory.PickupMessage "$GOT_UTMinigun" // "Picked up a Heavy Machinegun."
+	Inventory.PickupMessage "$GOT_UTMinigun"
 	Inventory.PickupSound "QC/Items/WeaponPick"
 	Inventory.RespawnTics 175
-	Tag "$TAG_UTMinigun" // "Heavy Machinegun"
+	Tag "$TAG_UTMinigun"
 	States
 	{
 	Spawn:
@@ -78,9 +78,9 @@ Actor QCHeavyMachinegun : QCWeapon
 	Weapon.AmmoGive 50
 	Weapon.AmmoType "QCBulletAmmo"
 	Weapon.AmmoType2 "QCBulletAmmo"
-	Obituary "$OB_UTMinigun" // "%o got lead poisoning from %k."
-	Inventory.PickupMessage "$GOT_UTMinigun" // "Picked up a Heavy Machinegun."
-	Tag "$TAG_UTMinigun" // "Heavy Machinegun"
+	Obituary "$OB_UTMinigun"
+	Inventory.PickupMessage "$GOT_UTMinigun"
+	Tag "$TAG_UTMinigun"
 	Scale 0.64
 	States
 	{
@@ -360,7 +360,7 @@ Actor QCHeavyMachinegunDM : QCHeavyMachinegun
 {	
 	+WEAPON.NOAUTOAIM	
 	+CHEATNOTWEAPON
-	Tag "$TAG_UTMinigun" // "Heavy Machinegun (DM)"
+	Tag "$TAG_UTMinigun"
 	Weapon.AmmoGive 50
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 10
