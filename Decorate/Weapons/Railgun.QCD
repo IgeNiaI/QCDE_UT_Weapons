@@ -1,0 +1,1423 @@
+// --------------------------------------------------------------------------
+//
+// Lightning Gun
+// Weapon and Pickup sprite by ?
+// Weapon code by geNia
+//
+// --------------------------------------------------------------------------
+
+
+Actor RailgunPickup : CustomInventory 15607
+{
+	//$NotAngled
+	//$Category "QCDE Weapons"
+	//$Color 14
+	//$Title "Railgun"
+	Height 48
+	Radius 20
+	Scale 0.63
+	Inventory.PickupSound "QC/Items/WeaponPick"
+	Inventory.PickupMessage "$GOT_UTLightningGun" // "Picked up a Railgun."
+	Tag "$TAG_UTLightningGun" // "Railgun"
+	Inventory.RespawnTics 35
+	States
+	{
+	Spawn:
+		UTLG Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		Goto Idle
+	DMSpawn:
+		"####" "#" 0 A_ChangeFlag("DROPPED", 0)
+		UTLG Z -1 Bright ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",20,args[4])
+		Stop
+	Idle:
+		UTLG Y -1 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",19,args[4])
+		Wait
+	Pickup:
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMPickup")
+		//TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"WeaponStay")
+		TNT1 A 0 A_GiveInventory("QCRailgun")
+		TNT1 A 0 
+		Stop
+	DMPickup:
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"DMWeaponStay")
+		TNT1 A 0 A_GiveInventory("QCRailgunDM")
+		TNT1 A 0
+		TNT1 A 0 A_TakeInventory("QCRailgun")
+		TNT1 A 0
+		Stop
+	WeaponStay:
+		TNT1 A 0 A_JumpIfInventory("QCRailgun",1,"Stay")
+		TNT1 A 0 A_SpawnItemEx("QCRailgun", velx,vely,velz, velx,vely,velz, 0, SXF_NOCHECKPOSITION|SXF_ABSOLUTEPOSITION)
+		Fail
+	DMWeaponStay:
+		TNT1 A 0 A_TakeInventory("QCRailgun")
+		TNT1 A 0 A_JumpIfInventory("QCRailgunDM",1,"Stay")
+		TNT1 A 0 A_SpawnItemEx("QCRailgunDM", velx,vely,velz, velx,vely,velz, 0, SXF_NOCHECKPOSITION|SXF_ABSOLUTEPOSITION)
+		Fail
+	Stay:
+		TNT1 A 0
+		Fail
+	HideIndefinitely:
+		TNT1 A 1 A_SetTics(CallACS("QCDE_SetWeaponRespawnTics"))
+		Goto HideDoomish+1
+	}
+}
+
+
+Actor QCRailGun : QCWeapon 
+{
+	Height 48
+	+FLOORCLIP
+	+INVENTORY.IGNORESKILL
+	+WEAPON.NOALERT
+	+WEAPON.NOALTAUTOFIRE
+	+WEAPON.NOAUTOAIM	//rails never autoaim, but this needed for effects and sound spawners
+	Weapon.SwaySpeed 1.35
+	Weapon.AmmoType1 "QCSlugAmmo"
+	Weapon.AmmoGive1 15
+	Weapon.AmmoUse1 1
+	Weapon.SelectionOrder 1400
+	Inventory.PickupMessage "$GOT_UTLightningGun" // "Picked up a Railgun."
+	Tag "$TAG_UTLightningGun" // "Railgun"
+	Obituary "$OB_UTLightningGun" // "%o was railed by %k."
+	Decal "LGDecal"
+	Scale 0.63
+	Weapon.KickBack 90
+	States
+	{
+	Spawn:
+		UTLG Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		Goto Idle
+	DMSpawn:
+		UTLG ZZZZZZZZZZZZZZZ 35 Bright
+		Stop
+	Idle:
+		UTLG Y -1
+		Wait
+	//-----------------------
+	// Select/Deselect Seq
+	//-----------------------
+	Select:
+		UTLG A 0 A_JumpIfInventory("NoWeaponFireToken",1,2)
+		UTLG A 0 A_PlaySound("QC/Weapons/Switch",5,1,0,3) //Not in Weapon.UpSound because it interrupts CHAN_WEAPON sounds
+		TNT1 A 0 A_ZoomFactor(1.0) //for when you exited the level zoomed, upon entering new level, resets zoom here
+		"####" "#" 0 A_StopSound(5) //stops any weapon looping sound
+		"####" "#" 0 A_TakeInventory("WeaponZoomedToken",32767)
+	SelectLooper:
+		UTLG A 1 A_Raise
+		TNT1 AAA 0 A_Raise
+		Loop
+		
+	Deselect:
+		TNT1 A 0 A_StopSound(5) //idle sound
+		"####" "#" 0 A_ZoomFactor(1.0)
+		"####" "#" 0 A_TakeInventory("WeaponZoomedToken",32767)
+	DeselectLooper:
+		UTLG A 1 A_Lower
+		TNT1 AAA 0 A_Lower
+		Loop
+		
+	//-----------------------
+	// Ready Seq
+	//-----------------------
+	Ready:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+	ReadyLoop:
+		UTLG A 4 A_WeaponReady
+		Loop
+		
+	ReadyZoomed:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+	ReadyZoomedLoop:
+		TNT1 A 4 A_WeaponReady
+		Loop
+		
+		ReadyCantFire:
+			UTLG A 0 A_StopSound(5)
+			TNT1 A 0 A_ZoomFactor(1.0)
+			TNT1 A 0 A_TakeInventory("WeaponZoomedToken",32767)
+		RCFLooper:
+			UTLG A 4 A_WeaponReady(WRF_NOFIRE)
+			UTLG A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper")
+			Goto Ready
+
+
+
+	//-----------------------
+	// Fire Seq
+	//-----------------------
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		TNT1 A 0 A_JumpIfInventory("WeaponZoomedToken",1,"FireZoomed")
+	Charge1:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/Charge",CHAN_WEAPON)
+		UTLG A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge2")
+		Goto DoFire
+	Charge2:
+		UTLG A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge3")
+		Goto DoFire
+	Charge3:
+		UTLG A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge4")
+		Goto DoFire
+	Charge4:
+		UTLG A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge5")
+		Goto DoFire
+	Charge5:
+		UTLG G 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge6")
+		Goto DoFire
+	Charge6:
+		UTLG G 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge7")
+		Goto DoFire
+	Charge7:
+		UTLG G 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge8")
+		Goto DoFire
+	Charge8:
+		UTLG G 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge9")
+		Goto DoFire
+	Charge9:
+		UTLG H 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge10")
+		Goto DoFire
+	Charge10:
+		UTLG H 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge11")
+		Goto DoFire
+	Charge11:
+		UTLG H 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge12")
+		Goto DoFire
+	Charge12:
+		UTLG H 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge13")
+		Goto DoFire
+	Charge13:
+		UTLG I 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge14")
+		Goto DoFire
+	Charge14:
+		UTLG I 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge15")
+		Goto DoFire
+	Charge15:
+		UTLG I 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge16")
+		Goto DoFire
+	Charge16:
+		UTLG I 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge17")
+		Goto DoFire
+	Charge17:
+		UTLG J 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge18")
+		Goto DoFire
+	Charge18:
+		UTLG J 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge19")
+		Goto DoFire
+	Charge19:
+		UTLG J 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge20")
+		Goto DoFire
+	Charge20:
+		UTLG J 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge21")
+		Goto DoFire
+	Charge21:
+		UTLG K 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge22")
+		Goto DoFire
+	Charge22:
+		UTLG K 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge23")
+		Goto DoFire
+	Charge23:
+		UTLG K 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge24")
+		Goto DoFire
+	Charge24:
+		UTLG K 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge25")
+		Goto DoFire
+	Charge25:
+		UTLG L 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge26")
+		Goto DoFire
+	Charge26:
+		UTLG L 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge27")
+		Goto DoFire
+	Charge27:
+		UTLG L 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge28")
+		Goto DoFire
+	Charge28:
+		UTLG L 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge29")
+		Goto DoFire
+	Charge29:
+		UTLG G 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge30")
+		Goto DoFire
+	Charge30:
+		UTLG G 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge31")
+		Goto DoFire
+	Charge31:
+		UTLG G 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge32")
+		Goto DoFire
+	Charge32:
+		UTLG G 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge33")
+		Goto DoFire
+	Charge33:
+		UTLG H 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge34")
+		Goto DoFire
+	Charge34:
+		UTLG H 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge35")
+		Goto DoFire
+	Charge35:
+		UTLG H 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge36")
+		Goto DoFire
+	Charge36:
+		UTLG H 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge37")
+		Goto DoFire
+	Charge37:
+		UTLG I 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge38")
+		Goto DoFire
+	Charge38:
+		UTLG I 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge39")
+		Goto DoFire
+	Charge39:
+		UTLG I 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge40")
+		Goto DoFire
+	Charge40:
+		UTLG I 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge41")
+		Goto DoFire
+	Charge41:
+		UTLG J 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge42")
+		Goto DoFire
+	Charge42:
+		UTLG J 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge43")
+		Goto DoFire
+	Charge43:
+		UTLG J 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge44")
+		Goto DoFire
+	Charge44:
+		UTLG J 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge45")
+		Goto DoFire
+	Charge45:
+		UTLG K 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge46")
+		Goto DoFire
+	Charge46:
+		UTLG K 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge47")
+		Goto DoFire
+	Charge47:
+		UTLG K 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge48")
+		Goto DoFire
+	Charge48:
+		UTLG K 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge49")
+		Goto DoFire
+	Charge49:
+		UTLG L 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge50")
+		Goto DoFire
+	Charge50:
+		UTLG L 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge51")
+		Goto DoFire
+	Charge51:
+		UTLG L 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("Charge52")
+		Goto DoFire
+	Charge52:
+		UTLG L 1 A_GiveInventory("RailgunCharges",1)
+		Goto DoFire
+
+	//-----------------------
+	// Post Fire Seq
+	//-----------------------
+	DoFire:
+		UTLG A 0 A_GunFlash("Flash")
+	Recharge1:
+		UTLG B 0
+		UTLG B 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG B 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge2:
+		UTLG B 0 Offset(9,41)
+		UTLG B 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG B 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge3:
+		UTLG B 0 Offset(12,44)
+		UTLG B 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG B 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge4:
+		UTLG C 0 Offset(14,46)
+		UTLG C 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG C 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge5:
+		UTLG C 0 Offset(15,47)
+		UTLG C 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG C 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge6: 
+		UTLG C 0 Offset(16,48)
+		UTLG C 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG C 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge7: 
+		UTLG D 0
+		UTLG D 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG D 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge8: 
+		UTLG D 0
+		UTLG D 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG D 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge9: 
+		UTLG D 0
+		UTLG D 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG D 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge10:
+		UTLG E 0
+		UTLG E 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG E 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge11:
+		UTLG E 0
+		UTLG E 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG E 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge12:
+		UTLG E 0
+		UTLG E 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG E 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge13:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge14:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge15:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge16:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge17:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge18:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge19:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge20:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge21:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge22:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge23:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge24:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge25:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge26:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge27:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge28:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge29:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge30:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge31:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge32:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge33:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge34:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge35:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge36:
+		UTLG F 0
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge37:
+		UTLG F 0 Offset(16,48)
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge38:
+		UTLG F 0 Offset(15,47)
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge39:
+		UTLG F 0 Offset(14,46)
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge40:
+		UTLG F 0 Offset(13,45)
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge41:
+		UTLG F 0 Offset(12,44)
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge42:
+		UTLG F 0 Offset(11,43)
+		UTLG F 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG F 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge43:
+		UTLG E 0 Offset(10,42)
+		UTLG E 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG E 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge44:
+		UTLG E 0 Offset(9,41)
+		UTLG E 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG E 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge45:
+		UTLG E 0 Offset(8,40)
+		UTLG E 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG E 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge46:
+		UTLG D 0 Offset(7,39)
+		UTLG D 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG D 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge47:
+		UTLG D 0 Offset(6,38)
+		UTLG D 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG D 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge48:
+		UTLG D 0 Offset(5,37)
+		UTLG D 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG D 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge49:
+		UTLG C 0 Offset(4,36)
+		UTLG C 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG C 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge50:
+		UTLG C 0 Offset(3,35)
+		UTLG C 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG C 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge51:
+		UTLG C 0 Offset(2,34)
+		UTLG C 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG C 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	Recharge52:
+		UTLG A 0 Offset(1,33)
+		UTLG A 0 A_GiveInventory("LightningGunTicCounter",1)
+		UTLG A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+
+		UTLG A 0 A_TakeInventory("LightningGunTicCounter",32767)
+		Goto Ready
+
+	//-----------------------
+	// Zoomed Fire Seq
+	//-----------------------
+	FireZoomed: 	//52 tics, 1.5 sec
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+	ChargeZoomed1:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/Charge",CHAN_WEAPON)
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed2")
+		Goto DoFireZoomed
+	ChargeZoomed2:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed3")
+		Goto DoFireZoomed
+	ChargeZoomed3:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed4")
+		Goto DoFireZoomed
+	ChargeZoomed4:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed5")
+		Goto DoFireZoomed
+	ChargeZoomed5:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed6")
+		Goto DoFireZoomed
+	ChargeZoomed6:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed7")
+		Goto DoFireZoomed
+	ChargeZoomed7:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed8")
+		Goto DoFireZoomed
+	ChargeZoomed8:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed9")
+		Goto DoFireZoomed
+	ChargeZoomed9:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed10")
+		Goto DoFireZoomed
+	ChargeZoomed10:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed11")
+		Goto DoFireZoomed
+	ChargeZoomed11:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed12")
+		Goto DoFireZoomed
+	ChargeZoomed12:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed13")
+		Goto DoFireZoomed
+	ChargeZoomed13:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed14")
+		Goto DoFireZoomed
+	ChargeZoomed14:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed15")
+		Goto DoFireZoomed
+	ChargeZoomed15:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed16")
+		Goto DoFireZoomed
+	ChargeZoomed16:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed17")
+		Goto DoFireZoomed
+	ChargeZoomed17:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed18")
+		Goto DoFireZoomed
+	ChargeZoomed18:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed19")
+		Goto DoFireZoomed
+	ChargeZoomed19:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed20")
+		Goto DoFireZoomed
+	ChargeZoomed20:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed21")
+		Goto DoFireZoomed
+	ChargeZoomed21:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed22")
+		Goto DoFireZoomed
+	ChargeZoomed22:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed23")
+		Goto DoFireZoomed
+	ChargeZoomed23:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed24")
+		Goto DoFireZoomed
+	ChargeZoomed24:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed25")
+		Goto DoFireZoomed
+	ChargeZoomed25:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed26")
+		Goto DoFireZoomed
+	ChargeZoomed26:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed27")
+		Goto DoFireZoomed
+	ChargeZoomed27:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed28")
+		Goto DoFireZoomed
+	ChargeZoomed28:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed29")
+		Goto DoFireZoomed
+	ChargeZoomed29:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed30")
+		Goto DoFireZoomed
+	ChargeZoomed30:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed31")
+		Goto DoFireZoomed
+	ChargeZoomed31:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed32")
+		Goto DoFireZoomed
+	ChargeZoomed32:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed33")
+		Goto DoFireZoomed
+	ChargeZoomed33:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed34")
+		Goto DoFireZoomed
+	ChargeZoomed34:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed35")
+		Goto DoFireZoomed
+	ChargeZoomed35:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed36")
+		Goto DoFireZoomed
+	ChargeZoomed36:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed37")
+		Goto DoFireZoomed
+	ChargeZoomed37:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed38")
+		Goto DoFireZoomed
+	ChargeZoomed38:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed39")
+		Goto DoFireZoomed
+	ChargeZoomed39:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed40")
+		Goto DoFireZoomed
+	ChargeZoomed40:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed41")
+		Goto DoFireZoomed
+	ChargeZoomed41:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed42")
+		Goto DoFireZoomed
+	ChargeZoomed42:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed43")
+		Goto DoFireZoomed
+	ChargeZoomed43:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed44")
+		Goto DoFireZoomed
+	ChargeZoomed44:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed45")
+		Goto DoFireZoomed
+	ChargeZoomed45:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed46")
+		Goto DoFireZoomed
+	ChargeZoomed46:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed47")
+		Goto DoFireZoomed
+	ChargeZoomed47:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed48")
+		Goto DoFireZoomed
+	ChargeZoomed48:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed49")
+		Goto DoFireZoomed
+	ChargeZoomed49:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed50")
+		Goto DoFireZoomed
+	ChargeZoomed50:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed51")
+		Goto DoFireZoomed
+	ChargeZoomed51:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		TNT1 A 0 A_Refire("ChargeZoomed52")
+		Goto DoFireZoomed
+	ChargeZoomed52:
+		TNT1 A 1 A_GiveInventory("RailgunCharges",1)
+		Goto DoFireZoomed
+	
+	//-----------------------
+	// Post Zoomed Fire Seq
+	//-----------------------
+	DoFireZoomed:
+		UTLG A 0 A_GunFlash("Flash")
+	RechargeZoomed1:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed2:
+		TNT1 A 0 Offset(9,41)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed3: 
+		TNT1 A 0 Offset(12,44)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed4: 
+		TNT1 A 0 Offset(14,46)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed5: 
+		TNT1 A 0 Offset(15,47)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed6: 
+		TNT1 A 0 Offset(16,48)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed7:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed8:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed9:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed10:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed11:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed12:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed13:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed14:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed15:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed16:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed17:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed18:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed19:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed20:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed21:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed22:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed23:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed24:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed25:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed26:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed27:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed28:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed29:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed30:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed31:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed32:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed33:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed34:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed35:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed36:
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed37:
+		TNT1 A 0 Offset(16,48)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed38:
+		TNT1 A 0 Offset(15,47)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed39:
+		TNT1 A 0 Offset(14,46)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed40:
+		TNT1 A 0 Offset(13,45)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed41:
+		TNT1 A 0 Offset(12,44)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed42:
+		TNT1 A 0 Offset(11,43)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed43:
+		TNT1 A 0 Offset(10,42)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed44:
+		TNT1 A 0 Offset(9,41)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed45:
+		TNT1 A 0 Offset(8,40)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed46:
+		TNT1 A 0 Offset(7,39)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed47:
+		TNT1 A 0 Offset(6,38)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed48:
+		TNT1 A 0 Offset(5,37)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed49:
+		TNT1 A 0 Offset(4,36)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed50:
+		TNT1 A 0 Offset(3,35)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed51:
+		TNT1 A 0 Offset(2,34)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+	RechargeZoomed52:
+		TNT1 A 0 Offset(1,33)
+		TNT1 A 0 A_GiveInventory("LightningGunTicCounter",1)
+		TNT1 A 1 A_WeaponReady(WRF_NOBOB|WRF_NOPRIMARY|WRF_NOSWITCH)
+
+		TNT1 A 0 A_TakeInventory("LightningGunTicCounter",32767)
+		Goto ReadyZoomed
+
+	Flash:
+		TNT1 A 0 A_AlertMonsters
+		
+		// 120 damage, 52 charges
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",52,"FlashVeryHighCharge")
+		
+		// 110 damage, 41-51 charges
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",51,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",50,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",49,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",48,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",47,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",46,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",45,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",44,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",43,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",42,"FlashHighCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",41,"FlashHighCharge")
+		
+		// 100 damage, 30-40 charges
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",40,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",39,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",38,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",37,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",36,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",35,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",34,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",33,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",32,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",31,"FlashMidCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",30,"FlashMidCharge")
+		
+		// 90 damage, 20-29 charges
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",29,"FlashLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",28,"FlashLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",27,"FlashLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",26,"FlashLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",25,"FlashLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",24,"FlashLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",23,"FlashLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",22,"FlashLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",21,"FlashLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",20,"FlashLowCharge")
+
+		// 80 damage, 10-19 charges
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",19,"FlashVeryLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",18,"FlashVeryLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",17,"FlashVeryLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",16,"FlashVeryLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",15,"FlashVeryLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",14,"FlashVeryLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",13,"FlashVeryLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",12,"FlashVeryLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",11,"FlashVeryLowCharge")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",10,"FlashVeryLowCharge")
+		
+		// 70 damage, 0-9 charges
+	FlashNoCharge:
+		TNT1 A 0 A_RailAttack(70, 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
+	FlashVeryLowCharge:
+		TNT1 A 0 A_RailAttack(80, 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
+	FlashLowCharge:
+		TNT1 A 0 A_RailAttack(90, 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
+	FlashMidCharge:
+		TNT1 A 0 A_RailAttack(100, 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
+	FlashHighCharge:
+		TNT1 A 0 A_RailAttack(110, 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
+	FlashVeryHighCharge:
+		TNT1 A 0 A_RailAttack(120, 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
+			
+	FlashCheckSound:
+		TNT1 A 0 A_TakeInventory("RailgunCharges",32767)
+		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound")
+		Goto NormalSound
+		
+		NormalSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/Fire",CHAN_WEAPON)
+			Goto FlashEnder
+		QuadSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/Quad/Fire",CHAN_WEAPON)
+			Goto FlashEnder
+			
+	FlashEnder:
+		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil")
+		TNT1 A 0 A_SetPitch(pitch-3.5)
+		TNT1 A 2
+		TNT1 AAAAAAA 1 A_SetPitch(pitch+0.5)
+		Stop
+	FlashEnderNoRecoil:
+		TNT1 A 1
+		Stop
+
+	//-----------------------
+	// AltFire Seq (Zoom)
+	//-----------------------
+	AltFire: 	//27 tics, 0.77sec
+		TNT1 A 0 A_JumpIfInventory("WeaponZoomedToken",1,"ZoomOut")
+		Goto ZoomIn
+	
+	ZoomIn:
+		TNT1 A 0 A_ZoomFactor(2.5)
+		TNT1 A 0 A_GiveInventory("WeaponZoomedToken",1)
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/ZoomIn", 7, 1.0, 0)
+		
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",52,"RechargeZoomed52")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",51,"RechargeZoomed51")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",50,"RechargeZoomed50")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",49,"RechargeZoomed49")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",48,"RechargeZoomed48")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",47,"RechargeZoomed47")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",46,"RechargeZoomed46")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",45,"RechargeZoomed45")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",44,"RechargeZoomed44")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",43,"RechargeZoomed43")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",42,"RechargeZoomed42")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",41,"RechargeZoomed41")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",40,"RechargeZoomed40")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",39,"RechargeZoomed39")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",38,"RechargeZoomed38")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",37,"RechargeZoomed37")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",36,"RechargeZoomed36")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",35,"RechargeZoomed35")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",34,"RechargeZoomed34")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",33,"RechargeZoomed33")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",32,"RechargeZoomed32")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",31,"RechargeZoomed31")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",30,"RechargeZoomed30")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",29,"RechargeZoomed29")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",28,"RechargeZoomed28")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",27,"RechargeZoomed27")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",26,"RechargeZoomed26")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",25,"RechargeZoomed25")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",24,"RechargeZoomed24")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",23,"RechargeZoomed23")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",22,"RechargeZoomed22")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",21,"RechargeZoomed21")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",20,"RechargeZoomed20")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",19,"RechargeZoomed19")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",18,"RechargeZoomed18")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",17,"RechargeZoomed17")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",16,"RechargeZoomed16")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",15,"RechargeZoomed15")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",14,"RechargeZoomed14")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",13,"RechargeZoomed13")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",12,"RechargeZoomed12")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",11,"RechargeZoomed11")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",10,"RechargeZoomed10")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",9,"RechargeZoomed9")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",8,"RechargeZoomed8")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",7,"RechargeZoomed7")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",6,"RechargeZoomed6")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",5,"RechargeZoomed5")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",4,"RechargeZoomed4")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",3,"RechargeZoomed3")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",2,"RechargeZoomed2")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",1,"RechargeZoomed1")
+		
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",52,"ChargeZoomed52")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",51,"ChargeZoomed51")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",50,"ChargeZoomed50")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",49,"ChargeZoomed49")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",48,"ChargeZoomed48")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",47,"ChargeZoomed47")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",46,"ChargeZoomed46")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",45,"ChargeZoomed45")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",44,"ChargeZoomed44")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",43,"ChargeZoomed43")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",42,"ChargeZoomed42")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",41,"ChargeZoomed41")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",40,"ChargeZoomed40")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",39,"ChargeZoomed39")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",38,"ChargeZoomed38")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",37,"ChargeZoomed37")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",36,"ChargeZoomed36")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",35,"ChargeZoomed35")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",34,"ChargeZoomed34")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",33,"ChargeZoomed33")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",32,"ChargeZoomed32")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",31,"ChargeZoomed31")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",30,"ChargeZoomed30")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",29,"ChargeZoomed29")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",28,"ChargeZoomed28")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",27,"ChargeZoomed27")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",26,"ChargeZoomed26")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",25,"ChargeZoomed25")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",24,"ChargeZoomed24")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",23,"ChargeZoomed23")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",22,"ChargeZoomed22")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",21,"ChargeZoomed21")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",20,"ChargeZoomed20")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",19,"ChargeZoomed19")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",18,"ChargeZoomed18")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",17,"ChargeZoomed17")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",16,"ChargeZoomed16")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",15,"ChargeZoomed15")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",14,"ChargeZoomed14")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",13,"ChargeZoomed13")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",12,"ChargeZoomed12")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",11,"ChargeZoomed11")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",10,"ChargeZoomed10")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",9,"ChargeZoomed9")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",8,"ChargeZoomed8")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",7,"ChargeZoomed7")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",6,"ChargeZoomed6")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",5,"ChargeZoomed5")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",4,"ChargeZoomed4")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",3,"ChargeZoomed3")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",2,"ChargeZoomed2")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",1,"ChargeZoomed1")
+		Goto ReadyZoomed
+
+	ZoomOut:
+		TNT1 A 0 A_ZoomFactor(1.0)
+		TNT1 A 0 A_TakeInventory("WeaponZoomedToken",32767)
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/ZoomOut", 7, 1.0, 0)
+
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",52,"Recharge52")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",51,"Recharge51")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",50,"Recharge50")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",49,"Recharge49")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",48,"Recharge48")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",47,"Recharge47")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",46,"Recharge46")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",45,"Recharge45")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",44,"Recharge44")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",43,"Recharge43")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",42,"Recharge42")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",41,"Recharge41")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",40,"Recharge40")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",39,"Recharge39")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",38,"Recharge38")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",37,"Recharge37")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",36,"Recharge36")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",35,"Recharge35")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",34,"Recharge34")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",33,"Recharge33")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",32,"Recharge32")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",31,"Recharge31")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",30,"Recharge30")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",29,"Recharge29")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",28,"Recharge28")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",27,"Recharge27")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",26,"Recharge26")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",25,"Recharge25")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",24,"Recharge24")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",23,"Recharge23")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",22,"Recharge22")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",21,"Recharge21")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",20,"Recharge20")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",19,"Recharge19")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",18,"Recharge18")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",17,"Recharge17")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",16,"Recharge16")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",15,"Recharge15")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",14,"Recharge14")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",13,"Recharge13")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",12,"Recharge12")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",11,"Recharge11")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",10,"Recharge10")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",9,"Recharge9")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",8,"Recharge8")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",7,"Recharge7")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",6,"Recharge6")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",5,"Recharge5")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",4,"Recharge4")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",3,"Recharge3")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",2,"Recharge2")
+		TNT1 A 0 A_JumpIfInventory("LightningGunTicCounter",1,"Recharge1")
+		
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",52,"Charge52")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",51,"Charge51")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",50,"Charge50")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",49,"Charge49")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",48,"Charge48")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",47,"Charge47")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",46,"Charge46")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",45,"Charge45")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",44,"Charge44")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",43,"Charge43")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",42,"Charge42")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",41,"Charge41")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",40,"Charge40")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",39,"Charge39")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",38,"Charge38")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",37,"Charge37")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",36,"Charge36")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",35,"Charge35")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",34,"Charge34")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",33,"Charge33")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",32,"Charge32")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",31,"Charge31")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",30,"Charge30")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",29,"Charge29")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",28,"Charge28")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",27,"Charge27")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",26,"Charge26")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",25,"Charge25")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",24,"Charge24")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",23,"Charge23")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",22,"Charge22")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",21,"Charge21")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",20,"Charge20")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",19,"Charge19")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",18,"Charge18")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",17,"Charge17")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",16,"Charge16")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",15,"Charge15")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",14,"Charge14")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",13,"Charge13")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",12,"Charge12")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",11,"Charge11")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",10,"Charge10")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",9,"Charge9")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",8,"Charge8")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",7,"Charge7")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",6,"Charge6")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",5,"Charge5")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",4,"Charge4")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",3,"Charge3")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",2,"Charge2")
+		TNT1 A 0 A_JumpIfInventory("RailgunCharges",1,"Charge1")
+		Goto Ready
+	}
+}
+
+// --------------------------------------------------------------------------
+//	For competitive DM, weapons dont autoaim
+// --------------------------------------------------------------------------
+Actor QCRailGunDM : QCRailGun
+{	
+	+WEAPON.NOAUTOAIM	
+	+CHEATNOTWEAPON
+	Tag "$TAG_UTLightningGun" // "Railgun (DM)"
+	Weapon.AmmoGive1 15
+	Weapon.AmmoDmScale 1.0
+	Weapon.AmmoDmRefill 1
+}
+
+Actor LightningGunTicCounter : Inventory
+{
+	inventory.maxamount 52
+	inventory.interhubamount 0
+}
+
+Actor RailgunCharges : Inventory
+{
+	Inventory.MaxAmount 52
+	Inventory.InterHubAmount 0
+}
+
+Actor LightningGunPuff
+{
+	+CLIENTSIDEONLY +NONETID
+	+NOINTERACTION +NOTONAUTOMAP
+	+ALWAYSPUFF
+	+PUFFGETSOWNER
+	+PUFFONACTORS
+	Radius 10
+	Scale 0.35
+	Renderstyle Add
+	Obituary "$OB_UTLightningGun" // "%o was electrified by %k." // variation line
+	+FORCEXYBILLBOARD
+	+DONTSPLASH
+	DamageType "Electric"
+	States
+	{
+	Spawn:	//hit non bleeding actor
+		TNT1 A 0 
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/Impact",CHAN_AUTO,1,0,1)
+		//TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
+		Goto Crash
+	Xdeath:	//hit bleeding actor
+		TNT1 A 0 
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/Impact",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
+		TNT1 A 1
+		Stop
+	Crash:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/Impact",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_JumpIf(waterlevel > 0, "Water")
+		TNT1 A 0 A_SpawnItemEx("LaserPuffFx", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
+		Stop
+	Choose:
+		TNT1 A 100
+		Stop
+	Water:
+		TNT1 A 0 A_SpawnItemEx("WaterLightningSparks", 0,0,0, 0,0,0,0, SXF_NOCHECKPOSITION,160)
+		TNT1 A 100 A_Explode(waterlevel * 16, waterlevel * 64)
+		Stop
+	}
+}
+
+Actor LGworldactor
+{
+	+CLIENTSIDEONLY +NONETID
+	+NOINTERACTION +NOTONAUTOMAP
+	+FORCEXYBILLBOARD
+	+DONTSPLASH
+	RenderStyle Add
+	Alpha 0.68
+	Scale 0.4
+	Translation "0:255=%[0,0,0]:[0.8,1.2,1.6]"
+	States
+	{
+	Spawn:
+		LGWR Z 35 Bright
+		Stop
+	}
+}

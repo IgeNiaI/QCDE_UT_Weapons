@@ -1,0 +1,448 @@
+// --------------------------------------------------------------------------
+//
+// Flak Cannon
+// Weapon and Pickup sprite by ?
+// Weapon code by geNia
+//
+// --------------------------------------------------------------------------
+
+Actor SuperShotgunPickup : CustomInventory 15602
+{
+	//$NotAngled
+	//$Category "QCDE Weapons"
+	//$Color 14
+	//$Title "Super Shotgun"
+	Height 48
+	Radius 20
+	Scale 0.66
+	Inventory.PickupSound "QC/Items/WeaponPick"
+	Inventory.PickupMessage "$GOT_UTFlakCannon" // "Picked up a Super Shotgun."
+	Tag "$TAG_UTFlakCannon" // "Super Shotgun"
+	Inventory.RespawnTics 35
+	States
+	{
+	Spawn:
+		UTFC Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		Goto Idle
+	DMSpawn:
+		"####" "#" 0 A_ChangeFlag("DROPPED", 0)
+		UTFC Z -1 Bright ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",10,args[4])
+		Stop
+	Idle:
+		UTFC Y -1 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",9,args[4])
+		Wait
+	Pickup:
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMPickup")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"WeaponStay")
+		TNT1 A 0 A_GiveInventory("QCSuperShotgun")
+		TNT1 A 0
+		Stop
+	DMPickup:
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"DMWeaponStay")
+		TNT1 A 0 A_GiveInventory("QCSuperShotgunDM")
+		TNT1 A 0 A_TakeInventory("QCShotgunDM")
+		TNT1 A 0 A_TakeInventory("QCSuperShotgun")
+		TNT1 A 0 A_TakeInventory("QCShotgun")
+		Stop
+	WeaponStay:
+		TNT1 A 0 A_JumpIfInventory("QCSuperShotgun",1,"Stay")
+		TNT1 A 0 A_SpawnItemEx("QCSuperShotgun", velx,vely,velz, velx,vely,velz, 0, SXF_NOCHECKPOSITION|SXF_ABSOLUTEPOSITION)
+		Fail
+	DMWeaponStay:
+		TNT1 A 0 A_TakeInventory("QCSuperShotgun")
+		TNT1 A 0 A_JumpIfInventory("QCSuperShotgunDM",1,"Stay")
+		TNT1 A 0 A_SpawnItemEx("QCSuperShotgunDM", velx,vely,velz, velx,vely,velz, 0, SXF_NOCHECKPOSITION|SXF_ABSOLUTEPOSITION)
+		Fail
+	Stay:
+		TNT1 A 0
+		Fail
+	HideIndefinitely:
+		TNT1 A 1 A_SetTics(CallACS("QCDE_SetWeaponRespawnTics"))
+		Goto HideDoomish+1
+	}
+}
+
+Actor SuperShotgunPickupDMvar: CustomInventory 	//this one is for SSGs spawned in DM maps that have 200
+{												//SSG spawns in the map. Most of the time, it'll be something else
+	//$NotAngled
+	//$Color 14
+	//$Title "SSG-in-vanilla Replacer"
+	var int user_type;
+	Height 48
+	Scale 0.66
+	Inventory.PickupSound "QC/Items/WeaponPick"
+	Inventory.PickupMessage "$GOT_UTFlakCannon"
+	Tag "$TAG_UTFlakCannon"
+	Inventory.RespawnTics 35
+	States
+	{
+	Spawn:
+		UTFC Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		Goto Idle
+		
+	DMSpawn:
+		"####" "#" 0 A_ChangeFlag("DROPPED", 0)
+		Goto ChooseWeapon
+		
+		ChooseWeapon:
+			TNT1 A 0 A_Jump(200,"BeTribolt","BeHMG","BeSNG") 
+			Goto BeSSG //about 1/5th of the time, it'll be ssg
+		BeTribolt:
+			TNT1 A 0 A_SpawnItemEx("TriboltPickup", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION) 
+			Stop
+		BeHMG:
+			TNT1 A 0 A_SpawnItemEx("HeavyMachinegunPickup", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION) 
+			Stop
+		BeSNG:
+			TNT1 A 0 A_SpawnItemEx("SuperNailgunPickup", 0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION) 
+			Stop
+		BeSSG:
+			UTFC Z -1 Bright ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",10,args[4])
+			Wait
+		
+	Idle:
+		UTFC Y -1 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",9,args[4])
+		Wait
+	Pickup:
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMPickup")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"WeaponStay")
+		TNT1 A 0 A_GiveInventory("QCSuperShotgun")
+		TNT1 A 0
+		Stop
+	DMPickup:
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"DMWeaponStay")
+		TNT1 A 0 A_GiveInventory("QCSuperShotgunDM")
+		TNT1 A 0 A_TakeInventory("QCShotgunDM")
+		TNT1 A 0 A_TakeInventory("QCSuperShotgun")
+		TNT1 A 0 A_TakeInventory("QCShotgun")
+		Stop
+	WeaponStay:
+		TNT1 A 0 A_JumpIfInventory("QCSuperShotgun",1,"Stay")
+		TNT1 A 0 A_SpawnItemEx("QCSuperShotgun", velx,vely,velz, velx,vely,velz, 0, SXF_NOCHECKPOSITION|SXF_ABSOLUTEPOSITION)
+		Fail
+	DMWeaponStay:
+		TNT1 A 0 A_TakeInventory("QCSuperShotgun")
+		TNT1 A 0 A_JumpIfInventory("QCSuperShotgunDM",1,"Stay")
+		TNT1 A 0 A_SpawnItemEx("QCSuperShotgunDM", velx,vely,velz, velx,vely,velz, 0, SXF_NOCHECKPOSITION|SXF_ABSOLUTEPOSITION)
+		Fail
+	Stay:
+		TNT1 A 0
+		Fail
+	HideIndefinitely:
+		TNT1 A 1 A_SetTics(CallACS("QCDE_SetWeaponRespawnTics"))
+		Goto HideDoomish+1
+	}
+}
+
+
+Actor QCSuperShotgun : QCWeapon
+{
+	Height 48
+	Weapon.SwaySpeed 1.5
+	Weapon.Kickback 35
+	Weapon.SelectionOrder 1100
+	Weapon.AmmoUse 1
+	Weapon.AmmoUse2 1
+	Weapon.AmmoGive 15
+	Weapon.AmmoType "QCShellAmmo"
+	Weapon.AmmoType2 "QCShellAmmo"
+	Obituary "$OB_UTFlakCannon"
+	Inventory.PickupMessage "$GOT_UTFlakCannon"
+	Tag "$TAG_UTFlakCannon"
+	Scale 0.66
+	States
+	{
+	Spawn:
+		UTFC Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		Goto Idle
+	DMSpawn:
+		UTFC ZZZZZZZZZZZZZZZ 35 Bright
+		Stop
+	Idle:
+		UTFC Y -1
+		Wait
+
+	//-----------------------
+	// Select/Deselect Seq
+	//-----------------------
+	Select:
+		UTFC A 0 A_JumpIfInventory("NoWeaponFireToken",1,2)
+		UTFC A 0 A_PlaySound("QC/Weapons/Switch",5,1,0,3) //Not in Weapon.UpSound because it interrupts CHAN_WEAPON sounds
+		UTFC A 0 A_TakeInventory("QCShotgunDM")
+		"####" "#" 0 A_StopSound(CHAN_WEAPON) //stops any weapon looping sound
+	SelectLooper:
+		UTFC A 1 A_Raise
+		"####" "###" 0 A_Raise
+		Loop
+	
+	Deselect:
+		UTFC A 0 A_StopSound(5)
+		UTFC A 0 A_StopSound(CHAN_WEAPON)
+	DeselecLooper:
+		UTFC A 1 A_Lower
+		"####" "###" 0 A_Lower
+		Loop
+
+	//-----------------------
+	// Ready Seq
+	//-----------------------
+	Ready:
+		UTFC A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTFC A 3 A_WeaponReady
+		Loop
+		
+		ReadyCantFire:
+			UTFC A 0 A_StopSound(5)
+			UTFC A 0 A_StopSound(CHAN_WEAPON)
+		RCFLooper:
+			UTFC A 4 A_WeaponReady(WRF_NOFIRE)
+			UTFC A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper")
+			Goto Ready
+
+	//-----------------------
+	// Fire Seq
+	//-----------------------
+	Fire: 	//27 tics, 0.77sec
+		UTFC A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTFC B 0 A_GunFlash("Flash")
+		UTFC B 1
+		UTFC C 1 Offset(3,35)
+		UTFC D 1 Offset(8,38)
+		UTFC E 1 Offset(11,40)
+		UTFC E 1 Offset(14,42)
+		UTFC F 1 Offset(17,46)
+		UTFC F 1 Offset(20,50)
+		UTFC G 1
+		UTFC G 1 Offset(19,49)  //10
+		UTFC H 1 Offset(18,49)
+		UTFC H 1 Offset(17,48)
+        UTFC I 1 Offset(16,48)
+		UTFC I 1 Offset(15,47)
+		UTFC J 1 Offset(14,46)
+		UTFC J 1 Offset(13,45)
+		UTFC K 1 Offset(12,44)
+		UTFC K 1 Offset(11,43)
+		UTFC L 1 Offset(10,42)
+		UTFC L 1 Offset(9,41)	//20
+		UTFC M 1 Offset(8,40)
+		UTFC M 1 Offset(7,39)
+		UTFC N 1 Offset(6,38)
+		UTFC N 1 Offset(5,37)
+		UTFC O 1 Offset(4,36)
+		UTFC O 1 Offset(3,35)
+		UTFC P 1 Offset(2,34)
+		UTFC Q 1 Offset(1,33)	//28
+		Goto Ready
+
+	Flash:
+		TNT1 A 0 A_FireCustomMissile("UTFlakShell",frandom(4.0,-4.0),true,1,4,0,frandom(4.0,-4.0)) // Use ammo
+		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakShell",frandom(4.0,-4.0),false,1,4,0,frandom(4.0,-4.0)) // Don't use ammo
+		Goto FlashCheckSound
+			
+	FlashCheckSound:
+		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound")
+		Goto NormalSound
+		
+		NormalSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Fire",CHAN_WEAPON)
+			Goto FlashEnder
+		QuadSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Quad/Fire",CHAN_WEAPON)
+			Goto FlashEnder
+			
+	FlashEnder:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil")		
+		TNT1 A 0 A_SetPitch(pitch-3.5)
+		TNT1 A 2
+		TNT1 AAAAAAA 1 A_SetPitch(pitch+0.5)
+		Stop
+	FlashEnderNoRecoil:
+		TNT1 A 1
+		Stop
+
+	//-----------------------
+	// AltFire Seq
+	//-----------------------
+	AltFire: 	//35 tics, 1sec
+		UTFC A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTFC F 0 A_GunFlash("AltFlash")
+		UTFC F 1
+		UTFC G 1 Offset(3,35)
+		UTFC G 1 Offset(8,38)
+		UTFC G 1 Offset(11,40)
+		UTFC H 1 Offset(14,42)
+		UTFC H 1 Offset(17,46)
+		UTFC H 1 Offset(20,50)
+		UTFC I 1
+		UTFC I 1 Offset(19,49)  //10
+		UTFC I 1 Offset(18,49)
+		UTFC I 1 Offset(17,48)
+		UTFC J 1 Offset(16,48)
+		UTFC J 1 Offset(15,47)
+		UTFC J 1 Offset(14,46)
+		UTFC K 1 Offset(13,45)
+		UTFC K 1 Offset(12,44)
+		UTFC K 1 Offset(11,43)
+		UTFC L 1 Offset(10,42)
+		UTFC L 1 Offset(9,41)	//20
+		UTFC L 1 Offset(8,40)
+		UTFC M 1 Offset(7,39)
+		UTFC M 1 Offset(6,38)
+		UTFC M 1 Offset(5,37)
+		UTFC N 1 Offset(4,36)
+		UTFC N 1 Offset(3,35)
+		UTFC N 1 Offset(2,34)
+		UTFC O 1 Offset(1,33)	//28
+		UTFC O 1
+		UTFC O 1
+		UTFC P 1
+		UTFC P 1
+		UTFC Q 1
+		UTFC Q 1
+		Goto Ready
+
+	AltFlash:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireCustomMissile("UTFlakBomb",0,true,1,-1,0,3) // Use ammo
+		Goto AltFlashCheckSound
+			
+	AltFlashCheckSound:
+		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"AltQuadSound")
+		Goto AltNormalSound
+		
+		AltNormalSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/AltFire",CHAN_WEAPON)
+			Goto AltFlashEnder
+		AltQuadSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Quad/AltFire",CHAN_WEAPON)
+			Goto AltFlashEnder
+			
+	AltFlashEnder:
+		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"AltFlashEnderNoRecoil")
+		TNT1 A 0 A_SetPitch(pitch-2.5)
+		TNT1 A 2
+		TNT1 AAAAA 1 A_SetPitch(pitch+0.5)
+		Stop
+	AltFlashEnderNoRecoil:
+		TNT1 A 1
+		Stop
+
+	}
+}
+
+Actor UTFlakShell
+{
+	Projectile
+	+RANDOMIZE
+	+FORCEXYBILLBOARD
+	+DONTSPLASH
+	+USEBOUNCESTATE
+	Gravity 0.5
+	damage (13)
+	radius 2
+	height 2
+	speed 50
+	renderstyle ADD
+	alpha 0.9
+	scale 0.35
+	BounceType Doom
+	WallBounceFactor 0.35
+	Obituary "$OB_UTFlakCannon"
+	states
+	{
+	Spawn:
+		NAIL A random(17,23) BRIGHT
+		Stop
+	Bounce:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Bounce",CHAN_AUTO,1,0,1)
+		NAIL A random(14,20) BRIGHT A_ChangeFlag("NOGRAVITY", false)
+		Stop
+	XDeath:
+		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+	Bounce.Actor:
+	Death:
+		TNT1 A 1
+		Stop
+	}
+}
+
+Actor UTFlakShellFromBomb : UTFlakShell
+{
+	-NOGRAVITY
+}
+
+Actor UTFlakBomb
+{
+	Projectile
+	+FORCEXYBILLBOARD
+	-NOGRAVITY
+	Gravity 0.65
+	damage (15)
+	radius 5
+	height 10
+	speed 30
+	alpha 1.0
+	scale 1.0
+	Obituary "$OB_UTFlakCannonAlt"
+	DeathSound "QC/Weapons/RocketLauncher/RocketExplo"
+	states
+	{
+	Spawn:
+		FLAK A 99 BRIGHT
+		Loop
+
+	Death:
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,128)
+		Goto DeathCont
+
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+			Goto DeathCont
+
+	XDeath:
+		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		Goto DeathCont
+
+	DeathCont:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Explo",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Explode(25,128,1|XF_QROCKETJUMP,0,18)	//self rocket damage with rocket jump is 25
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(10,128,1,0,18)		//self rocket damage without rocket jump is 10
+		TNT1 A 0 A_Explode(40,128,0,0,18)		//then another 40 extra damage for impacting a player + (15)dmg on the projectile =90dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,10,0,5)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,7,-7,5)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,0,-10,5)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,-7,-7,5)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,-10,0,5)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,-7,7,5)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,0,10,5)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,7,7,5)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,0,0,10)
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,0,0,-10)
+		TNT1 A 0 A_SpawnItemEx("QCRocketExploDebris",-1,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx("QCRocketExploParticle",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(1,6),random(0,359),SXF_NOCHECKPOSITION)
+		TNT1 A 10 A_SpawnItemEx("QCRocketExplosion",-2,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		Stop
+	}
+}
+
+// --------------------------------------------------------------------------
+//	For competitive DM, weapons dont autoaim
+// --------------------------------------------------------------------------
+Actor QCSuperShotgunDM : QCSuperShotgun
+{	
+	Weapon.AmmoUse 1
+	+WEAPON.NOAUTOAIM	
+	+CHEATNOTWEAPON
+	Tag "$TAG_UTFlakCannon" // "Super Shotgun (DM)"
+	Weapon.AmmoGive 15
+	Weapon.AmmoDmScale 1.0
+	Weapon.AmmoDmRefill 2
+}
+

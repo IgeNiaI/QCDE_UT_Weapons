@@ -1,0 +1,426 @@
+// --------------------------------------------------------------------------
+//
+// Shock Rifle
+// Weapon and Pickup sprite by ?
+// Weapon code by geNia
+//
+// --------------------------------------------------------------------------
+
+const int LGDmgSPMin = 10;
+const int LGDmgSPMax = 20;
+const int LGDmgDM = 7;
+
+Actor LightningGunPickup : CustomInventory 15606
+{
+	//$NotAngled
+	//$Category "QCDE Weapons"
+	//$Color 14
+	//$Title "Lightning Gun"
+	Height 48
+	Radius 20
+	Scale 0.62
+	Inventory.PickupSound "QC/Items/WeaponPick"
+	Inventory.PickupMessage "$GOT_UTShockRifle" // "Picked up a Lightning Gun."
+	Tag "$TAG_UTShockRifle" // "Lightning Gun"
+	Inventory.RespawnTics 35
+	States
+	{
+	Spawn:
+		UTSR Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		Goto Idle
+	DMSpawn:
+		"####" "#" 0 A_ChangeFlag("DROPPED", 0)
+		UTSR Z -1 Bright ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",18,args[4])
+		Stop
+	Idle:
+		UTSR Y -1 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",17,args[4])
+		Wait
+	Pickup:
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMPickup")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"WeaponStay")
+		TNT1 A 0 A_GiveInventory("QCLightningGun")
+		TNT1 A 0 
+		Stop
+	DMPickup:
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"DMWeaponStay")
+		TNT1 A 0 A_GiveInventory("QCLightningGunDM")
+		TNT1 A 0
+		TNT1 A 0 A_TakeInventory("QCLightningGun")
+		TNT1 A 0
+		Stop
+	WeaponStay:
+		TNT1 A 0 A_JumpIfInventory("QCLightningGun",1,"Stay")
+		TNT1 A 0 A_SpawnItemEx("QCLightningGun", velx,vely,velz, velx,vely,velz, 0, SXF_NOCHECKPOSITION|SXF_ABSOLUTEPOSITION)
+		Fail
+	DMWeaponStay:
+		TNT1 A 0 A_TakeInventory("QCLightningGun")
+		TNT1 A 0 A_JumpIfInventory("QCLightningGunDM",1,"Stay")
+		TNT1 A 0 A_SpawnItemEx("QCLightningGunDM", velx,vely,velz, velx,vely,velz, 0, SXF_NOCHECKPOSITION|SXF_ABSOLUTEPOSITION)
+		Fail
+	Stay:
+		TNT1 A 0
+		Fail
+	HideIndefinitely:
+		TNT1 A 1 A_SetTics(CallACS("QCDE_SetWeaponRespawnTics"))
+		Goto HideDoomish+1
+	}
+}
+
+Actor QCLightningGun : QCWeapon
+{
+	Height 48
+	+FLOORCLIP
+	+INVENTORY.IGNORESKILL
+	Weapon.SwaySpeed 1.8
+	Weapon.AmmoUse 1
+	Weapon.AmmoUse2 2
+	Weapon.AmmoGive 20
+	Weapon.AmmoType "QCCoilAmmo"
+	Weapon.AmmoType2 "QCCoilAmmo"
+	Weapon.SelectionOrder 1300
+	Weapon.KickBack 200
+	Obituary "$OB_UTShockRifle" // "%o was electrocuted by %k."
+	Inventory.PickupMessage "$GOT_UTShockRifle" // "Picked up a Lightning Gun."
+	Tag "$TAG_UTShockRifle" // "Lightning Gun"
+	Scale 0.62
+	States
+	{
+	Spawn:
+		UTSR Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		Goto Idle
+	DMSpawn:
+		UTSR ZZZZZZZZZZZZZZZ 35 Bright
+		Stop
+	Idle:
+		UTSR Y -1
+		Wait
+		
+	//-----------------------
+	// Ready Seq
+	//-----------------------
+	Ready:
+		UTSR A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTSR A 4 A_WeaponReady
+		Loop
+		
+		ReadyCantFire:
+			UTSR A 0 A_StopSound(5)
+		RCFLooper:
+			UTSR A 4 A_WeaponReady(WRF_NOFIRE)
+			UTSR A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper")
+			Goto Ready
+			
+	//-----------------------
+	// Select/Deselect Seq
+	//-----------------------
+	Select:
+		UTSR A 0 A_JumpIfInventory("NoWeaponFireToken",1,2)
+		UTSR A 0 A_PlaySound("QC/Weapons/Switch",5,1,0,3) //Not in Weapon.UpSound because it interrupts CHAN_WEAPON sounds
+		UTSR A 0 A_StopSound(CHAN_WEAPON) // Looper
+		"####" "#" 0 A_StopSound(5) //stops any other weapon looping sound
+	SelectLooper:
+		UTSR A 1 A_Raise
+		TNT1 AAA 0 A_Raise
+		Loop
+		
+	Deselect:
+		UTSR A 0 A_StopSound(5)
+		UTSR A 0 A_StopSound(CHAN_WEAPON)
+	DeselectLooper:
+		UTSR A 1 A_Lower
+		TNT1 AAA 0 A_Lower
+		Loop
+		
+		
+	//-----------------------
+	// Fire Seq
+	//-----------------------
+	Fire: 	//27 tics, 0.77sec
+		UTSR A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTSR A 0 A_GunFlash("Flash")
+		"####" B 1
+		"####" B 1 Offset(4,35)
+		"####" C 1 Offset(7,38)
+		"####" C 1 Offset(10,41)
+		"####" D 1 Offset(12,43)
+		"####" D 1 Offset(14,45)
+		"####" D 1 Offset(15,47)
+		"####" D 1 Offset(16,48)
+		"####" D 1 Offset(15,47)
+		"####" D 1 Offset(14,46) //10
+		"####" D 1 Offset(13,45)
+		"####" D 1 Offset(12,44)
+		"####" D 1 Offset(11,43)
+		"####" E 1 Offset(10,42)
+		"####" E 1 Offset(9,41)
+		"####" E 1 Offset(8,40)
+		"####" E 1 Offset(7,39)
+		"####" E 1 Offset(6,38)
+		"####" E 1 Offset(5,37)
+		"####" E 1 Offset(4,36)	//20
+		"####" E 1 Offset(3,35)
+		"####" E 1 Offset(2,34)
+		"####" A 1 Offset(1,33)	//23
+		Goto Ready
+
+	Flash:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_RailAttack(45, 2, true, None, "BlueViolet", RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "ShockRiflePuff", 0, 0, 0, 0, 2.0)
+		Goto FlashCheckSound
+			
+	FlashCheckSound:
+		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound")
+		Goto NormalSound
+		
+		NormalSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Fire",CHAN_WEAPON)
+			Goto FlashEnder
+		QuadSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/Fire",CHAN_WEAPON)
+			Goto FlashEnder
+			
+	FlashEnder:
+		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil")		
+		TNT1 A 0 A_SetPitch(pitch-3.5)
+		TNT1 A 2
+		TNT1 AAAAAAA 1 A_SetPitch(pitch+0.5)
+		Stop
+	FlashEnderNoRecoil:
+		TNT1 A 1
+		Stop
+
+	//-----------------------
+	// AltFire Seq
+	//-----------------------
+	AltFire: 	//27 tics, 0.77sec
+		UTSR A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTSR A 0 A_GunFlash("AltFlash")
+		"####" B 1
+		"####" B 1 Offset(4,35)
+		"####" C 1 Offset(7,38)
+		"####" C 1 Offset(10,41)
+		"####" D 1 Offset(12,43)
+		"####" D 1 Offset(14,45)
+		"####" D 1 Offset(13,45)
+		"####" D 1 Offset(12,44)
+		"####" D 1 Offset(11,43)
+		"####" D 1 Offset(10,42) //10
+		"####" D 1 Offset(9,41)
+		"####" E 1 Offset(8,40)
+		"####" E 1 Offset(7,39)
+		"####" E 1 Offset(6,38)
+		"####" E 1 Offset(5,37)
+		"####" E 1 Offset(4,36)
+		"####" E 1 Offset(3,35)
+		"####" E 1 Offset(2,34)
+		"####" A 1 Offset(1,33)	//19
+		Goto Ready
+
+	AltFlash:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireCustomMissile("UTShockRifleOrb",0,true,1,4,0,0)
+		Goto AltFlashCheckSound
+			
+	AltFlashCheckSound:
+		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"AltQuadSound")
+		Goto AltNormalSound
+		
+		AltNormalSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/AltFire",CHAN_WEAPON)
+			Goto FlashEnder
+		AltQuadSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/AltFire",CHAN_WEAPON)
+			Goto FlashEnder
+
+	}
+}
+
+Actor QCLightningGunDM : QCLightningGun
+{	
+	+WEAPON.NOAUTOAIM	
+	+CHEATNOTWEAPON
+	Tag "$TAG_UTShockRifle" // "Lightning Gun (DM)"
+	Weapon.AmmoGive1 20
+	Weapon.AmmoDmScale 1.0
+	Weapon.AmmoDmRefill 2
+}
+
+Actor ShockRiflePuff
+{
+	+CLIENTSIDEONLY +NONETID
+	+NOINTERACTION
+	+ALWAYSPUFF
+	+PUFFGETSOWNER
+	+EXTREMEDEATH
+	+FORCEXYBILLBOARD
+	DamageType "ShkRflDmg"
+	States
+	{
+	Spawn:	//hit non bleeding actor
+		TNT1 A 0 
+		//TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+		Goto Crash
+	Xdeath:	//hit bleeding actor
+		TNT1 A 0 
+		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+		TNT1 A 1
+		Stop
+	Crash:
+		TNT1 A 0 A_SpawnItemEx("ShockRiflePuffFx", 5,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
+		TNT1 A 10
+		Stop
+	}
+}
+
+Actor ShockRiflePuffFx
+{
+	+NOINTERACTION
+	+FORCEXYBILLBOARD
+	+CLIENTSIDEONLY
+	RenderStyle Add
+	Translation "0:255=%[0,0,0]:[1.0,0.5,1.5]"
+	Scale 0.9
+	Alpha 0.99
+	States
+	{
+	Spawn:
+		TNT1 A 0 NODELAY A_Jump(256,"Type1","Type2","Type3")
+	Type1:
+		DB63 A 0
+		Goto EndAnimation
+	Type2:
+		DB64 A 0
+		Goto EndAnimation
+	Type3:
+		DB65 A 0
+		Goto EndAnimation
+		
+	EndAnimation:
+		"####" A 0 A_Jump(128,2)
+		"####" A 0 A_SetScale(-0.9,0.9)
+		"####" A 0 //nuthn
+		"####" ABCDE 1 Bright 
+		"####" FGHIJK 1 Bright 
+		"####" LMNOPQRSTUVWXYZ 1 Bright 
+		Stop
+	}
+}
+
+ACTOR UTShockRifleOrb
+{
+	Projectile
+	+SHOOTABLE
+	+NOBLOOD
+	+DONTRIP
+	+DONTREFLECT
+	-NOBLOCKMAP
+	+SEEKERMISSILE //Not actually used for anything other than checking radius.
+	Mass 0x7FFFFFFF
+	Radius 7
+	Height 14
+	Speed 18
+	Damage (45)
+	Scale 0.4
+	Health 10000
+	WoundHealth 9999
+	DamageFactor "Normal" , 0.0
+	DamageFactor "ShkRflDmg", 1.1
+	DamageType "ShkRflDmg"
+	Decal "Q4PlasmaBlack"
+	SeeSound "weapons/maceshoot"
+	Obituary "$OB_UTShockRifleAlt"
+
+	States
+	{
+	Spawn:
+		SHOC AAAABBBBCCCCDDDD 1 BRIGHT
+		Loop
+	Xdeath:	//hit bleeding actor
+		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+	Death:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/OrbHit",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_SetInvulnerable
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		SHOC E 1 BRIGHT A_SetScale(0.43, 0.43)
+		SHOC E 1 BRIGHT A_SetScale(0.46, 0.46)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.85)
+		SHOC F 1 BRIGHT A_SetScale(0.49, 0.49)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.70)
+		SHOC F 1 BRIGHT A_SetScale(0.52, 0.52)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.55)
+		SHOC G 1 BRIGHT A_SetScale(0.55, 0.55)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.40)
+		SHOC G 1 BRIGHT A_SetScale(0.58, 0.58)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.25)
+		SHOC H 1 BRIGHT A_SetScale(0.61, 0.61)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.10)
+		SHOC H 1 BRIGHT A_SetScale(0.64, 0.64)
+		Stop
+	Wound:
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo")
+		Stop
+	}
+}
+
+ACTOR UTShockRifleCombo
+{
+	Projectile
+	+NOBLOOD
+	+DONTRIP
+	+DONTREFLECT
+	-NOBLOCKMAP
+	+SEEKERMISSILE //Not actually used for anything other than checking radius.
+	Radius 1
+	Height 1
+	Speed 0
+	Damage 0
+	Scale 0.4
+	DamageType "ShkRflDmg"
+	Obituary "$OB_UTShockRifleCombo"
+
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_SetInvulnerable
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/OrbExplo",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,225)
+		Goto ExploCont
+		
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
+			Goto ExploCont
+		
+	ExploCont:
+		TNT1 A 0 A_Explode(175,225,1)
+		TNT1 E 0 A_SetScale(4.0, 4.0)
+		SHOC E 1 BRIGHT A_SetScale(2.00, 2.00)
+		SHOC F 1 BRIGHT A_SetScale(2.80, 2.80)
+		SHOC G 1 BRIGHT A_SetScale(3.20, 3.20)
+		SHOC H 1 BRIGHT A_SetScale(3.50, 3.50)
+		SHOC E 1 BRIGHT A_SetScale(3.75, 3.75)
+		SHOC E 1 BRIGHT A_SetScale(4.00, 4.00)
+		SHOC F 1 BRIGHT A_SetScale(4.20, 4.20)
+		SHOC F 1 BRIGHT A_SetScale(4.37, 4.37)
+		SHOC G 1 BRIGHT A_SetScale(4.52, 4.52)
+		SHOC G 1 BRIGHT A_SetScale(4.65, 4.65)
+		SHOC H 1 BRIGHT A_SetScale(4.77, 4.77)
+		SHOC H 1 BRIGHT A_SetScale(4.87, 4.87)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.85)
+		SHOC E 1 BRIGHT A_SetScale(4.95, 4.95)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.70)
+		SHOC E 1 BRIGHT A_SetScale(5.01, 5.01)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.55)
+		SHOC E 1 BRIGHT A_SetScale(5.06, 5.06)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.40)
+		SHOC F 1 BRIGHT A_SetScale(5.10, 5.10)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.25)
+		SHOC F 1 BRIGHT A_SetScale(5.13, 5.13)
+		TNT1 E 0 BRIGHT A_SetTranslucent(0.10)
+		SHOC F 1 BRIGHT A_SetScale(5.14, 5.14)
+		Stop
+	}
+}

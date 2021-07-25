@@ -1,0 +1,96 @@
+
+[enu default]
+
+GOT_QCBulletAmmoTerminator      = "Picked up a few surplus bullets.";
+GOT_QCShellAmmoTerminator       = "Picked up a few surplus flak shells.";
+GOT_QCNailAmmoTerminator        = "Picked up a few surplus pulse cells.";
+GOT_QCBoltAmmoTerminator        = "Picked up a surplus bio ammo.";
+GOT_QCRocketAmmoTerminator      = "Picked up a few surplus rockets.";
+GOT_QCCoilAmmoTerminator        = "Picked up a surplus shock ammo.";
+GOT_QCSlugAmmoTerminator        = "Picked up a surplus lightning ammo.";
+GOT_QCBfgAmmoTerminator         = "Picked up a Redeemer Rocket.";
+
+TAG_QCBulletAmmo                = "Bullet Ammo Big";
+GOT_QCBulletAmmo                = "Picked up a pack of bullets.";
+TAG_QCBulletAmmoSmall           = "Bullet Ammo Small";
+GOT_QCBulletAmmoSmall           = "Picked up a few bullets.";
+TAG_QCShellAmmo                 = "Shell Ammo Big";
+GOT_QCShellAmmo                 = "Picked up a pack of flak shells.";
+TAG_QCShellAmmoSmall            = "Shell Ammo Small";
+GOT_QCShellAmmoSmall            = "Picked up a few flak shells.";
+TAG_QCNailAmmo                  = "Pulse Ammo Big";
+GOT_QCNailAmmo                  = "Picked up a pulse cell.";
+TAG_QCNailAmmoSmall             = "Pulse Ammo Small";
+GOT_QCNailAmmoSmall             = "Picked up a small pulse cell.";
+TAG_QCBoltAmmo                  = "Bio Ammo";
+GOT_QCBoltAmmo                  = "Picked up biosludge ammo.";
+TAG_QCBoltAmmoSmall             = "Bio Ammo Small";
+GOT_QCBoltAmmoSmall             = "Picked up a few biosludges.";
+TAG_QCRocketAmmo                = "Rocket Ammo Big";
+GOT_QCRocketAmmo                = "Picked up a pack of rockets.";
+TAG_QCRocketAmmoSmall           = "Rocket Ammo Small";
+GOT_QCRocketAmmoSmall           = "Picked up a few rockets.";
+TAG_QCCoilAmmo                  = "Shock Ammo Big";
+GOT_QCCoilAmmo                  = "Picked up a shock core.";
+TAG_QCCoilAmmoSmall             = "Shock Ammo Small";
+GOT_QCCoilAmmoSmall             = "Picked up a small shock core.";
+TAG_QCSlugAmmo                  = "Lightning Ammo Big";
+GOT_QCSlugAmmo                  = "Picked up a lightning coil.";
+TAG_QCSlugAmmoSmall             = "Lightning Ammo Small";
+GOT_QCSlugAmmoSmall             = "Picked up a small lightning coil.";
+TAG_QCBFGAmmo                   = "Redeemer Ammo Big";
+GOT_QCBFGAmmo                   = "Picked up a Redeemer Rocket.";
+TAG_QCBFGAmmoSmall              = "Redeemer Ammo Small";
+GOT_QCBFGAmmoSmall              = "Picked up a Redeemer Rocket.";
+
+GOT_UTImpactHammer                  = "You got an Impact Hammer.";
+OB_UTImpactHammer                   = "%o got smeared by %k's piston.";
+TAG_UTImpactHammer                  = "Impact Hammer";
+
+GOT_UTAssaltRifle                   = "You got an Assault Rifle.";
+OB_UTAssaltRifle                    = "%o was ventilated by %k's Assault Rifle.";
+TAG_UTAssaltRifle                   = "Assault Rifle";
+
+GOT_UTMinigun                       = "You got a Minigun.";
+OB_UTMinigun                        = "%k's Minigun turned %o into a leaky piece of meat.";
+TAG_UTMinigun                       = "Minigun";
+
+GOT_UTFlakMini                      = "You got a Mini Flak Cannon.";
+OB_UTFlakMini                       = "%o was ripped to shreds by %k's Mini Flak Cannon.";
+TAG_UTFlakMini                      = "Mini Flak Cannon";
+
+GOT_UTFlakCannon                    = "You got a Flak Cannon.";
+OB_UTFlakCannon                     = "%o was shredded by %k's Flak Cannon.";
+OB_UTFlakCannonAlt                  = "%o was ripped to shreds by %k's shrapnel.";
+TAG_UTFlakCannon                    = "Flak Cannon";
+
+GOT_UTPulseMini                     = "You got a Mini Pulse Gun.";
+OB_UTPulseMini                      = "%o was serveed an extra helping of %k's plasma.";
+TAG_UTPulseMini                     = "Mini Pulse Gun";
+
+GOT_UTPulseGun                      = "You got a Pulse Gun.";
+OB_UTPulseGun                       = "%o ate %k's burning plasma death.";
+OB_UTPulseGunAlt                    = "%o was carved by %k's green shaft.";
+TAG_UTPulseGun                      = "Pulse Gun";
+
+GOT_UTBioRifle                      = "You got a GES Bio Rifle.";
+OB_UTBioRifle                       = "%o drank a glass of %k's dripping green load.";
+TAG_UTBioRifle                      = "Bio Rifle";
+
+GOT_UTRocketLauncher                = "You got a Rocket Launcher.";
+OB_UTRocketLauncher                 = "%o was smacked down by %k's Rocket.";
+TAG_UTRocketLauncher                = "Rocket Launcher";
+
+GOT_UTShockRifle                    = "You got an ASMD Shock Rifle.";
+OB_UTShockRifle                     = "%o was fatally enlightened by %k shock beam.";
+OB_UTShockRifleAlt                  = "%o was wasted by %k's shock core.";
+OB_UTShockRifleCombo                = "%o couldn't avoid the blast from %k's shock combo.";
+TAG_UTShockRifle                    = "Shock Rifle";
+
+GOT_UTLightningGun                  = "You got a Lightning Gun.";
+OB_UTLightningGun                   = "%o cranium was made extra crispy by %k's Lightning Gun.";
+TAG_UTLightningGun                  = "Lightning Gun";
+
+GOT_UTRedeemer                      = "You got a Redeemer.";
+OB_UTRedeemer                       = "%o was vaporized by %k's Redeemer!!";
+TAG_UTRedeemer                      = "Redeemer";

@@ -1,0 +1,46 @@
+#library "UTWEAPON"
+#include "zcommon.acs"
+
+Script "UTDE_RlAltCheck" (void)
+{
+	if(GetPlayerInput(-1, INPUT_BUTTONS) & BT_ATTACK)
+		SetResultValue(1);
+	else
+		SetResultValue(0);
+}
+
+
+// Activator: noisy projectile in flight
+script "UTDE_AttachWhoosh" (void) CLIENTSIDE
+{
+	// remember rocket
+	int tid = ActivatorTid();
+	if(!tid)
+	{
+		tid = UniqueTid();
+		Thing_ChangeTid(0,tid);
+	}
+	
+	// don't whoosh if your own rocket
+	SetActivatorToTarget(0);
+	
+	// whoosh!
+	PlaySound(tid, "UTDE/Weapons/Redeemer/Fly",CHAN_5,1.0,true,1.0);
+}
+
+
+script "UTDE_HoldBioNoAmmo" (void)
+{
+	if(CheckInventory("QCBoltAmmo") <= 0 && GetPlayerInput(-1, INPUT_BUTTONS) & BT_ALTATTACK)
+		SetResultValue(1);
+	else
+		SetResultValue(0);
+}
+
+script "UTDE_HoldRocketNoAmmo" (void)
+{
+	if(CheckInventory("QCRocketAmmo") <= 0 && GetPlayerInput(-1, INPUT_BUTTONS) & BT_ALTATTACK)
+		SetResultValue(1);
+	else
+		SetResultValue(0);
+}
