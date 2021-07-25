@@ -251,13 +251,18 @@ Actor UTRipperBlade
 	States
 	{
 	Spawn:
+		BLAD BCABCABC 1
+		TNT1 A 0 A_ChangeFlag("HITOWNER",1)
+
+	Looper:
 		BLAD ABC 1
 		Loop
 
 	Bounce:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_ChangeFlag("HITOWNER",1)
 		TNT1 A 0 A_Countdown
-		Goto Spawn
+		Goto Looper
 
 	XDeath:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Impact",CHAN_AUTO,1,0,1)

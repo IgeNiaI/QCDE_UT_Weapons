@@ -382,6 +382,7 @@ Actor UTFlakShellBounced
 	+DONTSPLASH
 	+USEBOUNCESTATE
 	+BLOODSPLATTER
+	+HITOWNER
 	+MTHRUSPECIES
 	+DONTBLAST
 	-NOGRAVITY
@@ -480,8 +481,8 @@ Actor UTFlakBomb
 //	For competitive DM, weapons dont autoaim
 // --------------------------------------------------------------------------
 Actor QCSuperShotgunDM : QCSuperShotgun
-{	
-	+WEAPON.NOAUTOAIM	
+{
+	+WEAPON.NOAUTOAIM
 	+CHEATNOTWEAPON
 	Tag "$TAG_UTFlakCannon"
 	Weapon.AmmoUse 1
