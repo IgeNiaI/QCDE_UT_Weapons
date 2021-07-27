@@ -416,16 +416,7 @@ Actor UTFlakBomb
 		TNT1 A 0 A_Explode(10,128,1,0,18)		//self rocket damage without rocket jump is 10
 		TNT1 A 0 A_Explode(40,128,0,0,18)		//then another 40 extra damage for impacting a player + (15)dmg on the projectile =90dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,10,0,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,7,-7,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,0,-10,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,-7,-7,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,-10,0,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,-7,7,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,0,10,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,7,7,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,0,0,10)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,5,0,0,-10)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("UTFlakShellFromBomb",0,0,1,frandom(-20.0, 20.0),frandom(-20.0, 20.0),frandom(-20.0, 20.0))
 		TNT1 A 0 A_SpawnItemEx("QCRocketExploDebris",-1,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		TNT1 AAAAA 0 A_SpawnItemEx("QCRocketExploParticle",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(1,6),random(0,359),SXF_NOCHECKPOSITION)
 		TNT1 A 10 A_SpawnItemEx("QCRocketExplosion",-2,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
