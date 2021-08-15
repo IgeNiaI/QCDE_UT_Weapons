@@ -13,17 +13,14 @@ Script "UTDE_RlAltCheck" (void)
 // Activator: noisy projectile in flight
 script "UTDE_AttachWhoosh" (void) CLIENTSIDE
 {
-	// remember rocket
+	// redeemer rocket
 	int tid = ActivatorTid();
 	if(!tid)
 	{
 		tid = UniqueTid();
 		Thing_ChangeTid(0,tid);
 	}
-	
-	// don't whoosh if your own rocket
-	SetActivatorToTarget(0);
-	
+
 	// whoosh!
 	PlaySound(tid, "UTDE/Weapons/Redeemer/Fly",CHAN_5,1.0,true,1.0);
 }
