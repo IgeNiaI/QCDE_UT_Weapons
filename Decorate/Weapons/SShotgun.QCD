@@ -338,11 +338,12 @@ Actor UTFlakShell
 	+FORCEXYBILLBOARD
 	+DONTSPLASH
 	+USEBOUNCESTATE
+	ReactionTime 20
 	Gravity 0.5
 	damage (13)
 	radius 2
 	height 2
-	speed 50
+	speed 60
 	renderstyle ADD
 	alpha 0.9
 	scale 0.35
@@ -352,12 +353,12 @@ Actor UTFlakShell
 	states
 	{
 	Spawn:
-		NAIL A random(17,23) BRIGHT
-		Stop
+		NAIL A 1 BRIGHT A_Countdown
+		NAIL A 1 A_Jump(192, "Spawn")
+		Goto Spawn+1
 	Bounce:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Bounce",CHAN_AUTO,1,0,1)
-		NAIL A random(14,20) BRIGHT A_ChangeFlag("NOGRAVITY", false)
-		Stop
+		Goto Spawn
 	XDeath:
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
 	Bounce.Actor:
