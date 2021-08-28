@@ -62,7 +62,7 @@ Actor NailgunPickup : CustomInventory
 Actor QCNailgun : QCWeapon
 {
 	Height 48
-	Weapon.SwaySpeed 1.4
+	Weapon.SwaySpeed 2.8
 	Weapon.Kickback 30
 	Weapon.SelectionOrder 2000
 	Weapon.AmmoUse 1

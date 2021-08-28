@@ -74,7 +74,7 @@ Actor SuperNailgunPickup : CustomInventory 15603
 Actor QCSuperNailgun : QCWeapon
 {
 	Height 48
-	Weapon.SwaySpeed 1.35
+	Weapon.SwaySpeed 2.7
 	Weapon.Kickback 0
 	Weapon.SelectionOrder 1400
 	Weapon.AmmoUse 1

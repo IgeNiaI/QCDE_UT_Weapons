@@ -72,7 +72,7 @@ Actor QCRailGun : QCWeapon
 	+WEAPON.NOALERT
 	+WEAPON.NOALTAUTOFIRE
 	+WEAPON.NOAUTOAIM	//rails never autoaim, but this needed for effects and sound spawners
-	Weapon.SwaySpeed 1.35
+	Weapon.SwaySpeed 2.7
 	Weapon.AmmoType1 "QCSlugAmmo"
 	Weapon.AmmoGive1 15
 	Weapon.AmmoUse1 1

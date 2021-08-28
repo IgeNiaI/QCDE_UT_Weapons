@@ -56,7 +56,7 @@ Actor MachinegunPickup : CustomInventory
 
 Actor QCMachineGun : QCWeapon
 {
-	Weapon.SwaySpeed 1.7
+	Weapon.SwaySpeed 3.4
 	Weapon.Kickback 20
 	Weapon.SelectionOrder 2000
 	Weapon.AmmoUse 1

@@ -66,7 +66,7 @@ Actor TriboltPickup : CustomInventory 15604
 Actor QCTribolt : QCWeapon
 {
 	Height 48
-	Weapon.SwaySpeed 1.35
+	Weapon.SwaySpeed 2.6
 	Weapon.Kickback 0
 	Weapon.SelectionOrder 1950
 	Weapon.AmmoUse 1
@@ -332,7 +332,7 @@ Actor QCTriboltDM : QCWeapon
 	+WEAPON.NOAUTOAIM
 	+CHEATNOTWEAPON
 	Height 48
-	Weapon.SwaySpeed 1.35
+	Weapon.SwaySpeed 2.7
 	Weapon.Kickback 0
 	Weapon.SelectionOrder 1950
 	Weapon.AmmoUse 1

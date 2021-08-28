@@ -62,7 +62,7 @@ Actor BFGPickup : CustomInventory 15608
 Actor QCBFG : QCWeapon
 {
 	Height 48
-	Weapon.SwaySpeed 1.3
+	Weapon.SwaySpeed 2.6
 	Weapon.SelectionOrder 6666 // lowest
 	Weapon.AmmoUse 1
 	Weapon.AmmoUse2 1
