@@ -712,7 +712,7 @@ ACTOR BioBall1Sticky
 	States
 	{
 	Spawn:
-		BIOB A 80
+		BIOB A 99
 	Death:
 		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
 		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,64)
