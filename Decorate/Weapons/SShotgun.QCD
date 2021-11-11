@@ -338,6 +338,7 @@ Actor UTFlakShell
 	+FORCEXYBILLBOARD
 	+DONTSPLASH
 	+USEBOUNCESTATE
+	+BLOODSPLATTER
 	ReactionTime 20
 	Gravity 0.5
 	damage (13)
@@ -376,6 +377,7 @@ Actor UTFlakShellFromBomb : UTFlakShell
 Actor UTFlakBomb
 {
 	Projectile
+	+BLOODSPLATTER
 	+FORCEXYBILLBOARD
 	-NOGRAVITY
 	Gravity 0.65

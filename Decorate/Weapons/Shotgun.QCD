@@ -219,6 +219,7 @@ Actor UTFlakMiniShell
 	+FORCEXYBILLBOARD
 	+DONTSPLASH
 	+USEBOUNCESTATE
+	+BLOODSPLATTER
 	Gravity 0.5
 	damage (10)
 	radius 2

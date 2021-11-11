@@ -187,6 +187,7 @@ Actor UTPulseWeak : FastProjectile
 {
 	Projectile
 	+FORCEXYBILLBOARD
+	+BLOODSPLATTER
 	Obituary "$OB_UTPulseMini"
 	Speed 52
 	Radius 4

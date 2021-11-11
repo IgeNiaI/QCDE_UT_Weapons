@@ -252,6 +252,7 @@ Actor UTPulseStrong : FastProjectile
 {
 	Projectile
 	+FORCEXYBILLBOARD
+	+BLOODSPLATTER
 	Obituary "$OB_UTPulseGun"
 	Speed 52
 	Radius 4
