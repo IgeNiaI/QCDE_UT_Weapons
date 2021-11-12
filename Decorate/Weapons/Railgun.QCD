@@ -1403,21 +1403,3 @@ Actor LightningGunPuff
 		Stop
 	}
 }
-
-Actor LGworldactor
-{
-	+CLIENTSIDEONLY +NONETID
-	+NOINTERACTION +NOTONAUTOMAP
-	+FORCEXYBILLBOARD
-	+DONTSPLASH
-	RenderStyle Add
-	Alpha 0.68
-	Scale 0.4
-	Translation "0:255=%[0,0,0]:[0.8,1.2,1.6]"
-	States
-	{
-	Spawn:
-		LGWR Z 35 Bright
-		Stop
-	}
-}
