@@ -362,7 +362,6 @@ Actor UTFlakShell
 		Goto Spawn
 	XDeath:
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
-	Bounce.Actor:
 	Death:
 		TNT1 A 1
 		Stop
