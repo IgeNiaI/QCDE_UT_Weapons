@@ -663,7 +663,6 @@ Actor QCTriboltDM : QCTribolt
 ACTOR BioBall1
 {
 	Projectile
-	+USEBOUNCESTATE
 	-NOGRAVITY
 	Gravity 0.5
 	Radius 4
