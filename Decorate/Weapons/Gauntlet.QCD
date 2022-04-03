@@ -312,6 +312,7 @@ Actor QCGauntlet : QCWeapon
 		Goto PostStrongFire
 	
 	PostFire:
+		TNT1 A 0 A_SpawnItemEx("HammerReflector", 16 * cos(pitch), 0, 20 + 16 * sin(-pitch), 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		TNT1 A 0 A_GunFlash("Flash", GFF_NOEXTCHANGE)
 		TNT1 A 0 A_TakeInventory("PunchedAlready",32767)
 		UTIH H 1 Offset(3,35)
@@ -333,6 +334,7 @@ Actor QCGauntlet : QCWeapon
 		Goto "Ready"
 
 	PostStrongFire:
+		TNT1 A 0 A_SpawnItemEx("HammerReflector", 16 * cos(pitch), 0, 20 + 16 * sin(-pitch), 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		TNT1 A 0 A_GunFlash("StrongFlash", GFF_NOEXTCHANGE)
 		TNT1 A 0 A_TakeInventory("PunchedAlready",32767)
 		UTIH H 1 Offset(4,37)
@@ -583,7 +585,20 @@ Actor QCGauntlet_Bot : QCGauntlet
 {	
 }
 
-
+Actor HammerReflector
+{
+	+NOINTERACTION
+	+NOGRAVITY
+	radius 1
+	height 1
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1 A_Blast(BF_NOIMPACTDAMAGE, 255, 32)
+		Stop
+	}
+}
 
 Actor HammerPuff1
 {
