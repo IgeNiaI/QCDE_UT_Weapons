@@ -278,9 +278,15 @@ Actor DrawAttentionProc : CustomInventory
 Actor UTFlakShellIllusion : UTFlakShell
 {
 	Damage (0)
+	States
+	{
+	Death:
+		TNT1 A 0 A_SpawnItemEx("UTFlakShellBouncedIllusion", 0, 0, 0, user_velx, user_vely, user_velz, 0, SXF_ABSOLUTEVELOCITY|SXF_TRANSFERPOINTERS)
+		Stop
+	}
 }
 
-Actor UTFlakShellFromBombIllusion : UTFlakShellFromBomb
+Actor UTFlakShellBouncedIllusion : UTFlakShellBounced
 {
 	Damage (0)
 }
@@ -296,23 +302,13 @@ Actor UTFlakBombIllusion : UTFlakBomb
 		Goto DeathCont
 
 	XDeath:
-		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
 		TNT1 A 0 A_Stop
 		Goto DeathCont
 
 	DeathCont:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Explo",CHAN_AUTO,1,0,1)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,10,0,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,7,-7,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,0,-10,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,-7,-7,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,-10,0,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,-7,7,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,0,10,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,7,7,5)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,0,0,10)
-		TNT1 A 0 A_SpawnItemEx("UTFlakShellFromBombIllusion",0,0,5,0,0,-10)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("UTFlakShellBouncedIllusion",0,0,1,frandom(-30.0, 30.0),frandom(-30.0, 30.0),frandom(-30.0, 30.0))
 		TNT1 A 0 A_SpawnItemEx("QCRocketExploDebris",-1,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		TNT1 AAAAA 0 A_SpawnItemEx("QCRocketExploParticle",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(1,6),random(0,359),SXF_NOCHECKPOSITION)
 		TNT1 A 10 A_SpawnItemEx("QCRocketExplosion",-2,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
