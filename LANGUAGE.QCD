@@ -22,6 +22,10 @@ TAG_QCNailAmmo                  = "Pulse Ammo Big";
 GOT_QCNailAmmo                  = "Picked up a pulse cell.";
 TAG_QCNailAmmoSmall             = "Pulse Ammo Small";
 GOT_QCNailAmmoSmall             = "Picked up a small pulse cell.";
+TAG_QCRipperAmmo                = "Ripper Ammo";
+GOT_QCRipperAmmo                = "Picked up razor blades.";
+TAG_QCRipperAmmoSmall           = "Ripper Ammo Small";
+GOT_QCRipperAmmoSmall           = "Picked up a few razor blades.";
 TAG_QCBoltAmmo                  = "Bio Ammo";
 GOT_QCBoltAmmo                  = "Picked up biosludge ammo.";
 TAG_QCBoltAmmoSmall             = "Bio Ammo Small";
@@ -72,6 +76,10 @@ GOT_UTPulseGun                      = "You got a Pulse Gun.";
 OB_UTPulseGun                       = "%o ate %k's burning plasma death.";
 OB_UTPulseGunAlt                    = "%o was carved by %k's green shaft.";
 TAG_UTPulseGun                      = "Pulse Gun";
+
+GOT_UTRipper                        = "You got the Ripper.";
+OB_UTRipper                         = "%k ripped a chunk of meat out of %o.";
+TAG_UTRipper                        = "Ripper";
 
 GOT_UTBioRifle                      = "You got a GES Bio Rifle.";
 OB_UTBioRifle                       = "%o drank a glass of %k's dripping green load.";

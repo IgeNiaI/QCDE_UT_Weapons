@@ -284,33 +284,44 @@ Actor QCGauntlet : QCWeapon
 	// Actually firing the weapon
 	//-----------------------
 	Fire1:
+		TNT1 A 0 A_JumpIfInventory("Instagib",1,"FireIG")
 		TNT1 A 0 A_RailAttack(30, 0, 0, None, None, RGF_SILENT|RGF_NOPIERCING, 0, "HammerPuff1", 0, 0, 56)
 		Goto PostFire
 		
 	Fire2:
+		TNT1 A 0 A_JumpIfInventory("Instagib",1,"FireIG")
 		TNT1 A 0 A_RailAttack(48, 0, 0, None, None, RGF_SILENT|RGF_NOPIERCING, 0, "HammerPuff2", 0, 0, 56)
 		Goto PostFire
 		
 	Fire3:
+		TNT1 A 0 A_JumpIfInventory("Instagib",1,"FireIG")
 		TNT1 A 0 A_RailAttack(65, 0, 0, None, None, RGF_SILENT|RGF_NOPIERCING, 0, "HammerPuff3", 0, 0, 56)
 		Goto PostStrongFire
 		
 	Fire4:
+		TNT1 A 0 A_JumpIfInventory("Instagib",1,"FireIG")
 		TNT1 A 0 A_RailAttack(82, 0, 0, None, None, RGF_SILENT|RGF_NOPIERCING, 0, "HammerPuff4", 0, 0, 56)
 		Goto PostStrongFire
 		
 	Fire5:
+		TNT1 A 0 A_JumpIfInventory("Instagib",1,"FireIG")
 		TNT1 A 0 A_RailAttack(100, 0, 0, None, None, RGF_SILENT|RGF_NOPIERCING, 0, "HammerPuff5", 0, 0, 56)
 		Goto PostStrongFire
 		
 	Fire6:
+		TNT1 A 0 A_JumpIfInventory("Instagib",1,"FireIG")
 		TNT1 A 0 A_RailAttack(118, 0, 0, None, None, RGF_SILENT|RGF_NOPIERCING, 0, "HammerPuff6", 0, 0, 56)
 		Goto PostStrongFire
 		
 	Fire7:
+		TNT1 A 0 A_JumpIfInventory("Instagib",1,"FireIG")
 		TNT1 A 0 A_RailAttack(135, 0, 0, None, None, RGF_SILENT|RGF_NOPIERCING, 0, "HammerPuff7", 0, 0, 56)
 		Goto PostStrongFire
-	
+
+	FireIG:
+		TNT1 A 0 A_RailAttack(999, 0, 0, None, None, RGF_SILENT|RGF_NOPIERCING, 0, "HammerPuff7", 0, 0, 56)
+		Goto PostStrongFire
+
 	PostFire:
 		TNT1 A 0 A_SpawnItemEx("HammerReflector", 16 * cos(pitch), 0, 20 + 16 * sin(-pitch), 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		TNT1 A 0 A_GunFlash("Flash", GFF_NOEXTCHANGE)
@@ -582,7 +593,7 @@ Actor QCGauntlet : QCWeapon
 }
 
 Actor QCGauntlet_Bot : QCGauntlet
-{	
+{
 }
 
 Actor HammerReflector
@@ -939,6 +950,11 @@ Actor GauntletFlameBurner
 		VTFB A 2 Light("YellowSmallFlicker3") A_FadeOut(0.1)
 		Stop
 	}
+}
+
+Actor QCBulletPuff_ZombieGibber : QCBulletPuff
+{
+	DamageType "ZombieGibber"
 }
 
 Actor NailFlameFX

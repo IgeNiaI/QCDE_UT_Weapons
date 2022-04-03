@@ -356,7 +356,8 @@ statusbar Normal, forcescaled
 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawImage "AmmBullt", 1170, 897; }
 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawImage "AmmShell", 1170, 897; }
 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawImage "AmmNails", 1170, 897; }
-	isSelected QCTribolt	 		, QCTriboltDM			{ drawImage "AmmBolts", 1170, 897; }
+	isSelected QCTribolt									{ drawImage "AmmBlads", 1170, 897; }
+	isSelected 						  QCTriboltDM			{ drawImage "AmmBolts", 1170, 897; }
 	isSelected QCRocketLauncher		, QCRocketLauncherDM	{ drawImage "AmmRockt", 1170, 897; }
 	isSelected QCLightningGun		, QCLightningGunDM		{ drawImage "AmmCoils", 1170, 897; }
 	isSelected QCRailgun 			, QCRailgunDM			{ drawImage "AmmSlugs", 1170, 897; }
@@ -446,7 +447,11 @@ statusbar Normal, forcescaled
 	inInventory QCHeavyMachinegun 	|| QCHeavyMachinegunDM	{ 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawBar "1MACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1380,350; } else { drawBar "HMACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1380,350; } }
 	inInventory QCSuperShotgun		|| QCSuperShotgunDM		{ 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawBar "1SHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1380,420; } else { drawBar "SSHOTGUN", "0SHOTGUN", QCShellAmmo		, horizontal, 1380,420; } }
 	inInventory QCSuperNailgun		|| QCSuperNailgunDM		{ 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawBar "1NAILGUN", "0NAILGUN", QCNailAmmo	, horizontal, 1380,490; } else { drawBar "SNAILGUN", "0NAILGUN", QCNailAmmo		, horizontal, 1380,490; } }
-	inInventory QCTribolt	 		|| QCTriboltDM			{ 	isSelected QCTribolt	 		, QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0RIBOLT" , 1380,560;}
+	gameMode deathmatch {
+		inInventory					   QCTriboltDM			{ 	isSelected						  QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0RIBOLT" , 1380,560;}
+	} else {
+		inInventory QCTribolt								{ 	isSelected QCTribolt									{ drawBar "1IPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "RIPPERR" , "0IPPERR" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0IPPERR" , 1380,560;}
+	}
 	inInventory QCRocketLauncher	|| QCRocketLauncherDM	{ 	isSelected QCRocketLauncher		, QCRocketLauncherDM	{ drawBar "1AUNCHER", "0AUNCHER", QCRocketAmmo	, horizontal, 1380,630; } else { drawBar "LAUNCHER", "0AUNCHER", QCRocketAmmo	, horizontal, 1380,630; } } else { drawImage "0AUNCHER", 1380,630;}
 	inInventory QCLightningGun		|| QCLightningGunDM		{ 	isSelected QCLightningGun		, QCLightningGunDM		{ drawBar "1IGHTNIN", "0IGHTNIN", QCCoilAmmo 	, horizontal, 1380,700; } else { drawBar "LIGHTNIN", "0IGHTNIN", QCCoilAmmo 		, horizontal, 1380,700; } } else { drawImage "0IGHTNIN", 1380,700;}
 	inInventory QCRailgun 			|| QCRailgunDM			{ 	isSelected QCRailgun 			, QCRailgunDM			{ drawBar "1RAILGUN", "0RAILGUN", QCSlugAmmo 	, horizontal, 1380,770; } else { drawBar "RRAILGUN", "0RAILGUN", QCSlugAmmo 		, horizontal, 1380,770; } } else { drawImage "0RAILGUN", 1380,770;}
@@ -540,7 +545,11 @@ statusbar Normal, forcescaled
 	inInventory QCHeavyMachinegun 	|| QCHeavyMachinegunDM	{ 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawBar "1MACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1480,350; } else { drawBar "HMACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1480,350; } }
 	inInventory QCSuperShotgun		|| QCSuperShotgunDM		{ 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawBar "1SHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1480,420; } else { drawBar "SSHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1480,420; } }
 	inInventory QCSuperNailgun		|| QCSuperNailgunDM		{ 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawBar "1NAILGUN", "0NAILGUN", QCNailAmmo	, horizontal, 1480,490; } else { drawBar "SNAILGUN", "0NAILGUN", QCNailAmmo		, horizontal, 1480,490; } }
-	inInventory QCTribolt	 		|| QCTriboltDM			{ 	isSelected QCTribolt	 		, QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0RIBOLT" , 1480,560;}
+	gameMode deathmatch {
+		inInventory 				   QCTriboltDM			{ 	isSelected 						  QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0RIBOLT" , 1480,560;}
+	} else {
+		inInventory QCTribolt								{ 	isSelected QCTribolt									{ drawBar "1IPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "RIPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0IPPERR" , 1480,560;}
+	}
 	inInventory QCRocketLauncher	|| QCRocketLauncherDM	{ 	isSelected QCRocketLauncher		, QCRocketLauncherDM	{ drawBar "1AUNCHER", "0AUNCHER", QCRocketAmmo	, horizontal, 1480,630; } else { drawBar "LAUNCHER", "0AUNCHER", QCRocketAmmo	, horizontal, 1480,630; } } else { drawImage "0AUNCHER", 1480,630;}
 	inInventory QCLightningGun		|| QCLightningGunDM		{ 	isSelected QCLightningGun		, QCLightningGunDM		{ drawBar "1IGHTNIN", "0IGHTNIN", QCCoilAmmo 	, horizontal, 1480,700; } else { drawBar "LIGHTNIN", "0IGHTNIN", QCCoilAmmo 	, horizontal, 1480,700; } } else { drawImage "0IGHTNIN", 1480,700;}
 	inInventory QCRailgun 			|| QCRailgunDM			{ 	isSelected QCRailgun 			, QCRailgunDM			{ drawBar "1RAILGUN", "0RAILGUN", QCSlugAmmo 	, horizontal, 1480,770; } else { drawBar "RRAILGUN", "0RAILGUN", QCSlugAmmo 	, horizontal, 1480,770; } } else { drawImage "0RAILGUN", 1480,770;}
@@ -1288,7 +1297,8 @@ statusbar Fullscreen, forcescaled
 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawImage "AmmBullt", 1170, 897; }
 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawImage "AmmShell", 1170, 897; }
 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawImage "AmmNails", 1170, 897; }
-	isSelected QCTribolt	 		, QCTriboltDM			{ drawImage "AmmBolts", 1170, 897; }
+	isSelected QCTribolt									{ drawImage "AmmBlads", 1170, 897; }
+	isSelected 						  QCTriboltDM			{ drawImage "AmmBolts", 1170, 897; }
 	isSelected QCRocketLauncher		, QCRocketLauncherDM	{ drawImage "AmmRockt", 1170, 897; }
 	isSelected QCLightningGun		, QCLightningGunDM		{ drawImage "AmmCoils", 1170, 897; }
 	isSelected QCRailgun 			, QCRailgunDM			{ drawImage "AmmSlugs", 1170, 897; }
@@ -1378,7 +1388,11 @@ statusbar Fullscreen, forcescaled
 	inInventory QCHeavyMachinegun 	|| QCHeavyMachinegunDM	{ 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawBar "1MACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1380,350; } else { drawBar "HMACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1380,350; } }
 	inInventory QCSuperShotgun		|| QCSuperShotgunDM		{ 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawBar "1SHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1380,420; } else { drawBar "SSHOTGUN", "0SHOTGUN", QCShellAmmo		, horizontal, 1380,420; } }
 	inInventory QCSuperNailgun		|| QCSuperNailgunDM		{ 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawBar "1NAILGUN", "0NAILGUN", QCNailAmmo	, horizontal, 1380,490; } else { drawBar "SNAILGUN", "0NAILGUN", QCNailAmmo		, horizontal, 1380,490; } }
-	inInventory QCTribolt	 		|| QCTriboltDM			{ 	isSelected QCTribolt	 		, QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0RIBOLT" , 1380,560;}
+	gameMode deathmatch {
+		inInventory 				   QCTriboltDM			{ 	isSelected 						  QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0RIBOLT" , 1380,560;}
+	} else {
+		inInventory QCTribolt	 							{ 	isSelected QCTribolt									{ drawBar "1IPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "RIPPERR" , "0IPPERR" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0IPPERR" , 1380,560;}
+	}
 	inInventory QCRocketLauncher	|| QCRocketLauncherDM	{ 	isSelected QCRocketLauncher		, QCRocketLauncherDM	{ drawBar "1AUNCHER", "0AUNCHER", QCRocketAmmo	, horizontal, 1380,630; } else { drawBar "LAUNCHER", "0AUNCHER", QCRocketAmmo	, horizontal, 1380,630; } } else { drawImage "0AUNCHER", 1380,630;}
 	inInventory QCLightningGun		|| QCLightningGunDM		{ 	isSelected QCLightningGun		, QCLightningGunDM		{ drawBar "1IGHTNIN", "0IGHTNIN", QCCoilAmmo 	, horizontal, 1380,700; } else { drawBar "LIGHTNIN", "0IGHTNIN", QCCoilAmmo 		, horizontal, 1380,700; } } else { drawImage "0IGHTNIN", 1380,700;}
 	inInventory QCRailgun 			|| QCRailgunDM			{ 	isSelected QCRailgun 			, QCRailgunDM			{ drawBar "1RAILGUN", "0RAILGUN", QCSlugAmmo 	, horizontal, 1380,770; } else { drawBar "RRAILGUN", "0RAILGUN", QCSlugAmmo 		, horizontal, 1380,770; } } else { drawImage "0RAILGUN", 1380,770;}
@@ -1472,7 +1486,11 @@ statusbar Fullscreen, forcescaled
 	inInventory QCHeavyMachinegun 	|| QCHeavyMachinegunDM	{ 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawBar "1MACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1480,350; } else { drawBar "HMACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1480,350; } }
 	inInventory QCSuperShotgun		|| QCSuperShotgunDM		{ 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawBar "1SHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1480,420; } else { drawBar "SSHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1480,420; } }
 	inInventory QCSuperNailgun		|| QCSuperNailgunDM		{ 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawBar "1NAILGUN", "0NAILGUN", QCNailAmmo	, horizontal, 1480,490; } else { drawBar "SNAILGUN", "0NAILGUN", QCNailAmmo		, horizontal, 1480,490; } }
-	inInventory QCTribolt	 		|| QCTriboltDM			{ 	isSelected QCTribolt	 		, QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0RIBOLT" , 1480,560;}
+	gameMode deathmatch {
+		inInventory 				   QCTriboltDM			{ 	isSelected 						  QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0RIBOLT" , 1480,560;}
+	} else {
+		inInventory QCTribolt	 							{ 	isSelected QCTribolt	 								{ drawBar "1IPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "RIPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0IPPERR" , 1480,560;}
+	}
 	inInventory QCRocketLauncher	|| QCRocketLauncherDM	{ 	isSelected QCRocketLauncher		, QCRocketLauncherDM	{ drawBar "1AUNCHER", "0AUNCHER", QCRocketAmmo	, horizontal, 1480,630; } else { drawBar "LAUNCHER", "0AUNCHER", QCRocketAmmo	, horizontal, 1480,630; } } else { drawImage "0AUNCHER", 1480,630;}
 	inInventory QCLightningGun		|| QCLightningGunDM		{ 	isSelected QCLightningGun		, QCLightningGunDM		{ drawBar "1IGHTNIN", "0IGHTNIN", QCCoilAmmo 	, horizontal, 1480,700; } else { drawBar "LIGHTNIN", "0IGHTNIN", QCCoilAmmo 	, horizontal, 1480,700; } } else { drawImage "0IGHTNIN", 1480,700;}
 	inInventory QCRailgun 			|| QCRailgunDM			{ 	isSelected QCRailgun 			, QCRailgunDM			{ drawBar "1RAILGUN", "0RAILGUN", QCSlugAmmo 	, horizontal, 1480,770; } else { drawBar "RRAILGUN", "0RAILGUN", QCSlugAmmo 	, horizontal, 1480,770; } } else { drawImage "0RAILGUN", 1480,770;}

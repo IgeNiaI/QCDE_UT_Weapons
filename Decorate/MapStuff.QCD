@@ -188,7 +188,7 @@ Actor SpawnPoint_TB : WeaponSpawnPointBase 14964
 	//$Category "QCDE Misc"
 	//$Color 15
 	//$Title "DM_Point Tribolt"
-	Translation "0:255=%[0,0,0]:[0.17,0.83,0.43]"	
+	Translation "0:255=%[0,0,0]:[0.77,0.94,0.0]"
 	States
 	{
 	Spawn:

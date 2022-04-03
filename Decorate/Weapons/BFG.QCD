@@ -1,7 +1,7 @@
 // --------------------------------------------------------------------------
 //
 // Redeemer
-// Weapon and Pickup sprite by ?
+// Weapon and Pickup sprite by Pixo
 // Weapon code by geNia
 //
 // --------------------------------------------------------------------------
@@ -11,7 +11,7 @@ Actor BFGPickup : CustomInventory 15608
 	//$NotAngled
 	//$Category "QCDE Weapons"
 	//$Color 14
-	//$Title "BFG 10k"
+	//$Title "Redeemer"
 	Height 48
 	Radius 20
 	Scale 0.65
@@ -133,7 +133,8 @@ Actor QCBFG : QCWeapon
 	//-----------------------
 	AltFire:
 		UTRD A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
-		TNT1 A 0 A_FireCustomMissile("UTRedeemerMissileFast", 0, true, 1, 5)
+		TNT1 A 0 A_FireCustomMissile("UTRedeemerMissileControlled", 0, true, 1, 5)
+		TNT1 A 0 SetPlayerProperty(0,1,PROP_TOTALLYFROZEN) // to remove possibility of refire and such
 		Goto PostFire
 
 	//-----------------------
@@ -199,20 +200,6 @@ Actor QCBFG : QCWeapon
 	}
 }
 
-// --------------------------------------------------------------------------
-//	For competitive DM, weapons dont autoaim
-// --------------------------------------------------------------------------
-Actor QCBFGDM : QCBFG
-{	
-	+WEAPON.NOAUTOAIM	
-	+CHEATNOTWEAPON
-	Tag "$TAG_UTRedeemer"
-	Weapon.SelectionOrder 666 // highest
-	Weapon.AmmoGive 1
-	Weapon.AmmoDmScale 1.0
-	Weapon.AmmoDmRefill 1
-}
-
 Actor UTRedeemerMissile
 {
 	Projectile
@@ -221,11 +208,15 @@ Actor UTRedeemerMissile
 	+FORCERADIUSDMG
 	-ROCKETTRAIL
 	+SEEKERMISSILE //Not actually used for anything other than checking radius.
+	+MTHRUSPECIES
+	+DONTBLAST
 	Radius 8
 	Height 14
 	Speed 16
 	Damage 0
 	Scale 0.6
+	Health 10000
+	PainChance 256
 	Obituary "$OB_UTRedeemer"
 	SeeSound ""
 	DeathSound "UTDE/Weapons/Redeemer/RocketExplo"
@@ -242,151 +233,268 @@ Actor UTRedeemerMissile
 		RDRK A 0 A_SpawnItemEx("RocketTrailSmoke",-20,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		Loop
 
+	Pain:
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		Stop
+
 	Xdeath:	//Direct hit
-		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
-		Goto DeathCont
+		TNT1 A 0 A_GiveToTarget("HitBeepMax",1)
+		TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
+		Goto ExplodeCont
 		
 	Death: //crashed somewhere and checks for splash
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
 		TNT1 A 0 A_Stop
 		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
-		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,180)
-		Goto DeathCont
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,1088)
+		TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
+		Goto ExplodeCont
 		
 		RadiusHit:	//splash damage beep
-			TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
-			Goto DeathCont
-		
+			TNT1 A 0 A_GiveToTarget("HitBeepMax",1)
+			TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
+			Goto ExplodeCont
+
+	ExplodeCont:
+		TNT1 A 0 A_Explode(random(3000,3500),1024,XF_HURTSOURCE,0,18)
+		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+		Goto DeathCont
+
 	DeathCont:
-		TNT1 A 0 A_Explode(1500,1024,1,0,18)
+		Goto DeathFX
+
+	DeathFX:
 		
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 0, 0,   0,    0,    0,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,	 0.0,  0.0,  0.0,	0,SXF_NOCHECKPOSITION)
 		
 		// +X
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 0, 0,   2.5,  0,    0,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 0, 0,   5,    0,    0,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   2.5,  0.0,  0.0,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   5.0,  0.0,  0.0,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// +X +Y                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 5, 0,   2.5,  2.5,  0,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 5, 0,   5,    5,    0,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   1.7,  1.7,  0.0,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   3.5,  3.5,  0.0,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// +X -Y                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5,-5, 0,   2.5, -2.5,  0,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5,-5, 0,   5,   -5,    0,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   1.7, -1.7,  0.0,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   3.5, -3.5,  0.0,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// -X                                          
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 0, 0,  -2.5,  0,    0,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 0, 0,  -5,    0,    0,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -2.5,  0.0,  0.0,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -5.0,  0.0,  0.0,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// -X +Y                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 5, 0,  -2.5,  2.5,  0,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 5, 0,  -5,    5,    0,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -1.7,  1.7,  0.0,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -3.5,  3.5,  0.0,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// -X -Y                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5,-5, 0,  -2.5, -2.5,  0,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5,-5, 0,  -5,   -5,    0,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -1.7, -1.7,  0.0,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -3.5, -3.5,  0.0,	0,SXF_NOCHECKPOSITION)
                                                        
 		// +Y                                          
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 5, 0,   0,    2.5,  0,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 5, 0,   0,    5,    0,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  2.5,  0.0,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  5.0,  0.0,	0,SXF_NOCHECKPOSITION)
 																   
 		// -Y                                          
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0,-5, 0,   0,   -2.5,  0,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0,-5, 0,   0,   -5,    0,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0, -2.5,  0.0,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0, -5.0,  0.0,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// +X +Z                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 0, 5,   2.5,  0,    2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 0, 5,   5,    0,    5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   1.7,  0.0,  1.7,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   3.5,  0.0,  3.5,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// +X +Y +Z                                    
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 5, 5,   2.5,  2.5,  2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 5, 5,   5,    5,    5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   1.2,  1.2,  1.2,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   2.4,  2.4,  2.4,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// +X -Y +Z                                    
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5,-5, 5,   2.5, -2.5,  2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5,-5, 5,   5,   -5,    5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   1.2, -1.2,  1.2,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   2.4, -2.4,  2.4,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// -X +Z                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 0, 5,  -2.5,  0,    2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 0, 5,  -5,    0,    5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -1.7,  0.0,  1.7,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -3.5,  0.0,  3.5,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// -X +Y +Z                                    
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 5, 5,  -2.5,  2.5,  2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 5, 5,  -5,    5,    5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -1.2,  1.2,  1.2,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -2.4,  2.4,  2.4,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// -X -Y +Z                                    
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5,-5, 5,  -2.5, -2.5,  2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5,-5, 5,  -5,   -5,    5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -1.2, -1.2,  1.2,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -2.4, -2.4,  2.4,	0,SXF_NOCHECKPOSITION)
                                                        
 		// +Y +Z                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 5, 5,   0,    2.5,  2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 5, 5,   0,    5,    5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  1.7,  1.7,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  3.5,  3.5,	0,SXF_NOCHECKPOSITION)
 																   
 		// -Y +Z                                                   
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0,-5, 5,   0,   -2.5,  2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0,-5, 5,   0,   -5,    5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0, -1.7,  1.7,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0, -3.5,  3.5,	0,SXF_NOCHECKPOSITION)
 																   
 		// +Z                                                      
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 0, 5,   0,    0,    5,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 0, 5,   0,    0,    7.5,   0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  0.0,  2.5,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  0.0,  5.0,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// +X -Z                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 0,-5,   2.5,  0,   -2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 0,-5,   5,    0,   -5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   1.7,  0.0, -1.7,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   3.5,  0.0, -3.5,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// +X +Y -Z                                    
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 5,-5,   2.5,  2.5, -2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5, 5,-5,   5,    5,   -5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   1.2,  1.2, -1.2,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   2.4,  2.4, -2.4,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// +X -Y -Z                                    
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5,-5,-5,   2.5, -2.5, -2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  5,-5,-5,   5,   -5,   -5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   1.2, -1.2, -1.2,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   2.4, -2.4, -2.4,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// -X -Z                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 0,-5,  -2.5,  0,   -2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 0,-5,  -5,    0,   -5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -1.7,  0.0, -1.7,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -3.5,  0.0, -3.5,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// -X +Y -Z                                    
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 5,-5,  -2.5,  2.5, -2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5, 5,-5,  -5,    5,   -5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -1.2,  1.2, -1.2,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -2.4,  2.4, -2.4,	0,SXF_NOCHECKPOSITION)
 		                                               
 		// -X -Y -Z                                    
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5,-5,-5,  -2.5, -2.5, -2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", -5,-5,-5,  -5,   -5,   -5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -1.2, -1.2, -1.2,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,  -2.4, -2.4, -2.4,	0,SXF_NOCHECKPOSITION)
                                                        
 		// +Y -Z                                       
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 5,-5,   0,    2.5, -2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 5,-5,   0,    5,   -5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  1.7, -1.7,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  3.5, -3.5,	0,SXF_NOCHECKPOSITION)
 																   
 		// -Y -Z                                                   
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0,-5,-5,   0,   -2.5, -2.5,   0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0,-5,-5,   0,   -5,   -5,     0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0, -1.7, -1.7,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0, -3.5, -3.5,	0,SXF_NOCHECKPOSITION)
 																   
 		// -Z                                                      
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 0,-5,   0,    0,   -5,     0,SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 0,-5,   0,    0,   -7.5,   0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  0.0, -2.5,	0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  0.0, -5.0,	0,SXF_NOCHECKPOSITION)
 		
 		TNT1 A 10
 		Stop		
 	}
 }
 
-// Faster version, but can be shot
-Actor UTRedeemerMissileFast : UTRedeemerMissile {
+// Controlled version, but can be shot
+Actor UTRedeemerMissileControlled : UTRedeemerMissile {
+	var int user_counter;
+	+SKYEXPLODE
 	+SHOOTABLE
 	-NOBLOCKMAP
-	Speed 20
-	Health 10000
-	PainChance 256
-	
 	States
 	{
-	Pain:
-		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion",  0, 0, 0,   0,    0,    0,     0,SXF_NOCHECKPOSITION)
+	Spawn:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Redeemer/Fly",CHAN_5|CHAN_NOPAUSE,1.0,true)
+		TNT1 A 0 ACS_NamedExecuteAlways("UTDE_AttachWhoosh")
+		RDRK A 1 bright ACS_NamedExecuteWithResult("UTDE_RedeemerControl")	//Projectile control and whatnot
+		TNT1 A 0 bright ACS_NamedExecuteWithResult("UTDE_TunnelVision")	//Black Screen effect
+		TNT1 A 0 A_SetUserVar(user_counter,1)
+	Looper:
+		RDRK A 0 A_JumpIfInventory("ImDead",1,"DieTime")
+		RDRK A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire",-20,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		RDRK A 0 A_SpawnItemEx("RocketTrailSmoke",-20,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		Loop
+
+	Xdeath:	//Direct hit
+		TNT1 A 0 A_JumpIfInTargetInventory("PlayHitBeep",1,"PlayBeep")
+		TNT1 A 0 A_JumpIfInTargetInventory("PlayHitMark",1,"DoMark")
+		TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
+		Goto ExplodeCont
+
+		PlayBeep:
+			TNT1 A 0 A_PlaySound("QC/UI/HitBeepMax",CHAN_7|CHAN_UI,0.85,0,140)
+			TNT1 A 0 A_JumpIfInTargetInventory("PlayHitMark",1,"DoMark")
+			TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
+			Goto ExplodeCont
+		DoMark:
+			TNT1 A 0 ACS_NamedExecuteAlways("QCDE_HitMark",0)
+			TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
+			Goto ExplodeCont
+
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_JumpIfInTargetInventory("PlayHitBeep",1,"PlayBeep")
+			TNT1 A 0 A_JumpIfInTargetInventory("PlayHitMark",1,"DoMark")
+			TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
+			Goto ExplodeCont
+
+	DieTime:
+		TNT1 A 0 A_Die
+		Goto Death
+
+	DeathCont:
+		TNT1 A 0 A_JumpIf(user_counter>=1,"SkipForceUnfreeze")	//if it didnt live at least one tic to set everything up
+		TNT1 A 0 A_GiveToTarget("UnfreezerProc",1)				//then force unfreeze on player
+		Goto DeathFX
+	SkipForceUnfreeze:
+		TNT1 A 0 A_GiveInventory("ImDead")
+		Goto DeathFX
+	}
+}
+
+Actor UnfreezerProc : CustomInventory
+{
+	States
+	{
+	Pickup:
+		TNT1 A 0 SetPlayerProperty(0,0,PROP_TOTALLYFROZEN) // To forcibly unfreeze player in case rocket died too soon
 		Stop
 	}
 }
 
+// --------------------------------------------------------------------------
+//	For competitive DM, weapons dont autoaim
+// --------------------------------------------------------------------------
+Actor QCBFGDM : QCBFG
+{
+	+WEAPON.NOAUTOAIM
+	+CHEATNOTWEAPON
+	Tag "$TAG_UTRedeemer"
+	Weapon.SelectionOrder 666 // highest
+	Weapon.AmmoGive 1
+	Weapon.AmmoDmScale 1.0
+	Weapon.AmmoDmRefill 1
+	States
+	{
+	Fire:
+		UTRD A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		TNT1 A 0 A_FireCustomMissile("UTRedeemerMissileDM", 0, true, 1, 5)
+		Goto PostFire
+
+	AltFire:
+		UTRD A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		TNT1 A 0 A_FireCustomMissile("UTRedeemerMissileControlledDM", 0, true, 1, 5)
+		Goto PostFire
+	}
+}
+
+Actor UTRedeemerMissileDM : UTRedeemerMissile
+{
+	-MTHRUSPECIES
+	-DONTBLAST
+	States
+	{
+	ExplodeCont:
+		TNT1 A 0 A_Explode(1500,1024,XF_HURTSOURCE,0,18)
+		Goto DeathCont
+	}
+}
+
+Actor UTRedeemerMissileControlledDM : UTRedeemerMissileControlled
+{
+	-MTHRUSPECIES
+	-DONTBLAST
+	States
+	{
+	ExplodeCont:
+		TNT1 A 0 A_Explode(1500,1024,XF_HURTSOURCE,0,18)
+		Goto DeathCont
+	}
+}
+
+// --------------------------------------------------------------------------
+//	Effects
+// --------------------------------------------------------------------------
 Actor UTRedeemerExplosion
 {
 	+NOTONAUTOMAP

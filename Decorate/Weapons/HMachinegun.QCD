@@ -1,7 +1,7 @@
 // --------------------------------------------------------------------------
 //
 // Minigun
-// Weapon and Pickup sprite by Pixo
+// Pickup sprite by Pixo, weapon sprite by geNia
 // Weapon code by geNia
 //
 // --------------------------------------------------------------------------
@@ -11,7 +11,7 @@ Actor HeavyMachinegunPickup : CustomInventory 15600
 	//$NotAngled
 	//$Category "QCDE Weapons"
 	//$Color 14
-	//$Title "Heavy Machinegun"
+	//$Title "Minigun"
 	Height 48
 	Radius 20
 	Scale 0.64
@@ -194,7 +194,7 @@ Actor QCHeavyMachinegun : QCWeapon
 	//-----------------------
 	Flash:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_FireBullets(1,1,1,10,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
+		TNT1 A 0 A_FireBullets(1,1,1,random(10,15),"QCBulletPuff",FBF_NORANDOM|FBF_USEAMMO)
 		Goto EndFlash
 		
 		EndFlash:
@@ -326,13 +326,13 @@ Actor QCHeavyMachinegun : QCWeapon
 	//-----------------------
 	AltFlash:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_FireBullets(1,1,1,10,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
+		TNT1 A 0 A_FireBullets(1,1,1,random(10,15),"QCBulletPuff",FBF_NORANDOM|FBF_USEAMMO)
 		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(1,-1),false,8,-3,0,frandom(1,-1))
 		Goto AltEndFlash
 
 	AltFlashFast:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_FireBullets(4,4,1,10,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
+		TNT1 A 0 A_FireBullets(4,4,1,random(10,15),"QCBulletPuff",FBF_NORANDOM|FBF_USEAMMO)
 		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(4,-4),false,8,-3,0,frandom(4,-4))
 		Goto AltEndFlash
 
@@ -348,11 +348,6 @@ Actor QCHeavyMachinegun : QCWeapon
 	}
 }
 
-Actor QCBulletPuff_ZombieGibber : QCBulletPuff
-{
-	DamageType "ZombieGibber"
-}
-
 // --------------------------------------------------------------------------
 //	For competitive DM, weapons dont autoaim
 // --------------------------------------------------------------------------
@@ -364,6 +359,26 @@ Actor QCHeavyMachinegunDM : QCHeavyMachinegun
 	Weapon.AmmoGive 50
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 10
+
+	States
+	{
+	Flash:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireBullets(1,1,1,10,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
+		Goto EndFlash
+
+	AltFlash:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireBullets(1,1,1,10,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
+		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(1,-1),false,8,-3,0,frandom(1,-1))
+		Goto AltEndFlash
+
+	AltFlashFast:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireBullets(4,4,1,10,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
+		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(4,-4),false,8,-3,0,frandom(4,-4))
+		Goto AltEndFlash
+	}
 }
 
 Actor MinigunSmokeSpawner

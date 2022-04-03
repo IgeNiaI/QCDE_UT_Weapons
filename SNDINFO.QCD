@@ -90,6 +90,16 @@ $volume "UTDE/Weapons/PulseGun/Quad/FireStartLoop" 0.75
 
 
 //********************
+// Ripper
+UTDE/Weapons/Ripper/Fire						"Sounds/Weapons/RP_Fire.wav"
+UTDE/Weapons/Ripper/Quad/Fire					"Sounds/Weapons/Quad/RP_Fire.wav"
+UTDE/Weapons/Ripper/AltFire						"Sounds/Weapons/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Quad/AltFire				"Sounds/Weapons/Quad/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Impact						"Sounds/Weapons/RP_Impact.wav"
+UTDE/Weapons/Ripper/Bounce						"Sounds/Weapons/RP_Bounce.wav"
+
+
+//********************
 // Bio Rifle
 UTDE/Weapons/BioRifle/Fire						"Sounds/Weapons/BR_Fire.wav"
 UTDE/Weapons/BioRifle/Quad/Fire					"Sounds/Weapons/Quad/BR_Fire.wav"

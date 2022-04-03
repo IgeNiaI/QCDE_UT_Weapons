@@ -118,9 +118,11 @@ Actor QCMachineGun : QCWeapon
 		
 		FireNormalSound:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/AssaultRifle/FireStartLoop",CHAN_WEAPON,1,1)
+			TNT1 A 0 A_Jump(256,"FireLooper") //for virtual jump to inherited versions
 			Goto FireLooper
 		FireQuadSound:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/AssaultRifle/Quad/FireStartLoop",CHAN_WEAPON,1,1)
+			TNT1 A 0 A_Jump(256,"FireLooper") //for virtual jump to inherited versions
 			Goto FireLooper
 			
 	FireLooper:	
@@ -129,9 +131,18 @@ Actor QCMachineGun : QCWeapon
 		UTAR B 1 Offset(2,34)
 		UTAR C 1 Offset(3,34)
 		UTAR D 1 Offset(2,33)
+		UTAR A 1 Offset(1,32) A_ReFire("FireLooperNA")
+		Goto EndFireLooper
+
+	FireLooperNA:
+		UTAR A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTAR B 0 A_GunFlash("FlashNA")
+		UTAR B 1 Offset(2,34)
+		UTAR C 1 Offset(3,34)
+		UTAR D 1 Offset(2,33)
 		UTAR A 1 Offset(1,32) A_ReFire("FireLooper")
 		Goto EndFireLooper
-			
+
 	EndFireLooper:
 		UTAR A 0 A_PlaySound("UTDE/Weapons/AssaultRifle/FireEnd",CHAN_WEAPON,1,0)
 		UTAR A 1 A_WeaponReady(WRF_NOBOB)
@@ -142,9 +153,14 @@ Actor QCMachineGun : QCWeapon
 	//-----------------------
 	Flash:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_FireBullets(3,3,1,7,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
+		TNT1 A 0 A_FireBullets(3,3,1,random(3,5),"QCBulletPuff",FBF_NORANDOM|FBF_USEAMMO)
 		Goto EndFlash
-			
+
+	FlashNA:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireBullets(3,3,1,random(3,5),"QCBulletPuff",FBF_NORANDOM)
+		Goto EndFlash
+
 		EndFlash:
 			TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"EndFlashNoRecoil")
 			TNT1 A 1 A_SetPitch(Pitch-0.4)
@@ -170,4 +186,22 @@ Actor QCMachineGunDM : QCMachineGun
 	Weapon.AmmoGive 100
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 10
+
+	States
+	{
+	FireLooper:
+		UTAR A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTAR B 0 A_GunFlash("Flash")
+		UTAR B 1 Offset(2,34)
+		UTAR C 1 Offset(3,34)
+		UTAR D 1 Offset(2,33)
+		UTAR A 1 Offset(1,32) A_ReFire("FireLooper")
+		Goto EndFireLooper
+
+	Flash:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireBullets(3,3,1,7,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
+		Goto EndFlash
+
+	}
 }
