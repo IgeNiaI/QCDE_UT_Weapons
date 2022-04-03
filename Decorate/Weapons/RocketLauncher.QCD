@@ -766,7 +766,6 @@ Actor QCRocketLauncherDM : QCRocketLauncher
 Actor UTRocketMissile
 {
 	Projectile
-	+RANDOMIZE
 	+DEHEXPLOSION
 	+EXTREMEDEATH
 	+FORCERADIUSDMG

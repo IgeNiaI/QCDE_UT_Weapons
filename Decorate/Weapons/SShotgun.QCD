@@ -334,7 +334,6 @@ Actor QCSuperShotgun : QCWeapon
 Actor UTFlakShell
 {
 	Projectile
-	+RANDOMIZE
 	+FORCEXYBILLBOARD
 	+DONTSPLASH
 	+USEBOUNCESTATE
