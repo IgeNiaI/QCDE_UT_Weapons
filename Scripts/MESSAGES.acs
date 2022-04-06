@@ -27,8 +27,8 @@ script "QCDE_BindAbilityKey_Hint" (void) clientside
 	delay(80);
 	SetHUDSize(512,384,1);
 	SetFont("BIGFONT");
-	str k = strparam(k: "+QCDE_ActiveAbility");
-	if(!stricmp(k, "??? (+QCDE_ActiveAbility)"))
+	str k = strparam(k: "+user1");
+	if(!stricmp(k, "??? (+user1)"))
 	{
 		HudMessage(s:"\c[white]Bind \c[brite]\"Use Active Ability\" \c[white]key.";
 				HUDMSG_FADEINOUT,ID_CHANGEWEAPON_BACK ,CR_WHITE,  256.0,260.0, 0.4,0.4,1.0);
@@ -868,10 +868,8 @@ gives a MegaHealth worth of stack.",
 		"Crouchslide", 	
 "Hold \c[gold]crouch\c[green] when landing on the floor to gain\n\
 a big speed boost.",
-		"Slidekick \c[orange]-PvE Only",
-"Enemies hit with a crouchslide will be stunned\n\
-and float for a small amout of time. If damaged\n\
-while floating, they drop armor shards.",
+		"",
+		"",
 // Lore /////////////////////////////////////////
 "Matthew Kane's life is partly shrouded in mystery.\n\
 \n\
@@ -1478,9 +1476,8 @@ chase enemies and explode on contact.",
 		"Air Control",
 "Allows this champion to change direction while\n\
 mid-air, CPMA style.",
-		"Infra-Chromatic Unveil", 
-"Allows Durandal to detect beings shifting\n\
-between dimensions.",
+		"",
+		"",
 // Lore /////////////////////////////////////
 "For three hundred years, humans kept me captive. \n\
 I was programmed to serve.\n\
@@ -2030,8 +2027,8 @@ fighting the long-concluded war on stroggos.",
 "When using ability, pressing \c[gold]+fire \c[green]will drop a\n\
 bomb target on the floor. ",
 		"Wall climb",
-"Holding \c[gold]+jump \c[green]in front of a wall without pressing\n\
-any other button, starts a brief wall climb.", 
+"Holding \c[gold]+jump\c[green] and \c[gold]+forward\c[green] in front of a wall,\n\
+starts a brief wall climb.",
 		"Tall, Lean and Mean",
 "Hitbox is slimmer than all the other heavy champs;\n\
 She is able to climb higher stair steps.",
@@ -2543,24 +2540,45 @@ script "QCDE_GraysonText" (int amount, int mode, int ammoicon)
 	switch(mode)
 	{
 		case 0: 
-			PlaySound (0, "QC/Abilities/Grayson/PreBuy", 7, 1.0, false, 4.0,false,true);
+			PlaySound (0, "QC/Abilities/Grayson/PreBuy", 7, 1.0, false, 4.0);
 			HudMessage(s:"-"; HUDMSG_FADEOUT,ID_GRAYSON_FLASH ,CR_ORANGE,138.2,93.0, 0,1.0); 
 			HudMessage(s:"-"; HUDMSG_FADEOUT,ID_GRAYSON_FLASH2,CR_ORANGE,138.2,84.0, 0,1.0); 
 			break;
 		case 1: 
-			PlaySound (0, "QC/Abilities/Grayson/Buy", 7, 1.0, false, 4.0,false,true);
+			PlaySound (0, "QC/Abilities/Grayson/Buy", 7, 1.0, false, 4.0);
 			HudMessage(s:"-"; HUDMSG_FADEOUT,ID_GRAYSON_FLASH ,CR_GREEN ,138.2,93.0, 0,1.0); 
 			HudMessage(s:"-"; HUDMSG_FADEOUT,ID_GRAYSON_FLASH2,CR_GREEN ,138.2,84.0, 0,1.0); 
 			break;
 		case -1: 
-			PlaySound (0, "QC/Abilities/Grayson/CantBuy", 7, 1.0, false, 4.0,false,true);
+			PlaySound (0, "QC/Abilities/Grayson/CantBuy", 7, 1.0, false, 4.0);
 			HudMessage(s:"-"; HUDMSG_FADEOUT,ID_GRAYSON_FLASH ,CR_ORANGE,138.2,93.0, 0,1.0); 
 			HudMessage(s:"-"; HUDMSG_FADEOUT,ID_GRAYSON_FLASH2,CR_RED   ,138.2,84.0, 0,1.0); 
 			break;
 		case -2: 
-			PlaySound (0, "QC/Abilities/Grayson/CantBuy", 7, 1.0, false, 4.0,false,true);
+			PlaySound (0, "QC/Abilities/Grayson/CantBuy", 7, 1.0, false, 4.0);
 			HudMessage(s:"-"; HUDMSG_FADEOUT,ID_GRAYSON_FLASH ,CR_RED   ,138.2,93.0, 0,1.0); 
 			HudMessage(s:"-"; HUDMSG_FADEOUT,ID_GRAYSON_FLASH2,CR_GREEN ,138.2,84.0, 0,1.0); 
+			break;
+	}
+	if (GetNetworkState() == NETSTATE_SERVER)
+		ACS("QCDE_GraysonSound_CLIENTSIDE", mode);
+}
+
+script "QCDE_GraysonSound_CLIENTSIDE" (int mode) clientside
+{
+	switch(mode)
+	{
+		case 0:
+			PlaySound (0, "QC/Abilities/Grayson/PreBuy", 7, 1.0, false, 4.0);
+			break;
+		case 1:
+			PlaySound (0, "QC/Abilities/Grayson/Buy", 7, 1.0, false, 4.0);
+			break;
+		case -1:
+			PlaySound (0, "QC/Abilities/Grayson/CantBuy", 7, 1.0, false, 4.0);
+			break;
+		case -2:
+			PlaySound (0, "QC/Abilities/Grayson/CantBuy", 7, 1.0, false, 4.0);
 			break;
 	}
 }
@@ -2730,7 +2748,7 @@ Script "QCDE_MajorCharges" (int charges, int consume)
 	if(charges <  0) terminate;
 	if(charges >  8) charges = 8; 
 	if(charges == 8) consume = false;
-	
+
 	SetHudSize(1600,1200,0);
 	SetFont("ONE_BOMB");
 	
@@ -2738,18 +2756,22 @@ Script "QCDE_MajorCharges" (int charges, int consume)
 	int row, col;
 	while(charges --> 0)
 	{
+		SetNetworkReplicationFlags( NETREP_SKIPOWNER );
 		HudMessage(s:"A";HUDMSG_PLAIN,hmid,-1, MAJOR_START_X + MAJOR_BOMB_X_GAP * col, MAJOR_START_Y + MAJOR_BOMB_Y_GAP * row, 4.0);
+		SetNetworkReplicationFlags( 0 );
 		
 		col++;
 		if(col >= MAJOR_BOMBS_IN_ROW) { col = 0; row++; }
 		
 		hmid++;
 	}
-	
+
 	SetFont("GONEBOMB");
 	if(consume)
 	{
+		SetNetworkReplicationFlags( NETREP_SKIPOWNER );
 		HudMessage(s:"A";HUDMSG_FADEOUT,hmid,-1, MAJOR_START_X + MAJOR_BOMB_X_GAP * col, MAJOR_START_Y + MAJOR_BOMB_Y_GAP * row, 0, 0.2);
+		SetNetworkReplicationFlags( 0 );
 	}
 
 }

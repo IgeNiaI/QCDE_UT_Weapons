@@ -1547,12 +1547,14 @@ Actor QCRailGun : QCWeapon
 
 Actor LightningGunTicCounter : Inventory
 {
+	+SERVERNETID
 	inventory.maxamount 52
 	inventory.interhubamount 0
 }
 
 Actor RailgunCharges : Inventory
 {
+	+SERVERNETID
 	Inventory.MaxAmount 52
 	Inventory.InterHubAmount 0
 }

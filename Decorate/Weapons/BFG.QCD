@@ -225,7 +225,7 @@ Actor UTRedeemerMissile : UnlaggedActor
 	States
 	{
 	Spawn:
-		TNT1 A 0 A_PlaySound("UTDE/Weapons/Redeemer/Fly",CHAN_5|CHAN_NOPAUSE,1.0,true)
+		TNT1 A 0 NODELAY A_PlaySound("UTDE/Weapons/Redeemer/Fly",CHAN_5|CHAN_NOPAUSE,1.0,true)
 		TNT1 A 0 ACS_NamedExecuteAlways("UTDE_AttachWhoosh")
 		RDRK A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
 	Looper:
@@ -386,7 +386,7 @@ Actor UTRedeemerMissileControlled : UTRedeemerMissile {
 	States
 	{
 	Spawn:
-		TNT1 A 0 A_PlaySound("UTDE/Weapons/Redeemer/Fly",CHAN_5|CHAN_NOPAUSE,1.0,true)
+		TNT1 A 0 NODELAY A_PlaySound("UTDE/Weapons/Redeemer/Fly",CHAN_5|CHAN_NOPAUSE,1.0,true)
 		TNT1 A 0 ACS_NamedExecuteAlways("UTDE_AttachWhoosh")
 		RDRK A 1 bright ACS_NamedExecuteWithResult("UTDE_RedeemerControl")	//Projectile control and whatnot
 		TNT1 A 0 bright ACS_NamedExecuteWithResult("UTDE_TunnelVision")	//Black Screen effect

@@ -19,7 +19,7 @@ OptionMenu "QZDEBinds"
 	
 	StaticText ""
 	
-	Control 	"Use active ability",     "+QCDE_ActiveAbility"
+	Control 	"Use active ability",     "+user1"
 	Control 	"Champion information",   "+QCDE_ClassInfo"
 	Control 	"Voice line",             "voice"
 	Control 	"Drop weapon upgrade",    "drop_upgrade"

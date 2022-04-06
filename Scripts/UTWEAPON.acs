@@ -12,7 +12,7 @@ Script "UTDE_RlAltCheck" (void)
 
 
 // Activator: noisy projectile in flight
-script "UTDE_AttachWhoosh" (void) CLIENTSIDE
+script "UTDE_AttachWhoosh" (void)
 {
 	// redeemer rocket
 	int tid = ActivatorTid();
@@ -75,7 +75,6 @@ Script "UTDE_RedeemerControl" (void)
 	int origp = GetActorPitch(plrtid), p = origp;
 	while(!CheckInventory("ImDead") && GetActorProperty(tid, APROP_Health) > 0)
 	{
-		//Log(s:"bbb");
 		SetNetworkReplicationFlags( NETREP_SKIPOWNER );
 
 		Thing_Stop(tid);
