@@ -666,9 +666,9 @@ Actor HammerPuff1
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
-		TNT1 A 0 A_Explode(12,32,1|XF_QROCKETJUMP,0,32)	//self damage without hammer jump is 25
+		TNT1 A 0 A_Explode(12,32,XF_HURTSOURCE,0,32)	//self damage without hammer jump is 25
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 0 A_RadiusThrust(10,32,RTF_AFFECTSOURCE|XF_QROCKETJUMP,32)
+		TNT1 A 0 A_RadiusThrust(10,32,RTF_AFFECTSOURCE|RTF_THRUSTZ,32)
 		Stop
 	}
 }
@@ -686,9 +686,9 @@ Actor HammerPuff2 : HammerPuff1
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
-		TNT1 A 0 A_Explode(18,32,1|XF_QROCKETJUMP,0,32)	//self damage without hammer jump is 30
+		TNT1 A 0 A_Explode(18,32,XF_HURTSOURCE,0,32)	//self damage without hammer jump is 30
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 0 A_RadiusThrust(12,32,RTF_AFFECTSOURCE|XF_QROCKETJUMP,32)
+		TNT1 A 0 A_RadiusThrust(12,32,RTF_AFFECTSOURCE|RTF_THRUSTZ,32)
 		Stop
 	}
 }
@@ -706,9 +706,9 @@ Actor HammerPuff3 : HammerPuff1
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
-		TNT1 A 0 A_Explode(24,32,1|XF_QROCKETJUMP,0,32)	//self damage without hammer jump is 35
+		TNT1 A 0 A_Explode(24,32,XF_HURTSOURCE,0,32)	//self damage without hammer jump is 35
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 0 A_RadiusThrust(15,32,RTF_AFFECTSOURCE|XF_QROCKETJUMP,32)
+		TNT1 A 0 A_RadiusThrust(15,32,RTF_AFFECTSOURCE|RTF_THRUSTZ,32)
 		Stop
 	}
 }
@@ -726,9 +726,9 @@ Actor HammerPuff4 : HammerPuff1
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
-		TNT1 A 0 A_Explode(32,32,1|XF_QROCKETJUMP,0,32)	//self damage without hammer jump is 40
+		TNT1 A 0 A_Explode(32,32,XF_HURTSOURCE,0,32)	//self damage without hammer jump is 40
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 0 A_RadiusThrust(20,32,RTF_AFFECTSOURCE|XF_QROCKETJUMP,32)
+		TNT1 A 0 A_RadiusThrust(20,32,RTF_AFFECTSOURCE|RTF_THRUSTZ,32)
 		Stop
 	}
 }
@@ -746,9 +746,9 @@ Actor HammerPuff5 : HammerPuff1
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
-		TNT1 A 0 A_Explode(40,32,1|XF_QROCKETJUMP,0,32)	//self damage without hammer jump is 45
+		TNT1 A 0 A_Explode(40,32,XF_HURTSOURCE,0,32)	//self damage without hammer jump is 45
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 0 A_RadiusThrust(25,32,RTF_AFFECTSOURCE|XF_QROCKETJUMP,32)
+		TNT1 A 0 A_RadiusThrust(25,32,RTF_AFFECTSOURCE|RTF_THRUSTZ,32)
 		Stop
 	}
 }
@@ -766,9 +766,9 @@ Actor HammerPuff6 : HammerPuff1
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
-		TNT1 A 0 A_Explode(48,32,1|XF_QROCKETJUMP,0,32)	//self damage without hammer jump is 50
+		TNT1 A 0 A_Explode(48,32,XF_HURTSOURCE,0,32)	//self damage without hammer jump is 50
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 0 A_RadiusThrust(30,32,RTF_AFFECTSOURCE|XF_QROCKETJUMP,32)
+		TNT1 A 0 A_RadiusThrust(30,32,RTF_AFFECTSOURCE|RTF_THRUSTZ,32)
 		Stop
 	}
 }
@@ -786,9 +786,9 @@ Actor HammerPuff7 : HammerPuff1
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
-		TNT1 A 0 A_Explode(56,32,1|XF_QROCKETJUMP,0,32)	//self damage without hammer jump is 55
+		TNT1 A 0 A_Explode(56,32,XF_HURTSOURCE,0,32)	//self damage without hammer jump is 55
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 0 A_RadiusThrust(35,32,RTF_AFFECTSOURCE|XF_QROCKETJUMP,32)
+		TNT1 A 0 A_RadiusThrust(35,32,RTF_AFFECTSOURCE|RTF_THRUSTZ,32)
 		Stop
 	}
 }
