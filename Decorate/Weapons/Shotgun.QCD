@@ -172,8 +172,8 @@ Actor QCShotgun : QCWeapon
 
 	Flash:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShell",frandom(3.0,-3.0),true,1,4,0,frandom(3.0,-3.0)) // Use ammo
-		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakMiniShell",frandom(3.0,-3.0),false,1,4,0,frandom(3.0,-3.0)) // Don't use ammo
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShell",afrandom(3.0,-3.0),true,1,4,0,afrandom(3.0,-3.0)) // Use ammo
+		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakMiniShell",afrandom(3.0,-3.0),false,1,4,0,afrandom(3.0,-3.0)) // Don't use ammo
 		Goto FlashCheckSound
 			
 	FlashCheckSound:
@@ -300,8 +300,8 @@ Actor QCShotgunDM : QCShotgun
 	{
 	Flash:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",frandom(4.0,-4.0),true,1,4,0,frandom(4.0,-4.0)) // Use ammo
-		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakMiniShellDM",frandom(4.0,-4.0),false,1,4,0,frandom(4.0,-4.0)) // Don't use ammo
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",afrandom(4.0,-4.0),true,1,4,0,afrandom(4.0,-4.0)) // Use ammo
+		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakMiniShellDM",afrandom(4.0,-4.0),false,1,4,0,afrandom(4.0,-4.0)) // Don't use ammo
 		Goto FlashCheckSound
 	}
 }

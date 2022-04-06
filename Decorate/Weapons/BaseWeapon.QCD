@@ -11,6 +11,7 @@ Actor QCWeapon : Weapon
 	Inventory.PickupSound "QC/Items/WeaponPick"
 	Inventory.Respawntics 35 //5sec
 	+WEAPON.NOALERT
+	+SERVERNETID
 }
 
 

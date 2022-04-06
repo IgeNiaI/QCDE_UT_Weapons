@@ -235,8 +235,8 @@ Actor QCSuperShotgun : QCWeapon
 		Goto Ready
 
 	Flash:
-		TNT1 A 0 A_FireCustomMissile("UTFlakShell",frandom(4.0,-4.0),true,1,4,0,frandom(4.0,-4.0)) // Use ammo
-		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakShell",frandom(4.0,-4.0),false,1,4,0,frandom(4.0,-4.0)) // Don't use ammo
+		TNT1 A 0 A_FireCustomMissile("UTFlakShell",afrandom(4.0,-4.0),true,1,4,0,afrandom(4.0,-4.0)) // Use ammo
+		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakShell",afrandom(4.0,-4.0),false,1,4,0,afrandom(4.0,-4.0)) // Don't use ammo
 		Goto FlashCheckSound
 			
 	FlashCheckSound:
@@ -468,7 +468,7 @@ Actor UTFlakBomb
 		TNT1 A 0 A_Explode(random(0,10),144,XF_HURTSOURCE,0,18)			//self rocket damage without rocket jump is 0-10
 		TNT1 A 0 A_Explode(random(45,55),144,0,0,18)		//then another 40-50 extra damage for impacting a player + (15)dmg on the projectile =80-100dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("UTFlakShellBounced",0,0,1,frandom(-30.0, 30.0),frandom(-30.0, 30.0),frandom(-30.0, 30.0))
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("UTFlakShellBounced",0,0,1,afrandom(-30.0, 30.0),afrandom(-30.0, 30.0),afrandom(-30.0, 30.0))
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Explo",CHAN_AUTO,1,0,1)
 		TNT1 A 0 A_SpawnItemEx("QCRocketExploDebris",-1,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		TNT1 AAAAA 0 A_SpawnItemEx("QCRocketExploParticle",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(1,6),random(0,359),SXF_NOCHECKPOSITION)
@@ -494,8 +494,8 @@ Actor QCSuperShotgunDM : QCSuperShotgun
 	States
 	{
 	Flash:
-		TNT1 A 0 A_FireCustomMissile("UTFlakShellDM",frandom(4.0,-4.0),true,1,4,0,frandom(4.0,-4.0)) // Use ammo
-		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakShellDM",frandom(4.0,-4.0),false,1,4,0,frandom(4.0,-4.0)) // Don't use ammo
+		TNT1 A 0 A_FireCustomMissile("UTFlakShellDM",afrandom(4.0,-4.0),true,1,4,0,afrandom(4.0,-4.0)) // Use ammo
+		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakShellDM",afrandom(4.0,-4.0),false,1,4,0,afrandom(4.0,-4.0)) // Don't use ammo
 		Goto FlashCheckSound
 
 	AltFlash:
@@ -538,7 +538,7 @@ Actor UTFlakBombDM : UTFlakBomb
 		TNT1 A 0 A_Explode(10,144,XF_HURTSOURCE,0,18)					//self rocket damage without rocket jump is 10
 		TNT1 A 0 A_Explode(40,144,0,0,18)					//then another 40 extra damage for impacting a player + (15)dmg on the projectile =90dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("UTFlakShellBouncedDM",0,0,1,frandom(-30.0, 30.0),frandom(-30.0, 30.0),frandom(-30.0, 30.0))
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("UTFlakShellBouncedDM",0,0,1,afrandom(-30.0, 30.0),afrandom(-30.0, 30.0),afrandom(-30.0, 30.0))
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Explo",CHAN_AUTO,1,0,1)
 		TNT1 A 0 A_SpawnItemEx("QCRocketExploDebrisDM",-1,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 		TNT1 AAAAA 0 A_SpawnItemEx("QCRocketExploParticle",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(1,6),random(0,359),SXF_NOCHECKPOSITION)

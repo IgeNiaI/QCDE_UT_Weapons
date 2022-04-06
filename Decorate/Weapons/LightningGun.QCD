@@ -235,7 +235,7 @@ Actor QCLightningGun : QCWeapon
 	}
 }
 
-ACTOR UTShockRifleOrb
+ACTOR UTShockRifleOrb : UnlaggedActor
 {
 	Projectile
 	+SHOOTABLE
@@ -289,6 +289,7 @@ ACTOR UTShockRifleOrb
 		SHOC E 1 BRIGHT A_SetScale(0.32, 0.32)
 		TNT1 A 0 BRIGHT A_SetTranslucent(0.10)
 		SHOC E 1 BRIGHT A_SetScale(0.34, 0.34)
+		TNT1 A 99 // We need this for proper unlagged when hitting a wall too soon
 		Stop
 	Death:
 		TNT1 A 0 A_Jump(256, 1) // force sync the actor state
@@ -296,7 +297,7 @@ ACTOR UTShockRifleOrb
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
 		TNT1 A 0 A_Stop
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_NOUNLAGGED)
 		Stop
 	}
 }
@@ -383,7 +384,7 @@ ACTOR UTShockRifleOrbDM : UTShockRifleOrb
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
 		TNT1 A 0 A_Stop
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboDM", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
-		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_NOUNLAGGED)
 		Stop
 	}
 }
@@ -458,7 +459,7 @@ Actor ShockRiflePuffFx
 {
 	+NOINTERACTION
 	+FORCEXYBILLBOARD
-	+CLIENTSIDEONLY
+	+CLIENTSIDEONLY +NONETID
 	RenderStyle Add
 	Translation "0:255=%[0,0,0]:[1.0,0.5,1.5]"
 	Scale 0.9

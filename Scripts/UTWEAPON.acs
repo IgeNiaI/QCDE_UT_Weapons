@@ -64,7 +64,9 @@ Script "UTDE_RedeemerControl" (void)
 
 	delay(1);
 
+	SetNetworkReplicationFlags( NETREP_SKIPOWNER );
 	ChangeCamera(tid, false, false);
+	SetNetworkReplicationFlags( 0 );
 	SetActivator(tid);
 	// Activator: controlled rocket
 
@@ -73,6 +75,9 @@ Script "UTDE_RedeemerControl" (void)
 	int origp = GetActorPitch(plrtid), p = origp;
 	while(!CheckInventory("ImDead") && GetActorProperty(tid, APROP_Health) > 0)
 	{
+		//Log(s:"bbb");
+		SetNetworkReplicationFlags( NETREP_SKIPOWNER );
+
 		Thing_Stop(tid);
 
 		int ip = -GetPlayerInput(plr, INPUT_PITCH);
@@ -95,6 +100,8 @@ Script "UTDE_RedeemerControl" (void)
 		SetActorAngle(tid, a);
 		SetActorPitch(tid, p);
 
+		SetNetworkReplicationFlags( 0 );
+
 		delay(1);
 
 		int triggers = GetPlayerInput(plr, INPUT_BUTTONS) & ~GetPlayerInput(plr, INPUT_OLDBUTTONS);
@@ -106,8 +113,10 @@ Script "UTDE_RedeemerControl" (void)
 	{
 		delay(1);
 	}
+	SetNetworkReplicationFlags( NETREP_SKIPOWNER );
 	SetActorAngle(plrtid, origa);
 	SetActorPitch(plrtid, origP);
+	SetNetworkReplicationFlags( 0 );
 
 	SetActivator(plrtid);
 	SetPlayerProperty(0,0,PROP_TOTALLYFROZEN);
@@ -116,13 +125,19 @@ Script "UTDE_RedeemerControl" (void)
 //this is the dark screen effect, will loop until the projectile terminates it manually
 Script "UTDE_TunnelVision" (void)
 {
+	if (GetNetworkState() == NETSTATE_SERVER)
+		terminate;
+
 	delay(2); // time for rocket to initialize
+	int plrtid = GetActorProperty(0, APROP_TargetTID);
+	int plr = plrtid - 1000;
+	SetActivator(plrtid);
 	SetHudSize(320,240,1);
-	int plr = GetActorProperty(0, APROP_TargetTID) - 1000;
 	SetFont("REDEEMER");
 	while(greymask[plr])
 	{
-		HudMessage(s:"A";HUDMSG_PLAIN,HMID_TUNNEL_VISION + 63,-1, 160.0,120.0, 0.1);
+		//Log(s:"aaa");
+		HudMessage(s:"A"; HUDMSG_PLAIN, HMID_TUNNEL_VISION + 63, -1, 160.0, 120.0, 0.1);
 		delay(2);
 	}
 }
