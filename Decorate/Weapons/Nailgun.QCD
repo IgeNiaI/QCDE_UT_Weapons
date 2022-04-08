@@ -189,7 +189,7 @@ Actor UTPulseWeak : FastProjectile
 		Wait
 	
 	XDeath:
-		TNT1 A 10 A_GiveToTarget("HitBeepLow",1)
+		TNT1 A 10 A_GiveToTarget("HitBeepLow",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		Stop
 		
 	Death:

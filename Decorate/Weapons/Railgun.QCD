@@ -1616,12 +1616,12 @@ Actor LightningGunPuff
 	Spawn:	//hit non bleeding actor
 		TNT1 A 0
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/Impact",CHAN_AUTO,1,0,1)
-		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
+		TNT1 A 0 A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		Goto Crash
 	Xdeath:	//hit bleeding actor
 		TNT1 A 0
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/LightningGun/Impact",CHAN_AUTO,1,0,1)
-		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
+		TNT1 A 0 A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 1
 		Stop
 	Crash:

@@ -367,7 +367,7 @@ Actor UTFlakShell : FastProjectile
 		NAIL A 1 BRIGHT A_Jump(192, "Spawn")
 		Goto FlyLoop+1
 	XDeath:
-		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+		TNT1 A 0 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		Stop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("UTFlakShellBounced", 0, 0, 0, user_velx, user_vely, user_velz, 0, SXF_ABSOLUTEVELOCITY|SXF_TRANSFERPOINTERS)
@@ -410,7 +410,7 @@ Actor UTFlakShellBounced
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Bounce",CHAN_AUTO,1,0,1)
 		Goto Spawn
 	XDeath:
-		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+		TNT1 A 0 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 	Death:
 		TNT1 A 1
 		Stop
@@ -451,12 +451,12 @@ Actor UTFlakBomb
 		Goto DeathCont
 
 		RadiusHit:	//splash damage beep
-			TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+			TNT1 A 0 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 			TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
 			Goto DeathCont
 
 	XDeath:
-		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
+		TNT1 A 0 A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
 		TNT1 A 0 A_Stop
 		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
@@ -556,6 +556,7 @@ Actor UTFlakShellTrailFX
 	+NOINTERACTION
 	+FORCEXYBILLBOARD
 	+CLIENTSIDEONLY
+	+NONETID
 	radius 20
 	RenderStyle Add
 	Translation "0:255=%[2.0,1.48,0.62]:[2.0,1.48,0.62]"
