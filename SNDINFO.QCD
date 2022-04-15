@@ -29,6 +29,13 @@ UTDE/Weapons/ImpactHammer/Charged				"Sounds/Weapons/IH_Charged.wav"
 UTDE/Weapons/ImpactHammer/AltFire				"Sounds/Weapons/IH_Fire_Alt.wav"
 UTDE/Weapons/ImpactHammer/Quad/AltFire			"Sounds/Weapons/Quad/IH_Fire_Alt.wav"
 
+$volume "UTDE/Weapons/ImpactHammer/Fire"			0.80
+$volume "UTDE/Weapons/ImpactHammer/Quad/Fire"		0.80
+$volume "UTDE/Weapons/ImpactHammer/Charge"			0.80
+$volume "UTDE/Weapons/ImpactHammer/Charged"			0.80
+$volume "UTDE/Weapons/ImpactHammer/AltFire"			0.80
+$volume "UTDE/Weapons/ImpactHammer/Quad/AltFire"	0.80
+
 
 //********************
 // Assault Rifle
@@ -45,11 +52,18 @@ UTDE/Weapons/Minigun/AltFireStartLoop			"Sounds/Weapons/MG_AltFire_Looper.wav"
 UTDE/Weapons/Minigun/Quad/AltFireStartLoop		"Sounds/Weapons/Quad/MG_AltFire_Looper.wav"
 UTDE/Weapons/Minigun/FireEnd					"Sounds/Weapons/MG_End.wav"
 
+$volume "UTDE/Weapons/Minigun/FireStartLoop"			0.80
+$volume "UTDE/Weapons/Minigun/Quad/FireStartLoop"		0.80
+$volume "UTDE/Weapons/Minigun/AltFireStartLoop"			0.80
+$volume "UTDE/Weapons/Minigun/Quad/AltFireStartLoop"	0.80
+$volume "UTDE/Weapons/Minigun/FireEnd"					0.80
+
 
 //********************
 // Flak Cannon Mini
 UTDE/Weapons/FlakMini/Fire						"Sounds/Weapons/FLM_Fire.wav"
 UTDE/Weapons/FlakMini/Quad/Fire					"Sounds/Weapons/Quad/FLM_Fire.wav"
+
 
 //********************
 // Flak Cannon
@@ -72,8 +86,9 @@ UTDE/Weapons/PulseMini/FireStartLoop			"Sounds/Weapons/PGM_Start_Loop.wav"
 UTDE/Weapons/PulseMini/Quad/FireStartLoop		"Sounds/Weapons/Quad/PGM_Start_Loop.wav"
 UTDE/Weapons/PulseMini/FireEnd					"Sounds/Weapons/PGM_End.wav"
 
-$volume "UTDE/Weapons/PulseMini/FireStartLoop" 0.75
-$volume "UTDE/Weapons/PulseMini/Quad/FireStartLoop" 0.75
+$volume "UTDE/Weapons/PulseMini/FireStartLoop"		0.65
+$volume "UTDE/Weapons/PulseMini/Quad/FireStartLoop"	0.65
+$volume "UTDE/Weapons/PulseMini/FireEnd"			0.65
 
 
 //********************
@@ -85,8 +100,11 @@ UTDE/Weapons/PulseGun/AltFireStartLoop			"Sounds/Weapons/PG_Start_Loop_Alt.wav"
 UTDE/Weapons/PulseGun/Quad/AltFireStartLoop		"Sounds/Weapons/Quad/PG_Start_Loop_Alt.wav"
 UTDE/Weapons/PulseGun/Impact					"Sounds/Weapons/PG_Impact.wav"
 
-$volume "UTDE/Weapons/PulseGun/FireStartLoop" 0.75
-$volume "UTDE/Weapons/PulseGun/Quad/FireStartLoop" 0.75
+$volume "UTDE/Weapons/PulseGun/FireStartLoop"			0.60
+$volume "UTDE/Weapons/PulseGun/Quad/FireStartLoop"		0.60
+$volume "UTDE/Weapons/PulseGun/FireEnd"					0.60
+$volume "UTDE/Weapons/PulseGun/AltFireStartLoop"		0.80
+$volume "UTDE/Weapons/PulseGun/Quad/AltFireStartLoop"	0.80
 
 
 //********************
@@ -98,6 +116,10 @@ UTDE/Weapons/Ripper/Quad/AltFire				"Sounds/Weapons/Quad/RP_Fire_Alt.wav"
 UTDE/Weapons/Ripper/Impact						"Sounds/Weapons/RP_Impact.wav"
 UTDE/Weapons/Ripper/Bounce						"Sounds/Weapons/RP_Bounce.wav"
 
+$volume "UTDE/Weapons/Ripper/Fire"					0.80
+$volume "UTDE/Weapons/Ripper/Quad/Fire"				0.80
+$volume "UTDE/Weapons/Ripper/AltFire"				0.80
+$volume "UTDE/Weapons/Ripper/Quad/AltFireStartLoop"	0.80
 
 //********************
 // Bio Rifle
@@ -135,6 +157,9 @@ UTDE/Weapons/ShockRifle/AltFire					"Sounds/Weapons/SR_Fire_Alt.wav"
 UTDE/Weapons/ShockRifle/Quad/AltFire			"Sounds/Weapons/Quad/SR_Fire_Alt.wav"
 UTDE/Weapons/ShockRifle/OrbHit					"Sounds/Weapons/SR_Orb_Hit.wav"
 UTDE/Weapons/ShockRifle/OrbExplo				"Sounds/Weapons/SR_Orb_Explo.wav"
+
+$volume "UTDE/Weapons/ShockRifle/Fire"		0.70
+$volume "UTDE/Weapons/ShockRifle/Quad/Fire"	0.70
 
 
 //********************
