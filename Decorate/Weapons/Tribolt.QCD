@@ -242,7 +242,7 @@ Actor UTRipperBlade
 	Speed 36
 	Radius 8
 	Height 3
-	Damage (random(30,40))
+	Damage (random(70,90))
 	Decal "Q4PlasmaBlack"
 	Scale 0.33
 	BounceType Doom
@@ -277,7 +277,7 @@ Actor UTRipperBlade
 Actor UTRipperBladeAlt : UTRipperBlade
 {
 	+SEEKERMISSILE //Not actually used for anything other than checking radius.
-	Damage (random(30,40))
+	Damage (random(70,90))
 	BounceType None
 
 	States
