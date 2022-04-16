@@ -18,7 +18,7 @@ Actor ShotgunPickup : CustomInventory 15601
 	Inventory.PickupSound "QC/Items/WeaponPick"
 	Inventory.PickupMessage "$GOT_UTFlakMini"
 	Tag "$TAG_UTFlakMini"
-	Inventory.RespawnTics 175
+	Inventory.RespawnTics 35
 	States
 	{
 	Spawn:

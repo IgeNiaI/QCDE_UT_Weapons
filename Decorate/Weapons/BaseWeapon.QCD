@@ -9,7 +9,7 @@ Actor QCWeapon : Weapon
 	Weapon.BobRangeX 0.7
 	Weapon.BobRangeY 0.5
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.Respawntics 175 //5sec
+	Inventory.Respawntics 35 //5sec
 	+WEAPON.NOALERT
 }
 
