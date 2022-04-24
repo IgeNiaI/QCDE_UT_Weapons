@@ -195,7 +195,7 @@ Actor UTPulseWeak : FastProjectile
 	Death:
 		PULS A 0 A_PlaySound("UTDE/Weapons/PulseGun/Impact",CHAN_AUTO,1,0,1)
 		PULS A 1 Light("YellowSmallFlicker3") Bright
-		PULS B 3 Bright
+		PULS BCDEFGH 1 Bright
 		Stop
 	}
 }
