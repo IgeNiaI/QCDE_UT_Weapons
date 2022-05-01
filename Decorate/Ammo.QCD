@@ -843,7 +843,7 @@ Actor QCBFGAmmo : Ammo
 	Inventory.PickupSound "QC/Items/AmmoPick"
 	Inventory.Amount 1
 	Inventory.MaxAmount 1
-	Ammo.BackpackMaxAmount 1
+	Ammo.BackpackMaxAmount 2
 	Ammo.BackpackAmount 1
 	Scale 0.908
 	States

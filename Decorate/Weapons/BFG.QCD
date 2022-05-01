@@ -256,7 +256,8 @@ Actor UTRedeemerMissile
 			Goto ExplodeCont
 
 	ExplodeCont:
-		TNT1 A 0 A_Explode(random(3000,3500),1024,XF_HURTSOURCE,0,18)
+		TNT1 A 0 A_Explode(1500,1024,XF_HURTSOURCE,0,18) // deal same damage to shooter as in DM
+		TNT1 A 0 A_Explode(random(1500,2000),1024,0,0,18) // deal extra damage to everyone else
 		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
 		Goto DeathCont
 
