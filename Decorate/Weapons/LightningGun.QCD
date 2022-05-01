@@ -71,7 +71,7 @@ Actor QCLightningGun : QCWeapon
 	Height 48
 	+FLOORCLIP
 	+INVENTORY.IGNORESKILL
-	Weapon.SwaySpeed 3.6
+	Weapon.SwaySpeed 1.8
 	Weapon.AmmoUse 1
 	Weapon.AmmoUse2 2
 	Weapon.AmmoGive 20

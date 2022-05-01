@@ -1075,22 +1075,22 @@ Actor QCRailGun : QCWeapon
 		Goto FlashNoCharge
 
 	FlashNoCharge:
-		TNT1 A 0 A_RailAttack(random(175,210), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
-		Goto FlashCheckSound
-	FlashVeryLowCharge:
-		TNT1 A 0 A_RailAttack(random(200,240), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
-		Goto FlashCheckSound
-	FlashLowCharge:
-		TNT1 A 0 A_RailAttack(random(225,270), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
-		Goto FlashCheckSound
-	FlashMidCharge:
-		TNT1 A 0 A_RailAttack(random(250,300), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
-		Goto FlashCheckSound
-	FlashHighCharge:
 		TNT1 A 0 A_RailAttack(random(275,330), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
 		Goto FlashCheckSound
+	FlashVeryLowCharge:
+		TNT1 A 0 A_RailAttack(random(310,375), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
+	FlashLowCharge:
+		TNT1 A 0 A_RailAttack(random(345,410), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
+	FlashMidCharge:
+		TNT1 A 0 A_RailAttack(random(370,465), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
+	FlashHighCharge:
+		TNT1 A 0 A_RailAttack(random(415,510), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		Goto FlashCheckSound
 	FlashVeryHighCharge:
-		TNT1 A 0 A_RailAttack(random(300,360), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
+		TNT1 A 0 A_RailAttack(random(450,555), 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
 		Goto FlashCheckSound
 			
 	FlashCheckSound:
