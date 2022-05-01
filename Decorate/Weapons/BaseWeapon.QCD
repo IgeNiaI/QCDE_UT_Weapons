@@ -286,33 +286,10 @@ Actor FakeruWeapun : DoomWeapon
 // but are used by monsters or simply have to be defined for the game to launch
 //
 // --------------------------------------------------------------------------
-Actor GNT_UG_Omni : Token {}
-Actor GNT_UG_Burn  : Token {}
-Actor SGExplosiveBullet : Token {}
-Actor QCNailStrong : Token {}
-Actor QCRocketPlayerDM : Token {}
-Actor SG_UG_Spread : Token {}
-Actor SG_UG_Explosive : Token {}
-Actor HMG_UG_Ricochet : Token {}
-Actor HMG_UG_Pierce : Token {}
-Actor SSG_UG_Speed : Token {}
-Actor SSG_UG_Flame : Token {}
-Actor SNG_UG_Lava : Token {}
-Actor SNG_UG_Seeker : Token {}
-Actor TB_UG_Long : Token {}
-Actor TB_UG_Grenade : Token {}
-Actor RL_UG_Cluster : Token {}
-Actor RL_UG_Control : Token {}
-Actor LG_UG_Residue : Token {}
-Actor LG_UG_Static : Token {}
-Actor RG_UG_Pierce : Token {}
-Actor RG_UG_Explosive : Token {}
-Actor BFG_UG_Rays    : Token {}
-Actor BFG_UG_Charge  : Token {}
 
 Actor PowerControllerProtection : PowerProtection {	DamageFactor "Normal", 0.1 }
 
-Actor TriboltTrailFire 
+Actor TriboltTrailFire
 {
 	+CLIENTSIDEONLY +NONETID
 	+NOINTERACTION +NOTONAUTOMAP
@@ -327,13 +304,13 @@ Actor TriboltTrailFire
 		TNT1 A 2
 		TNT1 A 0 A_Jump(256,"One","Two")
 	One:
-		X007 CE 1 Bright 
-		X007 GI 1 Bright 
+		X007 CE 1 Bright
+		X007 GI 1 Bright
 		Stop
 	Two:
-		X007 MO 1 Bright 
-		X007 QS 1 Bright 
-		Stop		
+		X007 MO 1 Bright
+		X007 QS 1 Bright
+		Stop
 	}
 }
 
@@ -348,7 +325,7 @@ Actor BoltExplosion
 	{
 	Spawn:
 		TNT1 A 0 NODELAY A_Jump(255,"MainT1","MainT2")
-		
+
 	MainT1:
 		X112 A 1 Bright A_SetScale(scalex+0.07)
 		X112 A 0 A_FadeOut(0.05)
@@ -376,9 +353,9 @@ Actor BoltExplosion
 		X112 A 0 A_FadeOut(0.05)
 	LooperT1:
 		X112 H 1 Bright A_SetScale(scalex+0.03)
-		X112 H 0 A_FadeOut(0.03)		
+		X112 H 0 A_FadeOut(0.03)
 		Loop
-		
+
 	MainT2:
 		X112 I 1 Bright A_SetScale(scalex+0.07)
 		X112 I 0 A_FadeOut(0.05)
@@ -426,21 +403,21 @@ Actor WaterLightningSparks
 	Spawn:
 	Decider:
 		TNT1 A 0 NODELAY A_Jump(256,"T1","T2","T3","T4","T5")
-		
-		T1:	DLI1 A 0 
+
+		T1:	DLI1 A 0
 			Goto PlayOff
-		T2:	DLI2 A 0 
+		T2:	DLI2 A 0
 			Goto PlayOff
-		T3:	DLI3 A 0 
+		T3:	DLI3 A 0
 			Goto PlayOff
-		T4:	DLI4 A 0 
+		T4:	DLI4 A 0
 			Goto PlayOff
-		T5:	DLI5 A 0 
+		T5:	DLI5 A 0
 			Goto PlayOff
-		
+
 	PlayOff:
 		"####" A 0 A_Jump(128,"FromL")
-		
+
 		FromA:
 			"####" ABCDE 1 Bright
 			"####" FGHIJK 1 Bright
@@ -449,12 +426,12 @@ Actor WaterLightningSparks
 			"####" LMNOP 1 Bright
 			"####" QRSTUV 1 Bright
 			Goto Destroy
-		
-		
+
+
 	Destroy:
 		TNT1 A 5
 		Stop
-		
+
 	}
 }
 
@@ -469,7 +446,7 @@ Actor RailgunTrail
 	States
 	{
 	Spawn:
-		FX01 AA 1 Bright 
+		FX01 AA 1 Bright
 		FX01 A 1 Bright A_FadeOut(0.065)
 		Wait
 	}
@@ -488,11 +465,11 @@ Actor RailgunPuff
 	States
 	{
 	Spawn:	//hit non bleeding actor
-		TNT1 A 0 
+		TNT1 A 0
 		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
 		Goto Crash
 	Xdeath:	//hit bleeding actor
-		TNT1 A 0 
+		TNT1 A 0
 		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
 		TNT1 A 1
 		Stop
@@ -525,15 +502,15 @@ Actor RailgunPuffFx
 	Type3:
 		DB65 A 0
 		Goto EndAnimation
-		
+
 	EndAnimation:
 		"####" A 0 A_SpawnItemEx("RailgunPuffFxSmoke",0,0,0, 0,0,0, 0,SXF_NOCHECKPOSITION)
 		"####" A 0 A_Jump(128,2)
 		"####" A 0 A_SetScale(-0.9,0.9)
 		"####" A 0 //nuthn
-		"####" ABCDE 1 Bright 
-		"####" FGHIJK 1 Bright 
-		"####" LMNOPQRSTUVWXYZ 1 Bright 
+		"####" ABCDE 1 Bright
+		"####" FGHIJK 1 Bright
+		"####" LMNOPQRSTUVWXYZ 1 Bright
 		Stop
 	}
 }
@@ -552,15 +529,15 @@ Actor RailgunPuffFxSmoke
 		TNT1 A 0 NODELAY A_Jump(255,2,3,4,5,6,7,8,9,10,11,12)
 		X102 ABCDNOPQRSTUV 0 A_Jump(256,"Ender")
 	Ender:
-		"####" "####" 1 Bright A_SetScale(scalex+0.1)	
+		"####" "####" 1 Bright A_SetScale(scalex+0.1)
 	EnderPT2:
-		"####" "#" 1 Bright A_FadeOut(0.11) 	
+		"####" "#" 1 Bright A_FadeOut(0.11)
 		"####" "#" 0 A_SetScale(scalex+0.075)
 		Loop
 	}
 }
 
-Actor RailgunSmoke	
+Actor RailgunSmoke
 {
 	+NOINTERACTION +NOTONAUTOMAP
 	+FORCEXYBILLBOARD
@@ -574,7 +551,7 @@ Actor RailgunSmoke
 	Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_Jump(256,"T1","T2","T3","T4")	//to define which graphic will use
-		
+
 	T1:
 		DB13 A 0
 		Goto PlayOff
@@ -594,7 +571,7 @@ Actor RailgunSmoke
 	}
 }
 
-Actor BFGfogLightning 
+Actor BFGfogLightning
 {
 	+NOINTERACTION +NOTONAUTOMAP
 	+CLIENTSIDEONLY +NONETID
@@ -609,21 +586,21 @@ Actor BFGfogLightning
 		TNT1 A 0 NODELAY A_Jump(200,2,3,4,5,6,7,8)	//for sliiiigh randomization of when it spawns
 		TNT1 AAAAAAAAAA 1
 		TNT1 A 0 A_Jump(256,"T1","T2","T3","T4","T5")
-		
-		T1:	DLI1 A 0 
+
+		T1:	DLI1 A 0
 			Goto PlayOff
-		T2:	DLI2 A 0 
+		T2:	DLI2 A 0
 			Goto PlayOff
-		T3:	DLI3 A 0 
+		T3:	DLI3 A 0
 			Goto PlayOff
-		T4:	DLI4 A 0 
+		T4:	DLI4 A 0
 			Goto PlayOff
-		T5:	DLI5 A 0 
+		T5:	DLI5 A 0
 			Goto PlayOff
-		
+
 	PlayOff:
 		"####" A 0 A_Jump(128,"FromL")
-		
+
 		FromA:
 			"####" ABCDE 1 Bright
 			"####" FGHIJK 1 Bright
@@ -632,16 +609,16 @@ Actor BFGfogLightning
 			"####" LMNOP 1 Bright
 			"####" QRSTUV 1 Bright
 			Goto Repeater
-		
+
 	Repeater:
 		TNT1 A 0 A_JumpIf(user_counter>=2,"Destroy")
 		TNT1 A 0 A_SetUserVar(user_counter,user_counter+1)
 		Goto Spawn
-		
+
 	Destroy:
 		TNT1 A 5
 		Stop
-		
+
 	}
 }
 
@@ -657,17 +634,17 @@ Actor BFGExploLightningSmall
 	{
 	Spawn:
 		TNT1 A 0 NoDelay A_Jump(256,"T1","T2","T3","T4","T5")
-	T1:	DLI1 A 0 
+	T1:	DLI1 A 0
 		Goto PlayOff
-	T2:	DLI2 A 0 
+	T2:	DLI2 A 0
 		Goto PlayOff
-	T3:	DLI3 A 0 
+	T3:	DLI3 A 0
 		Goto PlayOff
-	T4:	DLI4 A 0 
+	T4:	DLI4 A 0
 		Goto PlayOff
-	T5:	DLI5 A 0 
+	T5:	DLI5 A 0
 		Goto PlayOff
-		
+
 	PlayOff:
 		"####" A 0 A_Jump(128,"FromL")
 	FromA:
@@ -676,7 +653,7 @@ Actor BFGExploLightningSmall
 	FromL:
 		"####" LMNOPQRSTUV 1 Bright
 		Stop
-		
+
 	}
 }
 
@@ -693,9 +670,592 @@ Actor BFGExploRingSmall //shockwave
 	Spawn:
 		X060 C 1 Bright A_SetScale(0.15)
 		X060 C 1 Bright A_SetScale(0.45)
-	Looper:	
+	Looper:
 		X060 C 1 Bright A_SetScale(scalex*1.2)
 		TNT1 A 0 A_FadeOut(0.1)
 		Loop
+	}
+}
+
+Actor OmnislashProjectile
+{
+	Projectile
+	Speed 30
+	Radius 2
+	Height 2
+	ReactionTime 1
+	RenderStyle Add
+	Translation "0:255=%[0,0,0]:[0.8,0,1.5]"
+	Scale 0.7
+	Alpha 0.4
+	+BRIGHT
+	+SEEKERMISSILE
+	DamageType "ZombieGibber"
+	ProjectileKickBack 0
+	States
+	{
+	Spawn:
+		QCG1 X 1
+		QCG1 X 0 A_CountDown
+		Loop
+	Death:
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,80)
+		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+		Goto DeathCont
+
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepLow",1)
+			TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+			Goto DeathCont
+
+	DeathCont:
+		QCG1 X 0 A_Explode(random(4,6)*10,48,0,0,32)
+		QCG1 XXXXXXXXXX 1 A_FadeOut
+		Stop
+	XDeath:
+		QCG1 X 0 A_GiveToTarget("HitBeepMid",1)
+		TNT1 A 0 A_Jump(255,"DeathCont")
+		Goto DeathCont
+	}
+}
+
+Actor OmnislashFireProjectile
+{
+	Projectile
+	Speed 30
+	Radius 2
+	Height 2
+	ReactionTime 1
+	RenderStyle Add
+	Translation "0:255=%[0,0,0]:[1.5,0.5,0]"
+	Scale 0.9
+	Alpha 0.5
+	+BRIGHT
+	+SEEKERMISSILE
+	DamageType "ZombieGibber"
+	ProjectileKickBack 0
+	States
+	{
+	Spawn:
+		QCG1 X 1 NODELAY A_SpawnItemEx("BurnerFlamelet",random(0,-20),random(7,-7),random(-3,3), 0,0,0, 0,SXF_NOCHECKPOSITION,128)
+		QCG1 X 0 A_CountDown
+		Loop
+	Death:
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,80)
+		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+		Goto DeathCont
+
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepLow",1)
+			TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+			Goto DeathCont
+
+	DeathCont:
+		QCG1 X 0 A_Explode(random(4,6)*10,48,0,0,32)
+		QCG1 XXXXXXXXXX 1 A_FadeOut(0.13)
+		Stop
+	XDeath:
+		QCG1 X 0 A_GiveToTarget("HitBeepMid",1)
+		TNT1 A 0 A_SpawnItemEx("GauntletFlameBurner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS,128)
+		TNT1 A 0 A_Jump(255,"DeathCont")
+		Goto DeathCont
+	}
+}
+
+Actor LavaNailFlameBurner
+{
+	Projectile
+	+THRUACTORS
+	+NOINTERACTION
+	-NOGRAVITY
+	Gravity 0.1
+	+NODAMAGETHRUST
+	+BLOODLESSIMPACT
+	+SEEKERMISSILE
+	+DONTSPLASH
+	+DONTBLAST
+	Radius 1
+	Height 1
+	Damage 0
+	Speed 0
+	Scale 0.38
+	var int user_counter;
+	Translation "0:255=%[0,0,0]:[1.8,0.8,0]"
+	States
+	{
+	Spawn:
+		VTFB A 0 NODELAY A_Jump(180,2) // ~30% chance it will not jump, and instead will continue causing pain to monsters
+		VTFB A 0 A_ChangeFlag("Painless",1)
+
+		Looper:
+			VTFB A 0 A_JumpIf(user_counter>=14,"Ender")	//140 tics, 4 seconds
+			VTFB A 0 A_SpawnItemEx("NailFlameFX", random(4,-4),random(4,-4),0, 0,0,frandom(0.05,0.4), 0,SXF_NOCHECKPOSITION|SXF_TRANSFERTRANSLATION)
+			VTFB A 0 A_SeekerMissile(0,0,SMF_LOOK/*|SMF_CURSPEED*/,256)
+			VTFB A 0 A_JumpIfTargetInLOS("Sounder",360,JLOSF_PROJECTILE,50)
+			VTFB A 0 A_Jump(255,"ContinueLooper")
+		ContinueLooper:
+			VTFB A 0 A_CheckFloor("NoWarp")
+			VTFB A 0 A_Explode(15,32,0,0,32)
+			VTFB AAAAAAAAAA 1 Light("OrangeSmallFlicker1") A_Warp(AAPTR_DEFAULT,0,0,-1)
+			VTFB A 0 A_SetUserVar(user_counter, user_counter+1)
+			Goto Looper
+		NoWarp:
+			VTFB A 0 A_Explode(8,32,0,0,32)
+			VTFB A 10 Light("OrangeSmallFlicker1")
+			VTFB A 0 A_SetUserVar(user_counter, user_counter+1)
+			Goto Looper
+
+	Sounder:
+		VTFB A 0 A_GiveToTarget("HitBeepLow",1)
+		VTFB A 0 A_Jump(255,"ContinueLooper")
+		Goto ContinueLooper
+
+	Ender:
+		VTFB AAAAAA 2 Light("OrangeSmallFlicker1") A_FadeOut(0.1)
+		VTFB A 2 Light("OrangeSmallFlicker1") A_FadeOut(0.1)
+		VTFB A 2 Light("OrangeSmallFlicker2") A_FadeOut(0.1)
+		VTFB A 2 Light("OrangeSmallFlicker2") A_FadeOut(0.1)
+		VTFB A 2 Light("OrangeSmallFlicker3") A_FadeOut(0.1)
+		Stop
+	}
+}
+
+Actor SSGFlame1
+{
+	Projectile
+	Radius 3
+	Height 3
+	Speed 25
+	+RIPPER
+	+BLOODLESSIMPACT
+	+SEEKERMISSILE
+	+FORCERADIUSDMG
+	+DONTBLAST
+	ReactionTime 4
+	RenderStyle None
+	DamageType "NoDamageToPlayers"
+	ProjectileKickBack 0
+	States
+	{
+	Spawn:
+		PLAY A 0 NODELAY A_Explode(random(3,6)*10,128,0,0,32)
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,100)
+	AfterBeepCheck:
+		PLAY A 2 A_Explode(random(3,6)*10,64,0,0,40)
+		TNT1 A 0 A_SpawnItemEx("FlameFlamelet", random(12,-12),random(12,-12),random(12,-12), 0,0,frandom(0,1.5), 0,SXF_NOCHECKPOSITION)
+		PLAY A 2
+		TNT1 A 0 A_SpawnItemEx("FlameFlamelet", random(12,-12),random(12,-12),random(12,-12), 0,0,frandom(0,1.5), 0,SXF_NOCHECKPOSITION)
+		PLAY A 2
+		TNT1 A 0 A_SpawnItemEx("FlameFlamelet", random(12,-12),random(12,-12),random(12,-12), 0,0,frandom(0,1.5), 0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_CountDown
+		Goto Spawn+1
+
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+			Goto AfterBeepCheck
+
+	Death:
+		PLAY BCDE 5
+		Stop
+	}
+}
+
+Actor SSGFlame2 : SSGFlame1
+{
+	States
+	{
+	Spawn:
+	Spawn2:
+		PLAY A 0 NODELAY A_Explode(random(3,6)*10,128,0,0,32)
+		PLAY A 2
+		TNT1 A 0 A_SpawnItemEx("FlameFlamelet", random(12,-12),random(12,-12),random(12,-12), 0,0,frandom(0,1.5), 0,SXF_NOCHECKPOSITION)
+		PLAY A 1
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit2",360,JLOSF_PROJECTILE,100)
+	AfterBeepCheck2:
+		PLAY A 1  A_Explode(random(3,5)*10,64,0,0,40)
+		TNT1 A 0 A_SpawnItemEx("FlameFlamelet", random(12,-12),random(12,-12),random(12,-12), 0,0,frandom(0,1.5), 0,SXF_NOCHECKPOSITION)
+		PLAY A 2
+		TNT1 A 0 A_SpawnItemEx("FlameFlamelet", random(12,-12),random(12,-12),random(12,-12), 0,0,frandom(0,1.5), 0,SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_CountDown
+		Goto Spawn2+1
+
+		RadiusHit2:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+			Goto AfterBeepCheck2
+	}
+}
+
+Actor LGPuff
+{
+	+CLIENTSIDEONLY +NONETID
+	Radius 10
+	+NOINTERACTION +NOTONAUTOMAP
+	+ALWAYSPUFF
+	+PUFFGETSOWNER
+	+PUFFONACTORS
+	Scale 0.35
+	Renderstyle Add
+	Obituary "$OB_LGPuff" // "%o was electrified by %k." // variation line
+	+FORCEXYBILLBOARD
+	+MTHRUSPECIES
+	+DONTSPLASH
+	Decal "LGDecal"
+	DamageType "Electric"
+	States
+	{
+	Spawn:
+	XDeath:
+		TNT1 A 0
+		TNT1 A 0 A_GiveToTarget("HitBeepLow",1)
+		Goto Choose
+	Crash:
+		TNT1 A 0 A_JumpIf(waterlevel > 0, "Water")
+	Choose:
+		TNT1 A 100
+		Stop
+	Water:
+		TNT1 A 0 A_SpawnItemEx("WaterLightningSparks", 0,0,0, 0,0,0,0, SXF_NOCHECKPOSITION,160)
+		TNT1 A 100 A_Explode(waterlevel * 2, waterlevel * 16)
+		Stop
+	}
+}
+
+Actor LGPuffStatic
+{
+	Projectile
+	+SEEKERMISSILE
+	+NOINTERACTION
+	+PUFFGETSOWNER
+	+PUFFONACTORS
+	RenderStyle Add
+	+FORCEXYBILLBOARD
+	+NODAMAGETHRUST
+	//-MTHRUSPECIES
+	+DONTSPLASH
+	+DONTBLAST
+	Alpha 0.99
+	Translation "0:255=%[0,0,0]:[0.9,0.74,1.5]"
+	Scale 0.4
+	Obituary "$OB_LGPuffStatic" // "%o was conductive for %k."
+	DamageType "NoDamageToPlayers"
+	DamageType "Electric"
+	ProjectileKickBack 0
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_ChangeFlag("NOBLOCKMAP",0)
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("Sounder",360,JLOSF_PROJECTILE,140)
+		Goto ContinueNormal
+
+		Sounder:
+			TNT1 A 0 A_GiveToTarget("HitBeepLow",1)
+			Goto ContinueNormal
+
+	ContinueNormal:
+		TNT1 A 0 A_Explode(12,100,66)
+		TNT1 A 0 A_Jump(256,"Type1a","Type1b","Type2a","Type2b","Type3a","Type3b","Type4a","Type4b","Type5a","Type5b")
+
+	Type1a:
+		DLI1 A 0
+		Goto Perform1
+	Type1b:
+		DLI1 L 0
+		Goto Perform2
+	Type2a:
+		DLI2 A 0
+		Goto Perform1
+	Type2b:
+		DLI2 L 0
+		Goto Perform2
+	Type3a:
+		DLI3 A 0
+		Goto Perform1
+	Type3b:
+		DLI3 L 0
+		Goto Perform2
+	Type4a:
+		DLI4 A 0
+		Goto Perform1
+	Type4b:
+		DLI4 L 0
+		Goto Perform2
+	Type5a:
+		DLI5 A 0
+		Goto Perform1
+	Type5b:
+		DLI5 L 0
+		Goto Perform2
+
+	Perform1:
+		"####" BDHI 1 Bright
+		Stop
+	Perform2:
+		"####" MOST 1 Bright
+		Stop
+	}
+}
+
+Actor BurnerFlamelet
+{
+	Projectile
+	+NOINTERACTION +NOTONAUTOMAP
+	+CLIENTSIDEONLY
+	+NONETID
+	+FORCEXYBILLBOARD
+	RenderStyle Add
+	Scale 0.07
+	Alpha 0
+	Speed 7
+	Translation "0:255=%[0,0,0]:[1.5,1.0,0]"
+	States
+	{
+	Spawn:
+		TNT1 A 1
+		TNT1 A 0 A_Stop
+		X123 UVWX 1 A_FadeIn(0.25)
+	Looper:
+		X123 ABCDEFGHIJKLMNOPQRSTUVWX 1 Bright A_FadeOut(0.05)
+		Loop
+	}
+}
+
+Actor FlameFlamelet 	//:)
+{
+	+NOINTERACTION
+	+FORCEXYBILLBOARD
+	+CLIENTSIDEONLY
+	+DONTBLAST
+	RenderStyle Add
+	Scale 0.4
+	States
+	{
+	Spawn:
+		TNT1 A 0 NODELAY A_Jump(255,"T1","T2","T3")
+		Goto T1
+	T1:
+		X052 ABCDEFGHIJKLMNOPQRS 1 Bright
+		Stop
+	T2:
+		X056 ABCDEFGHIJKLMNOPQRS 1 Bright
+		Stop
+	T3:
+		X054 ABCDEFGHIJKLMNOPQRS 1 Bright
+		Stop
+	}
+}
+
+Actor QCRocketPlayer
+{
+	Projectile
+	+RANDOMIZE
+	+DEHEXPLOSION
+	+EXTREMEDEATH
+	-ROCKETTRAIL
+	+SEEKERMISSILE //Not actually used for anything other than checking radius.
+	+MTHRUSPECIES
+	Radius 3
+	Height 6
+	Speed 34
+	Damage (random(7,11)*10)
+	+DONTBLAST
+	Scale 0.6
+	Obituary "$OB_QCRocketPlayer" // "%o rode %k's rocket."
+	SeeSound ""
+	DeathSound "QC/Weapons/RocketLauncher/RocketExplo"
+	Decal "D4ExploScorch"
+	DamageType "RocketDamage"
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MICR A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MICR A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MICR A 0 A_SpawnItemEx("RocketTrailSmoke",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		Loop
+
+	Xdeath:	//Direct hit
+		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
+		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+		Goto DeathCont
+
+	Death: //crashed somewhere and checks for splash
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,180)
+		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+		Goto DeathCont
+
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+			TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+			Goto DeathCont
+
+	DeathCont:
+		TNT1 A 0 A_JumpIfInTargetInventory("RL_UG_Cluster",1,"PerformCluster")
+		TNT1 A 0 A_StopSound(7)
+		TNT1 A 0 A_Explode(50,128,XF_HURTSOURCE)	//max damage taken by self rocket (rocket jump) is 50
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(78,128,0)	//The rest doesnt deal damage to player, adds to 128
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		TNT1 A 0 A_SpawnItemEx("QCRocketExploDebris",-1,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx("QCRocketExploParticle",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(1,6),random(0,359),SXF_NOCHECKPOSITION)
+		TNT1 A 10 A_SpawnItemEx("QCRocketExplosion",-2,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		Stop
+	PerformCluster:
+		TNT1 A 0 A_CheckFloor("PerformPlane")
+		TNT1 A 0 A_CheckCeiling("PerformPlane")
+		TNT1 A 0 A_SpawnItemEx("RLClusterRocket", 0,0,0, 10,0,0, 150,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 A_SpawnItemEx("RLClusterRocket", 0,0,0, 10,0,0, 210,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 A_SpawnItemEx("RLClusterRocket", 0,0,0, 10,0,0, 110,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 A_SpawnItemEx("RLClusterRocket", 0,0,0, 10,0,0, 250,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		Goto DeathCont+1
+	PerformPlane:
+		TNT1 A 0 A_SpawnItemEx("RLClusterRocket", 0,0,0, 10,0,0, -45,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 A_SpawnItemEx("RLClusterRocket", 0,0,0, 10,0,0,  45,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 A_SpawnItemEx("RLClusterRocket", 0,0,0, 10,0,0, 135,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 A_SpawnItemEx("RLClusterRocket", 0,0,0, 10,0,0,-135,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		Goto DeathCont+1
+	}
+}
+
+Actor QCRocketPlayerDM : QCRocketPlayer
+{
+	Damage (16)
+	+FORCERADIUSDMG
+	-MTHRUSPECIES
+	-DONTBLAST
+	Obituary "$OB_QCRocketPlayer" // "%o rode %k's rocket."
+	States
+	{
+	DeathCont:
+		TNT1 A 0 A_StopSound(7)
+		TNT1 A 0 A_Explode(50,128,XF_HURTSOURCE,0,18)	//max damage taken by self rocket (rocket jump) is 50
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(34,128,0,0,18)	//then another 34 extra damage for impacting a player + (16)dmg on the projectile =100dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		TNT1 A 0 A_SpawnItemEx("QCRocketExploDebrisDM",-1,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx("QCRocketExploParticle",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(1,6),random(0,359),SXF_NOCHECKPOSITION)
+		TNT1 A 10 A_SpawnItemEx("QCRocketExplosionDM",-2,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		Stop
+	}
+}
+
+Actor RLClusterRocket
+{
+	Projectile
+	+FORCERADIUSDMG
+	+EXTREMEDEATH
+	+SEEKERMISSILE
+	+LOOKALLAROUND
+	Radius 2
+	Height 3
+	Speed 15
+	Damage 10
+	SeeSound ""
+	Scale 0.18
+	Decal "Scorch"
+	DamageType "RocketDamage"
+	+FRIENDLY
+	+DONTBLAST
+	ReactionTime 175	//175*2=350 tics, 10 seconds
+	+MTHRUSPECIES
+	States
+	{
+	Spawn:
+		TNT1 A 0 A_SpawnItemEx("NetGuardRocketTrailFire",-4,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		QROK A 1 A_SeekerMissile(15,16,SMF_LOOK|SMF_PRECISE ,0,0)
+		QROK A 1
+		QROK A 0 A_CountDown
+		Loop
+	Xdeath:	//Direct hit
+		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+		Goto DeathCont
+	Death: //crashed somewhere and checks for splash
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,112)
+		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+		Goto DeathCont
+
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepLow",1)
+			TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+			Goto DeathCont
+
+	DeathCont:
+		TNT1 A 0 A_Explode(64,80,0,0,40)
+		TNT1 A 0 A_PlaySound("quake4/Misc/RocketExplo",5,0.4,0,1.5)
+		TNT1 A 3 A_SpawnItemEx("Q4GBSwarmExplo",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		Stop
+	}
+}
+
+Actor SGExplosiveBullet : FastProjectile
+{
+	Projectile
+	+RANDOMIZE
+	+FORCEXYBILLBOARD
+	+DONTSPLASH
+	+NOEXTREMEDEATH
+	+DONTBLAST
+	+BLOODSPLATTER
+	+SEEKERMISSILE
+	+MTHRUSPECIES
+	damage (random(12,18))
+	radius 2
+	height 2
+	speed 90
+	renderstyle ADD
+	alpha 0.9
+	scale 0.1
+	Translation "0:255=%[0,0,0]:[1.4,0.7,0]"
+	DamageType "NoDamageToPlayers"
+	ProjectileKickBack 0
+	states
+	{
+	Spawn:
+		X029 A 1 BRIGHT
+		X029 A 70 BRIGHT A_PlaySound("QCDE/Other/BulletWhoosh",5,1.0,false,3.0)
+		Wait
+	XDeath:
+		TNT1 A 1 A_GiveToTarget("HitBeepLow",1)
+		Stop
+
+	Death: //crashed somewhere and checks for splash
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,180)
+		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+		Goto DeathCont
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
+			TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+			Goto DeathCont
+
+	DeathCont:
+		TNT1 A 0 A_SetScale(0.35)
+		TNT1 A 0 A_Explode(30,112,0,1,0)
+		TNT1 A 0 A_Jump(256,"Type1","Type2")
+	Type1:
+		X006 ABCDEFGHIJKLMNOP 1 Bright
+		Stop
+	Type2:
+		TNT1 A 0 A_SetScale(-0.35)
+		X006 ABCDEFGHIJKLMNOP 1 Bright
+		Stop
 	}
 }

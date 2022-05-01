@@ -615,3 +615,6 @@ Actor UTBombTrailFX
 		Loop
 	}
 }
+
+Actor SSG_UG_Speed : Token {}
+Actor SSG_UG_Flame : Token {}

@@ -366,3 +366,6 @@ Actor PGworldactor
 		Stop
 	}
 }
+
+Actor SNG_UG_Lava : Token {}
+Actor SNG_UG_Seeker : Token {}

@@ -530,3 +530,6 @@ ACTOR UTShockRifleComboFX
 		Stop
 	}
 }
+
+Actor LG_UG_Residue : Token {}
+Actor LG_UG_Static : Token {}

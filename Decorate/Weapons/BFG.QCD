@@ -560,3 +560,6 @@ Actor UTRedeemerExplosion
 		Stop
 	}
 }
+
+Actor BFG_UG_Rays    : Token {}
+Actor BFG_UG_Charge  : Token {}

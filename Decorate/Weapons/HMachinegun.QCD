@@ -435,3 +435,6 @@ Actor MinigunSmoke
 		Loop
 	}
 }
+
+Actor HMG_UG_Ricochet : Token {}
+Actor HMG_UG_Pierce : Token {}

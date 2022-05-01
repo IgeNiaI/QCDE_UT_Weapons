@@ -1368,3 +1368,6 @@ Actor QCRocketExploParticle
 		Wait
 	}
 }
+
+Actor RL_UG_Cluster : Token {}
+Actor RL_UG_Control : Token {}

@@ -1322,3 +1322,6 @@ ACTOR BioBallSticky3DM : BioBallSticky1DM
 		Goto DeathFinish
 	}
 }
+
+Actor TB_UG_Long : Token {}
+Actor TB_UG_Grenade : Token {}

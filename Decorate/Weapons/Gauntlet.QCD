@@ -975,3 +975,6 @@ Actor NailFlameFX
 		Loop
 	}
 }
+
+Actor GNT_UG_Omni : Token {}
+Actor GNT_UG_Burn  : Token {}

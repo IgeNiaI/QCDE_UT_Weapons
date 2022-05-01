@@ -1446,3 +1446,6 @@ Actor LightningGunPuff_DM : LightningGunPuff
 {
 	-MTHRUSPECIES
 }
+
+Actor RG_UG_Pierce : Token {}
+Actor RG_UG_Explosive : Token {}

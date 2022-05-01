@@ -325,3 +325,6 @@ Actor UTFlakMiniShellBouncedDM : UTFlakMiniShellBounced
 	-DONTBLAST
 	damage (10)
 }
+
+Actor SG_UG_Spread : Token {}
+Actor SG_UG_Explosive : Token {}
