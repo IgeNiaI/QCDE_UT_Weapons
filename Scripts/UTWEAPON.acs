@@ -71,7 +71,7 @@ Script "UTDE_RedeemerControl" (void)
 	greymask[plr] = true;
 	int origa = GetActorAngle(plrtid), a = origa;
 	int origp = GetActorPitch(plrtid), p = origp;
-	while(!CheckInventory("ImDead"))
+	while(!CheckInventory("ImDead") && GetActorProperty(tid, APROP_Health) > 0)
 	{
 		Thing_Stop(tid);
 
