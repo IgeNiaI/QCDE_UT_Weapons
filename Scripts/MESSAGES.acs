@@ -2501,14 +2501,14 @@ script "QCDE_LowHealthAlert_CLIENT" (int sound, int text) CLIENTSIDE
 
 str AmmoIcons[9] = {
 		"",		//0  Empty
-		"AmmBullt", //1  bullet
-		"AmmShell", //2  shell
-		"AmmNails", //3  nail
-		"AmmBolts", //4  bolt
-		"AmmRockt", //5  rocket
-		"AmmCoils", //6  coil
-		"AmmSlugs", //7  slug
-		"AmmBfugs", //8  bfg
+		"AmmBullt", //1  minigun
+		"AmmShell", //2  flak cannon
+		"AmmNails", //3  pulse rifle
+		"AmmBlads", //4  ripper
+		"AmmRockt", //5  rocket launcher
+		"AmmCoils", //6  shock rifle
+		"AmmSlugs", //7  lightning gun
+		"AmmBfugs", //8  redeemer
 		}; 
 		
 script "QCDE_GraysonText" (int amount, int mode, int ammoicon)
