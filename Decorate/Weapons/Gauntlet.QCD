@@ -65,212 +65,8 @@ Actor QCGauntlet : QCWeapon
 	Fire:
 		UTIH A 0 A_JumpIfInventory("Class_Painkiller",1,"PKFire")
 		UTIH A 0 A_PlaySound("UTDE/Weapons/ImpactHammer/Charge",CHAN_WEAPON,1.0,0)
+		UTIH A 0 A_Jump(256,"Charge10") //for virtual jump to inherited versions
 		Goto Charge10
-	
-	// Charge 1
-	Charge10:
-		UTIH B 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
-		UTIH B 0 A_ReFire("Charge11")
-		Goto Fire1
-	Charge11:
-		UTIH B 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
-		UTIH B 0 A_ReFire("Charge12")
-		Goto Fire1
-	Charge12:
-		UTIH B 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
-		UTIH B 0 A_ReFire("Charge13")
-		Goto Fire1
-	Charge13:
-		UTIH B 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
-		UTIH B 0 A_ReFire("Charge14")
-		Goto Fire1
-	Charge14:
-		UTIH B 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
-		UTIH B 0 A_ReFire("Charge15")
-		Goto Fire1
-		
-	// Charge 2
-	Charge15:
-		UTIH C 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
-		UTIH C 0 A_ReFire("Charge16")
-		Goto Fire2
-	Charge16:
-		UTIH C 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
-		UTIH C 0 A_ReFire("Charge17")
-		Goto Fire2
-	Charge17:
-		UTIH C 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
-		UTIH C 0 A_ReFire("Charge18")
-		Goto Fire2
-	Charge18:
-		UTIH C 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
-		UTIH C 0 A_ReFire("Charge19")
-		Goto Fire2
-	Charge19:
-		UTIH C 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
-		UTIH C 0 A_ReFire("Charge20")
-		Goto Fire2
-		
-	// Charge 3
-	Charge20:
-		UTIH D 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
-		UTIH D 0 A_ReFire("Charge21")
-		Goto Fire3
-	Charge21:
-		UTIH D 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
-		UTIH D 0 A_ReFire("Charge22")
-		Goto Fire3
-	Charge22:
-		UTIH D 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
-		UTIH D 0 A_ReFire("Charge23")
-		Goto Fire3
-	Charge23:
-		UTIH D 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
-		UTIH D 0 A_ReFire("Charge24")
-		Goto Fire3
-	Charge24:
-		UTIH D 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
-		UTIH D 0 A_ReFire("Charge25")
-		Goto Fire3
-		
-	// Charge 4
-	Charge25:
-		UTIH E 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
-		UTIH E 0 A_ReFire("Charge26")
-		Goto Fire4
-	Charge26:
-		UTIH E 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
-		UTIH E 0 A_ReFire("Charge27")
-		Goto Fire4
-	Charge27:
-		UTIH E 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
-		UTIH E 0 A_ReFire("Charge28")
-		Goto Fire4
-	Charge28:
-		UTIH E 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
-		UTIH E 0 A_ReFire("Charge29")
-		Goto Fire4
-	Charge29:
-		UTIH E 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
-		UTIH E 0 A_ReFire("Charge30")
-		Goto Fire4
-		
-	// Charge 5
-	Charge30:
-		UTIH F 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
-		UTIH F 0 A_ReFire("Charge31")
-		Goto Fire5
-	Charge31:
-		UTIH F 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
-		UTIH F 0 A_ReFire("Charge32")
-		Goto Fire5
-	Charge32:
-		UTIH F 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
-		UTIH F 0 A_ReFire("Charge33")
-		Goto Fire5
-	Charge33:
-		UTIH F 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
-		UTIH F 0 A_ReFire("Charge34")
-		Goto Fire5
-	Charge34:
-		UTIH F 1 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
-		UTIH F 0 A_ReFire("Charge35")
-		Goto Fire5
-		
-	// Charge 6
-	Charge35:
-		UTIH G 1 Offset(1,32)
-		UTIH G 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
-		UTIH G 0 A_ReFire("Charge36")
-		Goto Fire6
-	Charge36:
-		UTIH G 1 Offset(1,33)
-		UTIH G 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
-		UTIH G 0 A_ReFire("Charge37")
-		Goto Fire6
-	Charge37:
-		UTIH G 1 Offset(2,33)
-		UTIH G 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
-		UTIH G 0 A_ReFire("Charge38")
-		Goto Fire6
-	Charge38:
-		UTIH G 1 Offset(2,34)
-		UTIH G 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
-		UTIH G 0 A_ReFire("Charge39")
-		Goto Fire6
-	Charge39:
-		UTIH G 1 Offset(3,33)
-		UTIH G 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
-		UTIH G 0 A_ReFire("Charge40")
-		Goto Fire6
-		
-	// Charge 7
-	Charge40:
-		UTIH H 1 A_PlaySound("UTDE/Weapons/ImpactHammer/Charged",CHAN_WEAPON,1.0,1)
-		UTIH H 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
-		UTIH H 0 A_ReFire("Charge41")
-		Goto Fire7
-	Charge41:
-		UTIH H 1 Offset(2,33)
-		UTIH H 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
-		UTIH H 0 A_ReFire("Charge42")
-		Goto Fire7
-	Charge42:
-		UTIH H 1 Offset(1,34)
-		UTIH H 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
-		UTIH H 0 A_ReFire("Charge43")
-		Goto Fire7
-	Charge43:
-		UTIH H 1 Offset(0,32)
-		UTIH H 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
-		UTIH H 0 A_ReFire("Charge44")
-		Goto Fire7
-	Charge44:
-		UTIH H 1 Offset(2,32)
-		UTIH H 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
-		UTIH H 0 A_ReFire("Charge45")
-		Goto Fire7
-	Charge45:
-		UTIH H 1 Offset(3,35)
-		UTIH H 0 A_CustomPunch(0,1,0,"GauntletPuff_DM_NoFX",56)
-		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
-		UTIH H 0 A_ReFire("Charge41")
-		Goto Fire7
 
 	//-----------------------
 	// AltFire Seq
@@ -278,7 +74,216 @@ Actor QCGauntlet : QCWeapon
 	AltFire: //38 tics, 1.1sec
 		UTIH A 0 A_JumpIfInventory("Class_Painkiller",1,"PKAltFire")
 		UTIH A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTIH A 0 A_Jump(256,"Fire1") //for virtual jump to inherited versions
 		Goto Fire1
+
+	//-----------------------
+	// Charge States
+	//-----------------------
+	// Charge 1
+	Charge10:
+		UTIH B 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
+		UTIH B 0 A_ReFire("Charge11")
+		Goto Fire1
+	Charge11:
+		UTIH B 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
+		UTIH B 0 A_ReFire("Charge12")
+		Goto Fire1
+	Charge12:
+		UTIH B 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
+		UTIH B 0 A_ReFire("Charge13")
+		Goto Fire1
+	Charge13:
+		UTIH B 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
+		UTIH B 0 A_ReFire("Charge14")
+		Goto Fire1
+	Charge14:
+		UTIH B 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH B 0 A_JumpIfInventory("PunchedAlready",1,"Fire1")
+		UTIH B 0 A_ReFire("Charge15")
+		Goto Fire1
+
+	// Charge 2
+	Charge15:
+		UTIH C 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
+		UTIH C 0 A_ReFire("Charge16")
+		Goto Fire2
+	Charge16:
+		UTIH C 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
+		UTIH C 0 A_ReFire("Charge17")
+		Goto Fire2
+	Charge17:
+		UTIH C 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
+		UTIH C 0 A_ReFire("Charge18")
+		Goto Fire2
+	Charge18:
+		UTIH C 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
+		UTIH C 0 A_ReFire("Charge19")
+		Goto Fire2
+	Charge19:
+		UTIH C 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH C 0 A_JumpIfInventory("PunchedAlready",1,"Fire2")
+		UTIH C 0 A_ReFire("Charge20")
+		Goto Fire2
+
+	// Charge 3
+	Charge20:
+		UTIH D 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
+		UTIH D 0 A_ReFire("Charge21")
+		Goto Fire3
+	Charge21:
+		UTIH D 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
+		UTIH D 0 A_ReFire("Charge22")
+		Goto Fire3
+	Charge22:
+		UTIH D 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
+		UTIH D 0 A_ReFire("Charge23")
+		Goto Fire3
+	Charge23:
+		UTIH D 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
+		UTIH D 0 A_ReFire("Charge24")
+		Goto Fire3
+	Charge24:
+		UTIH D 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH D 0 A_JumpIfInventory("PunchedAlready",1,"Fire3")
+		UTIH D 0 A_ReFire("Charge25")
+		Goto Fire3
+
+	// Charge 4
+	Charge25:
+		UTIH E 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
+		UTIH E 0 A_ReFire("Charge26")
+		Goto Fire4
+	Charge26:
+		UTIH E 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
+		UTIH E 0 A_ReFire("Charge27")
+		Goto Fire4
+	Charge27:
+		UTIH E 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
+		UTIH E 0 A_ReFire("Charge28")
+		Goto Fire4
+	Charge28:
+		UTIH E 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
+		UTIH E 0 A_ReFire("Charge29")
+		Goto Fire4
+	Charge29:
+		UTIH E 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH E 0 A_JumpIfInventory("PunchedAlready",1,"Fire4")
+		UTIH E 0 A_ReFire("Charge30")
+		Goto Fire4
+
+	// Charge 5
+	Charge30:
+		UTIH F 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
+		UTIH F 0 A_ReFire("Charge31")
+		Goto Fire5
+	Charge31:
+		UTIH F 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
+		UTIH F 0 A_ReFire("Charge32")
+		Goto Fire5
+	Charge32:
+		UTIH F 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
+		UTIH F 0 A_ReFire("Charge33")
+		Goto Fire5
+	Charge33:
+		UTIH F 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
+		UTIH F 0 A_ReFire("Charge34")
+		Goto Fire5
+	Charge34:
+		UTIH F 1 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH F 0 A_JumpIfInventory("PunchedAlready",1,"Fire5")
+		UTIH F 0 A_ReFire("Charge35")
+		Goto Fire5
+
+	// Charge 6
+	Charge35:
+		UTIH G 1 Offset(1,32)
+		UTIH G 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
+		UTIH G 0 A_ReFire("Charge36")
+		Goto Fire6
+	Charge36:
+		UTIH G 1 Offset(1,33)
+		UTIH G 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
+		UTIH G 0 A_ReFire("Charge37")
+		Goto Fire6
+	Charge37:
+		UTIH G 1 Offset(2,33)
+		UTIH G 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
+		UTIH G 0 A_ReFire("Charge38")
+		Goto Fire6
+	Charge38:
+		UTIH G 1 Offset(2,34)
+		UTIH G 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
+		UTIH G 0 A_ReFire("Charge39")
+		Goto Fire6
+	Charge39:
+		UTIH G 1 Offset(3,33)
+		UTIH G 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH G 0 A_JumpIfInventory("PunchedAlready",1,"Fire6")
+		UTIH G 0 A_ReFire("Charge40")
+		Goto Fire6
+
+	// Charge 7
+	Charge40:
+		UTIH H 1 A_PlaySound("UTDE/Weapons/ImpactHammer/Charged",CHAN_WEAPON,1.0,1)
+		UTIH H 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
+		UTIH H 0 A_ReFire("Charge41")
+		Goto Fire7
+	Charge41:
+		UTIH H 1 Offset(2,33)
+		UTIH H 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
+		UTIH H 0 A_ReFire("Charge42")
+		Goto Fire7
+	Charge42:
+		UTIH H 1 Offset(1,34)
+		UTIH H 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
+		UTIH H 0 A_ReFire("Charge43")
+		Goto Fire7
+	Charge43:
+		UTIH H 1 Offset(0,32)
+		UTIH H 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
+		UTIH H 0 A_ReFire("Charge44")
+		Goto Fire7
+	Charge44:
+		UTIH H 1 Offset(2,32)
+		UTIH H 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
+		UTIH H 0 A_ReFire("Charge45")
+		Goto Fire7
+	Charge45:
+		UTIH H 1 Offset(3,35)
+		UTIH H 0 A_CustomPunch(0,1,0,"HammerAutofire",56)
+		UTIH H 0 A_JumpIfInventory("PunchedAlready",1,"Fire7")
+		UTIH H 0 A_ReFire("Charge41")
+		Goto Fire7
 
 	//-----------------------
 	// Actually firing the weapon
@@ -611,6 +616,33 @@ Actor HammerReflector
 	}
 }
 
+Actor HammerAutofire
+{
+	+NOINTERACTION +NOTONAUTOMAP
+	+CLIENTSIDEONLY
+	+NONETID
+	+PUFFGETSOWNER
+	+PUFFONACTORS
+	+FORCEXYBILLBOARD
+	+MTHRUSPECIES
+	Scale 0.35
+	DamageType "ZombieGibber"
+	States
+	{
+	Spawn:	//Hit non bleeder
+		TNT1 A 0 NODELAY A_GiveToTarget("PunchedAlready",1)
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/ImpactHammer/Hit",7,1,0,9)
+		Goto Crash
+	XDeath:	//hit bleeder
+		TNT1 A 0 A_GiveToTarget("PunchedAlready",1)
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/ImpactHammer/Hit",7,1,0,9)
+		Stop
+	Crash:	//hit everything else
+		TNT1 A 0 A_PlaySound("BulletHitConcreteRandom",7,0.6,0,9)
+		Stop
+	}
+}
+
 Actor HammerPuff1
 {
 	+CLIENTSIDEONLY +NONETID
@@ -621,6 +653,8 @@ Actor HammerPuff1
 	+FORCEXYBILLBOARD
 	Renderstyle Add
 	Scale 0.35
+	DamageType "ZombieGibber"
+	Obituary "$OB_UTImpactHammer"
 	States
 	{
 	Spawn:	//Hit non bleeder
@@ -782,7 +816,7 @@ Actor GauntletPuff
 		Goto Crash
 	XDeath:	//hit bleeder
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
-		TNT1 A 10 A_PlaySound("UTDE/Weapons/ImpactHammer/Hit",7,1,0,9)
+		TNT1 A 10 A_PlaySound("QC/Weapons/Gauntlet/Hit",7,1,0,9)
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_PlaySound("BulletHitConcreteRandom",7,0.6,0,9)
@@ -796,8 +830,6 @@ Actor GauntletPuff
 		Stop
 	}
 }
-
-
 
 //-----------------------------------
 // Puffs for DM
@@ -813,7 +845,7 @@ Actor GauntletPuff_DM
 	Renderstyle Add
 	Decal "GauntletDecal"
 	Scale 0.35
-	Obituary "$OB_UTImpactHammer"
+	Obituary "$OB_GauntletPuff_DM" // "%o was pummeled by %k." // variation line
 	States
 	{
 	Spawn:	//Hit non bleeder
@@ -822,7 +854,7 @@ Actor GauntletPuff_DM
 	XDeath: //hit bleeder
 		TNT1 A 0 A_GiveToTarget("PunchedAlready",1)
 		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
-		TNT1 A 10 A_PlaySound("UTDE/Weapons/ImpactHammer/Hit",7,1,0,9)
+		TNT1 A 10 A_PlaySound("QC/Weapons/Gauntlet/Hit",7,1,0,9)
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_PlaySound("BulletHitConcreteRandom",7,0.6,0,9)
@@ -844,7 +876,7 @@ Actor GauntletPuff_DM_NoFX
 	+PUFFGETSOWNER
 	+PUFFONACTORS
 	+FORCEXYBILLBOARD
-	Obituary "$OB_UTImpactHammer"
+	Obituary "$OB_GauntletPuff_DM_NoFX" // "%o tried to stop %k's rotating blade with a wrong limb." // variation line
 	States
 	{
 	Spawn:
@@ -883,7 +915,7 @@ Actor GauntletPuffBurn
 	XDeath:	//hit bleeder
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
 		TNT1 A 0 A_SpawnItemEx("GauntletFlameBurner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS,128)	//if modified, change in Painkiller.QCD too
-		TNT1 A 10 A_PlaySound("UTDE/Weapons/ImpactHammer/Hit",7,1,0,9)
+		TNT1 A 10 A_PlaySound("QC/Weapons/Gauntlet/Hit",7,1,0,9)
 		Stop
 	Crash:	//hit everything else
 		TNT1 A 0 A_PlaySound("BulletHitConcreteRandom",7,0.6,0,9)
