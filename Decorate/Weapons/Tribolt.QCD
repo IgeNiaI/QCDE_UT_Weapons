@@ -285,12 +285,12 @@ Actor UTRipperBladeAlt : UTRipperBlade
 	XDeath:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Impact",CHAN_AUTO,1,0,1)
 		TNT1 A 0 A_GiveToTarget("HitBeepBig",1)
-		TNT1 A 0 A_Explode(random(30,40),64,1,0,18)
+		TNT1 A 0 A_Explode(random(35,50),64,1,0,18)
 		Stop
 
 	Death:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce",CHAN_AUTO,1,0,1)
-		TNT1 A 0 A_Explode(random(30,40),64,1,0,18)
+		TNT1 A 0 A_Explode(random(35,50),64,1,0,18)
 		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
 		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,128)
 		Goto DeathCont
