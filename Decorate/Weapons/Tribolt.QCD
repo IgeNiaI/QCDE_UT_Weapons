@@ -70,7 +70,7 @@ Actor QCTribolt : QCWeapon
 	Weapon.Kickback 0
 	Weapon.SelectionOrder 1950
 	Weapon.AmmoUse 1
-	Weapon.AmmoUse2 2
+	Weapon.AmmoUse2 1
 	Weapon.AmmoGive 15
 	Weapon.AmmoType "QCBoltAmmo"
 	Weapon.AmmoType2 "QCBoltAmmo"
