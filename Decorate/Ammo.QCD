@@ -439,7 +439,7 @@ Actor QCNailAmmo : Ammo
 	Inventory.Amount 50
 	Inventory.MaxAmount 200
 	Ammo.BackpackMaxAmount 300
-	Ammo.BackpackAmount 50
+	Ammo.BackpackAmount 20
 	Scale 0.903
 	States
 	{
@@ -763,7 +763,7 @@ Actor QCSlugAmmo : Ammo
 	Inventory.Amount 10
 	Inventory.MaxAmount 40
 	Ammo.BackpackMaxAmount 60
-	Ammo.BackpackAmount 2
+	Ammo.BackpackAmount 5
 	Scale 0.907
 	States
 	{
