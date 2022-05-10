@@ -83,3 +83,11 @@ OptionMenu "QCDEWeaponBinds"
 	StaticText 	"weapon replaces the weaker one. This is also true for"
 	StaticText 	"Flak Cannons in deathmatch, but not in single player."
 }
+
+OptionMenu "QCDEZoom"
+{
+	Title 		"QCDE ZOOM OPTIONS"
+	Option		"Hold to zoom",				"cl_holdZoom",	"OnOff"
+	Slider		"FoV change speed",			"cl_fovchangespeed", 1.0, 100, 0.1
+	Slider 		"Lightning Gun Zoom",		"cl_railgunZoom",	1.1, 5.0, 1.0, 2
+}
