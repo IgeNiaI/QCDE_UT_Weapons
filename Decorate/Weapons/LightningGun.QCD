@@ -270,6 +270,7 @@ ACTOR UTShockRifleOrb
 	Xdeath:	//hit bleeding actor
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1)
 	Bounce:
+		TNT1 A 0 A_Jump(256, 1) // force sync the actor state
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/OrbHit",CHAN_AUTO,1,0,1)
 		TNT1 A 0 A_SetInvulnerable
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
@@ -290,9 +291,10 @@ ACTOR UTShockRifleOrb
 		SHOC E 1 BRIGHT A_SetScale(0.34, 0.34)
 		Stop
 	Death:
+		TNT1 A 0 A_Jump(256, 1) // force sync the actor state
 		TNT1 A 0 A_SetInvulnerable
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
-		TNT1 A 1 A_Stop
+		TNT1 A 0 A_Stop
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
@@ -376,9 +378,10 @@ ACTOR UTShockRifleOrbDM : UTShockRifleOrb
 	States
 	{
 	Death:
+		TNT1 A 0 A_Jump(256, 1) // force sync the actor state
 		TNT1 A 0 A_SetInvulnerable
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
-		TNT1 A 1 A_Stop
+		TNT1 A 0 A_Stop
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboDM", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
