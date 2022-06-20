@@ -388,8 +388,8 @@ Actor UTRedeemerMissileControlled : UTRedeemerMissile {
 	Spawn:
 		TNT1 A 0 NODELAY A_PlaySound("UTDE/Weapons/Redeemer/Fly",CHAN_5|CHAN_NOPAUSE,1.0,true)
 		TNT1 A 0 ACS_NamedExecuteAlways("UTDE_AttachWhoosh")
-		RDRK A 1 bright ACS_NamedExecuteWithResult("UTDE_RedeemerControl")	//Projectile control and whatnot
-		TNT1 A 0 bright ACS_NamedExecuteWithResult("UTDE_TunnelVision")	//Black Screen effect
+		RDRK A 1 bright ACS_NamedExecuteWithResult("QCDE_RocketControl")//Projectile control and whatnot
+		TNT1 A 0 bright ACS_NamedExecuteWithResult("QCDE_TunnelVision")	//Black Screen effect
 		TNT1 A 0 A_SetUserVar(user_counter,1)
 	Looper:
 		RDRK A 0 A_JumpIfInventory("ImDead",1,"DieTime")

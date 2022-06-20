@@ -75,9 +75,9 @@ Script "QCDE_SetWeaponRespawnTics" (void)
 
 
 //----------------------------------------------------------------------
-// Script for controlled rocket
-#DEFINE SPEED    13
-#DEFINE TURNSPEED 0.017
+// Script for controlled redeemer rocket
+#DEFINE SPEED    16
+#DEFINE TURNSPEED 0.008
 int greymask[64];
 
 // Activator: controlled rocket
@@ -104,7 +104,7 @@ Script "QCDE_RocketControl" (void)
 	greymask[plr] = true;
 	int origa = GetActorAngle(plrtid), a = origa;
 	int origp = GetActorPitch(plrtid), p = origp;
-	while(!CheckInventory("ImDead"))
+	while(!CheckInventory("ImDead") && GetActorProperty(tid, APROP_Health) > 0)
 	{
 		SetNetworkReplicationFlags( NETREP_SKIPOWNER );
 
@@ -150,7 +150,6 @@ Script "QCDE_RocketControl" (void)
 
 	SetActivator(plrtid);
 	SetPlayerProperty(0,0,PROP_TOTALLYFROZEN);
-	TakeInventory("PowerControllerProtection",1);
 }
 
 //this is the dark screen effect, will loop until the projectile terminates it manually
@@ -164,13 +163,12 @@ Script "QCDE_TunnelVision" (void)
 	int plr = plrtid - 1000;
 	SetActivator(plrtid);
 	SetHudSize(320,240,1);
-	int hmid = HMID_TUNNEL_VISION;
-	SetFont("GREYMASK");
+	SetFont("REDEEMER");
 	while(greymask[plr])
 	{
-		HudMessage(s:"A";HUDMSG_FADEINOUT,hmid++,-1, 160.0,120.0, 0.4,0.2,0.4);
-		if(hmid >= HMID_TUNNEL_VISION + 64) hmid = HMID_TUNNEL_VISION;
-		delay(random(20,25));
+		//Log(s:"aaa");
+		HudMessage(s:"A"; HUDMSG_PLAIN, HMID_TUNNEL_VISION + 63, -1, 160.0, 120.0, 0.1);
+		delay(2);
 	}
 }
 
@@ -265,4 +263,45 @@ Script "QCDE_ZoomControl" (int predicting, int justPressed, int justReleased, in
 			}
 		}
 	}
+}
+
+Script "UTDE_RlAltCheck" (void)
+{
+	if(GetPlayerInput(-1, INPUT_BUTTONS) & BT_ATTACK)
+		SetResultValue(1);
+	else
+		SetResultValue(0);
+}
+
+
+// Activator: noisy projectile in flight
+script "UTDE_AttachWhoosh" (void)
+{
+	// redeemer rocket
+	int tid = ActivatorTid();
+	if(!tid)
+	{
+		tid = UniqueTid();
+		Thing_ChangeTid(0,tid);
+	}
+
+	// whoosh!
+	PlaySound(tid, "UTDE/Weapons/Redeemer/Fly",CHAN_5,1.0,true,1.0);
+}
+
+
+script "UTDE_HoldBioNoAmmo" (void)
+{
+	if(CheckInventory("QCBoltAmmo") <= 0 && GetPlayerInput(-1, INPUT_BUTTONS) & BT_ALTATTACK)
+		SetResultValue(1);
+	else
+		SetResultValue(0);
+}
+
+script "UTDE_HoldRocketNoAmmo" (void)
+{
+	if(CheckInventory("QCRocketAmmo") <= 0 && GetPlayerInput(-1, INPUT_BUTTONS) & BT_ALTATTACK)
+		SetResultValue(1);
+	else
+		SetResultValue(0);
 }
