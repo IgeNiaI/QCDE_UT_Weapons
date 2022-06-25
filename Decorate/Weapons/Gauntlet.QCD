@@ -724,12 +724,10 @@ Actor HammerReflector
 Actor HammerAutofire
 {
 	+NOINTERACTION +NOTONAUTOMAP
-	+CLIENTSIDEONLY
 	+NONETID
 	+PUFFGETSOWNER
 	+PUFFONACTORS
 	+FORCEXYBILLBOARD
-	+MTHRUSPECIES
 	Scale 0.35
 	DamageType "ZombieGibber"
 	States
