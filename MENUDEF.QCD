@@ -23,7 +23,7 @@ OptionMenu "QZDEBinds"
 	Control 	"Champion information",   "+QCDE_ClassInfo"
 	Control 	"Voice line",             "voice"
 	Control 	"Drop weapon upgrade",    "drop_upgrade"
-	Control 	"MP: change class menu",  "mpclassmenu"
+	Control 	"Change class",			  "mpclassmenu"
 	Control 	"Select starting weapon", "+QCDE_StartingWeapon"
 	
 	StaticText ""
@@ -41,53 +41,24 @@ OptionMenu "QZDEBinds"
 	Control		"Shock Rifle",				"LGBind"
 	Control		"Lightning Gun",			"RGBind"
 	Control		"Redeemer",					"BFGBind"
-	
+
+	StaticText 	""
+
+	StaticText 	"Chat", 1
+	Control 	"Say",					"messagemode"
+	Control 	"Team say",				"messagemode2"
+
 	StaticText ""
-	
+
 	StaticText 	"Other", 1
 	Control    	"Open Console",				"toggleconsole"
 	Control		"Vote yes",					"vote_yes"
 	Control		"Vote no",					"vote_no"
 	Control 	"Toggle automap",			"togglemap"
 	Control 	"Show Scoreboard",			"+showscores"
-	Control 	"Coop spy",					"spynext"
+	Control 	"Spectate next player",		"spynext"
 	Control 	"Screenshot",				"screenshot"
 	Control		"Spectate",					"spectate"
 	Option		"Join the game",			"joinmenukey", "JoinMenuKeys"
 	Control		"Join the game (custom)", 	"menu_join"
-}
-
-OptionMenu "QCDEWeaponBinds"
-{
-	Title "Customize Weapon Bindings"
-	StaticText ""
-	StaticText 	"By slot", 1
-	Control "Slot 1: Impact Hammer",				"Slot 1"
-	Control "Slot 2: AssaultRifle / Minigun",		"Slot 2"
-	Control "Slot 3: Flak Cannon",					"Slot 3"
-	Control "Slot 4: Pulse Gun",					"Slot 4"
-	Control "Slot 5: Bio Rifle, Rocket Launcher",	"Slot 5"
-	Control "Slot 6: Shock Rifle",					"Slot 6"
-	Control "Slot 7: Lightning Gun",				"Slot 7"
-	Control "Slot 8: Redeemer",						"Slot 8"
-	StaticText ""
-	StaticText 	"By specific weapon, if you want to separate the", 1
-	StaticText 	"Bio Rifle and Rocket Launcher or two Flak Cannons", 1
-	Control "Bio Rifle",		"use QCTriboltDM; wait; use QCTribolt"
-	Control "Rocket Launcher",	"use QCRocketLauncherDM; wait; use QCRocketLauncher"
-	Control "Flak Cannon Mini",	"use QCShotgunDM; wait; use QCShotgun"
-	Control "Flak Cannon",		"use QCSuperShotgunDM; wait; use QCSuperShotgun"
-	StaticText ""
-	StaticText 	"NOTE: There's no need to separate the Pulse Guns or"
-	StaticText 	"the Assault Rifle and Minigun, since the *bigger* version of the"
-	StaticText 	"weapon replaces the weaker one. This is also true for"
-	StaticText 	"Flak Cannons in deathmatch, but not in single player."
-}
-
-OptionMenu "QCDEZoom"
-{
-	Title 		"QCDE ZOOM OPTIONS"
-	Option		"Hold to zoom",				"cl_holdZoom",	"OnOff"
-	Slider		"FoV change speed",			"cl_fovchangespeed", 1.0, 100, 0.1
-	Slider 		"Lightning Gun Zoom",		"cl_railgunZoom",	1.1, 5.0, 1.0, 2
 }
