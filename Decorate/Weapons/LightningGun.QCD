@@ -297,7 +297,7 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 		// Stop unlag here so that we could replicate the actor to clients
 		TNT1 A 1
 		// Spawn combo effects on clients
-		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_NOUNLAGGED)
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
 	}
 }
@@ -384,7 +384,7 @@ ACTOR UTShockRifleOrbDM : UTShockRifleOrb
 		// Stop unlag here so that we could replicate the actor to clients
 		TNT1 A 1
 		// Spawn combo effects on clients
-		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_NOUNLAGGED)
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
 	}
 }
