@@ -293,7 +293,7 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 		Stop
 	Death:
 		// Damage players while being unlagged
-		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
 		// Stop unlag here so that we could replicate the actor to clients
 		TNT1 A 1
 		// Spawn combo effects on clients
@@ -380,7 +380,7 @@ ACTOR UTShockRifleOrbDM : UTShockRifleOrb
 	{
 	Death:
 		// Damage players while being unlagged
-		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboDM", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboDM", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
 		// Stop unlag here so that we could replicate the actor to clients
 		TNT1 A 1
 		// Spawn combo effects on clients
