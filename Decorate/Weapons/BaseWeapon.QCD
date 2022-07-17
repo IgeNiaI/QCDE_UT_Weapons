@@ -178,7 +178,7 @@ Actor QCBulletPuff
 	Scale 0.35
 	States
 	{
-	Spawn: //hit non bleeding actor
+	Spawn:	//hit non bleeding actor
 		TNT1 A 0 NODELAY A_GiveToTarget("HitBeepLow",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		Goto Crash
 	XDeath: //hit bleeding actor
@@ -213,8 +213,27 @@ Actor QCShotgunPuff : QCBulletPuff
 	}
 }
 
-Actor QCBulletPuff_DM  : QCBulletPuff  { -MTHRUSPECIES }
-Actor QCShotgunPuff_DM : QCShotgunPuff { -MTHRUSPECIES }
+Actor QCBulletPuff_DM : QCBulletPuff
+{
+	-MTHRUSPECIES
+	States
+	{
+	Spawn:	//hit non bleeding actor, and we don't want to play hit sound in DM
+		TNT1 A 0
+		Goto Crash
+	}
+}
+Actor QCShotgunPuff_DM : QCBulletPuff
+{
+	-MTHRUSPECIES
+	States
+	{
+	Spawn:	//hit non bleeding actor, and we don't want to play hit sound in DM
+		TNT1 A 0
+		Goto Crash
+	}
+}
+
 
 
 //Bullet puff for monsters, same as player's, except no hit beep sound
