@@ -292,11 +292,11 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 		TNT1 A 99 // We need this for proper unlagged when hitting a wall too soon
 		Stop
 	Death:
-		TNT1 A 0 A_Jump(256, 1) // force sync the actor state
-		TNT1 A 0 A_SetInvulnerable
-		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
-		TNT1 A 0 A_Stop
+		// Damage players while being unlagged
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		// Stop unlag here so that we could replicate the actor to clients
+		TNT1 A 1
+		// Spawn combo effects on clients
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_NOUNLAGGED)
 		Stop
 	}
@@ -379,11 +379,11 @@ ACTOR UTShockRifleOrbDM : UTShockRifleOrb
 	States
 	{
 	Death:
-		TNT1 A 0 A_Jump(256, 1) // force sync the actor state
-		TNT1 A 0 A_SetInvulnerable
-		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
-		TNT1 A 0 A_Stop
+		// Damage players while being unlagged
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboDM", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		// Stop unlag here so that we could replicate the actor to clients
+		TNT1 A 1
+		// Spawn combo effects on clients
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_NOUNLAGGED)
 		Stop
 	}
