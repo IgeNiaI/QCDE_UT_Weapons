@@ -312,6 +312,7 @@ ACTOR UTShockRifleCombo
 	+DONTBLAST
 	+FORCERADIUSDMG
 	+VULNERABLE
+	+NODAMAGETHRUST
 	-NOBLOCKMAP
 	+SEEKERMISSILE //Not actually used for anything other than checking radius.
 	Radius 1
@@ -339,7 +340,9 @@ ACTOR UTShockRifleCombo
 			Goto Death
 
 	Death:
-		TNT1 A 0 A_Explode(175,225,XF_HURTSOURCE,true) // hurt the player for same damage as in DM
+		TNT1 A 0 A_Explode(75,225,XF_HURTSOURCE,true) // hurt the player for same damage as in DM
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		TNT1 A 0 A_Explode(100,225,XF_HURTSOURCE,true) // hurt the player for same damage as in DM, including thrust
 		TNT1 A 1 A_Explode(random(225,375),225,0,true) // deal extra damage to everyone else for a total of 400-600
 		Stop
 	}
@@ -394,7 +397,9 @@ ACTOR UTShockRifleComboDM : UTShockRifleCombo
 	States
 	{
 	Death:
-		TNT1 A 1 A_Explode(175,225,XF_HURTSOURCE,true)
+		TNT1 A 0 A_Explode(75,225,XF_HURTSOURCE,true) // hurt the player for same damage as in DM
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		TNT1 A 1 A_Explode(100,225,XF_HURTSOURCE,true) // hurt the player for same damage as in DM, including thrust
 		Stop
 	}
 }
