@@ -422,6 +422,7 @@ Actor UTFlakBomb
 	Projectile
 	+BLOODSPLATTER
 	+FORCEXYBILLBOARD
+	+SEEKERMISSILE //Not actually used for anything other than checking radius.
 	+MTHRUSPECIES
 	+DONTBLAST
 	-NOGRAVITY
@@ -446,6 +447,7 @@ Actor UTFlakBomb
 	Death:
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
 		TNT1 A 0 A_Stop
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
 		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,208)
 		Goto DeathCont
 
@@ -533,6 +535,7 @@ Actor UTFlakBombDM : UTFlakBomb
           	// Zandro doesn't handle A_Jump on death properly so have to rely on Goto
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
 		TNT1 A 0 A_Stop
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
 		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,208)
 		Goto DeathCont
 
