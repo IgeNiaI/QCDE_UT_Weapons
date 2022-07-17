@@ -30,7 +30,7 @@ Actor NailgunPickup : CustomInventory
 		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMPickup")
 		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"WeaponStay")
 		TNT1 A 0 //A_GiveInventory("QCNailgun")
-		TNT1 A 0 
+		TNT1 A 0
 		Stop
 	DMPickup:
 		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"DMWeaponStay")
@@ -90,7 +90,7 @@ Actor QCNailgun : QCWeapon
 		UTPM A 1 A_Raise
 		"####" "###" 0 A_Raise
 		Loop
-		
+
 	Deselect:
 		UTPM A 0 A_StopSound(5)
 		UTPM A 0 A_StopSound(CHAN_WEAPON)
@@ -98,7 +98,7 @@ Actor QCNailgun : QCWeapon
 		UTPM A 1 A_Lower
 		"####" "###" 0 A_Lower
 		Loop
-		
+
 	//-----------------------
 	// Ready Seq
 	//-----------------------
@@ -106,7 +106,7 @@ Actor QCNailgun : QCWeapon
 		UTPM A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		UTPM AAAABBBBCCCCDDDDEEEEFFFFGGGGHHHHIIIIJJJJ 1 A_WeaponReady
 		Loop
-		
+
 		ReadyCantFire:
 			UTPM A 0 A_StopSound(5)
 			UTPM A 0 A_StopSound(CHAN_WEAPON)
@@ -121,7 +121,7 @@ Actor QCNailgun : QCWeapon
 	Fire:
 		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"FireQuadSound")
 		Goto FireNormalSound
-		
+
 		FireNormalSound:
 			UTPM A 0 A_PlaySound("UTDE/Weapons/PulseMini/FireStartLoop",CHAN_WEAPON,1,1)
 			Goto FireLooper
@@ -141,13 +141,13 @@ Actor QCNailgun : QCWeapon
 		UTPM A 1 			Offset(2,33)
 		UTPM A 0 A_ReFire("FireLooper")
 		Goto EndFireLooper
-		
+
 	EndFireLooper:
 		UTPM A 0 A_PlaySound("UTDE/Weapons/PulseMini/FireEnd",CHAN_WEAPON,1,0)
-		UTPM A 1 A_WeaponReady(WRF_NOBOB) 
+		UTPM A 1 A_WeaponReady(WRF_NOBOB)
 		Goto Ready
-		
-		
+
+
 	//-----------------------
 	// Attack doers
 	//-----------------------
@@ -187,11 +187,11 @@ Actor UTPulseWeak : FastProjectile
 	Spawn:
 		PULS A 1 Bright
 		Wait
-	
+
 	XDeath:
 		TNT1 A 10 A_GiveToTarget("HitBeepLow",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		Stop
-		
+
 	Death:
 		PULS A 0 A_PlaySound("UTDE/Weapons/PulseGun/Impact",CHAN_AUTO,1,0,1)
 		PULS A 1 Light("YellowSmallFlicker3") Bright

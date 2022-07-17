@@ -5,7 +5,7 @@
 
 int weaponSpawned[NUMBER_OF_WEAPONS];
 
-Script "QCDE_WeaponSpawned" (int type, int arg4) 
+Script "QCDE_WeaponSpawned" (int type, int arg4)
 {
 	if(arg4 == 234 && Timer() < 35)
 	{
@@ -24,15 +24,15 @@ Script "QCDE_WeaponSpawned" (int type, int arg4)
 		case 3: case 7: case 9: case 11: case 13: case 15: case 17: case 19: case 21: smonk = "FX"; break;
 		default: log(s:"QCDE Warning: Unexpected weapon type spawning smoke: ", d:type); break;
 		}
-		
+
 		int x = GetActorX(0);
 		int y = GetActorY(0);
 		int z = GetActorZ(0);
 		SpawnForced(smonk, x,y,z);
 	}
-	
+
 	//log(s:"Weapon trying to spawn: ", s:weaponList[type]);
-	
+
 	// Weapon-centric modes
 	if(GetCvar("instagib") || GetCvar("rocketarena"))
 	{
@@ -40,14 +40,14 @@ Script "QCDE_WeaponSpawned" (int type, int arg4)
 		Thing_Remove(0);
 		terminate;
 	}
-	
+
 	SetTidIfHadNone(WEAPON_TIDBASE, WEAPON_TIDLAST);
-	
+
 	weaponSpawned[type] = true;
 	//log(s:"Weapon ", d:type, s:" spawns successfully ", s:weaponList[type], s:", tid = ", d:tid);
 }
 
-Script "QCDE_IsWeaponOnMap" (int type) 
+Script "QCDE_IsWeaponOnMap" (int type)
 {
 	if(type >= 0 && type < NUMBER_OF_WEAPONS)
 		SetResultValue(weaponSpawned[type]);
@@ -189,12 +189,12 @@ script "QCDE_ModSelectedText" (int weapon, int upgrade)
 	SetFont("ESFONTAA");
 	str color = strparam(s:"\c[", s:GetWeapon(), s:"]");
 	HudMessage(s:color, s:WeaponUpgrades[weapon][1][WU_PROPERNAME], s:" engaged";HUDMSG_PLAIN,101,-1,200.0,240.0,0);
-	
+
 	while(checkinventory("WeaponZoomedToken"))
 	{
 		Delay(2);
 	}
-	
+
 	ACS_NamedExecuteAlways("RemoveModText",0,0);
 }
 
@@ -203,16 +203,16 @@ script "RemoveModText" (void)
 	HudMessage(s:" ";HUDMSG_PLAIN,101,"SkyBlue",0.75,1.0,0.1);
 }
 
-	
+
 //------------------------------------------------
 // Weapon hitmarker
 
 script "QCDE_HitMark" (void) clientside
 {
 	if(IsZandronum(true))
-		if(ActivatorTid() != CheckPlayerCamera(ConsolePlayerNumber())) 
+		if(ActivatorTid() != CheckPlayerCamera(ConsolePlayerNumber()))
 			terminate;
-	
+
 	SetHUDSize(1200,900,1);
 	SetFont("HITMED");
 	HudMessageBold(s:"a";HUDMSG_FADEOUT,-234,-1,600.0,450.0,0.0,0.15);
@@ -232,10 +232,10 @@ Script "QCDE_FreeTribolt" (void)
 {
 	if(GameType() >= GAME_NET_DEATHMATCH) terminate;
 	if(CheckInventory("QCTribolt")) terminate;
-	
+
 	if(CheckInventory("MapsPlayed") != 2 + (GameType() == GAME_SINGLE_PLAYER))
 		delay(30 * 60 * 35);
-	
+
 	SpawnForced("QCTribolt", GetActorX(0),GetActorY(0),GetActorZ(0));
 }
 

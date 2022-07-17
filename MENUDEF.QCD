@@ -2,9 +2,9 @@
 OptionMenu "QZDEBinds"
 {
 	Title "Customize Binds"
-	
+
 	StaticText ""
-	
+
 	StaticText 	"Actions", 1
 	Control   	"Forward",			"+forward"
 	Control    	"Backward",			"+back"
@@ -16,18 +16,18 @@ OptionMenu "QZDEBinds"
 	Control    	"Crouch",			"+crouch"
 	Control    	"Walk/Run",			"+speed"
 	Control    	"Use",				"+use"
-	
+
 	StaticText ""
-	
+
 	Control 	"Use active ability",     "+user1"
 	Control 	"Champion information",   "+QCDE_ClassInfo"
 	Control 	"Voice line",             "voice"
 	Control 	"Drop weapon upgrade",    "drop_upgrade"
 	Control 	"Change class",			  "mpclassmenu"
 	Control 	"Select starting weapon", "+QCDE_StartingWeapon"
-	
+
 	StaticText ""
-	
+
 	StaticText 	"Weapons", 1
 	Control 	"Next weapon",				"weapnext"
 	Control 	"Previous weapon",			"weapprev"
