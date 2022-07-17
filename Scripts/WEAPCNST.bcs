@@ -27,7 +27,7 @@ int LowAmmoWarningThreshold[8] = {
 		50,		//0  minigun
 		5,		//1  flak cannon
 		50,		//2  pulse rifle
-		5,		//3  ripper
+		10,		//3  ripper
 		5,		//4  rocket launcher
 		7,		//5  shock rifle
 		5,		//6  lightning gun
