@@ -81,7 +81,8 @@ Actor QCTribolt : QCWeapon
 	States
 	{
 	Spawn:
-		UTRP Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		TNT1 A 1
+		UTRP Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
 		UTRP ZZZZZZZZZZZZZZZ 35 Bright
@@ -349,7 +350,8 @@ Actor QCTriboltDM : QCWeapon
 	States
 	{
 	Spawn:
-		UTBR Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		TNT1 A 1
+		UTBR Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
 		UTBR ZZZZZZZZZZZZZZZ 35 Bright

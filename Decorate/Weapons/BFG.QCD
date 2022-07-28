@@ -77,7 +77,8 @@ Actor QCBFG : QCWeapon
 	States
 	{
 	Spawn:
-		UTRD Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		TNT1 A 1
+		UTRD Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
 		"####" "#" 0 ACS_NamedExecuteAlways("QCDE_RemoveIfDuel")

@@ -153,7 +153,8 @@ Actor QCSuperShotgun : QCWeapon
 	States
 	{
 	Spawn:
-		UTFC Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		TNT1 A 1
+		UTFC Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
 		UTFC ZZZZZZZZZZZZZZZ 35 Bright

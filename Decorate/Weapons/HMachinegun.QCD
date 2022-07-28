@@ -85,7 +85,8 @@ Actor QCHeavyMachinegun : QCWeapon
 	States
 	{
 	Spawn:
-		UTMG Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		TNT1 A 1
+		UTMG Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
 		UTMG ZZZZZZZZZZZZZZZ 35 Bright
