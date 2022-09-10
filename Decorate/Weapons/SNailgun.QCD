@@ -108,6 +108,7 @@ Actor QCSuperNailgun : QCWeapon
 		UTPG A 0 A_TakeInventory("QCNailgunDM")
 		UTPG A 0 A_TakeInventory("QCNailgun")
 		"####" "#" 0 A_StopSound(CHAN_WEAPON) //stops any weapon looping sound
+		"####" "#" 0 A_StopSound(CHAN_6) //stops any weapon looping sound
 	SelectLooper:
 		UTPG A 1 A_Raise
 		"####" "###" 0 A_Raise
@@ -194,11 +195,11 @@ Actor QCSuperNailgun : QCWeapon
 		Goto AltFireNormalSound
 
 		AltFireNormalSound:
-			TNT1 A 0 A_PlaySound("UTDE/Weapons/PulseGun/AltFireStartLoop",CHAN_WEAPON,1.0,1)
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/PulseGun/AltFireStartLoop",CHAN_6,1.0,1)
 			TNT1 A 0 A_Jump(256,"AltFireLoop1") //for virtual jump to inherited versions
 			Goto AltFireLoop1
 		AltFireQuadSound:
-			TNT1 A 0 A_PlaySound("UTDE/Weapons/PulseGun/Quad/AltFireStartLoop",CHAN_WEAPON,1.0,1)
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/PulseGun/Quad/AltFireStartLoop",CHAN_6,1.0,1)
 			TNT1 A 0 A_Jump(256,"AltFireLoop1") //for virtual jump to inherited versions
 			Goto AltFireLoop1
 
@@ -227,7 +228,7 @@ Actor QCSuperNailgun : QCWeapon
 		Goto AltFireEnd
 
 	AltFireEnd:
-		TNT1 A 0 A_StopSound(CHAN_WEAPON)
+		TNT1 A 0 A_StopSound(CHAN_6)
 		UTPG A 1 Offset(1,33)
 		Goto Ready
 

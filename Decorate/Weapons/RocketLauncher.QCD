@@ -236,7 +236,7 @@ Actor QCRocketLauncher : QCWeapon
 		Goto Fire1
 
 	Charge116:
-		UTRL A 1 A_PlaySound("UTDE/Weapons/RocketLauncher/Load", CHAN_WEAPON, 1.0, 0)
+		UTRL A 1 A_PlaySound("UTDE/Weapons/RocketLauncher/Load", CHAN_5, 1.0, 0)
 		UTRL A 0 A_ReFire("Charge117")
 		Goto Fire1
 
@@ -390,7 +390,7 @@ Actor QCRocketLauncher : QCWeapon
 		Goto Fire2
 
 	Charge216:
-		UTRL A 1 A_PlaySound("UTDE/Weapons/RocketLauncher/Load", CHAN_WEAPON, 1.0, 0)
+		UTRL A 1 A_PlaySound("UTDE/Weapons/RocketLauncher/Load", CHAN_5, 1.0, 0)
 		UTRL A 0 A_ReFire("Charge217")
 		Goto Fire2
 
@@ -693,7 +693,7 @@ Actor QCRocketLauncher : QCWeapon
 
 		UTRL AAAA 1 Offset(37,14)
 
-		TNT1 A 0 A_PlaySound("UTDE/Weapons/RocketLauncher/Load", CHAN_WEAPON, 1.0, 0)
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/RocketLauncher/Load", CHAN_5, 1.0, 0)
 
 		UTRL EEFFGGHHII 1 Offset(37,14)
 		UTRL J 1 Offset(31,16)
