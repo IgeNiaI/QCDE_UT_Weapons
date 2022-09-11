@@ -452,7 +452,7 @@ statusbar Normal, forcescaled
 	inInventory QCHeavyMachinegun 	|| QCHeavyMachinegunDM	{ 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawBar "1MACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1380,350; } else { drawBar "HMACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1380,350; } }
 	inInventory QCSuperShotgun		|| QCSuperShotgunDM		{ 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawBar "1SHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1380,420; } else { drawBar "SSHOTGUN", "0SHOTGUN", QCShellAmmo		, horizontal, 1380,420; } }
 	inInventory QCSuperNailgun		|| QCSuperNailgunDM		{ 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawBar "1NAILGUN", "0NAILGUN", QCNailAmmo	, horizontal, 1380,490; } else { drawBar "SNAILGUN", "0NAILGUN", QCNailAmmo		, horizontal, 1380,490; } }
-	gameMode deathmatch {
+	gameMode deathmatch, ctf, oneflagctf, skulltag, domination, customteamgame {
 		inInventory					   QCTriboltDM			{ 	isSelected						  QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0RIBOLT" , 1380,560;}
 	} else {
 		inInventory QCTribolt								{ 	isSelected QCTribolt									{ drawBar "1IPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "RIPPERR" , "0IPPERR" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0IPPERR" , 1380,560;}
@@ -550,7 +550,7 @@ statusbar Normal, forcescaled
 	inInventory QCHeavyMachinegun 	|| QCHeavyMachinegunDM	{ 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawBar "1MACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1480,350; } else { drawBar "HMACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1480,350; } }
 	inInventory QCSuperShotgun		|| QCSuperShotgunDM		{ 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawBar "1SHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1480,420; } else { drawBar "SSHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1480,420; } }
 	inInventory QCSuperNailgun		|| QCSuperNailgunDM		{ 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawBar "1NAILGUN", "0NAILGUN", QCNailAmmo	, horizontal, 1480,490; } else { drawBar "SNAILGUN", "0NAILGUN", QCNailAmmo		, horizontal, 1480,490; } }
-	gameMode deathmatch {
+	gameMode deathmatch, ctf, oneflagctf, skulltag, domination, customteamgame {
 		inInventory 				   QCTriboltDM			{ 	isSelected 						  QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0RIBOLT" , 1480,560;}
 	} else {
 		inInventory QCTribolt								{ 	isSelected QCTribolt									{ drawBar "1IPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "RIPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0IPPERR" , 1480,560;}
@@ -1421,7 +1421,7 @@ statusbar Fullscreen, forcescaled
 	inInventory QCHeavyMachinegun 	|| QCHeavyMachinegunDM	{ 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawBar "1MACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1380,350; } else { drawBar "HMACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1380,350; } }
 	inInventory QCSuperShotgun		|| QCSuperShotgunDM		{ 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawBar "1SHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1380,420; } else { drawBar "SSHOTGUN", "0SHOTGUN", QCShellAmmo		, horizontal, 1380,420; } }
 	inInventory QCSuperNailgun		|| QCSuperNailgunDM		{ 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawBar "1NAILGUN", "0NAILGUN", QCNailAmmo	, horizontal, 1380,490; } else { drawBar "SNAILGUN", "0NAILGUN", QCNailAmmo		, horizontal, 1380,490; } }
-	gameMode deathmatch {
+	gameMode deathmatch, ctf, oneflagctf, skulltag, domination, customteamgame {
 		inInventory 				   QCTriboltDM			{ 	isSelected 						  QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0RIBOLT" , 1380,560;}
 	} else {
 		inInventory QCTribolt	 							{ 	isSelected QCTribolt									{ drawBar "1IPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1380,560; } else { drawBar "RIPPERR" , "0IPPERR" , QCBoltAmmo 		, horizontal, 1380,560; } } else { drawImage "0IPPERR" , 1380,560;}
@@ -1519,7 +1519,7 @@ statusbar Fullscreen, forcescaled
 	inInventory QCHeavyMachinegun 	|| QCHeavyMachinegunDM	{ 	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM	{ drawBar "1MACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1480,350; } else { drawBar "HMACHINE", "0MACHINE", QCBulletAmmo	, horizontal, 1480,350; } }
 	inInventory QCSuperShotgun		|| QCSuperShotgunDM		{ 	isSelected QCSuperShotgun		, QCSuperShotgunDM		{ drawBar "1SHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1480,420; } else { drawBar "SSHOTGUN", "0SHOTGUN", QCShellAmmo	, horizontal, 1480,420; } }
 	inInventory QCSuperNailgun		|| QCSuperNailgunDM		{ 	isSelected QCSuperNailgun		, QCSuperNailgunDM		{ drawBar "1NAILGUN", "0NAILGUN", QCNailAmmo	, horizontal, 1480,490; } else { drawBar "SNAILGUN", "0NAILGUN", QCNailAmmo		, horizontal, 1480,490; } }
-	gameMode deathmatch {
+	gameMode deathmatch, ctf, oneflagctf, skulltag, domination, customteamgame {
 		inInventory 				   QCTriboltDM			{ 	isSelected 						  QCTriboltDM			{ drawBar "1RIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "TRIBOLT" , "0RIBOLT" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0RIBOLT" , 1480,560;}
 	} else {
 		inInventory QCTribolt	 							{ 	isSelected QCTribolt	 								{ drawBar "1IPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1480,560; } else { drawBar "RIPPERR" , "0IPPERR" , QCBoltAmmo 	, horizontal, 1480,560; } } else { drawImage "0IPPERR" , 1480,560;}
