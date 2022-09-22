@@ -1,0 +1,20 @@
+
+Actor SpawnPoint_PG_UT : SpawnPoint_SNG replaces SpawnPoint_SNG
+{
+	Translation "0:255=%[0,0,0]:[0.15,1.0,0.06]"
+}
+
+Actor SpawnPoint_BIO_UT : SpawnPoint_TB replaces SpawnPoint_TB
+{
+	Translation "0:255=%[0,0,0]:[0.77,0.94,0.0]"
+}
+
+Actor SpawnPoint_SR_UT : SpawnPoint_LG replaces SpawnPoint_LG
+{
+	Translation "0:255=%[0,0,0]:[0.13,0.06,1.0]"
+}
+
+Actor SpawnPoint_LG_UT : SpawnPoint_RG replaces SpawnPoint_RG
+{
+	Translation "0:255=%[0,0,0]:[0.14,1.0,0.91]"
+}
