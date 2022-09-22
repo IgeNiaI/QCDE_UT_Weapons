@@ -251,13 +251,17 @@ Script "QCDE_ZoomControl" (int predicting, int justPressed, int justReleased, in
 
 			if (shouldZoomIn)
 			{
-				PlaySound(0,"UTDE/Weapons/LightningGun/ZoomIn",6,1.0,false); // not in CHAN_WEAPON because it interrupts recharge sound
+				SetNetworkReplicationFlags( NETREP_SKIPOWNER );
+				PlaySound(0,"UTDE/Weapons/LightningGun/ZoomIn",CHAN_6,1.0,false); // not in CHAN_WEAPON because it interrupts recharge sound
+				SetNetworkReplicationFlags( 0 );
 				SetInventory("WeaponZoomedToken", 1);
 				SetPlayerWeaponZoomFactor(PlayerNumber(), GetCVar("cl_railgunZoom"));
 			}
 			else if (shouldZoomOut)
 			{
-				PlaySound(0,"UTDE/Weapons/LightningGun/ZoomOut",6,1.0,false); // not in CHAN_WEAPON because it interrupts recharge sound
+				SetNetworkReplicationFlags( NETREP_SKIPOWNER );
+				PlaySound(0,"UTDE/Weapons/LightningGun/ZoomOut",CHAN_6,1.0,false); // not in CHAN_WEAPON because it interrupts recharge sound
+				SetNetworkReplicationFlags( 0 );
 				SetInventory("WeaponZoomedToken", 0);
 				SetPlayerWeaponZoomFactor(PlayerNumber(), 1.0);
 			}
