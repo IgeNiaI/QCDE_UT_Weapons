@@ -50,13 +50,17 @@ UTDE/Weapons/Minigun/FireStartLoop				"Sounds/Weapons/MG_Fire_Looper.wav"
 UTDE/Weapons/Minigun/Quad/FireStartLoop			"Sounds/Weapons/Quad/MG_Fire_Looper.wav"
 UTDE/Weapons/Minigun/AltFireStartLoop			"Sounds/Weapons/MG_AltFire_Looper.wav"
 UTDE/Weapons/Minigun/Quad/AltFireStartLoop		"Sounds/Weapons/Quad/MG_AltFire_Looper.wav"
+UTDE/Weapons/Minigun/AltFireSuperStartLoop		"Sounds/Weapons/MG_AltSuperFire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop	"Sounds/Weapons/Quad/MG_AltSuperFire_Looper.wav"
 UTDE/Weapons/Minigun/FireEnd					"Sounds/Weapons/MG_End.wav"
 
-$volume "UTDE/Weapons/Minigun/FireStartLoop"			0.80
-$volume "UTDE/Weapons/Minigun/Quad/FireStartLoop"		0.80
-$volume "UTDE/Weapons/Minigun/AltFireStartLoop"			0.80
-$volume "UTDE/Weapons/Minigun/Quad/AltFireStartLoop"	0.80
-$volume "UTDE/Weapons/Minigun/FireEnd"					0.80
+$volume "UTDE/Weapons/Minigun/FireStartLoop"				0.80
+$volume "UTDE/Weapons/Minigun/Quad/FireStartLoop"			0.80
+$volume "UTDE/Weapons/Minigun/AltFireStartLoop"				0.80
+$volume "UTDE/Weapons/Minigun/Quad/AltFireStartLoop"		0.80
+$volume "UTDE/Weapons/Minigun/AltFireSuperStartLoop"		0.80
+$volume "UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop"	0.80
+$volume "UTDE/Weapons/Minigun/FireEnd"						0.80
 
 
 //********************

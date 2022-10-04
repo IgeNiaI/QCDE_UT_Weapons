@@ -311,22 +311,6 @@ statusbar Normal, forcescaled
 	}
 
 	inInventory not NoReticle {
-	// Altfire reticle
-	isSelected QCGauntlet		 { inInventory                                 GNT_UG_Omni      { drawImage "RET_00_2", 654,479; }
-								   inInventory                                 GNT_UG_Burn      { drawImage "RET_00_1", 654,479; } }
-	isSelected QCShotgun		 { inInventory WeaponZoomedToken { inInventory  SG_UG_Explosive { drawImage "RET_03_2", 654,479; } } }
-	isSelected QCHeavyMachinegun { inInventory WeaponZoomedToken { inInventory HMG_UG_Pierce    { drawImage "RET_07_2", 654,479; } } }
-	isSelected QCSuperShotgun	 { inInventory WeaponZoomedToken { inInventory SSG_UG_Flame     { drawImage "RET_09_2", 654,479; } } }
-	isSelected QCSuperNailgun	 { inInventory WeaponZoomedToken { inInventory SNG_UG_Seeker    { drawImage "RET_11_2", 654,479; } } }
-	isSelected QCTribolt	 	 { inInventory WeaponZoomedToken { inInventory  TB_UG_Grenade   { drawImage "RET_13_2", 654,479; } } }
-	isSelected QCRocketLauncher	 { inInventory WeaponZoomedToken { inInventory  RL_UG_Control   { drawImage "RET_15_2", 654,479; } } }
-	isSelected QCLightningGun	 { inInventory WeaponZoomedToken { inInventory  LG_UG_Static    { drawImage "RET_17_2", 654,479; } } }
-	isSelected QCRailgun 		 { inInventory WeaponZoomedToken { inInventory  RG_UG_Explosive { drawImage "RET_19_2", 654,479; } } }
-	isSelected QCBFG 			 { inInventory WeaponZoomedToken { inInventory BFG_UG_Charge    { drawImage "RET_21_2", 654,479; } } }
-
-	// Remote control reticle
-	isSelected QCRocketLauncher	 { inInventory PowerControllerProtection                        { drawImage "RET_15_2", 654,479; } }
-
 	// Railgun charge
 	inInventory RailgunCharges {
 		drawImage "RGCHAR00", 668, 493;
@@ -1280,22 +1264,6 @@ statusbar Fullscreen, forcescaled
 	}
 
 	inInventory not NoReticle {
-	// Altfire reticle
-	isSelected QCGauntlet		 { inInventory                                 GNT_UG_Omni      { drawImage "RET_00_2", 654,479; }
-								   inInventory                                 GNT_UG_Burn      { drawImage "RET_00_1", 654,479; } }
-	isSelected QCShotgun		 { inInventory WeaponZoomedToken { inInventory  SG_UG_Explosive { drawImage "RET_03_2", 654,479; } } }
-	isSelected QCHeavyMachinegun { inInventory WeaponZoomedToken { inInventory HMG_UG_Pierce    { drawImage "RET_07_2", 654,479; } } }
-	isSelected QCSuperShotgun	 { inInventory WeaponZoomedToken { inInventory SSG_UG_Flame     { drawImage "RET_09_2", 654,479; } } }
-	isSelected QCSuperNailgun	 { inInventory WeaponZoomedToken { inInventory SNG_UG_Seeker    { drawImage "RET_11_2", 654,479; } } }
-	isSelected QCTribolt	 	 { inInventory WeaponZoomedToken { inInventory  TB_UG_Grenade   { drawImage "RET_13_2", 654,479; } } }
-	isSelected QCRocketLauncher	 { inInventory WeaponZoomedToken { inInventory  RL_UG_Control   { drawImage "RET_15_2", 654,479; } } }
-	isSelected QCLightningGun	 { inInventory WeaponZoomedToken { inInventory  LG_UG_Static    { drawImage "RET_17_2", 654,479; } } }
-	isSelected QCRailgun 		 { inInventory WeaponZoomedToken { inInventory  RG_UG_Explosive { drawImage "RET_19_2", 654,479; } } }
-	isSelected QCBFG 			 { inInventory WeaponZoomedToken { inInventory BFG_UG_Charge    { drawImage "RET_21_2", 654,479; } } }
-
-	// Remote control reticle
-	isSelected QCRocketLauncher	 { inInventory PowerControllerProtection                        { drawImage "RET_15_2", 654,479; } }
-
 	// Railgun charge
 	inInventory RailgunCharges {
 		drawImage "RGCHAR00", 668, 493;

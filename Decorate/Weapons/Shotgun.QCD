@@ -257,7 +257,7 @@ Actor UTFlakMiniShellBounced
 	+USEBOUNCESTATE
 	+BLOODSPLATTER
 	+HITOWNER
-	+MTHRUSPECIES
+	//+MTHRUSPECIES // this flag conflicts with +HITOWNER
 	+DONTBLAST
 	-NOGRAVITY
 	ReactionTime 35

@@ -78,7 +78,8 @@ Script "QCDE_SetWeaponRespawnTics" (void)
 //----------------------------------------------------------------------
 // Script for controlled redeemer rocket
 #DEFINE SPEED    16
-#DEFINE TURNSPEED 0.008
+#DEFINE TURNSPEED_BASE 0.008
+#DEFINE TURNSPEED_UPGRADED 0.015
 int greymask[64];
 
 // Activator: controlled rocket
@@ -93,6 +94,10 @@ Script "QCDE_RocketControl" (void)
 
 	SetActivator(plrtid);
 	// Activator: rocket owner
+
+	int turnSpeed = TURNSPEED_BASE;
+	if (CheckInventory("BFG_UG_Charge"))
+		turnSpeed = TURNSPEED_UPGRADED;
 
 	delay(1);
 
@@ -112,8 +117,8 @@ Script "QCDE_RocketControl" (void)
 		Thing_Stop(tid);
 
 		int ip = -GetPlayerInput(plr, INPUT_PITCH);
-		if(ip >  TURNSPEED) ip =  TURNSPEED;
-		if(ip < -TURNSPEED) ip = -TURNSPEED;
+		if(ip >  turnSpeed) ip =  turnSpeed;
+		if(ip < -turnSpeed) ip = -turnSpeed;
 		p += ip;
 		if(p >  0.25) p =  0.25;
 		if(p < -0.25) p = -0.25;
@@ -122,8 +127,8 @@ Script "QCDE_RocketControl" (void)
 		ThrustThingZ(tid, spd_ver, 0, 0);
 
 		int ia = GetPlayerInput(plr, INPUT_YAW);
-		if(ia >  TURNSPEED) ia =  TURNSPEED;
-		if(ia < -TURNSPEED) ia = -TURNSPEED;
+		if(ia >  turnSpeed) ia =  turnSpeed;
+		if(ia < -turnSpeed) ia = -turnSpeed;
 		a += ia;
 
 		int spd_hor = (cos(p) * SPEED) >> 16;
