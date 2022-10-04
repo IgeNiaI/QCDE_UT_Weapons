@@ -32,7 +32,8 @@ Actor QCGauntlet : QCWeapon
 		Goto Ready+2
 
 		ReadyCantFire:
-			UTIH A 0 A_StopSound(5)
+			QCG1 A 0 A_StopSound(CHAN_WEAPON)
+			UTIH A 0 A_StopSound(6)
 		RCFLooper:
 			UTIH A 4 A_WeaponReady(WRF_NOFIRE)
 			UTIH A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper")
@@ -44,7 +45,7 @@ Actor QCGauntlet : QCWeapon
 	Select:
 		UTIH A 0 A_JumpIfInventory("Class_Painkiller",1,"PKSelect")
 		UTIH A 0 A_JumpIfInventory("NoWeaponFireToken",1,2)
-		"####" "#" 0 A_StopSound(5) //stops any weapon looping sound
+		"####" "#" 0 A_StopSound(CHAN_WEAPON) //stops any weapon looping sound
 	SelectLooper:
 		"####" "#" 1 A_Raise
 		"####" "###" 0 A_Raise
@@ -52,7 +53,6 @@ Actor QCGauntlet : QCWeapon
 
 	Deselect:
 		"####" A 0 A_StopSound(CHAN_WEAPON)
-		"####" A 0 A_StopSound(5)
 		"####" "#" 0 A_JumpIfInventory("PKTipDetached",1,"PKDetachedDeSelect")
 	DeselectLooper:
 		"####" "#" 1 A_Lower
@@ -430,7 +430,7 @@ Actor QCGauntlet : QCWeapon
 		Goto PKReady+1
 
 		PKReadyCantFire:
-			WP30 A 0 A_StopSound(5)
+			WP30 A 0 A_StopSound(CHAN_WEAPON)
 			WP30 A 0 A_StopSound(6)
 			"####" "#" 0 A_ZoomFactor(1.0)
 			"####" "#" 0 A_TakeInventory("WeaponZoomedToken",32767)
@@ -615,14 +615,14 @@ Actor QCGauntlet : QCWeapon
 			Goto PKEndFire
 
 	PKGauntStop:
-		WP30 A 0 A_StopSound(5)
+		WP30 A 0 A_StopSound(CHAN_WEAPON)
 		WP30 A 0 A_PlaySound("QC/Abilities/Painkiller/Weapon/SpinStop",CHAN_WEAPON,1,0)
 		WP30 FGHIFGHI 1
 		WP30 E 3 A_TakeInventory("PunchedAlready",32767)
 		WP30 A 8
 		Goto PKReady
 	PKEndFire:
-		WP30 C 0 A_PlaySound("QC/Abilities/Painkiller/Weapon/SpinStop",CHAN_5,1,0)
+		WP30 C 0 A_PlaySound("QC/Abilities/Painkiller/Weapon/SpinStop",CHAN_WEAPON,1,0)
 		WP30 E 1 A_TakeInventory("PunchedAlready",32767)
 		WP30 E 1 A_WeaponReady(WRF_NOBOB)
 		WP30 E 1 A_WeaponReady(WRF_NOBOB)
@@ -690,7 +690,7 @@ Actor QCGauntlet : QCWeapon
 	PKSelect:
 		WP30  A 0 A_JumpIfInventory("NoWeaponFireToken",1,2)
 		WP30  A 0 A_PlaySound("QC/Weapons/Switch",6,1,0,3)
-		"####" "#" 0 A_StopSound(5) //stops any weapon looping sound
+		"####" "#" 0 A_StopSound(CHAN_WEAPON) //stops any weapon looping sound
 		"####" "#" 0 A_ZoomFactor(1.0)
 		"####" "#" 0 A_TakeInventory("WeaponZoomedToken",32767)
 		"####" "#" 0 A_TakeInventory("PunchedAlready",32767)
