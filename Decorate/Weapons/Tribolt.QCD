@@ -62,6 +62,12 @@ Actor TriboltPickup : CustomInventory 15604
 	}
 }
 
+Actor TriboltPickupFloat : TriboltPickup 15614
+{
+	//$Title "Float Ripper (SP) / Bio Rifle (DM)"
+	+NOGRAVITY
+}
+
 
 Actor QCTribolt : QCWeapon
 {

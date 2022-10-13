@@ -63,6 +63,12 @@ Actor RailgunPickup : CustomInventory 15607
 	}
 }
 
+Actor RailgunPickupFloat : RailgunPickup 15617
+{
+	//$Title "Float Lightning Gun"
+	+NOGRAVITY
+}
+
 
 Actor QCRailGun : QCWeapon
 {

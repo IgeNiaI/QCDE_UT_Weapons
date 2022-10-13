@@ -67,6 +67,12 @@ Actor HeavyMachinegunPickup : CustomInventory 15600
 	}
 }
 
+Actor HeavyMachinegunPickupFloat : HeavyMachinegunPickup 15610
+{
+	//$Title "Float Minigun"
+	+NOGRAVITY
+}
+
 Actor QCHeavyMachinegun : QCWeapon
 {
 	Height 48

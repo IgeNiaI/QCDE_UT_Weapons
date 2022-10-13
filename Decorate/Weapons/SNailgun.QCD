@@ -70,6 +70,12 @@ Actor SuperNailgunPickup : CustomInventory 15603
 	}
 }
 
+Actor SuperNailgunPickupFloat : SuperNailgunPickup 15613
+{
+	//$Title "Float Pulse Rifle"
+	+NOGRAVITY
+}
+
 
 Actor QCSuperNailgun : QCWeapon
 {
