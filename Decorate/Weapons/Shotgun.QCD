@@ -16,14 +16,14 @@ Actor ShotgunPickup : CustomInventory 15601
 	Radius 20
 	Scale 0.55
 	Inventory.PickupSound "QC/Items/WeaponPick"
-	Inventory.PickupMessage "$GOT_UTFlakMini"
-	Tag "$TAG_UTFlakMini"
+	Inventory.PickupMessage "$GOT_UTDispersion"
+	Tag "$TAG_UTDispersion"
 	Inventory.RespawnTics 35
 	States
 	{
 	Spawn:
-		UTFM Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
-		UTFM Y 35 A_CheckFlag("DROPPED", "BecomeWeaponItself")
+		UDSP Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		UDSP Y 35 A_CheckFlag("DROPPED", "BecomeWeaponItself")
 		Goto Idle
 	DMSpawn:
 		"####" "#" 0 A_ChangeFlag("DROPPED", 0)
@@ -55,7 +55,7 @@ Actor ShotgunPickup : CustomInventory 15601
 		Stop
 
 	Idle:
-		UTFM Y -1 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",3,args[4])
+		UDSP Y -1 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",3,args[4])
 		Wait
 	Pickup:
 		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"WeaponStay")
@@ -81,11 +81,390 @@ Actor ShotgunPickupFloat : ShotgunPickup 15611
 
 Actor QCShotgun : QCWeapon
 {
+	+INVENTORY.ALWAYSPICKUP
+	Height 48
+	Weapon.SwaySpeed 3.2
+	Weapon.Kickback 35
+	Weapon.SelectionOrder 1940
+	Weapon.AmmoGive 1
+	Weapon.AmmoType "UTDisprAmmo"
+	Obituary "$OB_UTDispersion"
+	Inventory.PickupMessage "$GOT_UTDispersion"
+	Tag "$TAG_UTDispersion"
+	Scale 0.55
+	States
+	{
+	Spawn:
+		TNT1 A 1
+		UDSP Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		Goto Idle
+	DMSpawn:
+		UDSP Z 0 Bright A_ChangeFlag("NOBLOCKMAP",1)	//in DM, if a player drops this weapon, cant be picked
+		TNT1 Z 3	//and disappears
+		Stop
+	Idle:
+		UDSP Y -1
+		Wait
+
+	//-----------------------
+	// Select/Deselect Seq
+	//-----------------------
+	Select:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,2)
+		TNT1 A 0 A_PlaySound("QC/Weapons/Switch",5,1,0,3) //Not in Weapon.UpSound because it interrupts CHAN_WEAPON sounds
+		TNT1 A 0 A_StopSound(CHAN_WEAPON) //stops any weapon looping sound
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "SecondUpgradeCheckSelect")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "SelectLooper3")
+		Goto SelectLooper1
+
+	SecondUpgradeCheckSelect:
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "SelectLooper5")
+		Goto SelectLooper3
+
+	SelectLooper1:
+		UDSP A 1 A_Raise
+		"####" "###" 0 A_Raise
+		Loop
+	SelectLooper3:
+		UDSP D 1 A_Raise
+		"####" "###" 0 A_Raise
+		Loop
+	SelectLooper5:
+		UDSP G 1 A_Raise
+		"####" "###" 0 A_Raise
+		Loop
+
+	Deselect:
+		TNT1 A 0 A_StopSound(5)
+		TNT1 A 0 A_StopSound(CHAN_WEAPON)
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "SecondUpgradeCheckDeselect")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "DeselectLooper3")
+		Goto DeselectLooper1
+
+	SecondUpgradeCheckDeselect:
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "DeselectLooper5")
+		Goto DeselectLooper3
+
+	DeselectLooper1:
+		UDSP A 1 A_Lower
+		"####" "###" 0 A_Lower
+		Loop
+	DeselectLooper3:
+		UDSP D 1 A_Lower
+		"####" "###" 0 A_Lower
+		Loop
+	DeselectLooper5:
+		UDSP G 1 A_Lower
+		"####" "###" 0 A_Lower
+		Loop
+
+	//-----------------------
+	// Ready Seq
+	//-----------------------
+	Ready:
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "SecondUpgradeCheckReady")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Ready3")
+		UDSP A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire1")
+		UDSP A 3 A_WeaponReady
+		Loop
+
+		ReadyCantFire1:
+			UDSP A 0 A_StopSound(5)
+			UDSP A 0 A_StopSound(CHAN_WEAPON)
+		RCFLooper1:
+			UDSP A 4 A_WeaponReady(WRF_NOFIRE)
+			UDSP A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper1")
+			Goto Ready
+
+	SecondUpgradeCheckReady:
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Ready5")
+		Goto Ready3
+
+	Ready3:
+		UDSP D 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire3")
+		UDSP D 3 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "SecondUpgradeCheckReady")
+		Loop
+
+		ReadyCantFire3:
+			UDSP D 0 A_StopSound(5)
+			UDSP D 0 A_StopSound(CHAN_WEAPON)
+		RCFLooper3:
+			UDSP D 4 A_WeaponReady(WRF_NOFIRE)
+			UDSP D 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper3")
+			Goto Ready3
+
+	Ready5:
+		UDSP G 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire5")
+		UDSP G 3 A_WeaponReady
+		Loop
+
+		ReadyCantFire5:
+			UDSP G 0 A_StopSound(5)
+			UDSP G 0 A_StopSound(CHAN_WEAPON)
+		RCFLooper5:
+			UDSP G 4 A_WeaponReady(WRF_NOFIRE)
+			UDSP G 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper5")
+			Goto Ready5
+
+	//-----------------------
+	// Fire Seq
+	//-----------------------
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "SecondUpgradeCheckFire")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Fire3")
+		Goto Fire1
+
+	SecondUpgradeCheckFire:
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Fire5")
+		Goto Fire3
+
+	// Base fire
+	Fire1:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire1")
+		TNT1 A 0 A_GunFlash("Flash1")
+		UDSP B 1
+		UDSP B 1 Offset(3,35)
+		UDSP C 1 Offset(5,37)
+		UDSP C 1 Offset(7,39)
+		UDSP A 1 Offset(8,40)
+		UDSP A 1 Offset(7,39)
+		UDSP A 1 Offset(5,37)
+		UDSP A 1 Offset(3,35)
+		UDSP A 1 Offset(2,34)
+		UDSP A 1 Offset(1,33)
+		UDSP A 1
+		Goto Ready
+
+	Flash1:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireCustomMissile("UTDispr1",0,false,1,4,0,0)
+		Goto FlashCheckSound1
+
+	FlashCheckSound1:
+		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound1")
+		Goto NormalSound1
+
+		NormalSound1:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Fire",CHAN_WEAPON)
+			Goto FlashEnder1
+		QuadSound1:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Quad/Fire",CHAN_WEAPON)
+			Goto FlashEnder1
+
+	FlashEnder1:
+		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil1")
+		TNT1 A 0 A_SetPitch(pitch-0.5)
+		TNT1 A 2
+		TNT1 A 1 A_SetPitch(pitch+0.5)
+		Stop
+	FlashEnderNoRecoil1:
+		TNT1 A 1
+		Stop
+
+	// Single upgrade fire
+	Fire3:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire3")
+		TNT1 A 0 A_GunFlash("Flash3")
+		UDSP E 1
+		UDSP E 1 Offset(4,36)
+		UDSP F 1 Offset(7,39)
+		UDSP F 1 Offset(11,43)
+		UDSP D 1 Offset(13,45)
+		UDSP D 1 Offset(14,46)
+		UDSP D 1 Offset(15,47)
+		UDSP D 1 Offset(13,45)
+		UDSP D 1 Offset(11,43)
+		UDSP D 1 Offset(9,41)
+		UDSP D 1 Offset(8,40)
+		UDSP D 1 Offset(7,39)
+		UDSP D 1 Offset(5,37)
+		UDSP D 1 Offset(3,35)
+		UDSP D 1 Offset(2,34)
+		UDSP D 1 Offset(1,33)
+		UDSP D 1
+		Goto Ready
+
+	Flash3:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireCustomMissile("UTDispr3",0,false,1,4,0,0)
+		Goto FlashCheckSound3
+
+	FlashCheckSound3:
+		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound3")
+		Goto NormalSound3
+
+		NormalSound3:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Fire",CHAN_WEAPON)
+			Goto FlashEnder3
+		QuadSound3:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Quad/Fire",CHAN_WEAPON)
+			Goto FlashEnder3
+
+	FlashEnder3:
+		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil3")
+		TNT1 A 0 A_SetPitch(pitch-1.5)
+		TNT1 A 2
+		TNT1 AAA 1 A_SetPitch(pitch+0.5)
+		Stop
+	FlashEnderNoRecoil3:
+		TNT1 A 1
+		Stop
+
+	// Double upgrade fire
+	Fire5:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire5")
+		TNT1 A 0 A_GunFlash("Flash5")
+		UDSP H 1
+		UDSP H 1 Offset(5,37)
+		UDSP I 1 Offset(9,41)
+		UDSP I 1 Offset(12,44)
+		UDSP G 1 Offset(15,47)
+		UDSP G 1 Offset(17,49)
+		UDSP G 1 Offset(18,50)
+		UDSP G 1 Offset(19,51)
+		UDSP G 1 Offset(20,52)
+		UDSP G 1 Offset(21,53)
+		UDSP G 1 Offset(22,54)
+		UDSP G 1 Offset(23,55)
+		UDSP G 1 Offset(22,54)
+		UDSP G 1 Offset(21,53)
+		UDSP G 1 Offset(20,52)
+		UDSP G 1 Offset(19,51)
+		UDSP G 1 Offset(18,50)
+		UDSP G 1 Offset(17,49)
+		UDSP G 1 Offset(16,48)
+		UDSP G 1 Offset(15,47)
+		UDSP G 1 Offset(13,45)
+		UDSP G 1 Offset(11,43)
+		UDSP G 1 Offset(9,41)
+		UDSP G 1 Offset(7,39)
+		UDSP G 1 Offset(5,37)
+		UDSP G 1 Offset(3,35)
+		UDSP G 1 Offset(1,33)
+		UDSP G 1
+		Goto Ready
+
+	Flash5:
+		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_FireCustomMissile("UTDispr5",0,false,1,4,0,0)
+		Goto FlashCheckSound5
+
+	FlashCheckSound5:
+		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound5")
+		Goto NormalSound5
+
+		NormalSound5:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Fire",CHAN_WEAPON)
+			Goto FlashEnder5
+		QuadSound5:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Quad/Fire",CHAN_WEAPON)
+			Goto FlashEnder5
+
+	FlashEnder5:
+		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil5")
+		TNT1 A 0 A_SetPitch(pitch-1.5)
+		TNT1 A 2
+		TNT1 AAA 1 A_SetPitch(pitch+0.5)
+		Stop
+	FlashEnderNoRecoil5:
+		TNT1 A 1
+		Stop
+	}
+}
+
+Actor UTDispr1 : FastProjectile
+{
+	Projectile
+	+FORCEXYBILLBOARD
+	+BLOODSPLATTER
+	+MTHRUSPECIES
+	+DONTBLAST
+	Obituary "$OB_UTDispersion"
+	Speed 40
+	Radius 4
+	Height 9
+	Damage (random(10,20))
+	Decal "Q4PlasmaBlack"
+	Scale 0.18
+	SeeSound ""
+	RenderStyle Add
+	States
+	{
+	Spawn:
+		PSMA AAABBB 1 Light("BlueMediumFlicker2") Bright
+		Loop
+
+	XDeath:
+		TNT1 A 10 A_GiveToTarget("HitBeepLow",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
+		Stop
+
+	Death:
+		LBA2 A 0 A_PlaySound("UTDE/Weapons/Dispr/Impact",CHAN_AUTO,1,0,1)
+		LBA2 A 1 Light("BlueMediumFlicker3") Bright
+		LBA2 BCDEFGH 1 Bright
+		Stop
+	}
+}
+
+Actor UTDispr3 : UTDispr1
+{
+	Damage (random(30,50))
+	Scale 0.19
+	States
+	{
+	Spawn:
+		PSMB AAABBB 1 Light("GreenMediumFlicker2") Bright
+		Loop
+
+	XDeath:
+		TNT1 A 10 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
+		Stop
+
+	Death:
+		LBA2 A 0 A_PlaySound("UTDE/Weapons/Dispr/Impact",CHAN_AUTO,1,0,1)
+		LBA2 A 1 Light("GreenMediumFlicker3") Bright
+		LBA2 BCDEFGH 1 Bright
+		Stop
+	}
+}
+
+Actor UTDispr5 : UTDispr1
+{
+	Damage (random(60,90))
+	Scale 0.20
+	States
+	{
+	Spawn:
+		PSMC AAABBB 1 Light("RedMediumFlicker2") Bright
+		Loop
+
+	XDeath:
+		TNT1 A 10 A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
+		Stop
+
+	Death:
+		LBA2 A 0 A_PlaySound("UTDE/Weapons/Dispr/Impact",CHAN_AUTO,1,0,1)
+		LBA2 A 1 Light("RedSmallFlicker3") Bright
+		LBA2 BCDEFGH 1 Bright
+		Stop
+	}
+}
+
+// --------------------------------------------------------------------------
+//	For competitive DM, weapons dont autoaim
+// --------------------------------------------------------------------------
+Actor QCShotgunDM : QCShotgun
+{
+	+WEAPON.NOAUTOAIM
+	+CHEATNOTWEAPON
 	Height 48
 	Weapon.SwaySpeed 3.2
 	Weapon.Kickback 35
 	Weapon.SelectionOrder 1940
 	Weapon.AmmoUse 1
+	Weapon.AmmoDmScale 1.0
+	Weapon.AmmoDmRefill 2
 	Weapon.AmmoGive 15
 	Weapon.AmmoType "QCShellAmmo"
 	Obituary "$OB_UTFlakMini"
@@ -179,8 +558,15 @@ Actor QCShotgun : QCWeapon
 
 	Flash:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShell",afrandom(3.0,-3.0),true,1,4,0,afrandom(3.0,-3.0)) // Use ammo
-		TNT1 AAAAAAAA 0 A_FireCustomMissile("UTFlakMiniShell",afrandom(3.0,-3.0),false,1,4,0,afrandom(3.0,-3.0)) // Don't use ammo
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",0,true,1,4,0,0) // Use ammo
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",   sin(0)*4.0, false,1,4,0,   cos(0)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",  sin(45)*4.0, false,1,4,0,  cos(45)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",  sin(90)*4.0, false,1,4,0,  cos(90)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(135)*4.0, false,1,4,0, cos(135)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(180)*4.0, false,1,4,0, cos(180)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(225)*4.0, false,1,4,0, cos(225)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(270)*4.0, false,1,4,0, cos(270)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(315)*4.0, false,1,4,0, cos(315)*4.0)
 		Goto FlashCheckSound
 
 	FlashCheckSound:
@@ -203,11 +589,10 @@ Actor QCShotgun : QCWeapon
 	FlashEnderNoRecoil:
 		TNT1 A 1
 		Stop
-
 	}
 }
 
-Actor UTFlakMiniShell : FastProjectile
+Actor UTFlakMiniShellDM : FastProjectile
 {
 	var int user_velx;
 	var int user_vely;
@@ -217,16 +602,17 @@ Actor UTFlakMiniShell : FastProjectile
 	+FORCEXYBILLBOARD
 	+DONTSPLASH
 	+BLOODSPLATTER
-	+MTHRUSPECIES
-	+DONTBLAST
+	-MTHRUSPECIES
+	-DONTBLAST
 	ReactionTime 35
-	damage (random(8,12))
+	damage (10)
 	radius 2
 	height 2
 	speed 65
 	renderstyle ADD
 	alpha 0.9
 	scale 0.4
+	Obituary "$OB_UTFlakMini"
 	MissileType "UTFlakShellTrailFX"
 	MissileHeight 8
 	states
@@ -244,12 +630,12 @@ Actor UTFlakMiniShell : FastProjectile
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		Stop
 	Death:
-		TNT1 A 0 A_SpawnItemEx("UTFlakMiniShellBounced", 0, 0, 0, user_velx, user_vely, user_velz, 0, SXF_ABSOLUTEVELOCITY|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 A_SpawnItemEx("UTFlakMiniShellBouncedDM", 0, 0, 0, user_velx, user_vely, user_velz, 0, SXF_ABSOLUTEVELOCITY|SXF_TRANSFERPOINTERS)
 		Stop
 	}
 }
 
-Actor UTFlakMiniShellBounced
+Actor UTFlakMiniShellBouncedDM
 {
 	Projectile
 	+FORCEXYBILLBOARD
@@ -257,12 +643,12 @@ Actor UTFlakMiniShellBounced
 	+USEBOUNCESTATE
 	+BLOODSPLATTER
 	+HITOWNER
-	//+MTHRUSPECIES // this flag conflicts with +HITOWNER
-	+DONTBLAST
+	-MTHRUSPECIES
+	-DONTBLAST
 	-NOGRAVITY
 	ReactionTime 35
 	Gravity 0.5
-	damage (random(8,12))
+	damage (10)
 	radius 2
 	height 2
 	speed 65
@@ -289,56 +675,6 @@ Actor UTFlakMiniShellBounced
 		TNT1 A 1
 		Stop
 	}
-}
-
-// --------------------------------------------------------------------------
-//	For competitive DM, weapons dont autoaim
-// --------------------------------------------------------------------------
-Actor QCShotgunDM : QCShotgun
-{
-	+WEAPON.NOAUTOAIM
-	+CHEATNOTWEAPON
-	Tag "$TAG_UTFlakMini"
-	Weapon.AmmoGive 15
-	Weapon.AmmoDmScale 1.0
-	Weapon.AmmoDmRefill 2
-
-	States
-	{
-	Flash:
-		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",0,true,1,4,0,0) // Use ammo
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",   sin(0)*4.0, false,1,4,0,   cos(0)*4.0)
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",  sin(45)*4.0, false,1,4,0,  cos(45)*4.0)
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM",  sin(90)*4.0, false,1,4,0,  cos(90)*4.0)
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(135)*4.0, false,1,4,0, cos(135)*4.0)
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(180)*4.0, false,1,4,0, cos(180)*4.0)
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(225)*4.0, false,1,4,0, cos(225)*4.0)
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(270)*4.0, false,1,4,0, cos(270)*4.0)
-		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM", sin(315)*4.0, false,1,4,0, cos(315)*4.0)
-		Goto FlashCheckSound
-	}
-}
-
-Actor UTFlakMiniShellDM : UTFlakMiniShell
-{
-	-MTHRUSPECIES
-	-DONTBLAST
-	damage (10)
-	Obituary "$OB_UTFlakMini"
-	States
-	{
-	Death:
-		TNT1 A 0 A_SpawnItemEx("UTFlakMiniShellBouncedDM", 0, 0, 0, user_velx, user_vely, user_velz, 0, SXF_ABSOLUTEVELOCITY|SXF_TRANSFERPOINTERS)
-		Stop
-	}
-}
-
-Actor UTFlakMiniShellBouncedDM : UTFlakMiniShellBounced
-{
-	-MTHRUSPECIES
-	-DONTBLAST
-	damage (10)
 }
 
 Actor SG_UG_Spread : Token {}

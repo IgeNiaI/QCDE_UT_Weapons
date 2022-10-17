@@ -147,8 +147,8 @@ Actor QCSuperShotgun : QCWeapon
 	Weapon.SwaySpeed 3.0
 	Weapon.Kickback 35
 	Weapon.SelectionOrder 1100
-	Weapon.AmmoUse 2
-	Weapon.AmmoUse2 2
+	Weapon.AmmoUse 1
+	Weapon.AmmoUse2 1
 	Weapon.AmmoGive 15
 	Weapon.AmmoType "QCShellAmmo"
 	Weapon.AmmoType2 "QCShellAmmo"

@@ -9,6 +9,7 @@ GOT_QCRocketAmmoTerminator      = "Picked up a few surplus rockets.";
 GOT_QCCoilAmmoTerminator        = "Picked up a surplus shock ammo.";
 GOT_QCSlugAmmoTerminator        = "Picked up a surplus lightning ammo.";
 GOT_QCBfgAmmoTerminator         = "Picked up a Redeemer Rocket.";
+GOT_UTDisprAmmoTerminator       = "How did you pick this up?!";
 
 TAG_QCBulletAmmo                = "Bullet Ammo Big";
 GOT_QCBulletAmmo                = "Picked up a pack of bullets.";
@@ -46,6 +47,10 @@ TAG_QCBFGAmmo                   = "Redeemer Ammo Big";
 GOT_QCBFGAmmo                   = "Picked up a Redeemer Rocket.";
 TAG_QCBFGAmmoSmall              = "Redeemer Ammo Small";
 GOT_QCBFGAmmoSmall              = "Picked up a Redeemer Rocket.";
+TAG_UTDisprAmmo                 = "Dispersion Ammo Big";
+GOT_UTDisprAmmo                 = "How did you pick this up?!";
+TAG_UTDisprAmmoSmall            = "Dispersion Ammo Small";
+GOT_UTDisprAmmoSmall            = "How did you pick this up?!";
 
 GOT_UTImpactHammer                  = "You got an Impact Hammer.";
 OB_UTImpactHammer                   = "%o got smeared by %k's piston.";
@@ -58,6 +63,10 @@ TAG_UTAssaltRifle                   = "Assault Rifle";
 GOT_UTMinigun                       = "You got a Minigun.";
 OB_UTMinigun                        = "%k's Minigun turned %o into a leaky piece of meat.";
 TAG_UTMinigun                       = "Minigun";
+
+GOT_UTDispersion                    = "You got a Dispersion Pistol.";
+OB_UTDispersion                     = "%o was killed by %k's Dispersion Pistol. What a loser!";
+TAG_UTDispersion                    = "Dispersion Pistol";
 
 GOT_UTFlakMini                      = "You got a Mini Flak Cannon.";
 OB_UTFlakMini                       = "%o was ripped to shreds by %k's Mini Flak Cannon.";

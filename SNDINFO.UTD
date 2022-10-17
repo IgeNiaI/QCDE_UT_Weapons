@@ -70,6 +70,13 @@ UTDE/Weapons/FlakMini/Quad/Fire					"Sounds/Weapons/Quad/FLM_Fire.wav"
 
 
 //********************
+// Dispersion Pistol
+UTDE/Weapons/Dispr/Fire							"Sounds/Weapons/DP_Fire.wav"
+UTDE/Weapons/Dispr/Quad/Fire					"Sounds/Weapons/Quad/DP_Fire.wav"
+UTDE/Weapons/Dispr/Impact						"Sounds/Weapons/DP_Impact.wav"
+
+
+//********************
 // Flak Cannon
 UTDE/Weapons/Flak/Fire							"Sounds/Weapons/FL_Fire.wav"
 UTDE/Weapons/Flak/Quad/Fire						"Sounds/Weapons/Quad/FL_Fire.wav"

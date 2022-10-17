@@ -163,12 +163,12 @@ Actor QCRocketLauncher : QCWeapon
 		TNT1 A 0 A_FireCustomMissile("AmmoSpender", 0, true, 5, 2, FPF_NOUNLAGGED)
 		UTRL A 1
 		UTRL A 0 A_JumpIfNoAmmo("Fire1")
-		TNT1 A 0 A_JumpIfInventory("RL_UG_Control", 1, "Charge116")
+		TNT1 A 0 A_JumpIfInventory("RL_UG_Control", 1, "Charge100Upgraded")
 		UTRL A 0 A_ReFire("Charge101")
 		Goto Fire1
 
 	Charge100Upgraded:
-		UTRL A 0 A_ReFire("Charge116")
+		UTRL A 0 A_ReFire("Charge112")
 		Goto Fire1
 
 	Charge101:
@@ -327,7 +327,7 @@ Actor QCRocketLauncher : QCWeapon
 		Goto Fire2
 
 	Charge200Upgraded:
-		UTRL A 0 A_ReFire("Charge216")
+		UTRL A 0 A_ReFire("Charge212")
 		Goto Fire2
 
 	Charge201:

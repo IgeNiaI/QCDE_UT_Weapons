@@ -915,6 +915,29 @@ Actor QCBFGAmmoDM : QCBFGAmmo
 	Inventory.Amount 1
 }
 
+Actor UTDisprAmmo : Ammo
+{
+	Tag "$TAG_UTDisprAmmo" // "Dispersion Ammo Big"
+	+FLOORCLIP
+	-TELESTOMP
+	+SERVERNETID
+	Radius 20
+	Height 16
+	Inventory.PickupMessage "$GOT_UTDisprAmmo" // "Picked up dispersion ammo."
+	Inventory.PickupSound "QC/Items/AmmoPick"
+	Inventory.Amount 1
+	Inventory.MaxAmount 1
+	Ammo.BackpackMaxAmount 1
+	Ammo.BackpackAmount 1
+	Scale 0.902
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		Stop
+	}
+}
+
 
 
 // Full ammo
