@@ -1078,6 +1078,7 @@ ACTOR BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepLow",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(10,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 10
+		TNT1 A 0 A_RadiusThrust(24,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(25,128,0,0,18)		//then another 25 extra damage for impacting a player = 35dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1110,6 +1111,7 @@ ACTOR BioBall2DM : BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(15,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 15
+		TNT1 A 0 A_RadiusThrust(36,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(39,128,0,0,18)		//then another 39 extra damage for impacting a player = 54dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1133,6 +1135,7 @@ ACTOR BioBall3DM : BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(20,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 20
+		TNT1 A 0 A_RadiusThrust(48,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(53,128,0,0,18)		//then another 53 extra damage for impacting a player = 73dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1156,6 +1159,7 @@ ACTOR BioBall4DM : BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(25,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 25
+		TNT1 A 0 A_RadiusThrust(60,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(65,128,0,0,18)		//then another 65 extra damage for impacting a player = 90dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1179,6 +1183,7 @@ ACTOR BioBall5DM : BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(30,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 30
+		TNT1 A 0 A_RadiusThrust(72,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(70,128,0,0,18)		//then another 70 extra damage for impacting a player = 110dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1202,6 +1207,7 @@ ACTOR BioBall6DM : BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(35,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 35
+		TNT1 A 0 A_RadiusThrust(84,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(95,128,0,0,18)		//then another 95 extra damage for impacting a player = 130dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1225,6 +1231,7 @@ ACTOR BioBall7DM : BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(40,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 40
+		TNT1 A 0 A_RadiusThrust(96,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(110,128,0,0,18)		//then another 110 extra damage for impacting a player = 150dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1248,6 +1255,7 @@ ACTOR BioBall8DM : BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(45,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 45
+		TNT1 A 0 A_RadiusThrust(108,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(125,128,0,0,18)		//then another 125 extra damage for impacting a player = 170dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1271,6 +1279,7 @@ ACTOR BioBall9DM : BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(50,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 50
+		TNT1 A 0 A_RadiusThrust(120,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(140,128,0,0,18)		//then another 140 extra damage for impacting a player = 190dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1294,6 +1303,7 @@ ACTOR BioBall10DM : BioBall1DM
 	XDeath:
 		TNT1 A 0 BRIGHT A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 0 A_Explode(55,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 55
+		TNT1 A 0 A_RadiusThrust(132,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(155,128,0,0,18)		//then another 155 extra damage for impacting a player = 210dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1334,6 +1344,7 @@ ACTOR BioBallSticky1DM
 	DeathCont:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/BioRifle/Impact",CHAN_AUTO,1.0,0)
 		TNT1 A 0 A_Explode(10,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 10
+		TNT1 A 0 A_RadiusThrust(24,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(24,128,0,0,18)		//then another 24 extra damage for impacting a player + (1)dmg on the projectile = 35dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1363,6 +1374,7 @@ ACTOR BioBallSticky2DM : BioBallSticky1DM
 	DeathCont:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/BioRifle/Impact",CHAN_AUTO,1.0,0)
 		TNT1 A 0 A_Explode(15,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 10
+		TNT1 A 0 A_RadiusThrust(36,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(38,128,0,0,18)		//then another 38 extra damage for impacting a player + (1)dmg on the projectile = 54dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
@@ -1385,6 +1397,7 @@ ACTOR BioBallSticky3DM : BioBallSticky1DM
 	DeathCont:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/BioRifle/Impact",CHAN_AUTO,1.0,0)
 		TNT1 A 0 A_Explode(20,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 20
+		TNT1 A 0 A_RadiusThrust(48,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//extra thrust because damage thrust alone is not enough
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(52,128,0,0,18)		//then another 52 extra damage for impacting a player + (1)dmg on the projectile = 73dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
