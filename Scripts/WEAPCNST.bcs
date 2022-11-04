@@ -156,7 +156,7 @@ int GenericDMAmmoCapacity[8] = {
 		50,		//3  ripper
 		30,		//4  rocket launcher
 		50,		//5  shock rifle
-		40,		//6  lightning gun
+		25,		//6  lightning gun
 		1		//7  redeemer
 	};
 
@@ -167,7 +167,7 @@ int BittermanDMAmmoCapacity[8] = {
 		75,		//3  ripper
 		45,		//4  rocket launcher
 		75,		//5  shock rifle
-		60,		//6  lightning gun
+		30,		//6  lightning gun
 		1		//7  redeemer
 	};
 

@@ -80,7 +80,7 @@ Actor QCRailGun : QCWeapon
 	+WEAPON.NOAUTOAIM	//rails never autoaim, but this needed for effects and sound spawners
 	Weapon.SwaySpeed 2.7
 	Weapon.AmmoType1 "QCSlugAmmo"
-	Weapon.AmmoGive1 15
+	Weapon.AmmoGive1 10
 	Weapon.AmmoUse1 1
 	Weapon.SelectionOrder 1400
 	Inventory.PickupMessage "$GOT_UTLightningGun"
