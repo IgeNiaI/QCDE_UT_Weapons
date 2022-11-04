@@ -130,11 +130,13 @@ Actor QCRailGun : QCWeapon
 	Ready:
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		TNT1 A 0 A_JumpIfInventory("WeaponZoomedToken",1,"ReadyZoomed")
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"ReadyDM")
 		TNT1 A 0 A_JumpIfInventory("RG_UG_Pierce",1,"ReadyUpgraded")
 		UTLG A 1 A_WeaponReady
 		Loop
 
 	ReadyUpgraded:
+	ReadyDM:
 		TNT1 A 0 A_JumpIfInventory("WeaponZoomedToken",1,"ReadyZoomed")
 		UTLG G 1 A_WeaponReady
 		TNT1 A 0 A_JumpIfInventory("WeaponZoomedToken",1,"ReadyZoomed")
@@ -1646,6 +1648,15 @@ Actor QCRailGunDM : QCRailGun
 
 	States
 	{
+	Fire:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTLG A 0 A_GiveInventory("RailgunCharges",20) // Always do FlashLowCharge in DM
+		TNT1 A 0 A_JumpIfInventory("WeaponZoomedToken",1,"FireZoomed")
+		Goto DoFire
+	FireZoomed:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		Goto DoFireZoomed
+
 	FlashNoCharge:
 		TNT1 A 0 A_RailAttack(70, 4, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "LightningGunPuff_DM", 0, 0, 0, 0, 15, 1, "LaserKraftTrail", -2)
 		Goto FlashCheckSound
