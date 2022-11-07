@@ -23,6 +23,21 @@ str weaponList[NUMBER_OF_WEAPONS] = {
 	"QCBFG" 			, "QCBFGDM"            ,  // 21, 22
 };
 
+str weaponNames[NUMBER_OF_WEAPONS] = {
+	"Impact Hammer",                                //  0
+	"Assault Rifle" 		, "Assault Rifle"    ,  //  1,  2
+	"Dispersion Pistol"		, "Flak Cannon Mini" ,  //  3,  4
+	"Pulse Gun Mini"		, "Pulse Gun Mini"   ,  //  5,  6
+	"Minigun"				, "Minigun"          ,  //  7,  8
+	"Flak Cannon"			, "Flak Cannon"      ,  //  9, 10
+	"Pulse Gun"				, "Pulse Gun"        ,  // 11, 12
+	"Ripper"	 			, "Bio Rifle"        ,  // 13, 14
+	"Rocket Launcher"		, "Rocket Launcher"  ,  // 15, 16
+	"Shock Rifle"			, "Shock Rifle"      ,  // 17, 18
+	"Lightning Gun" 		, "Lightning Gun"    ,  // 19, 20
+	"Redeemer" 				, "Redeemer"         ,  // 21, 22
+};
+
 #libdefine QCW_Gauntlet         0
 #libdefine QCW_Machinegun       1
 #libdefine QCW_Shotgun          3
