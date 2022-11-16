@@ -77,9 +77,9 @@ OB_UTFlakCannon                     = "%o was shredded by %k's Flak Cannon.";
 OB_UTFlakCannonAlt                  = "%o was ripped to shreds by %k's shrapnel.";
 TAG_UTFlakCannon                    = "Flak Cannon";
 
-GOT_UTPulseMini                     = "You got a Mini Pulse Gun.";
+GOT_UTPulseMini                     = "You got a Link Gun.";
 OB_UTPulseMini                      = "%o was serveed an extra helping of %k's plasma.";
-TAG_UTPulseMini                     = "Mini Pulse Gun";
+TAG_UTPulseMini                     = "Link Gun";
 
 GOT_UTPulseGun                      = "You got a Pulse Gun.";
 OB_UTPulseGun                       = "%o ate %k's burning plasma death.";

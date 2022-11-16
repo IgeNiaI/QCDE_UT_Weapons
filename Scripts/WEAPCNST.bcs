@@ -27,7 +27,7 @@ str weaponNames[NUMBER_OF_WEAPONS] = {
 	"Impact Hammer",                                //  0
 	"Assault Rifle" 		, "Assault Rifle"    ,  //  1,  2
 	"Dispersion Pistol"		, "Flak Cannon Mini" ,  //  3,  4
-	"Pulse Gun Mini"		, "Pulse Gun Mini"   ,  //  5,  6
+	"Link Gun"				, "Link Gun"         ,  //  5,  6
 	"Minigun"				, "Minigun"          ,  //  7,  8
 	"Flak Cannon"			, "Flak Cannon"      ,  //  9, 10
 	"Pulse Gun"				, "Pulse Gun"        ,  // 11, 12

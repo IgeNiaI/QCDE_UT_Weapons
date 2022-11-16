@@ -92,7 +92,7 @@ UTDE/Weapons/Flak/Bounce3						"Sounds/Weapons/FL_Bounce3.wav"
 
 
 //********************
-// Pulse Gun Mini
+// Link Gun
 UTDE/Weapons/PulseMini/FireStartLoop			"Sounds/Weapons/PGM_Start_Loop.wav"
 UTDE/Weapons/PulseMini/Quad/FireStartLoop		"Sounds/Weapons/Quad/PGM_Start_Loop.wav"
 UTDE/Weapons/PulseMini/FireEnd					"Sounds/Weapons/PGM_End.wav"
