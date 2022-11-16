@@ -62,3 +62,10 @@ OptionMenu "QZDEBinds"
 	Control		"Join the game (custom)", 	"menu_join"
 	Control  	"Ready to play",			"ready"
 }
+
+OptionValue "StartingWeapon"
+{
+	1, "Assault Rifle"
+	2, "Flak Cannon (DM-only)"
+	3, "Link Gun"
+}
