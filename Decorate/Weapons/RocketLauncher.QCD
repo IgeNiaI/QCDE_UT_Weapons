@@ -821,16 +821,32 @@ Actor UTRocketMissile
 			Goto ExplodeNormal
 
 	ExplodeNormal:
+		TNT1 A 0 A_JumpIfInTargetInventory("Class_Ranger",1,"ExplodeNormalRanger")
 		TNT1 A 0 A_Explode(40,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 40
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(random(80,105),128,0,0,18)	//then another 80-105 extra damage for impacting a player + (60-100)dmg on the projectile =180-225dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
 		Goto DeathCont
 
+	ExplodeNormalRanger:
+		TNT1 A 0 A_Explode(32,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump to Ranger is 32
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(random(88,112),128,0,0,18)	//then another 88-112 extra damage for impacting a player + (60-100)dmg on the projectile =180-225dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		Goto DeathCont
+
 	ExplodeUpgraded:
+		TNT1 A 0 A_JumpIfInTargetInventory("Class_Ranger",1,"ExplodeUpgradedRanger")
 		TNT1 A 0 A_Explode(40,128,XF_HURTSOURCE,0,128)	//self rocket damage with rocket jump is 40
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(random(80,105),128,0,0,128)	//then another 80-105 extra damage for impacting a player + (60-100)dmg on the projectile =180-225dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		Goto DeathCont
+
+	ExplodeUpgradedRanger:
+		TNT1 A 0 A_Explode(32,128,XF_HURTSOURCE,0,128)	//self rocket damage with rocket jump is 32
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(random(88,112),128,0,0,128)	//then another 88-112 extra damage for impacting a player + (60-100)dmg on the projectile =180-225dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
 		Goto DeathCont
 
@@ -1004,14 +1020,19 @@ Actor UTRocketMissileDM : UTRocketMissile
 	States
 	{
 	ExplodeNormal:
+		TNT1 A 0 A_JumpIfInTargetInventory("Class_Ranger",1,"ExplodeNormalRanger")
 		TNT1 A 0 A_Explode(40,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump is 40
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
 		TNT1 A 0 A_Explode(35,128,0,0,18)		//then another 35 extra damage for impacting a player + (15)dmg on the projectile =90dmg
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 0 A_SpawnItemEx("QCRocketExploDebrisDM",-1,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
-		TNT1 AAAAA 0 A_SpawnItemEx("QCRocketExploParticle",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(1,6),random(0,359),SXF_NOCHECKPOSITION)
-		TNT1 A 10 A_SpawnItemEx("QCRocketExplosionDM",-2,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
-		Stop
+		Goto DeathCont
+
+	ExplodeNormalRanger:
+		TNT1 A 0 A_Explode(32,128,XF_HURTSOURCE,0,18)	//self rocket damage with rocket jump to Ranger is 32
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(43,128,0,0,18)		//then another 43 extra damage for impacting a player + (15)dmg on the projectile =90dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		Goto DeathCont
 	}
 }
 
