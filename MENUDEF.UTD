@@ -1,71 +1,39 @@
 
-OptionMenu "QZDEBinds"
+OptionMenu "QCDEBindsWeapons"
 {
-	Title "Customize Binds"
+	Title "WEAPONS BINDS"
 
 	StaticText ""
 
-	StaticText 	"Actions", 1
-	Control   	"Forward",			"+forward"
-	Control    	"Backward",			"+back"
-	Control    	"Strafe Left",		"+moveleft"
-	Control    	"Strafe Right",		"+moveright"
-	Control    	"Fire",				"+attack"
-	Control    	"Alt Fire",			"+altattack"
-	Control    	"Jump",				"+jump"
-	Control    	"Crouch",			"+crouch"
-	Control    	"Walk/Run",			"+speed"
-	Control    	"Use/Open",			"+use"
+	Control 	"Select starting weapon",	"+QCDE_StartingWeapon"
+	Control 	"Drop weapon",				"weapdrop"
+	Control 	"Drop weapon upgrade",		"drop_upgrade"
 
 	StaticText ""
 
-	Control 	"Use active ability",     "+user1"
-	Control 	"Champion information",   "+QCDE_ClassInfo"
-	Control 	"Voice line",             "voice"
-	Control 	"Drop weapon",            "weapdrop"
-	Control 	"Drop weapon upgrade",    "drop_upgrade"
-	Control 	"Change class",			  "mpclassmenu"
-	Control 	"Select starting weapon", "+QCDE_StartingWeapon"
-	Control 	"Open lootbox",           "invuse"
-
-	StaticText ""
-
-	StaticText 	"Weapons", 1
-	Control		"Impact Hammer",			"slot 1"
-	Control		"Minigun / AssaultRifle",	"slot 2"
-	Control		"Flak Cannon / Dispersion Pistol",	"slot 3"
-	Control		"Pulse Gun",				"slot 4"
-	Control		"Bio Rifle / Ripper",		"slot 5"
-	Control		"Rocket Launcher",			"slot 6"
-	Control		"Shock Rifle",				"slot 7"
-	Control		"Lightning Gun",			"slot 8"
-	Control		"Redeemer",					"slot 9"
-
-	StaticText 	""
-
-	StaticText 	"Chat", 1
-	Control 	"Say",					"messagemode"
-	Control 	"Team say",				"messagemode2"
-
-	StaticText ""
-
-	StaticText 	"Other", 1
-	Control    	"Open Console",				"toggleconsole"
-	Control		"Vote yes",					"vote_yes"
-	Control		"Vote no",					"vote_no"
-	Control 	"Toggle automap",			"togglemap"
-	Control 	"Show Scoreboard",			"+showscores"
-	Control		"Join spectators",			"spectate"
-	Control 	"Spectate next player",		"spynext"
-	Control 	"Screenshot",				"screenshot"
-	Option		"Join the game",			"joinmenukey", "JoinMenuKeys"
-	Control		"Join the game (custom)", 	"menu_join"
-	Control  	"Ready to play",			"ready"
+	Control		"Impact Hammer",						"slot 1"
+	Control		"Minigun / AssaultRifle",				"slot 2"
+	Control		"Flak Cannon / Dispersion Pistol",		"slot 3"
+	Control		"Pulse Gun / Link Gun",					"slot 4"
+	Control		"Bio Rifle / Ripper",					"slot 5"
+	Control		"Rocket Launcher",						"slot 6"
+	Control		"Shock Rifle",							"slot 7"
+	Control		"Lightning Gun",						"slot 8"
+	Control		"Redeemer",								"slot 9"
 }
 
 OptionValue "StartingWeapon"
 {
 	1, "Assault Rifle"
-	2, "Flak Cannon (DM-only)"
+	2, "Flak Cannon (DM only)"
 	3, "Link Gun"
+}
+
+OptionMenu "QCDEWeaponSkins"
+{
+	Title "Weapons Skins"
+
+	StaticText " "
+
+	StaticText "UT weapons addon doesn't support weapon skins yet"
 }
