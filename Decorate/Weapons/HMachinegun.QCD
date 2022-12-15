@@ -162,7 +162,7 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG B 1 Offset(2,35)
 		UTMG C 1 Offset(2,34)
 		UTMG D 1 Offset(1,33)
-		UTMG A 1 Offset(1,33) A_ReFire("FireLooper2")
+		UTMG A 1 Offset(0,32) A_ReFire("FireLooper2")
 		Goto EndFireLooper1
 
 	FireLooper2:
@@ -171,7 +171,7 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG B 1 Offset(4,36)
 		UTMG C 1 Offset(4,35)
 		UTMG D 1 Offset(3,34)
-		UTMG A 1 Offset(2,34) A_ReFire("FireLooper3")
+		UTMG A 1 Offset(1,33) A_ReFire("FireLooper3")
 		Goto EndFireLooper2
 
 	FireLooper3:
@@ -180,7 +180,7 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG B 1 Offset(5,38)
 		UTMG C 1 Offset(5,37)
 		UTMG D 1 Offset(4,36)
-		UTMG A 1 Offset(4,36) A_ReFire("FireLooper3")
+		UTMG A 1 Offset(3,35) A_ReFire("FireLooper3")
 		Goto EndFireLooper3
 
 	EndFireLooper1:
@@ -189,13 +189,13 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto Ready
 	EndFireLooper2:
 		UTMG E 1 A_PlaySound("UTDE/Weapons/Minigun/FireEnd",CHAN_WEAPON,1,0)
-		UTMG E 1 Offset(1,33)
+		UTMG E 1 Offset(0,32)
 		UTMG EFGHIIJJAAEEEFFFGGGHHHHIIIIJJJJA 1 A_WeaponReady(WRF_NOBOB)
 		Goto Ready
 	EndFireLooper3:
 		UTMG E 1 A_PlaySound("UTDE/Weapons/Minigun/FireEnd",CHAN_WEAPON,1,0)
-		UTMG E 1 Offset(2,35)
-		UTMG F 1 Offset(1,33)
+		UTMG E 1 Offset(1,33)
+		UTMG F 1 Offset(0,32)
 		UTMG EFGHIIJJAAEEEFFFGGGHHHHIIIIJJJJA 1 A_WeaponReady(WRF_NOBOB)
 		Goto Ready
 
@@ -263,9 +263,9 @@ Actor QCHeavyMachinegun : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		TNT1 A 0 A_GunFlash("AltFlash")
 		UTMG B 1 Offset(2,35)
-		UTMG C 1 Offset(2,35)
-		UTMG D 1 Offset(1,34)
-		UTMG A 1 Offset(1,34) A_ReFire("AltFireLooper2")
+		UTMG C 1 Offset(2,34)
+		UTMG D 1 Offset(1,33)
+		UTMG A 1 Offset(0,32) A_ReFire("AltFireLooper2")
 		Goto EndFireLooper1
 	AltFireLooper2:
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
@@ -273,7 +273,7 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG B 1 Offset(4,36)
 		UTMG C 1 Offset(4,35)
 		UTMG D 1 Offset(3,34)
-		UTMG A 1 Offset(2,34) A_ReFire("AltFireLooper3")
+		UTMG A 1 Offset(1,33) A_ReFire("AltFireLooper3")
 		Goto EndFireLooper2
 	AltFireLooper3:
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
@@ -281,7 +281,7 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG B 1 Offset(5,38)
 		UTMG C 1 Offset(5,37)
 		UTMG D 1 Offset(4,36)
-		UTMG A 1 Offset(4,36) A_ReFire("AltFireLooper4")
+		UTMG A 1 Offset(3,34) A_ReFire("AltFireLooper4")
 		Goto EndFireLooper3
 	AltFireLooper4:
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
@@ -289,7 +289,7 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG B 1 Offset(5,38)
 		UTMG C 1 Offset(5,37)
 		UTMG D 1 Offset(4,36)
-		UTMG A 1 Offset(4,36) A_ReFire("AltFireLooper5")
+		UTMG A 1 Offset(3,34) A_ReFire("AltFireLooper5")
 		Goto EndFireLooper3
 	AltFireLooper5:
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
@@ -297,7 +297,7 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG B 1 Offset(5,38)
 		UTMG C 1 Offset(5,37)
 		UTMG D 1 Offset(4,36)
-		UTMG A 1 Offset(4,36) A_ReFire("AltFireLooper6")
+		UTMG A 1 Offset(3,34) A_ReFire("AltFireLooper6")
 		Goto EndFireLooper3
 	AltFireLooper6:
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
@@ -305,7 +305,7 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG B 1 Offset(5,38)
 		UTMG C 1 Offset(5,37)
 		UTMG D 1 Offset(4,36)
-		UTMG A 1 Offset(4,36) A_ReFire("AltFireFast")
+		UTMG A 1 Offset(3,34) A_ReFire("AltFireFast")
 		Goto EndFireLooper3
 
 	AltFireLooperFast:
@@ -375,11 +375,11 @@ Actor QCHeavyMachinegun : QCWeapon
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd",CHAN_WEAPON,1,0)
 		TNT1 A 0 Offset(4,37)
 		UTMG E 1 A_WeaponReady(WRF_NOBOB)
-		TNT1 A 0 Offset(3,36)
-		UTMG G 1 A_WeaponReady(WRF_NOBOB)
 		TNT1 A 0 Offset(2,35)
+		UTMG G 1 A_WeaponReady(WRF_NOBOB)
+		TNT1 A 0 Offset(1,34)
 		UTMG A 1 A_WeaponReady(WRF_NOBOB)
-		TNT1 A 0 Offset(1,33)
+		TNT1 A 0 Offset(0,32)
 		UTMG EFGHIIJJAAEEEFFFGGGHHHHIIIIJJJJA 1 A_WeaponReady(WRF_NOBOB)
 		Goto Ready
 	AltEndFireLooper2:
@@ -388,11 +388,11 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG E 1 A_WeaponReady(WRF_NOBOB)
 		TNT1 A 0 Offset(4,37)
 		UTMG G 1 A_WeaponReady(WRF_NOBOB)
-		TNT1 A 0 Offset(3,36)
-		UTMG A 1 A_WeaponReady(WRF_NOBOB)
 		TNT1 A 0 Offset(2,35)
+		UTMG A 1 A_WeaponReady(WRF_NOBOB)
+		TNT1 A 0 Offset(1,34)
 		UTMG E 1 A_WeaponReady(WRF_NOBOB)
-		TNT1 A 0 Offset(1,33)
+		TNT1 A 0 Offset(0,32)
 		UTMG GIAEFGHIJAAEEFFGGHHHIIIJJJAAAEEEEFFFFGGGGHHHHIIIIJJJJA 1 A_WeaponReady(WRF_NOBOB)
 		Goto Ready
 	AltEndFireLooper3:
@@ -405,11 +405,11 @@ Actor QCHeavyMachinegun : QCWeapon
 		UTMG E 1 A_WeaponReady(WRF_NOBOB)
 		TNT1 A 0 Offset(4,37)
 		UTMG G 1 A_WeaponReady(WRF_NOBOB)
-		TNT1 A 0 Offset(3,36)
-		UTMG A 1 A_WeaponReady(WRF_NOBOB)
 		TNT1 A 0 Offset(2,35)
+		UTMG A 1 A_WeaponReady(WRF_NOBOB)
+		TNT1 A 0 Offset(1,34)
 		UTMG E 1 A_WeaponReady(WRF_NOBOB)
-		TNT1 A 0 Offset(1,33)
+		TNT1 A 0 Offset(0,32)
 		UTMG GIAEFGHIJAAEEFFGGHHHIIIJJJAAAEEEEFFFFGGGGHHHHIIIIJJJJA 1 A_WeaponReady(WRF_NOBOB)
 		Goto Ready
 

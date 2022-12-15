@@ -151,10 +151,10 @@ Actor QCBFG : QCWeapon
 		TNT1 A 0 A_GunFlash("FlashCheckSound")
 		TNT1 A 0 A_AlertMonsters
 
-		UTRD B 1 Bright Offset(3, 34)
-		UTRD B 1 Bright Offset(5, 36)
-		UTRD B 1 Bright Offset(7, 38)
-		UTRD C 1 Offset(9, 40)
+		UTRD B 1 Bright Offset(3, 35)
+		UTRD B 1 Bright Offset(5, 37)
+		UTRD B 1 Bright Offset(7, 39)
+		UTRD C 1 Offset(9, 41)
 		UTRD D 1
 		UTRD E 1
 		UTRD F 1
@@ -172,16 +172,16 @@ Actor QCBFG : QCWeapon
 		UTRD E 1
 		UTRD D 1
 		UTRD D 1
-		UTRD D 1 Offset(9, 40)
-		UTRD D 1 Offset(8, 39)
-		UTRD D 1 Offset(7, 38)
-		UTRD D 1 Offset(6, 37)
-		UTRD C 1 Offset(5, 36)
-		UTRD C 1 Offset(4, 35)
-		UTRD C 1 Offset(3, 34)
-		UTRD C 1 Offset(2, 33)
-		UTRD C 1 Offset(1, 32)
-		UTRD C 1 Offset(0, 31)
+		UTRD D 1 Offset(9, 41)
+		UTRD D 1 Offset(8, 40)
+		UTRD D 1 Offset(7, 39)
+		UTRD D 1 Offset(6, 38)
+		UTRD C 1 Offset(5, 37)
+		UTRD C 1 Offset(4, 36)
+		UTRD C 1 Offset(3, 35)
+		UTRD C 1 Offset(2, 34)
+		UTRD C 1 Offset(1, 33)
+		UTRD C 1 Offset(0, 32)
 		Goto Ready
 
 	FlashCheckSound:

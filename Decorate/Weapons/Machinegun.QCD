@@ -128,19 +128,19 @@ Actor QCMachineGun : QCWeapon
 	FireLooper:
 		UTAR A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		UTAR B 0 A_GunFlash("Flash")
-		UTAR B 1 Offset(2,34)
-		UTAR C 1 Offset(3,34)
-		UTAR D 1 Offset(2,33)
-		UTAR A 1 Offset(1,32) A_ReFire("FireLooperNA")
+		UTAR B 1 Offset(1,33)
+		UTAR C 1 Offset(2,34)
+		UTAR D 1 Offset(1,33)
+		UTAR A 1 Offset(0,32) A_ReFire("FireLooperNA")
 		Goto EndFireLooper
 
 	FireLooperNA:
 		UTAR A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		UTAR B 0 A_GunFlash("FlashNA")
-		UTAR B 1 Offset(2,34)
-		UTAR C 1 Offset(3,34)
-		UTAR D 1 Offset(2,33)
-		UTAR A 1 Offset(1,32) A_ReFire("FireLooper")
+		UTAR B 1 Offset(1,33)
+		UTAR C 1 Offset(2,34)
+		UTAR D 1 Offset(1,33)
+		UTAR A 1 Offset(0,32) A_ReFire("FireLooper")
 		Goto EndFireLooper
 
 	EndFireLooper:
@@ -192,10 +192,10 @@ Actor QCMachineGunDM : QCMachineGun
 	FireLooper:
 		UTAR A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		UTAR B 0 A_GunFlash("Flash")
-		UTAR B 1 Offset(2,34)
-		UTAR C 1 Offset(3,34)
-		UTAR D 1 Offset(2,33)
-		UTAR A 1 Offset(1,32) A_ReFire("FireLooper")
+		UTAR B 1 Offset(1,33)
+		UTAR C 1 Offset(2,34)
+		UTAR D 1 Offset(1,33)
+		UTAR A 1 Offset(0,32) A_ReFire("FireLooper")
 		Goto EndFireLooper
 
 	Flash:
