@@ -251,7 +251,7 @@ Script "QCDE_ZoomControl" (int predicting, int justPressed, int justReleased, in
 {
 	if (!predicting)
 	{
-		// in UTDE, only Lightning Gun can zoom
+		// in UTDE, only Sniper  Rifle can zoom
 		if (CheckWeapon("QCRailgun") || CheckWeapon("QCRailgunDM"))
 		{
 			bool shouldZoomIn = !CheckInventory("WeaponZoomedToken") && justPressed;
@@ -260,7 +260,7 @@ Script "QCDE_ZoomControl" (int predicting, int justPressed, int justReleased, in
 			if (shouldZoomIn)
 			{
 				SetNetworkReplicationFlags( NETREP_SKIPOWNER );
-				PlaySound(0,"UTDE/Weapons/LightningGun/ZoomIn",CHAN_7,1.0,false);
+				PlaySound(0,"UTDE/Weapons/SniperRifle/ZoomIn",CHAN_7,1.0,false);
 				SetNetworkReplicationFlags( 0 );
 				SetInventory("WeaponZoomedToken", 1);
 				SetPlayerWeaponZoomFactor(PlayerNumber(), GetCVar("cl_railgunZoom"));
@@ -268,7 +268,7 @@ Script "QCDE_ZoomControl" (int predicting, int justPressed, int justReleased, in
 			else if (shouldZoomOut)
 			{
 				SetNetworkReplicationFlags( NETREP_SKIPOWNER );
-				PlaySound(0,"UTDE/Weapons/LightningGun/ZoomOut",CHAN_7,1.0,false);
+				PlaySound(0,"UTDE/Weapons/SniperRifle/ZoomOut",CHAN_7,1.0,false);
 				SetNetworkReplicationFlags( 0 );
 				SetInventory("WeaponZoomedToken", 0);
 				SetPlayerWeaponZoomFactor(PlayerNumber(), 1.0);
@@ -287,7 +287,22 @@ Script "UTDE_RlAltCheck" (void)
 
 
 // Activator: noisy projectile in flight
-script "UTDE_AttachWhoosh" (void)
+script "UTDE_AttachWhooshShock" (void)
+{
+	// redeemer rocket
+	int tid = ActivatorTid();
+	if(!tid)
+	{
+		tid = UniqueTid();
+		Thing_ChangeTid(0,tid);
+	}
+
+	// whoosh!
+	PlaySound(tid, "UTDE/Weapons/ShockRifle/OrbFly",CHAN_5,1.0,true,1.0);
+}
+
+// Activator: noisy projectile in flight
+script "UTDE_AttachWhooshRedeemer" (void)
 {
 	// redeemer rocket
 	int tid = ActivatorTid();
@@ -304,16 +319,37 @@ script "UTDE_AttachWhoosh" (void)
 
 script "UTDE_HoldBioNoAmmo" (void)
 {
-	if(CheckInventory("QCBoltAmmo") <= 0 && GetPlayerInput(-1, INPUT_BUTTONS) & BT_ALTATTACK)
+	if(GetPlayerInput(-1, INPUT_BUTTONS) & BT_ALTATTACK)
 		SetResultValue(1);
 	else
 		SetResultValue(0);
 }
 
-script "UTDE_HoldRocketNoAmmo" (void)
+#define MOVEMENT_BUTTONS (BT_MOVELEFT|BT_FORWARD|BT_MOVERIGHT|BT_BACK)
+script "UTDE_StationarySniperUpgrade" (void)
 {
-	if(CheckInventory("QCRocketAmmo") <= 0 && GetPlayerInput(-1, INPUT_BUTTONS) & BT_ALTATTACK)
-		SetResultValue(1);
-	else
-		SetResultValue(0);
+	// This passive is human-scum-only.
+	if(PlayerIsBot(PlayerNumber())) terminate;
+
+	while(strcmp(GetWeapon(),"QCRailgun") == 0)
+	{
+		SetNetworkReplicationFlags( NETREP_SKIPOWNER );
+		bool takeCharges = GetPlayerInput(-1, INPUT_BUTTONS) & MOVEMENT_BUTTONS || !CheckInventory("WeaponZoomedToken");
+		bool giveCharges = !takeCharges && CheckInventory("RG_UG_Explosive") && CheckInventory("RailgunCharges") < 52;
+		if (takeCharges)
+		{
+			TakeInventory("RailgunCharges",32767);
+		}
+		else if (giveCharges)
+		{
+			GiveInventory("RailgunCharges",1);
+			if (CheckInventory("RailgunCharges") >= 52)
+			{
+				PlaySound(0,"QC/Weapons/Railgun/ChargeFull",CHAN_6,1.0,false);
+			}
+		}
+		SetNetworkReplicationFlags( 0 );
+
+		delay(1);
+	}
 }

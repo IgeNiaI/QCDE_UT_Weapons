@@ -324,8 +324,6 @@ statusbar Normal, forcescaled
 	}
 
 	// Railgun and HMG reticles when zoomed
-	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM
-	{	inInventory WeaponZoomedToken	{ drawImage "HMGRETCL", 	184,172; }		}
 	isSelected QCRailgun 			, QCRailgunDM
 	{	inInventory WeaponZoomedToken	{ drawImage "RGNRETCL", 	184,172; }		}
 	}
@@ -430,7 +428,7 @@ statusbar Normal, forcescaled
 		inInventory QCLightningGun		|| QCLightningGunDM		{ drawBar "AMMOBAR1", "AMMOBAR0",	QCCoilAmmo 		, vertical, 1499,710; }
 		inInventory QCRailgun 			|| QCRailgunDM			{ drawBar "AMMOBAR1", "AMMOBAR0",	QCSlugAmmo 		, vertical, 1499,780; }
 		inInventory QCBFG 				|| QCBFGDM				{ drawBar "AMMOBAR1", "AMMOBAR0",	QCBFGAmmo		, vertical, 1499,850; }
-		
+
 		// shotguns are special
 		inInventory QCShotgunDM || QCSuperShotgunDM {
 			drawBar "AMMOBAR1", "AMMOBAR0",	QCShellAmmo		, vertical, 1499,430;
@@ -563,7 +561,7 @@ statusbar Normal, forcescaled
 		inInventory QCLightningGun		|| QCLightningGunDM		{ drawBar "AMMOBAR1", "AMMOBAR0",	QCCoilAmmo 		, vertical, 1599,710; }
 		inInventory QCRailgun 			|| QCRailgunDM			{ drawBar "AMMOBAR1", "AMMOBAR0",	QCSlugAmmo 		, vertical, 1599,780; }
 		inInventory QCBFG 				|| QCBFGDM				{ drawBar "AMMOBAR1", "AMMOBAR0",	QCBFGAmmo		, vertical, 1599,850; }
-		
+
 		// shotguns are special
 		inInventory QCShotgunDM || QCSuperShotgunDM {
 			drawBar "AMMOBAR1", "AMMOBAR0",	QCShellAmmo		, vertical, 1599,430;
@@ -773,7 +771,7 @@ statusbar Normal, forcescaled
 		drawNumber 3, QCFNT040, bludi, MurderToken, alignment(right), 1014,991;
 		drawString     BIGFONT, brite, " kills to buff"             , 1014,996, 0, alignment(left);
 	}}
-	// Multiuse charges (Keel, Lucienne, Freeman, etc)
+	// Multiuse charges (Corvus, Keel, Lucienne, Freeman)
 	inInventory MultiuseCharge {
 		drawNumber 2, QCFNT060, brite, MultiuseCharge, alignment(center),700,950;
 	}
@@ -1353,8 +1351,6 @@ statusbar Fullscreen, forcescaled
 	}
 
 	// Railgun and HMG reticles when zoomed
-	isSelected QCHeavyMachinegun 	, QCHeavyMachinegunDM
-	{	inInventory WeaponZoomedToken	{ drawImage "HMGRETCL", 	184,172; }		}
 	isSelected QCRailgun 			, QCRailgunDM
 	{	inInventory WeaponZoomedToken	{ drawImage "RGNRETCL", 	184,172; }		}
 	}
@@ -1459,7 +1455,7 @@ statusbar Fullscreen, forcescaled
 		inInventory QCLightningGun		|| QCLightningGunDM		{ drawBar "AMMOBAR1", "AMMOBAR0",	QCCoilAmmo 		, vertical, 1499,710; }
 		inInventory QCRailgun 			|| QCRailgunDM			{ drawBar "AMMOBAR1", "AMMOBAR0",	QCSlugAmmo 		, vertical, 1499,780; }
 		inInventory QCBFG 				|| QCBFGDM				{ drawBar "AMMOBAR1", "AMMOBAR0",	QCBFGAmmo		, vertical, 1499,850; }
-		
+
 		// shotguns are special
 		inInventory QCShotgunDM || QCSuperShotgunDM {
 			drawBar "AMMOBAR1", "AMMOBAR0",	QCShellAmmo		, vertical, 1499,430;
@@ -1592,7 +1588,7 @@ statusbar Fullscreen, forcescaled
 		inInventory QCLightningGun		|| QCLightningGunDM		{ drawBar "AMMOBAR1", "AMMOBAR0",	QCCoilAmmo 		, vertical, 1599,710; }
 		inInventory QCRailgun 			|| QCRailgunDM			{ drawBar "AMMOBAR1", "AMMOBAR0",	QCSlugAmmo 		, vertical, 1599,780; }
 		inInventory QCBFG 				|| QCBFGDM				{ drawBar "AMMOBAR1", "AMMOBAR0",	QCBFGAmmo		, vertical, 1599,850; }
-		
+
 		// shotguns are special
 		inInventory QCShotgunDM || QCSuperShotgunDM {
 			drawBar "AMMOBAR1", "AMMOBAR0",	QCShellAmmo		, vertical, 1599,430;
@@ -1802,7 +1798,7 @@ statusbar Fullscreen, forcescaled
 		drawNumber 3, QCFNT040, bludi, MurderToken, alignment(right), 1014,991;
 		drawString     BIGFONT, brite, " kills to buff"             , 1014,996, 0, alignment(left);
 	}}
-	// Multiuse charges (Keel, Lucienne, Freeman, etc)
+	// Multiuse charges (Corvus, Keel, Lucienne, Freeman)
 	inInventory MultiuseCharge {
 		drawNumber 2, QCFNT060, brite, MultiuseCharge, alignment(center),700,950;
 	}

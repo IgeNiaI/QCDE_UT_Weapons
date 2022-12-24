@@ -38,10 +38,9 @@ $volume "UTDE/Weapons/ImpactHammer/Quad/AltFire"	0.80
 
 
 //********************
-// Assault Rifle
-UTDE/Weapons/AssaultRifle/FireStartLoop			"Sounds/Weapons/AR_Fire_Looper.wav"
-UTDE/Weapons/AssaultRifle/Quad/FireStartLoop	"Sounds/Weapons/Quad/AR_Fire_Looper.wav"
-UTDE/Weapons/AssaultRifle/FireEnd				"Sounds/Weapons/AR_End.wav"
+// Enforcer
+UTDE/Weapons/Enforcer/Fire				"Sounds/Weapons/EN_Fire.wav"
+UTDE/Weapons/Enforcer/Quad/Fire			"Sounds/Weapons/Quad/EN_Fire.wav"
 
 
 //********************
@@ -64,16 +63,16 @@ $volume "UTDE/Weapons/Minigun/FireEnd"						0.80
 
 
 //********************
-// Flak Cannon Mini
-UTDE/Weapons/FlakMini/Fire						"Sounds/Weapons/FLM_Fire.wav"
-UTDE/Weapons/FlakMini/Quad/Fire					"Sounds/Weapons/Quad/FLM_Fire.wav"
-
-
-//********************
 // Dispersion Pistol
 UTDE/Weapons/Dispr/Fire							"Sounds/Weapons/DP_Fire.wav"
 UTDE/Weapons/Dispr/Quad/Fire					"Sounds/Weapons/Quad/DP_Fire.wav"
 UTDE/Weapons/Dispr/Impact						"Sounds/Weapons/DP_Impact.wav"
+
+
+//********************
+// Flak Cannon Mini
+UTDE/Weapons/FlakMini/Fire						"Sounds/Weapons/FLM_Fire.wav"
+UTDE/Weapons/FlakMini/Quad/Fire					"Sounds/Weapons/Quad/FLM_Fire.wav"
 
 
 //********************
@@ -93,13 +92,13 @@ UTDE/Weapons/Flak/Bounce3						"Sounds/Weapons/FL_Bounce3.wav"
 
 //********************
 // Link Gun
-UTDE/Weapons/PulseMini/FireStartLoop			"Sounds/Weapons/PGM_Start_Loop.wav"
-UTDE/Weapons/PulseMini/Quad/FireStartLoop		"Sounds/Weapons/Quad/PGM_Start_Loop.wav"
-UTDE/Weapons/PulseMini/FireEnd					"Sounds/Weapons/PGM_End.wav"
+UTDE/Weapons/LinkGun/FireStartLoop				"Sounds/Weapons/LG_Start_Loop.wav"
+UTDE/Weapons/LinkGun/Quad/FireStartLoop			"Sounds/Weapons/Quad/LG_Start_Loop.wav"
+UTDE/Weapons/LinkGun/FireEnd					"Sounds/Weapons/LG_End.wav"
 
-$volume "UTDE/Weapons/PulseMini/FireStartLoop"		0.65
-$volume "UTDE/Weapons/PulseMini/Quad/FireStartLoop"	0.65
-$volume "UTDE/Weapons/PulseMini/FireEnd"			0.65
+$volume "UTDE/Weapons/LinkGun/FireStartLoop"		0.65
+$volume "UTDE/Weapons/LinkGun/Quad/FireStartLoop"	0.65
+$volume "UTDE/Weapons/LinkGun/FireEnd"				0.65
 
 
 //********************
@@ -138,10 +137,18 @@ UTDE/Weapons/BioRifle/Fire						"Sounds/Weapons/BR_Fire.wav"
 UTDE/Weapons/BioRifle/Quad/Fire					"Sounds/Weapons/Quad/BR_Fire.wav"
 UTDE/Weapons/BioRifle/Charge					"Sounds/Weapons/BR_Charge.wav"
 
-$random UTDE/Weapons/BioRifle/Impact { UTDE/Weapons/BioRifle/Impact1 UTDE/Weapons/BioRifle/Impact2 }
+$random UTDE/Weapons/BioRifle/Impact { UTDE/Weapons/BioRifle/Impact1 UTDE/Weapons/BioRifle/Impact2
+		UTDE/Weapons/BioRifle/Impact3 UTDE/Weapons/BioRifle/Impact4 UTDE/Weapons/BioRifle/Impact5
+		UTDE/Weapons/BioRifle/Impact6 UTDE/Weapons/BioRifle/Impact7 UTDE/Weapons/BioRifle/Impact8 }
 
 UTDE/Weapons/BioRifle/Impact1					"Sounds/Weapons/BR_Impact1.wav"
 UTDE/Weapons/BioRifle/Impact2					"Sounds/Weapons/BR_Impact2.wav"
+UTDE/Weapons/BioRifle/Impact3					"Sounds/Weapons/BR_Impact3.wav"
+UTDE/Weapons/BioRifle/Impact4					"Sounds/Weapons/BR_Impact4.wav"
+UTDE/Weapons/BioRifle/Impact5					"Sounds/Weapons/BR_Impact5.wav"
+UTDE/Weapons/BioRifle/Impact6					"Sounds/Weapons/BR_Impact6.wav"
+UTDE/Weapons/BioRifle/Impact7					"Sounds/Weapons/BR_Impact7.wav"
+UTDE/Weapons/BioRifle/Impact8					"Sounds/Weapons/BR_Impact8.wav"
 
 
 //********************
@@ -166,6 +173,7 @@ UTDE/Weapons/ShockRifle/Fire					"Sounds/Weapons/SR_Fire.wav"
 UTDE/Weapons/ShockRifle/Quad/Fire				"Sounds/Weapons/Quad/SR_Fire.wav"
 UTDE/Weapons/ShockRifle/AltFire					"Sounds/Weapons/SR_Fire_Alt.wav"
 UTDE/Weapons/ShockRifle/Quad/AltFire			"Sounds/Weapons/Quad/SR_Fire_Alt.wav"
+UTDE/Weapons/ShockRifle/OrbFly					"Sounds/Weapons/SR_Orb_Fly.wav"
 UTDE/Weapons/ShockRifle/OrbHit					"Sounds/Weapons/SR_Orb_Hit.wav"
 UTDE/Weapons/ShockRifle/OrbExplo				"Sounds/Weapons/SR_Orb_Explo.wav"
 
@@ -174,13 +182,13 @@ $volume "UTDE/Weapons/ShockRifle/Quad/Fire"	0.70
 
 
 //********************
-// Lightning Gun
-UTDE/Weapons/LightningGun/Fire					"Sounds/Weapons/LG_Fire.wav"
-UTDE/Weapons/LightningGun/Quad/Fire				"Sounds/Weapons/Quad/LG_Fire.wav"
-UTDE/Weapons/LightningGun/Impact				"Sounds/Weapons/LG_Impact.wav"
-UTDE/Weapons/LightningGun/Charge				"Sounds/Weapons/LG_Charge.wav"
-UTDE/Weapons/LightningGun/ZoomIn				"Sounds/Weapons/LG_ZoomIn.ogg"
-UTDE/Weapons/LightningGun/ZoomOut				"Sounds/Weapons/LG_ZoomOut.ogg"
+// Sniper Rifle
+UTDE/Weapons/SniperRifle/Fire				"Sounds/Weapons/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Quad/Fire			"Sounds/Weapons/Quad/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Reload				"Sounds/Weapons/SP_Reload.wav"
+UTDE/Weapons/SniperRifle/ZoomIn				"Sounds/Weapons/SP_ZoomIn.ogg"
+UTDE/Weapons/SniperRifle/ZoomOut			"Sounds/Weapons/SP_ZoomOut.ogg"
+UTDE/Weapons/SniperRifle/Impact				"Sounds/Weapons/SP_Impact.wav"
 
 
 //********************

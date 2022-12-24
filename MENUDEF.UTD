@@ -13,13 +13,13 @@ OptionMenu "QCDEBindsWeapons"
 	StaticText ""
 
 	Control		"Impact Hammer",						"slot 1"
-	Control		"Minigun / AssaultRifle",				"slot 2"
+	Control		"Minigun / Enforcer",					"slot 2"
 	Control		"Flak Cannon / Dispersion Pistol",		"slot 3"
 	Control		"Pulse Gun / Link Gun",					"slot 4"
 	Control		"Bio Rifle / Ripper",					"slot 5"
 	Control		"Rocket Launcher",						"slot 6"
 	Control		"Shock Rifle",							"slot 7"
-	Control		"Lightning Gun",						"slot 8"
+	Control		"Sniper Rifle",							"slot 8"
 	Control		"Redeemer",								"slot 9"
 }
 

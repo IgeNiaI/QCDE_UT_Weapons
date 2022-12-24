@@ -1,7 +1,7 @@
 // --------------------------------------------------------------------------
 //
 // Flak Cannon Mini
-// Weapon and Pickup sprite by Pixo
+// Weapon sprites by geNia, Pickup and HUD sprites by Pixo
 // Weapon code by geNia
 //
 // --------------------------------------------------------------------------
@@ -92,7 +92,7 @@ Actor QCShotgun : QCWeapon
 {
 	+INVENTORY.ALWAYSPICKUP
 	Height 48
-	Weapon.SwaySpeed 3.2
+	Weapon.SwaySpeed 3.4
 	Weapon.Kickback 35
 	Weapon.SelectionOrder 1940
 	Weapon.AmmoGive 1
@@ -562,7 +562,7 @@ Actor QCShotgunDM : QCShotgun
 		UTFM O 1 Offset(3,35)
 		UTFM O 1 Offset(2,34)
 		UTFM P 1 Offset(1,33)
-		UTFM Q 1 Offset(0,32)	//28
+		UTFM P 1 Offset(0,32)	//28
 		Goto Ready
 
 	Flash:

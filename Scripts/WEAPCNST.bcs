@@ -1,5 +1,6 @@
 #library "WEAPCNST"
 #include "zcommon.acs"
+#import "QCDE.bcs"
 
 #libdefine NUMBER_OF_WEAPONS  23
 #libdefine NUMBER_OF_UPGRADES  3 // per weapon
@@ -25,7 +26,7 @@ str weaponList[NUMBER_OF_WEAPONS] = {
 
 str weaponNames[NUMBER_OF_WEAPONS] = {
 	"Impact Hammer",                                //  0
-	"Assault Rifle" 		, "Assault Rifle"    ,  //  1,  2
+	"Enforcer" 				, "Enforcer"         ,  //  1,  2
 	"Dispersion Pistol"		, "Flak Cannon Mini" ,  //  3,  4
 	"Link Gun"				, "Link Gun"         ,  //  5,  6
 	"Minigun"				, "Minigun"          ,  //  7,  8
@@ -34,7 +35,7 @@ str weaponNames[NUMBER_OF_WEAPONS] = {
 	"Ripper"	 			, "Bio Rifle"        ,  // 13, 14
 	"Rocket Launcher"		, "Rocket Launcher"  ,  // 15, 16
 	"Shock Rifle"			, "Shock Rifle"      ,  // 17, 18
-	"Lightning Gun" 		, "Lightning Gun"    ,  // 19, 20
+	"Sniper Rifle" 			, "Sniper Rifle"     ,  // 19, 20
 	"Redeemer" 				, "Redeemer"         ,  // 21, 22
 };
 
@@ -84,44 +85,44 @@ str weaponNames[NUMBER_OF_WEAPONS] = {
 #libdefine WU_DESC3      9
 
 str WeaponUpgrades[NUMBER_OF_WEAPONS][NUMBER_OF_UPGRADES][10] = {
-	// Gauntlet
+	// Impact Hammer
 	{	{"Upgrade_0_1" , "UPG_00_1", "0AUNTLET", "1AUNTLET", "GNT_UG_Burn"		, "", "Impact compensation",	"No self damage when hitting a wall or floor.", "", ""},
 		{"Upgrade_0_2" , "UPG_00_2", "0AUNTLET", "1AUNTLET", "GNT_UG_Omni"		, "", "Pneumatic rework",	"Both attack modes fire a compressed air ball,", "that pushes enemies and projectiles away.", ""},
 		{0}},
 
-	// Machinegun
+	// Enforcer
 	{{0},{0},{0}}, // no upgrades for starting weapons
 	{{0},{0},{0}}, // no upgrades for DM
 
-	// Shotgun
+	// Dispersion Pistol
 	{	{"Upgrade_3_1" , "UPG_03_1", "0DISPERS", "1DISPERS", "SG_UG_Spread"		, "", "Power Up",			"Increases weapon damage,", "but decreases attack speed.", ""},
 		{"Upgrade_3_2" , "UPG_03_2", "0DISPERS", "1DISPERS", "SG_UG_Explosive"	, "", "Power Up",			"Increases weapon damage,", "but decreases attack speed.", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
-	// Nailgun
+	// Link Gun
 	{{0},{0},{0}}, // no upgrades for starting weapons
 	{{0},{0},{0}}, // no upgrades for DM
 
-	// Heavy Machinegun
+	// Minigun
 	{	{"Upgrade_7_1" , "UPG_07_1", "0MACHINE", "1MACHINE", "HMG_UG_Ricochet"	, "", "Higher calibre",		"Both fire modes deal more damage.", "", ""},
 		{"Upgrade_7_2" , "UPG_07_2", "0MACHINE", "1MACHINE", "HMG_UG_Pierce"	, "", "Larger gear ratio",	"Secondary fire shoots even faster.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
-	// Super Shotgun
+	// Flak Cannon
 	{	{"Upgrade_9_1" , "UPG_09_1", "0SHOTGUN", "1SHOTGUN", "SSG_UG_Speed"		, "", "Debris shield",		"No self damage from debris.", "", ""},
 		{"Upgrade_9_2" , "UPG_09_2", "0SHOTGUN", "1SHOTGUN", "SSG_UG_Flame"		, "", "Packed shell",		"Both fire modes shoot more debris.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
-	// Super Nailgun
+	// Pulse Gun
 	{	{"Upgrade_11_1", "UPG_11_1", "0NAILGUN", "1NAILGUN", "SNG_UG_Lava"		, "", "Volatile plasma",		"Primary fire explodes on hit.", "", ""},
 		{"Upgrade_11_2", "UPG_11_2", "0NAILGUN", "1NAILGUN", "SNG_UG_Seeker"	, "", "Piercing beam",		"Secondary fire beams thru enemies.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
-	// Tribolt
+	// Ripper
 	{	{"Upgrade_13_1", "UPG_13_1", "0IPPERR" , "1IPPERR",  "TB_UG_Long"		, "", "Durable blades n' durable you",	"No self damage, blades bounce more.", "", ""},
 		{"Upgrade_13_2", "UPG_13_2", "0IPPERR" , "1IPPERR",  "TB_UG_Grenade"	, "", "Razor blades",						"Secondary fire rips thru enemies.", "", ""},
 		{0}},
@@ -133,19 +134,19 @@ str WeaponUpgrades[NUMBER_OF_WEAPONS][NUMBER_OF_UPGRADES][10] = {
 		{"Upgrade_15_3", "UPG_15_3", "0AUNCHER", "1AUNCHER",  0					, "(cheater)", "Square Root Rocket", "''Michaelis would do everything with square roots. ", "He once said we should make a square root rocket launcher.'' ", "    -DBT"}},
 	{{0},{0},{0}}, // no upgrades for DM
 
-	// Lightning Gun
+	// Shock Rifle
 	{	{"Upgrade_17_1", "UPG_17_1", "0IGHTNIN", "1IGHTNIN",  "LG_UG_Residue"	, "", "Supercharged shock",	"Primary fire has higher knockback.", "", ""},
 		{"Upgrade_17_2", "UPG_17_2", "0IGHTNIN", "1IGHTNIN",  "LG_UG_Static"	, "", "Gravity core",		"Secondary fire combo sucks enemies in,", "and then explodes.", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
-	// Railgun
-	{	{"Upgrade_19_1", "UPG_19_1", "0RAILGUN", "1RAILGUN",  "RG_UG_Pierce"	, "", "Voltage Surge",		"Shots are always fully charged.", "", ""},
-		{"Upgrade_19_2", "UPG_19_2", "0RAILGUN", "1RAILGUN",  "RG_UG_Explosive"	, "", "Overcharged Coils",	"Full charge shoots additional lightning beams.", "", ""},
+	// Sniper Rifle
+	{	{"Upgrade_19_1", "UPG_19_1", "0RAILGUN", "1RAILGUN",  "RG_UG_Pierce"	, "", "Silencer",			"Firing no longer alerts monsters.", "", ""},
+		{"Upgrade_19_2", "UPG_19_2", "0RAILGUN", "1RAILGUN",  "RG_UG_Explosive"	, "", "Steady aim",			"Standing still while zoomed increases damage.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
-	// BFG
+	// Redeemer
 	{	{"Upgrade_21_1", "UPG_21_1", "0BIGFGUN", "1BIGFGUN", "BFG_UG_Rays"		, "", "Nuke Survivor",		"Lower self damage.", "", ""},
 		{"Upgrade_21_2", "UPG_21_2", "0BIGFGUN", "1BIGFGUN", "BFG_UG_Charge"	, "", "Pivoting thruster",	"Alt-fire rocket turns faster.", "", ""},
 		{0}},
@@ -184,7 +185,7 @@ int GenericDMAmmoCapacity[8] = {
 		50,		//3  ripper
 		30,		//4  rocket launcher
 		50,		//5  shock rifle
-		25,		//6  lightning gun
+		25,		//6  sniper rifle
 		1		//7  redeemer
 	};
 
@@ -195,7 +196,7 @@ int BittermanDMAmmoCapacity[8] = {
 		75,		//3  ripper
 		45,		//4  rocket launcher
 		75,		//5  shock rifle
-		30,		//6  lightning gun
+		30,		//6  sniper rifle
 		1		//7  redeemer
 	};
 
@@ -206,8 +207,8 @@ int LowAmmoWarningThreshold[8] = {
 		10,		//3  ripper
 		5,		//4  rocket launcher
 		7,		//5  shock rifle
-		5,		//6  lightning gun
-		8		//7  redeemer
+		5,		//6  sniper rifle
+		0		//7  redeemer
 	};
 
 int TerminatorAmmoRegen[8][2] = {
@@ -218,7 +219,7 @@ int TerminatorAmmoRegen[8][2] = {
 		{	3,		7,		},	//3  ripper
 		{	1,		7,		},	//4  rocket launcher
 		{	2,		7,		},	//5  shock rifle
-		{	1,		10,		},	//6  lightning gun
+		{	1,		10,		},	//6  sniper rifle
 		{	1,		210,	}	//7  redeemer
 	};
 
@@ -229,7 +230,7 @@ int GraysonAmmoPackSize[8] = {
 		15,		//3  ripper
 		10,		//4  rocket launcher
 		20,		//5  shock rifle
-		10,		//6  lightning gun
+		10,		//6  sniper rifle
 		1		//7  redeemer
 	};
 
@@ -240,7 +241,7 @@ str GraysonAmmoIcons[8] = {
 		"AmmBlads", //4  ripper
 		"AmmRockt", //5  rocket launcher
 		"AmmCoils", //6  shock rifle
-		"AmmSlugs", //7  lightning gun
+		"AmmSlugs", //7  sniper rifle
 		"AmmBfugs", //8  redeemer
 	};
 
@@ -251,7 +252,7 @@ int SamAmmoBonus[8] = {
 		3,	//3  ripper
 		2,	//4  rocket launcher
 		5,	//5  shock rifle
-		2,	//6  lightning gun
+		2,	//6  sniper rifle
 		0,	//7  redeemer
 	};
 
@@ -263,7 +264,7 @@ int LootboxBonusAmmo[9][2] = {
 		{	75,		15,		},	//3  ripper
 		{	50,		5,		},	//4  rocket launcher
 		{	75,		5,		},	//5  shock rifle
-		{	60,		5,		},	//6  lightning gun
+		{	60,		5,		},	//6  sniper rifle
 		{	2,		1,		},	//7  redeemer
 		{	175,	15,		}	//8  Sam
 	};
@@ -276,7 +277,7 @@ str LootboxWeaponVisuals[8] = {
 		"UTRPZ",	//3  ripper
 		"UTRLZ",	//4  rocket launcher
 		"UTSRZ",	//5  shock rifle
-		"UTLGZ",	//6  lightning gun
+		"UTSPZ",	//6  sniper rifle
 		"UTRDZ"		//7  redeemer
 	};
 
@@ -287,9 +288,30 @@ str LootboxWeaponNamings[8] = {
 		"Ripper",
 		"R. Launcher",
 		"Shock Rifle",
-		"Lightning Gun",
+		"Sniper Rifle",
 		"Redeemer"
 	};
+
+///////////////////////////////////////////////////////////////////////////////
+// Weapon specific cvars //////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+function void reReadWeaponCvars(void)
+{
+	// Weapon skins
+	//SetInventory("QCGauntletSkin",		!GetCVar("cl_GNTLskin"	));
+}
+
+function void giveEleenaCloneWeaponSkins(int doptid)
+{
+	// Weapon skins
+	//GiveActorInventory(doptid, "QCGauntletSkin",		CheckInventory("QCGauntletSkin"));
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+// Getter functions ///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 function int getGenericDMAmmoCapacity(int type)
 {
