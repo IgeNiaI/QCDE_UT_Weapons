@@ -69,6 +69,13 @@ Actor ShotgunPickup : CustomInventory 15601
 	Stay:
 		TNT1 A 0
 		Fail
+	HideIndefinitely:
+		TNT1 A 1 A_SetTics(CallACS("QCDE_SetWeaponRespawnTics"))
+		Goto Super::HideDoomish+1
+	HideDoomish:
+		TNT1 A 1
+		TNT1 A 1 A_SetTics(CallACS("QCDE_SetWeaponRespawnTics"))
+		Goto Super::HideDoomish+1
 	}
 }
 
