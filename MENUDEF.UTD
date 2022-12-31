@@ -1,6 +1,7 @@
 
 OptionMenu "QCDEBindsWeapons"
 {
+	Indent 153
 	Title "WEAPONS BINDS"
 
 	StaticText ""
