@@ -23,7 +23,7 @@ Actor BFGPickup : CustomInventory 15608
 	States
 	{
 	Spawn:
-		UTRD Y 0 NoDelay ACS_NamedExecuteWithResult("QCDE_RemoveIfDuel")
+		UTRD Y 0 NoDelay ACS_NamedExecuteWithResult("QCDE_RemoveIfNoBfg")
 		UTRD Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
@@ -87,7 +87,7 @@ Actor QCBFG : QCWeapon
 		UTRD Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
-		"####" "#" 0 ACS_NamedExecuteAlways("QCDE_RemoveIfDuel")
+		"####" "#" 0 ACS_NamedExecuteAlways("QCDE_RemoveIfNoBfg")
 		UTRD ZZZZZZZZZZZZZZZ 35 Bright
 		Stop
 	Idle:
