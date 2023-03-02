@@ -92,13 +92,9 @@ UTDE/Weapons/Flak/Bounce3						"Sounds/Weapons/FL_Bounce3.wav"
 
 //********************
 // Link Gun
-UTDE/Weapons/LinkGun/FireStartLoop				"Sounds/Weapons/LG_Start_Loop.wav"
-UTDE/Weapons/LinkGun/Quad/FireStartLoop			"Sounds/Weapons/Quad/LG_Start_Loop.wav"
-UTDE/Weapons/LinkGun/FireEnd					"Sounds/Weapons/LG_End.wav"
-
-$volume "UTDE/Weapons/LinkGun/FireStartLoop"		0.65
-$volume "UTDE/Weapons/LinkGun/Quad/FireStartLoop"	0.65
-$volume "UTDE/Weapons/LinkGun/FireEnd"				0.65
+UTDE/Weapons/LinkGun/Fire						"Sounds/Weapons/LG_Fire.wav"
+UTDE/Weapons/LinkGun/Quad/Fire					"Sounds/Weapons/Quad/LG_Fire.wav"
+UTDE/Weapons/LinkGun/Impact						"Sounds/Weapons/LG_Impact.wav"
 
 
 //********************
