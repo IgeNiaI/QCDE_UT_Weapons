@@ -945,7 +945,7 @@ Actor SniperTrailUpgraded : SniperTrail
 
 Actor SniperRiflePuff
 {
-	+CLIENTSIDEONLY +NONETID
+	+NONETID
 	+NOINTERACTION +NOTONAUTOMAP
 	+ALWAYSPUFF
 	+PUFFGETSOWNER
