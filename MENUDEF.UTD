@@ -1,40 +1,25 @@
 
-OptionMenu "QCDEBindsWeapons"
+FreeformMenu "QCDE_OptionsSkins"
 {
-	Indent 153
-	Title "WEAPONS BINDS"
+	NoBackButton
+	TopPadding 40
+	DefaultSelection -2
+	//OverrideHeight 320
 
-	StaticText ""
+	Label {
+		Static
+		Background	"BackMenw"
+		Pos		0, 20
+		Size	450, 500
+	}
 
-	Control 	"Select starting weapon",	"+QCDE_StartingWeapon"
-	Control 	"Drop weapon",				"weapdrop"
-	Control 	"Drop weapon upgrade",		"drop_upgrade"
+	Label {
+		Pos		0, 50			Font		SmallFont
+		Anchor	center, top		FontColor	DarkGray
+		Text	"UT weapons addon doesn't support weapon skins yet"
+	}
 
-	StaticText ""
 
-	Control		"Impact Hammer",						"slot 1"
-	Control		"Minigun / Enforcer",					"slot 2"
-	Control		"Flak Cannon / Dispersion Pistol",		"slot 3"
-	Control		"Pulse Gun / Link Gun",					"slot 4"
-	Control		"Bio Rifle / Ripper",					"slot 5"
-	Control		"Rocket Launcher",						"slot 6"
-	Control		"Shock Rifle",							"slot 7"
-	Control		"Sniper Rifle",							"slot 8"
-	Control		"Redeemer",								"slot 9"
-}
-
-OptionValue "StartingWeapon"
-{
-	1, "Assault Rifle"
-	2, "Flak Cannon (DM only)"
-	3, "Link Gun"
-}
-
-OptionMenu "QCDEWeaponSkins"
-{
-	Title "Weapons Skins"
-
-	StaticText " "
-
-	StaticText "UT weapons addon doesn't support weapon skins yet"
+	InsertFreeformMenu MainMenuTopBar
+	InsertFreeformMenu QCDE_OptionsTabs
 }
