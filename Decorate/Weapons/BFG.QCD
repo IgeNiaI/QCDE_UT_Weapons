@@ -415,14 +415,14 @@ Actor UTRedeemerMissileControlled : UTRedeemerMissile {
 		Loop
 
 	Xdeath:	//Direct hit
-		TNT1 A 0 A_JumpIfInTargetInventory("PlayHitBeep",1,"PlayBeep")
-		TNT1 A 0 A_JumpIfInTargetInventory("PlayHitMark",1,"DoMark")
+		TNT1 A 0 A_JumpIfInTargetInventory("PlayHitEffect",3,"DoMark")
+		TNT1 A 0 A_JumpIfInTargetInventory("PlayHitEffect",1,"PlayBeep")
 		TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
 		Goto ExplodeCont
 
 		PlayBeep:
 			TNT1 A 0 A_PlaySound("QC/UI/HitBeepMax",CHAN_7|CHAN_UI,0.85,0,140)
-			TNT1 A 0 A_JumpIfInTargetInventory("PlayHitMark",1,"DoMark")
+			TNT1 A 0 A_JumpIfInTargetInventory("PlayHitEffect",2,"DoMark")
 			TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
 			Goto ExplodeCont
 		DoMark:
@@ -431,8 +431,8 @@ Actor UTRedeemerMissileControlled : UTRedeemerMissile {
 			Goto ExplodeCont
 
 		RadiusHit:	//splash damage beep
-			TNT1 A 0 A_JumpIfInTargetInventory("PlayHitBeep",1,"PlayBeep")
-			TNT1 A 0 A_JumpIfInTargetInventory("PlayHitMark",1,"DoMark")
+			TNT1 A 0 A_JumpIfInTargetInventory("PlayHitEffect",3,"DoMark")
+			TNT1 A 0 A_JumpIfInTargetInventory("PlayHitEffect",1,"PlayBeep")
 			TNT1 A 0 A_Jump(256,"ExplodeCont") //for virtual jump to inherited versions
 			Goto ExplodeCont
 
