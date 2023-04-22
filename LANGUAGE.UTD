@@ -55,12 +55,25 @@ GOT_UTDisprAmmoSmall            = "How did you pick this up?!";
 Control_Slot1	= "Impact Hammer";
 Control_Slot2	= "Minigun / Enforcer";
 Control_Slot3	= "Flak / Disp Pistol";
-Control_Slot4	= "Pulse Gun / Link Gun";
+Control_Slot4	= "Pulse Gun";
 Control_Slot5	= "Bio Rifle / Ripper";
 Control_Slot6	= "Rocket Launcher";
 Control_Slot7	= "Shock Rifle";
 Control_Slot8	= "Sniper Rifle";
 Control_Slot9	= "Redeemer";
+
+Weapon_Slot1	= "Impact Hammer";
+Weapon_Slot2	= "Enforcer";
+Weapon_Slot2b	= "Minigun";
+Weapon_Slot3	= "Flak / Disp Pistol";
+Weapon_Slot3b	= "Flak Cannon";
+Weapon_Slot4	= "Link Gun";
+Weapon_Slot4b	= "Pulse Gun";
+Weapon_Slot5	= "Bio Rifle / Ripper";
+Weapon_Slot6	= "Rocket Launcher";
+Weapon_Slot7	= "Shock Rifle";
+Weapon_Slot8	= "Sniper Rifle";
+Weapon_Slot9	= "Redeemer";
 
 GOT_UTImpactHammer                  = "You got an Impact Hammer.";
 OB_UTImpactHammer                   = "%o got smeared by %k's piston.";

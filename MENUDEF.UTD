@@ -1,4 +1,11 @@
 
+FreeformMenu QCDE_SkirmishWeapons
+{
+	InsertFreeformMenu QCDE_SkirmishWeaponsCommon
+
+	// no weapon bonus mechanics
+}
+
 FreeformMenu "QCDE_OptionsSkins"
 {
 	NoBackButton
