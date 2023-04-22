@@ -115,7 +115,7 @@ Actor QCBFG : QCWeapon
 	//-----------------------
 	Select:
 		UTRD A 0 A_JumpIfInventory("NoWeaponFireToken",1,2)
-		UTRD A 0 A_PlaySound("QC/Weapons/Switch",5,1,0,3)
+		UTRD A 0 A_PlaySound("QC/Weapons/Switch",CHAN_5,1,0,3)
 	SelectLooper:
 		UTRD A 1 A_Raise
 		"####" "###" 0 A_Raise
