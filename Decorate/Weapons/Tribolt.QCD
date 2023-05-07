@@ -406,7 +406,7 @@ Actor QCTriboltDM : QCWeapon
 	Weapon.SelectionOrder 1950
 	Weapon.AmmoUse 1
 	Weapon.AmmoUse2 1
-	Weapon.AmmoGive 20
+	Weapon.AmmoGive 30
 	Weapon.AmmoDmScale 1.0
 	Weapon.AmmoDmRefill 2
 	Weapon.AmmoType "QCBoltAmmo"
