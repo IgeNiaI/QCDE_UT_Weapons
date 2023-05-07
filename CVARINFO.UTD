@@ -1,0 +1,4 @@
+
+// Client zoom settings
+
+user float cl_sniperZoom	=  2.5; // how much to zoom the Sniper Rifle

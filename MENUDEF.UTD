@@ -30,3 +30,87 @@ FreeformMenu "QCDE_OptionsSkins"
 	InsertFreeformMenu MainMenuTopBar
 	InsertFreeformMenu QCDE_OptionsTabs
 }
+
+
+FreeformMenu "QCDE_OptionsZoom"
+{
+	Label { // empty label to increase menu height
+		Pos 0, 270
+	}
+
+	Label {
+		Pos		0, 130				Font		QCSMFONT
+		Anchor	center, center		FontColor	Gold
+		Text	"Zoom"
+	}
+
+	Label {
+		Pos		-85, 151			Font		SmallFont
+		Anchor	right, center		FontColor	DarkGray
+		Text	"Zooming Speed"
+	}
+	TextField {
+		Pos		-67, 150		CVar				cl_fovchangespeed		Background			TX05028
+		Size	25, 14			Font				SmallFont				SelectedBackground	TX05028S
+		Anchor	center, center	SelectedFontColor	Gray
+		Padding	0, 1
+	}
+	Slider {
+		Pos		-50, 150		CVar	cl_fovchangespeed
+		Size	105, 6			Range	1.0, 100.0, 1.0
+		Anchor	left, center	MouseArea	105, 14
+		Textures	SLIDER, SLIDERS, SLIDERSS, 8, 14
+	}
+
+	Label {
+		Pos		-85, 171			Font		SmallFont
+		Anchor	right, center		FontColor	DarkGray
+		Text	"Sniper Rifle Zoom"
+	}
+	TextField {
+		Pos		-67, 170		CVar				cl_sniperZoom			Background			TX05028
+		Size	25, 14			Font				SmallFont				SelectedBackground	TX05028S
+		Anchor	center, center	SelectedFontColor	Gray
+		Padding	0, 1
+	}
+	Slider {
+		Pos		-50, 170		CVar	cl_sniperZoom
+		Size	105, 6			Range	1.1, 5.0, 0.1
+		Anchor	left, center	MouseArea	105, 14
+		Textures	SLIDER, SLIDERS, SLIDERSS, 8, 14
+	}
+
+	Label {
+		Pos		80, 150				Font		SmallFont
+		Anchor	left, center		FontColor	DarkGray
+		Text	"Hold to zoom"
+	}
+	Option {
+		Pos		185, 150			CVar				cl_holdZoom
+		Size	14, 14				Values				QCDE_CheckText
+		Anchor	right, center		BackgroundValues	QCDE_CheckBG
+		MouseArea	105, 14			UnknownBackground	CHKBOX
+									SelectedForeground	CHKBOXS, 14, 14
+	}
+}
+
+FreeformMenu "QCDE_OptionsControls"
+{
+	NoBackButton
+	TopPadding 40
+	DefaultSelection -2
+
+	Label {
+		Static
+		Background	"BackMenw"
+		Pos		0, 20
+		Size	450, 500
+	}
+
+	InsertFreeformMenu QCDE_OptionsControlsCommon
+
+	InsertFreeformMenu QCDE_OptionsZoom
+
+	InsertFreeformMenu MainMenuTopBar
+	InsertFreeformMenu QCDE_OptionsTabs
+}

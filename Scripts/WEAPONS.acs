@@ -263,7 +263,7 @@ Script "QCDE_ZoomControl" (int predicting, int justPressed, int justReleased, in
 				PlaySound(0,"UTDE/Weapons/SniperRifle/ZoomIn",CHAN_7,1.0,false);
 				SetNetworkReplicationFlags( 0 );
 				SetInventory("WeaponZoomedToken", 1);
-				SetPlayerWeaponZoomFactor(PlayerNumber(), GetCVar("cl_railgunZoom"));
+				SetPlayerWeaponZoomFactor(PlayerNumber(), GetCVar("cl_sniperZoom"));
 			}
 			else if (shouldZoomOut)
 			{
