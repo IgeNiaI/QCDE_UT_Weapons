@@ -97,7 +97,7 @@ Actor QCSuperNailgun : QCWeapon
 	Weapon.AmmoGive 100
 	Weapon.AmmoType "QCNailAmmo"
 	Weapon.AmmoType2 "QCNailAmmo"
-	Obituary "$OB_UTPulseGunAlt"
+	Obituary "$OB_UTPulseGun"
 	Inventory.PickupMessage "$GOT_UTPulseGun"
 	Tag "$TAG_UTPulseGun"
 	Scale 0.67
@@ -372,7 +372,7 @@ Actor PulseBeamPuff
 	Radius 10
 	Scale 0.35
 	Renderstyle Add
-	Obituary "$OB_UTPulseGunAlt"
+	Obituary "$OB_UTPulseGun"
 	Decal "Q4PlasmaBlack"
 	States
 	{

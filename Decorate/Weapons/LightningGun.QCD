@@ -280,7 +280,7 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 	BounceType Doom
 	Decal "Q4PlasmaBlack"
 	SeeSound "weapons/maceshoot"
-	Obituary "$OB_UTShockRifleAlt"
+	Obituary "$OB_UTShockRifle"
 
 	States
 	{
@@ -394,7 +394,7 @@ ACTOR UTShockRifleCombo
 	Damage 0
 	Scale 0.4
 	DamageType "ShkRflDmg"
-	Obituary "$OB_UTShockRifleCombo"
+	Obituary "$OB_UTShockRifle"
 
 	States
 	{
@@ -415,7 +415,8 @@ ACTOR UTShockRifleCombo
 	Death:
 		TNT1 A 0 A_Explode(175,225,XF_HURTSOURCE,true) // hurt the player for same damage as in DM
 		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
-		TNT1 A 1 A_Explode(random(225,375),225,0,true) // deal extra damage to everyone else for a total of 400-600
+		TNT1 A 0 A_Explode(random(225,375),225,0,true) // deal extra damage to everyone else for a total of 400-600
+		TNT1 A 1 // Need the actor to live one more tick so that a proper obituary message is shown
 		Stop
 	}
 }
@@ -457,10 +458,10 @@ ACTOR UTShockRifleOrbDM : UTShockRifleOrb
 		TNT1 A 0 A_JumpIf(user_xdeath==1, "Bounce")
 		// Damage players while being unlagged
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboDM", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
-		// Stop unlag here so that we could replicate the actor to clients
-		TNT1 A 1
+		TNT1 A 1 // Stop unlag here so that we could replicate the actor to clients
 		// Spawn combo effects on clients
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		TNT1 A 1 // Need the actor to live one more tick so that a proper obituary message is shown
 		Stop
 	}
 }
@@ -471,6 +472,7 @@ ACTOR UTShockRifleComboDM : UTShockRifleCombo
 	{
 	Death:
 		TNT1 A 0 A_Explode(175,225,XF_HURTSOURCE,true)
+		TNT1 A 1 // Need the actor to live one more tick so that a proper obituary message is shown
 		Stop
 	}
 }
@@ -586,7 +588,7 @@ ACTOR UTShockRifleComboFX
 	Speed 0
 	Scale 0.2
 	DamageType "ShkRflDmg"
-	Obituary "$OB_UTShockRifleCombo"
+	Obituary "$OB_UTShockRifle"
 
 	States
 	{

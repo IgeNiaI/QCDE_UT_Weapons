@@ -1152,7 +1152,7 @@ Actor GauntletPuff_DM
 	Renderstyle Add
 	Decal "GauntletDecal"
 	Scale 0.35
-	Obituary "$OB_GauntletPuff_DM" // "%o was pummeled by %k." // variation line
+	Obituary "$OB_QCGauntlet"
 	States
 	{
 	Spawn:	//Hit non bleeder
@@ -1183,7 +1183,7 @@ Actor GauntletPuff_DM_NoFX
 	+PUFFGETSOWNER
 	+PUFFONACTORS
 	+FORCEXYBILLBOARD
-	Obituary "$OB_GauntletPuff_DM_NoFX" // "%o tried to stop %k's rotating blade with a wrong limb." // variation line
+	Obituary "$OB_QCGauntlet"
 	States
 	{
 	Spawn:

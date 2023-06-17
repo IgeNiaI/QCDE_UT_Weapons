@@ -1,57 +1,6 @@
 
 [enu default]
 
-GOT_QCBulletAmmoTerminator      = "Picked up a few surplus bullets.";
-GOT_QCShellAmmoTerminator       = "Picked up a few surplus flak shells.";
-GOT_QCNailAmmoTerminator        = "Picked up a few surplus pulse cells.";
-GOT_QCBoltAmmoTerminator        = "Picked up a surplus bio ammo.";
-GOT_QCRocketAmmoTerminator      = "Picked up a few surplus rockets.";
-GOT_QCCoilAmmoTerminator        = "Picked up a surplus shock ammo.";
-GOT_QCSlugAmmoTerminator        = "Picked up a surplus sniper ammo.";
-GOT_QCBfgAmmoTerminator         = "Picked up a Redeemer Rocket.";
-GOT_UTDisprAmmoTerminator       = "How did you pick this up?!";
-
-TAG_QCBulletAmmo                = "Bullet Ammo Big";
-GOT_QCBulletAmmo                = "Picked up a pack of bullets.";
-TAG_QCBulletAmmoSmall           = "Bullet Ammo Small";
-GOT_QCBulletAmmoSmall           = "Picked up a few bullets.";
-TAG_QCShellAmmo                 = "Shell Ammo Big";
-GOT_QCShellAmmo                 = "Picked up a pack of flak shells.";
-TAG_QCShellAmmoSmall            = "Shell Ammo Small";
-GOT_QCShellAmmoSmall            = "Picked up a few flak shells.";
-TAG_QCNailAmmo                  = "Pulse Ammo Big";
-GOT_QCNailAmmo                  = "Picked up a pulse cell.";
-TAG_QCNailAmmoSmall             = "Pulse Ammo Small";
-GOT_QCNailAmmoSmall             = "Picked up a small pulse cell.";
-TAG_QCRipperAmmo                = "Ripper Ammo";
-GOT_QCRipperAmmo                = "Picked up razor blades.";
-TAG_QCRipperAmmoSmall           = "Ripper Ammo Small";
-GOT_QCRipperAmmoSmall           = "Picked up a few razor blades.";
-TAG_QCBoltAmmo                  = "Bio Ammo";
-GOT_QCBoltAmmo                  = "Picked up biosludge ammo.";
-TAG_QCBoltAmmoSmall             = "Bio Ammo Small";
-GOT_QCBoltAmmoSmall             = "Picked up a few biosludges.";
-TAG_QCRocketAmmo                = "Rocket Ammo Big";
-GOT_QCRocketAmmo                = "Picked up a pack of rockets.";
-TAG_QCRocketAmmoSmall           = "Rocket Ammo Small";
-GOT_QCRocketAmmoSmall           = "Picked up a few rockets.";
-TAG_QCCoilAmmo                  = "Shock Ammo Big";
-GOT_QCCoilAmmo                  = "Picked up a shock core.";
-TAG_QCCoilAmmoSmall             = "Shock Ammo Small";
-GOT_QCCoilAmmoSmall             = "Picked up a small shock core.";
-TAG_QCSlugAmmo                  = "Sniper Ammo Big";
-GOT_QCSlugAmmo                  = "Picked up sniper ammo.";
-TAG_QCSlugAmmoSmall             = "Sniper Ammo Small";
-GOT_QCSlugAmmoSmall             = "Picked up a small sniper ammo.";
-TAG_QCBFGAmmo                   = "Redeemer Ammo Big";
-GOT_QCBFGAmmo                   = "Picked up a Redeemer Rocket.";
-TAG_QCBFGAmmoSmall              = "Redeemer Ammo Small";
-GOT_QCBFGAmmoSmall              = "Picked up a Redeemer Rocket.";
-TAG_UTDisprAmmo                 = "Dispersion Ammo Big";
-GOT_UTDisprAmmo                 = "How did you pick this up?!";
-TAG_UTDisprAmmoSmall            = "Dispersion Ammo Small";
-GOT_UTDisprAmmoSmall            = "How did you pick this up?!";
-
 Control_Slot1	= "Impact Hammer";
 Control_Slot2	= "Minigun / Enforcer";
 Control_Slot3	= "Flak / Disp Pistol";
@@ -75,62 +24,106 @@ Weapon_Slot7	= "Shock Rifle";
 Weapon_Slot8	= "Sniper Rifle";
 Weapon_Slot9	= "Redeemer";
 
-GOT_UTImpactHammer                  = "You got an Impact Hammer.";
-OB_UTImpactHammer                   = "%o got smeared by %k's piston.";
-TAG_UTImpactHammer                  = "Impact Hammer";
+// Weapon obituaries
+OB_UTImpactHammer                   = "\cc%k \ct>> HMMR >>\cc %o";
+OB_UTEnforcer                       = "\cc%k \cf>>  ENF >>\cc %o";
+OB_UTMinigun                        = "\cc%k \cf>> MINI >>\cc %o";
+OB_UTDispersion                     = "\cc%k \ci>> DISP >>\cc %o";
+OB_UTFlakMini                       = "\cc%k \ci>> FLKM >>\cc %o";
+OB_UTFlakCannon                     = "\cc%k \ci>> FLAK >>\cc %o";
+OB_UTLinkGun                        = "\cc%k \cd>> LNKG >>\cc %o";
+OB_UTPulseGun                       = "\cc%k \cd>> PLSG >>\cc %o";
+OB_UTRipper                         = "\cc%k \ck>> RIPR >>\cc %o";
+OB_UTBioRifle                       = "\cc%k \ck>>  BIO >>\cc %o";
+OB_UTRocketLauncher                 = "\cc%k \cg>> RCKT >>\cc %o";
+OB_UTShockRifle                     = "\cc%k \cn>> SHOC >>\cc %o";
+OB_UTSniperRifle                    = "\cc%k \co>> SNPR >>\cc %o";
+OB_UTRedeemer                       = "\cc%k \ct>> RDMR >>\cc %o";
 
-GOT_UTEnforcer                      = "You got an Enforcer.";
-OB_UTEnforcer                       = "%k riddled %o full of holes with the Enforcer.";
-TAG_UTEnforcer                      = "Enforcer";
 
-GOT_UTMinigun                       = "You got a Minigun.";
-OB_UTMinigun                        = "%k's Minigun turned %o into a leaky piece of meat.";
-TAG_UTMinigun                       = "Minigun";
+// Weapon pickup messages
+GOT_UTImpactHammer              = "\ccYou got an \ctImpact Hammer.";
+GOT_UTEnforcer                  = "\ccYou got an \cfEnforcer.";
+GOT_UTMinigun                   = "\ccYou got a \cfMinigun.";
+GOT_UTDispersion                = "\ccYou got a \ciDispersion Pistol.";
+GOT_UTFlakMini                  = "\ccYou got a \ciMini Flak Cannon.";
+GOT_UTFlakCannon                = "\ccYou got a \ciFlak Cannon.";
+GOT_UTLinkGun                   = "\ccYou got a \cdLink Gun.";
+GOT_UTPulseGun                  = "\ccYou got a \cdPulse Gun.";
+GOT_UTRipper                    = "\ccYou got a \ckRipper.";
+GOT_UTBioRifle                  = "\ccYou got a \ckGES Bio Rifle.";
+GOT_UTRocketLauncher            = "\ccYou got a \cgRocket Launcher.";
+GOT_UTShockRifle                = "\ccYou got an \cnASMD Shock Rifle.";
+GOT_UTSniperRifle               = "\ccYou got a \coSniper Rifle.";
+GOT_UTRedeemer                  = "\ccYou got a \ctRedeemer.";
 
-GOT_UTDispersion                    = "You got a Dispersion Pistol.";
-OB_UTDispersion                     = "%o was killed by %k's Dispersion Pistol. What a loser!";
-TAG_UTDispersion                    = "Dispersion Pistol";
+GOT_QCBulletAmmo               	= "\ccPicked up a pack of \cfbullets.";
+GOT_QCShellAmmo                	= "\ccPicked up a pack of \ciflak shells.";
+GOT_QCNailAmmo                 	= "\ccPicked up a pack of \cdpulse cells.";
+GOT_QCRipperAmmo               	= "\ccPicked up a pack of \ckrazor blades.";
+GOT_QCBoltAmmo                 	= "\ccPicked up a pack of \ckbiosludge ammo.";
+GOT_QCRocketAmmo               	= "\ccPicked up a pack of \cgrockets.";
+GOT_QCCoilAmmo                 	= "\ccPicked up a pack of \cnshock cores.";
+GOT_QCSlugAmmo                 	= "\ccPicked up a pack of \cosniper ammo.";
+GOT_QCBFGAmmo                  	= "\ccPicked up a \ctRedeemer Rocket.";
+GOT_UTDisprAmmo                	= "\caHow did you pick this up?!";
 
-GOT_UTFlakMini                      = "You got a Mini Flak Cannon.";
-OB_UTFlakMini                       = "%o was ripped to shreds by %k's Mini Flak Cannon.";
-TAG_UTFlakMini                      = "Mini Flak Cannon";
+GOT_QCBulletAmmoSmall          	= "\ccPicked up a few \cfbullets.";
+GOT_QCShellAmmoSmall           	= "\ccPicked up a few \ciflak shells.";
+GOT_QCNailAmmoSmall            	= "\ccPicked up a few \cdpulse cells.";
+GOT_QCRipperAmmoSmall          	= "\ccPicked up a few \ckrazor blades.";
+GOT_QCBoltAmmoSmall            	= "\ccPicked up a few \ckbiosludges.";
+GOT_QCRocketAmmoSmall          	= "\ccPicked up a few \cgrockets.";
+GOT_QCCoilAmmoSmall            	= "\ccPicked up a few \cnshock cores.";
+GOT_QCSlugAmmoSmall            	= "\ccPicked up a few \cosniper ammo.";
+GOT_QCBFGAmmoSmall             	= "\ccPicked up a \ctRedeemer Rocket.";
+GOT_UTDisprAmmoSmall           	= "\caHow did you pick this up?!";
 
-GOT_UTFlakCannon                    = "You got a Flak Cannon.";
-OB_UTFlakCannon                     = "%o was shredded by %k's Flak Cannon.";
-OB_UTFlakCannonAlt                  = "%o was ripped to shreds by %k's shrapnel.";
-TAG_UTFlakCannon                    = "Flak Cannon";
+GOT_QCBulletAmmoTerminator     	= "\ccPicked up a few surplus \cfbullets.";
+GOT_QCShellAmmoTerminator      	= "\ccPicked up a few surplus \ciflak shells.";
+GOT_QCNailAmmoTerminator       	= "\ccPicked up a few surplus \cdpulse cells.";
+GOT_QCBoltAmmoTerminator       	= "\ccPicked up a few surplus \ckbio ammo.";
+GOT_QCRocketAmmoTerminator     	= "\ccPicked up a few surplus \ckrockets.";
+GOT_QCCoilAmmoTerminator       	= "\ccPicked up a few surplus \cgshock ammo.";
+GOT_QCSlugAmmoTerminator       	= "\ccPicked up a few surplus \cnsniper ammo.";
+GOT_QCBfgAmmoTerminator        	= "\ccPicked up a \ctRedeemer Rocket.";
+GOT_UTDisprAmmoTerminator      	= "\caHow did you pick this up?!";
 
-GOT_UTLinkGun                       = "You got a Link Gun.";
-OB_UTLinkGun                        = "%o was serveed an extra helping of %k's plasma.";
-TAG_UTLinkGun                       = "Link Gun";
 
-GOT_UTPulseGun                      = "You got a Pulse Gun.";
-OB_UTPulseGun                       = "%o ate %k's burning plasma death.";
-OB_UTPulseGunAlt                    = "%o was carved by %k's green shaft.";
-TAG_UTPulseGun                      = "Pulse Gun";
+// Weapon names
+TAG_UTImpactHammer              = "\ctImpact Hammer";
+TAG_UTEnforcer                  = "\cfEnforcer";
+TAG_UTMinigun                   = "\cfMinigun";
+TAG_UTDispersion                = "\ciDispersion Pistol";
+TAG_UTFlakMini                  = "\ciMini Flak Cannon";
+TAG_UTFlakCannon                = "\ciFlak Cannon";
+TAG_UTLinkGun                   = "\cdLink Gun";
+TAG_UTPulseGun                  = "\cdPulse Gun";
+TAG_UTRipper                    = "\ckRipper";
+TAG_UTBioRifle                  = "\ckBio Rifle";
+TAG_UTRocketLauncher            = "\cgRocket Launcher";
+TAG_UTShockRifle                = "\cnShock Rifle";
+TAG_UTSniperRifle               = "\coSniper Rifle";
+TAG_UTRedeemer                  = "\ctRedeemer";
 
-GOT_UTRipper                        = "You got the Ripper.";
-OB_UTRipper                         = "%k ripped a chunk of meat out of %o.";
-TAG_UTRipper                        = "Ripper";
+TAG_QCBulletAmmo                = "Bullet Ammo Big";
+TAG_QCShellAmmo                 = "Shell Ammo Big";
+TAG_QCNailAmmo                  = "Pulse Ammo Big";
+TAG_QCRipperAmmo                = "Ripper Ammo";
+TAG_QCBoltAmmo                  = "Bio Ammo";
+TAG_QCRocketAmmo                = "Rocket Ammo Big";
+TAG_QCCoilAmmo                  = "Shock Ammo Big";
+TAG_QCSlugAmmo                  = "Sniper Ammo Big";
+TAG_QCBFGAmmo                   = "Redeemer Ammo Big";
+TAG_UTDisprAmmo                 = "Dispersion Ammo Big";
 
-GOT_UTBioRifle                      = "You got a GES Bio Rifle.";
-OB_UTBioRifle                       = "%o drank a glass of %k's dripping green load.";
-TAG_UTBioRifle                      = "Bio Rifle";
-
-GOT_UTRocketLauncher                = "You got a Rocket Launcher.";
-OB_UTRocketLauncher                 = "%o was smacked down by %k's Rocket.";
-TAG_UTRocketLauncher                = "Rocket Launcher";
-
-GOT_UTShockRifle                    = "You got an ASMD Shock Rifle.";
-OB_UTShockRifle                     = "%o was fatally enlightened by %k shock beam.";
-OB_UTShockRifleAlt                  = "%o was wasted by %k's shock core.";
-OB_UTShockRifleCombo                = "%o couldn't avoid the blast from %k's shock combo.";
-TAG_UTShockRifle                    = "Shock Rifle";
-
-GOT_UTSniperRifle                   = "You got a Sniper Rifle.";
-OB_UTSniperRifle                    = "%k put a bullet in %o's skull.";
-TAG_UTSniperRifle                   = "Sniper Rifle";
-
-GOT_UTRedeemer                      = "You got a Redeemer.";
-OB_UTRedeemer                       = "%o was vaporized by %k's Redeemer!!";
-TAG_UTRedeemer                      = "Redeemer";
+TAG_QCBulletAmmoSmall           = "Bullet Ammo Small";
+TAG_QCShellAmmoSmall            = "Shell Ammo Small";
+TAG_QCNailAmmoSmall             = "Pulse Ammo Small";
+TAG_QCRipperAmmoSmall           = "Ripper Ammo Small";
+TAG_QCBoltAmmoSmall             = "Bio Ammo Small";
+TAG_QCRocketAmmoSmall           = "Rocket Ammo Small";
+TAG_QCCoilAmmoSmall             = "Shock Ammo Small";
+TAG_QCSlugAmmoSmall             = "Sniper Ammo Small";
+TAG_QCBFGAmmoSmall              = "Redeemer Ammo Small";
+TAG_UTDisprAmmoSmall            = "Dispersion Ammo Small";

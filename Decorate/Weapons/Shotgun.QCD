@@ -637,9 +637,11 @@ Actor UTFlakMiniShellDM : FastProjectile
 		Goto FlyLoop+1
 	XDeath:
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
+		TNT1 A 1 // Need the actor to live one more tick so that a proper obituary message is shown
 		Stop
 	Death:
 		TNT1 A 0 A_SpawnItemEx("UTFlakMiniShellBouncedDM", 0, 0, 0, user_velx, user_vely, user_velz, 0, SXF_ABSOLUTEVELOCITY|SXF_TRANSFERPOINTERS)
+		TNT1 A 1 // Need the actor to live one more tick so that a proper obituary message is shown
 		Stop
 	}
 }
@@ -681,7 +683,7 @@ Actor UTFlakMiniShellBouncedDM
 	XDeath:
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 	Death:
-		TNT1 A 1
+		TNT1 A 1 // Need the actor to live one more tick so that a proper obituary message is shown
 		Stop
 	}
 }
