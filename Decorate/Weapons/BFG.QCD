@@ -282,6 +282,7 @@ Actor UTRedeemerMissile : UnlaggedActor
 		Goto DeathFX
 
 	DeathFX:
+		TNT1 A 0 A_StopSound(CHAN_5) // Stop whoosh sound
 
 		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,	 0.0,  0.0,  0.0,	0,SXF_NOCHECKPOSITION)
 
