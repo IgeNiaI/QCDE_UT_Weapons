@@ -727,6 +727,7 @@ Actor QCRocketLauncher : QCWeapon
 
 	FlashCheckSound:
 		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound")
+		TNT1 A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"QuadSound")
 		Goto NormalSound
 
 		NormalSound:
@@ -738,6 +739,7 @@ Actor QCRocketLauncher : QCWeapon
 
 	AltFlashCheckSound:
 		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"AltQuadSound")
+		TNT1 A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"AltQuadSound")
 		Goto AltNormalSound
 
 		AltNormalSound:

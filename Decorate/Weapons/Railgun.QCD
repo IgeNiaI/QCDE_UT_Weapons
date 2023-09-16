@@ -737,6 +737,7 @@ Actor QCRailGun : QCWeapon
 		TNT1 A 0 A_TakeInventory("RailgunCharges",32767)
 		TNT1 A 0 A_JumpIfInventory("RG_UG_Pierce",1,"QuietSound")
 		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound")
+		TNT1 A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"QuadSound")
 		Goto NormalSound
 
 		NormalSound:
