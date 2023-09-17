@@ -138,3 +138,15 @@ OptionValue "UT_Announcers"
 	3, "UT2004 Sexy"
 	4, "UT2003"
 }
+
+OptionValue QCDE_Modifier
+{
+	0, "None"
+	1, "Instagib"
+	2, "Rocket Arena"
+	3, "Unreal Trinity"
+	4, "Flakshot"
+	5, "Shocking Wars"
+	6, "Random Weapons"
+	7, "Custom Weapons"
+}
