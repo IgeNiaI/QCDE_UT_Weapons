@@ -73,8 +73,64 @@ Script "QCDE_SetWeaponRespawnTics" (void)
 }
 
 
+//=============================================================================
+//
+//		Rocket whoosh
+//
+//=============================================================================
+
+// Activator: noisy projectile in flight
+script "QCDE_AttachWhoosh" (void) CLIENTSIDE
+{
+	// remember rocket
+	int tid = ActivatorTid();
+	if(!tid)
+	{
+		tid = UniqueTid();
+		Thing_ChangeTid(0,tid);
+	}
+
+	// don't whoosh if your own rocket
+	SetActivatorToTarget(0);
+	if(ConsolePlayerNumber() == PlayerNumber()) terminate;
+
+	// if rocket isn't moving, then it has exploded already. So no whoosh
+	if (GetActorVelX(tid) || GetActorVelY(tid) || GetActorVelZ(tid))
+		PlaySound(tid, "QC/Weapons/RocketLauncher/Fly",CHAN_5,0.5,true,1.0); // whoosh!
+}
 
 
+// Activator: noisy projectile in flight
+script "UTDE_AttachWhooshShock" (void)
+{
+	// redeemer rocket
+	int tid = ActivatorTid();
+	if(!tid)
+	{
+		tid = UniqueTid();
+		Thing_ChangeTid(0,tid);
+	}
+
+	// if orb isn't moving, then it has exploded already. So no whoosh
+	if (GetActorVelX(tid) || GetActorVelY(tid) || GetActorVelZ(tid))
+		PlaySound(tid, "UTDE/Weapons/ShockRifle/OrbFly",CHAN_5,1.0,true,1.0); // whoosh!
+}
+
+// Activator: noisy projectile in flight
+script "UTDE_AttachWhooshRedeemer" (void)
+{
+	// redeemer rocket
+	int tid = ActivatorTid();
+	if(!tid)
+	{
+		tid = UniqueTid();
+		Thing_ChangeTid(0,tid);
+	}
+
+	// if rocket isn't moving, then it has exploded already. So no whoosh
+	if (GetActorVelX(tid) || GetActorVelY(tid) || GetActorVelZ(tid))
+		PlaySound(tid, "UTDE/Weapons/Redeemer/Fly",CHAN_5,1.0,true,1.0); // whoosh!
+}
 
 
 //----------------------------------------------------------------------
@@ -285,36 +341,6 @@ Script "UTDE_RlAltCheck" (void)
 		SetResultValue(0);
 }
 
-
-// Activator: noisy projectile in flight
-script "UTDE_AttachWhooshShock" (void)
-{
-	// redeemer rocket
-	int tid = ActivatorTid();
-	if(!tid)
-	{
-		tid = UniqueTid();
-		Thing_ChangeTid(0,tid);
-	}
-
-	// whoosh!
-	PlaySound(tid, "UTDE/Weapons/ShockRifle/OrbFly",CHAN_5,1.0,true,1.0);
-}
-
-// Activator: noisy projectile in flight
-script "UTDE_AttachWhooshRedeemer" (void)
-{
-	// redeemer rocket
-	int tid = ActivatorTid();
-	if(!tid)
-	{
-		tid = UniqueTid();
-		Thing_ChangeTid(0,tid);
-	}
-
-	// whoosh!
-	PlaySound(tid, "UTDE/Weapons/Redeemer/Fly",CHAN_5,1.0,true,1.0);
-}
 
 
 script "UTDE_HoldBioNoAmmo" (void)
