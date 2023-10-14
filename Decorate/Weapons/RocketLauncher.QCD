@@ -107,31 +107,31 @@ Actor QCRocketLauncher : QCWeapon
 	// Ready Seq
 	//-----------------------
 	Ready:
-		UTRL A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		UTRL A 4 A_WeaponReady
 		Loop
 
 		ReadyCantFire:
-			UTRL A 0 A_StopSound(5)
-			UTRL A 0 A_StopSound(CHAN_WEAPON)
+			TNT1 A 0 A_StopSound(5)
+			TNT1 A 0 A_StopSound(CHAN_WEAPON)
 		RCFLooper:
 			UTRL A 4 A_WeaponReady(WRF_NOFIRE)
-			UTRL A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper")
+			TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper")
 			Goto Ready
 	//-----------------------
 	// Select/Deselect Seq
 	//-----------------------
 	Select:
-		UTRL A 0 A_JumpIfInventory("NoWeaponFireToken",1,2)
-		UTRL A 0 A_PlaySound("QC/Weapons/Switch",CHAN_5,1,0,3)
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,2)
+		TNT1 A 0 A_PlaySound("QC/Weapons/Switch",CHAN_5,1,0,3)
 	SelectLooper:
 		UTRL A 1 A_Raise
 		"####" "###" 0 A_Raise
 		Loop
 
 	Deselect:
-		UTRL A 0 A_StopSound(5)
-		UTRL A 0 A_StopSound(CHAN_WEAPON)
+		TNT1 A 0 A_StopSound(5)
+		TNT1 A 0 A_StopSound(CHAN_WEAPON)
 	DeselectLooper:
 		UTRL A 1 A_Lower
 		"####" "###" 0 A_Lower
@@ -141,7 +141,7 @@ Actor QCRocketLauncher : QCWeapon
 	// Fire Seq
 	//-----------------------
 	Fire:
-		UTRL A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		TNT1 A 0 A_JumpIfInventory("RocketArena",1,"FireRA")
 		TNT1 A 0 A_FireCustomMissile("UTRocketMissile", 0, true, 1, 5)
 		Goto PostFire
@@ -154,165 +154,196 @@ Actor QCRocketLauncher : QCWeapon
 	// AltFire Seq
 	//-----------------------
 	AltFire:
-		UTRL A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		Goto Charge100
 
 	// Charge 1
 	Charge100:
 		TNT1 A 0 A_FireCustomMissile("AmmoSpender", 0, true, 5, 2, FPF_NOUNLAGGED)
 		UTRL A 1
-		UTRL A 0 A_JumpIfNoAmmo("Fire1")
+		TNT1 A 0 A_JumpIfNoAmmo("Fire1")
 		TNT1 A 0 A_JumpIfInventory("RL_UG_Control", 1, "Charge100Upgraded")
-		UTRL A 0 A_ReFire("Charge101")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge101")
 		Goto Fire1
 
 	Charge100Upgraded:
-		UTRL A 0 A_ReFire("Charge112")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge112")
 		Goto Fire1
 
 	Charge101:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge102")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge102")
 		Goto Fire1
 
 	Charge102:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge103")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge103")
 		Goto Fire1
 
 	Charge103:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge104")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge104")
 		Goto Fire1
 
 	Charge104:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge105")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge105")
 		Goto Fire1
 
 	Charge105:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge106")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge106")
 		Goto Fire1
 
 	Charge106:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge107")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge107")
 		Goto Fire1
 
 	Charge107:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge108")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge108")
 		Goto Fire1
 
 	Charge108:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge109")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge109")
 		Goto Fire1
 
 	Charge109:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge110")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge110")
 		Goto Fire1
 
 	Charge110:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge111")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge111")
 		Goto Fire1
 
 	Charge111:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge112")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge112")
 		Goto Fire1
 
 	Charge112:
 		UTRL E 1
-		UTRL A 0 A_ReFire("Charge113")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge113")
 		Goto Fire1
 
 	Charge113:
 		UTRL E 1
-		UTRL A 0 A_ReFire("Charge114")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge114")
 		Goto Fire1
 
 	Charge114:
 		UTRL F 1
-		UTRL A 0 A_ReFire("Charge115")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge115")
 		Goto Fire1
 
 	Charge115:
 		UTRL F 1
-		UTRL A 0 A_ReFire("Charge116")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge116")
 		Goto Fire1
 
 	Charge116:
 		UTRL G 1 A_PlaySound("UTDE/Weapons/RocketLauncher/Load", CHAN_5, 1.0, 0)
-		UTRL A 0 A_ReFire("Charge117")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge117")
 		Goto Fire1
 
 	Charge117:
 		UTRL G 1
-		UTRL A 0 A_ReFire("Charge118")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge118")
 		Goto Fire1
 
 	Charge118:
 		UTRL H 1
-		UTRL A 0 A_ReFire("Charge119")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge119")
 		Goto Fire1
 
 	Charge119:
 		UTRL H 1
-		UTRL A 0 A_ReFire("Charge120")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge120")
 		Goto Fire1
 
 	Charge120:
 		UTRL I 1
-		UTRL A 0 A_ReFire("Charge121")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge121")
 		Goto Fire1
 
 	Charge121:
 		UTRL I 1
-		UTRL A 0 A_ReFire("Charge122")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge122")
 		Goto Fire1
 
 	Charge122:
 		UTRL J 1
-		UTRL A 0 A_ReFire("Charge123")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge123")
 		Goto Fire1
 
 	Charge123:
 		UTRL J 1
-		UTRL A 0 A_ReFire("Charge124")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge124")
 		Goto Fire1
 
 	Charge124:
 		UTRL K 1
-		UTRL A 0 A_ReFire("Charge125")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge125")
 		Goto Fire1
 
 	Charge125:
 		UTRL K 1
-		UTRL A 0 A_ReFire("Charge126")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge126")
 		Goto Fire1
 
 	Charge126:
 		UTRL L 1
-		UTRL A 0 A_ReFire("Charge127")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge127")
 		Goto Fire1
 
 	Charge127:
 		UTRL M 1
-		UTRL A 0 A_ReFire("Charge128")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge128")
 		Goto Fire1
 
 	Charge128:
 		UTRL N 1
-		UTRL A 0 A_ReFire("Charge129")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge129")
 		Goto Fire1
 
 	Charge129:
 		UTRL O 1
-		UTRL A 0 A_ReFire("Charge200")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire1")
+		TNT1 A 0 A_ReFire("Charge200")
 		Goto Fire1
 
 
@@ -320,158 +351,189 @@ Actor QCRocketLauncher : QCWeapon
 	Charge200:
 		TNT1 A 0 A_FireCustomMissile("AmmoSpender", 0, true, 5, 2, FPF_NOUNLAGGED)
 		UTRL A 1
-		UTRL A 0 A_JumpIfNoAmmo("Fire2")
+		TNT1 A 0 A_JumpIfNoAmmo("Fire2")
 		TNT1 A 0 A_JumpIfInventory("RL_UG_Control", 1, "Charge200Upgraded")
-		UTRL A 0 A_ReFire("Charge201")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge201")
 		Goto Fire2
 
 	Charge200Upgraded:
-		UTRL A 0 A_ReFire("Charge212")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge212")
 		Goto Fire2
 
 	Charge201:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge202")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge202")
 		Goto Fire2
 
 	Charge202:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge203")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge203")
 		Goto Fire2
 
 	Charge203:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge204")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge204")
 		Goto Fire2
 
 	Charge204:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge205")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge205")
 		Goto Fire2
 
 	Charge205:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge206")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge206")
 		Goto Fire2
 
 	Charge206:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge207")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge207")
 		Goto Fire2
 
 	Charge207:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge208")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge208")
 		Goto Fire2
 
 	Charge208:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge209")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge209")
 		Goto Fire2
 
 	Charge209:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge210")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge210")
 		Goto Fire2
 
 	Charge210:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge211")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge211")
 		Goto Fire2
 
 	Charge211:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge212")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge212")
 		Goto Fire2
 
 	Charge212:
 		UTRL E 1
-		UTRL A 0 A_ReFire("Charge213")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge213")
 		Goto Fire2
 
 	Charge213:
 		UTRL E 1
-		UTRL A 0 A_ReFire("Charge214")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge214")
 		Goto Fire2
 
 	Charge214:
 		UTRL F 1
-		UTRL A 0 A_ReFire("Charge215")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge215")
 		Goto Fire2
 
 	Charge215:
 		UTRL F 1
-		UTRL A 0 A_ReFire("Charge216")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge216")
 		Goto Fire2
 
 	Charge216:
 		UTRL G 1 A_PlaySound("UTDE/Weapons/RocketLauncher/Load", CHAN_5, 1.0, 0)
-		UTRL A 0 A_ReFire("Charge217")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge217")
 		Goto Fire2
 
 	Charge217:
 		UTRL G 1
-		UTRL A 0 A_ReFire("Charge218")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge218")
 		Goto Fire2
 
 	Charge218:
 		UTRL H 1
-		UTRL A 0 A_ReFire("Charge219")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge219")
 		Goto Fire2
 
 	Charge219:
 		UTRL H 1
-		UTRL A 0 A_ReFire("Charge220")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge220")
 		Goto Fire2
 
 	Charge220:
 		UTRL I 1
-		UTRL A 0 A_ReFire("Charge221")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge221")
 		Goto Fire2
 
 	Charge221:
 		UTRL I 1
-		UTRL A 0 A_ReFire("Charge222")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge222")
 		Goto Fire2
 
 	Charge222:
 		UTRL J 1
-		UTRL A 0 A_ReFire("Charge223")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge223")
 		Goto Fire2
 
 	Charge223:
 		UTRL J 1
-		UTRL A 0 A_ReFire("Charge224")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge224")
 		Goto Fire2
 
 	Charge224:
 		UTRL K 1
-		UTRL A 0 A_ReFire("Charge225")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge225")
 		Goto Fire2
 
 	Charge225:
 		UTRL K 1
-		UTRL A 0 A_ReFire("Charge226")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge226")
 		Goto Fire2
 
 	Charge226:
 		UTRL L 1
-		UTRL A 0 A_ReFire("Charge227")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge227")
 		Goto Fire2
 
 	Charge227:
 		UTRL M 1
-		UTRL A 0 A_ReFire("Charge228")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge228")
 		Goto Fire2
 
 	Charge228:
 		UTRL N 1
-		UTRL A 0 A_ReFire("Charge229")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge229")
 		Goto Fire2
 
 	Charge229:
 		UTRL O 1
-		UTRL A 0 A_ReFire("Charge300")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire2")
+		TNT1 A 0 A_ReFire("Charge300")
 		Goto Fire2
 
 
@@ -479,148 +541,177 @@ Actor QCRocketLauncher : QCWeapon
 	Charge300:
 		TNT1 A 0 A_FireCustomMissile("AmmoSpender", 0, true, 5, 2, FPF_NOUNLAGGED)
 		UTRL A 1
-		UTRL A 0 A_JumpIfNoAmmo("Fire3")
-		UTRL A 0 A_ReFire("Charge301")
+		TNT1 A 0 A_JumpIfNoAmmo("Fire3")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge301")
 		Goto Fire3
 
 	Charge301:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge302")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge302")
 		Goto Fire3
 
 	Charge302:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge303")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge303")
 		Goto Fire3
 
 	Charge303:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge304")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge304")
 		Goto Fire3
 
 	Charge304:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge305")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge305")
 		Goto Fire3
 
 	Charge305:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge306")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge306")
 		Goto Fire3
 
 	Charge306:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge307")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge307")
 		Goto Fire3
 
 	Charge307:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge308")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge308")
 		Goto Fire3
 
 	Charge308:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge309")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge309")
 		Goto Fire3
 
 	Charge309:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge310")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge310")
 		Goto Fire3
 
 	Charge310:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge311")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge311")
 		Goto Fire3
 
 	Charge311:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge312")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge312")
 		Goto Fire3
 
 	Charge312:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge313")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge313")
 		Goto Fire3
 
 	Charge313:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge314")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge314")
 		Goto Fire3
 
 	Charge314:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge315")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge315")
 		Goto Fire3
 
 	Charge315:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge316")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge316")
 		Goto Fire3
 
 	Charge316:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge317")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge317")
 		Goto Fire3
 
 	Charge317:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge318")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge318")
 		Goto Fire3
 
 	Charge318:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge319")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge319")
 		Goto Fire3
 
 	Charge319:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge320")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge320")
 		Goto Fire3
 
 	Charge320:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge321")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge321")
 		Goto Fire3
 
 	Charge321:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge322")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge322")
 		Goto Fire3
 
 	Charge322:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge323")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge323")
 		Goto Fire3
 
 	Charge323:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge324")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge324")
 		Goto Fire3
 
 	Charge324:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge325")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge325")
 		Goto Fire3
 
 	Charge325:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge326")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge326")
 		Goto Fire3
 
 	Charge326:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge327")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge327")
 		Goto Fire3
 
 	Charge327:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge328")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge328")
 		Goto Fire3
 
 	Charge328:
 		UTRL A 1
-		UTRL A 0 A_ReFire("Charge329")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken", 1, "Fire3")
+		TNT1 A 0 A_ReFire("Charge329")
 		Goto Fire3
 
 	Charge329:
@@ -933,7 +1024,7 @@ Actor QCRocketLauncherDM : QCRocketLauncher
 	// Primary Fire
 	//-----------------------
 	Fire:
-		UTRL A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		TNT1 A 0 A_JumpIfInventory("RocketArena",1,"FireRA")
 		TNT1 A 0 A_FireCustomMissile("UTRocketMissileDM", 0, true, 1, 5)
 		Goto PostFire
