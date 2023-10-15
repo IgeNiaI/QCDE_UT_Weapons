@@ -115,30 +115,29 @@ Actor QCMachineGun : QCWeapon
 	// Fire Seq
 	//-----------------------
 	Fire:
-		UTEN A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
-		UTEN A 0 A_GunFlash("Flash")
-		UTEN A 0 A_Jump(256,"Muzzle1","Muzzle2")
-	Muzzle1:
-		UTEN B 1 Offset(2,33)
-		UTEN C 1 Offset(4,35)
-		UTEN C 1 Offset(5,36)
-		UTEN D 1 Offset(5,36)
-		UTEN D 1 Offset(5,36)
-		Goto FireCont
-	Muzzle2:
-		UTEN E 1 Offset(1,32)
-		UTEN F 1 Offset(3,34)
-		UTEN F 1 Offset(4,35)
-		UTEN G 1 Offset(4,35)
-		UTEN G 1 Offset(4,35)
-		Goto FireCont
-	FireCont:
-		UTEN A 1 Offset(4,34)
-		UTEN A 1 Offset(3,33)
-		UTEN A 1 Offset(2,32)
-		UTEN A 1 Offset(1,32)
-		UTEN A 1 Offset(0,32)
-		UTEN A 1 Offset(0,32) A_ReFire("Fire")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		TNT1 A 0 A_Jump(256, "Fire1", "Fire2")
+
+	Fire1:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTEN B 1 A_GunFlash("Flash")
+		UTEN C 1
+		UTEN D 1
+		UTEN E 1
+		UTEN F 1
+		UTEN G 1
+		TNT1 A 0 A_ReFire("Fire2")
+		Goto EndFireLooper
+
+	Fire2:
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		UTEN H 1 A_GunFlash("Flash")
+		UTEN I 1
+		UTEN J 1
+		UTEN K 1
+		UTEN L 1
+		UTEN M 1
+		TNT1 A 0 A_ReFire("Fire1")
 		Goto EndFireLooper
 
 	EndFireLooper:
@@ -163,10 +162,10 @@ Actor QCMachineGun : QCWeapon
 		Goto FireNormalSound
 
 		FireNormalSound:
-			TNT1 A 0 A_PlaySound("UTDE/Weapons/Enforcer/Fire",CHAN_WEAPON,1,false)
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Enforcer/Fire",CHAN_WEAPON,0.75,false)
 			Goto EndFlash
 		FireQuadSound:
-			TNT1 A 0 A_PlaySound("UTDE/Weapons/Enforcer/Quad/Fire",CHAN_WEAPON,1,false)
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Enforcer/Quad/Fire",CHAN_WEAPON,0.75,false)
 			Goto EndFlash
 
 		EndFlash:
