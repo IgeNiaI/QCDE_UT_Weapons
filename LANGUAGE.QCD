@@ -1,0 +1,7 @@
+
+[enu default]
+
+// This addon replaces Rail training arena (Green key) with Flak cannon arena (Orange key)
+GOT_QCDE_DMCMPGN_GreenKey                = "\ccPicked up the \ciOrange Key\cc.";
+TAG_QCDE_DMCMPGN_GreenKey                = "Orange Key";
+TRAIN_GREEN_ROOM						 = "You need the orange key to access this room";
