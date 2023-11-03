@@ -28,10 +28,12 @@ Actor RailgunPickup : CustomInventory 15607
 		Goto Idle
 	DMSpawn:
 		"####" "#" 0 A_ChangeFlag("DROPPED", 0)
-		UTSP Z -1 Bright ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",20,args[4])
+		UTSP Z 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",20,args[4])
+		UTSP Z -1 Bright A_SetArg(4, 0)
 		Stop
 	Idle:
-		UTSP Y -1 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",19,args[4])
+		UTSP Y 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",19,args[4])
+		UTSP Y -1 A_SetArg(4, 0)
 		Wait
 	Pickup:
 		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMPickup")
