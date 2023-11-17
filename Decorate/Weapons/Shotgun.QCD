@@ -172,49 +172,63 @@ Actor QCShotgun : QCWeapon
 	// Ready Seq
 	//-----------------------
 	Ready:
-		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "SecondUpgradeCheckReady")
-		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Ready3")
-		UDSP A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire1")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "Ready3")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Ready3v2")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire1")
 		UDSP A 3 A_WeaponReady
 		Loop
 
 		ReadyCantFire1:
-			UDSP A 0 A_StopSound(5)
-			UDSP A 0 A_StopSound(CHAN_WEAPON)
+			TNT1 A 0 A_StopSound(5)
+			TNT1 A 0 A_StopSound(CHAN_WEAPON)
 		RCFLooper1:
 			UDSP A 4 A_WeaponReady(WRF_NOFIRE)
-			UDSP A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper1")
+			TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper1")
 			Goto Ready
 
-	SecondUpgradeCheckReady:
-		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Ready5")
-		Goto Ready3
-
 	Ready3:
-		UDSP D 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire3")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Ready5")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", -1, "Ready")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire3")
 		UDSP D 3 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "SecondUpgradeCheckReady")
 		Loop
 
 		ReadyCantFire3:
-			UDSP D 0 A_StopSound(5)
-			UDSP D 0 A_StopSound(CHAN_WEAPON)
+			TNT1 A 0 A_StopSound(5)
+			TNT1 A 0 A_StopSound(CHAN_WEAPON)
 		RCFLooper3:
 			UDSP D 4 A_WeaponReady(WRF_NOFIRE)
-			UDSP D 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper3")
+			TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper3")
 			Goto Ready3
 
+	Ready3v2:
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "Ready5")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", -1, "Ready")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire3v2")
+		UDSP D 3 A_WeaponReady
+		Loop
+
+		ReadyCantFire3v2:
+			TNT1 A 0 A_StopSound(5)
+			TNT1 A 0 A_StopSound(CHAN_WEAPON)
+		RCFLooper3v2:
+			UDSP D 4 A_WeaponReady(WRF_NOFIRE)
+			TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper3v2")
+			Goto Ready3v2
+
 	Ready5:
-		UDSP G 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire5")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", -1, "Ready")
+		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", -1, "Ready")
+		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire5")
 		UDSP G 3 A_WeaponReady
 		Loop
 
 		ReadyCantFire5:
-			UDSP G 0 A_StopSound(5)
-			UDSP G 0 A_StopSound(CHAN_WEAPON)
+			TNT1 A 0 A_StopSound(5)
+			TNT1 A 0 A_StopSound(CHAN_WEAPON)
 		RCFLooper5:
 			UDSP G 4 A_WeaponReady(WRF_NOFIRE)
-			UDSP G 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper5")
+			TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper5")
 			Goto Ready5
 
 	//-----------------------
