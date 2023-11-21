@@ -182,8 +182,8 @@ $volume "UTDE/Weapons/ShockRifle/Quad/Fire"	0.70
 UTDE/Weapons/SniperRifle/Fire				"Sounds/Weapons/SP_Fire.wav"
 UTDE/Weapons/SniperRifle/Quad/Fire			"Sounds/Weapons/Quad/SP_Fire.wav"
 UTDE/Weapons/SniperRifle/Reload				"Sounds/Weapons/SP_Reload.wav"
-UTDE/Weapons/SniperRifle/ZoomIn				"Sounds/Weapons/SP_ZoomIn.ogg"
-UTDE/Weapons/SniperRifle/ZoomOut			"Sounds/Weapons/SP_ZoomOut.ogg"
+UTDE/Weapons/SniperRifle/ZoomIn				"Sounds/Weapons/SP_ZoomIn.wav"
+UTDE/Weapons/SniperRifle/ZoomOut			"Sounds/Weapons/SP_ZoomOut.wav"
 UTDE/Weapons/SniperRifle/Impact				"Sounds/Weapons/SP_Impact.wav"
 
 
