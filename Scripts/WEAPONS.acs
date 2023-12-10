@@ -4,6 +4,11 @@
 #import "QCDE.bcs"
 #import "WEAPCNST.bcs"
 
+Script "QCDE_GetWeaponsType" (void)
+{
+	SetResultValue("Unreal");
+}
+
 int weaponSpawned[NUMBER_OF_WEAPONS];
 
 Script "QCDE_WeaponSpawned" (int type, int arg4)
