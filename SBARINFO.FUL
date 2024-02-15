@@ -800,6 +800,10 @@ statusbar Fullscreen, forcescaled
 			}
 		}
 	}
+	// Duke's ammo
+	inInventory Class_DukeNukem {
+		drawNumber 3, QCFNT050, brite, DukeAmmo, alignment(center), 700,950;
+	}
 	// Sam's ammo
 	inInventory Class_Sam {
 		drawNumber 3, QCFNT050, brite, SeriousBullets, alignment(center), 700,950;
