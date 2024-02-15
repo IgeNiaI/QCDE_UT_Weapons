@@ -292,7 +292,8 @@ Script "QCDE_SelectBotWeapon" (int distanceToTarget)
 	}
 	else if (distanceToTarget < 600)
 	{
-			 if (CheckInventory("QCLightningGunDM")		&& CheckInventory("QCCoilAmmo"))	SetWeapon("QCLightningGunDM");
+			 if (CheckInventory("Class_Sam")			&& CheckInventory("SeriousBullets"))SetWeapon("SamMinigun");
+		else if (CheckInventory("QCLightningGunDM")		&& CheckInventory("QCCoilAmmo"))	SetWeapon("QCLightningGunDM");
 		else if (CheckInventory("QCHeavyMachinegunDM")	&& CheckInventory("QCBulletAmmo"))	SetWeapon("QCHeavyMachinegunDM");
 		else if (CheckInventory("QCBFGDM")				&& CheckInventory("QCBFGAmmo"))		SetWeapon("QCBFGDM");
 		else if (CheckInventory("QCSuperNailgunDM")		&& CheckInventory("QCNailAmmo"))	SetWeapon("QCSuperNailgunDM");
