@@ -1228,3 +1228,149 @@ Actor SGExplosiveBullet : FastProjectile
 		Stop
 	}
 }
+
+// Empty overrides for MODELDEF
+Actor QCNailStrong { States { Spawn:
+	NAIL A 1
+	Wait
+}}
+Actor QCNailStrong_Quake1 { States { Spawn:
+	NA1L A 1
+	Wait
+}}
+Actor QCNailStrong_Quake2 { States { Spawn:
+	NA2L A 1
+	Wait
+}}
+Actor QCNailStrong_ETQW { States { Spawn:
+	NA5L A 1
+	Wait
+}}
+Actor QCNailWeak { States { Spawn:
+	NAII A 1
+	Wait
+}}
+Actor QCNailWeak_Quake1 { States { Spawn:
+	NA1I A 1
+	Wait
+}}
+Actor QCNailWeak_Quake2 { States { Spawn:
+	NA2I A 1
+	Wait
+}}
+Actor QCNailStrongDM { States { Spawn:
+	NAIL A 1
+	Wait
+}}
+Actor QCNailStrongDM_Quake1 { States { Spawn:
+	NA1L A 1
+	Wait
+}}
+Actor QCNailStrongDM_Quake2 { States { Spawn:
+	NA2L A 1
+	Wait
+}}
+Actor QCNailStrongDM_ETQW { States { Spawn:
+	NA5L A 1
+	Wait
+}}
+Actor QCNailWeakDM { States { Spawn:
+	NAII A 1
+	Wait
+}}
+Actor QCNailWeakDM_Quake1 { States { Spawn:
+	NA1I A 1
+	Wait
+}}
+Actor QCNailWeakDM_Quake2 { States { Spawn:
+	NA2I A 1
+	Wait
+}}
+Actor QCNailStrongIllusion { States { Spawn:
+	NAIL A 1
+	Wait
+}}
+Actor QCNailStrongIllusion_Quake1 { States { Spawn:
+	NA1L A 1
+	Wait
+}}
+Actor QCNailStrongIllusion_Quake2 { States { Spawn:
+	NA2L A 1
+	Wait
+}}
+Actor QCNailStrongIllusion_ETQW { States { Spawn:
+	NA5L A 1
+	Wait
+}}
+Actor TriboltBolt { States { Spawn:
+	GRNL A 1
+	Wait
+}}
+Actor TriboltBoltDM { States { Spawn:
+	GRNL A 1
+	Wait
+}}
+Actor QCRocketPlayerIllusion { States { Spawn:
+	MICR A 1
+	Wait
+}}
+Actor LGworldactor { States { Spawn:
+	LGWR Y 1
+	Wait
+}}
+Actor LGworldactor2 { States { Spawn:
+	LGWR Z 1
+	Wait
+}}
+Actor LGworldactor_Quake2 { States { Spawn:
+	LGWR Y 1
+	Wait
+}}
+Actor LGworldactor2_Quake2 { States { Spawn:
+	LGWR Z 1
+	Wait
+}}
+Actor LGworldactor_Quake3 { States { Spawn:
+	LGWR Y 1
+	Wait
+}}
+Actor LGworldactor2_Quake3 { States { Spawn:
+	LGWR Z 1
+	Wait
+}}
+Actor LGworldactorPurple { States { Spawn:
+	LGWR Y 1
+	Wait
+}}
+Actor LGworldactor2Purple { States { Spawn:
+	LGWR Z 1
+	Wait
+}}
+Actor LGworldactorPurple_Quake2 { States { Spawn:
+	LGWR Y 1
+	Wait
+}}
+Actor LGworldactor2Purple_Quake2 { States { Spawn:
+	LGWR Z 1
+	Wait
+}}
+Actor LGworldactorPurple_Quake3 { States { Spawn:
+	LGWR Y 1
+	Wait
+}}
+Actor LGworldactor2Purple_Quake3 { States { Spawn:
+	LGWR Z 1
+	Wait
+}}
+Actor UnusedActor { States { Spawn:
+	QCG3 Y 1
+	QCGb Y 1
+	QCGC Y 1
+	QCGD Y 1
+	QCG5 Y 1
+	QCGE Y 1
+	QCG6 Y 1
+	QCG7 Y 1
+	QCG8 Y 1
+	Wait
+}}

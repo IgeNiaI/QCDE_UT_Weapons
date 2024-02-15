@@ -1,0 +1,66 @@
+
+//Weapons SP
+
+UDSPY = "Voxels/Weapons/SP/DisprSP.kvx" 			{Spin=50} // Dispersion Pistol
+UTMGY = "Voxels/Weapons/SP/MinigunSP.kvx" 			{Spin=50} // Minigun
+UTFCY = "Voxels/Weapons/SP/FlakCannonSP.kvx"		{Spin=50} // Flak Cannon
+UTPGY = "Voxels/Weapons/SP/PulseRifleSP.kvx" 		{Spin=50} // Pulse Rifle
+UTRPY = "Voxels/Weapons/SP/RipperSP.kvx" 			{Spin=50} // Ripper
+UTRLY = "Voxels/Weapons/SP/RocketLauncherSP.kvx" 	{Spin=50} // Rocket Launcher
+UTSRY = "Voxels/Weapons/SP/ShockRifleSP.kvx" 		{Spin=50} // Shock Rifle
+UTSPY = "Voxels/Weapons/SP/SniperRifleSP.kvx" 		{Spin=50} // Sniper Rifle
+UTRDY = "Voxels/Weapons/SP/RedeemerSP.kvx" 			{Spin=50} // Redeemer
+
+//Weapons MP
+
+UTMGZ = "Voxels/Weapons/MP/MinigunMP.kvx" 			{Spin=50} // Minigun
+UTFCZ = "Voxels/Weapons/MP/FlakCannonMP.kvx" 		{Spin=50} // Flak Cannon
+UTPGZ = "Voxels/Weapons/MP/PulseRifleMP.kvx" 		{Spin=50} // Pulse Rifle
+UTBRZ = "Voxels/Weapons/MP/BioRifleMP.kvx" 			{Spin=50} // Bio Rifle
+UTRLZ = "Voxels/Weapons/MP/RocketLauncherMP.kvx" 	{Spin=50} // Rocket Launcher
+UTSRZ = "Voxels/Weapons/MP/ShockRifleMP.kvx" 		{Spin=50} // Shock Rifle
+UTSPZ = "Voxels/Weapons/MP/SniperRifleMP.kvx" 		{Spin=50} // Sniper Rifle
+UTRDZ = "Voxels/Weapons/MP/RedeemerMP.kvx" 			{Spin=50} // Redeemer
+
+//Ammo Pickups
+
+AMALA = "Voxels/Ammo/AmmoGeneric.kvx"				{Scale=0.9 Spin=75}
+
+AMBUA = "Voxels/Ammo/AmmoMinigun.kvx" 				{Scale=0.9 Spin=75}
+AMBUC = "Voxels/Ammo/AmmoSmallMinigun.kvx" 			{Spin=75}
+
+AMSHA = "Voxels/Ammo/AmmoFlak.kvx" 					{Scale=0.9 Spin=75}
+AMSHC = "Voxels/Ammo/AmmoSmallFlak.kvx" 			{Spin=75}
+
+AMNAA = "Voxels/Ammo/AmmoPulseGun.kvx" 				{Scale=0.9 Spin=75}
+AMNAC = "Voxels/Ammo/AmmoSmallPulseGun.kvx"			{Spin=75}
+
+AMROA = "Voxels/Ammo/AmmoRocketLauncher.kvx" 		{Scale=0.9 Spin=75}
+AMROC = "Voxels/Ammo/AmmoSmallRocketLauncher.kvx" 	{Spin=75}
+
+AMRPA = "Voxels/Ammo/AmmoRipper.kvx" 				{Scale=0.9 Spin=75}
+AMRPC = "Voxels/Ammo/AmmoSmallRipper.kvx" 			{Spin=75}
+
+AMTBA = "Voxels/Ammo/AmmoBioRifle.kvx"				{Scale=0.9 Spin=75}
+AMTBC = "Voxels/Ammo/AmmoSmallBioRifle.kvx"			{Spin=75}
+
+AMCLA = "Voxels/Ammo/AmmoShockRifle.kvx"			{Scale=0.9 Spin=75}
+AMCLC = "Voxels/Ammo/AmmoSmallShockRifle.kvx"		{Spin=75}
+
+AMRAA = "Voxels/Ammo/AmmoSniperRifle.kvx" 			{Scale=0.9 Spin=75}
+AMRAC = "Voxels/Ammo/AmmoSmallSniperRifle.kvx" 		{Spin=75}
+
+AMBFA = "Voxels/Ammo/AmmoRedeemer.kvx" 				{Scale=0.9 Spin=75}
+AMBFC = "Voxels/Ammo/AmmoSmallRedeemer.kvx" 		{Spin=75}
+
+
+//Spawns
+
+VXMGA = "Voxels/Spawns/MinigunSpawn.kvx"		{Scale=0.7}
+VXSGA = "Voxels/Spawns/FlakCannonSpawn.kvx" 	{Scale=0.7}
+VXNGA = "Voxels/Spawns/PulseGunSpawn.kvx" 		{Scale=0.7}
+VXTBA = "Voxels/Spawns/BioRifleSpawn.kvx" 		{Scale=0.7}
+VXRLA = "Voxels/Spawns/RocketLauncherSpawn.kvx" {Scale=0.7}
+VXLGA = "Voxels/Spawns/ShockRifleSpawn.kvx" 	{Scale=0.7}
+VXRGA = "Voxels/Spawns/SniperRifleSpawn.kvx" 	{Scale=0.7}
+VXBFA = "Voxels/Spawns/RedeemerSpawn.kvx" 		{Scale=0.7}

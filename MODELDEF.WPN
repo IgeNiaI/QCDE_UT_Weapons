@@ -1,0 +1,336 @@
+
+// Flak Cannon
+
+Model UTFlakBomb
+{
+   Path "MD3"
+   SKIN 0 "flak_bomb.png"
+   MODEL 0 "flak_bomb.md3"
+   Scale 1.8 1.8 1.8
+   PITCHFROMMOMENTUM
+   FrameIndex FLAK A 0 0
+}
+
+Model UTFlakBombDM
+{
+   Path "MD3"
+   SKIN 0 "flak_bomb.png"
+   MODEL 0 "flak_bomb.md3"
+   Scale 1.8 1.8 1.8
+   PITCHFROMMOMENTUM
+   FrameIndex FLAK A 0 0
+}
+
+Model UTFlakBombIllusion
+{
+   Path "MD3"
+   SKIN 0 "flak_bomb.png"
+   MODEL 0 "flak_bomb.md3"
+   Scale 1.8 1.8 1.8
+   PITCHFROMMOMENTUM
+   FrameIndex FLAK A 0 0
+}
+
+
+// Pulse Gun
+
+Model PGworldactor
+{ 
+   Path "MD3"
+   SKIN 0 "beam1.png"
+   MODEL 0 "beam.md3"
+   Scale 1.8 3.0 3.0
+   INHERITACTORPITCH
+   FrameIndex PGWR Z 0 0
+}
+
+Model PGworldactor2
+{ 
+   Path "MD3"
+   SKIN 0 "beam2.png"
+   MODEL 0 "beam.md3"
+   Scale 1.8 3.0 3.0
+   INHERITACTORPITCH
+   FrameIndex PGWR Y 0 0
+}
+
+
+// Ripper
+
+Model UTRipperBlade
+{
+   Path "MD3"
+   SurfaceSkin 0 0 "RazTrail.png"
+   SurfaceSkin 0 1 "RazSkin.png"
+   MODEL 0 "blade.md3"
+   Scale 1.0 1.0 1.0
+   PITCHFROMMOMENTUM
+   FrameIndex BLAD ABC 0 0
+}
+
+Model UTRipperBladeUpgraded
+{
+   Path "MD3"
+   SurfaceSkin 0 0 "RazTrail.png"
+   SurfaceSkin 0 1 "RazSkin.png"
+   MODEL 0 "blade.md3"
+   Scale 1.0 1.0 1.0
+   PITCHFROMMOMENTUM
+   FrameIndex BLAD ABC 0 0
+}
+
+Model UTRipperBladeAlt
+{
+   Path "MD3"
+   SurfaceSkin 0 0 "RazTrail.png"
+   SurfaceSkin 0 1 "RazSkin.png"
+   MODEL 0 "blade.md3"
+   Scale 1.0 1.0 1.0
+   PITCHFROMMOMENTUM
+   FrameIndex BLAD ABC 0 0
+}
+
+Model UTRipperBladeAltUpgraded
+{
+   Path "MD3"
+   SurfaceSkin 0 0 "RazTrail.png"
+   SurfaceSkin 0 1 "RazSkin.png"
+   MODEL 0 "blade.md3"
+   Scale 1.0 1.0 1.0
+   PITCHFROMMOMENTUM
+   FrameIndex BLAD ABC 0 0
+}
+
+Model UTRipperBladeAltUpgradedRipper
+{
+   Path "MD3"
+   SurfaceSkin 0 0 "RazTrail.png"
+   SurfaceSkin 0 1 "RazSkin.png"
+   MODEL 0 "blade.md3"
+   Scale 1.0 1.0 1.0
+   PITCHFROMMOMENTUM
+   FrameIndex BLAD ABC 0 0
+}
+
+
+// Rocket Launcher
+
+Model UTRocketMissile
+{
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileSpinningTop
+{ 
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileSpinningBottom
+{ 
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileSpinningBottomLeft
+{ 
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileSpinningBottomRight
+{ 
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileDM
+{
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileSpinningTopDM
+{ 
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileSpinningBottomDM
+{ 
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileSpinningBottomLeftDM
+{ 
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileSpinningBottomRightDM
+{ 
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+Model UTRocketMissileIllusion
+{
+   Path "MD3"
+   SKIN 0 "rocket_proj.png"
+   MODEL 0 "rocket_proj.md3"
+   Scale 1.0 1.0 1.2
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RLRK A 0 0
+}
+
+
+// Redeemer
+
+Model UTRedeemerMissile
+{
+   Path "MD3"
+   SKIN 0 "redeemer_rocket.png"
+   MODEL 0 "redeemer_rocket.md3"
+   Scale 0.8 0.8 0.96
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RDRK A 0 0
+}
+
+Model UTRedeemerMissileControlled
+{
+   Path "MD3"
+   SKIN 0 "redeemer_rocket.png"
+   MODEL 0 "redeemer_rocket.md3"
+   Scale 0.8 0.8 0.96
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RDRK A 0 0
+}
+
+Model UTRedeemerMissileDM
+{
+   Path "MD3"
+   SKIN 0 "redeemer_rocket.png"
+   MODEL 0 "redeemer_rocket.md3"
+   Scale 0.8 0.8 0.96
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RDRK A 0 0
+}
+
+Model UTRedeemerMissileControlledDM
+{
+   Path "MD3"
+   SKIN 0 "redeemer_rocket.png"
+   MODEL 0 "redeemer_rocket.md3"
+   Scale 0.8 0.8 0.96
+   ROTATING
+   Rotation-Speed 3
+   Rotation-Vector 1 0 0
+   PITCHFROMMOMENTUM
+   FrameIndex RDRK A 0 0
+}
+
+// Misc
+
+Model SniperTrail
+{
+	Path "MD3/Projectiles"
+	SKIN 0 "tracer1.tga"
+	MODEL 0 "Tracer.md3"
+	Scale 3.0 3.0 3.0
+	INHERITACTORPITCH
+	FrameIndex SPTR A 0 0
+}
+
+Model SniperTrailUpgraded
+{
+	Path "MD3/Projectiles"
+	SKIN 0 "tracer1.tga"
+	MODEL 0 "Tracer.md3"
+	Scale 3.0 3.0 3.0
+	INHERITACTORPITCH
+	FrameIndex SPTR A 0 0
+}
