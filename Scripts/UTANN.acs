@@ -1,7 +1,6 @@
 #library "UTANN"
 
 #include "zcommon.acs"
-#include "bcsutils.bcs"
 #include "UTANNDEF.acs"
 
 bool firstBloodGiven = false;
@@ -132,7 +131,7 @@ script "UTANN_Announce" (int mode, int idx, int plr) CLIENTSIDE {
 			
 			SetFont("SMALLFNT");
 			HudMessageBold(n:plr + 1, s:" is ", s:on_a, s:killingSprees[idx];
-				HUDMSG_FADEOUT|HUDMSG_LOG, MSGID_SPREE, CR_LIGHTBLUE, 1.5, 0.28, 2.0, 0.5);
+				HUDMSG_FADEOUT, MSGID_SPREE, CR_LIGHTBLUE, 1.5, 0.28, 2.0, 0.5);
 				
 			UTANN_PlaySound(mode, idx);
 			break;
@@ -145,10 +144,10 @@ script "UTANN_Announce" (int mode, int idx, int plr) CLIENTSIDE {
 			if(plr == idx) {
 				int playerGender = GetPlayerInfo(plr, PLAYERINFO_GENDER);
 				HudMessageBold(n:plr + 1, s:" was looking good till ", s:genders[playerGender][0], s:" killed ", s: genders[playerGender][1];
-					HUDMSG_FADEOUT|HUDMSG_LOG, MSGID_SPREE, CR_LIGHTBLUE, 1.5, 0.28, 2.0, 0.5);
+					HUDMSG_FADEOUT, MSGID_SPREE, CR_LIGHTBLUE, 1.5, 0.28, 2.0, 0.5);
 			} else {
 				HudMessageBold(n:plr + 1, s:"'s killing spree was ended by ", n:idx + 1;
-					HUDMSG_FADEOUT|HUDMSG_LOG, MSGID_SPREE, CR_LIGHTBLUE, 1.5, 0.28, 2.0, 0.5);
+					HUDMSG_FADEOUT, MSGID_SPREE, CR_LIGHTBLUE, 1.5, 0.28, 2.0, 0.5);
 			}
 			
 			break;
@@ -157,7 +156,7 @@ script "UTANN_Announce" (int mode, int idx, int plr) CLIENTSIDE {
 		
 			SetFont("SMALLFNT");
 			HudMessageBold(n:plr + 1, s:" drew first blood";
-				HUDMSG_FADEOUT|HUDMSG_LOG, MSGID_SPREE, CR_DARKRED, 1.5, 0.28, 2.0, 0.5);
+				HUDMSG_FADEOUT, MSGID_SPREE, CR_DARKRED, 1.5, 0.28, 2.0, 0.5);
 				
 			UTANN_PlaySound(mode, idx);
 	}
@@ -165,7 +164,9 @@ script "UTANN_Announce" (int mode, int idx, int plr) CLIENTSIDE {
 
 function void UTANN_PlaySound(int mode, int idx) {
 
-	int announcer = BCSUtils.clamp(GetCVar("cl_utannouncer"), 0, 4);
+	int announcer = GetCVar("cl_utannouncer");
+	if (announcer < 0) announcer = 0;
+	if (announcer > 4) announcer = 4;
 	str set = (mode == SPREE) ? "spree" : (mode == FIRST_BLOOD) ? "fblod" : "multi";
 	str sound = StrParam(s:"UTDE/announcer/a", d:announcer, s:"_", s:set, d:idx);
 	
