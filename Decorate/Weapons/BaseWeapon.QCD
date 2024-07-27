@@ -1246,6 +1246,10 @@ Actor QCNailStrong_ETQW { States { Spawn:
 	NA5L A 1
 	Wait
 }}
+Actor QCNailStrong_SeriousSam { States { Spawn:
+	NA8L A 1
+	Wait
+}}
 Actor QCNailWeak { States { Spawn:
 	NAII A 1
 	Wait
@@ -1256,6 +1260,10 @@ Actor QCNailWeak_Quake1 { States { Spawn:
 }}
 Actor QCNailWeak_Quake2 { States { Spawn:
 	NA2I A 1
+	Wait
+}}
+Actor QCNailWeak_SeriousSam { States { Spawn:
+	NA8I A 1
 	Wait
 }}
 Actor QCNailStrongDM { States { Spawn:
@@ -1274,6 +1282,10 @@ Actor QCNailStrongDM_ETQW { States { Spawn:
 	NA5L A 1
 	Wait
 }}
+Actor QCNailStrongDM_SeriousSam { States { Spawn:
+	NA8L A 1
+	Wait
+}}
 Actor QCNailWeakDM { States { Spawn:
 	NAII A 1
 	Wait
@@ -1284,6 +1296,10 @@ Actor QCNailWeakDM_Quake1 { States { Spawn:
 }}
 Actor QCNailWeakDM_Quake2 { States { Spawn:
 	NA2I A 1
+	Wait
+}}
+Actor QCNailWeakDM_SeriousSam { States { Spawn:
+	NA8I A 1
 	Wait
 }}
 Actor QCNailStrongIllusion { States { Spawn:
@@ -1300,6 +1316,10 @@ Actor QCNailStrongIllusion_Quake2 { States { Spawn:
 }}
 Actor QCNailStrongIllusion_ETQW { States { Spawn:
 	NA5L A 1
+	Wait
+}}
+Actor QCNailStrongIllusion_SeriousSam { States { Spawn:
+	NA8L A 1
 	Wait
 }}
 Actor TriboltBolt { States { Spawn:
@@ -1360,6 +1380,10 @@ Actor LGworldactorPurple_Quake3 { States { Spawn:
 }}
 Actor LGworldactor2Purple_Quake3 { States { Spawn:
 	LGWR Z 1
+	Wait
+}}
+Actor RailgunTrail_SeriousSam { States { Spawn:
+	SPTR A 1
 	Wait
 }}
 Actor UnusedActor { States { Spawn:
