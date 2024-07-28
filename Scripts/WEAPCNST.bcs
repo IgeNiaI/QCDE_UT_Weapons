@@ -243,7 +243,7 @@ int SamAmmoBonus[8] = {
 		0,	//7  redeemer
 	};
 
-int LootboxBonusAmmo[9][2] = {
+int LootboxBonusAmmo[10][2] = {
 		//Base		Level bonus
 		{	300,	20,		},	//0  minigun
 		{	50,		4,		},	//1  flak cannon
@@ -253,7 +253,8 @@ int LootboxBonusAmmo[9][2] = {
 		{	75,		5,		},	//5  shock rifle
 		{	60,		5,		},	//6  sniper rifle
 		{	2,		1,		},	//7  redeemer
-		{	175,	15,		}	//8  Sam
+		{	175,	15,		},	//8  Sam
+		{	60,		6,		}	//9  Duke
 	};
 
 // These have had offsets removed.
