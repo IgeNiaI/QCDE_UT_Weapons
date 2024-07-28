@@ -104,14 +104,14 @@ str WeaponUpgrades[NUMBER_OF_WEAPONS][NUMBER_OF_UPGRADES][10] = {
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Pulse Gun
-	{	{"Upgrade_11_1", "UPG_11_1", "0NAILGUN", "1NAILGUN", "SNG_UG_Lava"		, "", "Volatile plasma",		"Primary fire explodes on hit.", "", ""},
+	{	{"Upgrade_11_1", "UPG_11_1", "0NAILGUN", "1NAILGUN", "SNG_UG_Lava"		, "", "Volatile plasma",	"Primary fire explodes on hit.", "", ""},
 		{"Upgrade_11_2", "UPG_11_2", "0NAILGUN", "1NAILGUN", "SNG_UG_Seeker"	, "", "Piercing beam",		"Secondary fire beams thru enemies.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Ripper
-	{	{"Upgrade_13_1", "UPG_13_1", "0IPPERR" , "1IPPERR",  "TB_UG_Long"		, "", "Durable blades n' durable you",	"No self damage, blades bounce more.", "", ""},
-		{"Upgrade_13_2", "UPG_13_2", "0IPPERR" , "1IPPERR",  "TB_UG_Grenade"	, "", "Razor blades",						"Secondary fire rips thru enemies.", "", ""},
+	{	{"Upgrade_13_1", "UPG_13_1", "0IPPERR" , "1IPPERR_",  "TB_UG_Long"		, "", "Durable blades n' durable you",	"No self damage, blades bounce more.", "", ""},
+		{"Upgrade_13_2", "UPG_13_2", "0IPPERR" , "1IPPERR_",  "TB_UG_Grenade"	, "", "Razor blades",					"Secondary fire rips thru enemies.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
