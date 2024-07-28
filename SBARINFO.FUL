@@ -402,9 +402,9 @@ statusbar Fullscreen, forcescaled
 	{
 	// Gauntlet -- special case, only drawn when there are upgrades
 	inInventory GNT_UG_Burn || GNT_UG_Omni {
-	isSelected QCGauntlet                                   { drawImage "SELECTOR", 1440,277;
-	                                                          drawImage "1AUNTLET", 1380,280;
-	} else {                                                  drawImage "GAUNTLET", 1380,280;
+	isSelected QCGauntlet                                   { drawImage "SELECTOR", 1440,207;
+	                                                          drawImage "1AUNTLET", 1380,210;
+	} else {                                                  drawImage "GAUNTLET", 1380,210;
 	}}
 
 	// Orange pad behind selected weapon
@@ -548,9 +548,9 @@ statusbar Fullscreen, forcescaled
 	{
 	// Gauntlet -- special case, only drawn when there are upgrades
 	inInventory GNT_UG_Burn || GNT_UG_Omni {
-	isSelected QCGauntlet                                   { drawImage "SELECTOR", 1540,277;
-	                                                          drawImage "1AUNTLET", 1480,280;
-	} else {                                                  drawImage "GAUNTLET", 1480,280;
+	isSelected QCGauntlet                                   { drawImage "SELECTOR", 1540,207;
+	                                                          drawImage "1AUNTLET", 1480,210;
+	} else {                                                  drawImage "GAUNTLET", 1480,210;
 	}}
 	// Orange pad behind selected weapon
 	isSelected QCMachinegun 		, QCMachinegunDM		{ drawImage "SELECTOR", 1540,277; }
@@ -631,14 +631,14 @@ statusbar Fullscreen, forcescaled
 	}
 
 	// Upgrade icons on top of weapons
-	inInventory QCGauntlet 			{ inInventory GNT_UG_Burn      { drawImage "HPG_00_1",1493,265; }   inInventory GNT_UG_Omni      { drawImage "HPG_00_2",1423,265; } } else { inInventory GNT_UG_Burn      { drawImage "GPG_00_1",1493,265; }   inInventory GNT_UG_Omni      { drawImage "GPG_00_2",1423,265; } }
-	inInventory QCHeavyMachinegun 	{ inInventory HMG_UG_Ricochet  { drawImage "HPG_07_1",1493,335; }   inInventory HMG_UG_Pierce    { drawImage "HPG_07_2",1423,335; } } else { inInventory HMG_UG_Ricochet  { drawImage "GPG_07_1",1493,335; }   inInventory HMG_UG_Pierce    { drawImage "GPG_07_2",1423,335; } }
-	inInventory QCSuperNailgun		{ inInventory SNG_UG_Lava      { drawImage "HPG_11_1",1493,475; }   inInventory SNG_UG_Seeker    { drawImage "HPG_11_2",1423,475; } } else { inInventory SNG_UG_Lava      { drawImage "GPG_11_1",1493,475; }   inInventory SNG_UG_Seeker    { drawImage "GPG_11_2",1423,475; } }
-	inInventory QCTribolt	 		{ inInventory  TB_UG_Long      { drawImage "HPG_13_1",1493,545; }   inInventory  TB_UG_Grenade   { drawImage "HPG_13_2",1423,545; } } else { inInventory  TB_UG_Long      { drawImage "GPG_13_1",1493,545; }   inInventory  TB_UG_Grenade   { drawImage "GPG_13_2",1423,545; } }
-	inInventory QCRocketLauncher	{ inInventory  RL_UG_Cluster   { drawImage "HPG_15_1",1493,615; }   inInventory  RL_UG_Control   { drawImage "HPG_15_2",1423,615; } } else { inInventory  RL_UG_Cluster   { drawImage "GPG_15_1",1493,615; }   inInventory  RL_UG_Control   { drawImage "GPG_15_2",1423,615; } }
-	inInventory QCLightningGun		{ inInventory  LG_UG_Residue   { drawImage "HPG_17_1",1493,685; }   inInventory  LG_UG_Static    { drawImage "HPG_17_2",1423,685; } } else { inInventory  LG_UG_Residue   { drawImage "GPG_17_1",1493,685; }   inInventory  LG_UG_Static    { drawImage "GPG_17_2",1423,685; } }
-	inInventory QCRailgun 			{ inInventory  RG_UG_Pierce    { drawImage "HPG_19_1",1493,755; }   inInventory  RG_UG_Explosive { drawImage "HPG_19_2",1423,755; } } else { inInventory  RG_UG_Pierce    { drawImage "GPG_19_1",1493,755; }   inInventory  RG_UG_Explosive { drawImage "GPG_19_2",1423,755; } }
-	inInventory QCBFG 				{ inInventory BFG_UG_Rays      { drawImage "HPG_21_1",1493,825; }   inInventory BFG_UG_Charge    { drawImage "HPG_21_2",1423,825; } } else { inInventory BFG_UG_Rays      { drawImage "GPG_21_1",1493,825; }   inInventory BFG_UG_Charge    { drawImage "GPG_21_2",1423,825; } }
+	inInventory QCGauntlet 			{ inInventory GNT_UG_Burn      { drawImage "HPG_00_1",1493,265; }   inInventory GNT_UG_Omni      { drawImage "HPG_00_2",1523,265; } } else { inInventory GNT_UG_Burn      { drawImage "GPG_00_1",1493,265; }   inInventory GNT_UG_Omni      { drawImage "GPG_00_2",1523,265; } }
+	inInventory QCHeavyMachinegun 	{ inInventory HMG_UG_Ricochet  { drawImage "HPG_07_1",1493,335; }   inInventory HMG_UG_Pierce    { drawImage "HPG_07_2",1523,335; } } else { inInventory HMG_UG_Ricochet  { drawImage "GPG_07_1",1493,335; }   inInventory HMG_UG_Pierce    { drawImage "GPG_07_2",1523,335; } }
+	inInventory QCSuperNailgun		{ inInventory SNG_UG_Lava      { drawImage "HPG_11_1",1493,475; }   inInventory SNG_UG_Seeker    { drawImage "HPG_11_2",1523,475; } } else { inInventory SNG_UG_Lava      { drawImage "GPG_11_1",1493,475; }   inInventory SNG_UG_Seeker    { drawImage "GPG_11_2",1523,475; } }
+	inInventory QCTribolt	 		{ inInventory  TB_UG_Long      { drawImage "HPG_13_1",1493,545; }   inInventory  TB_UG_Grenade   { drawImage "HPG_13_2",1523,545; } } else { inInventory  TB_UG_Long      { drawImage "GPG_13_1",1493,545; }   inInventory  TB_UG_Grenade   { drawImage "GPG_13_2",1523,545; } }
+	inInventory QCRocketLauncher	{ inInventory  RL_UG_Cluster   { drawImage "HPG_15_1",1493,615; }   inInventory  RL_UG_Control   { drawImage "HPG_15_2",1523,615; } } else { inInventory  RL_UG_Cluster   { drawImage "GPG_15_1",1493,615; }   inInventory  RL_UG_Control   { drawImage "GPG_15_2",1523,615; } }
+	inInventory QCLightningGun		{ inInventory  LG_UG_Residue   { drawImage "HPG_17_1",1493,685; }   inInventory  LG_UG_Static    { drawImage "HPG_17_2",1523,685; } } else { inInventory  LG_UG_Residue   { drawImage "GPG_17_1",1493,685; }   inInventory  LG_UG_Static    { drawImage "GPG_17_2",1523,685; } }
+	inInventory QCRailgun 			{ inInventory  RG_UG_Pierce    { drawImage "HPG_19_1",1493,755; }   inInventory  RG_UG_Explosive { drawImage "HPG_19_2",1523,755; } } else { inInventory  RG_UG_Pierce    { drawImage "GPG_19_1",1493,755; }   inInventory  RG_UG_Explosive { drawImage "GPG_19_2",1523,755; } }
+	inInventory QCBFG 				{ inInventory BFG_UG_Rays      { drawImage "HPG_21_1",1493,825; }   inInventory BFG_UG_Charge    { drawImage "HPG_21_2",1523,825; } } else { inInventory BFG_UG_Rays      { drawImage "GPG_21_1",1493,825; }   inInventory BFG_UG_Charge    { drawImage "GPG_21_2",1523,825; } }
 
 	// shotguns are special
 	inInventory QCSuperShotgun {
