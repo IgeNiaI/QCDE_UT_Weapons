@@ -925,25 +925,30 @@ Actor QCRailGunDM : QCRailGun
 
 Actor SniperTrail
 {
-	+NOINTERACTION
+	+NOINTERACTION +NOTONAUTOMAP
 	+FORCEXYBILLBOARD
-	+CLIENTSIDEONLY
-	+NONETID
-	Scale 0.14
+	+CLIENTSIDEONLY +NONETID
 	RenderStyle Add
-	Translation "0:255=%[0,0,0]:[0.8,0.6,0.5]"
+	Scale 0.21
 	States
 	{
 	Spawn:
-		SPTR A 1 BRIGHT A_FadeOut(0.03)
-		SPTR A 0 BRIGHT A_SetScale(scalex-0.003)
+		RTSS A 0
+		Goto FadeOut
+	FadeOut:
+		"####" "#" 1 BRIGHT A_FadeOut(0.03)
 		Loop
 	}
 }
 
 Actor SniperTrailUpgraded : SniperTrail
 {
-	Translation "0:255=%[0,0,0]:[0.81,0.24,0.0]"
+	States
+	{
+	Spawn:
+		RTQW A 0
+		Goto FadeOut
+	}
 }
 
 Actor SniperRiflePuff

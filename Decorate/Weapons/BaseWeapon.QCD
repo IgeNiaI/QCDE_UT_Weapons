@@ -1288,7 +1288,7 @@ Actor QCNailWeakDM_SeriousSam { States { Spawn:
 }}
 Actor QCNailStrongIllusion { States { Spawn:
 	NAIL A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrongIllusion_Quake2 { States { Spawn:
 	NA2L A 1
@@ -1370,8 +1370,32 @@ Actor LGworldactor2Purple_Quake3 { States { Spawn:
 	LGWR Z 1
 	Stop
 }}
+Actor RailgunTrail { States { Spawn:
+	RTQC A 1
+	Stop
+}}
+Actor RailgunTrail_Quake1 { States { Spawn:
+	RTQ1 A 1
+	Stop
+}}
+Actor RailgunTrail_Quake3 { States { Spawn:
+	RTQ3 A 1
+	Stop
+}}
+Actor RailgunTrail_Quake4 { States { Spawn:
+	RTQ4 A 1
+	Stop
+}}
+Actor RailgunTrail_ETQW { States { Spawn:
+	RTQW A 1
+	Stop
+}}
+Actor RailgunTrail_HalfLife { States { Spawn:
+	RTHL A 1
+	Stop
+}}
 Actor RailgunTrail_SeriousSam { States { Spawn:
-	SPTR A 1
+	RTSS A 1
 	Stop
 }}
 Actor UnusedActor { States { Spawn:

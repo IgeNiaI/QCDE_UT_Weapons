@@ -180,11 +180,11 @@ Actor QCLightningGun : QCWeapon
 	Flash:
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_JumpIfInventory("LG_UG_Residue", 1, "FlashUpgraded")
-		TNT1 A 0 A_RailAttack(random(60,90), 2, true, None, "BlueViolet", RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "ShockRiflePuff", 0, 0, 0, 0, 5.0, 1.0, "SRworldactor")
+		TNT1 A 0 A_RailAttack(random(60,90), 1, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, "ShockRiflePuff", 0, 0, 0, 0, 6, 1, "SRworldactor", 1)
 		Goto FlashCheckSound
 
 	FlashUpgraded:
-		TNT1 A 0 A_RailAttack(random(60,90), 2, true, None, "BlueViolet", RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "ShockRiflePuffUpgraded", 0, 0, 0, 0, 5.0, 1.0, "SRworldactor")
+		TNT1 A 0 A_RailAttack(random(60,90), 1, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, "ShockRiflePuffUpgraded", 0, 0, 0, 0, 6, 1, "SRworldactor", 1)
 		Goto FlashCheckSound
 
 	FlashCheckSound:
@@ -441,7 +441,7 @@ Actor QCLightningGunDM : QCLightningGun
 	{
 	Flash:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_RailAttack(45, 2, true, None, "BlueViolet", RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, "ShockRiflePuff_DM", 0, 0, 0, 0, 5.0, 1.0, "SRworldactor")
+		TNT1 A 0 A_RailAttack(45, 1, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, "ShockRiflePuff_DM", 0, 0, 0, 0, 6, 1, "SRworldactor", 1)
 		Goto FlashCheckSound
 
 	AltFlash:
@@ -487,20 +487,19 @@ ACTOR UTShockRifleComboDM : UTShockRifleCombo
 
 Actor SRworldactor
 {
-	+CLIENTSIDEONLY +NONETID
 	+NOINTERACTION +NOTONAUTOMAP
 	+FORCEXYBILLBOARD
-	+DONTSPLASH
+	+CLIENTSIDEONLY +NONETID
 	RenderStyle Add
-	Alpha 0.75
-	Scale 0.15
+	Scale 0.07
 	States
 	{
 	Spawn:
-		TNT1 A 0
-		TNT1 A 0 A_ChangeVelocity(frandom(-0.1, 0.1), frandom(-0.1, 0.1), frandom(-0.1, 0.1))
-		SHOC ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ 1 Bright A_FadeOut(0.03)
-		Stop
+		SRTR A 0
+		Goto FadeOut
+	FadeOut:
+		"####" "#" 1 BRIGHT A_FadeOut(0.03)
+		Loop
 	}
 }
 
