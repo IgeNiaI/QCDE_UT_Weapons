@@ -3,7 +3,7 @@
 
 Model UTFlakBomb
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "flak_bomb.png"
    MODEL 0 "flak_bomb.md3"
    Scale 1.8 1.8 1.8
@@ -13,7 +13,7 @@ Model UTFlakBomb
 
 Model UTFlakBombDM
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "flak_bomb.png"
    MODEL 0 "flak_bomb.md3"
    Scale 1.8 1.8 1.8
@@ -23,7 +23,7 @@ Model UTFlakBombDM
 
 Model UTFlakBombIllusion
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "flak_bomb.png"
    MODEL 0 "flak_bomb.md3"
    Scale 1.8 1.8 1.8
@@ -59,7 +59,7 @@ Model PGworldactor2
 
 Model UTRipperBlade
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
@@ -70,7 +70,7 @@ Model UTRipperBlade
 
 Model UTRipperBladeUpgraded
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
@@ -81,7 +81,7 @@ Model UTRipperBladeUpgraded
 
 Model UTRipperBladeAlt
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
@@ -92,7 +92,7 @@ Model UTRipperBladeAlt
 
 Model UTRipperBladeAltUpgraded
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
@@ -103,7 +103,7 @@ Model UTRipperBladeAltUpgraded
 
 Model UTRipperBladeAltUpgradedRipper
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
@@ -117,7 +117,7 @@ Model UTRipperBladeAltUpgradedRipper
 
 Model UTRocketMissile
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -130,7 +130,7 @@ Model UTRocketMissile
 
 Model UTRocketMissileSpinningTop
 { 
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -143,7 +143,7 @@ Model UTRocketMissileSpinningTop
 
 Model UTRocketMissileSpinningBottom
 { 
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -156,7 +156,7 @@ Model UTRocketMissileSpinningBottom
 
 Model UTRocketMissileSpinningBottomLeft
 { 
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -169,7 +169,7 @@ Model UTRocketMissileSpinningBottomLeft
 
 Model UTRocketMissileSpinningBottomRight
 { 
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -182,7 +182,7 @@ Model UTRocketMissileSpinningBottomRight
 
 Model UTRocketMissileDM
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -195,7 +195,7 @@ Model UTRocketMissileDM
 
 Model UTRocketMissileSpinningTopDM
 { 
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -208,7 +208,7 @@ Model UTRocketMissileSpinningTopDM
 
 Model UTRocketMissileSpinningBottomDM
 { 
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -221,7 +221,7 @@ Model UTRocketMissileSpinningBottomDM
 
 Model UTRocketMissileSpinningBottomLeftDM
 { 
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -234,7 +234,7 @@ Model UTRocketMissileSpinningBottomLeftDM
 
 Model UTRocketMissileSpinningBottomRightDM
 { 
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -247,7 +247,7 @@ Model UTRocketMissileSpinningBottomRightDM
 
 Model UTRocketMissileIllusion
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
    Scale 1.0 1.0 1.2
@@ -263,7 +263,7 @@ Model UTRocketMissileIllusion
 
 Model UTRedeemerMissile
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "redeemer_rocket.png"
    MODEL 0 "redeemer_rocket.md3"
    Scale 0.8 0.8 0.96
@@ -276,7 +276,7 @@ Model UTRedeemerMissile
 
 Model UTRedeemerMissileControlled
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "redeemer_rocket.png"
    MODEL 0 "redeemer_rocket.md3"
    Scale 0.8 0.8 0.96
@@ -289,7 +289,7 @@ Model UTRedeemerMissileControlled
 
 Model UTRedeemerMissileDM
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "redeemer_rocket.png"
    MODEL 0 "redeemer_rocket.md3"
    Scale 0.8 0.8 0.96
@@ -302,7 +302,7 @@ Model UTRedeemerMissileDM
 
 Model UTRedeemerMissileControlledDM
 {
-   Path "MD3"
+   Path "MD3/PROJECTILES"
    SKIN 0 "redeemer_rocket.png"
    MODEL 0 "redeemer_rocket.md3"
    Scale 0.8 0.8 0.96
