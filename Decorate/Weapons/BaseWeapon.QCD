@@ -1322,6 +1322,14 @@ Actor LGworldactor2 { States { Spawn:
 	LGWR Z 1
 	Stop
 }}
+Actor LGworldactor_Quake1 { States { Spawn:
+	LGWR Y 1
+	Stop
+}}
+Actor LGworldactor2_Quake1 { States { Spawn:
+	LGWR Z 1
+	Stop
+}}
 Actor LGworldactor_Quake2 { States { Spawn:
 	LGWR Y 1
 	Stop
