@@ -1232,59 +1232,59 @@ Actor SGExplosiveBullet : FastProjectile
 // Empty overrides for MODELDEF
 Actor QCNailStrong { States { Spawn:
 	NAIL A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrong_Quake2 { States { Spawn:
 	NA2L A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrong_ETQW { States { Spawn:
 	NA5L A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrong_SeriousSam { States { Spawn:
 	NA8L A 1
-	Wait
+	Stop
 }}
 Actor QCNailWeak { States { Spawn:
 	NAII A 1
-	Wait
+	Stop
 }}
 Actor QCNailWeak_Quake2 { States { Spawn:
 	NA2I A 1
-	Wait
+	Stop
 }}
 Actor QCNailWeak_SeriousSam { States { Spawn:
 	NA8I A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrongDM { States { Spawn:
 	NAIL A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrongDM_Quake2 { States { Spawn:
 	NA2L A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrongDM_ETQW { States { Spawn:
 	NA5L A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrongDM_SeriousSam { States { Spawn:
 	NA8L A 1
-	Wait
+	Stop
 }}
 Actor QCNailWeakDM { States { Spawn:
 	NAII A 1
-	Wait
+	Stop
 }}
 Actor QCNailWeakDM_Quake2 { States { Spawn:
 	NA2I A 1
-	Wait
+	Stop
 }}
 Actor QCNailWeakDM_SeriousSam { States { Spawn:
 	NA8I A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrongIllusion { States { Spawn:
 	NAIL A 1
@@ -1292,79 +1292,79 @@ Actor QCNailStrongIllusion { States { Spawn:
 }}
 Actor QCNailStrongIllusion_Quake2 { States { Spawn:
 	NA2L A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrongIllusion_ETQW { States { Spawn:
 	NA5L A 1
-	Wait
+	Stop
 }}
 Actor QCNailStrongIllusion_SeriousSam { States { Spawn:
 	NA8L A 1
-	Wait
+	Stop
 }}
 Actor TriboltBolt { States { Spawn:
 	GRNL A 1
-	Wait
+	Stop
 }}
 Actor TriboltBoltDM { States { Spawn:
 	GRNL A 1
-	Wait
+	Stop
 }}
 Actor QCRocketPlayerIllusion { States { Spawn:
 	MICR A 1
-	Wait
+	Stop
 }}
 Actor LGworldactor { States { Spawn:
 	LGWR Y 1
-	Wait
+	Stop
 }}
 Actor LGworldactor2 { States { Spawn:
 	LGWR Z 1
-	Wait
+	Stop
 }}
 Actor LGworldactor_Quake2 { States { Spawn:
 	LGWR Y 1
-	Wait
+	Stop
 }}
 Actor LGworldactor2_Quake2 { States { Spawn:
 	LGWR Z 1
-	Wait
+	Stop
 }}
 Actor LGworldactor_Quake3 { States { Spawn:
 	LGWR Y 1
-	Wait
+	Stop
 }}
 Actor LGworldactor2_Quake3 { States { Spawn:
 	LGWR Z 1
-	Wait
+	Stop
 }}
 Actor LGworldactorPurple { States { Spawn:
 	LGWR Y 1
-	Wait
+	Stop
 }}
 Actor LGworldactor2Purple { States { Spawn:
 	LGWR Z 1
-	Wait
+	Stop
 }}
 Actor LGworldactorPurple_Quake2 { States { Spawn:
 	LGWR Y 1
-	Wait
+	Stop
 }}
 Actor LGworldactor2Purple_Quake2 { States { Spawn:
 	LGWR Z 1
-	Wait
+	Stop
 }}
 Actor LGworldactorPurple_Quake3 { States { Spawn:
 	LGWR Y 1
-	Wait
+	Stop
 }}
 Actor LGworldactor2Purple_Quake3 { States { Spawn:
 	LGWR Z 1
-	Wait
+	Stop
 }}
 Actor RailgunTrail_SeriousSam { States { Spawn:
 	SPTR A 1
-	Wait
+	Stop
 }}
 Actor UnusedActor { States { Spawn:
 	QCG3 Y 1
