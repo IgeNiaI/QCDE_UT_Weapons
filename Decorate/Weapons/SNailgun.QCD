@@ -312,7 +312,7 @@ Actor UTPulseStrong : FastProjectile
 	Radius 4
 	Height 9
 	Damage (random(18,27))
-	Decal "Q4PlasmaBlack"
+	Decal "UTPulseGunFull"
 	Scale 0.30
 	RenderStyle Add
 	States
@@ -377,7 +377,7 @@ Actor PulseBeamPuff
 	Scale 0.35
 	Renderstyle Add
 	Obituary "$OB_UTPulseGun"
-	Decal "Q4PlasmaBlack"
+	Decal "SSNailgunGreenFull"
 	States
 	{
 	XDeath:

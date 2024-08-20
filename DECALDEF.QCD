@@ -1,0 +1,54 @@
+
+decal UTPulseGunFull	//Glowing spot
+{
+	pic SSSNGDCL
+	x-scale 0.42
+	y-scale 0.42
+	randomflipx
+	randomflipy
+	Fullbright
+	animator GoAwayBulletGlow
+	LowerDecal "Q4PlasmaBlack"
+}
+
+decal UTShockPurpleSmall //Glowing spot
+{
+	pic UTSHRDCL
+	x-scale 0.21
+	y-scale 0.21
+	randomflipx
+	randomflipy
+	Fullbright
+	animator GoAwayBulletGlow
+	LowerDecal "Q4PlasmaBlackSmall"
+}
+
+decal UTShockPurpleFull	//Glowing spot
+{
+	pic UTSHRDCL
+	x-scale 0.42
+	y-scale 0.42
+	randomflipx
+	randomflipy
+	Fullbright
+	animator GoAwayBulletGlow
+	LowerDecal "Q4PlasmaBlack"
+}
+
+fader GoAwayBioGlow
+{
+	DecayStart	3.0
+	DecayTime	1.0
+}
+
+decal UTBioRifleFull	//Glowing spot
+{
+	pic SSSNGDCL
+	x-scale 0.42
+	y-scale 0.42
+	randomflipx
+	randomflipy
+	Fullbright
+	animator GoAwayBioGlow
+	LowerDecal "Q4PlasmaBlack"
+}

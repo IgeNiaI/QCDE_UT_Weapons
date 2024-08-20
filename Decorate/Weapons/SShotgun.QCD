@@ -383,6 +383,7 @@ Actor UTFlakShell : FastProjectile
 	MissileType "UTFlakShellTrailFX"
 	MissileHeight 8
 	Obituary "$OB_UTFlakCannon"
+	Decal "BulletChip"
 	States
 	{
 	Spawn:
@@ -475,6 +476,7 @@ Actor UTFlakBomb
 	scale 1.0
 	Obituary "$OB_UTFlakCannon"
 	DeathSound "QC/Weapons/RocketLauncher/RocketExplo"
+	Decal "D4ExploScorch"
 	states
 	{
 	Spawn:

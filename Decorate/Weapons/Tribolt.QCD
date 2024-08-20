@@ -270,7 +270,7 @@ Actor UTRipperBlade
 	Radius 8
 	Height 3
 	Damage (random(70,90))
-	Decal "Q4PlasmaBlack"
+	Decal "GauntletDecal_Quake3"
 	Scale 0.33
 	BounceType Doom
 	BounceFactor 1.0
@@ -322,6 +322,7 @@ Actor UTRipperBladeAlt : UTRipperBlade
 	+SEEKERMISSILE //Not actually used for anything other than checking radius.
 	Damage (random(70,90))
 	BounceType None
+	Decal "Q4PlasmaBlack"
 
 	States
 	{
@@ -1161,6 +1162,7 @@ ACTOR BioBall1DM
 	SeeSound "weapons/maceshoot"
 	Obituary "$OB_UTBioRifle"
 	RenderStyle Add
+	Decal "UTBioRifleFull"
 
 	States
 	{

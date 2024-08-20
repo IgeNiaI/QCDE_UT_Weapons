@@ -96,6 +96,7 @@ Actor QCLightningGun : QCWeapon
 	Obituary "$OB_UTShockRifle"
 	Inventory.PickupMessage "$GOT_UTShockRifle"
 	Tag "$TAG_UTShockRifle"
+	Decal "UTShockPurpleSmall"
 	Scale 0.62
 	States
 	{
@@ -282,7 +283,7 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 	DamageFactor "ShkRflDmg", 1.1
 	DamageType "ShkRflDmg"
 	BounceType Doom
-	Decal "Q4PlasmaBlack"
+	Decal "UTShockPurpleFull"
 	SeeSound "weapons/maceshoot"
 	Obituary "$OB_UTShockRifle"
 
@@ -506,13 +507,17 @@ Actor SRworldactor
 Actor ShockRiflePuff
 {
 	+NONETID
-	+NOINTERACTION
+	+NOINTERACTION +NOTONAUTOMAP
 	+ALWAYSPUFF
 	+PUFFGETSOWNER
-	+EXTREMEDEATH
-	+FORCEXYBILLBOARD
+	+PUFFONACTORS
 	+MTHRUSPECIES
+	Radius 10
+	Obituary "$OB_UTShockRifle"
+	+FORCEXYBILLBOARD
+	+DONTSPLASH
 	DamageType "ShkRflDmg"
+	Decal "UTShockPurpleSmall"
 	States
 	{
 	Spawn:	//hit non bleeding actor

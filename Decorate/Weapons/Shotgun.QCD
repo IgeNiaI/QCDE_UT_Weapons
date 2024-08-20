@@ -643,6 +643,7 @@ Actor UTFlakMiniShellDM : FastProjectile
 	Obituary "$OB_UTFlakMini"
 	MissileType "UTFlakShellTrailFX"
 	MissileHeight 8
+	Decal "BulletChip"
 	states
 	{
 	Spawn:
