@@ -749,7 +749,12 @@ Actor QCRailGun : QCWeapon
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/SniperRifle/Quad/Fire",CHAN_WEAPON)
 			Goto FlashEnder
 		QuietSound:
+			TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuietQuadSound")
+			TNT1 A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"QuietQuadSound")
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/SniperRifle/Fire",CHAN_WEAPON,0.25)
+			Goto FlashEnder
+		QuietQuadSound:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/SniperRifle/Quad/Fire",CHAN_WEAPON,0.25)
 			Goto FlashEnder
 
 	FlashEnder:
