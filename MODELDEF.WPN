@@ -63,7 +63,7 @@ Model UTRipperBlade
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.0
+   Scale 1.0 1.0 1.15
    PITCHFROMMOMENTUM
    FrameIndex BLAD ABC 0 0
 }
@@ -74,7 +74,7 @@ Model UTRipperBladeUpgraded
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.0
+   Scale 1.0 1.0 1.15
    PITCHFROMMOMENTUM
    FrameIndex BLAD ABC 0 0
 }
@@ -85,7 +85,7 @@ Model UTRipperBladeAlt
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.0
+   Scale 1.0 1.0 1.15
    PITCHFROMMOMENTUM
    FrameIndex BLAD ABC 0 0
 }
@@ -96,7 +96,7 @@ Model UTRipperBladeAltUpgraded
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.0
+   Scale 1.0 1.0 1.15
    PITCHFROMMOMENTUM
    FrameIndex BLAD ABC 0 0
 }
@@ -107,9 +107,272 @@ Model UTRipperBladeAltUpgradedRipper
    SurfaceSkin 0 0 "RazTrail.png"
    SurfaceSkin 0 1 "RazSkin.png"
    MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.0
+   Scale 1.0 1.0 1.15
    PITCHFROMMOMENTUM
    FrameIndex BLAD ABC 0 0
+}
+
+
+// Bio Rifle
+
+Model BioBall1DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBall2DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBall3DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBall4DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBall5DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBall6DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBall7DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBall8DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBall9DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBall10DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBallSticky1DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBallSticky2DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
+}
+
+Model BioBallSticky3DM
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex BIOB A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex BIOB B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex BIOB C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex BIOB D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex BIOB E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex BIOB F 0 5
 }
 
 
@@ -120,7 +383,7 @@ Model UTRocketMissile
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -133,7 +396,7 @@ Model UTRocketMissileSpinningTop
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -146,7 +409,7 @@ Model UTRocketMissileSpinningBottom
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -159,7 +422,7 @@ Model UTRocketMissileSpinningBottomLeft
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -172,7 +435,7 @@ Model UTRocketMissileSpinningBottomRight
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -185,7 +448,7 @@ Model UTRocketMissileDM
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -198,7 +461,7 @@ Model UTRocketMissileSpinningTopDM
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -211,7 +474,7 @@ Model UTRocketMissileSpinningBottomDM
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -224,7 +487,7 @@ Model UTRocketMissileSpinningBottomLeftDM
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -237,7 +500,7 @@ Model UTRocketMissileSpinningBottomRightDM
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -250,7 +513,7 @@ Model UTRocketMissileIllusion
    Path "MD3/PROJECTILES"
    SKIN 0 "rocket_proj.png"
    MODEL 0 "rocket_proj.md3"
-   Scale 1.0 1.0 1.2
+   Scale 1.0 1.0 1.15
    ROTATING
    Rotation-Speed 3
    Rotation-Vector 1 0 0
@@ -266,10 +529,7 @@ Model UTRedeemerMissile
    Path "MD3/PROJECTILES"
    SKIN 0 "redeemer_rocket.png"
    MODEL 0 "redeemer_rocket.md3"
-   Scale 0.8 0.8 0.96
-   ROTATING
-   Rotation-Speed 3
-   Rotation-Vector 1 0 0
+   Scale 0.8 0.8 0.92
    PITCHFROMMOMENTUM
    FrameIndex RDRK A 0 0
 }
@@ -279,10 +539,7 @@ Model UTRedeemerMissileControlled
    Path "MD3/PROJECTILES"
    SKIN 0 "redeemer_rocket.png"
    MODEL 0 "redeemer_rocket.md3"
-   Scale 0.8 0.8 0.96
-   ROTATING
-   Rotation-Speed 3
-   Rotation-Vector 1 0 0
+   Scale 0.8 0.8 0.92
    PITCHFROMMOMENTUM
    FrameIndex RDRK A 0 0
 }
@@ -292,10 +549,7 @@ Model UTRedeemerMissileDM
    Path "MD3/PROJECTILES"
    SKIN 0 "redeemer_rocket.png"
    MODEL 0 "redeemer_rocket.md3"
-   Scale 0.8 0.8 0.96
-   ROTATING
-   Rotation-Speed 3
-   Rotation-Vector 1 0 0
+   Scale 0.8 0.8 0.92
    PITCHFROMMOMENTUM
    FrameIndex RDRK A 0 0
 }
@@ -305,10 +559,7 @@ Model UTRedeemerMissileControlledDM
    Path "MD3/PROJECTILES"
    SKIN 0 "redeemer_rocket.png"
    MODEL 0 "redeemer_rocket.md3"
-   Scale 0.8 0.8 0.96
-   ROTATING
-   Rotation-Speed 3
-   Rotation-Vector 1 0 0
+   Scale 0.8 0.8 0.92
    PITCHFROMMOMENTUM
    FrameIndex RDRK A 0 0
 }
