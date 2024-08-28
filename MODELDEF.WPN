@@ -6,7 +6,7 @@ Model UTFlakBomb
    Path "MD3/PROJECTILES"
    SKIN 0 "flak_bomb.png"
    MODEL 0 "flak_bomb.md3"
-   Scale 1.8 1.8 1.8
+   Scale 1.8 1.8 -2.07
    PITCHFROMMOMENTUM
    FrameIndex FLAK A 0 0
 }
@@ -16,7 +16,7 @@ Model UTFlakBombDM
    Path "MD3/PROJECTILES"
    SKIN 0 "flak_bomb.png"
    MODEL 0 "flak_bomb.md3"
-   Scale 1.8 1.8 1.8
+   Scale 1.8 1.8 -2.07
    PITCHFROMMOMENTUM
    FrameIndex FLAK A 0 0
 }
@@ -26,7 +26,7 @@ Model UTFlakBombIllusion
    Path "MD3/PROJECTILES"
    SKIN 0 "flak_bomb.png"
    MODEL 0 "flak_bomb.md3"
-   Scale 1.8 1.8 1.8
+   Scale 1.8 1.8 -2.07
    PITCHFROMMOMENTUM
    FrameIndex FLAK A 0 0
 }
