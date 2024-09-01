@@ -115,21 +115,6 @@ FreeformMenu "QCDE_OptionsControls"
 	InsertFreeformMenu QCDE_OptionsTabs
 }
 
-AddFreeformMenu "QCDE_OptionsSound"
-{
-	Label {
-		Pos		80, 143				Font		SmallFont
-		Anchor	left, top			FontColor	DarkGray
-		Text	"Multi-Spree Announcer"
-	}
-	Option {
-		Pos		80, 160				CVar				cl_utannouncer	UnknownBackground	OP21028
-		Size	105, 14				Values				UT_Announcers	SelectedBackground	OP21028S
-		Anchor	left, center		Font				SmallFont		SelectedForeground	OP21028A, 119, 14
-		Padding	3, 1				SelectedFontColor	Gray
-	}
-}
-
 OptionValue "UT_Announcers"
 {
 	0, "UT99"

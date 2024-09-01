@@ -164,11 +164,8 @@ script "UTANN_Announce" (int mode, int idx, int plr) CLIENTSIDE {
 
 function void UTANN_PlaySound(int mode, int idx) {
 
-	int announcer = GetCVar("cl_utannouncer");
-	if (announcer < 0) announcer = 0;
-	if (announcer > 4) announcer = 4;
 	str set = (mode == SPREE) ? "spree" : (mode == FIRST_BLOOD) ? "fblod" : "multi";
-	str sound = StrParam(s:"UTDE/announcer/a", d:announcer, s:"_", s:set, d:idx);
+	str sound = StrParam(s:"UTDE/", s:set, d:idx);
 	
 	LocalAmbientSound(sound, 127 * GetCVar("snd_announcervolume") >> 16);
 
