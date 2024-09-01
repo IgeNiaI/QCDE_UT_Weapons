@@ -934,7 +934,7 @@ Actor SniperTrail
 	+FORCEXYBILLBOARD
 	+CLIENTSIDEONLY +NONETID
 	RenderStyle Add
-	Scale 0.21
+	Scale 0.07
 	States
 	{
 	Spawn:

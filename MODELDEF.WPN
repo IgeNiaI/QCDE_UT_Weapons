@@ -571,7 +571,7 @@ Model SRworldactor
 	Path "MD3"
 	SKIN 0 "rtrlSR.png"
 	MODEL 0 "beam.md3"
-	Scale 2.141 6.0 6.0
+	Scale 2.141 12.0 12.0
 	INHERITACTORPITCH
 	FrameIndex SRTR A 0 0
 }
@@ -581,7 +581,7 @@ Model SniperTrail
 	Path "MD3"
 	SKIN 0 "rtrlSS.png"
 	MODEL 0 "beam.md3"
-	Scale 2.141 4.0 4.0
+	Scale 2.141 8.0 8.0
 	INHERITACTORPITCH
 	FrameIndex RTSS A 0 0
 }
@@ -591,7 +591,7 @@ Model SniperTrailUpgraded
 	Path "MD3"
 	SKIN 0 "rtrlQW.png"
 	MODEL 0 "beam.md3"
-	Scale 2.141 18.0 18.0
+	Scale 2.141 8.0 8.0
 	INHERITACTORPITCH
 	FrameIndex RTQW A 0 0
 }
