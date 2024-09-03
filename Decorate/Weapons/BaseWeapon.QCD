@@ -1370,10 +1370,6 @@ Actor LGworldactor2Purple_Quake3 { States { Spawn:
 	LGWR Z 1
 	Stop
 }}
-Actor RailgunTrail { States { Spawn:
-	RTQC A 1
-	Stop
-}}
 Actor RailgunTrail_Quake1 { States { Spawn:
 	RTQ1 A 1
 	Stop
