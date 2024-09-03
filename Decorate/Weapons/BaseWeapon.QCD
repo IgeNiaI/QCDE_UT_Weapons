@@ -443,8 +443,8 @@ Actor RailgunTrail
 	States
 	{
 	Spawn:
-		FX01 AA 1 Bright
-		FX01 A 1 Bright A_FadeOut(0.065)
+		RTQC AA 1 Bright
+		RTQC A 1 Bright A_FadeOut(0.065)
 		Wait
 	}
 }
@@ -1368,10 +1368,6 @@ Actor LGworldactorPurple_Quake3 { States { Spawn:
 }}
 Actor LGworldactor2Purple_Quake3 { States { Spawn:
 	LGWR Z 1
-	Stop
-}}
-Actor RailgunTrail { States { Spawn:
-	RTQC A 1
 	Stop
 }}
 Actor RailgunTrail_Quake1 { States { Spawn:
