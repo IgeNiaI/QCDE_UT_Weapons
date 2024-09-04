@@ -108,6 +108,11 @@ script "UTANN_FirstBlood" (void) {
 
 script "UTANN_Announce" (int mode, int idx, int plr) CLIENTSIDE {
 	
+	while(CheckInventory("MedalInExecutionToken"))
+		Delay(1);
+
+	GiveInventory("MedalInExecutionToken", 1);
+	
 	switch(mode) {
 		
 		case MULTI:
@@ -154,6 +159,9 @@ script "UTANN_Announce" (int mode, int idx, int plr) CLIENTSIDE {
 				
 			UTANN_PlaySound(mode, idx);
 	}
+
+	Delay(48);
+	TakeInventory("MedalInExecutionToken", 1);
 }
 
 function void UTANN_PlaySound(int mode, int idx) {
