@@ -48,12 +48,6 @@ script "UTANN_FragEvent" (int evtTyp, int victimNo, int arg2) EVENT {
 		
 		if(!firstBloodGiven)
 			ACS_NamedExecuteAlways("UTANN_FirstBlood", 0);
-		
-		int victimTID = victimNo + 1000;
-		
-		if(victimTID == ActivatorTID()) {
-			terminate;
-		}
 			
 		ACS_NamedExecuteAlways("UTANN_Excellent", 0, Timer());
 		ACS_NamedExecuteAlways("UTANN_KillingSpree", 0);
