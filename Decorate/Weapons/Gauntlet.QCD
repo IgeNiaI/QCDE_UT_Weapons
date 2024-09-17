@@ -731,10 +731,6 @@ Actor QCGauntlet : QCWeapon
 	}
 }
 
-Actor QCGauntlet_Bot : QCGauntlet
-{
-}
-
 Actor HammerReflector
 {
 	+NOINTERACTION
