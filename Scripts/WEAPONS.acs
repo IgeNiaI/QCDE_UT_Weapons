@@ -311,7 +311,7 @@ Script "QCDE_ConfigureBotWeapons" (void)
 	// Define normal weapons
 	//					Name				Priority
 	TDB_Weapon_New(		"DukeFreezeThrower",	4);
-	TDB_Weapon_New(		"SamMinigun",			3);
+	TDB_Weapon_New(		"SamMinigun",			2);
 	TDB_Weapon_New(		"QCGauntlet",			0);
 	TDB_Weapon_New(		"QCMachinegunDM",		1);
 	TDB_Weapon_New(		"QCHeavyMachinegunDM",	2);
