@@ -329,27 +329,27 @@ Script "QCDE_ConfigureBotWeapons" (void)
 	//					Name					Ammo Class		Ammo Use	Proj Speed	Min Dist	Max Dist	Flags								Alt Fire chance
 	// Abilities
 	TDB_Weapon_Pri(		"DukeFreezeThrower",	"DukeAmmo",			1,		25.0,		0.0,		400.0,		TDB_CW_PROJECTILE);
-	TDB_Weapon_Pri(		"SamMinigun",			"SeriousBullets",	1,		0.0,		0.0,		700.0,		0);
-	TDB_Weapon_Alt(		"SamMinigun",			"SeriousBullets",	1,		0.0,		0.0,		400.0,		0,									0.5);
+	TDB_Weapon_Pri(		"SamMinigun",			"SeriousBullets",	1,		0.0,		300.0,		700.0,		0);
+	TDB_Weapon_Alt(		"SamMinigun",			"SeriousBullets",	1,		0.0,		0.0,		300.0,		0,									0.0); // 0 chance to always use primary when outside of range
 
 	//					Name					Ammo Class		Ammo Use	Proj Speed	Min Dist	Max Dist	Flags	Alt Fire chance
 	// Starter weapons + upgrades
 	TDB_Weapon_Pri(		"QCGauntlet",			"",					0,		0.0,		0.0,		55.0,		TDB_CW_MELEE);
 	TDB_Weapon_Pri(		"QCMachinegunDM",		"QCBulletAmmo",		1,		0.0,		200.0,		MAX_RANGE,	0);
-	TDB_Weapon_Pri(		"QCHeavyMachinegunDM",	"QCBulletAmmo",		1,		0.0,		200.0,		MAX_RANGE,	0);
-	TDB_Weapon_Alt(		"QCHeavyMachinegunDM",	"QCBulletAmmo",		1,		0.0,		0.0,		400.0,		0,									0.5);
+	TDB_Weapon_Pri(		"QCHeavyMachinegunDM",	"QCBulletAmmo",		1,		0.0,		300.0,		MAX_RANGE,	0);
+	TDB_Weapon_Alt(		"QCHeavyMachinegunDM",	"QCBulletAmmo",		1,		0.0,		0.0,		300.0,		0,									0.0); // 0 chance to always use primary when outside of range
 	TDB_Weapon_Pri(		"QCShotgunDM",			"QCShellAmmo",		1,		0.0,		0.0,		200.0,		0);
 	TDB_Weapon_Pri(		"QCSuperShotgunDM",		"QCShellAmmo",		1,		65.0,		0.0,		200.0,		TDB_CW_PROJECTILE);
 	TDB_Weapon_Alt(		"QCSuperShotgunDM",		"QCShellAmmo",		1,		25.0,		200.0,		500.0,		TDB_CW_PROJECTILE|TDB_CW_EXPLOSIVE,	0.5);
 	TDB_Weapon_Pri(		"QCNailgunDM",			"QCNailAmmo",		1,		52.0,		0.0,		250.0,		TDB_CW_PROJECTILE);
 	TDB_Weapon_Pri(		"QCSuperNailgunDM",		"QCNailAmmo",		1,		52.0,		0.0,		250.0,		TDB_CW_PROJECTILE);
-	TDB_Weapon_Alt(		"QCSuperNailgunDM",		"QCNailAmmo",		1,		0.0,		250.0,		700.0,		0,									0.5);
+	TDB_Weapon_Alt(		"QCSuperNailgunDM",		"QCNailAmmo",		1,		0.0,		250.0,		500.0,		0,									0.0); // 0 chance to always use primary when outside of range
 
 	//					Name					Ammo Class		Ammo Use	Proj Speed	Min Dist	Max Dist	Flags	Alt Fire chance
 	// Strong weapons
 	TDB_Weapon_Pri(		"QCTriboltDM",			"QCBoltAmmo",		1,		30.0,		0.0,		400.0,		TDB_CW_PROJECTILE);
 	TDB_Weapon_Pri(		"QCRocketLauncherDM",	"QCRocketAmmo",		1,		34.0,		0.0,		400.0,		TDB_CW_PROJECTILE|TDB_CW_EXPLOSIVE);
-	TDB_Weapon_Pri(		"QCLightningGunDM",		"QCCoilAmmo",		1,		0.0,		200.0,		MAX_RANGE,	0);
+	TDB_Weapon_Pri(		"QCLightningGunDM",		"QCCoilAmmo",		1,		0.0,		300.0,		MAX_RANGE,	0);
 	//TDB_Weapon_Alt(		"QCLightningGunDM",		"QCCoilAmmo",		2,		18.0,		200.0,		700.0,		TDB_CW_PROJECTILE,									0.5);
 	TDB_Weapon_Pri(		"QCRailgunDM",			"QCSlugAmmo",		1,		0.0,		600.0,		MAX_RANGE,	0);
 	TDB_Weapon_Pri(		"QCBFGDM",				"QCBFGAmmo",		1,		45.0,		0.0,		700.0,		TDB_CW_PROJECTILE|TDB_CW_EXPLOSIVE);
