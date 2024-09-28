@@ -24,8 +24,8 @@ Actor ShotgunPickup : CustomInventory 15601
 	States
 	{
 	Spawn:
-		UDSP Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
-		UDSP Y 35 A_CheckFlag("DROPPED", "BecomeWeaponItself")
+		UTDP Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		UTDP Y 35 A_CheckFlag("DROPPED", "BecomeWeaponItself")
 		Goto Idle
 	DMSpawn:
 		"####" "#" 0 A_ChangeFlag("DROPPED", 0)
@@ -57,8 +57,8 @@ Actor ShotgunPickup : CustomInventory 15601
 		Stop
 
 	Idle:
-		UDSP Y 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",3,args[4])
-		UDSP Y -1 A_SetArg(4, 0)
+		UTDP Y 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",3,args[4])
+		UTDP Y -1 A_SetArg(4, 0)
 		Wait
 	Pickup:
 		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("WeaponStayCheck",0,0,0,0),"WeaponStay")
@@ -106,14 +106,14 @@ Actor QCShotgun : QCWeapon
 	{
 	Spawn:
 		TNT1 A 1
-		UDSP Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		UTDP Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
-		UDSP Z 0 Bright A_ChangeFlag("NOBLOCKMAP",1)	//in DM, if a player drops this weapon, cant be picked
+		UTDP Z 0 Bright A_ChangeFlag("NOBLOCKMAP",1)	//in DM, if a player drops this weapon, cant be picked
 		TNT1 Z 3	//and disappears
 		Stop
 	Idle:
-		UDSP Y -1
+		UTDP Y -1
 		Wait
 
 	//-----------------------
@@ -132,15 +132,15 @@ Actor QCShotgun : QCWeapon
 		Goto SelectLooper3
 
 	SelectLooper1:
-		UDSP A 1 A_Raise
+		UTDP A 1 A_Raise
 		"####" "###" 0 A_Raise
 		Loop
 	SelectLooper3:
-		UDSP D 1 A_Raise
+		UTDP D 1 A_Raise
 		"####" "###" 0 A_Raise
 		Loop
 	SelectLooper5:
-		UDSP G 1 A_Raise
+		UTDP G 1 A_Raise
 		"####" "###" 0 A_Raise
 		Loop
 
@@ -156,15 +156,15 @@ Actor QCShotgun : QCWeapon
 		Goto DeselectLooper3
 
 	DeselectLooper1:
-		UDSP A 1 A_Lower
+		UTDP A 1 A_Lower
 		"####" "###" 0 A_Lower
 		Loop
 	DeselectLooper3:
-		UDSP D 1 A_Lower
+		UTDP D 1 A_Lower
 		"####" "###" 0 A_Lower
 		Loop
 	DeselectLooper5:
-		UDSP G 1 A_Lower
+		UTDP G 1 A_Lower
 		"####" "###" 0 A_Lower
 		Loop
 
@@ -175,14 +175,14 @@ Actor QCShotgun : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "Ready3")
 		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Ready3v2")
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire1")
-		UDSP A 3 A_WeaponReady
+		UTDP A 3 A_WeaponReady
 		Loop
 
 		ReadyCantFire1:
 			TNT1 A 0 A_StopSound(5)
 			TNT1 A 0 A_StopSound(CHAN_WEAPON)
 		RCFLooper1:
-			UDSP A 4 A_WeaponReady(WRF_NOFIRE)
+			UTDP A 4 A_WeaponReady(WRF_NOFIRE)
 			TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper1")
 			Goto Ready
 
@@ -190,14 +190,14 @@ Actor QCShotgun : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", 1, "Ready5")
 		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", -1, "Ready")
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire3")
-		UDSP D 3 A_WeaponReady
+		UTDP D 3 A_WeaponReady
 		Loop
 
 		ReadyCantFire3:
 			TNT1 A 0 A_StopSound(5)
 			TNT1 A 0 A_StopSound(CHAN_WEAPON)
 		RCFLooper3:
-			UDSP D 4 A_WeaponReady(WRF_NOFIRE)
+			UTDP D 4 A_WeaponReady(WRF_NOFIRE)
 			TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper3")
 			Goto Ready3
 
@@ -205,14 +205,14 @@ Actor QCShotgun : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", 1, "Ready5")
 		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", -1, "Ready")
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire3v2")
-		UDSP D 3 A_WeaponReady
+		UTDP D 3 A_WeaponReady
 		Loop
 
 		ReadyCantFire3v2:
 			TNT1 A 0 A_StopSound(5)
 			TNT1 A 0 A_StopSound(CHAN_WEAPON)
 		RCFLooper3v2:
-			UDSP D 4 A_WeaponReady(WRF_NOFIRE)
+			UTDP D 4 A_WeaponReady(WRF_NOFIRE)
 			TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper3v2")
 			Goto Ready3v2
 
@@ -220,14 +220,14 @@ Actor QCShotgun : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("SG_UG_Spread", -1, "Ready")
 		TNT1 A 0 A_JumpIfInventory("SG_UG_Explosive", -1, "Ready")
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire5")
-		UDSP G 3 A_WeaponReady
+		UTDP G 3 A_WeaponReady
 		Loop
 
 		ReadyCantFire5:
 			TNT1 A 0 A_StopSound(5)
 			TNT1 A 0 A_StopSound(CHAN_WEAPON)
 		RCFLooper5:
-			UDSP G 4 A_WeaponReady(WRF_NOFIRE)
+			UTDP G 4 A_WeaponReady(WRF_NOFIRE)
 			TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"RCFLooper5")
 			Goto Ready5
 
@@ -247,17 +247,17 @@ Actor QCShotgun : QCWeapon
 	Fire1:
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire1")
 		TNT1 A 0 A_GunFlash("Flash1")
-		UDSP B 1
-		UDSP B 1 Offset(3,35)
-		UDSP C 1 Offset(5,37)
-		UDSP C 1 Offset(7,39)
-		UDSP A 1 Offset(8,40)
-		UDSP A 1 Offset(7,39)
-		UDSP A 1 Offset(5,37)
-		UDSP A 1 Offset(3,35)
-		UDSP A 1 Offset(2,34)
-		UDSP A 1 Offset(1,33)
-		UDSP A 1 Offset(0,32)
+		UTDP B 1
+		UTDP B 1 Offset(3,35)
+		UTDP C 1 Offset(5,37)
+		UTDP C 1 Offset(7,39)
+		UTDP A 1 Offset(8,40)
+		UTDP A 1 Offset(7,39)
+		UTDP A 1 Offset(5,37)
+		UTDP A 1 Offset(3,35)
+		UTDP A 1 Offset(2,34)
+		UTDP A 1 Offset(1,33)
+		UTDP A 1 Offset(0,32)
 		Goto Ready
 
 	Flash1:
@@ -291,23 +291,23 @@ Actor QCShotgun : QCWeapon
 	Fire3:
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire3")
 		TNT1 A 0 A_GunFlash("Flash3")
-		UDSP E 1
-		UDSP E 1 Offset(4,36)
-		UDSP F 1 Offset(7,39)
-		UDSP F 1 Offset(11,43)
-		UDSP D 1 Offset(13,45)
-		UDSP D 1 Offset(14,46)
-		UDSP D 1 Offset(15,47)
-		UDSP D 1 Offset(13,45)
-		UDSP D 1 Offset(11,43)
-		UDSP D 1 Offset(9,41)
-		UDSP D 1 Offset(8,40)
-		UDSP D 1 Offset(7,39)
-		UDSP D 1 Offset(5,37)
-		UDSP D 1 Offset(3,35)
-		UDSP D 1 Offset(2,34)
-		UDSP D 1 Offset(1,33)
-		UDSP D 1 Offset(0,32)
+		UTDP E 1
+		UTDP E 1 Offset(4,36)
+		UTDP F 1 Offset(7,39)
+		UTDP F 1 Offset(11,43)
+		UTDP D 1 Offset(13,45)
+		UTDP D 1 Offset(14,46)
+		UTDP D 1 Offset(15,47)
+		UTDP D 1 Offset(13,45)
+		UTDP D 1 Offset(11,43)
+		UTDP D 1 Offset(9,41)
+		UTDP D 1 Offset(8,40)
+		UTDP D 1 Offset(7,39)
+		UTDP D 1 Offset(5,37)
+		UTDP D 1 Offset(3,35)
+		UTDP D 1 Offset(2,34)
+		UTDP D 1 Offset(1,33)
+		UTDP D 1 Offset(0,32)
 		Goto Ready
 
 	Flash3:
@@ -341,34 +341,34 @@ Actor QCShotgun : QCWeapon
 	Fire5:
 		TNT1 A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire5")
 		TNT1 A 0 A_GunFlash("Flash5")
-		UDSP H 1
-		UDSP H 1 Offset(5,37)
-		UDSP I 1 Offset(9,41)
-		UDSP I 1 Offset(12,44)
-		UDSP G 1 Offset(15,47)
-		UDSP G 1 Offset(17,49)
-		UDSP G 1 Offset(18,50)
-		UDSP G 1 Offset(19,51)
-		UDSP G 1 Offset(20,52)
-		UDSP G 1 Offset(21,53)
-		UDSP G 1 Offset(22,54)
-		UDSP G 1 Offset(23,55)
-		UDSP G 1 Offset(22,54)
-		UDSP G 1 Offset(21,53)
-		UDSP G 1 Offset(20,52)
-		UDSP G 1 Offset(19,51)
-		UDSP G 1 Offset(18,50)
-		UDSP G 1 Offset(17,49)
-		UDSP G 1 Offset(16,48)
-		UDSP G 1 Offset(15,47)
-		UDSP G 1 Offset(13,45)
-		UDSP G 1 Offset(11,43)
-		UDSP G 1 Offset(9,41)
-		UDSP G 1 Offset(7,39)
-		UDSP G 1 Offset(5,37)
-		UDSP G 1 Offset(3,35)
-		UDSP G 1 Offset(1,33)
-		UDSP G 1 Offset(0,32)
+		UTDP H 1
+		UTDP H 1 Offset(5,37)
+		UTDP I 1 Offset(9,41)
+		UTDP I 1 Offset(12,44)
+		UTDP G 1 Offset(15,47)
+		UTDP G 1 Offset(17,49)
+		UTDP G 1 Offset(18,50)
+		UTDP G 1 Offset(19,51)
+		UTDP G 1 Offset(20,52)
+		UTDP G 1 Offset(21,53)
+		UTDP G 1 Offset(22,54)
+		UTDP G 1 Offset(23,55)
+		UTDP G 1 Offset(22,54)
+		UTDP G 1 Offset(21,53)
+		UTDP G 1 Offset(20,52)
+		UTDP G 1 Offset(19,51)
+		UTDP G 1 Offset(18,50)
+		UTDP G 1 Offset(17,49)
+		UTDP G 1 Offset(16,48)
+		UTDP G 1 Offset(15,47)
+		UTDP G 1 Offset(13,45)
+		UTDP G 1 Offset(11,43)
+		UTDP G 1 Offset(9,41)
+		UTDP G 1 Offset(7,39)
+		UTDP G 1 Offset(5,37)
+		UTDP G 1 Offset(3,35)
+		UTDP G 1 Offset(1,33)
+		UTDP G 1 Offset(0,32)
 		Goto Ready
 
 	Flash5:
