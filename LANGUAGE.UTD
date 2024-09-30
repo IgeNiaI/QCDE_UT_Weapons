@@ -11,6 +11,7 @@ Control_Slot7	= "Shock Rifle";
 Control_Slot8	= "Sniper Rifle";
 Control_Slot9	= "Redeemer";
 
+Control_LGBeam		= "Invisible Pulse beam (DM)";
 Control_SpawnBFG	= "Spawn Redeemer";
 
 Weapon_Slot1	= "Impact Hammer";
