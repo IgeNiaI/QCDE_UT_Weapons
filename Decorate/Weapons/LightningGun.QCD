@@ -74,9 +74,10 @@ Actor LightningGunPickup : CustomInventory 15606
 	}
 }
 
-Actor LightningGunPickupFloat : LightningGunPickup 15616
+Actor LightningGunPickupNoGravity : LightningGunPickup 15616
 {
-	//$Title "Float Shock Rifle"
+	//$Category "QCDE Weapons (No Gravity)"
+	//$Title "Shock Rifle (No Gravity)"
 	+NOGRAVITY
 }
 

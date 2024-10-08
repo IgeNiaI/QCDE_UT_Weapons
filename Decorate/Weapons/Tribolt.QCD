@@ -70,9 +70,10 @@ Actor TriboltPickup : CustomInventory 15604
 	}
 }
 
-Actor TriboltPickupFloat : TriboltPickup 15614
+Actor TriboltPickupNoGravity : TriboltPickup 15614
 {
-	//$Title "Float Ripper (SP) / Bio Rifle (DM)"
+	//$Category "QCDE Weapons (No Gravity)"
+	//$Title "Ripper (SP) / Bio Rifle (DM) (No Gravity)"
 	+NOGRAVITY
 }
 

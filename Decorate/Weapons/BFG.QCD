@@ -63,9 +63,10 @@ Actor BFGPickup : CustomInventory 15608
 	}
 }
 
-Actor BFGPickupFloat : BFGPickup 15618
+Actor BFGPickupNoGravity : BFGPickup 15618
 {
-	//$Title "Float Redeemer"
+	//$Category "QCDE Weapons (No Gravity)"
+	//$Title "Redeemer (No Gravity)"
 	+NOGRAVITY
 }
 

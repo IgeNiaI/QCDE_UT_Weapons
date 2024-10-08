@@ -81,9 +81,10 @@ Actor SuperNailgunPickup : CustomInventory 15603
 	}
 }
 
-Actor SuperNailgunPickupFloat : SuperNailgunPickup 15613
+Actor SuperNailgunPickupNoGravity : SuperNailgunPickup 15613
 {
-	//$Title "Float Pulse Rifle"
+	//$Category "QCDE Weapons (No Gravity)"
+	//$Title "Pulse Rifle (No Gravity)"
 	+NOGRAVITY
 }
 

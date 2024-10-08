@@ -72,9 +72,10 @@ Actor SuperShotgunPickup : CustomInventory 15602
 	}
 }
 
-Actor SuperShotgunPickupFloat : SuperShotgunPickup 15612
+Actor SuperShotgunPickupNoGravity : SuperShotgunPickup 15612
 {
-	//$Title "Float Flak Cannon"
+	//$Category "QCDE Weapons (No Gravity)"
+	//$Title "Flak Cannon (No Gravity)"
 	+NOGRAVITY
 }
 
