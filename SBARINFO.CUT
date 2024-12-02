@@ -668,9 +668,9 @@ else
 
 	// shotguns are special
 	inInventory QCSuperShotgun {
-		isSelected QCShotgun { inInventory SG_UG_Spread { drawImage "HPG_03_1",1493,405; } inInventory SG_UG_Explosive { drawImage "HPG_03_2",1423,405; } } else { inInventory SSG_UG_Speed { drawImage "HPG_09_1",1493,405; } inInventory SSG_UG_Flame { drawImage "HPG_09_2",1423,405; } }
+		isSelected QCShotgun { inInventory SG_UG_Spread { drawImage "HPG_03_1",1493,405; } inInventory SG_UG_Explosive { drawImage "HPG_03_2",1523,405; } } else { inInventory SSG_UG_Speed { drawImage "HPG_09_1",1493,405; } inInventory SSG_UG_Flame { drawImage "HPG_09_2",1523,405; } }
 	} else {
-		inInventory QCShotgun { inInventory SG_UG_Spread { drawImage "HPG_03_1",1493,405; } inInventory SG_UG_Explosive { drawImage "HPG_03_2",1423,405; } } else { inInventory SG_UG_Spread { drawImage "GPG_03_1",1493,405; } inInventory SG_UG_Explosive { drawImage "GPG_03_2",1423,405; } }
+		inInventory QCShotgun { inInventory SG_UG_Spread { drawImage "HPG_03_1",1493,405; } inInventory SG_UG_Explosive { drawImage "HPG_03_2",1523,405; } } else { inInventory SG_UG_Spread { drawImage "GPG_03_1",1493,405; } inInventory SG_UG_Explosive { drawImage "GPG_03_2",1523,405; } }
 	}
 
 	// Ammo number near weapons
