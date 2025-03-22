@@ -73,8 +73,8 @@ str weaponNames[NUMBER_OF_WEAPONS] = {
 
 str WeaponUpgrades[NUMBER_OF_WEAPONS][NUMBER_OF_UPGRADES][10] = {
 	// Impact Hammer
-	{	{"Upgrade_0_1" , "UPG_00_1", "0AUNTLET", "1AUNTLET", "GNT_UG_Burn"		, "", "Impact compensation",	"No self damage when hitting a wall or floor.", "", ""},
-		{"Upgrade_0_2" , "UPG_00_2", "0AUNTLET", "1AUNTLET", "GNT_UG_Omni"		, "", "Pneumatic rework",	"Both attack modes fire a compressed air ball,", "that pushes enemies and projectiles away.", ""},
+	{	{"Upgrade_0_1" , "UPM_00_1", "0AUNTLET", "1AUNTLET", "GNT_UG_Burn"		, "", "Impact compensation",	"No self damage when hitting a wall or floor.", "", ""},
+		{"Upgrade_0_2" , "UPM_00_2", "0AUNTLET", "1AUNTLET", "GNT_UG_Omni"		, "", "Pneumatic rework",	"Both attack modes fire a compressed air ball,", "that pushes enemies and projectiles away.", ""},
 		{0}},
 
 	// Enforcer
@@ -82,8 +82,8 @@ str WeaponUpgrades[NUMBER_OF_WEAPONS][NUMBER_OF_UPGRADES][10] = {
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Dispersion Pistol
-	{	{"Upgrade_3_1" , "UPG_03_1", "0DISPERS", "1DISPERS", "SG_UG_Spread"		, "", "Power Up",			"Increases weapon damage,", "but decreases attack speed.", ""},
-		{"Upgrade_3_2" , "UPG_03_2", "0DISPERS", "1DISPERS", "SG_UG_Explosive"	, "", "Power Up",			"Increases weapon damage,", "but decreases attack speed.", ""},
+	{	{"Upgrade_3_1" , "UPM_03_1", "0DISPERS", "1DISPERS", "SG_UG_Spread"		, "", "Power Up",			"Increases weapon damage,", "but decreases attack speed.", ""},
+		{"Upgrade_3_2" , "UPM_03_2", "0DISPERS", "1DISPERS", "SG_UG_Explosive"	, "", "Power Up",			"Increases weapon damage,", "but decreases attack speed.", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
@@ -92,50 +92,50 @@ str WeaponUpgrades[NUMBER_OF_WEAPONS][NUMBER_OF_UPGRADES][10] = {
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Minigun
-	{	{"Upgrade_7_1" , "UPG_07_1", "0MACHINE", "1MACHINE", "HMG_UG_Ricochet"	, "", "Higher calibre",		"Both fire modes deal more damage.", "", ""},
-		{"Upgrade_7_2" , "UPG_07_2", "0MACHINE", "1MACHINE", "HMG_UG_Pierce"	, "", "Larger gear ratio",	"Secondary fire shoots even faster.", "", ""},
+	{	{"Upgrade_7_1" , "UPM_07_1", "0MACHINE", "1MACHINE", "HMG_UG_Ricochet"	, "", "Higher calibre",		"Both fire modes deal more damage.", "", ""},
+		{"Upgrade_7_2" , "UPM_07_2", "0MACHINE", "1MACHINE", "HMG_UG_Pierce"	, "", "Larger gear ratio",	"Secondary fire shoots even faster.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Flak Cannon
-	{	{"Upgrade_9_1" , "UPG_09_1", "0SHOTGUN", "1SHOTGUN", "SSG_UG_Speed"		, "", "Debris shield",		"No self damage from debris.", "", ""},
-		{"Upgrade_9_2" , "UPG_09_2", "0SHOTGUN", "1SHOTGUN", "SSG_UG_Flame"		, "", "Packed shell",		"Both fire modes shoot more debris.", "", ""},
+	{	{"Upgrade_9_1" , "UPM_09_1", "0SHOTGUN", "1SHOTGUN", "SSG_UG_Speed"		, "", "Debris shield",		"No self damage from debris.", "", ""},
+		{"Upgrade_9_2" , "UPM_09_2", "0SHOTGUN", "1SHOTGUN", "SSG_UG_Flame"		, "", "Packed shell",		"Both fire modes shoot more debris.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Pulse Gun
-	{	{"Upgrade_11_1", "UPG_11_1", "0NAILGUN", "1NAILGUN", "SNG_UG_Lava"		, "", "Volatile plasma",	"Primary fire explodes on hit.", "", ""},
-		{"Upgrade_11_2", "UPG_11_2", "0NAILGUN", "1NAILGUN", "SNG_UG_Seeker"	, "", "Piercing beam",		"Secondary fire beams thru enemies.", "", ""},
+	{	{"Upgrade_11_1", "UPM_11_1", "0NAILGUN", "1NAILGUN", "SNG_UG_Lava"		, "", "Volatile plasma",	"Primary fire explodes on hit.", "", ""},
+		{"Upgrade_11_2", "UPM_11_2", "0NAILGUN", "1NAILGUN", "SNG_UG_Seeker"	, "", "Piercing beam",		"Secondary fire beams thru enemies.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Ripper
-	{	{"Upgrade_13_1", "UPG_13_1", "0IPPERR" , "1IPPERR_",  "TB_UG_Long"		, "", "Durable blades n' durable you",	"No self damage, blades bounce more.", "", ""},
-		{"Upgrade_13_2", "UPG_13_2", "0IPPERR" , "1IPPERR_",  "TB_UG_Grenade"	, "", "Razor blades",					"Secondary fire rips thru enemies.", "", ""},
+	{	{"Upgrade_13_1", "UPM_13_1", "0IPPERR" , "1IPPERR_",  "TB_UG_Long"		, "", "Durable blades n' durable you",	"No self damage, blades bounce more.", "", ""},
+		{"Upgrade_13_2", "UPM_13_2", "0IPPERR" , "1IPPERR_",  "TB_UG_Grenade"	, "", "Razor blades",					"Secondary fire rips thru enemies.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Rocket Launcher
-	{	{"Upgrade_15_1", "UPG_15_1", "0AUNCHER", "1AUNCHER",  "RL_UG_Cluster" 	, "", "Cluster Rocket",		"No explosion damage falloff.", "", ""},
-		{"Upgrade_15_2", "UPG_15_2", "0AUNCHER", "1AUNCHER",  "RL_UG_Control"	, "", "Speed loader",		"Rockets load faster.", "", ""},
-		{"Upgrade_15_3", "UPG_15_3", "0AUNCHER", "1AUNCHER",  0					, "(cheater)", "Square Root Rocket", "''Michaelis would do everything with square roots. ", "He once said we should make a square root rocket launcher.'' ", "    -DBT"}},
+	{	{"Upgrade_15_1", "UPM_15_1", "0AUNCHER", "1AUNCHER",  "RL_UG_Cluster" 	, "", "Cluster Rocket",		"No explosion damage falloff.", "", ""},
+		{"Upgrade_15_2", "UPM_15_2", "0AUNCHER", "1AUNCHER",  "RL_UG_Control"	, "", "Speed loader",		"Rockets load faster.", "", ""},
+		{"Upgrade_15_3", "UPM_15_3", "0AUNCHER", "1AUNCHER",  0					, "(cheater)", "Square Root Rocket", "''Michaelis would do everything with square roots. ", "He once said we should make a square root rocket launcher.'' ", "    -DBT"}},
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Shock Rifle
-	{	{"Upgrade_17_1", "UPG_17_1", "0IGHTNIN", "1IGHTNIN",  "LG_UG_Residue"	, "", "Supercharged shock",	"Primary fire has higher knockback.", "", ""},
-		{"Upgrade_17_2", "UPG_17_2", "0IGHTNIN", "1IGHTNIN",  "LG_UG_Static"	, "", "Gravity core",		"Secondary fire combo sucks enemies in,", "and then explodes.", ""},
+	{	{"Upgrade_17_1", "UPM_17_1", "0IGHTNIN", "1IGHTNIN",  "LG_UG_Residue"	, "", "Supercharged shock",	"Primary fire has higher knockback.", "", ""},
+		{"Upgrade_17_2", "UPM_17_2", "0IGHTNIN", "1IGHTNIN",  "LG_UG_Static"	, "", "Gravity core",		"Secondary fire combo sucks enemies in,", "and then explodes.", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Sniper Rifle
-	{	{"Upgrade_19_1", "UPG_19_1", "0RAILGUN", "1RAILGUN",  "RG_UG_Pierce"	, "", "Silencer",			"Firing no longer alerts monsters.", "", ""},
-		{"Upgrade_19_2", "UPG_19_2", "0RAILGUN", "1RAILGUN",  "RG_UG_Explosive"	, "", "Steady aim",			"Standing still while zoomed increases damage.", "", ""},
+	{	{"Upgrade_19_1", "UPM_19_1", "0RAILGUN", "1RAILGUN",  "RG_UG_Pierce"	, "", "Silencer",			"Firing no longer alerts monsters.", "", ""},
+		{"Upgrade_19_2", "UPM_19_2", "0RAILGUN", "1RAILGUN",  "RG_UG_Explosive"	, "", "Steady aim",			"Standing still while zoomed increases damage.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Redeemer
-	{	{"Upgrade_21_1", "UPG_21_1", "0BIGFGUN", "1BIGFGUN", "BFG_UG_Rays"		, "", "Nuke Survivor",		"Lower self damage.", "", ""},
-		{"Upgrade_21_2", "UPG_21_2", "0BIGFGUN", "1BIGFGUN", "BFG_UG_Charge"	, "", "Pivoting thruster",	"Alt-fire rocket turns faster.", "", ""},
+	{	{"Upgrade_21_1", "UPM_21_1", "0BIGFGUN", "1BIGFGUN", "BFG_UG_Rays"		, "", "Nuke Survivor",		"Lower self damage.", "", ""},
+		{"Upgrade_21_2", "UPM_21_2", "0BIGFGUN", "1BIGFGUN", "BFG_UG_Charge"	, "", "Pivoting thruster",	"Alt-fire rocket turns faster.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 };
