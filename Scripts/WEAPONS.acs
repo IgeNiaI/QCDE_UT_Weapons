@@ -127,6 +127,7 @@ script "UTDE_AttachWhooshRedeemer" (void)
 {
 	// redeemer rocket
 	int tid = ActivatorTid();
+	int plrtid = GetActorProperty(0, APROP_TargetTID);
 	if(!tid)
 	{
 		tid = UniqueTid();
@@ -136,6 +137,9 @@ script "UTDE_AttachWhooshRedeemer" (void)
 	// if rocket isn't moving, then it has exploded already. So no whoosh
 	if (GetActorVelX(tid) || GetActorVelY(tid) || GetActorVelZ(tid))
 		PlaySound(tid, "UTDE/Weapons/Redeemer/Fly",CHAN_5,1.0,true,1.0); // whoosh!
+
+	// Also set pitch so that smoke particles spawn proper
+	SetActorPitch(tid, GetActorPitch(plrtid));
 }
 
 
