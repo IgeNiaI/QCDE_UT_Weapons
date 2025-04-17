@@ -11,7 +11,7 @@
 //
 // --------------------------------------------------------------------------
 
-Actor CompatVer30_Eleena {} // for compatibility checks
+Actor CompatVer31_Eleena {} // for compatibility checks
 
 //--------------------------------------------------------
 // Active
@@ -227,7 +227,7 @@ Actor Doppelganger
 			"####" H 0 A_FaceTarget
 			"####" H 0 A_Turn(random(-5,5))
 			"####" H 0 A_PlaySound("UTDE/Weapons/ShockRifle/Fire", CHAN_WEAPON, 1.0, 0)
-			"####" H 0 A_CustomRailgun(0, 2, None, "BlueViolet", RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT, 0, 0, "ShockRiflePuff", 0, 0, 0, 0, 6, 1, "SRworldactor")
+			"####" H 0 A_CustomRailgun(0, 2, None, "BlueViolet", RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, 0, "ShockRiflePuff_Eleena", 0, 0, 0, 0, 6, 1, "SRworldactor")
 			"####" HHHHH 3 ThrustThing(angle + 64, random(-4,4), 0, 0)
 			"####" "#" 0 ThrustThingZ(0,50 * random(0,1),0,1)
 			"####" GGGGGGG 3 ThrustThing(angle + 64, random(-5,5), 0, 0)
@@ -251,6 +251,11 @@ Actor Doppelganger
 		TNT1 A 10 A_SpawnItemEx("EleenaDisappearFX", 0,0,30, 0,0,0, 0,SXF_CLIENTSIDE)
 		Stop
 	}
+}
+
+Actor ShockRiflePuff_Eleena : ShockRiflePuff
+{
+	DamageType "NoDamageToPlayers"
 }
 
 Actor DrawAttentionProc : CustomInventory
