@@ -6,7 +6,7 @@
 //
 // --------------------------------------------------------------------------
 
-Actor CompatVer30_Shotgun {} // for compatibility checks
+Actor CompatVer31_Shotgun {} // for compatibility checks
 
 Actor ShotgunPickup : CustomInventory 15601
 {

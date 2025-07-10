@@ -6,7 +6,7 @@
 //
 // --------------------------------------------------------------------------
 
-Actor CompatVer30_Gauntlet {} // for compatibility checks
+Actor CompatVer31_Gauntlet {} // for compatibility checks
 
 Actor QCGauntlet : QCWeapon
 {

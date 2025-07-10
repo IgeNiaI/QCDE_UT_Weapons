@@ -6,7 +6,7 @@
 //
 // --------------------------------------------------------------------------
 
-Actor CompatVer30_SNailgun {} // for compatibility checks
+Actor CompatVer31_SNailgun {} // for compatibility checks
 
 Actor SuperNailgunPickup : CustomInventory 15603
 {

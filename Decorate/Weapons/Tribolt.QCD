@@ -6,7 +6,7 @@
 //
 // --------------------------------------------------------------------------
 
-Actor CompatVer30_Tribolt {} // for compatibility checks
+Actor CompatVer31_Tribolt {} // for compatibility checks
 
 Actor TriboltPickup : CustomInventory 15604
 {
