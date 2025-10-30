@@ -8,7 +8,7 @@
 
 Actor CompatVer31_RocketLauncher {} // for compatibility checks
 
-Actor RocketLauncherPickup : CustomInventory 15605
+Actor RocketLauncherPickup : QCWeaponPickup 15605
 {
 	//$NotAngled
 	//$Category "QCDE Weapons"
@@ -28,11 +28,13 @@ Actor RocketLauncherPickup : CustomInventory 15605
 		Goto Idle
 	DMSpawn:
 		"####" "#" 0 A_ChangeFlag("DROPPED", 0)
-		UTRL Z 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",16,args[4])
+		UTRL Z 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",16,args[4],args[3])
+		UTRL Z 0 A_SetArg(3, 1)
 		UTRL Z -1 Bright A_SetArg(4, 0)
 		Stop
 	Idle:
-		UTRL Y 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",15,args[4])
+		UTRL Y 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",15,args[4],args[3])
+		UTRL Y 0 A_SetArg(3, 1)
 		UTRL Y -1 A_SetArg(4, 0)
 		Wait
 	Pickup:
