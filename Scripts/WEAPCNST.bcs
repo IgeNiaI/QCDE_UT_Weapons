@@ -116,7 +116,7 @@ str WeaponUpgrades[NUMBER_OF_WEAPONS][NUMBER_OF_UPGRADES][10] = {
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Rocket Launcher
-	{	{"Upgrade_15_1", "UPM_15_1", "0AUNCHER", "1AUNCHER",  "RL_UG_Cluster" 	, "", "Cluster Rocket",		"No explosion damage falloff.", "", ""},
+	{	{"Upgrade_15_1", "UPM_15_1", "0AUNCHER", "1AUNCHER",  "RL_UG_Cluster" 	, "", "Superdense Fireball","No explosion damage falloff.", "", ""},
 		{"Upgrade_15_2", "UPM_15_2", "0AUNCHER", "1AUNCHER",  "RL_UG_Control"	, "", "Speed loader",		"Rockets load faster.", "", ""},
 		{"Upgrade_15_3", "UPM_15_3", "0AUNCHER", "1AUNCHER",  0					, "(cheater)", "Square Root Rocket", "''Michaelis would do everything with square roots. ", "He once said we should make a square root rocket launcher.'' ", "    -DBT"}},
 	{{0},{0},{0}}, // no upgrades for DM
