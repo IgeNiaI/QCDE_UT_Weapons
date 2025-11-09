@@ -1,0 +1,11 @@
+
+// Unreal 1 Dispersion Pistol
+brightmap sprite UTDPA0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPA0.png"	}
+brightmap sprite UTDPB0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPA0.png"	}
+brightmap sprite UTDPC0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPA0.png"	}
+brightmap sprite UTDPD0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPD0.png"	}
+brightmap sprite UTDPE0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPD0.png"	}
+brightmap sprite UTDPF0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPD0.png"	}
+brightmap sprite UTDPG0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPG0.png"	}
+brightmap sprite UTDPH0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPG0.png"	}
+brightmap sprite UTDPI0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPG0.png"	}
