@@ -48,6 +48,32 @@ brightmap sprite UTPGP0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
 brightmap sprite UTPGQ0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
 brightmap sprite UTPGR0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
 
+// UT99 Ripper
+brightmap sprite UTRPA0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPA0.png"	}
+brightmap sprite UTRPB0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPB0.png"	}
+brightmap sprite UTRPC0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPC0.png"	}
+brightmap sprite UTRPD0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPD0.png"	}
+brightmap sprite UTRPE0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPE0.png"	}
+brightmap sprite UTRPF0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPF0.png"	}
+brightmap sprite UTRPG0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPG0.png"	}
+brightmap sprite UTRPH0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPH0.png"	}
+brightmap sprite UTRPI0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPI0.png"	}
+brightmap sprite UTRPJ0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPJ0.png"	}
+brightmap sprite UTRPK0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPK0.png"	}
+brightmap sprite UTRPL0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPL0.png"	}
+brightmap sprite UTRPM0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPM0.png"	}
+brightmap sprite UTRPN0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPN0.png"	}
+brightmap sprite UTRPO0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPO0.png"	}
+brightmap sprite UTRPP0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPP0.png"	}
+brightmap sprite UTRPQ0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPQ0.png"	}
+brightmap sprite UTRPR0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPR0.png"	}
+brightmap sprite UTRPS0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPS0.png"	}
+brightmap sprite UTRPT0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPT0.png"	}
+brightmap sprite UTRPU0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPU0.png"	}
+brightmap sprite UTRPV0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPV0.png"	}
+brightmap sprite UTRPW0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPW0.png"	}
+brightmap sprite UTRPX0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPX0.png"	}
+
 // UT99 Redeemer
 brightmap sprite UTRDA0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDA0.png"	}
 brightmap sprite UTRDB0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDB0.png"	}
