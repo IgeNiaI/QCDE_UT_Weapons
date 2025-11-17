@@ -27,3 +27,23 @@ brightmap sprite UTFMM0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMM0.
 brightmap sprite UTFMN0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMN0.png"	}
 brightmap sprite UTFMO0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMO0.png"	}
 brightmap sprite UTFMP0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMP0.png"	}
+
+// UT99 Pulse Rifle
+brightmap sprite UTPGA0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGB0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGC0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGD0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGE0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGF0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGG0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGH0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGI0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGJ0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGK0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGL0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGM0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGN0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGO0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGP0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGQ0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+brightmap sprite UTPGR0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
