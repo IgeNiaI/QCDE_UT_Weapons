@@ -47,3 +47,13 @@ brightmap sprite UTPGO0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
 brightmap sprite UTPGP0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
 brightmap sprite UTPGQ0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
 brightmap sprite UTPGR0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
+
+// UT99 Redeemer
+brightmap sprite UTRDA0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDA0.png"	}
+brightmap sprite UTRDB0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDB0.png"	}
+brightmap sprite UTRDC0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDC0.png"	}
+brightmap sprite UTRDD0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDD0.png"	}
+brightmap sprite UTRDE0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDE0.png"	}
+brightmap sprite UTRDF0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDF0.png"	}
+brightmap sprite UTRDG0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDG0.png"	}
+brightmap sprite UTRDH0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDH0.png"	}
