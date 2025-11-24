@@ -74,6 +74,13 @@ brightmap sprite UTRPV0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPV0.png"	}
 brightmap sprite UTRPW0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPW0.png"	}
 brightmap sprite UTRPX0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPX0.png"	}
 
+// UT2004 Shock Rifle
+brightmap sprite UTSRA0	{	map "Sprites/Weapons/ShockRifle/brightmaps/UBSRA0.png"	}
+brightmap sprite UTSRB0	{	map "Sprites/Weapons/ShockRifle/brightmaps/UBSRB0.png"	}
+brightmap sprite UTSRC0	{	map "Sprites/Weapons/ShockRifle/brightmaps/UBSRC0.png"	}
+brightmap sprite UTSRD0	{	map "Sprites/Weapons/ShockRifle/brightmaps/UBSRD0.png"	}
+brightmap sprite UTSRE0	{	map "Sprites/Weapons/ShockRifle/brightmaps/UBSRE0.png"	}
+
 // UT99 Redeemer
 brightmap sprite UTRDA0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDA0.png"	}
 brightmap sprite UTRDB0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDB0.png"	}
