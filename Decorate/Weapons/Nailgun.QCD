@@ -124,26 +124,26 @@ Actor QCNailgun : QCWeapon
 	FireLooper1:
 		UTLG A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		UTLG A 0 A_GunFlash("Flash")
-		UTLG K 1 Bright 	Offset(1,33)
-		UTLG K 1 Bright	 	Offset(3,34)
-		UTLG K 1 Bright
-		UTLG L 1
-		UTLG L 1
-		UTLG L 1
-		UTLG A 1 			Offset(1,33)
+		UTLG K 1 Bright 	Offset(2,33)
+		UTLG L 1 Bright	 	Offset(5,35)
+		UTLG F 1 			Offset(3,34)
+		UTLG G 1 			Offset(1,33)
+		UTLG H 1 			Offset(0,32)
+		UTLG I 1
+		UTLG J 1
 		UTLG A 0 A_ReFire("FireLooper2")
 		Goto EndFireLooper
 
 	FireLooper2:
 		UTLG A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		UTLG A 0 A_GunFlash("Flash")
-		UTLG M 1 Bright		Offset(2,33)
-		UTLG M 1 Bright 	Offset(3,35)
-		UTLG M 1 Bright
-		UTLG N 1
-		UTLG N 1
-		UTLG N 1
-		UTLG A 1 			Offset(1,33)
+		UTLG M 1 Bright 	Offset(2,33)
+		UTLG N 1 Bright	 	Offset(5,35)
+		UTLG F 1 			Offset(3,34)
+		UTLG G 1 			Offset(1,33)
+		UTLG H 1 			Offset(0,32)
+		UTLG I 1
+		UTLG J 1
 		UTLG A 0 A_ReFire("FireLooper1")
 		Goto EndFireLooper
 

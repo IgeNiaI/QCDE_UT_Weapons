@@ -28,6 +28,22 @@ brightmap sprite UTFMN0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMN0.
 brightmap sprite UTFMO0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMO0.png"	}
 brightmap sprite UTFMP0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMP0.png"	}
 
+// UT2004 Link Gun
+brightmap sprite UTLGA0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGA0.png"	}
+brightmap sprite UTLGB0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGB0.png"	}
+brightmap sprite UTLGC0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGC0.png"	}
+brightmap sprite UTLGD0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGD0.png"	}
+brightmap sprite UTLGE0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGE0.png"	}
+brightmap sprite UTLGF0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGF0.png"	}
+brightmap sprite UTLGG0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGG0.png"	}
+brightmap sprite UTLGH0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGH0.png"	}
+brightmap sprite UTLGI0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGI0.png"	}
+brightmap sprite UTLGJ0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGJ0.png"	}
+brightmap sprite UTLGK0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGK0.png"	}
+brightmap sprite UTLGL0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGL0.png"	}
+brightmap sprite UTLGM0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGM0.png"	}
+brightmap sprite UTLGN0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGN0.png"	}
+
 // UT99 Pulse Rifle
 brightmap sprite UTPGA0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
 brightmap sprite UTPGB0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
