@@ -1418,3 +1418,16 @@ Actor UnusedActor { States { Spawn:
 	QCG8 Y 1
 	Wait
 }}
+
+Actor QCGauntletSkin		: Token { Inventory.MaxAmount 20 }
+Actor QCMachinegunSkin		: Token { Inventory.MaxAmount 20 }
+Actor QCHMachinegunSkin		: Token { Inventory.MaxAmount 20 }
+Actor QCShotgunSkin			: Token { Inventory.MaxAmount 20 }
+Actor QCSShotgunSkin		: Token { Inventory.MaxAmount 20 }
+Actor QCNailgunSkin			: Token { Inventory.MaxAmount 20 }
+Actor QCSNailgunSkin		: Token { Inventory.MaxAmount 20 }
+Actor QCTriboltSkin			: Token { Inventory.MaxAmount 20 }
+Actor QCRocketLauncherSkin	: Token { Inventory.MaxAmount 20 }
+Actor QCLightningGunSkin	: Token { Inventory.MaxAmount 20 }
+Actor QCRailgunSkin			: Token { Inventory.MaxAmount 20 }
+Actor QCBFGSkin				: Token { Inventory.MaxAmount 20 }
