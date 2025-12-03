@@ -169,6 +169,9 @@ Actor QCMachineGun : QCWeapon
 			Goto EndFlash
 
 		EndFlash:
+			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"EndFlashCont")
+			TNT1 A 0 A_SetBlend("Yellow",0.03,3)
+		EndFlashCont:
 			TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"EndFlashNoRecoil")
 			TNT1 A 1 A_SetPitch(Pitch-0.4)
 			TNT1 AA 1 A_SetPitch(Pitch+0.2)

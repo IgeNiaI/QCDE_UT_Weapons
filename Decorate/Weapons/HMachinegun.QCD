@@ -239,6 +239,9 @@ Actor QCHeavyMachinegun : QCWeapon
 		EndFlash:
 			TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(1,-1),false,8,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(1,-1))
 			TNT1 A 0 A_FireCustomMissile("MachinegunSmokeSpawner",0, false,3,2)
+			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"EndFlashCont")
+			TNT1 A 0 A_SetBlend("Yellow",0.03,3)
+		EndFlashCont:
 			TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"EndFlashNoRecoil")
 			TNT1 A 1 A_SetPitch(Pitch-0.4)
 			TNT1 AA 1 A_SetPitch(Pitch+0.2)
@@ -471,6 +474,9 @@ Actor QCHeavyMachinegun : QCWeapon
 
 		AltEndFlash:
 			TNT1 A 0 A_FireCustomMissile("MachinegunSmokeSpawner",0, false,3,2)
+			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"AltEndFlashCont")
+			TNT1 A 0 A_SetBlend("Yellow",0.03,3)
+		AltEndFlashCont:
 			TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"AltEndFlashNoRecoil")
 			TNT1 A 1 A_SetPitch(Pitch-0.4)
 			TNT1 AA 1 A_SetPitch(Pitch+0.2)
@@ -496,6 +502,9 @@ Actor QCHeavyMachinegun : QCWeapon
 
 		AltEndFlashSuperFast:
 			TNT1 A 0 A_FireCustomMissile("MachinegunSmokeSpawner",0, false,3,2)
+			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"AltEndFlashSuperFastCont")
+			TNT1 A 0 A_SetBlend("Yellow",0.03,3)
+		AltEndFlashSuperFastCont:
 			TNT1 A 1 A_SetPitch(Pitch-0.4)
 			Stop
 	}

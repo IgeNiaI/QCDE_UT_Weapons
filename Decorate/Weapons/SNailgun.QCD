@@ -209,6 +209,9 @@ Actor QCSuperNailgun : QCWeapon
 		Goto EndFlash
 
 		EndFlash:
+			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"EndFlashCont")
+			TNT1 A 0 A_SetBlend("Green",0.03,3)
+		EndFlashCont:
 			TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"EndFlashNoRecoil")
 			TNT1 A 1 A_SetPitch(Pitch-0.4)
 			TNT1 AA 1 A_SetPitch(Pitch+0.2)
@@ -296,6 +299,9 @@ Actor QCSuperNailgun : QCWeapon
 
 	AltFlash:
 		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"AltFlashCont")
+		TNT1 A 0 A_SetBlend("Green",0.03,3)
+	AltFlashCont:
 		TNT1 C 1 A_Light2
 		TNT1 C 0 A_Light0
 		Stop

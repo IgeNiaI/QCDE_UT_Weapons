@@ -761,6 +761,9 @@ Actor QCRailGun : QCWeapon
 			Goto FlashEnder
 
 	FlashEnder:
+		TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"FlashEnderCont")
+		TNT1 A 0 A_SetBlend("Orange",0.14,15)
+	FlashEnderCont:
 		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil")
 		TNT1 A 0 A_SetPitch(pitch-3.5)
 		TNT1 A 2
