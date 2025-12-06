@@ -82,8 +82,8 @@ str WeaponUpgrades[NUMBER_OF_WEAPONS][NUMBER_OF_UPGRADES][10] = {
 	{{0},{0},{0}}, // no upgrades for DM
 
 	// Dispersion Pistol
-	{	{"Upgrade_3_1" , "UPM_03_1", "0DISPERS", "1DISPERS", "SG_UG_Spread"		, "", "Power Up",			"Increases weapon damage,", "but decreases attack speed.", ""},
-		{"Upgrade_3_2" , "UPM_03_2", "0DISPERS", "1DISPERS", "SG_UG_Explosive"	, "", "Power Up",			"Increases weapon damage,", "but decreases attack speed.", ""},
+	{	{"Upgrade_3_1" , "UPM_03_1", "0DISPERS", "1DISPERS", "SG_UG_Spread"		, "", "Power Up",			"Increases weapon damage.", "", ""},
+		{"Upgrade_3_2" , "UPM_03_2", "0DISPERS", "1DISPERS", "SG_UG_Explosive"	, "", "Power Up",			"Increases weapon damage.", "", ""},
 		{0}},
 	{{0},{0},{0}}, // no upgrades for DM
 
