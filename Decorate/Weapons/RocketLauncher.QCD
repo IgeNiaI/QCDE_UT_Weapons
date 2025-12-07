@@ -801,10 +801,10 @@ Actor QCRocketLauncher : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("RL_UG_Control", 1, 7)
 
 		UTRL B 1 Offset(20,29) Bright
-		UTRL B 1 Offset(30,23) Bright
-		UTRL C 1 Offset(33,17) Bright
+		UTRL C 1 Offset(30,23) Bright
+		UTRL D 1 Offset(33,17) Bright
 
-		UTRL CCDD 1 Offset(37,14)
+		UTRL AAAA 1 Offset(37,14)
 
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/RocketLauncher/Load", CHAN_5, 1.0, 0)
 

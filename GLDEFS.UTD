@@ -114,6 +114,23 @@ brightmap sprite UTBRT0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRT0.png"	}
 brightmap sprite UTBRU0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRU0.png"	}
 brightmap sprite UTBRV0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRV0.png"	}
 
+// UT2004 Rocket Launcher
+brightmap sprite UTRLA0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLA0.png"	}
+brightmap sprite UTRLB0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLB0.png"	}
+brightmap sprite UTRLC0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLC0.png"	}
+brightmap sprite UTRLD0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLD0.png"	}
+brightmap sprite UTRLE0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLE0.png"	}
+brightmap sprite UTRLF0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLF0.png"	}
+brightmap sprite UTRLG0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLG0.png"	}
+brightmap sprite UTRLH0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLH0.png"	}
+brightmap sprite UTRLI0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLI0.png"	}
+brightmap sprite UTRLJ0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLJ0.png"	}
+brightmap sprite UTRLK0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLK0.png"	}
+brightmap sprite UTRLL0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLL0.png"	}
+brightmap sprite UTRLM0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLM0.png"	}
+brightmap sprite UTRLN0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLN0.png"	}
+brightmap sprite UTRLO0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLO0.png"	}
+
 // UT2004 Shock Rifle
 brightmap sprite UTSRA0	{	map "Sprites/Weapons/ShockRifle/brightmaps/UBSRA0.png"	}
 brightmap sprite UTSRB0	{	map "Sprites/Weapons/ShockRifle/brightmaps/UBSRB0.png"	}
