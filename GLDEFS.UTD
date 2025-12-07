@@ -90,6 +90,30 @@ brightmap sprite UTRPV0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPV0.png"	}
 brightmap sprite UTRPW0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPW0.png"	}
 brightmap sprite UTRPX0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPX0.png"	}
 
+// UT2004 Bio Rifle
+brightmap sprite UTBRA0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRA0.png"	}
+brightmap sprite UTBRB0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRB0.png"	}
+brightmap sprite UTBRC0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRC0.png"	}
+brightmap sprite UTBRD0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRD0.png"	}
+brightmap sprite UTBRE0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRE0.png"	}
+brightmap sprite UTBRF0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRF0.png"	}
+brightmap sprite UTBRG0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRG0.png"	}
+brightmap sprite UTBRH0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRH0.png"	}
+brightmap sprite UTBRI0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRI0.png"	}
+brightmap sprite UTBRJ0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRJ0.png"	}
+brightmap sprite UTBRK0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRK0.png"	}
+brightmap sprite UTBRL0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRL0.png"	}
+brightmap sprite UTBRM0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRM0.png"	}
+brightmap sprite UTBRN0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRN0.png"	}
+brightmap sprite UTBRO0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRO0.png"	}
+brightmap sprite UTBRP0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRP0.png"	}
+brightmap sprite UTBRQ0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRQ0.png"	}
+brightmap sprite UTBRR0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRR0.png"	}
+brightmap sprite UTBRS0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRS0.png"	}
+brightmap sprite UTBRT0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRT0.png"	}
+brightmap sprite UTBRU0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRU0.png"	}
+brightmap sprite UTBRV0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRV0.png"	}
+
 // UT2004 Shock Rifle
 brightmap sprite UTSRA0	{	map "Sprites/Weapons/ShockRifle/brightmaps/UBSRA0.png"	}
 brightmap sprite UTSRB0	{	map "Sprites/Weapons/ShockRifle/brightmaps/UBSRB0.png"	}

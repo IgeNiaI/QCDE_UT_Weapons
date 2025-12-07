@@ -1,7 +1,7 @@
 
 decal UTPulseGunFull	//Glowing spot
 {
-	pic SSSNGDCL
+	pic UTPGNDCL
 	x-scale 0.42
 	y-scale 0.42
 	randomflipx
@@ -43,7 +43,7 @@ fader GoAwayBioGlow
 
 decal UTBioRifleFull	//Glowing spot
 {
-	pic SSSNGDCL
+	pic UTBGNDCL
 	x-scale 0.42
 	y-scale 0.42
 	randomflipx
