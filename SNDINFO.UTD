@@ -39,8 +39,17 @@ $volume "UTDE/Weapons/ImpactHammer/Quad/AltFire"	0.80
 
 //********************
 // Enforcer
-UTDE/Weapons/Enforcer/Fire				"Sounds/Weapons/EN_Fire.wav"
-UTDE/Weapons/Enforcer/Quad/Fire			"Sounds/Weapons/Quad/EN_Fire.wav"
+UTDE/Weapons/Enforcer/Fire_U1				"Sounds/Weapons/Enforcer/U1/EN_Fire.wav"
+UTDE/Weapons/Enforcer/Quad/Fire_U1			"Sounds/Weapons/Enforcer/U1/Quad/EN_Fire.wav"
+
+UTDE/Weapons/Enforcer/Fire_UT2003			"Sounds/Weapons/Enforcer/UT2003/EN_Fire.wav"
+UTDE/Weapons/Enforcer/Quad/Fire_UT2003		"Sounds/Weapons/Enforcer/UT2003/Quad/EN_Fire.wav"
+
+UTDE/Weapons/Enforcer/Fire_UT2004			"Sounds/Weapons/Enforcer/UT2004/EN_Fire.wav"
+UTDE/Weapons/Enforcer/Quad/Fire_UT2004		"Sounds/Weapons/Enforcer/UT2004/Quad/EN_Fire.wav"
+
+UTDE/Weapons/Enforcer/Fire_UT99				"Sounds/Weapons/Enforcer/UT99/EN_Fire.wav"
+UTDE/Weapons/Enforcer/Quad/Fire_UT99		"Sounds/Weapons/Enforcer/UT99/Quad/EN_Fire.wav"
 
 
 //********************
