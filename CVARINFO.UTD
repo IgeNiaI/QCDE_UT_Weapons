@@ -2,3 +2,21 @@
 // Client zoom settings
 
 user float cl_sniperZoom	=  2.5; // how much to zoom the Sniper Rifle
+
+
+// Client weapon skins
+
+user int cl_UTIHskin	= 0;
+user int cl_UTENskin	= 9;
+user int cl_UTMGskin	= 0;
+user int cl_UTDPskin	= 0;
+user int cl_UTFMskin	= 0;
+user int cl_UTFLskin	= 0;
+user int cl_UTLGskin	= 0;
+user int cl_UTPGskin	= 0;
+user int cl_UTRPskin	= 0;
+user int cl_UTBRskin	= 0;
+user int cl_UTRLskin	= 0;
+user int cl_UTSRskin	= 0;
+user int cl_UTSPskin	= 0;
+user int cl_UTRDskin	= 0;
