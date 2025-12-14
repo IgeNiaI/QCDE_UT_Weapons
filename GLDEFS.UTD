@@ -43,6 +43,32 @@ brightmap sprite UTFMN0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMN0.
 brightmap sprite UTFMO0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMO0.png"	}
 brightmap sprite UTFMP0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMP0.png"	}
 
+// UT99 Impact Hammer
+brightmap sprite U9G1A0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1B0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1C0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1D0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1E0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1F0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1G0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1H0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1I0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1J0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1K0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1L0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1M0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1N0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1O0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1P0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1Q0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1R0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1S0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1T0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1U0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1V0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1W0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+brightmap sprite U9G1X0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+
 // UT99 Pulse Rifle
 brightmap sprite UTPGA0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
 brightmap sprite UTPGB0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
@@ -113,6 +139,32 @@ brightmap sprite U3G2J0	{	map "Sprites/Weapons/Enforcer/UT2003/brightmaps/U3B2A0
 brightmap sprite U3G2K0	{	map "Sprites/Weapons/Enforcer/UT2003/brightmaps/U3B2A0.png"	}
 brightmap sprite U3G2L0	{	map "Sprites/Weapons/Enforcer/UT2003/brightmaps/U3B2A0.png"	}
 brightmap sprite U3G2M0	{	map "Sprites/Weapons/Enforcer/UT2003/brightmaps/U3B2A0.png"	}
+
+// UT2004 Shield Gun
+brightmap sprite U4G1A0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1A0.png"	}
+brightmap sprite U4G1B0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1B0.png"	}
+brightmap sprite U4G1C0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1C0.png"	}
+brightmap sprite U4G1D0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1D0.png"	}
+brightmap sprite U4G1E0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1E0.png"	}
+brightmap sprite U4G1F0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1F0.png"	}
+brightmap sprite U4G1G0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1G0.png"	}
+brightmap sprite U4G1H0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1H0.png"	}
+brightmap sprite U4G1I0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1I0.png"	}
+brightmap sprite U4G1J0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1J0.png"	}
+brightmap sprite U4G1K0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1K0.png"	}
+brightmap sprite U4G1L0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1L0.png"	}
+brightmap sprite U4G1M0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1M0.png"	}
+brightmap sprite U4G1N0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1N0.png"	}
+brightmap sprite U4G1O0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1O0.png"	}
+brightmap sprite U4G1P0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1P0.png"	}
+brightmap sprite U4G1Q0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1Q0.png"	}
+brightmap sprite U4G1R0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1R0.png"	}
+brightmap sprite U4G1S0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1S0.png"	}
+brightmap sprite U4G1T0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1T0.png"	}
+brightmap sprite U4G1U0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1U0.png"	}
+brightmap sprite U4G1V0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1V0.png"	}
+brightmap sprite U4G1W0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1W0.png"	}
+brightmap sprite U4G1X0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1X0.png"	}
 
 // UT2004 Assault Rifle
 brightmap sprite U4G2A0	{	map "Sprites/Weapons/Enforcer/UT2004/brightmaps/U4B2A0.png"	}
