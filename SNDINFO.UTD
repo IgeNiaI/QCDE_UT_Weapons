@@ -20,21 +20,30 @@ UTDE/Other/BulletImpact12			"Sounds/Misc/BulletImpact12.wav"
 UTDE/Other/BulletImpact13			"Sounds/Misc/BulletImpact13.wav"
 UTDE/Other/BulletImpact14			"Sounds/Misc/BulletImpact14.wav"
 
+
 //********************
 // Impact Hammer
-UTDE/Weapons/ImpactHammer/Fire					"Sounds/Weapons/IH_Fire.wav"
-UTDE/Weapons/ImpactHammer/Quad/Fire				"Sounds/Weapons/Quad/IH_Fire.wav"
-UTDE/Weapons/ImpactHammer/Charge				"Sounds/Weapons/IH_Charge.wav"
-UTDE/Weapons/ImpactHammer/Charged				"Sounds/Weapons/IH_Charged.wav"
-UTDE/Weapons/ImpactHammer/AltFire				"Sounds/Weapons/IH_Fire_Alt.wav"
-UTDE/Weapons/ImpactHammer/Quad/AltFire			"Sounds/Weapons/Quad/IH_Fire_Alt.wav"
+UTDE/Weapons/ImpactHammer/Fire_UT99					"Sounds/Weapons/ImpactHammer/UT99/IH_Fire.wav"
+UTDE/Weapons/ImpactHammer/Quad/Fire_UT99			"Sounds/Weapons/ImpactHammer/UT99/Quad/IH_Fire.wav"
+UTDE/Weapons/ImpactHammer/Charge_UT99				"Sounds/Weapons/ImpactHammer/UT99/IH_Charge.wav"
+UTDE/Weapons/ImpactHammer/Charged_UT99				"Sounds/Weapons/ImpactHammer/UT99/IH_Charged.wav"
+UTDE/Weapons/ImpactHammer/AltFire_UT99				"Sounds/Weapons/ImpactHammer/UT99/IH_Fire_Alt.wav"
+UTDE/Weapons/ImpactHammer/Quad/AltFire_UT99			"Sounds/Weapons/ImpactHammer/UT99/Quad/IH_Fire_Alt.wav"
 
-$volume "UTDE/Weapons/ImpactHammer/Fire"			0.80
-$volume "UTDE/Weapons/ImpactHammer/Quad/Fire"		0.80
-$volume "UTDE/Weapons/ImpactHammer/Charge"			0.80
-$volume "UTDE/Weapons/ImpactHammer/Charged"			0.80
-$volume "UTDE/Weapons/ImpactHammer/AltFire"			0.80
-$volume "UTDE/Weapons/ImpactHammer/Quad/AltFire"	0.80
+$volume "UTDE/Weapons/ImpactHammer/Fire_UT99"			0.80
+$volume "UTDE/Weapons/ImpactHammer/Quad/Fire_UT99"		0.80
+$volume "UTDE/Weapons/ImpactHammer/Charge_UT99"			0.80
+$volume "UTDE/Weapons/ImpactHammer/Charged_UT99"		0.80
+$volume "UTDE/Weapons/ImpactHammer/AltFire_UT99"		0.80
+$volume "UTDE/Weapons/ImpactHammer/Quad/AltFire_UT99"	0.80
+
+
+UTDE/Weapons/ImpactHammer/Fire_UT2004				"Sounds/Weapons/ImpactHammer/UT2004/IH_Fire.wav"
+UTDE/Weapons/ImpactHammer/Quad/Fire_UT2004			"Sounds/Weapons/ImpactHammer/UT2004/Quad/IH_Fire.wav"
+UTDE/Weapons/ImpactHammer/Charge_UT2004				"Sounds/Weapons/ImpactHammer/UT2004/IH_Charge.wav"
+UTDE/Weapons/ImpactHammer/Charged_UT2004			"Sounds/Weapons/ImpactHammer/UT2004/IH_Charged.wav"
+UTDE/Weapons/ImpactHammer/AltFire_UT2004			"Sounds/Weapons/ImpactHammer/UT2004/IH_Fire_Alt.wav"
+UTDE/Weapons/ImpactHammer/Quad/AltFire_UT2004		"Sounds/Weapons/ImpactHammer/UT2004/Quad/IH_Fire_Alt.wav"
 
 
 //********************

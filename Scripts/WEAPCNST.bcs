@@ -365,10 +365,12 @@ function void reReadWeaponCvars(void)
 	// Weapon skins
 	if(!PlayerIsBot(PlayerNumber()))
 	{
+		SetInventory("UTImpactHammerSkin",	GetCVar("cl_UTIHskin"		) >= 0 ? GetCVar("cl_UTIHskin"	) : classSkin);
 		SetInventory("UTEnforcerSkin",		GetCVar("cl_UTENskin"		) >= 0 ? GetCVar("cl_UTENskin"	) : classSkin);
 	}
 	else
 	{
+		//SetInventory("UTImpactHammerSkin",		classSkin);
 		//SetInventory("UTEnforcerSkin",			classSkin);
 	}
 }
