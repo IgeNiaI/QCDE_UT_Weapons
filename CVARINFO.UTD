@@ -8,7 +8,7 @@ user float cl_sniperZoom	=  2.5; // how much to zoom the Sniper Rifle
 
 user int cl_UTIHskin	= 9;
 user int cl_UTENskin	= 9;
-user int cl_UTMGskin	= 0;
+user int cl_UTMGskin	= 4;
 user int cl_UTDPskin	= 0;
 user int cl_UTFMskin	= 0;
 user int cl_UTFLskin	= 0;

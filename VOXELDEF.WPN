@@ -2,7 +2,7 @@
 //Weapons SP
 
 UTDPY = "Voxels/Weapons/SP/DisprSP.kvx" 			{Spin=50} // Dispersion Pistol
-UTMGY = "Voxels/Weapons/SP/MinigunSP.kvx" 			{Spin=50} // Minigun
+U4GBY = "Voxels/Weapons/SP/MinigunSP.kvx" 			{Spin=50} // Minigun
 UTFCY = "Voxels/Weapons/SP/FlakCannonSP.kvx"		{Spin=50} // Flak Cannon
 UTPGY = "Voxels/Weapons/SP/PulseRifleSP.kvx" 		{Spin=50} // Pulse Rifle
 UTRPY = "Voxels/Weapons/SP/RipperSP.kvx" 			{Spin=50} // Ripper
@@ -13,7 +13,7 @@ UTRDY = "Voxels/Weapons/SP/RedeemerSP.kvx" 			{Spin=50} // Redeemer
 
 //Weapons MP
 
-UTMGZ = "Voxels/Weapons/MP/MinigunMP.kvx" 			{Spin=50} // Minigun
+U4GBZ = "Voxels/Weapons/MP/MinigunMP.kvx" 			{Spin=50} // Minigun
 UTFCZ = "Voxels/Weapons/MP/FlakCannonMP.kvx" 		{Spin=50} // Flak Cannon
 UTPGZ = "Voxels/Weapons/MP/PulseRifleMP.kvx" 		{Spin=50} // Pulse Rifle
 UTBRZ = "Voxels/Weapons/MP/BioRifleMP.kvx" 			{Spin=50} // Bio Rifle
