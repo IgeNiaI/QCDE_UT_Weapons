@@ -63,13 +63,29 @@ UTDE/Weapons/Enforcer/Quad/Fire_UT99		"Sounds/Weapons/Enforcer/UT99/Quad/EN_Fire
 
 //********************
 // Minigun
-UTDE/Weapons/Minigun/FireStartLoop				"Sounds/Weapons/MG_Fire_Looper.wav"
-UTDE/Weapons/Minigun/Quad/FireStartLoop			"Sounds/Weapons/Quad/MG_Fire_Looper.wav"
-UTDE/Weapons/Minigun/AltFireStartLoop			"Sounds/Weapons/MG_AltFire_Looper.wav"
-UTDE/Weapons/Minigun/Quad/AltFireStartLoop		"Sounds/Weapons/Quad/MG_AltFire_Looper.wav"
-UTDE/Weapons/Minigun/AltFireSuperStartLoop		"Sounds/Weapons/MG_AltSuperFire_Looper.wav"
-UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop	"Sounds/Weapons/Quad/MG_AltSuperFire_Looper.wav"
-UTDE/Weapons/Minigun/FireEnd					"Sounds/Weapons/MG_End.wav"
+UTDE/Weapons/Minigun/FireStartLoop_U1					"Sounds/Weapons/Minigun/U1/MG_Fire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/FireStartLoop_U1				"Sounds/Weapons/Minigun/U1/Quad/MG_Fire_Looper.wav"
+UTDE/Weapons/Minigun/AltFireStartLoop_U1				"Sounds/Weapons/Minigun/U1/MG_AltFire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/AltFireStartLoop_U1			"Sounds/Weapons/Minigun/U1/Quad/MG_AltFire_Looper.wav"
+UTDE/Weapons/Minigun/AltFireSuperStartLoop_U1			"Sounds/Weapons/Minigun/U1/MG_AltSuperFire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_U1		"Sounds/Weapons/Minigun/U1/Quad/MG_AltSuperFire_Looper.wav"
+UTDE/Weapons/Minigun/FireEnd_U1							"Sounds/Weapons/Minigun/U1/MG_End.wav"
+
+UTDE/Weapons/Minigun/FireStartLoop_UT2004				"Sounds/Weapons/Minigun/UT2004/MG_Fire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/FireStartLoop_UT2004			"Sounds/Weapons/Minigun/UT2004/Quad/MG_Fire_Looper.wav"
+UTDE/Weapons/Minigun/AltFireStartLoop_UT2004			"Sounds/Weapons/Minigun/UT2004/MG_AltFire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/AltFireStartLoop_UT2004		"Sounds/Weapons/Minigun/UT2004/Quad/MG_AltFire_Looper.wav"
+UTDE/Weapons/Minigun/AltFireSuperStartLoop_UT2004		"Sounds/Weapons/Minigun/UT2004/MG_AltSuperFire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_UT2004	"Sounds/Weapons/Minigun/UT2004/Quad/MG_AltSuperFire_Looper.wav"
+UTDE/Weapons/Minigun/FireEnd_UT2004						"Sounds/Weapons/Minigun/UT2004/MG_End.wav"
+
+UTDE/Weapons/Minigun/FireStartLoop_UT99					"Sounds/Weapons/Minigun/UT99/MG_Fire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/FireStartLoop_UT99			"Sounds/Weapons/Minigun/UT99/Quad/MG_Fire_Looper.wav"
+UTDE/Weapons/Minigun/AltFireStartLoop_UT99				"Sounds/Weapons/Minigun/UT99/MG_AltFire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/AltFireStartLoop_UT99			"Sounds/Weapons/Minigun/UT99/Quad/MG_AltFire_Looper.wav"
+UTDE/Weapons/Minigun/AltFireSuperStartLoop_UT99			"Sounds/Weapons/Minigun/UT99/MG_AltSuperFire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_UT99	"Sounds/Weapons/Minigun/UT99/Quad/MG_AltSuperFire_Looper.wav"
+UTDE/Weapons/Minigun/FireEnd_UT99						"Sounds/Weapons/Minigun/UT99/MG_End.wav"
 
 $volume "UTDE/Weapons/Minigun/FireStartLoop"				0.80
 $volume "UTDE/Weapons/Minigun/Quad/FireStartLoop"			0.80
