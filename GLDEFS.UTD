@@ -25,6 +25,30 @@ brightmap sprite UTDPG0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPG
 brightmap sprite UTDPH0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPG0.png"	}
 brightmap sprite UTDPI0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPG0.png"	}
 
+// Unreal 1 Minigun
+brightmap sprite U1GBA0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBA0.png"	}
+brightmap sprite U1GBB0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBB0.png"	}
+brightmap sprite U1GBC0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBC0.png"	}
+brightmap sprite U1GBD0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBD0.png"	}
+brightmap sprite U1GBE0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBE0.png"	}
+brightmap sprite U1GBF0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBF0.png"	}
+brightmap sprite U1GBG0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBG0.png"	}
+brightmap sprite U1GBH0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBH0.png"	}
+brightmap sprite U1GBI0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBI0.png"	}
+brightmap sprite U1GBJ0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBJ0.png"	}
+brightmap sprite U1GBK0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBK0.png"	}
+brightmap sprite U1GBL0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBL0.png"	}
+brightmap sprite U1GBM0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBM0.png"	}
+brightmap sprite U1GBN0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBN0.png"	}
+brightmap sprite U1GBO0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBO0.png"	}
+brightmap sprite U1GBP0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBP0.png"	}
+brightmap sprite U1GBQ0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBQ0.png"	}
+brightmap sprite U1GBR0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBR0.png"	}
+brightmap sprite U1GBS0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBS0.png"	}
+brightmap sprite U1GBT0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBT0.png"	}
+brightmap sprite U1GBU0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBU0.png"	}
+brightmap sprite U1GBV0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBV0.png"	}
+
 // Unreal 1 Flak Cannon (Mini)
 brightmap sprite UTFMA0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMA0.png"	}
 brightmap sprite UTFMB0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMB0.png"	}
@@ -68,6 +92,25 @@ brightmap sprite U9G1U0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1
 brightmap sprite U9G1V0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
 brightmap sprite U9G1W0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
 brightmap sprite U9G1X0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
+
+// UT99 Minigun
+brightmap sprite U9GBA0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBB0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBC0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBD0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBE0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBF0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBG0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBH0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBI0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBJ0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBK0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBL0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBM0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBN0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBO0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBP0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
+brightmap sprite U9GBQ0	{	map "Sprites/Weapons/Minigun/UT99/brightmaps/B9GBA0.png"	}
 
 // UT99 Pulse Rifle
 brightmap sprite UTPGA0	{	map "Sprites/Weapons/PulseGun/brightmaps/UBPGA0.png"	}
