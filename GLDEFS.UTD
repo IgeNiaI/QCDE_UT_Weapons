@@ -50,22 +50,40 @@ brightmap sprite U1GBU0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBU0.png"
 brightmap sprite U1GBV0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBV0.png"	}
 
 // Unreal 1 Flak Cannon (Mini)
-brightmap sprite UTFMA0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMA0.png"	}
-brightmap sprite UTFMB0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMB0.png"	}
-brightmap sprite UTFMC0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMC0.png"	}
-brightmap sprite UTFMD0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMD0.png"	}
-brightmap sprite UTFME0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFME0.png"	}
-brightmap sprite UTFMF0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMF0.png"	}
-brightmap sprite UTFMG0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMG0.png"	}
-brightmap sprite UTFMH0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMH0.png"	}
-brightmap sprite UTFMI0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMI0.png"	}
-brightmap sprite UTFMJ0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMJ0.png"	}
-brightmap sprite UTFMK0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMK0.png"	}
-brightmap sprite UTFML0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFML0.png"	}
-brightmap sprite UTFMM0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMM0.png"	}
-brightmap sprite UTFMN0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMN0.png"	}
-brightmap sprite UTFMO0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMO0.png"	}
-brightmap sprite UTFMP0	{	map "Sprites/Weapons/FlakCannonMini/brightmaps/UBFMP0.png"	}
+brightmap sprite U1G3A0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3A0.png"	}
+brightmap sprite U1G3B0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3B0.png"	}
+brightmap sprite U1G3C0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3C0.png"	}
+brightmap sprite U1G3D0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3D0.png"	}
+brightmap sprite U1G3E0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3E0.png"	}
+brightmap sprite U1G3F0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3F0.png"	}
+brightmap sprite U1G3G0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3G0.png"	}
+brightmap sprite U1G3H0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3H0.png"	}
+brightmap sprite U1G3I0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3I0.png"	}
+brightmap sprite U1G3J0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3J0.png"	}
+brightmap sprite U1G3K0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3K0.png"	}
+brightmap sprite U1G3L0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3L0.png"	}
+brightmap sprite U1G3M0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3M0.png"	}
+brightmap sprite U1G3N0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3N0.png"	}
+brightmap sprite U1G3O0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3O0.png"	}
+brightmap sprite U1G3P0	{	map "Sprites/Weapons/FlakCannonMini/U1_Flak/brightmaps/B1G3P0.png"	}
+
+// Unreal 1 Flak Cannon (Mini) Stinger
+brightmap sprite U2G3A0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3B0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3C0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3D0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3E0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3F0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3G0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3H0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3I0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3J0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3K0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3L0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3M0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3N0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3O0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
+brightmap sprite U2G3P0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
 
 // UT99 Impact Hammer
 brightmap sprite U9G1A0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}

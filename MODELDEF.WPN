@@ -1,4 +1,27 @@
 
+// Flak Mini Stinger projectile
+
+Model UTFlakMiniShellDM_Stinger
+{
+   Path "MD3/PROJECTILES"
+   SKIN 0 "Tarydium1.png"
+   MODEL 0 "Tarydium1.md3"
+   Scale 4.0 4.0 4.0
+   PITCHFROMMOMENTUM
+   FrameIndex TRYD A 0 0
+}
+
+Model UTFlakMiniShellBouncedDM_Stinger
+{
+   Path "MD3/PROJECTILES"
+   SKIN 0 "Tarydium1.png"
+   MODEL 0 "Tarydium1.md3"
+   Scale 4.0 4.0 4.0
+   PITCHFROMMOMENTUM
+   FrameIndex TRYD A 0 0
+}
+
+
 // Flak Cannon
 
 Model UTFlakBomb

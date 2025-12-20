@@ -105,8 +105,11 @@ UTDE/Weapons/Dispr/Impact						"Sounds/Weapons/DP_Impact.wav"
 
 //********************
 // Flak Cannon Mini
-UTDE/Weapons/FlakMini/Fire						"Sounds/Weapons/FLM_Fire.wav"
-UTDE/Weapons/FlakMini/Quad/Fire					"Sounds/Weapons/Quad/FLM_Fire.wav"
+UTDE/Weapons/FlakMini/Fire_U1Flak				"Sounds/Weapons/FlakMini/U1Flak/FLM_Fire.wav"
+UTDE/Weapons/FlakMini/Quad/Fire_U1Flak			"Sounds/Weapons/FlakMini/U1Flak/Quad/FLM_Fire.wav"
+
+UTDE/Weapons/FlakMini/Fire_U1Stinger			"Sounds/Weapons/FlakMini/U1Stinger/FLM_Fire.wav"
+UTDE/Weapons/FlakMini/Quad/Fire_U1Stinger		"Sounds/Weapons/FlakMini/U1Stinger/Quad/FLM_Fire.wav"
 
 
 //********************
