@@ -368,12 +368,14 @@ function void reReadWeaponCvars(void)
 		SetInventory("UTImpactHammerSkin",	GetCVar("cl_UTIHskin"		) >= 0 ? GetCVar("cl_UTIHskin"	) : classSkin);
 		SetInventory("UTEnforcerSkin",		GetCVar("cl_UTENskin"		) >= 0 ? GetCVar("cl_UTENskin"	) : classSkin);
 		SetInventory("UTMinigunSkin",		GetCVar("cl_UTMGskin"		) >= 0 ? GetCVar("cl_UTMGskin"	) : classSkin);
+		SetInventory("UTFlakMiniSkin",		GetCVar("cl_UTFMskin"		) >= 0 ? GetCVar("cl_UTFMskin"	) : classSkin);
 	}
 	else
 	{
 		//SetInventory("UTImpactHammerSkin",		classSkin);
 		//SetInventory("UTEnforcerSkin",			classSkin);
 		//SetInventory("UTMinigunSkin",				classSkin);
+		//SetInventory("UTFlakMiniSkin",			classSkin);
 	}
 }
 
