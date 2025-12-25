@@ -114,17 +114,23 @@ UTDE/Weapons/FlakMini/Quad/Fire_U1Stinger		"Sounds/Weapons/FlakMini/U1Stinger/Qu
 
 //********************
 // Flak Cannon
-UTDE/Weapons/Flak/Fire							"Sounds/Weapons/FL_Fire.wav"
-UTDE/Weapons/Flak/Quad/Fire						"Sounds/Weapons/Quad/FL_Fire.wav"
-UTDE/Weapons/Flak/AltFire						"Sounds/Weapons/FL_Fire_Alt.wav"
-UTDE/Weapons/Flak/Quad/AltFire					"Sounds/Weapons/Quad/FL_Fire_Alt.wav"
-UTDE/Weapons/Flak/Explo							"Sounds/Weapons/FL_Explo.wav"
+UTDE/Weapons/Flak/Fire_UT2004					"Sounds/Weapons/FlakCannon/UT2004/FL_Fire.wav"
+UTDE/Weapons/Flak/Quad/Fire_UT2004				"Sounds/Weapons/FlakCannon/UT2004/Quad/FL_Fire.wav"
+UTDE/Weapons/Flak/AltFire_UT2004				"Sounds/Weapons/FlakCannon/UT2004/FL_Fire_Alt.wav"
+UTDE/Weapons/Flak/Quad/AltFire_UT2004			"Sounds/Weapons/FlakCannon/UT2004/Quad/FL_Fire_Alt.wav"
+
+UTDE/Weapons/Flak/Fire_UT99						"Sounds/Weapons/FlakCannon/UT99/FL_Fire.wav"
+UTDE/Weapons/Flak/Quad/Fire_UT99				"Sounds/Weapons/FlakCannon/UT99/Quad/FL_Fire.wav"
+UTDE/Weapons/Flak/AltFire_UT99					"Sounds/Weapons/FlakCannon/UT99/FL_Fire_Alt.wav"
+UTDE/Weapons/Flak/Quad/AltFire_UT99				"Sounds/Weapons/FlakCannon/UT99/Quad/FL_Fire_Alt.wav"
+
 
 $random UTDE/Weapons/Flak/Bounce { UTDE/Weapons/Flak/Bounce1 UTDE/Weapons/Flak/Bounce2 UTDE/Weapons/Flak/Bounce3 }
 
-UTDE/Weapons/Flak/Bounce1						"Sounds/Weapons/FL_Bounce1.wav"
-UTDE/Weapons/Flak/Bounce2						"Sounds/Weapons/FL_Bounce2.wav"
-UTDE/Weapons/Flak/Bounce3						"Sounds/Weapons/FL_Bounce3.wav"
+UTDE/Weapons/Flak/Explo							"Sounds/Weapons/FlakCannon/FL_Explo.wav"
+UTDE/Weapons/Flak/Bounce1						"Sounds/Weapons/FlakCannon/FL_Bounce1.wav"
+UTDE/Weapons/Flak/Bounce2						"Sounds/Weapons/FlakCannon/FL_Bounce2.wav"
+UTDE/Weapons/Flak/Bounce3						"Sounds/Weapons/FlakCannon/FL_Bounce3.wav"
 
 
 //********************
