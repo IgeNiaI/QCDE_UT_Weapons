@@ -137,23 +137,45 @@ UTDE/Weapons/Flak/Bounce3						"Sounds/Weapons/FlakCannon/FL_Bounce3.wav"
 // Link Gun
 UTDE/Weapons/LinkGun/Fire						"Sounds/Weapons/LG_Fire.wav"
 UTDE/Weapons/LinkGun/Quad/Fire					"Sounds/Weapons/Quad/LG_Fire.wav"
-UTDE/Weapons/LinkGun/Impact						"Sounds/Weapons/LG_Impact.wav"
 
 
 //********************
 // Pulse Gun
-UTDE/Weapons/PulseGun/FireStartLoop				"Sounds/Weapons/PG_Start_Loop.wav"
-UTDE/Weapons/PulseGun/Quad/FireStartLoop		"Sounds/Weapons/Quad/PG_Start_Loop.wav"
-UTDE/Weapons/PulseGun/FireEnd					"Sounds/Weapons/PG_End.wav"
-UTDE/Weapons/PulseGun/AltFireStartLoop			"Sounds/Weapons/PG_Start_Loop_Alt.wav"
-UTDE/Weapons/PulseGun/Quad/AltFireStartLoop		"Sounds/Weapons/Quad/PG_Start_Loop_Alt.wav"
-UTDE/Weapons/PulseGun/Impact					"Sounds/Weapons/PG_Impact.wav"
+UTDE/Weapons/PulseGun/FireStartLoop_UT2003			"Sounds/Weapons/PulseGun/UT2003/PG_Start_Loop.wav"
+UTDE/Weapons/PulseGun/Quad/FireStartLoop_UT2003		"Sounds/Weapons/PulseGun/UT2003/Quad/PG_Start_Loop.wav"
+UTDE/Weapons/PulseGun/FireEnd_UT2003				"Sounds/Weapons/PulseGun/UT2003/PG_End.wav"
+UTDE/Weapons/PulseGun/AltFireStartLoop_UT2003		"Sounds/Weapons/PulseGun/UT2003/PG_Start_Loop_Alt.wav"
+UTDE/Weapons/PulseGun/Quad/AltFireStartLoop_UT2003	"Sounds/Weapons/PulseGun/UT2003/Quad/PG_Start_Loop_Alt.wav"
 
-$volume "UTDE/Weapons/PulseGun/FireStartLoop"			0.60
-$volume "UTDE/Weapons/PulseGun/Quad/FireStartLoop"		0.60
-$volume "UTDE/Weapons/PulseGun/FireEnd"					0.60
-$volume "UTDE/Weapons/PulseGun/AltFireStartLoop"		0.80
-$volume "UTDE/Weapons/PulseGun/Quad/AltFireStartLoop"	0.80
+$volume "UTDE/Weapons/PulseGun/FireStartLoop_UT2003"			0.60
+$volume "UTDE/Weapons/PulseGun/Quad/FireStartLoop_UT2003"		0.60
+$volume "UTDE/Weapons/PulseGun/FireEnd_UT2003"					0.60
+$volume "UTDE/Weapons/PulseGun/AltFireStartLoop_UT2003"			0.80
+$volume "UTDE/Weapons/PulseGun/Quad/AltFireStartLoop_UT2003"	0.80
+
+
+UTDE/Weapons/PulseGun/FireStartLoop_UT99			"Sounds/Weapons/PulseGun/UT99/PG_Start_Loop.wav"
+UTDE/Weapons/PulseGun/Quad/FireStartLoop_UT99		"Sounds/Weapons/PulseGun/UT99/Quad/PG_Start_Loop.wav"
+UTDE/Weapons/PulseGun/FireEnd_UT99					"Sounds/Weapons/PulseGun/UT99/PG_End.wav"
+UTDE/Weapons/PulseGun/AltFireStartLoop_UT99			"Sounds/Weapons/PulseGun/UT99/PG_Start_Loop_Alt.wav"
+UTDE/Weapons/PulseGun/Quad/AltFireStartLoop_UT99	"Sounds/Weapons/PulseGun/UT99/Quad/PG_Start_Loop_Alt.wav"
+
+$volume "UTDE/Weapons/PulseGun/FireStartLoop_UT99"				0.60
+$volume "UTDE/Weapons/PulseGun/Quad/FireStartLoop_UT99"			0.60
+$volume "UTDE/Weapons/PulseGun/FireEnd_UT99"					0.60
+$volume "UTDE/Weapons/PulseGun/AltFireStartLoop_UT99"			0.80
+$volume "UTDE/Weapons/PulseGun/Quad/AltFireStartLoop_UT99"		0.80
+
+
+UTDE/Weapons/PulseGun/Impact1					"Sounds/Weapons/PulseGun/PG_Impact1.wav"
+UTDE/Weapons/PulseGun/Impact2					"Sounds/Weapons/PulseGun/PG_Impact2.wav"
+UTDE/Weapons/PulseGun/Impact3					"Sounds/Weapons/PulseGun/PG_Impact3.wav"
+UTDE/Weapons/PulseGun/Impact4					"Sounds/Weapons/PulseGun/PG_Impact4.wav"
+UTDE/Weapons/PulseGun/Impact5					"Sounds/Weapons/PulseGun/PG_Impact5.wav"
+UTDE/Weapons/PulseGun/Impact6					"Sounds/Weapons/PulseGun/PG_Impact6.wav"
+UTDE/Weapons/PulseGun/Impact7					"Sounds/Weapons/PulseGun/PG_Impact7.wav"
+$random UTDE/Weapons/PulseGun/Impact { UTDE/Weapons/PulseGun/Impact1 UTDE/Weapons/PulseGun/Impact2 UTDE/Weapons/PulseGun/Impact3
+		UTDE/Weapons/PulseGun/Impact4 UTDE/Weapons/PulseGun/Impact5 UTDE/Weapons/PulseGun/Impact6 UTDE/Weapons/PulseGun/Impact7 }
 
 
 //********************
