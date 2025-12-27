@@ -85,6 +85,32 @@ brightmap sprite U2G3N0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightm
 brightmap sprite U2G3O0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
 brightmap sprite U2G3P0	{	map "Sprites/Weapons/FlakCannonMini/U1_Stinger/brightmaps/B2G3A0.png"	}
 
+// Unreal 1 Razorjack
+brightmap sprite U1G5A0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5B0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5C0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5D0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5E0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5F0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5G0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5H0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5I0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5J0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5K0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5L0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5M0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5N0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5O0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5P0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5Q0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5R0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5S0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5T0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5U0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5V0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5W0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+brightmap sprite U1G5X0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
+
 // UT99 Impact Hammer
 brightmap sprite U9G1A0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
 brightmap sprite U9G1B0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
@@ -175,30 +201,30 @@ brightmap sprite U9GDQ0	{	map "Sprites/Weapons/PulseGun/UT99/brightmaps/B9GDA0.p
 brightmap sprite U9GDR0	{	map "Sprites/Weapons/PulseGun/UT99/brightmaps/B9GDA0.png"	}
 
 // UT99 Ripper
-brightmap sprite UTRPA0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPA0.png"	}
-brightmap sprite UTRPB0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPB0.png"	}
-brightmap sprite UTRPC0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPC0.png"	}
-brightmap sprite UTRPD0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPD0.png"	}
-brightmap sprite UTRPE0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPE0.png"	}
-brightmap sprite UTRPF0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPF0.png"	}
-brightmap sprite UTRPG0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPG0.png"	}
-brightmap sprite UTRPH0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPH0.png"	}
-brightmap sprite UTRPI0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPI0.png"	}
-brightmap sprite UTRPJ0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPJ0.png"	}
-brightmap sprite UTRPK0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPK0.png"	}
-brightmap sprite UTRPL0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPL0.png"	}
-brightmap sprite UTRPM0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPM0.png"	}
-brightmap sprite UTRPN0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPN0.png"	}
-brightmap sprite UTRPO0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPO0.png"	}
-brightmap sprite UTRPP0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPP0.png"	}
-brightmap sprite UTRPQ0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPQ0.png"	}
-brightmap sprite UTRPR0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPR0.png"	}
-brightmap sprite UTRPS0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPS0.png"	}
-brightmap sprite UTRPT0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPT0.png"	}
-brightmap sprite UTRPU0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPU0.png"	}
-brightmap sprite UTRPV0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPV0.png"	}
-brightmap sprite UTRPW0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPW0.png"	}
-brightmap sprite UTRPX0	{	map "Sprites/Weapons/Ripper/brightmaps/UBRPX0.png"	}
+brightmap sprite U9G5A0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5A0.png"	}
+brightmap sprite U9G5B0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5B0.png"	}
+brightmap sprite U9G5C0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5C0.png"	}
+brightmap sprite U9G5D0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5D0.png"	}
+brightmap sprite U9G5E0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5E0.png"	}
+brightmap sprite U9G5F0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5F0.png"	}
+brightmap sprite U9G5G0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5G0.png"	}
+brightmap sprite U9G5H0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5H0.png"	}
+brightmap sprite U9G5I0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5I0.png"	}
+brightmap sprite U9G5J0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5J0.png"	}
+brightmap sprite U9G5K0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5K0.png"	}
+brightmap sprite U9G5L0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5L0.png"	}
+brightmap sprite U9G5M0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5M0.png"	}
+brightmap sprite U9G5N0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5N0.png"	}
+brightmap sprite U9G5O0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5O0.png"	}
+brightmap sprite U9G5P0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5P0.png"	}
+brightmap sprite U9G5Q0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5Q0.png"	}
+brightmap sprite U9G5R0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5R0.png"	}
+brightmap sprite U9G5S0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5S0.png"	}
+brightmap sprite U9G5T0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5T0.png"	}
+brightmap sprite U9G5U0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5U0.png"	}
+brightmap sprite U9G5V0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5V0.png"	}
+brightmap sprite U9G5W0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5W0.png"	}
+brightmap sprite U9G5X0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5X0.png"	}
 
 // UT99 Redeemer
 brightmap sprite UTRDA0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDA0.png"	}
