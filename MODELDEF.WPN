@@ -83,56 +83,111 @@ Model PGworldactor2
 Model UTRipperBlade
 {
    Path "MD3/PROJECTILES"
-   SurfaceSkin 0 0 "RazTrail.png"
-   SurfaceSkin 0 1 "RazSkin.png"
-   MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.15
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
    PITCHFROMMOMENTUM
-   FrameIndex BLAD ABC 0 0
+   FrameIndex BLD9 A 0 0
+}
+
+Model UTRipperBlade_U1
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper1Skin.png"
+   SurfaceSkin 0 1 "Ripper1Trail.png"
+   MODEL 0 "Ripper1Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD1 A 0 0
 }
 
 Model UTRipperBladeUpgraded
 {
    Path "MD3/PROJECTILES"
-   SurfaceSkin 0 0 "RazTrail.png"
-   SurfaceSkin 0 1 "RazSkin.png"
-   MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.15
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
    PITCHFROMMOMENTUM
-   FrameIndex BLAD ABC 0 0
+   FrameIndex BLD9 A 0 0
+}
+
+Model UTRipperBladeUpgraded_U1
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper1Skin.png"
+   SurfaceSkin 0 1 "Ripper1Trail.png"
+   MODEL 0 "Ripper1Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD1 A 0 0
 }
 
 Model UTRipperBladeAlt
 {
    Path "MD3/PROJECTILES"
-   SurfaceSkin 0 0 "RazTrail.png"
-   SurfaceSkin 0 1 "RazSkin.png"
-   MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.15
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
    PITCHFROMMOMENTUM
-   FrameIndex BLAD ABC 0 0
+   FrameIndex BLD9 A 0 0
+}
+
+Model UTRipperBladeAlt_U1
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper1Skin.png"
+   SurfaceSkin 0 1 "Ripper1Trail.png"
+   MODEL 0 "Ripper1Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD1 A 0 0
 }
 
 Model UTRipperBladeAltUpgraded
 {
    Path "MD3/PROJECTILES"
-   SurfaceSkin 0 0 "RazTrail.png"
-   SurfaceSkin 0 1 "RazSkin.png"
-   MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.15
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
    PITCHFROMMOMENTUM
-   FrameIndex BLAD ABC 0 0
+   FrameIndex BLD9 A 0 0
+}
+
+Model UTRipperBladeAltUpgraded_U1
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper1Skin.png"
+   SurfaceSkin 0 1 "Ripper1Trail.png"
+   MODEL 0 "Ripper1Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD1 A 0 0
 }
 
 Model UTRipperBladeAltUpgradedRipper
 {
    Path "MD3/PROJECTILES"
-   SurfaceSkin 0 0 "RazTrail.png"
-   SurfaceSkin 0 1 "RazSkin.png"
-   MODEL 0 "blade.md3"
-   Scale 1.0 1.0 1.15
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
    PITCHFROMMOMENTUM
-   FrameIndex BLAD ABC 0 0
+   FrameIndex BLD9 A 0 0
+}
+
+Model UTRipperBladeAltUpgradedRipper_U1
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper1Skin.png"
+   SurfaceSkin 0 1 "Ripper1Trail.png"
+   MODEL 0 "Ripper1Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD1 A 0 0
 }
 
 

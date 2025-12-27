@@ -5,7 +5,7 @@ UTDPY = "Voxels/Weapons/SP/DisprSP.kvx" 			{Spin=50} // Dispersion Pistol
 U4GBY = "Voxels/Weapons/SP/MinigunSP.kvx" 			{Spin=50} // Minigun
 U4GCY = "Voxels/Weapons/SP/FlakCannonSP.kvx"		{Spin=50} // Flak Cannon
 U9GDY = "Voxels/Weapons/SP/PulseRifleSP.kvx" 		{Spin=50} // Pulse Rifle
-UTRPY = "Voxels/Weapons/SP/RipperSP.kvx" 			{Spin=50} // Ripper
+U9G5Y = "Voxels/Weapons/SP/RipperSP.kvx" 			{Spin=50} // Ripper
 UTRLY = "Voxels/Weapons/SP/RocketLauncherSP.kvx" 	{Spin=50} // Rocket Launcher
 UTSRY = "Voxels/Weapons/SP/ShockRifleSP.kvx" 		{Spin=50} // Shock Rifle
 UTSPY = "Voxels/Weapons/SP/SniperRifleSP.kvx" 		{Spin=50} // Sniper Rifle

@@ -180,17 +180,30 @@ $random UTDE/Weapons/PulseGun/Impact { UTDE/Weapons/PulseGun/Impact1 UTDE/Weapon
 
 //********************
 // Ripper
-UTDE/Weapons/Ripper/Fire						"Sounds/Weapons/RP_Fire.wav"
-UTDE/Weapons/Ripper/Quad/Fire					"Sounds/Weapons/Quad/RP_Fire.wav"
-UTDE/Weapons/Ripper/AltFire						"Sounds/Weapons/RP_Fire_Alt.wav"
-UTDE/Weapons/Ripper/Quad/AltFire				"Sounds/Weapons/Quad/RP_Fire_Alt.wav"
-UTDE/Weapons/Ripper/Impact						"Sounds/Weapons/RP_Impact.wav"
-UTDE/Weapons/Ripper/Bounce						"Sounds/Weapons/RP_Bounce.wav"
+UTDE/Weapons/Ripper/Fire_U1							"Sounds/Weapons/Ripper/U1/RP_Fire.wav"
+UTDE/Weapons/Ripper/Quad/Fire_U1					"Sounds/Weapons/Ripper/U1/Quad/RP_Fire.wav"
+UTDE/Weapons/Ripper/AltFire_U1						"Sounds/Weapons/Ripper/U1/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Quad/AltFire_U1					"Sounds/Weapons/Ripper/U1/Quad/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Impact_U1						"Sounds/Weapons/Ripper/U1/RP_Impact.wav"
+UTDE/Weapons/Ripper/Bounce_U1						"Sounds/Weapons/Ripper/U1/RP_Bounce.wav"
 
-$volume "UTDE/Weapons/Ripper/Fire"					0.80
-$volume "UTDE/Weapons/Ripper/Quad/Fire"				0.80
-$volume "UTDE/Weapons/Ripper/AltFire"				0.80
-$volume "UTDE/Weapons/Ripper/Quad/AltFireStartLoop"	0.80
+$volume "UTDE/Weapons/Ripper/Fire_U1"						0.80
+$volume "UTDE/Weapons/Ripper/Quad/Fire_U1"					0.80
+$volume "UTDE/Weapons/Ripper/AltFire_U1"					0.80
+$volume "UTDE/Weapons/Ripper/Quad/AltFireStartLoop_U1"		0.80
+
+
+UTDE/Weapons/Ripper/Fire_UT99						"Sounds/Weapons/Ripper/UT99/RP_Fire.wav"
+UTDE/Weapons/Ripper/Quad/Fire_UT99					"Sounds/Weapons/Ripper/UT99/Quad/RP_Fire.wav"
+UTDE/Weapons/Ripper/AltFire_UT99					"Sounds/Weapons/Ripper/UT99/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Quad/AltFire_UT99				"Sounds/Weapons/Ripper/UT99/Quad/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Impact_UT99						"Sounds/Weapons/Ripper/UT99/RP_Impact.wav"
+UTDE/Weapons/Ripper/Bounce_UT99						"Sounds/Weapons/Ripper/UT99/RP_Bounce.wav"
+
+$volume "UTDE/Weapons/Ripper/Fire_UT99"						0.80
+$volume "UTDE/Weapons/Ripper/Quad/Fire_UT99"				0.80
+$volume "UTDE/Weapons/Ripper/AltFire_UT99"					0.80
+$volume "UTDE/Weapons/Ripper/Quad/AltFireStartLoop_UT99"	0.80
 
 //********************
 // Bio Rifle
