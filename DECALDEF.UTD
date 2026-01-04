@@ -52,3 +52,15 @@ decal UTBioRifleFull	//Glowing spot
 	animator GoAwayBioGlow
 	LowerDecal "Q4PlasmaBlack"
 }
+
+decal UTBioRifleFullGreen	//Glowing spot
+{
+	pic UTBGGDCL
+	x-scale 0.42
+	y-scale 0.42
+	randomflipx
+	randomflipy
+	Fullbright
+	animator GoAwayBioGlow
+	LowerDecal "Q4PlasmaBlack"
+}
