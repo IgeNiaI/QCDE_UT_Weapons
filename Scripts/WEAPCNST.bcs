@@ -372,6 +372,7 @@ function void reReadWeaponCvars(void)
 		SetInventory("UTFlakSkin",			GetCVar("cl_UTFLskin"		) >= 0 ? GetCVar("cl_UTFLskin"	) : classSkin);
 		SetInventory("UTPulseGunSkin",		GetCVar("cl_UTPGskin"		) >= 0 ? GetCVar("cl_UTPGskin"	) : classSkin);
 		SetInventory("UTRipperSkin",		GetCVar("cl_UTRPskin"		) >= 0 ? GetCVar("cl_UTRPskin"	) : classSkin);
+		SetInventory("UTBioRifleSkin",		GetCVar("cl_UTBRskin"		) >= 0 ? GetCVar("cl_UTBRskin"	) : classSkin);
 	}
 	else
 	{
@@ -382,6 +383,7 @@ function void reReadWeaponCvars(void)
 		//SetInventory("UTFlakSkin",				classSkin);
 		//SetInventory("UTPulseGunSkin",			classSkin);
 		//SetInventory("UTRipperSkin",				classSkin);
+		//SetInventory("UTBioRifleSkin",			classSkin);
 	}
 }
 

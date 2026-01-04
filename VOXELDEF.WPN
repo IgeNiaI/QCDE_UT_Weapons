@@ -16,7 +16,7 @@ UTRDY = "Voxels/Weapons/SP/RedeemerSP.kvx" 			{Spin=50} // Redeemer
 U4GBZ = "Voxels/Weapons/MP/MinigunMP.kvx" 			{Spin=50} // Minigun
 U4GCZ = "Voxels/Weapons/MP/FlakCannonMP.kvx" 		{Spin=50} // Flak Cannon
 U9GDZ = "Voxels/Weapons/MP/PulseRifleMP.kvx" 		{Spin=50} // Pulse Rifle
-UTBRZ = "Voxels/Weapons/MP/BioRifleMP.kvx" 			{Spin=50} // Bio Rifle
+U4GEZ = "Voxels/Weapons/MP/BioRifleMP.kvx" 			{Spin=50} // Bio Rifle
 UTRLZ = "Voxels/Weapons/MP/RocketLauncherMP.kvx" 	{Spin=50} // Rocket Launcher
 UTSRZ = "Voxels/Weapons/MP/ShockRifleMP.kvx" 		{Spin=50} // Shock Rifle
 UTSPZ = "Voxels/Weapons/MP/SniperRifleMP.kvx" 		{Spin=50} // Sniper Rifle

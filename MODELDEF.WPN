@@ -213,6 +213,26 @@ Model BioBall1DM
    FrameIndex BIOB F 0 5
 }
 
+Model BioBall1DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
+}
+
 Model BioBall2DM
 {
    Path "MD3/PROJECTILES"
@@ -231,6 +251,26 @@ Model BioBall2DM
    FrameIndex BIOB E 0 4
    SurfaceSkin 0 0 "bioglobF.png"
    FrameIndex BIOB F 0 5
+}
+
+Model BioBall2DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
 }
 
 Model BioBall3DM
@@ -253,6 +293,26 @@ Model BioBall3DM
    FrameIndex BIOB F 0 5
 }
 
+Model BioBall3DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
+}
+
 Model BioBall4DM
 {
    Path "MD3/PROJECTILES"
@@ -271,6 +331,26 @@ Model BioBall4DM
    FrameIndex BIOB E 0 4
    SurfaceSkin 0 0 "bioglobF.png"
    FrameIndex BIOB F 0 5
+}
+
+Model BioBall4DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
 }
 
 Model BioBall5DM
@@ -293,6 +373,26 @@ Model BioBall5DM
    FrameIndex BIOB F 0 5
 }
 
+Model BioBall5DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
+}
+
 Model BioBall6DM
 {
    Path "MD3/PROJECTILES"
@@ -311,6 +411,26 @@ Model BioBall6DM
    FrameIndex BIOB E 0 4
    SurfaceSkin 0 0 "bioglobF.png"
    FrameIndex BIOB F 0 5
+}
+
+Model BioBall6DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
 }
 
 Model BioBall7DM
@@ -333,6 +453,26 @@ Model BioBall7DM
    FrameIndex BIOB F 0 5
 }
 
+Model BioBall7DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
+}
+
 Model BioBall8DM
 {
    Path "MD3/PROJECTILES"
@@ -351,6 +491,26 @@ Model BioBall8DM
    FrameIndex BIOB E 0 4
    SurfaceSkin 0 0 "bioglobF.png"
    FrameIndex BIOB F 0 5
+}
+
+Model BioBall8DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
 }
 
 Model BioBall9DM
@@ -373,6 +533,26 @@ Model BioBall9DM
    FrameIndex BIOB F 0 5
 }
 
+Model BioBall9DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
+}
+
 Model BioBall10DM
 {
    Path "MD3/PROJECTILES"
@@ -391,6 +571,26 @@ Model BioBall10DM
    FrameIndex BIOB E 0 4
    SurfaceSkin 0 0 "bioglobF.png"
    FrameIndex BIOB F 0 5
+}
+
+Model BioBall10DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
 }
 
 Model BioBallSticky1DM
@@ -413,6 +613,26 @@ Model BioBallSticky1DM
    FrameIndex BIOB F 0 5
 }
 
+Model BioBallSticky1DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
+}
+
 Model BioBallSticky2DM
 {
    Path "MD3/PROJECTILES"
@@ -433,6 +653,26 @@ Model BioBallSticky2DM
    FrameIndex BIOB F 0 5
 }
 
+Model BioBallSticky2DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
+}
+
 Model BioBallSticky3DM
 {
    Path "MD3/PROJECTILES"
@@ -451,6 +691,26 @@ Model BioBallSticky3DM
    FrameIndex BIOB E 0 4
    SurfaceSkin 0 0 "bioglobF.png"
    FrameIndex BIOB F 0 5
+}
+
+Model BioBallSticky3DM_U1
+{
+   Path "MD3/PROJECTILES"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglogA.png"
+   FrameIndex BIOG A 0 0
+   SurfaceSkin 0 0 "bioglogB.png"
+   FrameIndex BIOG B 0 1
+   SurfaceSkin 0 0 "bioglogC.png"
+   FrameIndex BIOG C 0 2
+   SurfaceSkin 0 0 "bioglogD.png"
+   FrameIndex BIOG D 0 3
+   SurfaceSkin 0 0 "bioglogE.png"
+   FrameIndex BIOG E 0 4
+   SurfaceSkin 0 0 "bioglogF.png"
+   FrameIndex BIOG F 0 5
 }
 
 

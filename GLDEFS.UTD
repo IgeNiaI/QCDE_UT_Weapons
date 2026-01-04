@@ -111,6 +111,30 @@ brightmap sprite U1G5V0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	
 brightmap sprite U1G5W0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
 brightmap sprite U1G5X0	{	map "Sprites/Weapons/Ripper/U1/brightmaps/B1G5A0.png"	}
 
+// U1 Bio Rifle
+brightmap sprite U1GEA0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEA0.png"	}
+brightmap sprite U1GEB0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEB0.png"	}
+brightmap sprite U1GEC0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEC0.png"	}
+brightmap sprite U1GED0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GED0.png"	}
+brightmap sprite U1GEE0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEE0.png"	}
+brightmap sprite U1GEF0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEF0.png"	}
+brightmap sprite U1GEG0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEG0.png"	}
+brightmap sprite U1GEH0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEH0.png"	}
+brightmap sprite U1GEI0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEI0.png"	}
+brightmap sprite U1GEJ0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEJ0.png"	}
+brightmap sprite U1GEK0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEK0.png"	}
+brightmap sprite U1GEL0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEL0.png"	}
+brightmap sprite U1GEM0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEM0.png"	}
+brightmap sprite U1GEN0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEN0.png"	}
+brightmap sprite U1GEO0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEO0.png"	}
+brightmap sprite U1GEP0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEP0.png"	}
+brightmap sprite U1GEQ0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEQ0.png"	}
+brightmap sprite U1GER0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GER0.png"	}
+brightmap sprite U1GES0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GES0.png"	}
+brightmap sprite U1GET0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GET0.png"	}
+brightmap sprite U1GEU0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEU0.png"	}
+brightmap sprite U1GEV0	{	map "Sprites/Weapons/BioRifle/U1/brightmaps/B1GEV0.png"	}
+
 // UT99 Impact Hammer
 brightmap sprite U9G1A0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
 brightmap sprite U9G1B0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
@@ -226,6 +250,30 @@ brightmap sprite U9G5V0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5V0.png
 brightmap sprite U9G5W0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5W0.png"	}
 brightmap sprite U9G5X0	{	map "Sprites/Weapons/Ripper/UT99/brightmaps/B9G5X0.png"	}
 
+// UT99 Bio Rifle
+brightmap sprite U9GEA0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEA0.png"	}
+brightmap sprite U9GEB0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEB0.png"	}
+brightmap sprite U9GEC0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEC0.png"	}
+brightmap sprite U9GED0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GED0.png"	}
+brightmap sprite U9GEE0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEE0.png"	}
+brightmap sprite U9GEF0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEF0.png"	}
+brightmap sprite U9GEG0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEG0.png"	}
+brightmap sprite U9GEH0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEH0.png"	}
+brightmap sprite U9GEI0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEI0.png"	}
+brightmap sprite U9GEJ0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEJ0.png"	}
+brightmap sprite U9GEK0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEK0.png"	}
+brightmap sprite U9GEL0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEL0.png"	}
+brightmap sprite U9GEM0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEM0.png"	}
+brightmap sprite U9GEN0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEN0.png"	}
+brightmap sprite U9GEO0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEO0.png"	}
+brightmap sprite U9GEP0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEP0.png"	}
+brightmap sprite U9GEQ0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEQ0.png"	}
+brightmap sprite U9GER0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GER0.png"	}
+brightmap sprite U9GES0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GES0.png"	}
+brightmap sprite U9GET0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GET0.png"	}
+brightmap sprite U9GEU0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEU0.png"	}
+brightmap sprite U9GEV0	{	map "Sprites/Weapons/BioRifle/UT99/brightmaps/B9GEV0.png"	}
+
 // UT99 Redeemer
 brightmap sprite UTRDA0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDA0.png"	}
 brightmap sprite UTRDB0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDB0.png"	}
@@ -329,28 +377,28 @@ brightmap sprite UTLGM0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGM0.png"	}
 brightmap sprite UTLGN0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGN0.png"	}
 
 // UT2004 Bio Rifle
-brightmap sprite UTBRA0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRA0.png"	}
-brightmap sprite UTBRB0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRB0.png"	}
-brightmap sprite UTBRC0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRC0.png"	}
-brightmap sprite UTBRD0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRD0.png"	}
-brightmap sprite UTBRE0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRE0.png"	}
-brightmap sprite UTBRF0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRF0.png"	}
-brightmap sprite UTBRG0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRG0.png"	}
-brightmap sprite UTBRH0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRH0.png"	}
-brightmap sprite UTBRI0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRI0.png"	}
-brightmap sprite UTBRJ0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRJ0.png"	}
-brightmap sprite UTBRK0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRK0.png"	}
-brightmap sprite UTBRL0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRL0.png"	}
-brightmap sprite UTBRM0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRM0.png"	}
-brightmap sprite UTBRN0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRN0.png"	}
-brightmap sprite UTBRO0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRO0.png"	}
-brightmap sprite UTBRP0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRP0.png"	}
-brightmap sprite UTBRQ0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRQ0.png"	}
-brightmap sprite UTBRR0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRR0.png"	}
-brightmap sprite UTBRS0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRS0.png"	}
-brightmap sprite UTBRT0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRT0.png"	}
-brightmap sprite UTBRU0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRU0.png"	}
-brightmap sprite UTBRV0	{	map "Sprites/Weapons/BioRifle/brightmaps/UBBRV0.png"	}
+brightmap sprite U4GEA0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEA0.png"	}
+brightmap sprite U4GEB0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEB0.png"	}
+brightmap sprite U4GEC0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEC0.png"	}
+brightmap sprite U4GED0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GED0.png"	}
+brightmap sprite U4GEE0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEE0.png"	}
+brightmap sprite U4GEF0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEF0.png"	}
+brightmap sprite U4GEG0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEG0.png"	}
+brightmap sprite U4GEH0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEH0.png"	}
+brightmap sprite U4GEI0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEI0.png"	}
+brightmap sprite U4GEJ0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEJ0.png"	}
+brightmap sprite U4GEK0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEK0.png"	}
+brightmap sprite U4GEL0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEL0.png"	}
+brightmap sprite U4GEM0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEM0.png"	}
+brightmap sprite U4GEN0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEN0.png"	}
+brightmap sprite U4GEO0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEO0.png"	}
+brightmap sprite U4GEP0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEP0.png"	}
+brightmap sprite U4GEQ0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEQ0.png"	}
+brightmap sprite U4GER0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GER0.png"	}
+brightmap sprite U4GES0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GES0.png"	}
+brightmap sprite U4GET0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GET0.png"	}
+brightmap sprite U4GEU0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEU0.png"	}
+brightmap sprite U4GEV0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEV0.png"	}
 
 // UT2004 Rocket Launcher
 brightmap sprite UTRLA0	{	map "Sprites/Weapons/RocketLauncher/brightmaps/UBRLA0.png"	}
