@@ -207,22 +207,40 @@ $volume "UTDE/Weapons/Ripper/Quad/AltFireStartLoop_UT99"	0.80
 
 //********************
 // Bio Rifle
-UTDE/Weapons/BioRifle/Fire						"Sounds/Weapons/BR_Fire.wav"
-UTDE/Weapons/BioRifle/Quad/Fire					"Sounds/Weapons/Quad/BR_Fire.wav"
-UTDE/Weapons/BioRifle/Charge					"Sounds/Weapons/BR_Charge.wav"
+UTDE/Weapons/BioRifle/Fire_UT2004				"Sounds/Weapons/BioRifle/UT2004/BR_Fire.wav"
+UTDE/Weapons/BioRifle/Quad/Fire_UT2004			"Sounds/Weapons/BioRifle/UT2004/Quad/BR_Fire.wav"
+UTDE/Weapons/BioRifle/Charge_UT2004				"Sounds/Weapons/BioRifle/UT2004/BR_Charge.wav"
 
-$random UTDE/Weapons/BioRifle/Impact { UTDE/Weapons/BioRifle/Impact1 UTDE/Weapons/BioRifle/Impact2
-		UTDE/Weapons/BioRifle/Impact3 UTDE/Weapons/BioRifle/Impact4 UTDE/Weapons/BioRifle/Impact5
-		UTDE/Weapons/BioRifle/Impact6 UTDE/Weapons/BioRifle/Impact7 UTDE/Weapons/BioRifle/Impact8 }
+$random UTDE/Weapons/BioRifle/Impact_UT2004 { UTDE/Weapons/BioRifle/Impact1_UT2004 UTDE/Weapons/BioRifle/Impact2_UT2004
+		UTDE/Weapons/BioRifle/Impact3_UT2004 UTDE/Weapons/BioRifle/Impact4_UT2004 UTDE/Weapons/BioRifle/Impact5_UT2004
+		UTDE/Weapons/BioRifle/Impact6_UT2004 UTDE/Weapons/BioRifle/Impact7_UT2004 UTDE/Weapons/BioRifle/Impact8_UT2004 }
 
-UTDE/Weapons/BioRifle/Impact1					"Sounds/Weapons/BR_Impact1.wav"
-UTDE/Weapons/BioRifle/Impact2					"Sounds/Weapons/BR_Impact2.wav"
-UTDE/Weapons/BioRifle/Impact3					"Sounds/Weapons/BR_Impact3.wav"
-UTDE/Weapons/BioRifle/Impact4					"Sounds/Weapons/BR_Impact4.wav"
-UTDE/Weapons/BioRifle/Impact5					"Sounds/Weapons/BR_Impact5.wav"
-UTDE/Weapons/BioRifle/Impact6					"Sounds/Weapons/BR_Impact6.wav"
-UTDE/Weapons/BioRifle/Impact7					"Sounds/Weapons/BR_Impact7.wav"
-UTDE/Weapons/BioRifle/Impact8					"Sounds/Weapons/BR_Impact8.wav"
+UTDE/Weapons/BioRifle/Impact1_UT2004			"Sounds/Weapons/BioRifle/UT2004/BR_Impact1.wav"
+UTDE/Weapons/BioRifle/Impact2_UT2004			"Sounds/Weapons/BioRifle/UT2004/BR_Impact2.wav"
+UTDE/Weapons/BioRifle/Impact3_UT2004			"Sounds/Weapons/BioRifle/UT2004/BR_Impact3.wav"
+UTDE/Weapons/BioRifle/Impact4_UT2004			"Sounds/Weapons/BioRifle/UT2004/BR_Impact4.wav"
+UTDE/Weapons/BioRifle/Impact5_UT2004			"Sounds/Weapons/BioRifle/UT2004/BR_Impact5.wav"
+UTDE/Weapons/BioRifle/Impact6_UT2004			"Sounds/Weapons/BioRifle/UT2004/BR_Impact6.wav"
+UTDE/Weapons/BioRifle/Impact7_UT2004			"Sounds/Weapons/BioRifle/UT2004/BR_Impact7.wav"
+UTDE/Weapons/BioRifle/Impact8_UT2004			"Sounds/Weapons/BioRifle/UT2004/BR_Impact8.wav"
+
+
+UTDE/Weapons/BioRifle/Fire_U1					"Sounds/Weapons/BioRifle/U1/BR_Fire.wav"
+UTDE/Weapons/BioRifle/Quad/Fire_U1				"Sounds/Weapons/BioRifle/U1/Quad/BR_Fire.wav"
+UTDE/Weapons/BioRifle/Charge_U1					"Sounds/Weapons/BioRifle/U1/BR_Charge.wav"
+
+$random UTDE/Weapons/BioRifle/Impact_U1 { UTDE/Weapons/BioRifle/Impact1_U1 UTDE/Weapons/BioRifle/Impact2_U1
+		UTDE/Weapons/BioRifle/Impact3_U1 UTDE/Weapons/BioRifle/Impact4_U1 UTDE/Weapons/BioRifle/Impact5_U1
+		UTDE/Weapons/BioRifle/Impact6_U1 UTDE/Weapons/BioRifle/Impact7_U1 UTDE/Weapons/BioRifle/Impact8_U1 }
+
+UTDE/Weapons/BioRifle/Impact1_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact1.wav"
+UTDE/Weapons/BioRifle/Impact2_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact2.wav"
+UTDE/Weapons/BioRifle/Impact3_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact3.wav"
+UTDE/Weapons/BioRifle/Impact4_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact4.wav"
+UTDE/Weapons/BioRifle/Impact5_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact5.wav"
+UTDE/Weapons/BioRifle/Impact6_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact6.wav"
+UTDE/Weapons/BioRifle/Impact7_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact7.wav"
+UTDE/Weapons/BioRifle/Impact8_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact8.wav"
 
 
 //********************
