@@ -320,12 +320,37 @@ UTDE/Weapons/ShockRifle/OrbExplo				"Sounds/Weapons/ShockRifle/SR_Orb_Explo.wav"
 
 //********************
 // Sniper Rifle
-UTDE/Weapons/SniperRifle/Fire				"Sounds/Weapons/SP_Fire.wav"
-UTDE/Weapons/SniperRifle/Quad/Fire			"Sounds/Weapons/Quad/SP_Fire.wav"
-UTDE/Weapons/SniperRifle/Reload				"Sounds/Weapons/SP_Reload.wav"
-UTDE/Weapons/SniperRifle/ZoomIn				"Sounds/Weapons/SP_ZoomIn.wav"
-UTDE/Weapons/SniperRifle/ZoomOut			"Sounds/Weapons/SP_ZoomOut.wav"
-UTDE/Weapons/SniperRifle/Impact				"Sounds/Weapons/SP_Impact.wav"
+UTDE/Weapons/SniperRifle/Fire_UT2004		"Sounds/Weapons/SniperRifle/UT2004/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Quad/Fire_UT2004	"Sounds/Weapons/SniperRifle/UT2004/Quad/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Reload_UT2004		"Sounds/Weapons/SniperRifle/UT2004/SP_Reload.wav"
+
+
+UTDE/Weapons/SniperRifle/Fire_UT2003		"Sounds/Weapons/SniperRifle/UT2003/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Quad/Fire_UT2003	"Sounds/Weapons/SniperRifle/UT2003/Quad/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Impact1_UT2003		"Sounds/Weapons/SniperRifle/UT2003/SP_Impact1.wav"
+UTDE/Weapons/SniperRifle/Impact2_UT2003		"Sounds/Weapons/SniperRifle/UT2003/SP_Impact2.wav"
+UTDE/Weapons/SniperRifle/Impact3_UT2003		"Sounds/Weapons/SniperRifle/UT2003/SP_Impact3.wav"
+UTDE/Weapons/SniperRifle/Impact4_UT2003		"Sounds/Weapons/SniperRifle/UT2003/SP_Impact4.wav"
+UTDE/Weapons/SniperRifle/Impact5_UT2003		"Sounds/Weapons/SniperRifle/UT2003/SP_Impact5.wav"
+UTDE/Weapons/SniperRifle/Impact6_UT2003		"Sounds/Weapons/SniperRifle/UT2003/SP_Impact6.wav"
+
+$random UTDE/Weapons/SniperRifle/Impact_UT2003 {
+		UTDE/Weapons/SniperRifle/Impact1_UT2003 UTDE/Weapons/SniperRifle/Impact2_UT2003 UTDE/Weapons/SniperRifle/Impact3_UT2003
+		UTDE/Weapons/SniperRifle/Impact4_UT2003 UTDE/Weapons/SniperRifle/Impact5_UT2003 UTDE/Weapons/SniperRifle/Impact6_UT2003 }
+
+
+UTDE/Weapons/SniperRifle/Fire_U1			"Sounds/Weapons/SniperRifle/U1/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Quad/Fire_U1		"Sounds/Weapons/SniperRifle/U1/Quad/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Reload_U1			"Sounds/Weapons/SniperRifle/U1/SP_Reload.wav"
+
+
+UTDE/Weapons/SniperRifle/Fire_UT99			"Sounds/Weapons/SniperRifle/UT99/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Quad/Fire_UT99		"Sounds/Weapons/SniperRifle/UT99/Quad/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Reload_UT99		"Sounds/Weapons/SniperRifle/UT99/SP_Reload.wav"
+
+
+UTDE/Weapons/SniperRifle/ZoomIn				"Sounds/Weapons/SniperRifle/SP_ZoomIn.wav"
+UTDE/Weapons/SniperRifle/ZoomOut			"Sounds/Weapons/SniperRifle/SP_ZoomOut.wav"
 
 
 //********************
