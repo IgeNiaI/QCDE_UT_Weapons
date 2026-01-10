@@ -17,6 +17,6 @@ user int cl_UTPGskin	= 9;
 user int cl_UTRPskin	= 9;
 user int cl_UTBRskin	= 4;
 user int cl_UTRLskin	= 4;
-user int cl_UTSRskin	= 0;
+user int cl_UTSRskin	= 4;
 user int cl_UTSPskin	= 0;
 user int cl_UTRDskin	= 0;
