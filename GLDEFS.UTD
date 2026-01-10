@@ -188,6 +188,24 @@ brightmap sprite U1G7C0	{	map "Sprites/Weapons/ShockRifle/U1/brightmaps/B1G7C0.p
 brightmap sprite U1G7D0	{	map "Sprites/Weapons/ShockRifle/U1/brightmaps/B1G7D0.png"	}
 brightmap sprite U1G7E0	{	map "Sprites/Weapons/ShockRifle/U1/brightmaps/B1G7E0.png"	}
 
+// U1 Sniper Rifle
+brightmap sprite U1G8A0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8A0.png"	}
+brightmap sprite U1G8B0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8B0.png"	}
+brightmap sprite U1G8C0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8C0.png"	}
+brightmap sprite U1G8D0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8D0.png"	}
+brightmap sprite U1G8E0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8E0.png"	}
+brightmap sprite U1G8F0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8F0.png"	}
+brightmap sprite U1G8G0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8G0.png"	}
+brightmap sprite U1G8H0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8H0.png"	}
+brightmap sprite U1G8I0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8I0.png"	}
+brightmap sprite U1G8J0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8J0.png"	}
+brightmap sprite U1G8K0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8K0.png"	}
+brightmap sprite U1G8L0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8L0.png"	}
+brightmap sprite U1G8M0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8M0.png"	}
+brightmap sprite U1G8N0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8N0.png"	}
+brightmap sprite U1G8O0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8O0.png"	}
+brightmap sprite U1G8P0	{	map "Sprites/Weapons/SniperRifle/U1/brightmaps/B1G8P0.png"	}
+
 // UT99 Impact Hammer
 brightmap sprite U9G1A0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
 brightmap sprite U9G1B0	{	map "Sprites/Weapons/ImpactHammer/UT99/brightmaps/U9B1A0.png"	}
@@ -425,6 +443,24 @@ brightmap sprite U3GDP0	{	map "Sprites/Weapons/PulseGun/UT2003/brightmaps/B3GDA0
 brightmap sprite U3GDQ0	{	map "Sprites/Weapons/PulseGun/UT2003/brightmaps/B3GDA0.png"	}
 brightmap sprite U3GDR0	{	map "Sprites/Weapons/PulseGun/UT2003/brightmaps/B3GDA0.png"	}
 
+// UT2003 Sniper Rifle (Lightning Gun)
+brightmap sprite U3G8A0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8A0.png"	}
+brightmap sprite U3G8B0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8B0.png"	}
+brightmap sprite U3G8C0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8C0.png"	}
+brightmap sprite U3G8D0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8D0.png"	}
+brightmap sprite U3G8E0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8E0.png"	}
+brightmap sprite U3G8F0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8F0.png"	}
+brightmap sprite U3G8G0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8G0.png"	}
+brightmap sprite U3G8H0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8H0.png"	}
+brightmap sprite U3G8I0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8I0.png"	}
+brightmap sprite U3G8J0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8J0.png"	}
+brightmap sprite U3G8K0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8K0.png"	}
+brightmap sprite U3G8L0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8L0.png"	}
+brightmap sprite U3G8M0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8M0.png"	}
+brightmap sprite U3G8N0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8N0.png"	}
+brightmap sprite U3G8O0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8O0.png"	}
+brightmap sprite U3G8P0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8P0.png"	}
+
 // UT2004 Shield Gun
 brightmap sprite U4G1A0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1A0.png"	}
 brightmap sprite U4G1B0	{	map "Sprites/Weapons/ImpactHammer/UT2004/brightmaps/U4B1B0.png"	}
@@ -560,14 +596,19 @@ brightmap sprite U4G7D0	{	map "Sprites/Weapons/ShockRifle/UT2004/brightmaps/B4G7
 brightmap sprite U4G7E0	{	map "Sprites/Weapons/ShockRifle/UT2004/brightmaps/B4G7E0.png"	}
 
 // UT2004 Sniper Rifle
-brightmap sprite UTSPA0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPA0.png"	}
-brightmap sprite UTSPB0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPB0.png"	}
-brightmap sprite UTSPC0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPC0.png"	}
-brightmap sprite UTSPD0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPD0.png"	}
-brightmap sprite UTSPE0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPE0.png"	}
-brightmap sprite UTSPF0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPF0.png"	}
-brightmap sprite UTSPG0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPG0.png"	}
-brightmap sprite UTSPH0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPH0.png"	}
-brightmap sprite UTSPI0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPI0.png"	}
-brightmap sprite UTSPJ0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPJ0.png"	}
-brightmap sprite UTSPK0	{	map "Sprites/Weapons/SniperRifle/brightmaps/UBSPK0.png"	}
+brightmap sprite U4G8A0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8A0.png"	}
+brightmap sprite U4G8B0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8B0.png"	}
+brightmap sprite U4G8C0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8C0.png"	}
+brightmap sprite U4G8D0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8D0.png"	}
+brightmap sprite U4G8E0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8E0.png"	}
+brightmap sprite U4G8F0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8F0.png"	}
+brightmap sprite U4G8G0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8G0.png"	}
+brightmap sprite U4G8H0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8H0.png"	}
+brightmap sprite U4G8I0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8I0.png"	}
+brightmap sprite U4G8J0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8J0.png"	}
+brightmap sprite U4G8K0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8K0.png"	}
+brightmap sprite U4G8L0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8L0.png"	}
+brightmap sprite U4G8M0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8M0.png"	}
+brightmap sprite U4G8N0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8N0.png"	}
+brightmap sprite U4G8O0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8O0.png"	}
+brightmap sprite U4G8P0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8P0.png"	}
