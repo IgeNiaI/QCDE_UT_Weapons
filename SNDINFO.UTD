@@ -285,17 +285,38 @@ $limit "UTDE/Weapons/RocketLauncher/Fly" 5
 
 //********************
 // Shock Rifle
-UTDE/Weapons/ShockRifle/Fire					"Sounds/Weapons/SR_Fire.wav"
-UTDE/Weapons/ShockRifle/Quad/Fire				"Sounds/Weapons/Quad/SR_Fire.wav"
-UTDE/Weapons/ShockRifle/AltFire					"Sounds/Weapons/SR_Fire_Alt.wav"
-UTDE/Weapons/ShockRifle/Quad/AltFire			"Sounds/Weapons/Quad/SR_Fire_Alt.wav"
-UTDE/Weapons/ShockRifle/OrbFly					"Sounds/Weapons/SR_Orb_Fly.wav"
-UTDE/Weapons/ShockRifle/OrbHit					"Sounds/Weapons/SR_Orb_Hit.wav"
-UTDE/Weapons/ShockRifle/OrbExplo				"Sounds/Weapons/SR_Orb_Explo.wav"
+UTDE/Weapons/ShockRifle/Fire_UT2004				"Sounds/Weapons/ShockRifle/UT2004/SR_Fire.wav"
+UTDE/Weapons/ShockRifle/Quad/Fire_UT2004		"Sounds/Weapons/ShockRifle/UT2004/Quad/SR_Fire.wav"
+UTDE/Weapons/ShockRifle/AltFire_UT2004			"Sounds/Weapons/ShockRifle/UT2004/SR_Fire_Alt.wav"
+UTDE/Weapons/ShockRifle/Quad/AltFire_UT2004		"Sounds/Weapons/ShockRifle/UT2004/Quad/SR_Fire_Alt.wav"
 
-$volume "UTDE/Weapons/ShockRifle/Fire"		0.70
-$volume "UTDE/Weapons/ShockRifle/Quad/Fire"	0.70
+$volume "UTDE/Weapons/ShockRifle/Fire_UT2004"			0.70
+$volume "UTDE/Weapons/ShockRifle/Quad/Fire_UT2004"		0.70
+$volume "UTDE/Weapons/ShockRifle/AltFire_UT2004"		0.70
+$volume "UTDE/Weapons/ShockRifle/Quad/AltFire_UT2004"	0.70
 
+
+UTDE/Weapons/ShockRifle/Fire_UT99				"Sounds/Weapons/ShockRifle/UT99/SR_Fire.wav"
+UTDE/Weapons/ShockRifle/Quad/Fire_UT99			"Sounds/Weapons/ShockRifle/UT99/Quad/SR_Fire.wav"
+UTDE/Weapons/ShockRifle/AltFire_UT99			"Sounds/Weapons/ShockRifle/UT99/SR_Fire_Alt.wav"
+UTDE/Weapons/ShockRifle/Quad/AltFire_UT99		"Sounds/Weapons/ShockRifle/UT99/Quad/SR_Fire_Alt.wav"
+
+$volume "UTDE/Weapons/ShockRifle/Fire_UT99"			0.70
+$volume "UTDE/Weapons/ShockRifle/Quad/Fire_UT99"	0.70
+
+
+UTDE/Weapons/ShockRifle/Fire_U1					"Sounds/Weapons/ShockRifle/U1/SR_Fire.wav"
+UTDE/Weapons/ShockRifle/Quad/Fire_U1			"Sounds/Weapons/ShockRifle/U1/Quad/SR_Fire.wav"
+UTDE/Weapons/ShockRifle/AltFire_U1				"Sounds/Weapons/ShockRifle/U1/SR_Fire_Alt.wav"
+UTDE/Weapons/ShockRifle/Quad/AltFire_U1			"Sounds/Weapons/ShockRifle/U1/Quad/SR_Fire_Alt.wav"
+
+$volume "UTDE/Weapons/ShockRifle/Fire_U1"			0.70
+$volume "UTDE/Weapons/ShockRifle/Quad/Fire_U1"		0.70
+
+
+UTDE/Weapons/ShockRifle/OrbFly					"Sounds/Weapons/ShockRifle/SR_Orb_Fly.wav"
+UTDE/Weapons/ShockRifle/OrbHit					"Sounds/Weapons/ShockRifle/SR_Orb_Hit.wav"
+UTDE/Weapons/ShockRifle/OrbExplo				"Sounds/Weapons/ShockRifle/SR_Orb_Explo.wav"
 
 //********************
 // Sniper Rifle
