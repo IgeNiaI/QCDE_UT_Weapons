@@ -9,7 +9,7 @@ U9G5Y = "Voxels/Weapons/SP/RipperSP.kvx" 			{Spin=50} // Ripper
 U4G6Y = "Voxels/Weapons/SP/RocketLauncherSP.kvx" 	{Spin=50} // Rocket Launcher
 U4G7Y = "Voxels/Weapons/SP/ShockRifleSP.kvx" 		{Spin=50} // Shock Rifle
 U4G8Y = "Voxels/Weapons/SP/SniperRifleSP.kvx" 		{Spin=50} // Sniper Rifle
-UTRDY = "Voxels/Weapons/SP/RedeemerSP.kvx" 			{Spin=50} // Redeemer
+U9G9Y = "Voxels/Weapons/SP/RedeemerSP.kvx" 			{Spin=50} // Redeemer
 
 //Weapons MP
 
@@ -20,7 +20,7 @@ U4GEZ = "Voxels/Weapons/MP/BioRifleMP.kvx" 			{Spin=50} // Bio Rifle
 U4G6Z = "Voxels/Weapons/MP/RocketLauncherMP.kvx" 	{Spin=50} // Rocket Launcher
 U4G7Z = "Voxels/Weapons/MP/ShockRifleMP.kvx" 		{Spin=50} // Shock Rifle
 U4G8Z = "Voxels/Weapons/MP/SniperRifleMP.kvx" 		{Spin=50} // Sniper Rifle
-UTRDZ = "Voxels/Weapons/MP/RedeemerMP.kvx" 			{Spin=50} // Redeemer
+U9G9Z = "Voxels/Weapons/MP/RedeemerMP.kvx" 			{Spin=50} // Redeemer
 
 //Ammo Pickups
 
