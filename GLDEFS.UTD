@@ -399,14 +399,14 @@ brightmap sprite U9G7D0	{	map "Sprites/Weapons/ShockRifle/UT99/brightmaps/B9G7D0
 brightmap sprite U9G7E0	{	map "Sprites/Weapons/ShockRifle/UT99/brightmaps/B9G7E0.png"	}
 
 // UT99 Redeemer
-brightmap sprite UTRDA0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDA0.png"	}
-brightmap sprite UTRDB0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDB0.png"	}
-brightmap sprite UTRDC0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDC0.png"	}
-brightmap sprite UTRDD0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDD0.png"	}
-brightmap sprite UTRDE0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDE0.png"	}
-brightmap sprite UTRDF0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDF0.png"	}
-brightmap sprite UTRDG0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDG0.png"	}
-brightmap sprite UTRDH0	{	map "Sprites/Weapons/Redeemer/brightmaps/UBRDH0.png"	}
+brightmap sprite U9G9A0	{	map "Sprites/Weapons/Redeemer/UT99/brightmaps/B9G9A0.png"	}
+brightmap sprite U9G9B0	{	map "Sprites/Weapons/Redeemer/UT99/brightmaps/B9G9B0.png"	}
+brightmap sprite U9G9C0	{	map "Sprites/Weapons/Redeemer/UT99/brightmaps/B9G9C0.png"	}
+brightmap sprite U9G9D0	{	map "Sprites/Weapons/Redeemer/UT99/brightmaps/B9G9D0.png"	}
+brightmap sprite U9G9E0	{	map "Sprites/Weapons/Redeemer/UT99/brightmaps/B9G9E0.png"	}
+brightmap sprite U9G9F0	{	map "Sprites/Weapons/Redeemer/UT99/brightmaps/B9G9F0.png"	}
+brightmap sprite U9G9G0	{	map "Sprites/Weapons/Redeemer/UT99/brightmaps/B9G9G0.png"	}
+brightmap sprite U9G9H0	{	map "Sprites/Weapons/Redeemer/UT99/brightmaps/B9G9H0.png"	}
 
 // UT2003 Assault Rifle
 brightmap sprite U3G2A0	{	map "Sprites/Weapons/Enforcer/UT2003/brightmaps/U3B2A0.png"	}
@@ -612,3 +612,13 @@ brightmap sprite U4G8M0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G
 brightmap sprite U4G8N0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8N0.png"	}
 brightmap sprite U4G8O0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8O0.png"	}
 brightmap sprite U4G8P0	{	map "Sprites/Weapons/SniperRifle/UT2004/brightmaps/B4G8P0.png"	}
+
+// UT2004 Redeemer
+brightmap sprite U4G9A0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9A0.png"	}
+brightmap sprite U4G9B0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9B0.png"	}
+brightmap sprite U4G9C0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9C0.png"	}
+brightmap sprite U4G9D0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9D0.png"	}
+brightmap sprite U4G9E0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9E0.png"	}
+brightmap sprite U4G9F0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9F0.png"	}
+brightmap sprite U4G9G0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9G0.png"	}
+brightmap sprite U4G9H0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9H0.png"	}

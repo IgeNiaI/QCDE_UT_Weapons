@@ -355,10 +355,16 @@ UTDE/Weapons/SniperRifle/ZoomOut			"Sounds/Weapons/SniperRifle/SP_ZoomOut.wav"
 
 //********************
 // Redeemer
-UTDE/Weapons/Redeemer/Fire						"Sounds/Weapons/RD_Fire.wav"
-UTDE/Weapons/Redeemer/Quad/Fire					"Sounds/Weapons/Quad/RD_Fire.wav"
-UTDE/Weapons/Redeemer/Fly						"Sounds/Weapons/RD_Fly.wav"
-UTDE/Weapons/Redeemer/RocketExplo				"Sounds/Weapons/RD_Explo.wav"
+UTDE/Weapons/Redeemer/Fire_UT99				"Sounds/Weapons/Redeemer/UT99/RD_Fire.wav"
+UTDE/Weapons/Redeemer/Quad/Fire_UT99		"Sounds/Weapons/Redeemer/UT99/Quad/RD_Fire.wav"
+
+
+UTDE/Weapons/Redeemer/Fire_UT2004			"Sounds/Weapons/Redeemer/UT2004/RD_Fire.wav"
+UTDE/Weapons/Redeemer/Quad/Fire_UT2004		"Sounds/Weapons/Redeemer/UT2004/Quad/RD_Fire.wav"
+
+
+UTDE/Weapons/Redeemer/Fly					"Sounds/Weapons/Redeemer/RD_Fly.wav"
+UTDE/Weapons/Redeemer/RocketExplo			"Sounds/Weapons/Redeemer/RD_Explo.wav"
 
 $attenuation UTDE/Weapons/Redeemer/RocketExplo 0.25
 $rolloff "UTDE/Weapons/Redeemer/Fly" 512 2048
