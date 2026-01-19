@@ -376,6 +376,7 @@ function void reReadWeaponCvars(void)
 		SetInventory("UTRocketLauncherSkin",GetCVar("cl_UTRLskin"		) >= 0 ? GetCVar("cl_UTRLskin"	) : classSkin);
 		SetInventory("UTShockRifleSkin",	GetCVar("cl_UTSRskin"		) >= 0 ? GetCVar("cl_UTSRskin"	) : classSkin);
 		SetInventory("UTSniperRifleSkin",	GetCVar("cl_UTSPskin"		) >= 0 ? GetCVar("cl_UTSPskin"	) : classSkin);
+		SetInventory("UTRedeemerSkin",		GetCVar("cl_UTRDskin"		) >= 0 ? GetCVar("cl_UTRDskin"	) : classSkin);
 	}
 	else
 	{
@@ -390,6 +391,7 @@ function void reReadWeaponCvars(void)
 		//SetInventory("UTRocketLauncherSkin",		classSkin);
 		//SetInventory("UTShockRifleSkin",			classSkin);
 		//SetInventory("UTSniperRifleSkin",			classSkin);
+		//SetInventory("UTRedeemerSkin",			classSkin);
 	}
 }
 
