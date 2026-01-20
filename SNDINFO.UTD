@@ -57,6 +57,9 @@ UTDE/Weapons/Enforcer/Quad/Fire_UT2003		"Sounds/Weapons/Enforcer/UT2003/Quad/EN_
 UTDE/Weapons/Enforcer/Fire_UT2004			"Sounds/Weapons/Enforcer/UT2004/EN_Fire.wav"
 UTDE/Weapons/Enforcer/Quad/Fire_UT2004		"Sounds/Weapons/Enforcer/UT2004/Quad/EN_Fire.wav"
 
+UTDE/Weapons/Enforcer/Fire_UC2				"Sounds/Weapons/Enforcer/UC2/EN_Fire.wav"
+UTDE/Weapons/Enforcer/Quad/Fire_UC2			"Sounds/Weapons/Enforcer/UC2/Quad/EN_Fire.wav"
+
 UTDE/Weapons/Enforcer/Fire_UT99				"Sounds/Weapons/Enforcer/UT99/EN_Fire.wav"
 UTDE/Weapons/Enforcer/Quad/Fire_UT99		"Sounds/Weapons/Enforcer/UT99/Quad/EN_Fire.wav"
 
