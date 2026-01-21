@@ -622,3 +622,22 @@ brightmap sprite U4G9E0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9E0
 brightmap sprite U4G9F0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9F0.png"	}
 brightmap sprite U4G9G0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9G0.png"	}
 brightmap sprite U4G9H0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9H0.png"	}
+
+// UC2 Minigun
+brightmap sprite U6GBA0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBA0.png"	}
+brightmap sprite U6GBB0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBB0.png"	}
+brightmap sprite U6GBC0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBC0.png"	}
+brightmap sprite U6GBD0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBD0.png"	}
+brightmap sprite U6GBE0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBE0.png"	}
+brightmap sprite U6GBF0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBF0.png"	}
+brightmap sprite U6GBG0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBG0.png"	}
+brightmap sprite U6GBH0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBH0.png"	}
+brightmap sprite U6GBI0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBI0.png"	}
+brightmap sprite U6GBJ0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBJ0.png"	}
+brightmap sprite U6GBK0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBK0.png"	}
+brightmap sprite U6GBL0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBL0.png"	}
+brightmap sprite U6GBM0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBM0.png"	}
+brightmap sprite U6GBN0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBN0.png"	}
+brightmap sprite U6GBO0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBO0.png"	}
+brightmap sprite U6GBP0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBP0.png"	}
+brightmap sprite U6GBQ0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBQ0.png"	}
