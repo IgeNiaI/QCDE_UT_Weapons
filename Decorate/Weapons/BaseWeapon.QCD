@@ -229,6 +229,21 @@ Actor QCBulletPuff
 	}
 }
 
+Actor QCBulletPuff_UC2 : QCBulletPuff
+{
+	States
+	{
+	Type1:
+		FX59 ABCD 1 Bright
+		FX59 EFGHIJ 2 Bright
+		Stop
+	Type2:
+		FX59 KLMN 1 Bright
+		FX59 OPQRST 2 Bright
+		Stop
+	}
+}
+
 Actor QCBulletStrongPuff : QCBulletPuff
 {
 	States
@@ -239,6 +254,21 @@ Actor QCBulletStrongPuff : QCBulletPuff
 	XDeath: //hit bleeding actor
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
 		TNT1 A 10 A_PlaySound("BulletHitFleshRandom",CHAN_7,0.6,0,9)
+		Stop
+	}
+}
+
+Actor QCBulletStrongPuff_UC2 : QCBulletStrongPuff
+{
+	States
+	{
+	Type1:
+		FX59 ABCD 1 Bright
+		FX59 EFGHIJ 2 Bright
+		Stop
+	Type2:
+		FX59 KLMN 1 Bright
+		FX59 OPQRST 2 Bright
 		Stop
 	}
 }
@@ -266,6 +296,22 @@ Actor QCBulletPuff_DM : QCBulletPuff
 		Goto Crash
 	}
 }
+
+Actor QCBulletPuff_DM_UC2 : QCBulletPuff_DM
+{
+	States
+	{
+	Type1:
+		FX59 ABCD 1 Bright
+		FX59 EFGHIJ 2 Bright
+		Stop
+	Type2:
+		FX59 KLMN 1 Bright
+		FX59 OPQRST 2 Bright
+		Stop
+	}
+}
+
 Actor QCShotgunPuff_DM : QCBulletPuff
 {
 	-MTHRUSPECIES
