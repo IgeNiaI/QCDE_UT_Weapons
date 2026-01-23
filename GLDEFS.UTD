@@ -15,15 +15,15 @@ brightmap sprite U1G2L0	{	map "Sprites/Weapons/Enforcer/U1/brightmaps/U1B2L0.png
 brightmap sprite U1G2M0	{	map "Sprites/Weapons/Enforcer/U1/brightmaps/U1B2M0.png"	}
 
 // Unreal 1 Dispersion Pistol
-brightmap sprite UTDPA0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPA0.png"	}
-brightmap sprite UTDPB0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPA0.png"	}
-brightmap sprite UTDPC0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPA0.png"	}
-brightmap sprite UTDPD0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPD0.png"	}
-brightmap sprite UTDPE0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPD0.png"	}
-brightmap sprite UTDPF0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPD0.png"	}
-brightmap sprite UTDPG0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPG0.png"	}
-brightmap sprite UTDPH0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPG0.png"	}
-brightmap sprite UTDPI0	{	map "Sprites/Weapons/DispersionPistol/brightmaps/UBDPG0.png"	}
+brightmap sprite U1GGA0	{	map "Sprites/Weapons/DispersionPistol/U1/brightmaps/B1GGA0.png"	}
+brightmap sprite U1GGB0	{	map "Sprites/Weapons/DispersionPistol/U1/brightmaps/B1GGA0.png"	}
+brightmap sprite U1GGC0	{	map "Sprites/Weapons/DispersionPistol/U1/brightmaps/B1GGA0.png"	}
+brightmap sprite U1GGD0	{	map "Sprites/Weapons/DispersionPistol/U1/brightmaps/B1GGD0.png"	}
+brightmap sprite U1GGE0	{	map "Sprites/Weapons/DispersionPistol/U1/brightmaps/B1GGD0.png"	}
+brightmap sprite U1GGF0	{	map "Sprites/Weapons/DispersionPistol/U1/brightmaps/B1GGD0.png"	}
+brightmap sprite U1GGG0	{	map "Sprites/Weapons/DispersionPistol/U1/brightmaps/B1GGG0.png"	}
+brightmap sprite U1GGH0	{	map "Sprites/Weapons/DispersionPistol/U1/brightmaps/B1GGG0.png"	}
+brightmap sprite U1GGI0	{	map "Sprites/Weapons/DispersionPistol/U1/brightmaps/B1GGG0.png"	}
 
 // Unreal 1 Minigun
 brightmap sprite U1GBA0	{	map "Sprites/Weapons/Minigun/U1/brightmaps/B1GBA0.png"	}
