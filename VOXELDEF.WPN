@@ -1,7 +1,7 @@
 
 //Weapons SP
 
-UTDPY = "Voxels/Weapons/SP/DisprSP.kvx" 			{Spin=50} // Dispersion Pistol
+U1GGY = "Voxels/Weapons/SP/DisprSP.kvx" 			{Spin=50} // Dispersion Pistol
 U4GBY = "Voxels/Weapons/SP/MinigunSP.kvx" 			{Spin=50} // Minigun
 U4GCY = "Voxels/Weapons/SP/FlakCannonSP.kvx"		{Spin=50} // Flak Cannon
 U9GDY = "Voxels/Weapons/SP/PulseRifleSP.kvx" 		{Spin=50} // Pulse Rifle
