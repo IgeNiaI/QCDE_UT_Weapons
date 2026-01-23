@@ -365,24 +365,26 @@ function void reReadWeaponCvars(void)
 	// Weapon skins
 	if(!PlayerIsBot(PlayerNumber()))
 	{
-		SetInventory("UTImpactHammerSkin",	GetCVar("cl_UTIHskin"		) >= 0 ? GetCVar("cl_UTIHskin"	) : classSkin);
-		SetInventory("UTEnforcerSkin",		GetCVar("cl_UTENskin"		) >= 0 ? GetCVar("cl_UTENskin"	) : classSkin);
-		SetInventory("UTMinigunSkin",		GetCVar("cl_UTMGskin"		) >= 0 ? GetCVar("cl_UTMGskin"	) : classSkin);
-		SetInventory("UTFlakMiniSkin",		GetCVar("cl_UTFMskin"		) >= 0 ? GetCVar("cl_UTFMskin"	) : classSkin);
-		SetInventory("UTFlakSkin",			GetCVar("cl_UTFLskin"		) >= 0 ? GetCVar("cl_UTFLskin"	) : classSkin);
-		SetInventory("UTPulseGunSkin",		GetCVar("cl_UTPGskin"		) >= 0 ? GetCVar("cl_UTPGskin"	) : classSkin);
-		SetInventory("UTRipperSkin",		GetCVar("cl_UTRPskin"		) >= 0 ? GetCVar("cl_UTRPskin"	) : classSkin);
-		SetInventory("UTBioRifleSkin",		GetCVar("cl_UTBRskin"		) >= 0 ? GetCVar("cl_UTBRskin"	) : classSkin);
-		SetInventory("UTRocketLauncherSkin",GetCVar("cl_UTRLskin"		) >= 0 ? GetCVar("cl_UTRLskin"	) : classSkin);
-		SetInventory("UTShockRifleSkin",	GetCVar("cl_UTSRskin"		) >= 0 ? GetCVar("cl_UTSRskin"	) : classSkin);
-		SetInventory("UTSniperRifleSkin",	GetCVar("cl_UTSPskin"		) >= 0 ? GetCVar("cl_UTSPskin"	) : classSkin);
-		SetInventory("UTRedeemerSkin",		GetCVar("cl_UTRDskin"		) >= 0 ? GetCVar("cl_UTRDskin"	) : classSkin);
+		SetInventory("UTImpactHammerSkin",		GetCVar("cl_UTIHskin"		) >= 0 ? GetCVar("cl_UTIHskin"	) : classSkin);
+		SetInventory("UTEnforcerSkin",			GetCVar("cl_UTENskin"		) >= 0 ? GetCVar("cl_UTENskin"	) : classSkin);
+		SetInventory("UTMinigunSkin",			GetCVar("cl_UTMGskin"		) >= 0 ? GetCVar("cl_UTMGskin"	) : classSkin);
+		SetInventory("UTDispersionPistolSkin",	GetCVar("cl_UTDPskin"		) >= 0 ? GetCVar("cl_UTDPskin"	) : classSkin);
+		SetInventory("UTFlakMiniSkin",			GetCVar("cl_UTFMskin"		) >= 0 ? GetCVar("cl_UTFMskin"	) : classSkin);
+		SetInventory("UTFlakSkin",				GetCVar("cl_UTFLskin"		) >= 0 ? GetCVar("cl_UTFLskin"	) : classSkin);
+		SetInventory("UTPulseGunSkin",			GetCVar("cl_UTPGskin"		) >= 0 ? GetCVar("cl_UTPGskin"	) : classSkin);
+		SetInventory("UTRipperSkin",			GetCVar("cl_UTRPskin"		) >= 0 ? GetCVar("cl_UTRPskin"	) : classSkin);
+		SetInventory("UTBioRifleSkin",			GetCVar("cl_UTBRskin"		) >= 0 ? GetCVar("cl_UTBRskin"	) : classSkin);
+		SetInventory("UTRocketLauncherSkin",	GetCVar("cl_UTRLskin"		) >= 0 ? GetCVar("cl_UTRLskin"	) : classSkin);
+		SetInventory("UTShockRifleSkin",		GetCVar("cl_UTSRskin"		) >= 0 ? GetCVar("cl_UTSRskin"	) : classSkin);
+		SetInventory("UTSniperRifleSkin",		GetCVar("cl_UTSPskin"		) >= 0 ? GetCVar("cl_UTSPskin"	) : classSkin);
+		SetInventory("UTRedeemerSkin",			GetCVar("cl_UTRDskin"		) >= 0 ? GetCVar("cl_UTRDskin"	) : classSkin);
 	}
 	else
 	{
 		//SetInventory("UTImpactHammerSkin",		classSkin);
 		//SetInventory("UTEnforcerSkin",			classSkin);
 		//SetInventory("UTMinigunSkin",				classSkin);
+		//SetInventory("UTDispersionPistolSkin",	classSkin);
 		//SetInventory("UTFlakMiniSkin",			classSkin);
 		//SetInventory("UTFlakSkin",				classSkin);
 		//SetInventory("UTPulseGunSkin",			classSkin);

@@ -101,9 +101,14 @@ UTDE/Weapons/Minigun/FireEnd_UC2						"Sounds/Weapons/Minigun/UC2/MG_End.wav"
 
 //********************
 // Dispersion Pistol
-UTDE/Weapons/Dispr/Fire							"Sounds/Weapons/DP_Fire.wav"
-UTDE/Weapons/Dispr/Quad/Fire					"Sounds/Weapons/Quad/DP_Fire.wav"
-UTDE/Weapons/Dispr/Impact						"Sounds/Weapons/DP_Impact.wav"
+UTDE/Weapons/Dispr/Fire_U1						"Sounds/Weapons/DispersionPistol/U1/DP_Fire.wav"
+UTDE/Weapons/Dispr/Quad/Fire_U1					"Sounds/Weapons/DispersionPistol/U1/Quad/DP_Fire.wav"
+
+UTDE/Weapons/Dispr/Fire_UC2						"Sounds/Weapons/DispersionPistol/UC2/DP_Fire.wav"
+UTDE/Weapons/Dispr/Quad/Fire_UC2				"Sounds/Weapons/DispersionPistol/UC2/Quad/DP_Fire.wav"
+
+
+UTDE/Weapons/Dispr/Impact						"Sounds/Weapons/DispersionPistol/DP_Impact.wav"
 
 
 //********************
