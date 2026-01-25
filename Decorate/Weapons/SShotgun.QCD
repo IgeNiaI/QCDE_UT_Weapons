@@ -191,9 +191,13 @@ Actor QCSuperShotgun : QCWeapon
 	//-----------------------
 	Select:
 		TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 9, "Select.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 6, "Select.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 4, "Select.UT2004")
 	Select.UT2004:
 		U4GC A 0
+		Goto SelectCont
+	Select.UC2:
+		U6GC A 0
 		Goto SelectCont
 	Select.UT99:
 		U9GC A 0
@@ -222,9 +226,13 @@ Actor QCSuperShotgun : QCWeapon
 	//-----------------------
 	Ready:
 		TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 9, "Ready.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 6, "Ready.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 4, "Ready.UT2004")
 	Ready.UT2004:
 		U4GC A 0
+		Goto ReadyCont
+	Ready.UC2:
+		U6GC A 0
 		Goto ReadyCont
 	Ready.UT99:
 		U9GC A 0
@@ -295,9 +303,13 @@ Actor QCSuperShotgun : QCWeapon
 
 		NormalSound:
 			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 9, "NormalSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 6, "NormalSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 4, "NormalSound.UT2004")
 		NormalSound.UT2004:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Fire_UT2004",CHAN_WEAPON)
+			Goto FlashEnder
+		NormalSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Fire_UC2",CHAN_WEAPON)
 			Goto FlashEnder
 		NormalSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Fire_UT99",CHAN_WEAPON)
@@ -305,9 +317,13 @@ Actor QCSuperShotgun : QCWeapon
 
 		QuadSound:
 			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 9, "QuadSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 6, "QuadSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 4, "QuadSound.UT2004")
 		QuadSound.UT2004:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Quad/Fire_UT2004",CHAN_WEAPON)
+			Goto FlashEnder
+		QuadSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Quad/Fire_UC2",CHAN_WEAPON)
 			Goto FlashEnder
 		QuadSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Quad/Fire_UT99",CHAN_WEAPON)
@@ -380,9 +396,13 @@ Actor QCSuperShotgun : QCWeapon
 
 		AltNormalSound:
 			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 9, "AltNormalSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 6, "AltNormalSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 4, "AltNormalSound.UT2004")
 		AltNormalSound.UT2004:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/AltFire_UT2004",CHAN_WEAPON)
+			Goto FlashEnder
+		AltNormalSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/AltFire_UC2",CHAN_WEAPON)
 			Goto FlashEnder
 		AltNormalSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/AltFire_UT99",CHAN_WEAPON)
@@ -390,9 +410,13 @@ Actor QCSuperShotgun : QCWeapon
 
 		AltQuadSound:
 			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 9, "AltQuadSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 6, "AltQuadSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTFlakSkin", 4, "AltQuadSound.UT2004")
 		AltQuadSound.UT2004:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Quad/AltFire_UT2004",CHAN_WEAPON)
+			Goto FlashEnder
+		AltQuadSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Quad/AltFire_UC2",CHAN_WEAPON)
 			Goto FlashEnder
 		AltQuadSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Flak/Quad/AltFire_UT99",CHAN_WEAPON)

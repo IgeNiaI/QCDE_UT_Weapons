@@ -127,6 +127,11 @@ UTDE/Weapons/Flak/Quad/Fire_UT2004				"Sounds/Weapons/FlakCannon/UT2004/Quad/FL_
 UTDE/Weapons/Flak/AltFire_UT2004				"Sounds/Weapons/FlakCannon/UT2004/FL_Fire_Alt.wav"
 UTDE/Weapons/Flak/Quad/AltFire_UT2004			"Sounds/Weapons/FlakCannon/UT2004/Quad/FL_Fire_Alt.wav"
 
+UTDE/Weapons/Flak/Fire_UC2						"Sounds/Weapons/FlakCannon/UC2/FL_Fire.wav"
+UTDE/Weapons/Flak/Quad/Fire_UC2					"Sounds/Weapons/FlakCannon/UC2/Quad/FL_Fire.wav"
+UTDE/Weapons/Flak/AltFire_UC2					"Sounds/Weapons/FlakCannon/UC2/FL_Fire_Alt.wav"
+UTDE/Weapons/Flak/Quad/AltFire_UC2				"Sounds/Weapons/FlakCannon/UC2/Quad/FL_Fire_Alt.wav"
+
 UTDE/Weapons/Flak/Fire_UT99						"Sounds/Weapons/FlakCannon/UT99/FL_Fire.wav"
 UTDE/Weapons/Flak/Quad/Fire_UT99				"Sounds/Weapons/FlakCannon/UT99/Quad/FL_Fire.wav"
 UTDE/Weapons/Flak/AltFire_UT99					"Sounds/Weapons/FlakCannon/UT99/FL_Fire_Alt.wav"
