@@ -148,8 +148,11 @@ UTDE/Weapons/Flak/Bounce3						"Sounds/Weapons/FlakCannon/FL_Bounce3.wav"
 
 //********************
 // Link Gun
-UTDE/Weapons/LinkGun/Fire						"Sounds/Weapons/LG_Fire.wav"
-UTDE/Weapons/LinkGun/Quad/Fire					"Sounds/Weapons/Quad/LG_Fire.wav"
+UTDE/Weapons/LinkGun/Fire_UT2004				"Sounds/Weapons/LinkGun/UT2004/LG_Fire.wav"
+UTDE/Weapons/LinkGun/Quad/Fire_UT2004			"Sounds/Weapons/LinkGun/UT2004/Quad/LG_Fire.wav"
+
+UTDE/Weapons/LinkGun/Fire_UC2					"Sounds/Weapons/LinkGun/UC2/LG_Fire.wav"
+UTDE/Weapons/LinkGun/Quad/Fire_UC2				"Sounds/Weapons/LinkGun/UC2/Quad/LG_Fire.wav"
 
 
 //********************
