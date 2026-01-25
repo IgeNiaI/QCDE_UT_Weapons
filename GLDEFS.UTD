@@ -503,20 +503,20 @@ brightmap sprite U4G2L0	{	map "Sprites/Weapons/Enforcer/UT2004/brightmaps/U4B2A0
 brightmap sprite U4G2M0	{	map "Sprites/Weapons/Enforcer/UT2004/brightmaps/U4B2A0.png"	}
 
 // UT2004 Link Gun
-brightmap sprite UTLGA0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGA0.png"	}
-brightmap sprite UTLGB0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGB0.png"	}
-brightmap sprite UTLGC0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGC0.png"	}
-brightmap sprite UTLGD0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGD0.png"	}
-brightmap sprite UTLGE0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGE0.png"	}
-brightmap sprite UTLGF0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGF0.png"	}
-brightmap sprite UTLGG0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGG0.png"	}
-brightmap sprite UTLGH0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGH0.png"	}
-brightmap sprite UTLGI0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGI0.png"	}
-brightmap sprite UTLGJ0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGJ0.png"	}
-brightmap sprite UTLGK0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGK0.png"	}
-brightmap sprite UTLGL0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGL0.png"	}
-brightmap sprite UTLGM0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGM0.png"	}
-brightmap sprite UTLGN0	{	map "Sprites/Weapons/LinkGun/brightmaps/UBLGN0.png"	}
+brightmap sprite U4G4A0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4A0.png"	}
+brightmap sprite U4G4B0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4B0.png"	}
+brightmap sprite U4G4C0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4C0.png"	}
+brightmap sprite U4G4D0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4D0.png"	}
+brightmap sprite U4G4E0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4E0.png"	}
+brightmap sprite U4G4F0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4F0.png"	}
+brightmap sprite U4G4G0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4G0.png"	}
+brightmap sprite U4G4H0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4H0.png"	}
+brightmap sprite U4G4I0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4I0.png"	}
+brightmap sprite U4G4J0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4J0.png"	}
+brightmap sprite U4G4K0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4K0.png"	}
+brightmap sprite U4G4L0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4L0.png"	}
+brightmap sprite U4G4M0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4M0.png"	}
+brightmap sprite U4G4N0	{	map "Sprites/Weapons/LinkGun/UT2004/brightmaps/B4G4N0.png"	}
 
 // UT2004 Bio Rifle
 brightmap sprite U4GEA0	{	map "Sprites/Weapons/BioRifle/UT2004/brightmaps/B4GEA0.png"	}
