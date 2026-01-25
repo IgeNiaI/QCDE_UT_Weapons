@@ -11,7 +11,7 @@ FreeformMenu "QCDE_OptionsSkins"
 	NoBackButton
 	TopPadding 40
 	DefaultSelection -2
-	//OverrideHeight 320
+	OverrideHeight 350
 
 	Label {
 		Static
@@ -20,10 +20,218 @@ FreeformMenu "QCDE_OptionsSkins"
 		Size	450, 500
 	}
 
+
+	Option {
+		Pos		-192, 20			CVar		cl_UTENskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		ENskin				BackgroundValues	ENskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
 	Label {
-		Pos		0, 50			Font		SmallFont
-		Anchor	center, top		FontColor	DarkGray
-		Text	"UT weapons addon doesn't support weapon skins yet"
+		Pos		-156, 92			Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Enforcer"
+	}
+
+	Option {
+		Pos		-114, 20			CVar		cl_UTFMskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		FMskin				BackgroundValues	FMskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		-78, 92				Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Flak Mini"
+	}
+
+	Option {
+		Pos		-36, 20				CVar		cl_UTLGskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		LGskin				BackgroundValues	LGskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		0, 92				Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Link Gun"
+	}
+
+	Option {
+		Pos		42, 20				CVar		cl_UTBRskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		BRskin				BackgroundValues	BRskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		78, 92				Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Bio Rifle"
+	}
+
+	Option {
+		Pos		120, 20				CVar		cl_UTSRskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		SRskin				BackgroundValues	SRskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		156, 92				Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Shock Rifle"
+	}
+
+
+	Option {
+		Pos		-192, 110			CVar		cl_UTMGskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		MGskin				BackgroundValues	MGskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		-156, 182			Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Minigun"
+	}
+
+	Option {
+		Pos		-114, 110			CVar		cl_UTFLskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		FLskin				BackgroundValues	FLskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		-78, 182			Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Flak Cannon"
+	}
+
+	Option {
+		Pos		-36, 110			CVar		cl_UTPGskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		PGskin				BackgroundValues	PGskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		0, 182				Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Pulse Gun"
+	}
+
+	Option {
+		Pos		42, 110				CVar		cl_UTRLskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		RLskin				BackgroundValues	RLskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		78, 182				Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Rocket Launcher"
+	}
+
+	Option {
+		Pos		120, 110			CVar		cl_UTSPskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		SPskin				BackgroundValues	SPskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		156, 182			Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Sniper Rifle"
+	}
+
+
+	Option {
+		Pos		-192, 200			CVar		cl_UTIHskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		IHskin				BackgroundValues	IHskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		-156, 272			Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Impact Hammer"
+	}
+
+	Option {
+		Pos		-114, 200			CVar		cl_UTRDskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		RDskin				BackgroundValues	RDskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		-78, 272			Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Redeemer"
+	}
+
+	Option {
+		Pos		-36, 200			CVar		cl_UTDPskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		DPskin				BackgroundValues	DPskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		0, 272				Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Dispersion Pistol"
+	}
+
+	Option {
+		Pos		42, 200				CVar		cl_UTRPskin			UnknownBackground	SKINUNKN
+		Size	72, 72				Values		RPskin				BackgroundValues	RPskinBG
+		Anchor	left, top			Font		SmallFont			SelectedForeground	SKINSELC, 82, 77
+		Padding	2, 1				FontColor	DarkGray			SelectedFontColor	Gray
+	}
+	Label {
+		Pos		78, 272				Font		SmallFont
+		Anchor	center, top			FontColor	Gray
+		Text	"Ripper"
+	}
+
+
+	Command {
+		Pos		-156, 302		Text "Default"				Background			BV14028
+		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
+		Anchor 	center, center	FontColor Tan				Command utde_WeapSkins_Default
+		Padding	0, 0			SelectedFontColor Tan
+	}
+
+	Command {
+		Pos		-78, 302		Text "UT99"					Background			BV14028
+		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
+		Anchor 	center, center	FontColor Tan				Command utde_WeapSkins_UT99
+		Padding	0, 0			SelectedFontColor Tan
+	}
+
+	Command {
+		Pos		0, 302			Text "UT2004"				Background			BV14028
+		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
+		Anchor 	center, center	FontColor Tan				Command utde_WeapSkins_UT2004
+		Padding	0, 0			SelectedFontColor Tan
+	}
+
+	Command {
+		Pos		-156, 322		Text "Class Based"			Background			BV14028
+		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
+		Anchor	center, center	FontColor Tan				Command utde_WeapSkins_Class
+		Padding	0, 0			SelectedFontColor Tan
+	}
+
+	Command {
+		Pos		-78, 322		Text "Unreal 1"				Background			BV14028
+		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
+		Anchor	center, center	FontColor Tan				Command utde_WeapSkins_U1
+		Padding	0, 0			SelectedFontColor Tan
+	}
+
+	Command {
+		Pos		0, 322			Text "UT2003"				Background			BV14028
+		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
+		Anchor	center, center	FontColor Tan				Command utde_WeapSkins_UT2003
+		Padding	0, 0			SelectedFontColor Tan
 	}
 
 
@@ -134,4 +342,212 @@ OptionValue QCDE_Modifier
 	5, "Shocking Wars"
 	6, "Random Weapons"
 	7, "Custom Weapons"
+}
+
+OptionValue "IHskin"
+{
+	-1, "Class Based"
+	9, "UT99"
+	4, "UT2004"
+}
+
+OptionValue "IHskinBG"
+{
+	-1, "SKINUNKN"
+	9, "SKING1U9"
+	4, "SKING1U4"
+}
+
+OptionValue "ENskin"
+{
+	-1, "Class Based"
+	1, "Unreal 1"
+	9, "UT99"
+	3, "UT2003"
+	4, "UT2004"
+}
+
+OptionValue "ENskinBG"
+{
+	-1, "SKINUNKN"
+	1, "SKING2U1"
+	9, "SKING2U9"
+	3, "SKING2U3"
+	4, "SKING2U4"
+}
+
+OptionValue "MGskin"
+{
+	-1, "Class Based"
+	1, "Unreal 1"
+	9, "UT99"
+	4, "UT2004"
+}
+
+OptionValue "MGskinBG"
+{
+	-1, "SKINUNKN"
+	1, "SKINGBU1"
+	9, "SKINGBU9"
+	4, "SKINGBU4"
+}
+
+OptionValue "DPskin"
+{
+	-1, "Class Based"
+	1, "Unreal 1"
+}
+
+OptionValue "DPskinBG"
+{
+	-1, "SKINUNKN"
+	1, "SKINGGU1"
+}
+
+OptionValue "FMskin"
+{
+	-1, "Class Based"
+	1, "Unreal 1 Flak"
+	2, "Unreal 1 Stinger"
+}
+
+OptionValue "FMskinBG"
+{
+	-1, "SKINUNKN"
+	1, "SKING3U1"
+	2, "SKING3U2"
+}
+
+OptionValue "FLskin"
+{
+	-1, "Class Based"
+	9, "UT99"
+	4, "UT2004"
+}
+
+OptionValue "FLskinBG"
+{
+	-1, "SKINUNKN"
+	9, "SKINGCU9"
+	4, "SKINGCU4"
+}
+
+OptionValue "LGskin"
+{
+	-1, "Class Based"
+	4, "UT2004"
+}
+
+OptionValue "LGskinBG"
+{
+	-1, "SKINUNKN"
+	4, "SKING4U4"
+}
+
+OptionValue "PGskin"
+{
+	-1, "Class Based"
+	9, "UT99"
+	3, "UT2003"
+}
+
+OptionValue "PGskinBG"
+{
+	-1, "SKINUNKN"
+	9, "SKINGDU9"
+	3, "SKINGDU3"
+}
+
+OptionValue "RPskin"
+{
+	-1, "Class Based"
+	1, "Unreal 1"
+	9, "UT99"
+}
+
+OptionValue "RPskinBG"
+{
+	-1, "SKINUNKN"
+	1, "SKING5U1"
+	9, "SKING5U9"
+}
+
+OptionValue "BRskin"
+{
+	-1, "Class Based"
+	1, "Unreal 1"
+	9, "UT99"
+	4, "UT2004"
+}
+
+OptionValue "BRskinBG"
+{
+	-1, "SKINUNKN"
+	1, "SKINGEU1"
+	9, "SKINGEU9"
+	4, "SKINGEU4"
+}
+
+OptionValue "RLskin"
+{
+	-1, "Class Based"
+	1, "Unreal 1"
+	9, "UT99"
+	4, "UT2004"
+}
+
+OptionValue "RLskinBG"
+{
+	-1, "SKINUNKN"
+	1, "SKING6U1"
+	9, "SKING6U9"
+	4, "SKING6U4"
+}
+
+OptionValue "SRskin"
+{
+	-1, "Class Based"
+	1, "Unreal 1"
+	9, "UT99"
+	4, "UT2004"
+}
+
+OptionValue "SRskinBG"
+{
+	-1, "SKINUNKN"
+	1, "SKING7U1"
+	9, "SKING7U9"
+	4, "SKING7U4"
+}
+
+OptionValue "SPskin"
+{
+	-1, "Class Based"
+	1, "Unreal 1"
+	9, "UT99"
+	4, "UT2004"
+	3, "UT2004 LG"
+}
+
+OptionValue "SPskinBG"
+{
+	-1, "SKINUNKN"
+	1, "SKING8U1"
+	9, "SKING8U9"
+	4, "SKING8U4"
+	3, "SKING8U3"
+}
+
+OptionValue "RDskin"
+{
+	-1, "Class Based"
+	9, "UT99"
+	4, "UT2004"
+}
+
+OptionValue "RDskinBG"
+{
+	-1, "SKINUNKN"
+	9, "SKING9U9"
+	4, "SKING9U4"
 }
