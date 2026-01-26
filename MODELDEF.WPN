@@ -102,6 +102,18 @@ Model UTRipperBlade_U1
    FrameIndex BLD1 A 0 0
 }
 
+Model UTRipperBlade_UC2
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper6Skin.png"
+   SurfaceSkin 0 1 "Ripper6Skin.png"
+   SurfaceSkin 0 2 "Ripper6Trail.png"
+   MODEL 0 "Ripper6Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD6 A 0 0
+}
+
 Model UTRipperBladeUpgraded
 {
    Path "MD3/PROJECTILES"
@@ -122,6 +134,18 @@ Model UTRipperBladeUpgraded_U1
    Scale 3.0 3.0 3.45
    PITCHFROMMOMENTUM
    FrameIndex BLD1 A 0 0
+}
+
+Model UTRipperBladeUpgraded_UC2
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper6Skin.png"
+   SurfaceSkin 0 1 "Ripper6Skin.png"
+   SurfaceSkin 0 2 "Ripper6Trail.png"
+   MODEL 0 "Ripper6Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD6 A 0 0
 }
 
 Model UTRipperBladeAlt
@@ -146,6 +170,18 @@ Model UTRipperBladeAlt_U1
    FrameIndex BLD1 A 0 0
 }
 
+Model UTRipperBladeAlt_UC2
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper6Skin.png"
+   SurfaceSkin 0 1 "Ripper6Skin.png"
+   SurfaceSkin 0 2 "Ripper6Trail.png"
+   MODEL 0 "Ripper6Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD6 A 0 0
+}
+
 Model UTRipperBladeAltUpgraded
 {
    Path "MD3/PROJECTILES"
@@ -168,6 +204,18 @@ Model UTRipperBladeAltUpgraded_U1
    FrameIndex BLD1 A 0 0
 }
 
+Model UTRipperBladeAltUpgraded_UC2
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper6Skin.png"
+   SurfaceSkin 0 1 "Ripper6Skin.png"
+   SurfaceSkin 0 2 "Ripper6Trail.png"
+   MODEL 0 "Ripper6Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD6 A 0 0
+}
+
 Model UTRipperBladeAltUpgradedRipper
 {
    Path "MD3/PROJECTILES"
@@ -188,6 +236,18 @@ Model UTRipperBladeAltUpgradedRipper_U1
    Scale 3.0 3.0 3.45
    PITCHFROMMOMENTUM
    FrameIndex BLD1 A 0 0
+}
+
+Model UTRipperBladeAltUpgradedRipper_UC2
+{
+   Path "MD3/PROJECTILES"
+   SurfaceSkin 0 0 "Ripper6Skin.png"
+   SurfaceSkin 0 1 "Ripper6Skin.png"
+   SurfaceSkin 0 2 "Ripper6Trail.png"
+   MODEL 0 "Ripper6Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex BLD6 A 0 0
 }
 
 

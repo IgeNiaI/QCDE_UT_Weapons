@@ -221,6 +221,14 @@ $volume "UTDE/Weapons/Ripper/Quad/Fire_UT99"				0.80
 $volume "UTDE/Weapons/Ripper/AltFire_UT99"					0.80
 $volume "UTDE/Weapons/Ripper/Quad/AltFireStartLoop_UT99"	0.80
 
+UTDE/Weapons/Ripper/Fire_UC2						"Sounds/Weapons/Ripper/UC2/RP_Fire.wav"
+UTDE/Weapons/Ripper/Quad/Fire_UC2					"Sounds/Weapons/Ripper/UC2/Quad/RP_Fire.wav"
+UTDE/Weapons/Ripper/AltFire_UC2						"Sounds/Weapons/Ripper/UC2/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Quad/AltFire_UC2				"Sounds/Weapons/Ripper/UC2/Quad/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Impact_UC2						"Sounds/Weapons/Ripper/UC2/RP_Impact.wav"
+UTDE/Weapons/Ripper/Bounce_UC2						"Sounds/Weapons/Ripper/UC2/RP_Bounce.wav"
+
+
 //********************
 // Bio Rifle
 UTDE/Weapons/BioRifle/Fire_UT2004				"Sounds/Weapons/BioRifle/UT2004/BR_Fire.wav"
