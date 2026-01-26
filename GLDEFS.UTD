@@ -641,3 +641,29 @@ brightmap sprite U6GBN0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBN0.png
 brightmap sprite U6GBO0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBO0.png"	}
 brightmap sprite U6GBP0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBP0.png"	}
 brightmap sprite U6GBQ0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBQ0.png"	}
+
+// UC2 Razorjack
+brightmap sprite U6G5A0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5B0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5C0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5D0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5E0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5F0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5G0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5H0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5I0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5J0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5K0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5L0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5M0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5N0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5O0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5P0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5Q0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5R0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5S0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5T0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5U0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5V0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5W0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
+brightmap sprite U6G5X0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
