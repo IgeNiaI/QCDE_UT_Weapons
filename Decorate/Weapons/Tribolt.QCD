@@ -113,9 +113,13 @@ Actor QCTribolt : QCWeapon
 	//-----------------------
 	Select:
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "Select.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "Select.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "Select.U1")
 	Select.U1:
 		U1G5 A 0
+		Goto SelectCont
+	Select.UC2:
+		U6G5 A 0
 		Goto SelectCont
 	Select.UT99:
 		U9G5 A 0
@@ -143,9 +147,13 @@ Actor QCTribolt : QCWeapon
 	//-----------------------
 	Ready:
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "Ready.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "Ready.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "Ready.U1")
 	Ready.U1:
 		U1G5 A 0
+		Goto ReadyCont
+	Ready.UC2:
+		U6G5 A 0
 		Goto ReadyCont
 	Ready.UT99:
 		U9G5 A 0
@@ -193,9 +201,13 @@ Actor QCTribolt : QCWeapon
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_JumpIfInventory("TB_UG_Long",1,"FlashUpgraded")
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "Flash.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "Flash.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "Flash.U1")
 	Flash.U1:
 		TNT1 A 0 A_FireCustomMissile("UTRipperBlade_U1",0,true,1,4)
+		Goto FlashCheckSound
+	Flash.UC2:
+		TNT1 A 0 A_FireCustomMissile("UTRipperBlade_UC2",0,true,1,4)
 		Goto FlashCheckSound
 	Flash.UT99:
 		TNT1 A 0 A_FireCustomMissile("UTRipperBlade",0,true,1,4)
@@ -203,9 +215,13 @@ Actor QCTribolt : QCWeapon
 
 	FlashUpgraded:
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "FlashUpgraded.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "FlashUpgraded.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "FlashUpgraded.U1")
 	FlashUpgraded.U1:
 		TNT1 A 0 A_FireCustomMissile("UTRipperBladeUpgraded_U1",0,true,1,4)
+		Goto FlashCheckSound
+	FlashUpgraded.UC2:
+		TNT1 A 0 A_FireCustomMissile("UTRipperBladeUpgraded_UC2",0,true,1,4)
 		Goto FlashCheckSound
 	FlashUpgraded.UT99:
 		TNT1 A 0 A_FireCustomMissile("UTRipperBladeUpgraded",0,true,1,4)
@@ -218,9 +234,13 @@ Actor QCTribolt : QCWeapon
 
 		NormalSound:
 			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "NormalSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "NormalSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "NormalSound.U1")
 		NormalSound.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Fire_U1",CHAN_WEAPON)
+			Goto EndFlash
+		NormalSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Fire_UC2",CHAN_WEAPON)
 			Goto EndFlash
 		NormalSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Fire_UT99",CHAN_WEAPON)
@@ -228,9 +248,13 @@ Actor QCTribolt : QCWeapon
 
 		QuadSound:
 			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "QuadSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "QuadSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "QuadSound.U1")
 		QuadSound.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Quad/Fire_U1",CHAN_WEAPON)
+			Goto EndFlash
+		QuadSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Quad/Fire_UC2",CHAN_WEAPON)
 			Goto EndFlash
 		QuadSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Quad/Fire_UT99",CHAN_WEAPON)
@@ -284,9 +308,13 @@ Actor QCTribolt : QCWeapon
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_JumpIfInventory("TB_UG_Grenade",1,"AltFlashUpgraded")
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "AltFlash.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "AltFlash.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "AltFlash.U1")
 	AltFlash.U1:
 		TNT1 A 0 A_FireCustomMissile("UTRipperBladeAlt_U1",0,true,1,4)
+		Goto AltFlashCheckSound
+	AltFlash.UC2:
+		TNT1 A 0 A_FireCustomMissile("UTRipperBladeAlt_UC2",0,true,1,4)
 		Goto AltFlashCheckSound
 	AltFlash.UT99:
 		TNT1 A 0 A_FireCustomMissile("UTRipperBladeAlt",0,true,1,4)
@@ -294,9 +322,13 @@ Actor QCTribolt : QCWeapon
 
 	AltFlashUpgraded:
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "AltFlashUpgraded.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "AltFlashUpgraded.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "AltFlashUpgraded.U1")
 	AltFlashUpgraded.U1:
 		TNT1 A 0 A_FireCustomMissile("UTRipperBladeAltUpgraded_U1",0,true,1,4)
+		Goto AltFlashCheckSound
+	AltFlashUpgraded.UC2:
+		TNT1 A 0 A_FireCustomMissile("UTRipperBladeAltUpgraded_UC2",0,true,1,4)
 		Goto AltFlashCheckSound
 	AltFlashUpgraded.UT99:
 		TNT1 A 0 A_FireCustomMissile("UTRipperBladeAltUpgraded",0,true,1,4)
@@ -309,9 +341,13 @@ Actor QCTribolt : QCWeapon
 
 		AltNormalSound:
 			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "AltNormalSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "AltNormalSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "AltNormalSound.U1")
 		AltNormalSound.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/AltFire_U1",CHAN_WEAPON)
+			Goto EndFlash
+		AltNormalSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/AltFire_UC2",CHAN_WEAPON)
 			Goto EndFlash
 		AltNormalSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/AltFire_UT99",CHAN_WEAPON)
@@ -319,9 +355,13 @@ Actor QCTribolt : QCWeapon
 
 		AltQuadSound:
 			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 9, "AltQuadSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 6, "AltQuadSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTRipperSkin", 1, "AltQuadSound.U1")
 		AltQuadSound.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Quad/AltFire_U1",CHAN_WEAPON)
+			Goto EndFlash
+		AltQuadSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Quad/AltFire_UC2",CHAN_WEAPON)
 			Goto EndFlash
 		AltQuadSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Quad/AltFire_UT99",CHAN_WEAPON)
@@ -380,6 +420,7 @@ Actor UTRipperBlade
 	DeathCont:
 	DeathFx:
 		TNT1 A 0 A_SpawnItemEx("UTRipperBladeFX")
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("QCRocketExploParticle",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(-5.5,5.5),random(0,359),SXF_NOCHECKPOSITION)
 		Stop
 	}
 }
@@ -402,6 +443,28 @@ Actor UTRipperBlade_U1 : UTRipperBlade
 
 	Death:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_U1",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "DeathCont") //for virtual jump to inherited versions
+	}
+}
+
+Actor UTRipperBlade_UC2 : UTRipperBlade
+{
+	States
+	{
+	Spawn:
+		BLD6 AAA 1
+		Loop
+
+	Bounce:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "BounceCont") //for virtual jump to inherited versions
+
+	XDeath:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Impact_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "XDeathCont") //for virtual jump to inherited versions
+
+	Death:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
 		TNT1 A 0 A_Jump(256, "DeathCont") //for virtual jump to inherited versions
 	}
 }
@@ -441,6 +504,28 @@ Actor UTRipperBladeUpgraded_U1 : UTRipperBladeUpgraded
 
 	Death:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_U1",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "DeathCont") //for virtual jump to inherited versions
+	}
+}
+
+Actor UTRipperBladeUpgraded_UC2 : UTRipperBladeUpgraded
+{
+	States
+	{
+	Spawn:
+		BLD6 AAA 1
+		Loop
+
+	Bounce:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "BounceCont") //for virtual jump to inherited versions
+
+	XDeath:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Impact_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "XDeathCont") //for virtual jump to inherited versions
+
+	Death:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
 		TNT1 A 0 A_Jump(256, "DeathCont") //for virtual jump to inherited versions
 	}
 }
@@ -495,6 +580,28 @@ Actor UTRipperBladeAlt_U1 : UTRipperBladeAlt
 
 	Death:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_U1",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "DeathCont") //for virtual jump to inherited versions
+	}
+}
+
+Actor UTRipperBladeAlt_UC2 : UTRipperBladeAlt
+{
+	States
+	{
+	Spawn:
+		BLD6 AAA 1
+		Loop
+
+	Bounce:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "BounceCont") //for virtual jump to inherited versions
+
+	XDeath:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Impact_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "XDeathCont") //for virtual jump to inherited versions
+
+	Death:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
 		TNT1 A 0 A_Jump(256, "DeathCont") //for virtual jump to inherited versions
 	}
 }
@@ -559,6 +666,36 @@ Actor UTRipperBladeAltUpgraded_U1 : UTRipperBladeAltUpgraded
 	}
 }
 
+Actor UTRipperBladeAltUpgraded_UC2 : UTRipperBladeAltUpgraded
+{
+	States
+	{
+	SpawnLoop:
+		BLD6 AAA 1
+		Loop
+
+	Bounce:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "BounceCont") //for virtual jump to inherited versions
+
+	XDeath:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Impact_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "XDeathCont") //for virtual jump to inherited versions
+
+	Death:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "DeathCont") //for virtual jump to inherited versions
+
+	XDeath:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Impact_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
+		TNT1 A 0 A_JumpIf(user_vel_set == 0, 2)
+		TNT1 A 0 A_SpawnItemEx("UTRipperBladeAltUpgradedRipper_UC2", 0, 0, 0, user_velx, user_vely, user_velz, 0, SXF_ABSOLUTEVELOCITY|SXF_TRANSFERPOINTERS)
+		TNT1 A 0 // need this state to jump to if ripper shouldn't spawn
+		Stop
+	}
+}
+
 Actor UTRipperBladeAltUpgradedRipper : UTRipperBladeAlt
 {
 	+RIPPER
@@ -588,20 +725,86 @@ Actor UTRipperBladeAltUpgradedRipper_U1 : UTRipperBladeAltUpgradedRipper
 	}
 }
 
+Actor UTRipperBladeAltUpgradedRipper_UC2 : UTRipperBladeAltUpgradedRipper
+{
+	States
+	{
+	SpawnLoop:
+		BLD6 AAA 1
+		Loop
+
+	Bounce:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "BounceCont") //for virtual jump to inherited versions
+
+	XDeath:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Impact_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "XDeathCont") //for virtual jump to inherited versions
+
+	Death:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/Ripper/Bounce_UC2",CHAN_AUTO,1,0,1)
+		TNT1 A 0 A_Jump(256, "DeathCont") //for virtual jump to inherited versions
+	}
+}
+
 Actor UTRipperBladeFX
 {
-	+CLIENTSIDEONLY +NONETID
 	+NOINTERACTION +NOTONAUTOMAP
+	+CLIENTSIDEONLY +NONETID
 	+FORCEXYBILLBOARD
 	+DONTBLAST
-	RenderStyle Translucent
-	Translation "0:255=%[0,0,0]:[1.0,1.0,1.0]"
-	Alpha 0.75
-	Scale 0.75
+	Scale 0.05
 	States
 	{
 	Spawn:
-		BLD9 DEFGHIJKLMNOPQRST 1 Bright
+		X125 A 0
+		X125 A 1 Light("YellowSmallFlicker3") 	Bright A_SetScale(scalex+0.0375)
+		X125 A 1 Light("YellowSmallFlicker1") 	Bright A_SetScale(scalex+0.0375)
+		X125 B 1 Light("YellowMediumFlicker2") 	Bright A_SetScale(scalex+0.025)
+		X125 B 1 Light("YellowMediumFlicker1") 	Bright A_SetScale(scalex+0.025)
+		X125 C 1 Light("YellowMediumFlicker1") 	Bright A_SetScale(scalex+0.0175)
+		X125 C 1 Light("YellowMediumFlicker1") 	Bright A_SetScale(scalex+0.0175)
+		X125 D 1 Light("YellowMediumFlicker1") 	Bright
+		X125 D 1 Light("YellowMediumFlicker1") 	Bright
+		X125 E 1 Light("YellowMediumFlicker1")	Bright A_SetScale(scalex*1.05)
+		X125 E 1 Light("YellowMediumFlicker2")	Bright
+		X125 F 1 Light("YellowMediumFlicker2")	Bright A_SetScale(scalex*1.05)
+		X125 F 1 Light("YellowMediumFlicker3")	Bright
+		X125 G 1 Light("YellowMediumFlicker3")	Bright A_SetScale(scalex*1.05)
+		X125 G 1 Light("YellowSmallFlicker1")	Bright
+		X125 H 0 Light("YellowSmallFlicker2")	Bright A_SetScale(scalex*1.05)
+		X125 H 1 Light("YellowSmallFlicker2")	Bright A_FadeOut(0.075)
+		X125 H 1 Light("YellowSmallFlicker3")	Bright A_FadeOut(0.075)
+		X125 I 0 Bright A_SetScale(scalex*1.05)
+		X125 I 1 Bright A_FadeOut(0.075)
+		X125 I 1 Bright A_FadeOut(0.075)
+		X125 J 0 Bright A_SetScale(scalex*1.05)
+		X125 J 1 Bright A_FadeOut(0.075)
+		X125 J 1 Bright A_FadeOut(0.075)
+		X125 K 0 Bright A_SetScale(scalex*1.05)
+		X125 K 1 Bright A_FadeOut(0.075)
+		X125 K 1 Bright A_FadeOut(0.075)
+		X125 L 0 Bright A_FadeOut(0.075)
+		X125 L 1 Bright A_SetScale(scalex*1.05)
+		X125 L 1 Bright A_FadeOut(0.075)
+		X125 M 0 Bright A_FadeOut(0.075)
+		X125 M 1 Bright A_SetScale(scalex*1.05)
+		X125 M 1 Bright A_FadeOut(0.075)
+		X125 N 0 Bright A_FadeOut(0.075)
+		X125 N 1 Bright A_SetScale(scalex*1.05)
+		X125 N 1 Bright A_FadeOut(0.075)
+		X125 O 0 Bright A_FadeOut(0.075)
+		X125 O 1 Bright A_SetScale(scalex*1.05)
+		X125 O 1 Bright A_FadeOut(0.075)
+		X125 P 0 Bright A_FadeOut(0.075)
+		X125 P 1 Bright A_SetScale(scalex*1.05)
+		X125 P 1 Bright A_FadeOut(0.075)
+		X125 Q 0 Bright A_FadeOut(0.075)
+		X125 Q 1 Bright A_SetScale(scalex*1.05)
+		X125 Q 1 Bright A_FadeOut(0.075)
+		X125 R 0 Bright A_FadeOut(0.075)
+		X125 R 1 Bright A_SetScale(scalex*1.05)
+		X125 R 1 Bright A_FadeOut(0.075)
 		Stop
 	}
 }
