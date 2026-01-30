@@ -275,6 +275,12 @@ UTDE/Weapons/RocketLauncher/AltFire_UT2004		"Sounds/Weapons/RocketLauncher/UT200
 UTDE/Weapons/RocketLauncher/Quad/AltFire_UT2004	"Sounds/Weapons/RocketLauncher/UT2004/Quad/RL_Fire_Alt.wav"
 UTDE/Weapons/RocketLauncher/Load_UT2004			"Sounds/Weapons/RocketLauncher/UT2004/RL_Load.wav"
 
+UTDE/Weapons/RocketLauncher/Fire_UC2			"Sounds/Weapons/RocketLauncher/UC2/RL_Fire.wav"
+UTDE/Weapons/RocketLauncher/Quad/Fire_UC2		"Sounds/Weapons/RocketLauncher/UC2/Quad/RL_Fire.wav"
+UTDE/Weapons/RocketLauncher/AltFire_UC2			"Sounds/Weapons/RocketLauncher/UC2/RL_Fire_Alt.wav"
+UTDE/Weapons/RocketLauncher/Quad/AltFire_UC2	"Sounds/Weapons/RocketLauncher/UC2/Quad/RL_Fire_Alt.wav"
+UTDE/Weapons/RocketLauncher/Load_UC2			"Sounds/Weapons/RocketLauncher/UC2/RL_Load.wav"
+
 UTDE/Weapons/RocketLauncher/Fire_UT99			"Sounds/Weapons/RocketLauncher/UT99/RL_Fire.wav"
 UTDE/Weapons/RocketLauncher/Quad/Fire_UT99		"Sounds/Weapons/RocketLauncher/UT99/Quad/RL_Fire.wav"
 UTDE/Weapons/RocketLauncher/AltFire_UT99		"Sounds/Weapons/RocketLauncher/UT99/RL_Fire_Alt.wav"
