@@ -386,6 +386,11 @@ UTDE/Weapons/SniperRifle/Quad/Fire_UT99		"Sounds/Weapons/SniperRifle/UT99/Quad/S
 UTDE/Weapons/SniperRifle/Reload_UT99		"Sounds/Weapons/SniperRifle/UT99/SP_Reload.wav"
 
 
+UTDE/Weapons/SniperRifle/Fire_UC2			"Sounds/Weapons/SniperRifle/UC2/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Quad/Fire_UC2		"Sounds/Weapons/SniperRifle/UC2/Quad/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Reload_UC2			"Sounds/Weapons/SniperRifle/UC2/SP_Reload.wav"
+
+
 UTDE/Weapons/SniperRifle/ZoomIn				"Sounds/Weapons/SniperRifle/SP_ZoomIn.wav"
 UTDE/Weapons/SniperRifle/ZoomOut			"Sounds/Weapons/SniperRifle/SP_ZoomOut.wav"
 
