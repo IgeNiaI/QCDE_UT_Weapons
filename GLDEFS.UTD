@@ -706,3 +706,21 @@ brightmap sprite U6G7J0	{	map "Sprites/Weapons/ShockRifle/UC2/brightmaps/B6G7J0.
 brightmap sprite U6G7K0	{	map "Sprites/Weapons/ShockRifle/UC2/brightmaps/B6G7K0.png"	}
 brightmap sprite U6G7L0	{	map "Sprites/Weapons/ShockRifle/UC2/brightmaps/B6G7L0.png"	}
 brightmap sprite U6G7M0	{	map "Sprites/Weapons/ShockRifle/UC2/brightmaps/B6G7M0.png"	}
+
+// UC2 Sniper Rifle
+brightmap sprite U6G8A0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8A0.png"	}
+brightmap sprite U6G8B0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8B0.png"	}
+brightmap sprite U6G8C0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8C0.png"	}
+brightmap sprite U6G8D0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8D0.png"	}
+brightmap sprite U6G8E0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8E0.png"	}
+brightmap sprite U6G8F0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8F0.png"	}
+brightmap sprite U6G8G0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8G0.png"	}
+brightmap sprite U6G8H0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8H0.png"	}
+brightmap sprite U6G8I0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8I0.png"	}
+brightmap sprite U6G8J0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8J0.png"	}
+brightmap sprite U6G8K0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8K0.png"	}
+brightmap sprite U6G8L0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8L0.png"	}
+brightmap sprite U6G8M0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8M0.png"	}
+brightmap sprite U6G8N0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8N0.png"	}
+brightmap sprite U6G8O0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8O0.png"	}
+brightmap sprite U6G8P0	{	map "Sprites/Weapons/SniperRifle/UC2/brightmaps/B6G8P0.png"	}
