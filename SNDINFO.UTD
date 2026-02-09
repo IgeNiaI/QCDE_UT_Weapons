@@ -344,6 +344,13 @@ $volume "UTDE/Weapons/ShockRifle/Fire_U1"			0.70
 $volume "UTDE/Weapons/ShockRifle/Quad/Fire_U1"		0.70
 
 
+UTDE/Weapons/ShockRifle/Fire_UC2				"Sounds/Weapons/ShockRifle/UC2/SR_Fire.wav"
+UTDE/Weapons/ShockRifle/Quad/Fire_UC2			"Sounds/Weapons/ShockRifle/UC2/Quad/SR_Fire.wav"
+UTDE/Weapons/ShockRifle/AltFire_UC2				"Sounds/Weapons/ShockRifle/UC2/SR_Fire_Alt.wav"
+UTDE/Weapons/ShockRifle/Quad/AltFire_UC2		"Sounds/Weapons/ShockRifle/UC2/Quad/SR_Fire_Alt.wav"
+UTDE/Weapons/ShockRifle/Idle_UC2				"Sounds/Weapons/ShockRifle/UC2/SR_Idle.ogg"
+
+
 UTDE/Weapons/ShockRifle/OrbFly					"Sounds/Weapons/ShockRifle/SR_Orb_Fly.wav"
 UTDE/Weapons/ShockRifle/OrbHit					"Sounds/Weapons/ShockRifle/SR_Orb_Hit.wav"
 UTDE/Weapons/ShockRifle/OrbExplo				"Sounds/Weapons/ShockRifle/SR_Orb_Explo.wav"

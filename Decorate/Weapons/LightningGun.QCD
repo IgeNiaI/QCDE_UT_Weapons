@@ -119,6 +119,7 @@ Actor QCLightningGun : QCWeapon
 	//-----------------------
 	Select:
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "Select.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 6, "Select.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 4, "Select.UT2004")
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 1, "Select.U1")
 	Select.U1:
@@ -126,6 +127,9 @@ Actor QCLightningGun : QCWeapon
 		Goto SelectCont
 	Select.UT2004:
 		U4G7 A 0
+		Goto SelectCont
+	Select.UC2:
+		U6G7 A 0
 		Goto SelectCont
 	Select.UT99:
 		U9G7 A 0
@@ -154,6 +158,7 @@ Actor QCLightningGun : QCWeapon
 	//-----------------------
 	Ready:
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "Ready.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 6, "Ready.UC2")
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 4, "Ready.UT2004")
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 1, "Ready.U1")
 	Ready.U1:
@@ -162,13 +167,20 @@ Actor QCLightningGun : QCWeapon
 	Ready.UT2004:
 		U4G7 A 0
 		Goto ReadyCont
+	Ready.UC2:
+		U6G7 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Idle_UC2", CHAN_WEAPON, 0.45, 1, 1.25)
+		Goto ReadyCont
 	Ready.UT99:
 		U9G7 A 0
 		Goto ReadyCont
 
 	ReadyCont:
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
-		"####" A 4 A_WeaponReady
+		"####" AAABBB 1 A_WeaponReady
+		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		"####" CCCDDD 1 A_WeaponReady
+		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		"####" EEE 1 A_WeaponReady
 		Loop
 
 		ReadyCantFire:
@@ -184,28 +196,28 @@ Actor QCLightningGun : QCWeapon
 	Fire: 	//27 tics, 0.77sec
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		"####" A 0 A_GunFlash("Flash")
-		"####" B 1
-		"####" B 1 Offset(3,34)
-		"####" C 1 Offset(6,37)
-		"####" C 1 Offset(9,40)
-		"####" D 1 Offset(11,42)
-		"####" D 1 Offset(13,44)
-		"####" D 1 Offset(14,46)
-		"####" D 1 Offset(15,47)
-		"####" D 1 Offset(14,46)
-		"####" D 1 Offset(13,45) //10
-		"####" D 1 Offset(12,44)
-		"####" D 1 Offset(11,43)
-		"####" D 1 Offset(10,42)
-		"####" E 1 Offset(9,41)
-		"####" E 1 Offset(8,40)
-		"####" E 1 Offset(7,39)
-		"####" E 1 Offset(6,38)
-		"####" E 1 Offset(5,37)
-		"####" E 1 Offset(4,36)
-		"####" E 1 Offset(3,35)	//20
-		"####" E 1 Offset(2,34)
-		"####" E 1 Offset(1,33)
+		"####" F 1
+		"####" F 1 Offset(3,34)
+		"####" G 1 Offset(6,37)
+		"####" G 1 Offset(9,40)
+		"####" H 1 Offset(11,42)
+		"####" H 1 Offset(13,44)
+		"####" H 1 Offset(14,46)
+		"####" I 1 Offset(15,47)
+		"####" I 1 Offset(14,46)
+		"####" I 1 Offset(13,45) //10
+		"####" J 1 Offset(12,44)
+		"####" J 1 Offset(11,43)
+		"####" J 1 Offset(10,42)
+		"####" K 1 Offset(9,41)
+		"####" K 1 Offset(8,40)
+		"####" K 1 Offset(7,39)
+		"####" L 1 Offset(6,38)
+		"####" L 1 Offset(5,37)
+		"####" L 1 Offset(4,36)
+		"####" M 1 Offset(3,35)	//20
+		"####" M 1 Offset(2,34)
+		"####" M 1 Offset(1,33)
 		"####" A 1 Offset(0,32)	//23
 		Goto Ready
 
@@ -226,6 +238,7 @@ Actor QCLightningGun : QCWeapon
 
 		NormalSound:
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "NormalSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 6, "NormalSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 4, "NormalSound.UT2004")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 1, "NormalSound.U1")
 		NormalSound.U1:
@@ -234,12 +247,16 @@ Actor QCLightningGun : QCWeapon
 		NormalSound.UT2004:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Fire_UT2004",CHAN_WEAPON)
 			Goto FlashEnder
+		NormalSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Fire_UC2",CHAN_WEAPON)
+			Goto FlashEnder
 		NormalSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Fire_UT99",CHAN_WEAPON)
 			Goto FlashEnder
 
 		QuadSound:
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "QuadSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 6, "QuadSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 4, "QuadSound.UT2004")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 1, "QuadSound.U1")
 		QuadSound.U1:
@@ -247,6 +264,9 @@ Actor QCLightningGun : QCWeapon
 			Goto FlashEnder
 		QuadSound.UT2004:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/Fire_UT2004",CHAN_WEAPON)
+			Goto FlashEnder
+		QuadSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/Fire_UC2",CHAN_WEAPON)
 			Goto FlashEnder
 		QuadSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/Fire_UT99",CHAN_WEAPON)
@@ -272,25 +292,25 @@ Actor QCLightningGun : QCWeapon
 		"####" A 0 A_JumpIfInventory("Instagib",1,"Fire")
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		"####" A 0 A_GunFlash("AltFlash")
-		"####" B 1
-		"####" B 1 Offset(4,35)
-		"####" C 1 Offset(7,38)
-		"####" C 1 Offset(10,41)
-		"####" D 1 Offset(12,43)
-		"####" D 1 Offset(14,45)
-		"####" D 1 Offset(13,45)
-		"####" D 1 Offset(12,44)
-		"####" D 1 Offset(11,43)
-		"####" D 1 Offset(10,42) //10
-		"####" D 1 Offset(9,41)
-		"####" E 1 Offset(8,40)
-		"####" E 1 Offset(7,39)
-		"####" E 1 Offset(6,38)
-		"####" E 1 Offset(5,37)
-		"####" E 1 Offset(4,36)
-		"####" E 1 Offset(3,35)
-		"####" E 1 Offset(2,34)
-		"####" A 1 Offset(1,33)	//19
+		"####" F 1
+		"####" F 1 Offset(4,35)
+		"####" G 1 Offset(7,38)
+		"####" G 1 Offset(10,41)
+		"####" I 1 Offset(12,43)
+		"####" I 1 Offset(14,45)
+		"####" I 1 Offset(13,45)
+		"####" J 1 Offset(12,44)
+		"####" J 1 Offset(11,43)
+		"####" J 1 Offset(10,42) //10
+		"####" K 1 Offset(9,41)
+		"####" K 1 Offset(8,40)
+		"####" K 1 Offset(7,39)
+		"####" L 1 Offset(6,38)
+		"####" L 1 Offset(5,37)
+		"####" L 1 Offset(4,36)
+		"####" M 1 Offset(3,35)
+		"####" M 1 Offset(2,34)
+		"####" M 1 Offset(1,33)	//19
 		Goto Ready
 
 	AltFlash:
@@ -305,6 +325,7 @@ Actor QCLightningGun : QCWeapon
 
 		AltNormalSound:
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "AltNormalSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 6, "AltNormalSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 4, "AltNormalSound.UT2004")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 1, "AltNormalSound.U1")
 		AltNormalSound.U1:
@@ -313,11 +334,15 @@ Actor QCLightningGun : QCWeapon
 		AltNormalSound.UT2004:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/AltFire_UT2004",CHAN_WEAPON)
 			Goto FlashEnder
+		AltNormalSound.UC2:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/AltFire_UC2",CHAN_WEAPON)
+			Goto FlashEnder
 		AltNormalSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/AltFire_UT99",CHAN_WEAPON)
 			Goto FlashEnder
 		AltQuadSound:
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "AltQuadSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 6, "AltQuadSound.UC2")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 4, "AltQuadSound.UT2004")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 1, "AltQuadSound.U1")
 		AltQuadSound.U1:
@@ -325,6 +350,9 @@ Actor QCLightningGun : QCWeapon
 			Goto FlashEnder
 		AltQuadSound.UT2004:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/AltFire_UT2004",CHAN_WEAPON)
+			Goto FlashEnder
+		AltQuadSound.UC6:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/AltFire_UC6",CHAN_WEAPON)
 			Goto FlashEnder
 		AltQuadSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/AltFire_UT99",CHAN_WEAPON)
