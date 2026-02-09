@@ -214,6 +214,13 @@ FreeformMenu "QCDE_OptionsSkins"
 	}
 
 	Command {
+		Pos		78, 302			Text "UC2"					Background			BV14028
+		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
+		Anchor 	center, center	FontColor Tan				Command utde_WeapSkins_UC2
+		Padding	0, 0			SelectedFontColor Tan
+	}
+
+	Command {
 		Pos		-156, 322		Text "Class Based"			Background			BV14028
 		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
 		Anchor	center, center	FontColor Tan				Command utde_WeapSkins_Class
@@ -365,6 +372,7 @@ OptionValue "ENskin"
 	9, "UT99"
 	3, "UT2003"
 	4, "UT2004"
+	6, "UC2"
 }
 
 OptionValue "ENskinBG"
@@ -374,6 +382,7 @@ OptionValue "ENskinBG"
 	9, "SKING2U9"
 	3, "SKING2U3"
 	4, "SKING2U4"
+	6, "SKING2U6"
 }
 
 OptionValue "MGskin"
@@ -382,6 +391,7 @@ OptionValue "MGskin"
 	1, "Unreal 1"
 	9, "UT99"
 	4, "UT2004"
+	6, "UC2"
 }
 
 OptionValue "MGskinBG"
@@ -390,18 +400,21 @@ OptionValue "MGskinBG"
 	1, "SKINGBU1"
 	9, "SKINGBU9"
 	4, "SKINGBU4"
+	6, "SKINGBU6"
 }
 
 OptionValue "DPskin"
 {
 	-1, "Class Based"
 	1, "Unreal 1"
+	6, "UC2"
 }
 
 OptionValue "DPskinBG"
 {
 	-1, "SKINUNKN"
 	1, "SKINGGU1"
+	6, "SKINGGU6"
 }
 
 OptionValue "FMskin"
@@ -423,6 +436,7 @@ OptionValue "FLskin"
 	-1, "Class Based"
 	9, "UT99"
 	4, "UT2004"
+	6, "UC2"
 }
 
 OptionValue "FLskinBG"
@@ -430,18 +444,21 @@ OptionValue "FLskinBG"
 	-1, "SKINUNKN"
 	9, "SKINGCU9"
 	4, "SKINGCU4"
+	6, "SKINGCU6"
 }
 
 OptionValue "LGskin"
 {
 	-1, "Class Based"
 	4, "UT2004"
+	6, "UC2"
 }
 
 OptionValue "LGskinBG"
 {
 	-1, "SKINUNKN"
 	4, "SKING4U4"
+	6, "SKING4U6"
 }
 
 OptionValue "PGskin"
@@ -463,6 +480,7 @@ OptionValue "RPskin"
 	-1, "Class Based"
 	1, "Unreal 1"
 	9, "UT99"
+	6, "UC2"
 }
 
 OptionValue "RPskinBG"
@@ -470,6 +488,7 @@ OptionValue "RPskinBG"
 	-1, "SKINUNKN"
 	1, "SKING5U1"
 	9, "SKING5U9"
+	6, "SKING5U6"
 }
 
 OptionValue "BRskin"
@@ -494,6 +513,7 @@ OptionValue "RLskin"
 	1, "Unreal 1"
 	9, "UT99"
 	4, "UT2004"
+	6, "UC2"
 }
 
 OptionValue "RLskinBG"
@@ -502,6 +522,7 @@ OptionValue "RLskinBG"
 	1, "SKING6U1"
 	9, "SKING6U9"
 	4, "SKING6U4"
+	6, "SKING6U6"
 }
 
 OptionValue "SRskin"
@@ -510,6 +531,7 @@ OptionValue "SRskin"
 	1, "Unreal 1"
 	9, "UT99"
 	4, "UT2004"
+	6, "UC2"
 }
 
 OptionValue "SRskinBG"
@@ -518,6 +540,7 @@ OptionValue "SRskinBG"
 	1, "SKING7U1"
 	9, "SKING7U9"
 	4, "SKING7U4"
+	6, "SKING7U6"
 }
 
 OptionValue "SPskin"
@@ -527,6 +550,7 @@ OptionValue "SPskin"
 	9, "UT99"
 	4, "UT2004"
 	3, "UT2004 LG"
+	6, "UC2"
 }
 
 OptionValue "SPskinBG"
@@ -536,6 +560,7 @@ OptionValue "SPskinBG"
 	9, "SKING8U9"
 	4, "SKING8U4"
 	3, "SKING8U3"
+	6, "SKING8U6"
 }
 
 OptionValue "RDskin"
