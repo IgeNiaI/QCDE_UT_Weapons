@@ -16,7 +16,7 @@ Actor RailgunPickup : QCWeaponPickup 15607
 	//$Title "Sniper Rifle"
 	Height 48
 	Radius 20
-	Scale 0.63
+	Scale 0.5
 	Inventory.PickupSound "QC/Items/WeaponPick"
 	Inventory.PickupMessage "$GOT_UTSniperRifle"
 	Tag "$TAG_UTSniperRifle"
@@ -24,18 +24,18 @@ Actor RailgunPickup : QCWeaponPickup 15607
 	States
 	{
 	Spawn:
-		U4G8 Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		U6G8 Y 35 NoDelay A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
 		"####" "#" 0 A_ChangeFlag("DROPPED", 0)
-		U4G8 Z 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",20,args[4],args[3])
-		U4G8 Z 0 A_SetArg(3, 1)
-		U4G8 Z -1 Bright A_SetArg(4, 0)
+		U6G8 Z 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",20,args[4],args[3])
+		U6G8 Z 0 A_SetArg(3, 1)
+		U6G8 Z -1 Bright A_SetArg(4, 0)
 		Stop
 	Idle:
-		U4G8 Y 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",19,args[4],args[3])
-		U4G8 Y 0 A_SetArg(3, 1)
-		U4G8 Y -1 A_SetArg(4, 0)
+		U6G8 Y 0 ACS_NamedExecuteWithResult("QCDE_WeaponSpawned",19,args[4],args[3])
+		U6G8 Y 0 A_SetArg(3, 1)
+		U6G8 Y -1 A_SetArg(4, 0)
 		Wait
 	Pickup:
 		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMPickup")
@@ -97,19 +97,19 @@ Actor QCRailGun : QCWeapon
 	Tag "$TAG_UTSniperRifle"
 	Obituary "$OB_UTSniperRifle"
 	Decal "BulletChip"
-	Scale 0.63
+	Scale 0.5
 	Weapon.KickBack 90
 	States
 	{
 	Spawn:
 		TNT1 A 1
-		U4G8 Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
+		U6G8 Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
 		Goto Idle
 	DMSpawn:
-		U4G8 ZZZZZZZZZZZZZZZ 35 Bright
+		U6G8 ZZZZZZZZZZZZZZZ 35 Bright
 		Stop
 	Idle:
-		U4G8 Y -1
+		U6G8 Y -1
 		Wait
 	//-----------------------
 	// Select/Deselect Seq
