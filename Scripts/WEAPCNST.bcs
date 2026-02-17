@@ -287,79 +287,68 @@ str LootboxWeaponNamings[8] = {
 function void reReadWeaponCvars(void)
 {
 	// Set weapon skins based on player class, based on their source game
-	// QC champions use default
-	// Ranger uses Quake 1
-	// Bitterman uses Quake 2
-	// Q3 characters use Quake 3
-	// Kane uses Quake 4
-	// Doom movement champions use QCDE v1.0
+	// QC champions use UT2004
+	// Q3 characters use UT99
+	// Brock uses UT99
+	// Doom movement champions use U1
 	// Everyone else tries to equalize class count per skin
 	int classSkin = CheckInventory("ClassID");
-	//switch (classSkin) {
+	switch (classSkin) {
 
-	//case 8:  // Inquisitor
-	//case 11: // Nyx
-	//case 12: // Sorgaul
-	//case 15: // Keel
-	//case 17: // Lo Wang
-	//case 19: // Eradicator
-	//case 20: // Blazkowicz
-	//case 24: // Lucienne
-	//	classSkin = 0;
-	//	break;
+	case 1:  // DoomSlayer
+	case 7:  // Zedek
+	case 9:  // Bitterman
+	case 22: // Vor Matur
+	case 30: // Intruder
+		classSkin = 1;
+		break;
 
-	//case 0:  // Ranger
-	//case 4:  // Caleb
-	//case 22: // Vor Matur
-	//case 29: // Painkiller
-	//case 30: // Intruder
-	//	classSkin = 1;
-	//	break;
+	case 2:  // Corvus
+	case 4:  // Caleb
+	case 5:  // Menelkir
+	case 10: // Galen
+		classSkin = 2;
+		break;
 
-	//case 9:  // Bitterman
-	//case 18: // Grayson
-	//	classSkin = 2;
-	//	break;
+	case 3:  // Kane
+	case 6:  // Terminator
+	case 14: // Durandal
+	case 24: // Lucienne
+	case 27: // Sam
+	case 29: // Painkiller
+		classSkin = 3;
+		break;
 
-	//case 16: // Sarge
-	//case 25: // Major
-	//case 26: // Hunter
-	//case 31: // Orbb
-	//	classSkin = 3;
-	//	break;
+	case 0:  // Ranger
+	case 11: // Nyx
+	case 15: // Keel
+	case 21: // Freeman
+	case 26: // Hunter
+		classSkin = 4;
+		break;
 
-	//case 3:  // Kane
-	//case 14: // Durandal
-	//case 23: // Eleena
-	//	classSkin = 4;
-	//	break;
+	case 12: // Sorgaul
+	case 13: // Duke Nukem
+	case 17: // Lo Wang
+	case 18: // Grayson
+	case 23: // Eleena
+		classSkin = 6;
+		break;
 
-	//case 6:  // Terminator
-	//case 32: // Brock
-	//	classSkin = 5;
-	//	break;
+	case 8:  // Inquisitor
+	case 16: // Sarge
+	case 19: // Eradicator
+	case 20: // Blazkowicz
+	case 25: // Major
+	case 28: // Postal
+	case 31: // Orbb
+	case 32: // Brock
+		classSkin = 9;
+		break;
 
-	//case 1:  // DoomSlayer
-	//case 2:  // Corvus
-	//case 5:  // Menelkir
-	//case 7:  // Zedek
-	//case 10: // Galen
-	//	classSkin = 6;
-	//	break;
-
-	//case 21: // Freeman
-	//case 28: // Postal
-	//	classSkin = 7;
-	//	break;
-
-	//case 13: // Duke Nukem
-	//case 27: // Sam
-	//	classSkin = 8;
-	//	break;
-
-	//default:
-	//	classSkin = classSkin % 8; // This shouldn't happen, but just in case
-	//}
+	default:
+		classSkin = classSkin % 10; // This shouldn't happen, but just in case
+	}
 	// ^ insert more classes here, or update their indexes in MAPINFO order
 
 	// Weapon skins
@@ -382,20 +371,20 @@ function void reReadWeaponCvars(void)
 	}
 	else
 	{
-		//SetInventory("UTImpactHammerSkin",		classSkin);
-		//SetInventory("UTEnforcerSkin",			classSkin);
-		//SetInventory("UTMinigunSkin",				classSkin);
-		//SetInventory("UTDispersionPistolSkin",	classSkin);
-		//SetInventory("UTFlakMiniSkin",			classSkin);
-		//SetInventory("UTFlakSkin",				classSkin);
-		//SetInventory("UTLinkGunSkin",				classSkin);
-		//SetInventory("UTPulseGunSkin",			classSkin);
-		//SetInventory("UTRipperSkin",				classSkin);
-		//SetInventory("UTBioRifleSkin",			classSkin);
-		//SetInventory("UTRocketLauncherSkin",		classSkin);
-		//SetInventory("UTShockRifleSkin",			classSkin);
-		//SetInventory("UTSniperRifleSkin",			classSkin);
-		//SetInventory("UTRedeemerSkin",			classSkin);
+		SetInventory("UTImpactHammerSkin",		classSkin);
+		SetInventory("UTEnforcerSkin",			classSkin);
+		SetInventory("UTMinigunSkin",			classSkin);
+		SetInventory("UTDispersionPistolSkin",	classSkin);
+		SetInventory("UTFlakMiniSkin",			classSkin);
+		SetInventory("UTFlakSkin",				classSkin);
+		SetInventory("UTLinkGunSkin",			classSkin);
+		SetInventory("UTPulseGunSkin",			classSkin);
+		SetInventory("UTRipperSkin",			classSkin);
+		SetInventory("UTBioRifleSkin",			classSkin);
+		SetInventory("UTRocketLauncherSkin",	classSkin);
+		SetInventory("UTShockRifleSkin",		classSkin);
+		SetInventory("UTSniperRifleSkin",		classSkin);
+		SetInventory("UTRedeemerSkin",			classSkin);
 	}
 }
 
