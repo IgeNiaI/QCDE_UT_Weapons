@@ -123,8 +123,13 @@ Actor QCHeavyMachinegun : QCWeapon
 	//-----------------------
 	Select:
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "Select.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "Select.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "Select.UT99") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "Select.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "Select.UT2004") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "Select.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "Select.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "Select.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "Select.U1")
 	Select.U1:
 		U1GB A 0
@@ -163,8 +168,13 @@ Actor QCHeavyMachinegun : QCWeapon
 	//-----------------------
 	Ready:
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "Ready.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "Ready.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "Ready.UT99") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "Ready.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "Ready.UT2004") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "Ready.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "Ready.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "Ready.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "Ready.U1")
 	Ready.U1:
 		U1GB A 0
@@ -201,39 +211,49 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto FireNormalSound
 
 		FireNormalSound:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "FireNormalSound.UT99")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "FireNormalSound.UC2")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "FireNormalSound.UT2004")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "FireNormalSound.U1")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "FireNormalSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "FireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "FireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "FireNormalSound.UC2")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "FireNormalSound.UT2004") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "FireNormalSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "FireNormalSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "FireNormalSound.U1") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "FireNormalSound.U1")
 		FireNormalSound.U1:
-			U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_U1",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_U1",CHAN_WEAPON,1,1)
 			Goto FireLooper1
 		FireNormalSound.UT2004:
-			U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UT2004",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UT2004",CHAN_WEAPON,1,1)
 			Goto FireLooper1
 		FireNormalSound.UC2:
-			U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UC2",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UC2",CHAN_WEAPON,1,1)
 			Goto FireLooper1
 		FireNormalSound.UT99:
-			U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UT99",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UT99",CHAN_WEAPON,1,1)
 			Goto FireLooper1
 
 		FireQuadSound:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "FireQuadSound.UT99")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "FireQuadSound.UC2")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "FireQuadSound.UT2004")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "FireQuadSound.U1")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "FireQuadSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "FireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "FireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "FireQuadSound.UC2")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "FireQuadSound.UT2004") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "FireQuadSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "FireQuadSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "FireQuadSound.U1") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "FireQuadSound.U1")
 		FireQuadSound.U1:
-			U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_U1",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_U1",CHAN_WEAPON,1,1)
 			Goto FireLooper1
 		FireQuadSound.UT2004:
-			U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UT2004",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UT2004",CHAN_WEAPON,1,1)
 			Goto FireLooper1
 		FireQuadSound.UC2:
-			U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UC2",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UC2",CHAN_WEAPON,1,1)
 			Goto FireLooper1
 		FireQuadSound.UT99:
-			U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UT99",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UT99",CHAN_WEAPON,1,1)
 			Goto FireLooper1
 
 	FireLooper1:
@@ -273,21 +293,26 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto EndFireLooper3
 
 	EndFireLooper1:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "EndFireLooper1.UT99")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "EndFireLooper1.UC2")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "EndFireLooper1.UT2004")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "EndFireLooper1.U1")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "EndFireLooper1.UT99")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "EndFireLooper1.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "EndFireLooper1.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "EndFireLooper1.UC2")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "EndFireLooper1.UT2004") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "EndFireLooper1.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "EndFireLooper1.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "EndFireLooper1.U1") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "EndFireLooper1.U1")
 	EndFireLooper1.U1:
-		U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
 		Goto EndFireLooper1Static
 	EndFireLooper1.UT2004:
-		U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
 		Goto EndFireLooper1Cont
 	EndFireLooper1.UC2:
-		U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
 		Goto EndFireLooper1Cont
 	EndFireLooper1.UT99:
-		U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
 		Goto EndFireLooper1Cont
 
 	EndFireLooper1Cont:
@@ -299,21 +324,26 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto Ready
 
 	EndFireLooper2:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "EndFireLooper2.UT99")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "EndFireLooper2.UC2")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "EndFireLooper2.UT2004")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "EndFireLooper2.U1")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "EndFireLooper2.UT99")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "EndFireLooper2.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "EndFireLooper2.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "EndFireLooper2.UC2")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "EndFireLooper2.UT2004") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "EndFireLooper2.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "EndFireLooper2.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "EndFireLooper2.U1") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "EndFireLooper2.U1")
 	EndFireLooper2.U1:
-		U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
 		Goto EndFireLooper2Static
 	EndFireLooper2.UT2004:
-		U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
 		Goto EndFireLooper2Cont
 	EndFireLooper2.UC2:
-		U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
 		Goto EndFireLooper2Cont
 	EndFireLooper2.UT99:
-		U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
 		Goto EndFireLooper2Cont
 
 	EndFireLooper2Cont:
@@ -327,21 +357,26 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto Ready
 
 	EndFireLooper3:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "EndFireLooper3.UT99")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "EndFireLooper3.UC2")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "EndFireLooper3.UT2004")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "EndFireLooper3.U1")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "EndFireLooper3.UT99")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "EndFireLooper3.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "EndFireLooper3.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "EndFireLooper3.UC2")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "EndFireLooper3.UT2004") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "EndFireLooper3.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "EndFireLooper3.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "EndFireLooper3.U1") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "EndFireLooper3.U1")
 	EndFireLooper3.U1:
-		U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
 		Goto EndFireLooper3Static
 	EndFireLooper3.UT2004:
-		U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
 		Goto EndFireLooper3Cont
 	EndFireLooper3.UC2:
-		U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
 		Goto EndFireLooper3Cont
 	EndFireLooper3.UT99:
-		U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
 		Goto EndFireLooper3Cont
 
 	EndFireLooper3Cont:
@@ -362,8 +397,15 @@ Actor QCHeavyMachinegun : QCWeapon
 	Flash:
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_JumpIfInventory("HMG_UG_Ricochet",1,"FlashStrong")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "Flash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "Flash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "Flash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "Flash.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "Flash.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "Flash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "Flash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "Flash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "Flash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "Flash.Default")
 	Flash.Default:
 		TNT1 A 0 A_FireBullets(1,1,1,random(10,15),"QCBulletPuff",FBF_NORANDOM|FBF_USEAMMO)
 		Goto EndFlash
@@ -372,8 +414,15 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto EndFlash
 
 	FlashStrong:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "FlashStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "FlashStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "FlashStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "FlashStrong.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "FlashStrong.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "FlashStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "FlashStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "FlashStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "FlashStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "FlashStrong.Default")
 	FlashStrong.Default:
 		TNT1 A 0 A_FireBullets(1,1,1,random(15,23),"QCBulletStrongPuff",FBF_NORANDOM|FBF_USEAMMO)
 		Goto EndFlash
@@ -382,8 +431,15 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto EndFlash
 
 		EndFlash:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "EndFlash.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "EndFlash.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "EndFlash.Default") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "EndFlash.Default") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "EndFlash.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "EndFlash.Default") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "EndFlash.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "EndFlash.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "EndFlash.Default") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "EndFlash.Default")
 		EndFlash.Default:
 			TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(1,-1),false,9,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(1,-1))
 			TNT1 A 0 A_FireCustomMissile("MachinegunSmokeSpawner",0, false,3,2)
@@ -409,126 +465,156 @@ Actor QCHeavyMachinegun : QCWeapon
 	// Alt Fire Seq
 	//-----------------------
 	AltFire:
-		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"AltFireQuadSound")
-		TNT1 A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"AltFireQuadSound")
+		"####" A 0 A_JumpIfInventory("PowerQuad",1,"AltFireQuadSound")
+		"####" A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"AltFireQuadSound")
 		Goto AltFireNormalSound
 
 		AltFireNormalSound:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireNormalSound.UT99")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireNormalSound.UC2")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireNormalSound.UT2004")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireNormalSound.U1")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireNormalSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireNormalSound.UC2")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFireNormalSound.UT2004") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireNormalSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFireNormalSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFireNormalSound.U1") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireNormalSound.U1")
 		AltFireNormalSound.U1:
-			U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_U1",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_U1",CHAN_WEAPON,1,1)
 			Goto AltFireLooper1
 		AltFireNormalSound.UT2004:
-			U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UT2004",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UT2004",CHAN_WEAPON,1,1)
 			Goto AltFireLooper1
 		AltFireNormalSound.UC2:
-			U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UC2",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UC2",CHAN_WEAPON,1,1)
 			Goto AltFireLooper1
 		AltFireNormalSound.UT99:
-			U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UT99",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireStartLoop_UT99",CHAN_WEAPON,1,1)
 			Goto AltFireLooper1
 
 		AltFireQuadSound:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireQuadSound.UT99")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireQuadSound.UC2")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireQuadSound.UT2004")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireQuadSound.U1")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireQuadSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireQuadSound.UC2")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFireQuadSound.UT2004") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireQuadSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFireQuadSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFireQuadSound.U1") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireQuadSound.U1")
 		AltFireQuadSound.U1:
-			U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_U1",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_U1",CHAN_WEAPON,1,1)
 			Goto AltFireLooper1
 		AltFireQuadSound.UT2004:
-			U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UT2004",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UT2004",CHAN_WEAPON,1,1)
 			Goto AltFireLooper1
 		AltFireQuadSound.UC2:
-			U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UC2",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UC2",CHAN_WEAPON,1,1)
 			Goto AltFireLooper1
 		AltFireQuadSound.UT99:
-			U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UT99",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/FireStartLoop_UT99",CHAN_WEAPON,1,1)
 			Goto AltFireLooper1
 
 	AltFireFast:
-		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"AltFireFastQuadSound")
-		TNT1 A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"AltFireFastQuadSound")
+		"####" A 0 A_JumpIfInventory("PowerQuad",1,"AltFireFastQuadSound")
+		"####" A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"AltFireFastQuadSound")
 		Goto AltFireFastNormalSound
 
 		AltFireFastNormalSound:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireFastNormalSound.UT99")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireFastNormalSound.UC2")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireFastNormalSound.UT2004")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireFastNormalSound.U1")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireFastNormalSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFireFastNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFireFastNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireFastNormalSound.UC2")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFireFastNormalSound.UT2004") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireFastNormalSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFireFastNormalSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFireFastNormalSound.U1") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireFastNormalSound.U1")
 		AltFireFastNormalSound.U1:
-			U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireStartLoop_U1",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireStartLoop_U1",CHAN_WEAPON,1,1)
 			Goto AltFireLooperFast
 		AltFireFastNormalSound.UT2004:
-			U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireStartLoop_UT2004",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireStartLoop_UT2004",CHAN_WEAPON,1,1)
 			Goto AltFireLooperFast
 		AltFireFastNormalSound.UC2:
-			U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireStartLoop_UC2",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireStartLoop_UC2",CHAN_WEAPON,1,1)
 			Goto AltFireLooperFast
 		AltFireFastNormalSound.UT99:
-			U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireStartLoop_UT99",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireStartLoop_UT99",CHAN_WEAPON,1,1)
 			Goto AltFireLooperFast
 
 		AltFireFastQuadSound:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireFastQuadSound.UT99")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireFastQuadSound.UC2")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireFastQuadSound.UT2004")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireFastQuadSound.U1")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireFastQuadSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFireFastQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFireFastQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireFastQuadSound.UC2")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFireFastQuadSound.UT2004") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireFastQuadSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFireFastQuadSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFireFastQuadSound.U1") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireFastQuadSound.U1")
 		AltFireFastQuadSound.U1:
-			U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireStartLoop_U1",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireStartLoop_U1",CHAN_WEAPON,1,1)
 			Goto AltFireLooperFast
 		AltFireFastQuadSound.UT2004:
-			U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireStartLoop_UT2004",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireStartLoop_UT2004",CHAN_WEAPON,1,1)
 			Goto AltFireLooperFast
 		AltFireFastQuadSound.UC2:
-			U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireStartLoop_UC2",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireStartLoop_UC2",CHAN_WEAPON,1,1)
 			Goto AltFireLooperFast
 		AltFireFastQuadSound.UT99:
-			U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireStartLoop_UT99",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireStartLoop_UT99",CHAN_WEAPON,1,1)
 			Goto AltFireLooperFast
 
 	AltFireSuperFast:
-		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"AltFireSuperFastQuadSound")
-		TNT1 A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"AltFireSuperFastQuadSound")
+		"####" A 0 A_JumpIfInventory("PowerQuad",1,"AltFireSuperFastQuadSound")
+		"####" A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"AltFireSuperFastQuadSound")
 		Goto AltFireSuperFastNormalSound
 
 		AltFireSuperFastNormalSound:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireSuperFastNormalSound.UT99")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireSuperFastNormalSound.UC2")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireSuperFastNormalSound.UT2004")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireSuperFastNormalSound.U1")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireSuperFastNormalSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFireSuperFastNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFireSuperFastNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireSuperFastNormalSound.UC2")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFireSuperFastNormalSound.UT2004") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireSuperFastNormalSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFireSuperFastNormalSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFireSuperFastNormalSound.U1") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireSuperFastNormalSound.U1")
 		AltFireSuperFastNormalSound.U1:
-			U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireSuperStartLoop_U1",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireSuperStartLoop_U1",CHAN_WEAPON,1,1)
 			Goto AltFireLooperSuperFast
 		AltFireSuperFastNormalSound.UT2004:
-			U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireSuperStartLoop_UT2004",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireSuperStartLoop_UT2004",CHAN_WEAPON,1,1)
 			Goto AltFireLooperSuperFast
 		AltFireSuperFastNormalSound.UC2:
-			U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireSuperStartLoop_UC2",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireSuperStartLoop_UC2",CHAN_WEAPON,1,1)
 			Goto AltFireLooperSuperFast
 		AltFireSuperFastNormalSound.UT99:
-			U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireSuperStartLoop_UT99",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/AltFireSuperStartLoop_UT99",CHAN_WEAPON,1,1)
 			Goto AltFireLooperSuperFast
 
 		AltFireSuperFastQuadSound:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireSuperFastQuadSound.UT99")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireSuperFastQuadSound.UC2")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireSuperFastQuadSound.UT2004")
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireSuperFastQuadSound.U1")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFireSuperFastQuadSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFireSuperFastQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFireSuperFastQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFireSuperFastQuadSound.UC2")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFireSuperFastQuadSound.UT2004") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFireSuperFastQuadSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFireSuperFastQuadSound.UT2004")
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFireSuperFastQuadSound.U1") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFireSuperFastQuadSound.U1")
 		AltFireSuperFastQuadSound.U1:
-			U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_U1",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_U1",CHAN_WEAPON,1,1)
 			Goto AltFireLooperSuperFast
 		AltFireSuperFastQuadSound.UT2004:
-			U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_UT2004",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_UT2004",CHAN_WEAPON,1,1)
 			Goto AltFireLooperSuperFast
 		AltFireSuperFastQuadSound.UC2:
-			U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_UC2",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_UC2",CHAN_WEAPON,1,1)
 			Goto AltFireLooperSuperFast
 		AltFireSuperFastQuadSound.UT99:
-			U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_UT99",CHAN_WEAPON,1,1)
+			"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_UT99",CHAN_WEAPON,1,1)
 			Goto AltFireLooperSuperFast
 
 	AltFireLooper1:
@@ -652,21 +738,26 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto AltEndFireLooper3
 
 	AltEndFireLooper1:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltEndFireLooper1.UT99")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltEndFireLooper1.UC2")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltEndFireLooper1.UT2004")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltEndFireLooper1.U1")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltEndFireLooper1.UT99")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltEndFireLooper1.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltEndFireLooper1.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltEndFireLooper1.UC2")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltEndFireLooper1.UT2004") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltEndFireLooper1.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltEndFireLooper1.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltEndFireLooper1.U1") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltEndFireLooper1.U1")
 	AltEndFireLooper1.U1:
-		U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper1Static
 	AltEndFireLooper1.UT2004:
-		U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper1Cont
 	AltEndFireLooper1.UC2:
-		U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper1Cont
 	AltEndFireLooper1.UT99:
-		U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper1Cont
 
 	AltEndFireLooper1Cont:
@@ -692,21 +783,26 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto Ready
 
 	AltEndFireLooper2:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltEndFireLooper2.UT99")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltEndFireLooper2.UC2")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltEndFireLooper2.UT2004")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltEndFireLooper2.U1")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltEndFireLooper2.UT99")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltEndFireLooper2.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltEndFireLooper2.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltEndFireLooper2.UC2")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltEndFireLooper2.UT2004") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltEndFireLooper2.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltEndFireLooper2.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltEndFireLooper2.U1") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltEndFireLooper2.U1")
 	AltEndFireLooper2.U1:
-		U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper2Static
 	AltEndFireLooper2.UT2004:
-		U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper2Cont
 	AltEndFireLooper2.UC2:
-		U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper2Cont
 	AltEndFireLooper2.UT99:
-		U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper2Cont
 
 	AltEndFireLooper2Cont:
@@ -736,21 +832,26 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto Ready
 
 	AltEndFireLooper3:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltEndFireLooper3.UT99")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltEndFireLooper3.UC2")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltEndFireLooper3.UT2004")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltEndFireLooper3.U1")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltEndFireLooper3.UT99")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltEndFireLooper3.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltEndFireLooper3.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltEndFireLooper3.UC2")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltEndFireLooper3.UT2004") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltEndFireLooper3.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltEndFireLooper3.UT2004")
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltEndFireLooper3.U1") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltEndFireLooper3.U1")
 	AltEndFireLooper3.U1:
-		U1GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_U1",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper3Static
 	AltEndFireLooper3.UT2004:
-		U4GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT2004",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper3Cont
 	AltEndFireLooper3.UC2:
-		U6GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UC2",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper3Cont
 	AltEndFireLooper3.UT99:
-		U9GB A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
+		"####" A 0 A_PlaySound("UTDE/Weapons/Minigun/FireEnd_UT99",CHAN_WEAPON,1,0)
 		Goto AltEndFireLooper3Cont
 
 	AltEndFireLooper3Cont:
@@ -793,8 +894,15 @@ Actor QCHeavyMachinegun : QCWeapon
 	AltFlash:
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_JumpIfInventory("HMG_UG_Ricochet",1,"AltFlashStrong")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFlash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFlash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlash.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFlash.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFlash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFlash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFlash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFlash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFlash.Default")
 	AltFlash.Default:
 		TNT1 A 0 A_FireBullets(1,1,1,random(10,15),"QCBulletPuff",FBF_NORANDOM|FBF_USEAMMO)
 		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(1,-1),false,9,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(1,-1))
@@ -805,8 +913,15 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto AltEndFlash
 
 	AltFlashStrong:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFlashStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFlashStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashStrong.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFlashStrong.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFlashStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFlashStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFlashStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFlashStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFlashStrong.Default")
 	AltFlashStrong.Default:
 		TNT1 A 0 A_FireBullets(1,1,1,random(13,23),"QCBulletStrongPuff",FBF_NORANDOM|FBF_USEAMMO)
 		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(1,-1),false,9,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(1,-1))
@@ -818,8 +933,15 @@ Actor QCHeavyMachinegun : QCWeapon
 
 	AltFlashFast:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFlashFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFlashFast.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashFast.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFlashFast.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFlashFast.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFlashFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFlashFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFlashFast.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFlashFast.Default")
 	AltFlashFast.Default:
 		TNT1 A 0 A_JumpIfInventory("HMG_UG_Ricochet",1,"AltFlashFastStrong")
 		TNT1 A 0 A_FireBullets(4,4,1,random(10,15),"QCBulletPuff",FBF_NORANDOM|FBF_USEAMMO)
@@ -832,8 +954,15 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto AltEndFlash
 
 		AltEndFlash:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltEndFlash.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltEndFlash.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltEndFlash.Default") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltEndFlash.Default") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltEndFlash.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltEndFlash.Default") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltEndFlash.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltEndFlash.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltEndFlash.Default") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltEndFlash.Default")
 		AltEndFlash.Default:
 			TNT1 A 0 A_FireCustomMissile("MachinegunSmokeSpawner",0, false,3,2)
 			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"AltEndFlashCont")
@@ -851,8 +980,15 @@ Actor QCHeavyMachinegun : QCWeapon
 			Stop
 
 	AltFlashFastStrong:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashFastStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFlashFastStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFlashFastStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashFastStrong.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFlashFastStrong.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFlashFastStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFlashFastStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFlashFastStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFlashFastStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFlashFastStrong.Default")
 	AltFlashFastStrong.Default:
 		TNT1 A 0 A_FireBullets(4,4,1,random(13,23),"QCBulletStrongPuff",FBF_NORANDOM|FBF_USEAMMO)
 		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(4,-4),false,9,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(4,-4))
@@ -865,8 +1001,15 @@ Actor QCHeavyMachinegun : QCWeapon
 	AltFlashSuperFast:
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_JumpIfInventory("HMG_UG_Ricochet",1,"AltFlashSuperFastStrong")
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashSuperFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFlashSuperFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFlashSuperFast.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashSuperFast.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFlashSuperFast.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFlashSuperFast.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFlashSuperFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFlashSuperFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFlashSuperFast.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFlashSuperFast.Default")
 	AltFlashSuperFast.Default:
 		TNT1 A 0 A_FireBullets(5,5,1,random(10,15),"QCBulletPuff",FBF_NORANDOM|FBF_USEAMMO)
 		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(5,-5),false,9,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(5,-5))
@@ -877,8 +1020,15 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto AltEndFlashSuperFast
 
 	AltFlashSuperFastStrong:
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashSuperFastStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFlashSuperFastStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFlashSuperFastStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashSuperFastStrong.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFlashSuperFastStrong.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFlashSuperFastStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFlashSuperFastStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFlashSuperFastStrong.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFlashSuperFastStrong.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFlashSuperFastStrong.Default")
 	AltFlashSuperFastStrong.Default:
 		TNT1 A 0 A_FireBullets(5,5,1,random(13,23),"QCBulletStrongPuff",FBF_NORANDOM|FBF_USEAMMO)
 		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(5,-5),false,9,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(5,-5))
@@ -889,8 +1039,15 @@ Actor QCHeavyMachinegun : QCWeapon
 		Goto AltEndFlashSuperFast
 
 		AltEndFlashSuperFast:
-			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltEndFlashSuperFast.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltEndFlashSuperFast.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltEndFlashSuperFast.Default") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltEndFlashSuperFast.Default") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltEndFlashSuperFast.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltEndFlashSuperFast.Default") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltEndFlashSuperFast.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltEndFlashSuperFast.Default")
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltEndFlashSuperFast.Default") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltEndFlashSuperFast.Default")
 		AltEndFlashSuperFast.Default:
 			TNT1 A 0 A_FireCustomMissile("MachinegunSmokeSpawner",0, false,3,2)
 			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"AltEndFlashSuperFastCont")
@@ -920,8 +1077,15 @@ Actor QCHeavyMachinegunDM : QCHeavyMachinegun
 	{
 	Flash:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "Flash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "Flash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "Flash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "Flash.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "Flash.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "Flash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "Flash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "Flash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "Flash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "Flash.Default")
 	Flash.Default:
 		TNT1 A 0 A_FireBullets(1,1,1,10,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
 		Goto EndFlash
@@ -931,8 +1095,15 @@ Actor QCHeavyMachinegunDM : QCHeavyMachinegun
 
 	AltFlash:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFlash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFlash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlash.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFlash.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFlash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFlash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFlash.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFlash.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFlash.Default")
 	AltFlash.Default:
 		TNT1 A 0 A_FireBullets(1,1,1,10,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
 		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(1,-1),false,9,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(1,-1))
@@ -944,8 +1115,15 @@ Actor QCHeavyMachinegunDM : QCHeavyMachinegun
 
 	AltFlashFast:
 		TNT1 A 0 A_AlertMonsters
-		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 9, "AltFlashFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 8, "AltFlashFast.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 7, "AltFlashFast.Default") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 6, "AltFlashFast.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 5, "AltFlashFast.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 4, "AltFlashFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 3, "AltFlashFast.Default")
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 2, "AltFlashFast.Default") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTMinigunSkin", 1, "AltFlashFast.Default")
 	AltFlashFast.Default:
 		TNT1 A 0 A_FireBullets(4,4,1,10,"QCBulletPuff_DM",FBF_NORANDOM|FBF_USEAMMO)
 		TNT1 A 0 A_FireCustomMissile("BulletSmallTracer",frandom(4,-4),false,9,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(4,-4))
