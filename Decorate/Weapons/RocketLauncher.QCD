@@ -113,8 +113,13 @@ Actor QCRocketLauncher : QCWeapon
 	//-----------------------
 	Select:
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "Select.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "Select.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "Select.UT99") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "Select.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "Select.UT2004") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "Select.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "Select.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "Select.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "Select.U1")
 	Select.U1:
 		U1G6 A 0
@@ -150,8 +155,13 @@ Actor QCRocketLauncher : QCWeapon
 	//-----------------------
 	Ready:
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "Ready.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "Ready.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "Ready.UT99") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "Ready.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "Ready.UT2004") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "Ready.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "Ready.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "Ready.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "Ready.U1")
 	Ready.U1:
 		U1G6 A 0
@@ -202,8 +212,13 @@ Actor QCRocketLauncher : QCWeapon
 	// Charge 1
 	Charge100:
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "Charge100.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "Charge100.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "Charge100.UT99") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "Charge100.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "Charge100.UT2004") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "Charge100.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "Charge100.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "Charge100.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "Charge100.U1")
 	Charge100.U1:
 		U1GF A 0
@@ -324,8 +339,13 @@ Actor QCRocketLauncher : QCWeapon
 
 	Charge116:
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "Charge116.UT99")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "Charge116.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "Charge116.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "Charge116.UC2")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "Charge116.UT2004") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "Charge116.UT2004")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "Charge116.UT2004")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "Charge116.U1") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "Charge116.U1")
 	Charge116.U1:
 		"####" D 1 A_PlaySound("UTDE/Weapons/RocketLauncher/Load_U1", CHAN_5, 1.0, 0)
@@ -531,8 +551,13 @@ Actor QCRocketLauncher : QCWeapon
 
 	Charge216:
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "Charge216.UT99")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "Charge216.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "Charge216.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "Charge216.UC2")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "Charge216.UT2004") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "Charge216.UT2004")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "Charge216.UT2004")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "Charge216.U1") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "Charge216.U1")
 	Charge216.U1:
 		"####" P 1 A_PlaySound("UTDE/Weapons/RocketLauncher/Load_U1", CHAN_5, 1.0, 0)
@@ -886,8 +911,13 @@ Actor QCRocketLauncher : QCWeapon
 
 	FireAnim:
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "FireAnim.UT99")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "FireAnim.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "FireAnim.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "FireAnim.UC2")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "FireAnim.UT2004") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "FireAnim.UT2004")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "FireAnim.UT2004")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "FireAnim.U1") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "FireAnim.U1")
 	FireAnim.U1:
 		U1G6 A 0
@@ -914,8 +944,13 @@ Actor QCRocketLauncher : QCWeapon
 
 	LoadAnim:
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "LoadAnim.UT99")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "LoadAnim.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "LoadAnim.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "LoadAnim.UC2")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "LoadAnim.UT2004") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "LoadAnim.UT2004")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "LoadAnim.UT2004")
+		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "LoadAnim.U1") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "LoadAnim.U1")
 	LoadAnim.U1:
 		"####" A 0 A_PlaySound("UTDE/Weapons/RocketLauncher/Load_U1", CHAN_5, 1.0, 0)
@@ -951,8 +986,13 @@ Actor QCRocketLauncher : QCWeapon
 
 		NormalSound:
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "NormalSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "NormalSound.UT99") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "NormalSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "NormalSound.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "NormalSound.UT2004") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "NormalSound.UT2004")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "NormalSound.UT2004")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "NormalSound.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "NormalSound.U1")
 		NormalSound.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/RocketLauncher/Fire_U1", CHAN_WEAPON, 1.0, 0)
@@ -969,8 +1009,13 @@ Actor QCRocketLauncher : QCWeapon
 
 		QuadSound:
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "QuadSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "QuadSound.UT99") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "QuadSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "QuadSound.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "QuadSound.UT2004") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "QuadSound.UT2004")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "QuadSound.UT2004")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "QuadSound.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "QuadSound.U1")
 		QuadSound.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/RocketLauncher/Quad/Fire_U1", CHAN_WEAPON, 1.0, 0)
@@ -992,8 +1037,13 @@ Actor QCRocketLauncher : QCWeapon
 
 		AltNormalSound:
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "AltNormalSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "AltNormalSound.UT99") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "AltNormalSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "AltNormalSound.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "AltNormalSound.UT2004") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "AltNormalSound.UT2004")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "AltNormalSound.UT2004")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "AltNormalSound.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "AltNormalSound.U1")
 		AltNormalSound.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/RocketLauncher/AltFire_U1", CHAN_WEAPON, 1.0, 0)
@@ -1010,8 +1060,13 @@ Actor QCRocketLauncher : QCWeapon
 
 		AltQuadSound:
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "AltQuadSound.UT99")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 8, "AltQuadSound.UT99") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 7, "AltQuadSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 6, "AltQuadSound.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 5, "AltQuadSound.UT2004") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 4, "AltQuadSound.UT2004")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 3, "AltQuadSound.UT2004")
+			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 2, "AltQuadSound.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTRocketLauncherSkin", 1, "AltQuadSound.U1")
 		AltQuadSound.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/RocketLauncher/Quad/AltFire_U1", CHAN_WEAPON, 1.0, 0)
