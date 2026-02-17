@@ -124,7 +124,14 @@ Actor QCSuperNailgun : QCWeapon
 	//-----------------------
 	Select:
 		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 9, "Select.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 8, "Select.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 7, "Select.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 6, "Select.UT2003") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 5, "Select.UT2003") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 4, "Select.UT2003") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 3, "Select.UT2003")
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 2, "Select.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 1, "Select.UT99") // Fallback to another skin
 	Select.UT2003:
 		U3GD A 0
 		Goto SelectCont
@@ -156,7 +163,14 @@ Actor QCSuperNailgun : QCWeapon
 	//-----------------------
 	Ready:
 		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 9, "Ready.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 8, "Ready.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 7, "Ready.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 6, "Ready.UT2003") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 5, "Ready.UT2003") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 4, "Ready.UT2003") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 3, "Ready.UT2003")
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 2, "Ready.UT99") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTPulseGunSkin", 1, "Ready.UT99") // Fallback to another skin
 	Ready.UT2003:
 		U3GD A 0
 		Goto ReadyCont
@@ -187,7 +201,14 @@ Actor QCSuperNailgun : QCWeapon
 
 		FireNormalSound:
 			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 9, "FireNormalSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 8, "FireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 7, "FireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 6, "FireNormalSound.UT2003") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 5, "FireNormalSound.UT2003") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 4, "FireNormalSound.UT2003") // Fallback to another skin
 			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 3, "FireNormalSound.UT2003")
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 2, "FireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 1, "FireNormalSound.UT99") // Fallback to another skin
 		FireNormalSound.UT2003:
 			"####" A 0 A_PlaySound("UTDE/Weapons/PulseGun/FireStartLoop_UT2003",CHAN_WEAPON,1,1)
 			Goto FireLooper1
@@ -197,7 +218,14 @@ Actor QCSuperNailgun : QCWeapon
 
 		FireQuadSound:
 			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 9, "FireQuadSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 8, "FireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 7, "FireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 6, "FireQuadSound.UT2003") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 5, "FireQuadSound.UT2003") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 4, "FireQuadSound.UT2003") // Fallback to another skin
 			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 3, "FireQuadSound.UT2003")
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 2, "FireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 1, "FireQuadSound.UT99") // Fallback to another skin
 		FireQuadSound.UT2003:
 			"####" A 0 A_PlaySound("UTDE/Weapons/PulseGun/Quad/FireStartLoop_UT2003",CHAN_WEAPON,1,1)
 			Goto FireLooper1
@@ -229,7 +257,14 @@ Actor QCSuperNailgun : QCWeapon
 
 	EndFireLooper:
 		"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 9, "EndFireLooper.UT99")
+		"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 8, "EndFireLooper.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 7, "EndFireLooper.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 6, "EndFireLooper.UT2003") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 5, "EndFireLooper.UT2003") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 4, "EndFireLooper.UT2003") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 3, "EndFireLooper.UT2003")
+		"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 2, "EndFireLooper.UT99") // Fallback to another skin
+		"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 1, "EndFireLooper.UT99") // Fallback to another skin
 	EndFireLooper.UT2003:
 		"####" A 0 A_PlaySound("UTDE/Weapons/PulseGun/FireEnd_UT2003",CHAN_WEAPON,1,0)
 		Goto Ready
@@ -270,7 +305,14 @@ Actor QCSuperNailgun : QCWeapon
 
 		AltFireNormalSound:
 			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 9, "AltFireNormalSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 8, "AltFireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 7, "AltFireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 6, "AltFireNormalSound.UT2003") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 5, "AltFireNormalSound.UT2003") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 4, "AltFireNormalSound.UT2003") // Fallback to another skin
 			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 3, "AltFireNormalSound.UT2003")
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 2, "AltFireNormalSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 1, "AltFireNormalSound.UT99") // Fallback to another skin
 		AltFireNormalSound.UT2003:
 			"####" A 0 A_PlaySound("UTDE/Weapons/PulseGun/AltFireStartLoop_UT2003",CHAN_WEAPON,1.0,1)
 			Goto AltFireNormalSoundCont
@@ -285,7 +327,14 @@ Actor QCSuperNailgun : QCWeapon
 
 		AltFireQuadSound:
 			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 9, "AltFireQuadSound.UT99")
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 8, "AltFireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 7, "AltFireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 6, "AltFireQuadSound.UT2003") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 5, "AltFireQuadSound.UT2003") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 4, "AltFireQuadSound.UT2003") // Fallback to another skin
 			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 3, "AltFireQuadSound.UT2003")
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 2, "AltFireQuadSound.UT99") // Fallback to another skin
+			"####" A 0 A_JumpIfInventory("UTPulseGunSkin", 1, "AltFireQuadSound.UT99") // Fallback to another skin
 		AltFireQuadSound.UT2003:
 			"####" A 0 A_PlaySound("UTDE/Weapons/PulseGun/Quad/AltFireStartLoop_UT2003",CHAN_WEAPON,1.0,1)
 			Goto AltFireQuadSoundCont

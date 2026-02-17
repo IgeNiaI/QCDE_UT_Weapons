@@ -121,7 +121,14 @@ Actor QCShotgun : QCWeapon
 	// Select/Deselect Seq
 	//-----------------------
 	Select:
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 9, "Select.U1") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 8, "Select.U1") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 7, "Select.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 6, "Select.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 5, "Select.UC2") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 4, "Select.UC2") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 3, "Select.UC2") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 2, "Select.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 1, "Select.U1")
 	Select.U1:
 		U1GG A 0
@@ -183,7 +190,14 @@ Actor QCShotgun : QCWeapon
 	// Ready Seq
 	//-----------------------
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 9, "Ready.U1") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 8, "Ready.U1") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 7, "Ready.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 6, "Ready.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 5, "Ready.UC2") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 4, "Ready.UC2") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 3, "Ready.UC2") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 2, "Ready.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 1, "Ready.U1")
 	Ready.U1:
 		U1GG A 0
@@ -292,7 +306,14 @@ Actor QCShotgun : QCWeapon
 		Goto NormalSound1
 
 		NormalSound1:
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 9, "NormalSound1.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 8, "NormalSound1.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 7, "NormalSound1.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 6, "NormalSound1.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 5, "NormalSound1.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 4, "NormalSound1.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 3, "NormalSound1.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 2, "NormalSound1.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 1, "NormalSound1.U1")
 		NormalSound1.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Fire_U1",CHAN_WEAPON)
@@ -302,7 +323,14 @@ Actor QCShotgun : QCWeapon
 			Goto FlashEnder1
 
 		QuadSound1:
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 9, "QuadSound1.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 8, "QuadSound1.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 7, "QuadSound1.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 6, "QuadSound1.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 5, "QuadSound1.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 4, "QuadSound1.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 3, "QuadSound1.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 2, "QuadSound1.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 1, "QuadSound1.U1")
 		QuadSound1.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Quad/Fire_U1",CHAN_WEAPON)
@@ -352,7 +380,14 @@ Actor QCShotgun : QCWeapon
 		Goto NormalSound3
 
 		NormalSound3:
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 9, "NormalSound3.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 8, "NormalSound3.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 7, "NormalSound3.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 6, "NormalSound3.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 5, "NormalSound3.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 4, "NormalSound3.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 3, "NormalSound3.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 2, "NormalSound3.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 1, "NormalSound3.U1")
 		NormalSound3.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Fire_U1",CHAN_WEAPON)
@@ -362,7 +397,14 @@ Actor QCShotgun : QCWeapon
 			Goto FlashEnder3
 
 		QuadSound3:
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 9, "QuadSound3.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 8, "QuadSound3.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 7, "QuadSound3.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 6, "QuadSound3.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 5, "QuadSound3.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 4, "QuadSound3.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 3, "QuadSound3.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 2, "QuadSound3.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 1, "QuadSound3.U1")
 		QuadSound3.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Quad/Fire_U1",CHAN_WEAPON)
@@ -412,7 +454,14 @@ Actor QCShotgun : QCWeapon
 		Goto NormalSound5
 
 		NormalSound5:
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 9, "NormalSound5.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 8, "NormalSound5.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 7, "NormalSound5.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 6, "NormalSound5.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 5, "NormalSound5.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 4, "NormalSound5.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 3, "NormalSound5.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 2, "NormalSound5.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 1, "NormalSound5.U1")
 		NormalSound5.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Fire_U1",CHAN_WEAPON)
@@ -422,7 +471,14 @@ Actor QCShotgun : QCWeapon
 			Goto FlashEnder5
 
 		QuadSound5:
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 9, "QuadSound5.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 8, "QuadSound5.U1") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 7, "QuadSound5.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 6, "QuadSound5.UC2")
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 5, "QuadSound5.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 4, "QuadSound5.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 3, "QuadSound5.UC2") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 2, "QuadSound5.U1") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTDispersionPistolSkin", 1, "QuadSound5.U1")
 		QuadSound5.U1:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/Dispr/Quad/Fire_U1",CHAN_WEAPON)
@@ -562,6 +618,13 @@ Actor QCShotgunDM : QCShotgun
 	// Select/Deselect Seq
 	//-----------------------
 	Select:
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "Select.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "Select.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "Select.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 6, "Select.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 5, "Select.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 4, "Select.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 3, "Select.U1Stinger") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "Select.U1Stinger")
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "Select.U1Flak")
 	Select.U1Flak:
@@ -592,6 +655,13 @@ Actor QCShotgunDM : QCShotgun
 	// Ready Seq
 	//-----------------------
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "Ready.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "Ready.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "Ready.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 6, "Ready.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 5, "Ready.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 4, "Ready.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 3, "Ready.U1Stinger") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "Ready.U1Stinger")
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "Ready.U1Flak")
 	Ready.U1Flak:
@@ -651,6 +721,13 @@ Actor QCShotgunDM : QCShotgun
 
 	Flash:
 		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "Flash.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "Flash.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "Flash.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 6, "Flash.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 5, "Flash.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 4, "Flash.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 3, "Flash.U1Stinger") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "Flash.U1Stinger")
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "Flash.U1Flak")
 	Flash.U1Flak:
@@ -682,6 +759,13 @@ Actor QCShotgunDM : QCShotgun
 		Goto NormalSound
 
 		NormalSound:
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "NormalSound.U1Flak") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "NormalSound.U1Flak") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "NormalSound.U1Flak") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 6, "NormalSound.U1Stinger") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 5, "NormalSound.U1Stinger") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 4, "NormalSound.U1Stinger") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 3, "NormalSound.U1Stinger") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "NormalSound.U1Stinger")
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "NormalSound.U1Flak")
 		NormalSound.U1Flak:
@@ -692,6 +776,13 @@ Actor QCShotgunDM : QCShotgun
 			Goto FlashEnder
 
 		QuadSound:
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "QuadSound.U1Flak") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "QuadSound.U1Flak") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "QuadSound.U1Flak") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 6, "QuadSound.U1Stinger") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 5, "QuadSound.U1Stinger") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 4, "QuadSound.U1Stinger") // Fallback to another skin
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 3, "QuadSound.U1Stinger") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "QuadSound.U1Stinger")
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "QuadSound.U1Flak")
 		QuadSound.U1Flak:
