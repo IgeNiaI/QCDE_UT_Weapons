@@ -740,6 +740,30 @@ brightmap sprite U5GDP0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.pn
 brightmap sprite U5GDQ0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
 brightmap sprite U5GDR0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
 
+// UC1 Bio Rifle
+brightmap sprite U5GEA0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEA0.png"	}
+brightmap sprite U5GEB0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEB0.png"	}
+brightmap sprite U5GEC0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEC0.png"	}
+brightmap sprite U5GED0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GED0.png"	}
+brightmap sprite U5GEE0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEE0.png"	}
+brightmap sprite U5GEF0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEF0.png"	}
+brightmap sprite U5GEG0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEG0.png"	}
+brightmap sprite U5GEH0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEH0.png"	}
+brightmap sprite U5GEI0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEI0.png"	}
+brightmap sprite U5GEJ0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEJ0.png"	}
+brightmap sprite U5GEK0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEK0.png"	}
+brightmap sprite U5GEL0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEL0.png"	}
+brightmap sprite U5GEM0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEM0.png"	}
+brightmap sprite U5GEN0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEN0.png"	}
+brightmap sprite U5GEO0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEO0.png"	}
+brightmap sprite U5GEP0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEP0.png"	}
+brightmap sprite U5GEQ0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEQ0.png"	}
+brightmap sprite U5GER0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GER0.png"	}
+brightmap sprite U5GES0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GES0.png"	}
+brightmap sprite U5GET0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GET0.png"	}
+brightmap sprite U5GEU0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEU0.png"	}
+brightmap sprite U5GEV0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEV0.png"	}
+
 // UC2 Minigun
 brightmap sprite U6GBA0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBA0.png"	}
 brightmap sprite U6GBB0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBB0.png"	}
