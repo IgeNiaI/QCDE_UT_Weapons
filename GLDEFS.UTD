@@ -720,6 +720,26 @@ brightmap sprite U5GCT0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.
 brightmap sprite U5GCU0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
 brightmap sprite U5GCV0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
 
+// UC1 Pulse Gun
+brightmap sprite U5GDA0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDB0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDC0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDD0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDE0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDF0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDG0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDH0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDI0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDJ0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDK0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDL0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDM0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDN0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDO0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDP0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDQ0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+brightmap sprite U5GDR0	{	map "Sprites/Weapons/PulseGun/UC1/brightmaps/B5GDA0.png"	}
+
 // UC2 Minigun
 brightmap sprite U6GBA0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBA0.png"	}
 brightmap sprite U6GBB0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBB0.png"	}
