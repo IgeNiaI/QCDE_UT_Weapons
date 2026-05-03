@@ -696,6 +696,30 @@ brightmap sprite U5GBO0	{	map "Sprites/Weapons/Minigun/UC1/brightmaps/B5GBO0.png
 brightmap sprite U5GBP0	{	map "Sprites/Weapons/Minigun/UC1/brightmaps/B5GBP0.png"	}
 brightmap sprite U5GBQ0	{	map "Sprites/Weapons/Minigun/UC1/brightmaps/B5GBQ0.png"	}
 
+// UC1 Flak Cannon
+brightmap sprite U5GCA0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCB0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCC0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCD0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCE0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCF0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCG0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCH0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCI0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCJ0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCK0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCL0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCM0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCN0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCO0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCP0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCQ0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCR0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCS0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCT0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCU0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+brightmap sprite U5GCV0	{	map "Sprites/Weapons/FlakCannon/UC1/brightmaps/B5GCA0.png"	}
+
 // UC2 Minigun
 brightmap sprite U6GBA0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBA0.png"	}
 brightmap sprite U6GBB0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBB0.png"	}
