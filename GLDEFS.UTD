@@ -459,6 +459,21 @@ brightmap sprite U3GDP0	{	map "Sprites/Weapons/PulseGun/UT2003/brightmaps/B3GDA0
 brightmap sprite U3GDQ0	{	map "Sprites/Weapons/PulseGun/UT2003/brightmaps/B3GDA0.png"	}
 brightmap sprite U3GDR0	{	map "Sprites/Weapons/PulseGun/UT2003/brightmaps/B3GDA0.png"	}
 
+// UT2003 Shock Rifle
+brightmap sprite U3G7A0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7B0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7C0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7D0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7E0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7F0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7G0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7H0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7I0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7J0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7K0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7L0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+brightmap sprite U3G7M0	{	map "Sprites/Weapons/ShockRifle/UT2003/brightmaps/B3G7A0.png"	}
+
 // UT2003 Sniper Rifle (Lightning Gun)
 brightmap sprite U3G8A0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8A0.png"	}
 brightmap sprite U3G8B0	{	map "Sprites/Weapons/SniperRifle/UT2003/brightmaps/B3G8B0.png"	}
