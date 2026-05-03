@@ -662,6 +662,21 @@ brightmap sprite U4G9F0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9F0
 brightmap sprite U4G9G0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9G0.png"	}
 brightmap sprite U4G9H0	{	map "Sprites/Weapons/Redeemer/UT2004/brightmaps/B4G9H0.png"	}
 
+// UC1 Assault Rifle
+brightmap sprite U5G2A0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2B0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2C0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2D0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2E0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2F0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2G0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2H0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2I0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2J0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2K0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2L0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+brightmap sprite U5G2M0	{	map "Sprites/Weapons/Enforcer/UC1/brightmaps/U5B2A0.png"	}
+
 // UC2 Minigun
 brightmap sprite U6GBA0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBA0.png"	}
 brightmap sprite U6GBB0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBB0.png"	}
