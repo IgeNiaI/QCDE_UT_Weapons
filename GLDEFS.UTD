@@ -810,6 +810,21 @@ brightmap sprite U5GFW0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G
 brightmap sprite U5GFX0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
 brightmap sprite U5GFY0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
 
+// UC1 Shock Rifle
+brightmap sprite U5G7A0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7A0.png"	}
+brightmap sprite U5G7B0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7A0.png"	}
+brightmap sprite U5G7C0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7A0.png"	}
+brightmap sprite U5G7D0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7A0.png"	}
+brightmap sprite U5G7E0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7A0.png"	}
+brightmap sprite U5G7F0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7F0.png"	}
+brightmap sprite U5G7G0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7G0.png"	}
+brightmap sprite U5G7H0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7H0.png"	}
+brightmap sprite U5G7I0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7I0.png"	}
+brightmap sprite U5G7J0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7J0.png"	}
+brightmap sprite U5G7K0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7K0.png"	}
+brightmap sprite U5G7L0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7L0.png"	}
+brightmap sprite U5G7M0	{	map "Sprites/Weapons/ShockRifle/UC1/brightmaps/B5G7M0.png"	}
+
 // UC2 Minigun
 brightmap sprite U6GBA0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBA0.png"	}
 brightmap sprite U6GBB0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBB0.png"	}
