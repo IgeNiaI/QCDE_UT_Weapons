@@ -764,6 +764,52 @@ brightmap sprite U5GET0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GET0.pn
 brightmap sprite U5GEU0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEU0.png"	}
 brightmap sprite U5GEV0	{	map "Sprites/Weapons/BioRifle/UC1/brightmaps/B5GEV0.png"	}
 
+// UC1 Rocket Launcher
+brightmap sprite U5G6A0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6B0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6C0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6D0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6E0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6F0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6G0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6H0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6I0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6J0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6K0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6L0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6M0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6N0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6O0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+
+// UC1 Rocket Launcher Load +1
+brightmap sprite U5GFA0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFB0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFC0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFD0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFE0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFF0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFG0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFH0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFI0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFJ0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFK0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFL0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+
+// UC1 Rocket Launcher Load +2
+brightmap sprite U5GFM0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFN0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFO0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFP0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFQ0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFR0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFS0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFT0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFU0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFV0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFW0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFX0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5GFY0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+
 // UC2 Minigun
 brightmap sprite U6GBA0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBA0.png"	}
 brightmap sprite U6GBB0	{	map "Sprites/Weapons/Minigun/UC2/brightmaps/B6GBB0.png"	}
