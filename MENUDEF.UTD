@@ -241,6 +241,13 @@ FreeformMenu "QCDE_OptionsSkins"
 		Padding	0, 0			SelectedFontColor Tan
 	}
 
+	Command {
+		Pos		78, 322			Text "UC1"					Background			BV14028
+		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
+		Anchor 	center, center	FontColor Tan				Command utde_WeapSkins_UC1
+		Padding	0, 0			SelectedFontColor Tan
+	}
+
 
 	InsertFreeformMenu MainMenuTopBar
 	InsertFreeformMenu QCDE_OptionsTabs
@@ -372,6 +379,7 @@ OptionValue "ENskin"
 	9, "UT99"
 	3, "UT2003"
 	4, "UT2004"
+	5, "UC1"
 	6, "UC2"
 }
 
@@ -382,6 +390,7 @@ OptionValue "ENskinBG"
 	9, "SKING2U9"
 	3, "SKING2U3"
 	4, "SKING2U4"
+	5, "SKING2U5"
 	6, "SKING2U6"
 }
 
@@ -391,6 +400,7 @@ OptionValue "MGskin"
 	1, "Unreal 1"
 	9, "UT99"
 	4, "UT2004"
+	5, "UC1"
 	6, "UC2"
 }
 
@@ -400,6 +410,7 @@ OptionValue "MGskinBG"
 	1, "SKINGBU1"
 	9, "SKINGBU9"
 	4, "SKINGBU4"
+	5, "SKINGBU5"
 	6, "SKINGBU6"
 }
 
@@ -436,6 +447,7 @@ OptionValue "FLskin"
 	-1, "Class Based"
 	9, "UT99"
 	4, "UT2004"
+	5, "UC1"
 	6, "UC2"
 }
 
@@ -444,6 +456,7 @@ OptionValue "FLskinBG"
 	-1, "SKINUNKN"
 	9, "SKINGCU9"
 	4, "SKINGCU4"
+	5, "SKINGCU5"
 	6, "SKINGCU6"
 }
 
@@ -466,6 +479,7 @@ OptionValue "PGskin"
 	-1, "Class Based"
 	9, "UT99"
 	3, "UT2003"
+	5, "UC1"
 }
 
 OptionValue "PGskinBG"
@@ -473,6 +487,7 @@ OptionValue "PGskinBG"
 	-1, "SKINUNKN"
 	9, "SKINGDU9"
 	3, "SKINGDU3"
+	5, "SKINGDU5"
 }
 
 OptionValue "RPskin"
@@ -497,6 +512,8 @@ OptionValue "BRskin"
 	1, "Unreal 1"
 	9, "UT99"
 	4, "UT2004"
+	5, "UC1"
+	6, "UC2"
 }
 
 OptionValue "BRskinBG"
@@ -505,6 +522,8 @@ OptionValue "BRskinBG"
 	1, "SKINGEU1"
 	9, "SKINGEU9"
 	4, "SKINGEU4"
+	5, "SKINGEU5"
+	6, "SKINGEU6"
 }
 
 OptionValue "RLskin"
@@ -513,6 +532,7 @@ OptionValue "RLskin"
 	1, "Unreal 1"
 	9, "UT99"
 	4, "UT2004"
+	5, "UC1"
 	6, "UC2"
 }
 
@@ -522,6 +542,7 @@ OptionValue "RLskinBG"
 	1, "SKING6U1"
 	9, "SKING6U9"
 	4, "SKING6U4"
+	5, "SKING6U5"
 	6, "SKING6U6"
 }
 
@@ -530,7 +551,9 @@ OptionValue "SRskin"
 	-1, "Class Based"
 	1, "Unreal 1"
 	9, "UT99"
+	3, "UT2003"
 	4, "UT2004"
+	5, "UC1"
 	6, "UC2"
 }
 
@@ -539,7 +562,9 @@ OptionValue "SRskinBG"
 	-1, "SKINUNKN"
 	1, "SKING7U1"
 	9, "SKING7U9"
+	3, "SKING7U3"
 	4, "SKING7U4"
+	5, "SKING7U5"
 	6, "SKING7U6"
 }
 
