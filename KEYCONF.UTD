@@ -4,9 +4,10 @@
 // =========================================================
 
 alias utde_WeapSkins_Default	"cl_UTIHskin  9;	cl_UTENskin  9;	cl_UTMGskin  4;	cl_UTDPskin  1;	cl_UTFMskin  1;	cl_UTFLskin  4;	cl_UTLGskin  4;	cl_UTPGskin  9;	cl_UTRPskin  9;	cl_UTBRskin  4;	cl_UTRLskin  4;	cl_UTSRskin  4;	cl_UTSPskin  6;	cl_UTRDskin  9;	"
-alias utde_WeapSkins_U1			"					cl_UTENskin  1;	cl_UTMGskin  1;	cl_UTDPskin  1;	cl_UTFMskin  1;													cl_UTRPskin  1;	cl_UTBRskin  1;	cl_UTRLskin  1;	cl_UTSRskin  1;	cl_UTSPskin  1;					"
+alias utde_WeapSkins_U1			"					cl_UTENskin  1;	cl_UTMGskin  1;	cl_UTDPskin  1;	cl_UTFMskin  2;													cl_UTRPskin  1;	cl_UTBRskin  1;	cl_UTRLskin  1;	cl_UTSRskin  1;	cl_UTSPskin  1;					"
 alias utde_WeapSkins_UT99		"cl_UTIHskin  9;	cl_UTENskin  9;	cl_UTMGskin  9;									cl_UTFLskin  9;					cl_UTPGskin  9;	cl_UTRPskin  9;	cl_UTBRskin  9;	cl_UTRLskin  9;	cl_UTSRskin  9;	cl_UTSPskin  9;	cl_UTRDskin  9;	"
-alias utde_WeapSkins_UT2003		"cl_UTIHskin  4;	cl_UTENskin  3;	cl_UTMGskin  4;									cl_UTFLskin  4;	cl_UTLGskin  4;	cl_UTPGskin  3;					cl_UTBRskin  4;	cl_UTRLskin  4;	cl_UTSRskin  4;	cl_UTSPskin  3;	cl_UTRDskin  4;	"
+alias utde_WeapSkins_UT2003		"cl_UTIHskin  4;	cl_UTENskin  3;	cl_UTMGskin  4;									cl_UTFLskin  4;	cl_UTLGskin  4;	cl_UTPGskin  3;					cl_UTBRskin  4;	cl_UTRLskin  4;	cl_UTSRskin  3;	cl_UTSPskin  3;	cl_UTRDskin  4;	"
 alias utde_WeapSkins_UT2004		"cl_UTIHskin  4;	cl_UTENskin  4;	cl_UTMGskin  4;									cl_UTFLskin  4;	cl_UTLGskin  4;									cl_UTBRskin  4;	cl_UTRLskin  4;	cl_UTSRskin  4;	cl_UTSPskin  4;	cl_UTRDskin  4;	"
-alias utde_WeapSkins_UC2		"					cl_UTENskin  6;	cl_UTMGskin  6;	cl_UTDPskin  6;					cl_UTFLskin  6;	cl_UTLGskin  6;					cl_UTRPskin  6;					cl_UTRLskin  6;	cl_UTSRskin  6;	cl_UTSPskin  6;					"
+alias utde_WeapSkins_UC1		"cl_UTIHskin  4;	cl_UTENskin  5;	cl_UTMGskin  5;									cl_UTFLskin  5;					cl_UTPGskin  5;					cl_UTBRskin  5;	cl_UTRLskin  5;	cl_UTSRskin  5;	cl_UTSPskin  3;	cl_UTRDskin  4;	"
+alias utde_WeapSkins_UC2		"					cl_UTENskin  6;	cl_UTMGskin  6;	cl_UTDPskin  6;					cl_UTFLskin  6;	cl_UTLGskin  6;					cl_UTRPskin  6;	cl_UTBRskin  6;	cl_UTRLskin  6;	cl_UTSRskin  6;	cl_UTSPskin  6;					"
 alias utde_WeapSkins_Class		"cl_UTIHskin -1;	cl_UTENskin -1;	cl_UTMGskin -1;	cl_UTDPskin -1;	cl_UTFMskin -1;	cl_UTFLskin -1;	cl_UTLGskin -1;	cl_UTPGskin -1;	cl_UTRPskin -1;	cl_UTBRskin -1;	cl_UTRLskin -1;	cl_UTSRskin -1;	cl_UTSPskin -1;	cl_UTRDskin -1;	"

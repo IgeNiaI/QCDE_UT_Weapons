@@ -311,7 +311,6 @@ function void reReadWeaponCvars(void)
 		break;
 
 	case 3:  // Kane
-	case 6:  // Terminator
 	case 14: // Durandal
 	case 24: // Lucienne
 	case 27: // Sam
@@ -325,6 +324,10 @@ function void reReadWeaponCvars(void)
 	case 21: // Freeman
 	case 26: // Hunter
 		classSkin = 4;
+		break;
+
+	case 6:  // Terminator
+		classSkin = 5;
 		break;
 
 	case 12: // Sorgaul
