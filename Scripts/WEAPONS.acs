@@ -423,7 +423,9 @@ Script "QCDE_ZoomControl" (int predicting, int justPressed, int justReleased, in
 		// in UTDE, only Sniper  Rifle can zoom
 		if (CheckWeapon("QCRailgun") || CheckWeapon("QCRailgunDM"))
 		{
-			bool shouldZoomIn = !CheckInventory("WeaponZoomedToken") && justPressed;
+			bool shouldZoomIn = !CheckInventory("WeaponZoomedToken") && justPressed
+								&& !CheckWeapon("DukeFreezeThrower") && !CheckWeapon("SamMinigun")
+								&& !CheckWeapon("BrockTranslocator");
 			bool shouldZoomOut = CheckInventory("WeaponZoomedToken") && GetCVar("cl_holdZoom") ? justReleased : justPressed;
 
 			if (shouldZoomIn)
