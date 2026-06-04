@@ -46,8 +46,10 @@ script "UTANN_FragEvent" (int evtTyp, int victimNo, int arg2) EVENT {
 	//GAMEEVENT_PLAYERFRAGS
 	if(evtTyp == 0) {
 		
-		if(!firstBloodGiven)
+		if(!firstBloodGiven) {
+			firstBloodGiven = true;
 			ACS_NamedExecuteAlways("UTANN_FirstBlood", 0);
+		}
 			
 		ACS_NamedExecuteAlways("UTANN_Excellent", 0, Timer());
 		ACS_NamedExecuteAlways("UTANN_KillingSpree", 0);
@@ -100,8 +102,7 @@ script "UTANN_KillingSpree" (void) {
 }
 
 script "UTANN_FirstBlood" (void) {
-	
-	firstBloodGiven = true;
+
 	Delay(50);
 	ACS_NamedExecuteAlways("UTANN_Announce", 0, FIRST_BLOOD, 0, PlayerNumber());
 }
