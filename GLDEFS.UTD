@@ -870,6 +870,30 @@ brightmap sprite U6G5V0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"
 brightmap sprite U6G5W0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
 brightmap sprite U6G5X0	{	map "Sprites/Weapons/Ripper/UC2/brightmaps/B6G5A0.png"	}
 
+// UC2 Bio Rifle
+brightmap sprite U6GEA0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEA0.png"	}
+brightmap sprite U6GEB0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEB0.png"	}
+brightmap sprite U6GEC0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEC0.png"	}
+brightmap sprite U6GED0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GED0.png"	}
+brightmap sprite U6GEE0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEE0.png"	}
+brightmap sprite U6GEF0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEF0.png"	}
+brightmap sprite U6GEG0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEG0.png"	}
+brightmap sprite U6GEH0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEH0.png"	}
+brightmap sprite U6GEI0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEI0.png"	}
+brightmap sprite U6GEJ0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEJ0.png"	}
+brightmap sprite U6GEK0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEK0.png"	}
+brightmap sprite U6GEL0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEL0.png"	}
+brightmap sprite U6GEM0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEM0.png"	}
+brightmap sprite U6GEN0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEN0.png"	}
+brightmap sprite U6GEO0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEO0.png"	}
+brightmap sprite U6GEP0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEP0.png"	}
+brightmap sprite U6GEQ0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEQ0.png"	}
+brightmap sprite U6GER0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GER0.png"	}
+brightmap sprite U6GES0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GES0.png"	}
+brightmap sprite U6GET0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GET0.png"	}
+brightmap sprite U6GEU0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEU0.png"	}
+brightmap sprite U6GEV0	{	map "Sprites/Weapons/BioRifle/UC2/brightmaps/B6GEV0.png"	}
+
 // UC2 Shock Rifle
 brightmap sprite U6G7A0	{	map "Sprites/Weapons/ShockRifle/UC2/brightmaps/B6G7A0.png"	}
 brightmap sprite U6G7B0	{	map "Sprites/Weapons/ShockRifle/UC2/brightmaps/B6G7B0.png"	}
