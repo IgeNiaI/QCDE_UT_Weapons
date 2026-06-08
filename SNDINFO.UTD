@@ -267,6 +267,10 @@ UTDE/Weapons/BioRifle/Impact7_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact7.wav"
 UTDE/Weapons/BioRifle/Impact8_U1				"Sounds/Weapons/BioRifle/U1/BR_Impact8.wav"
 
 
+UTDE/Weapons/BioRifle/Fire_UC2					"Sounds/Weapons/BioRifle/UC2/BR_Fire.wav"
+UTDE/Weapons/BioRifle/Quad/Fire_UC2				"Sounds/Weapons/BioRifle/UC2/Quad/BR_Fire.wav"
+UTDE/Weapons/BioRifle/Charge_UC2				"Sounds/Weapons/BioRifle/UC2/BR_Charge.wav"
+
 //********************
 // Rocket Launcher
 UTDE/Weapons/RocketLauncher/Fire_UT2004			"Sounds/Weapons/RocketLauncher/UT2004/RL_Fire.wav"
