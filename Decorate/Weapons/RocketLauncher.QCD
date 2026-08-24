@@ -952,7 +952,7 @@ Actor QCRocketLauncher : QCWeapon
 		"####" C 1 Offset(30,23) Bright
 		"####" D 1 Offset(33,17) Bright
 
-		"####" AAAA 1 Offset(37,14)
+		"####" EEEE 1 Offset(37,14)
 
 	LoadAnim:
 		"####" A 0 A_JumpIfInventory("UTRocketLauncherSkin", 9, "LoadAnim.UT99")
@@ -978,17 +978,17 @@ Actor QCRocketLauncher : QCWeapon
 		Goto LoadAnimCont
 
 	LoadAnimCont:
-		"####" EEFFGGHHII 1 Offset(37,14)
-		"####" J 1 Offset(31,16)
-		"####" J 1 Offset(23,18)
-		"####" K 1 Offset(17,20)
-		"####" K 1 Offset(12,22)
-		"####" L 1 Offset(10,24)
+		"####" FFGGHHIIJJ 1 Offset(37,14)
+		"####" K 1 Offset(31,16)
+		"####" K 1 Offset(23,18)
+		"####" L 1 Offset(17,20)
+		"####" L 1 Offset(12,22)
+		"####" M 1 Offset(10,24)
 
-		"####" L 1 Offset(7,26)
-		"####" M 1 Offset(4,28)
-		"####" N 1 Offset(2,30)
-		"####" O 1 Offset(1,31)
+		"####" M 1 Offset(7,26)
+		"####" N 1 Offset(4,28)
+		"####" O 1 Offset(2,30)
+		"####" P 1 Offset(1,31)
 		Goto Ready
 
 	FlashCheckSound:
