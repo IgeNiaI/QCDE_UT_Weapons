@@ -151,6 +151,7 @@ brightmap sprite U1G6L0	{	map "Sprites/Weapons/RocketLauncher/U1/brightmaps/B1G6
 brightmap sprite U1G6M0	{	map "Sprites/Weapons/RocketLauncher/U1/brightmaps/B1G6A0.png"	}
 brightmap sprite U1G6N0	{	map "Sprites/Weapons/RocketLauncher/U1/brightmaps/B1G6A0.png"	}
 brightmap sprite U1G6O0	{	map "Sprites/Weapons/RocketLauncher/U1/brightmaps/B1G6A0.png"	}
+brightmap sprite U1G6P0	{	map "Sprites/Weapons/RocketLauncher/U1/brightmaps/B1G6A0.png"	}
 
 // U1 Rocket Launcher Load +1
 brightmap sprite U1GFA0	{	map "Sprites/Weapons/RocketLauncher/U1/brightmaps/B1G6A0.png"	}
@@ -369,6 +370,7 @@ brightmap sprite U9G6L0	{	map "Sprites/Weapons/RocketLauncher/UT99/brightmaps/B9
 brightmap sprite U9G6M0	{	map "Sprites/Weapons/RocketLauncher/UT99/brightmaps/B9G6A0.png"	}
 brightmap sprite U9G6N0	{	map "Sprites/Weapons/RocketLauncher/UT99/brightmaps/B9G6A0.png"	}
 brightmap sprite U9G6O0	{	map "Sprites/Weapons/RocketLauncher/UT99/brightmaps/B9G6A0.png"	}
+brightmap sprite U9G6P0	{	map "Sprites/Weapons/RocketLauncher/UT99/brightmaps/B9G6A0.png"	}
 
 // UT99 Rocket Launcher Load +1
 brightmap sprite U9GFA0	{	map "Sprites/Weapons/RocketLauncher/UT99/brightmaps/B9G6A0.png"	}
@@ -589,6 +591,7 @@ brightmap sprite U4G6L0	{	map "Sprites/Weapons/RocketLauncher/UT2004/brightmaps/
 brightmap sprite U4G6M0	{	map "Sprites/Weapons/RocketLauncher/UT2004/brightmaps/B4G6M0.png"	}
 brightmap sprite U4G6N0	{	map "Sprites/Weapons/RocketLauncher/UT2004/brightmaps/B4G6N0.png"	}
 brightmap sprite U4G6O0	{	map "Sprites/Weapons/RocketLauncher/UT2004/brightmaps/B4G6O0.png"	}
+brightmap sprite U4G6P0	{	map "Sprites/Weapons/RocketLauncher/UT2004/brightmaps/B4G6P0.png"	}
 
 // UT2004 Rocket Launcher Load +1
 brightmap sprite U4GFA0	{	map "Sprites/Weapons/RocketLauncher/UT2004/brightmaps/B4G6A0.png"	}
@@ -780,6 +783,7 @@ brightmap sprite U5G6L0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G
 brightmap sprite U5G6M0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
 brightmap sprite U5G6N0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
 brightmap sprite U5G6O0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
+brightmap sprite U5G6P0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
 
 // UC1 Rocket Launcher Load +1
 brightmap sprite U5GFA0	{	map "Sprites/Weapons/RocketLauncher/UC1/brightmaps/B5G6A0.png"	}
