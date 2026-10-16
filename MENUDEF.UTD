@@ -573,8 +573,8 @@ OptionValue "SPskin"
 	-1, "Class Based"
 	1, "Unreal 1"
 	9, "UT99"
+	3, "UT2003"
 	4, "UT2004"
-	3, "UT2004 LG"
 	6, "UC2"
 }
 
@@ -583,8 +583,8 @@ OptionValue "SPskinBG"
 	-1, "SKINUNKN"
 	1, "SKING8U1"
 	9, "SKING8U9"
-	4, "SKING8U4"
 	3, "SKING8U3"
+	4, "SKING8U4"
 	6, "SKING8U6"
 }
 
