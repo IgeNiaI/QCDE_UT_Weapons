@@ -220,6 +220,7 @@ Actor QCBFG : QCWeapon
 
 Actor UTRedeemerMissile : UnlaggedActor
 {
+	var int user_explosionpulse;
 	Projectile
 	+DEHEXPLOSION
 	+EXTREMEDEATH
@@ -275,18 +276,22 @@ Actor UTRedeemerMissile : UnlaggedActor
 			Goto ExplodeCont
 
 	ExplodeCont:
-		TNT1 A 0 A_JumpIfInTargetInventory("BFG_UG_Rays", 1, "ExplodeContUpgraded")
-		TNT1 A 0 A_Explode(1500,1024,XF_HURTSOURCE,0,18) // deal same damage to shooter as in DM
-		TNT1 A 0 A_Explode(random(1500,2000),1024,0,0,18) // deal extra damage to everyone else
-		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Jump(256,"DeathCont") // release guided control before the blast sequence
 		Goto DeathCont
 
-	ExplodeContUpgraded:
-		TNT1 A 0 A_Explode(500,1024,XF_HURTSOURCE,0,18) // deal same damage to shooter as in DM
-		TNT1 A 0 A_Explode(1000,1024,0,0,18) // deal extra damage to everyone else
-		TNT1 A 0 A_Explode(random(1500,2000),1024,0,0,18) // deal extra damage to everyone else
-		TNT1 A 0 A_Jump(256,"DeathCont") //for virtual jump to inherited versions
-		Goto DeathCont
+	DamagePulse:
+		TNT1 A 0 A_JumpIfInTargetInventory("BFG_UG_Rays", 1, "DamagePulseUpgraded")
+		TNT1 A 0 A_Explode(1500/7,1024*user_explosionpulse/7,XF_HURTSOURCE,0,18) // deal same damage to shooter as in DM
+		TNT1 A 0 A_Explode(random(1500/7,2000/7),1024*user_explosionpulse/7,0,0,18) // deal extra damage to everyone else
+		Goto NextExplosion
+
+	DamagePulseUpgraded:
+		TNT1 A 0 A_Explode(500/7,1024*user_explosionpulse/7,XF_HURTSOURCE,0,18) // deal same damage to shooter as in DM
+		TNT1 A 0 A_Explode(1000/7,1024*user_explosionpulse/7,0,0,18) // deal extra damage to everyone else
+		TNT1 A 0 A_Explode(random(1500/7,2000/7),1024*user_explosionpulse/7,0,0,18) // deal extra damage to everyone else
+		Goto NextExplosion
 
 	DeathCont:
 		Goto DeathFX
@@ -400,6 +405,16 @@ Actor UTRedeemerMissile : UnlaggedActor
 		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  0.0, -2.5,	0,SXF_NOCHECKPOSITION)
 		TNT1 A 0 A_SpawnItemEx("UTRedeemerExplosion", 0, 0, 0,   0.0,  0.0, -5.0,	0,SXF_NOCHECKPOSITION)
 
+		// Effects start first; seven pulses follow at 5-tic intervals (35 tics = 1 second).
+		TNT1 A 0 A_SetUserVar(user_explosionpulse,0)
+	NextExplosion:
+		TNT1 A 0 A_JumpIf(user_explosionpulse>=7,"ExplosionDone")
+		TNT1 A 5
+		TNT1 A 0 A_SetUserVar(user_explosionpulse,user_explosionpulse+1)
+		TNT1 A 0 A_Jump(256,"DamagePulse") // use the appropriate SP/DM damage profile
+		Goto DamagePulse
+
+	ExplosionDone:
 		TNT1 A 99 // We need this for proper rocket jump unlagged when exploding too soon
 		Stop
 	}
@@ -504,9 +519,9 @@ Actor UTRedeemerMissileDM : UTRedeemerMissile
 	-DONTBLAST
 	States
 	{
-	ExplodeCont:
-		TNT1 A 0 A_Explode(1500,1024,XF_HURTSOURCE,0,18)
-		Goto DeathCont
+	DamagePulse:
+		TNT1 A 0 A_Explode(1500/7,1024*user_explosionpulse/7,XF_HURTSOURCE,0,18)
+		Goto NextExplosion
 	}
 }
 
@@ -516,9 +531,9 @@ Actor UTRedeemerMissileControlledDM : UTRedeemerMissileControlled
 	-DONTBLAST
 	States
 	{
-	ExplodeCont:
-		TNT1 A 0 A_Explode(1500,1024,XF_HURTSOURCE,0,18)
-		Goto DeathCont
+	DamagePulse:
+		TNT1 A 0 A_Explode(1500/7,1024*user_explosionpulse/7,XF_HURTSOURCE,0,18)
+		Goto NextExplosion
 	}
 }
 
