@@ -1382,6 +1382,22 @@ Actor LGworldactor2Purple_Quake3 { States { Spawn:
 	LGWR Z 1
 	Stop
 }}
+Actor LGworldactor_Modded { States { Spawn:
+	MDY6 Y 1
+	Stop
+}}
+Actor LGworldactor2_Modded { States { Spawn:
+	MDY6 Z 1
+	Stop
+}}
+Actor LGworldactorPurple_Modded { States { Spawn:
+	MDY6 Y 1
+	Stop
+}}
+Actor LGworldactor2Purple_Modded { States { Spawn:
+	MDY6 Z 1
+	Stop
+}}
 Actor RailgunTrail_Quake1 { States { Spawn:
 	RTQ1 A 1
 	Stop
@@ -1406,16 +1422,20 @@ Actor RailgunTrail_SeriousSam { States { Spawn:
 	RTSS A 1
 	Stop
 }}
+Actor RailgunTrail_Modded { States { Spawn:
+	MDM7 A 1
+	Stop
+}}
 Actor UnusedActor { States { Spawn:
-	QCG3 Y 1
-	QCGb Y 1
-	QCGC Y 1
-	QCGD Y 1
-	QCG5 Y 1
-	QCGE Y 1
-	QCG6 Y 1
-	QCG7 Y 1
-	QCG8 Y 1
+	WPN3 Y 1
+	WPNB Y 1
+	WPNC Y 1
+	WPND Y 1
+	WPNE Y 1
+	WPN5 Y 1
+	WPN6 Y 1
+	WPN7 Y 1
+	WPN8 Y 1
 	Wait
 }}
 
