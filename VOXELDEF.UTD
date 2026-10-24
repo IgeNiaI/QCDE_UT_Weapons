@@ -1,0 +1,10 @@
+// Campaign orange key; overrides the map pack key when this addon is loaded.
+
+KMKGA = "Voxels/Pickups/HubKeyOrange.kvx" {Spin=50}
+KMKGB = "Voxels/Pickups/HubKeyOrange.kvx" {Spin=50}
+KMKGC = "Voxels/Pickups/HubKeyOrange.kvx" {Spin=50}
+KMKGD = "Voxels/Pickups/HubKeyOrange.kvx" {Spin=50}
+KMKGE = "Voxels/Pickups/HubKeyOrange.kvx" {Spin=50}
+KMKGF = "Voxels/Pickups/HubKeyOrange.kvx" {Spin=50}
+KMKGG = "Voxels/Pickups/HubKeyOrange.kvx" {Spin=50}
+KMKGH = "Voxels/Pickups/HubKeyOrange.kvx" {Spin=50}
