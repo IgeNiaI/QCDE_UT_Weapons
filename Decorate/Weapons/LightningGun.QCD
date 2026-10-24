@@ -266,15 +266,13 @@ Actor QCLightningGun : QCWeapon
 
 ACTOR UTShockRifleOrb : UnlaggedActor
 {
-	var int user_xdeath;
-
 	Projectile
 	+SHOOTABLE
+	+NODAMAGE // React to shots through Pain without being killed
 	+NOBLOOD
 	+DONTRIP
 	+DONTREFLECT
 	-NOBLOCKMAP
-	+USEBOUNCESTATE
 	+MTHRUSPECIES
 	+DONTBLAST
 	Mass 0x7FFFFFFF
@@ -284,11 +282,10 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 	Damage (random(110,150))
 	Scale 0.22
 	Health 1
-	WoundHealth 1
+	PainChance "ShkRflDmg", 256
 	DamageFactor "Normal" , 0.0
 	DamageFactor "ShkRflDmg", 1.1
 	DamageType "ShkRflDmg"
-	BounceType Doom
 	Decal "UTShockPurpleFull"
 	SeeSound "weapons/maceshoot"
 	Obituary "$OB_UTShockRifle"
@@ -304,8 +301,7 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 	Xdeath:	//hit bleeding actor
 		TNT1 A 0 A_StopSound(CHAN_5)
 		TNT1 A 0 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
-		TNT1 A 0 A_SetUserVar(user_xdeath, 1)
-	Bounce:
+	Death:
 		TNT1 A 0 A_StopSound(CHAN_5) // Stop whoosh sound
 		TNT1 A 0 A_Jump(256, 1) // force sync the actor state
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/OrbHit",CHAN_AUTO,1,0,1)
@@ -328,10 +324,12 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 		SHOC E 1 BRIGHT A_SetScale(0.34, 0.34)
 		TNT1 A 99 // We need this for proper unlagged when hitting a wall too soon
 		Stop
-	Death:
+	Pain.ShkRflDmg:
+		TNT1 A 0 A_SetInvulnerable
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
 		TNT1 A 0 A_StopSound(CHAN_5)
-		TNT1 A 0 A_JumpIf(user_xdeath==1, "Bounce")
-		TNT1 A 0 A_JumpIfInTargetInventory("LG_UG_Static", 1, "DeathUpgraded")
+		TNT1 A 0 A_JumpIfInTargetInventory("LG_UG_Static", 1, "ComboUpgraded")
 		// Damage players while being unlagged
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
 		// Stop unlag here so that we could replicate the actor to clients
@@ -339,7 +337,7 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 		// Spawn combo effects on clients
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
-	DeathUpgraded:
+	ComboUpgraded:
 		// Damage players while being unlagged
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleOrbbSucc", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
 		// Stop unlag here so that we could replicate the actor to clients
@@ -465,8 +463,11 @@ ACTOR UTShockRifleOrbDM : UTShockRifleOrb
 	Damage (45)
 	States
 	{
-	Death:
-		TNT1 A 0 A_JumpIf(user_xdeath==1, "Bounce")
+	Pain.ShkRflDmg:
+		TNT1 A 0 A_SetInvulnerable
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_StopSound(CHAN_5)
 		// Damage players while being unlagged
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboDM", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
 		TNT1 A 1 // Stop unlag here so that we could replicate the actor to clients
