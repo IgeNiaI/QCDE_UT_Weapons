@@ -1,0 +1,33 @@
+Minigun
+
+Assets
+
+Weapon sprites and brightmaps: Sprites/Weapons/Minigun/
+Sounds: Sounds/Weapons/Minigun/
+Menu previews: Graphics/Menu/SkinPreviews/Minigun/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Fire                    E      A-I       F
+Fire end                G      A-P       H
+
+Prepare: 26 frames, 1 tic each; firing is allowed.
+Idle: 6 frames, 1 tic each. Current artwork is static.
+Fire: A is resting; B-I alternate while firing, at all firing speeds.
+Fire end: A is resting; B-P slow the barrels to a stop.
+Unreal 1 uses B-P; other skins use B-K.
+Identical frames and brightmaps share images.
+
+Modded uses UT2004 as its base. Each frame has its own image and brightmap.
+
+Other Modded frames
+
+MDYB A                  Bullet tracer (model)
+MDZB A-T                Bullet impacts
+
+Modded assets are in the Modded subfolders above.
+Tracer model and texture: MD3/PROJECTILES/Minigun/Modded/
+Prepare and idle sounds are silent placeholders.

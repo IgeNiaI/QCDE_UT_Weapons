@@ -993,3 +993,13 @@ Model SniperTrailUpgraded
 	INHERITACTORPITCH
 	FrameIndex RTQW A 0 0
 }
+
+Model BulletSmallTracerUTMG_Modded
+{
+	Path "MD3/PROJECTILES/Minigun/Modded"
+	SKIN 0 "MDYB.png"
+	MODEL 0 "tracer.md3"
+	Scale 4.5 4.5 1.5
+	PITCHFROMMOMENTUM
+	FrameIndex MDYB A 0 0
+}
