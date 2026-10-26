@@ -414,6 +414,7 @@ OptionValue "MGskin"
 	4, "UT2004"
 	5, "UC1"
 	6, "UC2"
+	20, "$WeaponSkin_Minigun_Modded"
 }
 
 OptionValue "MGskinBG"
@@ -424,6 +425,7 @@ OptionValue "MGskinBG"
 	4, "SKINGBU4"
 	5, "SKINGBU5"
 	6, "SKINGBU6"
+	20, "SKINGBMD"
 }
 
 OptionValue "DPskin"

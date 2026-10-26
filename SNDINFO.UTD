@@ -127,6 +127,19 @@ UTDE/Weapons/Minigun/AltFireSuperStartLoop_UC2			"Sounds/Weapons/Minigun/UC2/MG_
 UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_UC2		"Sounds/Weapons/Minigun/UC2/Quad/MG_AltSuperFire_Looper.wav"
 UTDE/Weapons/Minigun/FireEnd_UC2						"Sounds/Weapons/Minigun/UC2/MG_End.wav"
 
+// Modded Minigun
+//UTDE/Weapons/Minigun/Prepare_Modded				"Sounds/Weapons/Minigun/Modded/MG_Prepare.ogg"
+//UTDE/Weapons/Minigun/Idle_Modded				"Sounds/Weapons/Minigun/Modded/MG_Idle.ogg"
+
+UTDE/Weapons/Minigun/FireStartLoop_Modded				"Sounds/Weapons/Minigun/Modded/MG_Fire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/FireStartLoop_Modded			"Sounds/Weapons/Minigun/Modded/Quad/MG_Fire_Looper.wav"
+UTDE/Weapons/Minigun/AltFireStartLoop_Modded			"Sounds/Weapons/Minigun/Modded/MG_AltFire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/AltFireStartLoop_Modded		"Sounds/Weapons/Minigun/Modded/Quad/MG_AltFire_Looper.wav"
+UTDE/Weapons/Minigun/AltFireSuperStartLoop_Modded		"Sounds/Weapons/Minigun/Modded/MG_AltSuperFire_Looper.wav"
+UTDE/Weapons/Minigun/Quad/AltFireSuperStartLoop_Modded	"Sounds/Weapons/Minigun/Modded/Quad/MG_AltSuperFire_Looper.wav"
+UTDE/Weapons/Minigun/FireEnd_Modded						"Sounds/Weapons/Minigun/Modded/MG_End.wav"
+
+
 
 //********************
 // Dispersion Pistol

@@ -1,0 +1,33 @@
+Minigun
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/Minigun/
+Sounds: Sounds/Weapons/Minigun/
+Modded models and model textures: MD3/PROJECTILES/Modded/Minigun/
+Menu previews: Graphics/Menu/SkinPreviews/Minigun/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Fire                    E      A-I       F
+Primary fire end 1      I      A-Z       J
+Primary fire end 2      K      A-V       L
+Alternate fire end 1    M      A-Z       N
+Alternate fire end 2    O      A-Z       P
+Alternate fire end 3    Q      A-D       R
+
+All skins share 48-tic primary endings and 54/54/56-tic alternate endings.
+Alternate endings 1/2 start at M C; ending 3 starts at M A.
+Each animation tic has its own sprite and brightmap PNG. Corresponding loop
+exits share these images but retain their original offset/ready actions.
+Unreal 1 spin-down artwork is extended by repeating frames to fit the shared
+timing. Legacy G/H images remain available but are no longer used by endings.
+UT2004 uses black brightmaps to preserve its original unlit appearance.
+
+Other Modded frames
+
+Bullet tracer (model)       MDYB A
+Bullet hit effects          MDZB A-T
