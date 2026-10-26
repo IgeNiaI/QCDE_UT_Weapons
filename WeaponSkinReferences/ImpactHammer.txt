@@ -1,0 +1,20 @@
+Impact Hammer
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/ImpactHammer/
+Sounds: Sounds/Weapons/ImpactHammer/
+Menu previews: Graphics/Menu/SkinPreviews/ImpactHammer/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Charge                  E      A-P       F
+Fully charged           G      A-D       H
+Fire                    I      A-Q       J
+
+Other Modded frames
+
+Reflector ball          MDZ1 A

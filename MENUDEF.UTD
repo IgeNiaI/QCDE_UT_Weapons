@@ -249,6 +249,14 @@ FreeformMenu "QCDE_OptionsSkins"
 	}
 
 
+	Command {
+		Pos		156, 322		Text "$WeaponSkin_Modded"		Background			BV14028
+		Size	70, 14			Font SmallFont				SelectedBackground	BV14028S
+		Anchor	center, center	FontColor Tan				Command utde_WeapSkins_Modded
+		Padding	0, 0			SelectedFontColor Tan
+	}
+
+
 	InsertFreeformMenu MainMenuTopBar
 	InsertFreeformMenu QCDE_OptionsTabs
 }
@@ -363,6 +371,7 @@ OptionValue "IHskin"
 	-1, "Class Based"
 	9, "UT99"
 	4, "UT2004"
+	20, "$WeaponSkin_ImpactHammer_Modded"
 }
 
 OptionValue "IHskinBG"
@@ -370,6 +379,7 @@ OptionValue "IHskinBG"
 	-1, "SKINUNKN"
 	9, "SKING1U9"
 	4, "SKING1U4"
+	20, "SKING1MD"
 }
 
 OptionValue "ENskin"

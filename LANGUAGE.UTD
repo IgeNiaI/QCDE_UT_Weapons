@@ -1,6 +1,9 @@
 
 [enu default]
 
+WeaponSkin_Modded = "Modded";
+WeaponSkin_ImpactHammer_Modded = "Modded";
+
 Control_Slot1	= "Impact Hammer";
 Control_Slot2	= "Minigun / Enforcer";
 Control_Slot3	= "Flak / Disp Pistol";

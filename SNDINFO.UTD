@@ -45,6 +45,27 @@ UTDE/Weapons/ImpactHammer/Charged_UT2004			"Sounds/Weapons/ImpactHammer/UT2004/I
 UTDE/Weapons/ImpactHammer/AltFire_UT2004			"Sounds/Weapons/ImpactHammer/UT2004/IH_Fire_Alt.wav"
 UTDE/Weapons/ImpactHammer/Quad/AltFire_UT2004		"Sounds/Weapons/ImpactHammer/UT2004/Quad/IH_Fire_Alt.wav"
 
+// Modded Impact Hammer
+//UTDE/Weapons/ImpactHammer/Prepare_Modded			"Sounds/Weapons/ImpactHammer/Modded/IH_Prepare.ogg"
+//UTDE/Weapons/ImpactHammer/Idle_Modded				"Sounds/Weapons/ImpactHammer/Modded/IH_Idle.ogg"
+
+UTDE/Weapons/ImpactHammer/Fire_Modded				"Sounds/Weapons/ImpactHammer/Modded/IH_Fire.wav"
+UTDE/Weapons/ImpactHammer/Quad/Fire_Modded			"Sounds/Weapons/ImpactHammer/Modded/Quad/IH_Fire.wav"
+UTDE/Weapons/ImpactHammer/AltFire_Modded			"Sounds/Weapons/ImpactHammer/Modded/IH_Fire_Alt.wav"
+UTDE/Weapons/ImpactHammer/Quad/AltFire_Modded		"Sounds/Weapons/ImpactHammer/Modded/Quad/IH_Fire_Alt.wav"
+
+UTDE/Weapons/ImpactHammer/Charge_Modded				"Sounds/Weapons/ImpactHammer/Modded/IH_Charge.wav"
+UTDE/Weapons/ImpactHammer/Charged_Modded			"Sounds/Weapons/ImpactHammer/Modded/IH_Charged.wav"
+
+
+$volume "UTDE/Weapons/ImpactHammer/Fire_Modded"				0.80
+$volume "UTDE/Weapons/ImpactHammer/Quad/Fire_Modded"		0.80
+$volume "UTDE/Weapons/ImpactHammer/Charge_Modded"			0.80
+$volume "UTDE/Weapons/ImpactHammer/Charged_Modded"			0.80
+$volume "UTDE/Weapons/ImpactHammer/AltFire_Modded"			0.80
+$volume "UTDE/Weapons/ImpactHammer/Quad/AltFire_Modded"		0.80
+
+
 
 //********************
 // Enforcer
