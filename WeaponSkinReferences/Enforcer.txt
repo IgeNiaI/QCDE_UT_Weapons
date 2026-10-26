@@ -1,0 +1,26 @@
+Enforcer
+
+Assets
+
+Weapon sprites and brightmaps: Sprites/Weapons/Enforcer/
+Sounds: Sounds/Weapons/Enforcer/
+Menu previews: Graphics/Menu/SkinPreviews/Enforcer/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Fire                    E      A-M       F
+
+Prepare: 26 frames, 1 tic each; firing is allowed.
+Idle: 6 frames, 1 tic each. Current artwork is static.
+Fire: A is resting; B-G and H-M are alternating shots, 1 tic per frame.
+Identical frames and brightmaps share images.
+
+Other Modded frames
+
+MDZ2 A-T                Bullet impacts
+
+Modded assets are in the Modded subfolders above.
+Prepare and idle sounds are silent placeholders.

@@ -84,6 +84,14 @@ UTDE/Weapons/Enforcer/Quad/Fire_UC2			"Sounds/Weapons/Enforcer/UC2/Quad/EN_Fire.
 UTDE/Weapons/Enforcer/Fire_UT99				"Sounds/Weapons/Enforcer/UT99/EN_Fire.wav"
 UTDE/Weapons/Enforcer/Quad/Fire_UT99		"Sounds/Weapons/Enforcer/UT99/Quad/EN_Fire.wav"
 
+// Modded Enforcer
+//UTDE/Weapons/Enforcer/Prepare_Modded		"Sounds/Weapons/Enforcer/Modded/EN_Prepare.ogg"
+//UTDE/Weapons/Enforcer/Idle_Modded			"Sounds/Weapons/Enforcer/Modded/EN_Idle.ogg"
+
+UTDE/Weapons/Enforcer/Fire_Modded			"Sounds/Weapons/Enforcer/Modded/EN_Fire.wav"
+UTDE/Weapons/Enforcer/Quad/Fire_Modded		"Sounds/Weapons/Enforcer/Modded/Quad/EN_Fire.wav"
+
+
 
 //********************
 // Minigun
