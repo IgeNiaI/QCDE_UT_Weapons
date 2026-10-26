@@ -391,6 +391,7 @@ OptionValue "ENskin"
 	4, "UT2004"
 	5, "UC1"
 	6, "UC2"
+	20, "$WeaponSkin_Enforcer_Modded"
 }
 
 OptionValue "ENskinBG"
@@ -402,6 +403,7 @@ OptionValue "ENskinBG"
 	4, "SKING2U4"
 	5, "SKING2U5"
 	6, "SKING2U6"
+	20, "SKING2MD"
 }
 
 OptionValue "MGskin"

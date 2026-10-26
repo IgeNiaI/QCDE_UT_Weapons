@@ -1,0 +1,18 @@
+Enforcer
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/Enforcer/
+Sounds: Sounds/Weapons/Enforcer/
+Menu previews: Graphics/Menu/SkinPreviews/Enforcer/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Fire                    E      A-M       F
+
+Other Modded frames
+
+Bullet hit effects      MDZ2 A-T

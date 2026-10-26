@@ -2,7 +2,11 @@
 [enu default]
 
 WeaponSkin_Modded = "Modded";
+
 WeaponSkin_ImpactHammer_Modded = "Modded";
+WeaponSkin_Enforcer_Modded = "Modded";
+
+WeaponSkin_Enforcer_ScreenBlend_Modded = "Yellow";
 
 Control_Slot1	= "Impact Hammer";
 Control_Slot2	= "Minigun / Enforcer";
