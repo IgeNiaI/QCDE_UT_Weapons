@@ -1,0 +1,104 @@
+//=============================================================================
+//
+// Impact Hammer animation frames
+//
+//=============================================================================
+
+// UT2004 Impact Hammer
+Sprite U4A1B0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1C0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1D0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1E0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1F0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1G0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1H0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1I0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1J0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1K0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1L0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1M0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1N0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1O0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1P0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1Q0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1R0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1S0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1T0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1U0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1V0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1W0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1X0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1Y0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4A1Z0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4C1B0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4C1C0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4C1D0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4C1E0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4C1F0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4C1A0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4E1A0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4G1A0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1A0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1G0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1H0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1I0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1J0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1K0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1L0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1M0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1N0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1O0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1P0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+Sprite U4I1Q0, 188, 268 { Offset -160, -55		Patch U4A1A0, 0, 0 }
+
+// UT99 Impact Hammer
+Sprite U9A1B0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1C0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1D0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1E0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1F0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1G0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1H0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1I0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1J0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1K0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1L0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1M0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1N0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1O0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1P0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1Q0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1R0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1S0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1T0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1U0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1V0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1W0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1X0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1Y0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9A1Z0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9C1B0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9C1C0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9C1D0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9C1E0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9C1F0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9C1A0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9E1A0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9G1A0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1A0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1B0, 237, 186 { Offset -170, -80		Patch U9E1M0, 0, 0 }
+Sprite U9I1C0, 237, 186 { Offset -170, -80		Patch U9E1I0, 0, 0 }
+Sprite U9I1D0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1E0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1F0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1G0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1H0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1I0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1J0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1K0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1L0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1M0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1N0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1O0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1P0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }
+Sprite U9I1Q0, 237, 186 { Offset -170, -80		Patch U9A1A0, 0, 0 }

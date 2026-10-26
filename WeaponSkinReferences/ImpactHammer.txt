@@ -1,0 +1,29 @@
+Impact Hammer
+
+Assets
+
+Weapon sprites and brightmaps: Sprites/Weapons/ImpactHammer/
+Sounds: Sounds/Weapons/ImpactHammer/
+Menu previews: Graphics/Menu/SkinPreviews/ImpactHammer/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Charge                  E      A-P       F
+Fully charged           G      A-D       H
+Fire                    I      A-Q       J
+
+Prepare: 26 frames, 1 tic each; firing is allowed.
+Idle: 6 frames, 1 tic each. Current artwork is static.
+Charge: A is resting; B-P charge. Fully charged: A is resting; B-D loop.
+Fire: A is resting; B-F strike; G-Q recover.
+Identical frames and brightmaps share images.
+
+Other Modded frames
+
+MDZ1 A                  Reflector ball
+
+Modded assets are in the Modded subfolders above.
+Prepare and idle sounds are silent placeholders.
