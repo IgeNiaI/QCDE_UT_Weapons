@@ -1,0 +1,20 @@
+Bio Rifle
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/BioRifle/
+Sounds: Sounds/Weapons/BioRifle/
+Modded models and model textures: MD3/PROJECTILES/Modded/BioRifle/
+Menu previews: Graphics/Menu/SkinPreviews/BioRifle/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Primary fire            E      A-C       F
+Charge / alternate fire I      A-V       J
+
+Other Modded frames
+
+Projectile, sticky glob and impact animation        MDZE A-F
