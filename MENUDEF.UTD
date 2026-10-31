@@ -449,6 +449,7 @@ OptionValue "FMskin"
 	-1, "Class Based"
 	1, "Unreal 1 Flak"
 	2, "Unreal 1 Stinger"
+	20, "$WeaponSkin_FlakMini_Modded"
 }
 
 OptionValue "FMskinBG"
@@ -456,6 +457,7 @@ OptionValue "FMskinBG"
 	-1, "SKINUNKN"
 	1, "SKING3U1"
 	2, "SKING3U2"
+	20, "SKING3MD"
 }
 
 OptionValue "FLskin"
