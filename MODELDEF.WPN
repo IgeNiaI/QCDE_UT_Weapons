@@ -1076,3 +1076,265 @@ Model BulletSmallTracerUTMG_Modded
 	PITCHFROMMOMENTUM
 	FrameIndex MDYB A 0 0
 }
+
+// BEGIN GENERATED BioRifle MODELS
+Model BioBall1DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBall2DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBall3DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBall4DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBall5DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBall6DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBall7DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBall8DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBall9DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBall10DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBallSticky1DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBallSticky2DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+
+Model BioBallSticky3DM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/BioRifle"
+   MODEL 0 "bioglob.md3"
+   Scale 20.0 20.0 22.0
+
+   SurfaceSkin 0 0 "bioglobA.png"
+   FrameIndex MDZE A 0 0
+   SurfaceSkin 0 0 "bioglobB.png"
+   FrameIndex MDZE B 0 1
+   SurfaceSkin 0 0 "bioglobC.png"
+   FrameIndex MDZE C 0 2
+   SurfaceSkin 0 0 "bioglobD.png"
+   FrameIndex MDZE D 0 3
+   SurfaceSkin 0 0 "bioglobE.png"
+   FrameIndex MDZE E 0 4
+   SurfaceSkin 0 0 "bioglobF.png"
+   FrameIndex MDZE F 0 5
+}
+// END GENERATED BioRifle MODELS
