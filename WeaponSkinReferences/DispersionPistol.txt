@@ -1,0 +1,52 @@
+Dispersion Pistol
+
+Assets
+
+Weapon sprites and brightmaps: Sprites/Weapons/DispersionPistol/
+Sounds: Sounds/Weapons/DispersionPistol/
+Menu previews: Graphics/Menu/SkinPreviews/DispersionPistol/
+
+Weapon frames
+
+Use                     Base   Single upgrade   Double upgrade   Frames   Brightmap sets
+Prepare                 A      C                E                A-Z      B / D / F
+Idle                    G      I                K                A-F      H / J / L
+Fire                    M      O                Q                A-L      N / P / R
+
+Sprite prefixes: U1 for Unreal 1; U6 for Unreal Championship 2; MD for Modded.
+The fourth sprite-name character is G (Dispersion Pistol).
+Example: U1AG is base prepare; U1OG is single-upgrade fire.
+
+Prepare: 26 frames, 1 tic each; firing is allowed.
+Idle: 6 frames, 1 tic each. Current artwork is static.
+Fire: A is resting; B-C are the first firing image; D-E are the second;
+F-L recover using the resting image. B-L run for 11 tics total.
+Either upgrade uses the single-upgrade sets; both use double-upgrade sets.
+Identical frames and brightmaps share images through TEXTURES.UTD and GLDEFS.UTD.
+U1 has one shared brightmap per upgrade level; UC2 has no brightmaps.
+
+World pickup frames U1GG Y/Z are unchanged and are not idle animation frames.
+Projectiles, damage, sounds, recoil and firing offsets are unchanged.
+
+Modded skin (ID 20)
+
+Modded assets are in the Modded subfolders above, using Unreal 1 as the base.
+Each weapon frame has its own image and brightmap, including repeated frames.
+Folder suffixes: no suffix for base, one_upgrade for either upgrade,
+two_upgrades for both upgrades.
+Prepare and idle sounds are silent placeholders; their SNDINFO mappings are
+commented out until replaced. Fire, Quad fire and impact sounds are separate.
+Screen flash colors are configurable per upgrade level in LANGUAGE.UTD.
+
+Other Modded frames
+
+MDVG A-B                Base projectile (all eight viewing angles)
+MDWG A-B                One-upgrade projectile (all eight viewing angles)
+MDXG A-B                Two-upgrade projectile (all eight viewing angles)
+
+Projectile folders: _V_projectile, _W_projectile_one_upgrade,
+_X_projectile_two_upgrades.
+UTDispr1_Modded, UTDispr3_Modded and UTDispr5_Modded inherit gameplay and
+hit feedback from the corresponding original projectiles. Their Death states
+are separate replacement hooks; they currently reuse the core LBA2 A-H impact
+sprites and the original dynamic lights, with a Modded impact sound.

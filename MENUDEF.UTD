@@ -433,6 +433,7 @@ OptionValue "DPskin"
 	-1, "Class Based"
 	1, "Unreal 1"
 	6, "UC2"
+	20, "$WeaponSkin_DispersionPistol_Modded"
 }
 
 OptionValue "DPskinBG"
@@ -440,6 +441,7 @@ OptionValue "DPskinBG"
 	-1, "SKINUNKN"
 	1, "SKINGGU1"
 	6, "SKINGGU6"
+	20, "SKINGGMD"
 }
 
 OptionValue "FMskin"

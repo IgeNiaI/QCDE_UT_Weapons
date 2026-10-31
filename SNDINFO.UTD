@@ -152,6 +152,14 @@ UTDE/Weapons/Dispr/Quad/Fire_UC2				"Sounds/Weapons/DispersionPistol/UC2/Quad/DP
 
 UTDE/Weapons/Dispr/Impact						"Sounds/Weapons/DispersionPistol/DP_Impact.wav"
 
+// Modded Dispersion Pistol
+//UTDE/Weapons/Dispr/Prepare_Modded				"Sounds/Weapons/DispersionPistol/Modded/DP_Prepare.ogg"
+//UTDE/Weapons/Dispr/Idle_Modded				"Sounds/Weapons/DispersionPistol/Modded/DP_Idle.ogg"
+
+UTDE/Weapons/Dispr/Fire_Modded					"Sounds/Weapons/DispersionPistol/Modded/DP_Fire.wav"
+UTDE/Weapons/Dispr/Quad/Fire_Modded				"Sounds/Weapons/DispersionPistol/Modded/Quad/DP_Fire.wav"
+UTDE/Weapons/Dispr/Impact_Modded				"Sounds/Weapons/DispersionPistol/Modded/DP_Impact.wav"
+
 
 //********************
 // Flak Cannon Mini
