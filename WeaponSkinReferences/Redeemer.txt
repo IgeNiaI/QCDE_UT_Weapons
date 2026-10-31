@@ -1,0 +1,20 @@
+Redeemer
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/Redeemer/
+Sounds: Sounds/Weapons/Redeemer/
+Modded models and model textures: MD3/PROJECTILES/Modded/Redeemer/
+Menu previews: Graphics/Menu/SkinPreviews/Redeemer/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Primary fire            E      A-G       F
+Guided fire             I      A-G       J
+
+Other Modded frames
+
+Rocket projectile       MDZ9 A

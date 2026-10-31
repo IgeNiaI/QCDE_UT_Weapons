@@ -1,6 +1,0 @@
-{
-  "weapon":"ShockRifle", "sources":["Decorate/Weapons/LightningGun.QCD"],
-  "actors":["UTShockRifleOrb","UTShockRifleOrbbSucc","UTShockRifleCombo","UTShockRifleOrbDM","UTShockRifleComboDM","SRworldactor","ShockRiflePuff","ShockRiflePuffUpgraded","ShockRiflePuff_DM","ShockRiflePuffFx","UTShockRifleComboFX"],
-  "sprites":{"SHOC":"MDZ7","SRTR":"MDY7"},
-  "sounds":{"UTDE/Weapons/ShockRifle/OrbFly":"UTDE/Weapons/ShockRifle/OrbFly_Modded","UTDE/Weapons/ShockRifle/OrbHit":"UTDE/Weapons/ShockRifle/OrbHit_Modded","UTDE/Weapons/ShockRifle/OrbExplo":"UTDE/Weapons/ShockRifle/OrbExplo_Modded"}
-}
