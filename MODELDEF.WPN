@@ -1077,6 +1077,27 @@ Model SniperTrailUpgraded
 	FrameIndex RTQW A 0 0
 }
 
+// Independent Modded Sniper Rifle trail model and skins.
+Model SniperTrail_Modded
+{
+	Path "MD3/PROJECTILES/Modded/SniperRifle"
+	SKIN 0 "rtrlSS.png"
+	MODEL 0 "beam.md3"
+	Scale 2.141 8.0 8.0
+	INHERITACTORPITCH
+	FrameIndex RTSS A 0 0
+}
+
+Model SniperTrailUpgraded_Modded
+{
+	Path "MD3/PROJECTILES/Modded/SniperRifle"
+	SKIN 0 "rtrlQW.png"
+	MODEL 0 "beam.md3"
+	Scale 2.141 8.0 8.0
+	INHERITACTORPITCH
+	FrameIndex RTQW A 0 0
+}
+
 Model BulletSmallTracerUTMG_Modded
 {
 	Path "MD3/PROJECTILES/Modded/Minigun"
