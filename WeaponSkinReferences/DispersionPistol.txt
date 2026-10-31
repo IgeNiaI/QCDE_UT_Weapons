@@ -1,0 +1,26 @@
+Dispersion Pistol
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/DispersionPistol/
+Sounds: Sounds/Weapons/DispersionPistol/
+Menu previews: Graphics/Menu/SkinPreviews/DispersionPistol/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Prepare one upgrade     C      A-Z       D
+Prepare two upgrades    E      A-Z       F
+Idle                    G      A-F       H
+Idle one upgrade        I      A-F       J
+Idle two upgrades       K      A-F       L
+Fire                    M      A-L       N
+Fire one upgrade        O      A-L       P
+Fire two upgrades       Q      A-L       R
+
+Other Modded frames
+
+Base projectile (all eight viewing angles)              MDVG A-B
+One-upgrade projectile (all eight viewing angles)       MDWG A-B
+Two-upgrade projectile (all eight viewing angles)       MDXG A-B
