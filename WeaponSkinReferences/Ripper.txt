@@ -1,0 +1,20 @@
+Ripper
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/Ripper/
+Sounds: Sounds/Weapons/Ripper/
+Modded models and model textures: MD3/PROJECTILES/Modded/Ripper/
+Menu previews: Graphics/Menu/SkinPreviews/Ripper/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-R       D
+Primary fire            E      A/T-X     F
+Alternate fire          I      A/T-X     J
+
+Other Modded frames
+
+Blade projectile        MDZ5 A

@@ -320,6 +320,18 @@ $volume "UTDE/Weapons/Ripper/Quad/AltFireStartLoop_U1"		0.80
 
 
 UTDE/Weapons/Ripper/Fire_UT99						"Sounds/Weapons/Ripper/UT99/RP_Fire.wav"
+// Modded Ripper
+//UTDE/Weapons/Ripper/Prepare_Modded "Sounds/Weapons/Ripper/Modded/RP_Prepare.ogg"
+//UTDE/Weapons/Ripper/Idle_Modded "Sounds/Weapons/Ripper/Modded/RP_Idle.ogg"
+UTDE/Weapons/Ripper/Fire_Modded "Sounds/Weapons/Ripper/Modded/RP_Fire.wav"
+UTDE/Weapons/Ripper/Quad/Fire_Modded "Sounds/Weapons/Ripper/Modded/Quad/RP_Fire.wav"
+UTDE/Weapons/Ripper/AltFire_Modded "Sounds/Weapons/Ripper/Modded/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Quad/AltFire_Modded "Sounds/Weapons/Ripper/Modded/Quad/RP_Fire_Alt.wav"
+UTDE/Weapons/Ripper/Impact_Modded "Sounds/Weapons/Ripper/Modded/RP_Impact.wav"
+UTDE/Weapons/Ripper/Bounce_Modded "Sounds/Weapons/Ripper/Modded/RP_Bounce.wav"
+$volume UTDE/Weapons/Ripper/Fire_Modded 0.80
+$volume UTDE/Weapons/Ripper/Quad/Fire_Modded 0.80
+$volume UTDE/Weapons/Ripper/AltFire_Modded 0.80
 UTDE/Weapons/Ripper/Quad/Fire_UT99					"Sounds/Weapons/Ripper/UT99/Quad/RP_Fire.wav"
 UTDE/Weapons/Ripper/AltFire_UT99					"Sounds/Weapons/Ripper/UT99/RP_Fire_Alt.wav"
 UTDE/Weapons/Ripper/Quad/AltFire_UT99				"Sounds/Weapons/Ripper/UT99/Quad/RP_Fire_Alt.wav"

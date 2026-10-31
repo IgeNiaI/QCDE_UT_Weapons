@@ -520,6 +520,7 @@ OptionValue "RPskin"
 	1, "Unreal 1"
 	9, "UT99"
 	6, "UC2"
+	20, "$WeaponSkin_Ripper_Modded"
 }
 
 OptionValue "RPskinBG"
@@ -528,6 +529,7 @@ OptionValue "RPskinBG"
 	1, "SKING5U1"
 	9, "SKING5U9"
 	6, "SKING5U6"
+	20, "SKING5MD"
 }
 
 OptionValue "BRskin"
