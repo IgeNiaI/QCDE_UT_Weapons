@@ -1,0 +1,31 @@
+Sniper Rifle
+
+Sprites/Weapons/SniperRifle/: U1, UT2003, UT2004, UC2, UT99, Modded (ID 20).
+Prefixes U1/U3/U4/U6/U9/MD; fourth character 8.
+Prepare A set A-Z: 1 tic each, firing allowed; zoom is checked each tic.
+Idle C set A-F: 4 tics per frame; original 24-tic animated loop.
+Fire/reload E set A,G-P: original 52-tic recovery, offsets and counters.
+Brightmap sets B/D/F; 43 independent Modded images/maps, UT2004 base.
+Zoomed ready/fire remain invisible (TNT1), with identical zoom/recharge routing.
+Zooming out mid-reload selects E before resuming the correct recovery tic.
+Original G artwork and maps remain as compatibility/pickup sources.
+
+Sounds/Weapons/SniperRifle/Modded/: fire, Quad fire and reload; quiet fire
+still uses volume 0.25, including Quad/Terminator variants.
+Prepare/idle are silent placeholders with commented SNDINFO mappings.
+Modded impact/whoosh sound aliases initially point at core-mod sounds;
+replace their SNDINFO aliases to customize them independently.
+External zoom-in/out handling and sounds remain unchanged.
+Screen flash: WeaponSkin_SniperRifle_ScreenBlend_Modded in LANGUAGE.UTD.
+Preview: Graphics/Menu/SkinPreviews/SniperRifle/SKING8MD.png.
+
+Decorate/Weapons/Modded/SniperRifle.QCD contains eight separate trail,
+upgraded trail, normal/DM puff, puff FX, smoke spawner/smoke and whoosher actors.
+Core trail/puff/smoke/tracer artwork is retained until states are customized.
+Stationary upgraded damage, normal/zoomed accuracy, Pierce quiet behavior,
+DM damage, charge consumption, obituary tics, zoom interruption and weapon
+switch/level-reset behavior are preserved. UT2003's lightning effects stay
+on its original skin only; Modded uses the UT2004 ballistic base.
+
+Generation manifests: Tools/WeaponSkinAssets/SniperRifle.json and
+Tools/WeaponSkinAssets/SniperRifleActors.json.

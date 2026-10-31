@@ -524,6 +524,15 @@ UTDE/Weapons/ShockRifle/OrbExplo				"Sounds/Weapons/ShockRifle/SR_Orb_Explo.wav"
 //********************
 // Sniper Rifle
 UTDE/Weapons/SniperRifle/Fire_UT2004		"Sounds/Weapons/SniperRifle/UT2004/SP_Fire.wav"
+// Modded Sniper Rifle
+//UTDE/Weapons/SniperRifle/Prepare_Modded "Sounds/Weapons/SniperRifle/Modded/SP_Prepare.ogg"
+//UTDE/Weapons/SniperRifle/Idle_Modded "Sounds/Weapons/SniperRifle/Modded/SP_Idle.ogg"
+UTDE/Weapons/SniperRifle/Fire_Modded "Sounds/Weapons/SniperRifle/Modded/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Quad/Fire_Modded "Sounds/Weapons/SniperRifle/Modded/Quad/SP_Fire.wav"
+UTDE/Weapons/SniperRifle/Reload_Modded "Sounds/Weapons/SniperRifle/Modded/SP_Reload.wav"
+// These sounds live in the core mod; replace these aliases with custom mappings.
+$alias UTDE/Weapons/SniperRifle/Impact_Modded QC/Weapons/Railgun/Impact
+$alias UTDE/Weapons/SniperRifle/Whoosh_Modded QC/Weapons/Railgun/Whoosh
 UTDE/Weapons/SniperRifle/Quad/Fire_UT2004	"Sounds/Weapons/SniperRifle/UT2004/Quad/SP_Fire.wav"
 UTDE/Weapons/SniperRifle/Reload_UT2004		"Sounds/Weapons/SniperRifle/UT2004/SP_Reload.wav"
 
