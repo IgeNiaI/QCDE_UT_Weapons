@@ -14,6 +14,7 @@ WeaponSkin_PulseGun_Modded = "Modded";
 WeaponSkin_Ripper_Modded = "Modded";
 WeaponSkin_BioRifle_Modded = "Modded";
 WeaponSkin_RocketLauncher_Modded = "Modded";
+WeaponSkin_ShockRifle_Modded = "Modded";
 
 WeaponSkin_Enforcer_ScreenBlend_Modded = "Yellow";
 WeaponSkin_Minigun_ScreenBlend_Modded = "Yellow";
@@ -26,6 +27,7 @@ WeaponSkin_LinkGun_ScreenBlend_Modded = "Green";
 WeaponSkin_PulseGun_ScreenBlend_Modded = "Green";
 WeaponSkin_BioRifle_ScreenBlend_Modded = "Green";
 WeaponSkin_RocketLauncher_ScreenBlend_Modded = "Orange";
+WeaponSkin_ShockRifle_ScreenBlend_Modded = "Purple";
 
 Control_Slot1	= "Impact Hammer";
 Control_Slot2	= "Minigun / Enforcer";

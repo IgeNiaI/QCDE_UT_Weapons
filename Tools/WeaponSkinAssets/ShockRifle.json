@@ -1,0 +1,10 @@
+{
+  "weapon":"ShockRifle", "id":"7", "base":"UT2004",
+  "skins":[{"name":"U1","prefix":"U1"},{"name":"UT2003","prefix":"U3"},{"name":"UT2004","prefix":"U4"},{"name":"UC1","prefix":"U5"},{"name":"UC2","prefix":"U6"},{"name":"UT99","prefix":"U9"}],
+  "phases":[
+    {"set":"A","name":"prepare","map":"B","source":"AAAAAAAAAAAAAAAAAAAAAAAAAA"},
+    {"set":"C","name":"idle","map":"D","source":"ABCDE"},
+    {"set":"E","name":"fire","map":"F","frames":"AFGHIJKLM","source":"AFGHIJKLM"},
+    {"set":"I","name":"altfire","map":"J","frames":"AFGIJKLM","source":"AFGIJKLM"}
+  ]
+}

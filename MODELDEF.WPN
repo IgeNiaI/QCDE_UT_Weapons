@@ -1047,6 +1047,16 @@ Model SRworldactor
 	FrameIndex SRTR A 0 0
 }
 
+Model SRworldactor_Modded
+{
+	Path "MD3/PROJECTILES/Modded/ShockRifle"
+	SKIN 0 "rtrlSR.png"
+	MODEL 0 "beam.md3"
+	Scale 2.141 12.0 12.0
+	INHERITACTORPITCH
+	FrameIndex MDY7 A 0 0
+}
+
 Model SniperTrail
 {
 	Path "MD3"

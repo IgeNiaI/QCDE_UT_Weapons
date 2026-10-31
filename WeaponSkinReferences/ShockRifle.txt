@@ -1,0 +1,21 @@
+Shock Rifle
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/ShockRifle/
+Sounds: Sounds/Weapons/ShockRifle/
+Menu previews: Graphics/Menu/SkinPreviews/ShockRifle/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-E       D
+Primary fire            E      A/F-M     F
+Alternate fire          I      A/F-G/I-M J
+
+Other Modded frames
+
+World beam                      MDY7 A
+Orb projectile                  MDZ7 A-D
+Impact and combo explosion      MDZ7 E-G

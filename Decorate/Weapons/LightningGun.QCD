@@ -106,11 +106,11 @@ Actor QCLightningGun : QCWeapon
 	Spawn:
 		TNT1 A 1
 		U4G7 Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
-		Goto Idle
+		Goto SpawnIdle
 	DMSpawn:
 		U4G7 ZZZZZZZZZZZZZZZ 35 Bright
 		Stop
-	Idle:
+	SpawnIdle:
 		U4G7 Y -1
 		Wait
 
@@ -118,6 +118,7 @@ Actor QCLightningGun : QCWeapon
 	// Select/Deselect Seq
 	//-----------------------
 	Select:
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"Select.Modded")
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "Select.UT99")
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 8, "Select.UT99") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 7, "Select.UT99") // Fallback to another skin
@@ -128,22 +129,25 @@ Actor QCLightningGun : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 2, "Select.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 1, "Select.U1")
 	Select.U1:
-		U1G7 A 0
+		U1A7 A 0
 		Goto SelectCont
 	Select.UT2003:
-		U3G7 A 0
+		U3A7 A 0
 		Goto SelectCont
 	Select.UT2004:
-		U4G7 A 0
+		U4A7 A 0
 		Goto SelectCont
 	Select.UC1:
-		U5G7 A 0
+		U5A7 A 0
 		Goto SelectCont
 	Select.UC2:
-		U6G7 A 0
+		U6A7 A 0
 		Goto SelectCont
 	Select.UT99:
-		U9G7 A 0
+		U9A7 A 0
+		Goto SelectCont
+	Select.Modded:
+		MDA7 A 0
 		Goto SelectCont
 
 	SelectCont:
@@ -168,6 +172,7 @@ Actor QCLightningGun : QCWeapon
 	// Ready Seq
 	//-----------------------
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"Prepare.Modded")
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "Ready.UT99")
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 8, "Ready.UT99") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 7, "Ready.UT99") // Fallback to another skin
@@ -178,25 +183,59 @@ Actor QCLightningGun : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 2, "Ready.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 1, "Ready.U1")
 	Ready.U1:
-		U1G7 A 0
+		U1A7 A 0
 		Goto ReadyCont
 	Ready.UT2003:
-		U3G7 A 0
+		U3A7 A 0
 		Goto ReadyCont
 	Ready.UT2004:
-		U4G7 A 0
+		U4A7 A 0
 		Goto ReadyCont
 	Ready.UC1:
-		U5G7 A 0
+		U5A7 A 0
 		Goto ReadyCont
 	Ready.UC2:
-		U6G7 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Idle_UC2", CHAN_WEAPON, 0.45, 1, 1.25)
+		U6A7 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Idle_UC2", CHAN_WEAPON, 0.45, 1, 1.25)
 		Goto ReadyCont
 	Ready.UT99:
-		U9G7 A 0
+		U9A7 A 0
+		Goto ReadyCont
+	Prepare.Modded:
+		MDA7 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Prepare_Modded",CHAN_WEAPON,1,0,3)
 		Goto ReadyCont
 
 	ReadyCont:
+		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		"####" ABCDEFGHIJKLMNOPQRSTUVWXYZ 1 A_WeaponReady
+		Goto Idle
+	Idle:
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"Idle.Modded")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",7,"Idle.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",6,"Idle.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",5,"Idle.UC1")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",4,"Idle.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",3,"Idle.UT2003")
+	Idle.U1:
+		U1C7 A 0
+		Goto IdleCont
+	Idle.UT2003:
+		U3C7 A 0
+		Goto IdleCont
+	Idle.UT2004:
+		U4C7 A 0
+		Goto IdleCont
+	Idle.UC1:
+		U5C7 A 0
+		Goto IdleCont
+	Idle.UC2:
+		U6C7 A 0
+		Goto IdleCont
+	Idle.UT99:
+		U9C7 A 0
+		Goto IdleCont
+	Idle.Modded:
+		MDC7 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Idle_Modded",CHAN_WEAPON,1,1)
+	IdleCont:
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		"####" AAABBB 1 A_WeaponReady
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
@@ -215,50 +254,87 @@ Actor QCLightningGun : QCWeapon
 	//-----------------------
 	// Fire Seq
 	//-----------------------
-	Fire: 	//27 tics, 0.77sec
+	Fire: 	//23 tics
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"Fire.Modded")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",7,"Fire.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",6,"Fire.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",5,"Fire.UC1")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",4,"Fire.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",3,"Fire.UT2003")
+	Fire.U1:
+		U1K7 A 0
+		Goto FireCont
+	Fire.UT2003:
+		U3K7 A 0
+		Goto FireCont
+	Fire.UT2004:
+		U4K7 A 0
+		Goto FireCont
+	Fire.UC1:
+		U5K7 A 0
+		Goto FireCont
+	Fire.UC2:
+		U6K7 A 0
+		Goto FireCont
+	Fire.UT99:
+		U9K7 A 0
+		Goto FireCont
+	Fire.Modded:
+		MDK7 A 0
+	FireCont:
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		"####" A 0 A_GunFlash("Flash")
-		"####" F 1
-		"####" F 1 Offset(3,34)
-		"####" G 1 Offset(6,37)
-		"####" G 1 Offset(9,40)
-		"####" H 1 Offset(11,42)
-		"####" H 1 Offset(13,44)
-		"####" H 1 Offset(14,46)
-		"####" I 1 Offset(15,47)
+		"####" A 1
+		"####" B 1 Offset(3,34)
+		"####" C 1 Offset(6,37)
+		"####" D 1 Offset(9,40)
+		"####" E 1 Offset(11,42)
+		"####" F 1 Offset(13,44)
+		"####" G 1 Offset(14,46)
+		"####" H 1 Offset(15,47)
 		"####" I 1 Offset(14,46)
-		"####" I 1 Offset(13,45) //10
-		"####" J 1 Offset(12,44)
-		"####" J 1 Offset(11,43)
-		"####" J 1 Offset(10,42)
-		"####" K 1 Offset(9,41)
-		"####" K 1 Offset(8,40)
-		"####" K 1 Offset(7,39)
-		"####" L 1 Offset(6,38)
-		"####" L 1 Offset(5,37)
-		"####" L 1 Offset(4,36)
-		"####" M 1 Offset(3,35)	//20
-		"####" M 1 Offset(2,34)
-		"####" M 1 Offset(1,33)
-		"####" A 1 Offset(0,32)	//23
+		"####" J 1 Offset(13,45)
+		"####" K 1 Offset(12,44)
+		"####" L 1 Offset(11,43)
+		"####" M 1 Offset(10,42)
+		"####" N 1 Offset(9,41)
+		"####" O 1 Offset(8,40)
+		"####" P 1 Offset(7,39)
+		"####" Q 1 Offset(6,38)
+		"####" R 1 Offset(5,37)
+		"####" S 1 Offset(4,36)
+		"####" T 1 Offset(3,35)
+		"####" U 1 Offset(2,34)
+		"####" V 1 Offset(1,33)
+		"####" W 1 Offset(0,32)
 		Goto Ready
 
 	Flash:
 		TNT1 A 0 A_AlertMonsters
 		TNT1 A 0 A_JumpIfInventory("LG_UG_Residue", 1, "FlashUpgraded")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"Flash.Modded")
 		TNT1 A 0 A_RailAttack(random(60,90), 1, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, "ShockRiflePuff", 0, 0, 0, 0, 6, 1, "SRworldactor", 1)
 		Goto FlashCheckSound
 
 	FlashUpgraded:
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"FlashUpgraded.Modded")
 		TNT1 A 0 A_RailAttack(random(60,90), 1, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, "ShockRiflePuffUpgraded", 0, 0, 0, 0, 6, 1, "SRworldactor", 1)
 		Goto FlashCheckSound
 
 	FlashCheckSound:
+		Goto FlashCheckSoundCont
+	Flash.Modded:
+		TNT1 A 0 A_RailAttack(random(60,90), 1, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, "ShockRiflePuff", 0, 0, 0, 0, 6, 1, "SRworldactor_Modded", 1)
+		Goto FlashCheckSoundCont
+	FlashUpgraded.Modded:
+		TNT1 A 0 A_RailAttack(random(60,90), 1, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, "ShockRiflePuffUpgraded", 0, 0, 0, 0, 6, 1, "SRworldactor_Modded", 1)
+	FlashCheckSoundCont:
 		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound")
 		TNT1 A 0 A_JumpIfInventory("PowerTerminatorArtifact",1,"QuadSound")
 		Goto NormalSound
 
 		NormalSound:
+			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"NormalSound.Modded")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "NormalSound.UT99")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 8, "NormalSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 7, "NormalSound.UT99") // Fallback to another skin
@@ -281,8 +357,12 @@ Actor QCLightningGun : QCWeapon
 		NormalSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Fire_UT99",CHAN_WEAPON)
 			Goto FlashEnder
+		NormalSound.Modded:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Fire_Modded",CHAN_WEAPON)
+			Goto FlashEnder
 
 		QuadSound:
+			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"QuadSound.Modded")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "QuadSound.UT99")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 8, "QuadSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 7, "QuadSound.UT99") // Fallback to another skin
@@ -305,10 +385,17 @@ Actor QCLightningGun : QCWeapon
 		QuadSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/Fire_UT99",CHAN_WEAPON)
 			Goto FlashEnder
+		QuadSound.Modded:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/Fire_Modded",CHAN_WEAPON)
+			Goto FlashEnder
 
 	FlashEnder:
 		TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"FlashEnderCont")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"FlashEnder.Modded")
 		TNT1 A 0 A_SetBlend("Purple",0.14,15)
+		Goto FlashEnderCont
+	FlashEnder.Modded:
+		TNT1 A 0 A_SetBlend("$WeaponSkin_ShockRifle_ScreenBlend_Modded",0.14,15)
 	FlashEnderCont:
 		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil")
 		TNT1 A 0 A_SetPitch(pitch-3.5)
@@ -322,34 +409,65 @@ Actor QCLightningGun : QCWeapon
 	//-----------------------
 	// AltFire Seq
 	//-----------------------
-	AltFire: 	//27 tics, 0.77sec
+	AltFire: 	//19 tics
 		"####" A 0 A_JumpIfInventory("Instagib",1,"Fire")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"AltFire.Modded")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",7,"AltFire.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",6,"AltFire.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",5,"AltFire.UC1")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",4,"AltFire.UT2004")
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",3,"AltFire.UT2003")
+	AltFire.U1:
+		U1M7 A 0
+		Goto AltFireCont
+	AltFire.UT2003:
+		U3M7 A 0
+		Goto AltFireCont
+	AltFire.UT2004:
+		U4M7 A 0
+		Goto AltFireCont
+	AltFire.UC1:
+		U5M7 A 0
+		Goto AltFireCont
+	AltFire.UC2:
+		U6M7 A 0
+		Goto AltFireCont
+	AltFire.UT99:
+		U9M7 A 0
+		Goto AltFireCont
+	AltFire.Modded:
+		MDM7 A 0
+	AltFireCont:
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		"####" A 0 A_GunFlash("AltFlash")
-		"####" F 1
-		"####" F 1 Offset(4,35)
-		"####" G 1 Offset(7,38)
-		"####" G 1 Offset(10,41)
-		"####" I 1 Offset(12,43)
-		"####" I 1 Offset(14,45)
-		"####" I 1 Offset(13,45)
-		"####" J 1 Offset(12,44)
-		"####" J 1 Offset(11,43)
-		"####" J 1 Offset(10,42) //10
+		"####" A 1
+		"####" B 1 Offset(4,35)
+		"####" C 1 Offset(7,38)
+		"####" D 1 Offset(10,41)
+		"####" E 1 Offset(12,43)
+		"####" F 1 Offset(14,45)
+		"####" G 1 Offset(13,45)
+		"####" H 1 Offset(12,44)
+		"####" I 1 Offset(11,43)
+		"####" J 1 Offset(10,42)
 		"####" K 1 Offset(9,41)
-		"####" K 1 Offset(8,40)
-		"####" K 1 Offset(7,39)
-		"####" L 1 Offset(6,38)
-		"####" L 1 Offset(5,37)
-		"####" L 1 Offset(4,36)
-		"####" M 1 Offset(3,35)
-		"####" M 1 Offset(2,34)
-		"####" M 1 Offset(1,33)	//19
+		"####" L 1 Offset(8,40)
+		"####" M 1 Offset(7,39)
+		"####" N 1 Offset(6,38)
+		"####" O 1 Offset(5,37)
+		"####" P 1 Offset(4,36)
+		"####" Q 1 Offset(3,35)
+		"####" R 1 Offset(2,34)
+		"####" S 1 Offset(1,33)
 		Goto Ready
 
 	AltFlash:
 		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"AltFlash.Modded")
 		TNT1 A 0 A_FireCustomMissile("UTShockRifleOrb",0,true,1,4,0,0)
+		Goto AltFlashCheckSound
+	AltFlash.Modded:
+		TNT1 A 0 A_FireCustomMissile("UTShockRifleOrb_Modded",0,true,1,4,0,0)
 		Goto AltFlashCheckSound
 
 	AltFlashCheckSound:
@@ -358,6 +476,7 @@ Actor QCLightningGun : QCWeapon
 		Goto AltNormalSound
 
 		AltNormalSound:
+			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"AltNormalSound.Modded")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "AltNormalSound.UT99")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 8, "AltNormalSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 7, "AltNormalSound.UT99") // Fallback to another skin
@@ -380,7 +499,11 @@ Actor QCLightningGun : QCWeapon
 		AltNormalSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/AltFire_UT99",CHAN_WEAPON)
 			Goto FlashEnder
+		AltNormalSound.Modded:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/AltFire_Modded",CHAN_WEAPON)
+			Goto FlashEnder
 		AltQuadSound:
+			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"AltQuadSound.Modded")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 9, "AltQuadSound.UT99")
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 8, "AltQuadSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin", 7, "AltQuadSound.UT99") // Fallback to another skin
@@ -402,6 +525,9 @@ Actor QCLightningGun : QCWeapon
 			Goto FlashEnder
 		AltQuadSound.UT99:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/AltFire_UT99",CHAN_WEAPON)
+			Goto FlashEnder
+		AltQuadSound.Modded:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/Quad/AltFire_Modded",CHAN_WEAPON)
 			Goto FlashEnder
 
 	}
@@ -436,10 +562,11 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 	States
 	{
 	Spawn:
-		TNT1 A 0 NODELAY A_PlaySound("UTDE/Weapons/ShockRifle/OrbFly",CHAN_5|CHAN_NOPAUSE,1.0,true)
-		TNT1 A 0 ACS_NamedExecuteAlways("UTDE_AttachWhooshShock")
+		SHOC A 0 NODELAY A_PlaySound("UTDE/Weapons/ShockRifle/OrbFly",CHAN_5|CHAN_NOPAUSE,1.0,true)
+	SpawnCont:
+		"####" A 0 ACS_NamedExecuteAlways("UTDE_AttachWhooshShock")
 	Looper:
-		SHOC AAAABBBBCCCCDDDD 1 Light("PurpleMediumPoint1") BRIGHT
+		"####" AAAABBBBCCCCDDDD 1 Light("PurpleMediumPoint1") BRIGHT
 		Loop
 	Xdeath:	//hit bleeding actor
 		TNT1 A 0 A_StopSound(CHAN_5)
@@ -447,24 +574,31 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 	Death:
 		TNT1 A 0 A_StopSound(CHAN_5) // Stop whoosh sound
 		TNT1 A 0 A_Jump(256, 1) // force sync the actor state
+		TNT1 A 0 A_Jump(256,"DeathSound")
+	DeathSound:
 		TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/OrbHit",CHAN_AUTO,1,0,1)
+	DeathCont:
 		TNT1 A 0 A_SetInvulnerable
 		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
 		TNT1 A 0 A_Stop
-		SHOC E 1 BRIGHT
-		SHOC E 1 BRIGHT A_SetScale(0.23, 0.23)
-		TNT1 A 0 BRIGHT A_SetTranslucent(0.85)
-		SHOC F 1 BRIGHT A_SetScale(0.24, 0.24)
-		TNT1 A 0 BRIGHT A_SetTranslucent(0.70)
-		SHOC F 1 BRIGHT A_SetScale(0.26, 0.26)
-		TNT1 A 0 BRIGHT A_SetTranslucent(0.55)
-		SHOC G 1 BRIGHT A_SetScale(0.28, 0.28)
-		TNT1 A 0 BRIGHT A_SetTranslucent(0.40)
-		SHOC G 1 BRIGHT A_SetScale(0.30, 0.30)
-		TNT1 A 0 BRIGHT A_SetTranslucent(0.25)
-		SHOC E 1 BRIGHT A_SetScale(0.32, 0.32)
-		TNT1 A 0 BRIGHT A_SetTranslucent(0.10)
-		SHOC E 1 BRIGHT A_SetScale(0.34, 0.34)
+		TNT1 A 0 A_Jump(256,"DeathFX")
+	DeathFX:
+		SHOC E 0
+	DeathAnimation:
+		"####" E 1 BRIGHT
+		"####" E 1 BRIGHT A_SetScale(0.23, 0.23)
+		"####" "#" 0 BRIGHT A_SetTranslucent(0.85)
+		"####" F 1 BRIGHT A_SetScale(0.24, 0.24)
+		"####" "#" 0 BRIGHT A_SetTranslucent(0.70)
+		"####" F 1 BRIGHT A_SetScale(0.26, 0.26)
+		"####" "#" 0 BRIGHT A_SetTranslucent(0.55)
+		"####" G 1 BRIGHT A_SetScale(0.28, 0.28)
+		"####" "#" 0 BRIGHT A_SetTranslucent(0.40)
+		"####" G 1 BRIGHT A_SetScale(0.30, 0.30)
+		"####" "#" 0 BRIGHT A_SetTranslucent(0.25)
+		"####" E 1 BRIGHT A_SetScale(0.32, 0.32)
+		"####" "#" 0 BRIGHT A_SetTranslucent(0.10)
+		"####" E 1 BRIGHT A_SetScale(0.34, 0.34)
 		TNT1 A 99 // We need this for proper unlagged when hitting a wall too soon
 		Stop
 	Pain.ShkRflDmg:
@@ -477,15 +611,40 @@ ACTOR UTShockRifleOrb : UnlaggedActor
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
 		// Stop unlag here so that we could replicate the actor to clients
 		TNT1 A 1
+		TNT1 A 0 A_Jump(256,"ComboFX")
+	ComboFX:
 		// Spawn combo effects on clients
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
 	ComboUpgraded:
 		// Damage players while being unlagged
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleOrbbSucc", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
+	ComboUpgradedWait:
 		// Stop unlag here so that we could replicate the actor to clients
 		TNT1 A 1
 		Stop
+	}
+}
+
+ACTOR UTShockRifleOrb_Modded : UTShockRifleOrb
+{
+	States
+	{
+	Spawn:
+		MDZ7 A 0 NODELAY A_PlaySound("UTDE/Weapons/ShockRifle/OrbFly_Modded",CHAN_5|CHAN_NOPAUSE,1.0,true)
+		Goto Super::SpawnCont
+	DeathSound:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/OrbHit_Modded",CHAN_AUTO,1,0,1)
+		Goto Super::DeathCont
+	DeathFX:
+		MDZ7 E 0
+		Goto Super::DeathAnimation
+	ComboFX:
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX_Modded", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		Stop
+	ComboUpgraded:
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleOrbbSucc_Modded", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
+		Goto Super::ComboUpgradedWait
 	}
 }
 
@@ -497,32 +656,24 @@ ACTOR UTShockRifleOrbbSucc
 	States
 	{
 	Spawn:
-		X024 A 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 B 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 C 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 D 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 E 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 F 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 G 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 H 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 I 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 J 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 K 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 A 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 B 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 C 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 D 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 E 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 F 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 G 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 H 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 I 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 J 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
-		X024 K 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
+		X024 ABCDEFGHIJKABCDEFGHIJK 1 Bright A_RadiusThrust(-100, 512, RTF_THRUSTZ, 512)
+		TNT1 A 0 A_Jump(256,"Combo")
+	Combo:
 		// Damage players while being unlagged
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
 		// Spawn combo effects on clients
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		Stop
+	}
+}
+
+ACTOR UTShockRifleOrbbSucc_Modded : UTShockRifleOrbbSucc
+{
+	States
+	{
+	Combo:
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleCombo", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX_Modded", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
 		Stop
 	}
 }
@@ -589,12 +740,20 @@ Actor QCLightningGunDM : QCLightningGun
 	{
 	Flash:
 		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"Flash.Modded")
 		TNT1 A 0 A_RailAttack(45, 1, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, "ShockRiflePuff_DM", 0, 0, 0, 0, 6, 1, "SRworldactor", 1)
 		Goto FlashCheckSound
 
 	AltFlash:
 		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_JumpIfInventory("UTShockRifleSkin",20,"AltFlash.Modded")
 		TNT1 A 0 A_FireCustomMissile("UTShockRifleOrbDM",0,true,1,4,0,0)
+		Goto AltFlashCheckSound
+	Flash.Modded:
+		TNT1 A 0 A_RailAttack(45, 1, true, None, None, RGF_SILENT|RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_EXTRATRAIL, 0, "ShockRiflePuff_DM", 0, 0, 0, 0, 6, 1, "SRworldactor_Modded", 1)
+		Goto FlashCheckSound
+	AltFlash.Modded:
+		TNT1 A 0 A_FireCustomMissile("UTShockRifleOrbDM_Modded",0,true,1,4,0,0)
 		Goto AltFlashCheckSound
 	}
 }
@@ -614,10 +773,38 @@ ACTOR UTShockRifleOrbDM : UTShockRifleOrb
 		// Damage players while being unlagged
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboDM", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
 		TNT1 A 1 // Stop unlag here so that we could replicate the actor to clients
+		TNT1 A 0 A_Jump(256,"ComboFXDM")
+	ComboFXDM:
 		// Spawn combo effects on clients
 		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+	ComboDMFinish:
 		TNT1 A 1 // Need the actor to live one more tick so that a proper obituary message is shown
 		Stop
+	}
+}
+
+ACTOR UTShockRifleOrbDM_Modded : UTShockRifleOrbDM
+{
+	States
+	{
+	Spawn:
+		MDZ7 A 0 NODELAY A_PlaySound("UTDE/Weapons/ShockRifle/OrbFly_Modded",CHAN_5|CHAN_NOPAUSE,1.0,true)
+		Goto Super::SpawnCont
+	DeathSound:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/ShockRifle/OrbHit_Modded",CHAN_AUTO,1,0,1)
+		Goto Super::DeathCont
+	DeathFX:
+		MDZ7 E 0
+		Goto Super::DeathAnimation
+	ComboFXDM:
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX_Modded", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		Goto Super::ComboDMFinish
+	ComboFX:
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleComboFX_Modded", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION)
+		Stop
+	ComboUpgraded:
+		TNT1 A 0 A_SpawnItemEx("UTShockRifleOrbbSucc_Modded", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_FORCESERVERSIDE)
+		Goto Super::ComboUpgradedWait
 	}
 }
 
@@ -651,6 +838,16 @@ Actor SRworldactor
 	FadeOut:
 		"####" "#" 1 BRIGHT A_FadeOut(0.03)
 		Loop
+	}
+}
+
+Actor SRworldactor_Modded : SRworldactor
+{
+	States
+	{
+	Spawn:
+		MDY7 A 0
+		Goto Super::FadeOut
 	}
 }
 
@@ -751,33 +948,50 @@ ACTOR UTShockRifleComboFX
 	States
 	{
 	Spawn:
-		TNT1 A 0										A_SetScale(2.0, 2.0)
-		SHOC E 1 BRIGHT									A_SetScale(0.50, 0.50)
-		TNT1 A 0										A_PlaySound("UTDE/Weapons/ShockRifle/OrbExplo",CHAN_AUTO,1,0,1)
-		SHOC F 1 BRIGHT	Light("PurpleMediumFlicker1")	A_SetScale(0.70, 0.70)
-		SHOC G 1 BRIGHT	Light("PurpleBigFlicker3")		A_SetScale(0.80, 0.80)
-		SHOC E 1 BRIGHT	Light("PurpleBigFlicker2")		A_SetScale(0.88, 0.88)
-		SHOC E 1 BRIGHT	Light("PurpleBigFlicker1")		A_SetScale(0.95, 0.95)
-		SHOC F 1 BRIGHT	Light("PurpleBigFlicker1")		A_SetScale(1.00, 1.00)
-		SHOC F 1 BRIGHT	Light("PurpleBigFlicker1")		A_SetScale(1.05, 1.05)
-		SHOC G 1 BRIGHT	Light("PurpleBigFlicker1")		A_SetScale(1.09, 1.09)
-		SHOC G 1 BRIGHT	Light("PurpleBigFlicker2")		A_SetScale(1.13, 1.13)
-		SHOC E 1 BRIGHT	Light("PurpleBigFlicker2")		A_SetScale(1.16, 1.16)
-		SHOC E 1 BRIGHT	Light("PurpleBigFlicker2")		A_SetScale(1.19, 1.19)
-		SHOC E 1 BRIGHT	Light("PurpleBigFlicker2")		A_SetScale(1.22, 1.22)
-		TNT1 A 0										A_SetTranslucent(0.85)
-		SHOC F 1 BRIGHT	Light("PurpleBigFlicker3")		A_SetScale(1.24, 1.24)
-		TNT1 A 0										A_SetTranslucent(0.70)
-		SHOC F 1 BRIGHT	Light("PurpleMediumFlicker1")	A_SetScale(1.25, 1.25)
-		TNT1 A 0										A_SetTranslucent(0.55)
-		SHOC F 1 BRIGHT	Light("PurpleMediumFlicker1")	A_SetScale(1.26, 1.26)
-		TNT1 A 0										A_SetTranslucent(0.40)
-		SHOC G 1 BRIGHT	Light("PurpleMediumFlicker2")	A_SetScale(1.27, 1.27)
-		TNT1 A 0										A_SetTranslucent(0.25)
-		SHOC G 1 BRIGHT	Light("PurpleMediumFlicker3")	A_SetScale(1.28, 1.28)
-		TNT1 A 0										A_SetTranslucent(0.10)
-		SHOC G 1 BRIGHT	Light("PurpleMediumFlicker3")	A_SetScale(1.29, 1.29)
+		SHOC E 0 A_SetScale(2.0, 2.0)
+	AnimationStart:
+		"####" E 1 BRIGHT A_SetScale(0.50, 0.50)
+		"####" "#" 0 A_Jump(256,"ExplosionSound")
+	ExplosionSound:
+		"####" "#" 0 A_PlaySound("UTDE/Weapons/ShockRifle/OrbExplo",CHAN_AUTO,1,0,1)
+	AnimationCont:
+		"####" F 1 BRIGHT Light("PurpleMediumFlicker1") A_SetScale(0.70, 0.70)
+		"####" G 1 BRIGHT Light("PurpleBigFlicker3") A_SetScale(0.80, 0.80)
+		"####" E 1 BRIGHT Light("PurpleBigFlicker2") A_SetScale(0.88, 0.88)
+		"####" E 1 BRIGHT Light("PurpleBigFlicker1") A_SetScale(0.95, 0.95)
+		"####" F 1 BRIGHT Light("PurpleBigFlicker1") A_SetScale(1.00, 1.00)
+		"####" F 1 BRIGHT Light("PurpleBigFlicker1") A_SetScale(1.05, 1.05)
+		"####" G 1 BRIGHT Light("PurpleBigFlicker1") A_SetScale(1.09, 1.09)
+		"####" G 1 BRIGHT Light("PurpleBigFlicker2") A_SetScale(1.13, 1.13)
+		"####" E 1 BRIGHT Light("PurpleBigFlicker2") A_SetScale(1.16, 1.16)
+		"####" E 1 BRIGHT Light("PurpleBigFlicker2") A_SetScale(1.19, 1.19)
+		"####" E 1 BRIGHT Light("PurpleBigFlicker2") A_SetScale(1.22, 1.22)
+		"####" "#" 0 A_SetTranslucent(0.85)
+		"####" F 1 BRIGHT Light("PurpleBigFlicker3") A_SetScale(1.24, 1.24)
+		"####" "#" 0 A_SetTranslucent(0.70)
+		"####" F 1 BRIGHT Light("PurpleMediumFlicker1") A_SetScale(1.25, 1.25)
+		"####" "#" 0 A_SetTranslucent(0.55)
+		"####" F 1 BRIGHT Light("PurpleMediumFlicker1") A_SetScale(1.26, 1.26)
+		"####" "#" 0 A_SetTranslucent(0.40)
+		"####" G 1 BRIGHT Light("PurpleMediumFlicker2") A_SetScale(1.27, 1.27)
+		"####" "#" 0 A_SetTranslucent(0.25)
+		"####" G 1 BRIGHT Light("PurpleMediumFlicker3") A_SetScale(1.28, 1.28)
+		"####" "#" 0 A_SetTranslucent(0.10)
+		"####" G 1 BRIGHT Light("PurpleMediumFlicker3") A_SetScale(1.29, 1.29)
 		Stop
+	}
+}
+
+ACTOR UTShockRifleComboFX_Modded : UTShockRifleComboFX
+{
+	States
+	{
+	Spawn:
+		MDZ7 E 0 A_SetScale(2.0, 2.0)
+		Goto Super::AnimationStart
+	ExplosionSound:
+		"####" "#" 0 A_PlaySound("UTDE/Weapons/ShockRifle/OrbExplo_Modded",CHAN_AUTO,1,0,1)
+		Goto Super::AnimationCont
 	}
 }
 
