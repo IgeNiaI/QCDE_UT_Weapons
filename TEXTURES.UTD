@@ -1065,3 +1065,87 @@ Sprite U9GCO0, 236, 259 { Offset -140, -35		Patch U9ECS0, 0, 0 }
 Sprite U9GCP0, 236, 259 { Offset -140, -35		Patch U9ECT0, 0, 0 }
 Sprite U9GCQ0, 236, 259 { Offset -140, -35		Patch U9ECU0, 0, 0 }
 Sprite U9GCR0, 236, 259 { Offset -140, -35		Patch U9ECV0, 0, 0 }
+
+//=============================================================================
+//
+// Link Gun animation frames
+//
+//=============================================================================
+
+// UT2004 Link Gun
+Sprite U4A4B0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4C0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4D0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4E0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4F0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4G0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4H0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4I0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4J0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4K0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4L0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4M0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4N0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4O0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4P0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4Q0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4R0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4S0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4T0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4U0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4V0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4W0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4X0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4Y0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4A4Z0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4C4A0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4E4A0, 202, 243 { Offset -160, -40		Patch U4A4A0, 0, 0 }
+Sprite U4E4D0, 202, 243 { Offset -160, -40		Patch U4C4F0, 0, 0 }
+Sprite U4E4E0, 202, 243 { Offset -160, -40		Patch U4C4G0, 0, 0 }
+Sprite U4E4F0, 202, 243 { Offset -160, -40		Patch U4C4H0, 0, 0 }
+Sprite U4E4G0, 202, 243 { Offset -160, -40		Patch U4C4I0, 0, 0 }
+Sprite U4E4H0, 202, 243 { Offset -160, -40		Patch U4C4J0, 0, 0 }
+Sprite U4E4K0, 202, 243 { Offset -160, -40		Patch U4C4F0, 0, 0 }
+Sprite U4E4L0, 202, 243 { Offset -160, -40		Patch U4C4G0, 0, 0 }
+Sprite U4E4M0, 202, 243 { Offset -160, -40		Patch U4C4H0, 0, 0 }
+Sprite U4E4N0, 202, 243 { Offset -160, -40		Patch U4C4I0, 0, 0 }
+Sprite U4E4O0, 202, 243 { Offset -160, -40		Patch U4C4J0, 0, 0 }
+
+// UC2 Link Gun
+Sprite U6A4B0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4C0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4D0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4E0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4F0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4G0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4H0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4I0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4J0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4K0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4L0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4M0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4N0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4O0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4P0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4Q0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4R0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4S0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4T0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4U0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4V0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4W0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4X0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4Y0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6A4Z0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6C4A0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6E4A0, 347, 249 { Offset -160, -60		Patch U6A4A0, 0, 0 }
+Sprite U6E4D0, 347, 249 { Offset -160, -60		Patch U6C4F0, 0, 0 }
+Sprite U6E4E0, 347, 249 { Offset -160, -60		Patch U6C4G0, 0, 0 }
+Sprite U6E4F0, 347, 249 { Offset -160, -60		Patch U6C4H0, 0, 0 }
+Sprite U6E4G0, 347, 249 { Offset -160, -60		Patch U6C4I0, 0, 0 }
+Sprite U6E4H0, 347, 249 { Offset -160, -60		Patch U6C4J0, 0, 0 }
+Sprite U6E4K0, 347, 249 { Offset -160, -60		Patch U6C4F0, 0, 0 }
+Sprite U6E4L0, 347, 249 { Offset -160, -60		Patch U6C4G0, 0, 0 }
+Sprite U6E4M0, 347, 249 { Offset -160, -60		Patch U6C4H0, 0, 0 }
+Sprite U6E4N0, 347, 249 { Offset -160, -60		Patch U6C4I0, 0, 0 }
+Sprite U6E4O0, 347, 249 { Offset -160, -60		Patch U6C4J0, 0, 0 }

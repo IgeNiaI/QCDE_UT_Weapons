@@ -228,6 +228,22 @@ UTDE/Weapons/LinkGun/Quad/Fire_UT2004			"Sounds/Weapons/LinkGun/UT2004/Quad/LG_F
 UTDE/Weapons/LinkGun/Fire_UC2					"Sounds/Weapons/LinkGun/UC2/LG_Fire.wav"
 UTDE/Weapons/LinkGun/Quad/Fire_UC2				"Sounds/Weapons/LinkGun/UC2/Quad/LG_Fire.wav"
 
+// Modded Link Gun
+//UTDE/Weapons/LinkGun/Prepare_Modded			"Sounds/Weapons/LinkGun/Modded/LG_Prepare.ogg"
+//UTDE/Weapons/LinkGun/Idle_Modded				"Sounds/Weapons/LinkGun/Modded/LG_Idle.ogg"
+
+UTDE/Weapons/LinkGun/Fire_Modded				"Sounds/Weapons/LinkGun/Modded/LG_Fire.wav"
+UTDE/Weapons/LinkGun/Quad/Fire_Modded			"Sounds/Weapons/LinkGun/Modded/Quad/LG_Fire.wav"
+UTDE/Weapons/LinkGun/Impact1_Modded			"Sounds/Weapons/LinkGun/Modded/LG_Impact1.wav"
+UTDE/Weapons/LinkGun/Impact2_Modded			"Sounds/Weapons/LinkGun/Modded/LG_Impact2.wav"
+UTDE/Weapons/LinkGun/Impact3_Modded			"Sounds/Weapons/LinkGun/Modded/LG_Impact3.wav"
+UTDE/Weapons/LinkGun/Impact4_Modded			"Sounds/Weapons/LinkGun/Modded/LG_Impact4.wav"
+UTDE/Weapons/LinkGun/Impact5_Modded			"Sounds/Weapons/LinkGun/Modded/LG_Impact5.wav"
+UTDE/Weapons/LinkGun/Impact6_Modded			"Sounds/Weapons/LinkGun/Modded/LG_Impact6.wav"
+UTDE/Weapons/LinkGun/Impact7_Modded			"Sounds/Weapons/LinkGun/Modded/LG_Impact7.wav"
+$random UTDE/Weapons/LinkGun/Impact_Modded { UTDE/Weapons/LinkGun/Impact1_Modded UTDE/Weapons/LinkGun/Impact2_Modded UTDE/Weapons/LinkGun/Impact3_Modded
+		UTDE/Weapons/LinkGun/Impact4_Modded UTDE/Weapons/LinkGun/Impact5_Modded UTDE/Weapons/LinkGun/Impact6_Modded UTDE/Weapons/LinkGun/Impact7_Modded }
+
 
 //********************
 // Pulse Gun

@@ -1,0 +1,50 @@
+Link Gun
+
+Assets
+
+Weapon sprites and brightmaps: Sprites/Weapons/LinkGun/
+Sounds: Sounds/Weapons/LinkGun/
+Menu previews: Graphics/Menu/SkinPreviews/LinkGun/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-J       D
+Fire                    E      A-O       F
+
+Sprite prefixes: U4 for UT2004; U6 for Unreal Championship 2; MD for Modded.
+The fourth sprite-name character is 4 (Link Gun).
+Skin folders: UT2004 and UC2.
+
+Prepare: 26 frames, 1 tic each; firing is allowed. Current artwork is static.
+Idle: 10 animated frames, 4 tics each; A_WeaponReady runs every tic.
+The original 40-tic idle loop is preserved.
+Fire: A is resting; B-H and I-O are alternating shots, 1 tic per frame.
+Each shot lasts 7 tics; B-C and I-J are bright muzzle-flash frames.
+The one-tic fire-end state uses the resting frame and still allows firing.
+Repeated firing frames reuse idle artwork through TEXTURES.UTD.
+UT2004 brightmaps follow the corresponding original frames; UC2 has none.
+
+Projectile behavior, damage, ammo use, sounds, recoil and firing offsets are
+unchanged, including the separate deathmatch projectile variants.
+
+Modded skin (ID 20)
+
+Modded assets are in the Modded subfolders above, using UT2004 as the base.
+Each weapon frame has its own image and brightmap, including repeated frames.
+The animated idle loop and both seven-tic firing sequences are unchanged.
+Prepare and idle sounds are silent placeholders; their SNDINFO mappings are
+commented out until replaced. Fire, Quad fire and all seven impact sounds
+have separate Modded assets. The screen flash color is in LANGUAGE.UTD.
+
+Other Modded frames
+
+MDZ4 A                  Projectile in flight / initial impact frame
+MDZ4 B-H                Impact animation
+
+Projectile sprites: Sprites/Weapons/LinkGun/Modded/_Z_projectile/
+UTPulseWeak_Modded and UTPulseWeakDM_Modded inherit their respective gameplay
+properties and hit feedback. The deathmatch projectile keeps 25 damage and
+its original collision flags and decal. Impact timing, lights and the extra
+obituary tic are unchanged.
