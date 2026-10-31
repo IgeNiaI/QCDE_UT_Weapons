@@ -1,0 +1,14 @@
+Sniper Rifle
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/SniperRifle/
+Sounds: Sounds/Weapons/SniperRifle/
+Menu previews: Graphics/Menu/SkinPreviews/SniperRifle/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Fire / reload           E      A/G-P     F

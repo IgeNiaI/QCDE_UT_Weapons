@@ -608,6 +608,7 @@ OptionValue "SPskin"
 	3, "UT2003"
 	4, "UT2004"
 	6, "UC2"
+	20, "$WeaponSkin_SniperRifle_Modded"
 }
 
 OptionValue "SPskinBG"
@@ -618,6 +619,7 @@ OptionValue "SPskinBG"
 	3, "SKING8U3"
 	4, "SKING8U4"
 	6, "SKING8U6"
+	20, "SKING8MD"
 }
 
 OptionValue "RDskin"
