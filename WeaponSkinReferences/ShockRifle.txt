@@ -1,0 +1,28 @@
+Shock Rifle
+
+Sprites/Weapons/ShockRifle/: U1, UT2003, UT2004, UC1, UC2, UT99, Modded (ID 20).
+Prefixes U1/U3/U4/U5/U6/U9/MD; fourth character 7.
+Prepare A set A-Z: 1 tic each, firing allowed; static artwork.
+Idle C set A-E: 3 tics per frame, original 15-tic animated loop.
+Primary E set A,F-M: 23 tics; alternate I set A,F-G,I-M: 19 tics.
+Original weapon offsets and Instagib alternate-to-primary routing are retained.
+Brightmap sets B/D/F/J; 48 independent Modded images/maps based on UT2004.
+Original G sprites/maps remain as compatibility/pickup sources.
+UC2 retains its original idle sound, including volume and attenuation.
+
+Sounds/Weapons/ShockRifle/Modded/: primary/alternate, Quad variants, orb flight,
+impact and combo explosion. Weapon sound volume remains 0.70.
+Prepare/idle are silent placeholders with commented mappings.
+Screen flash: WeaponSkin_ShockRifle_ScreenBlend_Modded in LANGUAGE.UTD.
+Preview: Graphics/Menu/SkinPreviews/ShockRifle/SKING7MD.png.
+
+MDZ7 A-G: orb/impact/combo images in Modded/_Z_projectile/.
+MDY7 A: beam image in Modded/_Y_beam/.
+Decorate/Weapons/Modded/ShockRifle.QCD contains 11 isolated orb, combo,
+suction, rail puff and trail/effect actors. Core puff artwork is retained.
+Residue kickback, Static suction, DM damage, cross-skin combos, damage types,
+hit feedback, thrust, server-side/unlag/prediction flags and obituary tics
+are preserved. The external orb whoosh attachment script is unchanged.
+
+Generation manifests: Tools/WeaponSkinAssets/ShockRifle.json and
+Tools/WeaponSkinAssets/ShockRifleActors.json.

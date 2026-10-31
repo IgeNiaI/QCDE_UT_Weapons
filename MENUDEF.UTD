@@ -585,6 +585,7 @@ OptionValue "SRskin"
 	4, "UT2004"
 	5, "UC1"
 	6, "UC2"
+	20, "$WeaponSkin_ShockRifle_Modded"
 }
 
 OptionValue "SRskinBG"
@@ -596,6 +597,7 @@ OptionValue "SRskinBG"
 	4, "SKING7U4"
 	5, "SKING7U5"
 	6, "SKING7U6"
+	20, "SKING7MD"
 }
 
 OptionValue "SPskin"
