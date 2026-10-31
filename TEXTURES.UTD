@@ -1940,3 +1940,69 @@ Sprite U9A8Y0, 273, 261 { Offset -125, -38		Patch U9A8A0, 0, 0 }
 Sprite U9A8Z0, 273, 261 { Offset -125, -38		Patch U9A8A0, 0, 0 }
 // Modded SniperRifle
 // END GENERATED SniperRifle SKIN FRAMES
+
+// BEGIN GENERATED Redeemer SKIN FRAMES
+// UT2004 Redeemer
+Sprite U4A9B0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9C0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9D0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9E0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9F0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9G0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9H0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9I0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9J0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9K0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9L0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9M0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9N0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9O0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9P0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9Q0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9R0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9S0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9T0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9U0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9V0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9W0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9X0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9Y0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4A9Z0, 438, 290 { Offset -105, -10		Patch U4A9A0, 0, 0 }
+Sprite U4C9B0, 438, 290 { Offset -105, -10		Patch U4C9A0, 0, 0 }
+Sprite U4C9C0, 438, 290 { Offset -105, -10		Patch U4C9A0, 0, 0 }
+Sprite U4C9D0, 438, 290 { Offset -105, -10		Patch U4C9A0, 0, 0 }
+Sprite U4C9E0, 438, 290 { Offset -105, -10		Patch U4C9A0, 0, 0 }
+Sprite U4C9F0, 438, 290 { Offset -105, -10		Patch U4C9A0, 0, 0 }
+// UT99 Redeemer
+Sprite U9A9B0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9C0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9D0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9E0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9F0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9G0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9H0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9I0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9J0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9K0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9L0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9M0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9N0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9O0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9P0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9Q0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9R0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9S0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9T0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9U0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9V0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9W0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9X0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9Y0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9A9Z0, 250, 333 { Offset -55, 60		Patch U9A9A0, 0, 0 }
+Sprite U9C9B0, 250, 333 { Offset -55, 60		Patch U9C9A0, 0, 0 }
+Sprite U9C9C0, 250, 333 { Offset -55, 60		Patch U9C9A0, 0, 0 }
+Sprite U9C9D0, 250, 333 { Offset -55, 60		Patch U9C9A0, 0, 0 }
+Sprite U9C9E0, 250, 333 { Offset -55, 60		Patch U9C9A0, 0, 0 }
+Sprite U9C9F0, 250, 333 { Offset -55, 60		Patch U9C9A0, 0, 0 }
+// Modded Redeemer
+// END GENERATED Redeemer SKIN FRAMES

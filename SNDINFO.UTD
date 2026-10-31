@@ -577,6 +577,19 @@ UTDE/Weapons/Redeemer/Quad/Fire_UT99		"Sounds/Weapons/Redeemer/UT99/Quad/RD_Fire
 
 
 UTDE/Weapons/Redeemer/Fire_UT2004			"Sounds/Weapons/Redeemer/UT2004/RD_Fire.wav"
+// Modded Redeemer
+//UTDE/Weapons/Redeemer/Prepare_Modded "Sounds/Weapons/Redeemer/Modded/RD_Prepare.ogg"
+//UTDE/Weapons/Redeemer/Idle_Modded "Sounds/Weapons/Redeemer/Modded/RD_Idle.ogg"
+UTDE/Weapons/Redeemer/Fire_Modded "Sounds/Weapons/Redeemer/Modded/RD_Fire.wav"
+UTDE/Weapons/Redeemer/Quad/Fire_Modded "Sounds/Weapons/Redeemer/Modded/Quad/RD_Fire.wav"
+UTDE/Weapons/Redeemer/Fly_Modded "Sounds/Weapons/Redeemer/Modded/RD_Fly.wav"
+UTDE/Weapons/Redeemer/RocketExplo_Modded "Sounds/Weapons/Redeemer/Modded/RD_Explo.wav"
+$attenuation UTDE/Weapons/Redeemer/RocketExplo_Modded 0.25
+$rolloff UTDE/Weapons/Redeemer/Fly_Modded 512 2048
+$volume UTDE/Weapons/Redeemer/Fly_Modded 2.0
+$volume UTDE/Weapons/Redeemer/RocketExplo_Modded 3.0
+$limit UTDE/Weapons/Redeemer/RocketExplo_Modded 3
+$limit UTDE/Weapons/Redeemer/Fly_Modded 5
 UTDE/Weapons/Redeemer/Quad/Fire_UT2004		"Sounds/Weapons/Redeemer/UT2004/Quad/RD_Fire.wav"
 
 

@@ -1470,3 +1470,45 @@ Model UTRocketMissileSpinningBottomRightDM_Modded
    FrameIndex MDZ6 A 0 0
 }
 // END GENERATED RocketLauncher MODELS
+
+// BEGIN GENERATED Redeemer MODELS
+Model UTRedeemerMissile_Modded
+{
+   Path "MD3/PROJECTILES/Modded/Redeemer"
+   SKIN 0 "redeemer_rocket.png"
+   MODEL 0 "redeemer_rocket.md3"
+   Scale 0.8 0.8 0.92
+   PITCHFROMMOMENTUM
+   FrameIndex MDZ9 A 0 0
+}
+
+Model UTRedeemerMissileControlled_Modded
+{
+   Path "MD3/PROJECTILES/Modded/Redeemer"
+   SKIN 0 "redeemer_rocket.png"
+   MODEL 0 "redeemer_rocket.md3"
+   Scale 0.8 0.8 0.92
+   PITCHFROMMOMENTUM
+   FrameIndex MDZ9 A 0 0
+}
+
+Model UTRedeemerMissileDM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/Redeemer"
+   SKIN 0 "redeemer_rocket.png"
+   MODEL 0 "redeemer_rocket.md3"
+   Scale 0.8 0.8 0.92
+   PITCHFROMMOMENTUM
+   FrameIndex MDZ9 A 0 0
+}
+
+Model UTRedeemerMissileControlledDM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/Redeemer"
+   SKIN 0 "redeemer_rocket.png"
+   MODEL 0 "redeemer_rocket.md3"
+   Scale 0.8 0.8 0.92
+   PITCHFROMMOMENTUM
+   FrameIndex MDZ9 A 0 0
+}
+// END GENERATED Redeemer MODELS

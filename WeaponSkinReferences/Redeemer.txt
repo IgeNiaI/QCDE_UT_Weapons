@@ -1,0 +1,31 @@
+Redeemer
+
+Sprites/Weapons/Redeemer/: UT2004, UT99 and Modded (ID 20, UT2004 base).
+Sprite prefixes U4/U9/MD; fourth character 9.
+Prepare A set A-Z: 1 tic each, firing allowed; static artwork.
+Idle C set A-F: 1 tic each, static artwork.
+Primary E set A-G and guided fire I set A-G: original 31-tic recovery/offsets.
+Brightmap sets B/D/F/J; 46 independent Modded images/maps.
+Original G sprites/brightmaps remain as compatibility and pickup sources.
+
+Sounds/Weapons/Redeemer/Modded/: fire, Quad fire, flight and explosion.
+Prepare/idle are silent placeholders with commented mappings.
+Original flight/explosion volume, attenuation, rolloff and limits are retained.
+The external whoosh/control/tunnel-vision scripts remain unchanged; the
+whoosh attachment script also plays the original flight alias.
+Screen flash: WeaponSkin_Redeemer_ScreenBlend_Modded in LANGUAGE.UTD.
+Preview: Graphics/Menu/SkinPreviews/Redeemer/SKING9MD.png.
+
+MDZ9 A1-A8: directional rocket sprites in Modded/_Z_projectile/.
+Independent model and skin: MD3/PROJECTILES/Modded/Redeemer/.
+Decorate/Weapons/Modded/Redeemer.QCD contains normal/controlled SP/DM
+missiles, UTRedeemerExplosion_Modded, RedeemerTrailFire_Modded and
+RedeemerTrailSmoke_Modded. Trail/explosion artwork retains core sprites.
+Control, steering upgrade, camera/unfreeze lifecycle, shot-down behavior,
+SP/DM direct/splash feedback, damage profiles and multiplayer prediction
+are preserved. Effects still start before seven five-tic damage pulses;
+the final 99-tic unlag lifetime remains. SP freezes on guided launch while
+DM retains its original no-freeze launch path. World pickups are unchanged.
+
+Generation manifests: Tools/WeaponSkinAssets/Redeemer.json and
+Tools/WeaponSkinAssets/RedeemerActors.json.

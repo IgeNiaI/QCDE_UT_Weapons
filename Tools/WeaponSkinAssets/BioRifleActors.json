@@ -1,7 +1,0 @@
-{
-  "weapon":"BioRifle", "sources":["Decorate/Weapons/Tribolt.QCD"],
-  "actors":["BioBall1DM","BioBall2DM","BioBall3DM","BioBall4DM","BioBall5DM","BioBall6DM","BioBall7DM","BioBall8DM","BioBall9DM","BioBall10DM","BioBallDeathFX","BioBallSticky1DM","BioBallSticky2DM","BioBallSticky3DM"],
-  "sprites":{"BIOB":"MDZE"},
-  "sounds":{"UTDE/Weapons/BioRifle/Impact_UT2004":"UTDE/Weapons/BioRifle/Impact_Modded"},
-  "modelPath":"MD3/PROJECTILES/Modded/BioRifle"
-}

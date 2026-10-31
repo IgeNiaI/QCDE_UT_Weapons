@@ -627,6 +627,7 @@ OptionValue "RDskin"
 	-1, "Class Based"
 	9, "UT99"
 	4, "UT2004"
+	20, "$WeaponSkin_Redeemer_Modded"
 }
 
 OptionValue "RDskinBG"
@@ -634,4 +635,5 @@ OptionValue "RDskinBG"
 	-1, "SKINUNKN"
 	9, "SKING9U9"
 	4, "SKING9U4"
+	20, "SKING9MD"
 }
