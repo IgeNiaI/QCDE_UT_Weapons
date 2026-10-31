@@ -44,6 +44,27 @@ Model UTFlakBombDM
    FrameIndex FLAK A 0 0
 }
 
+// Independently replaceable Modded grenade model and skin
+Model UTFlakBomb_Modded
+{
+   Path "MD3/PROJECTILES/Modded/FlakCannon"
+   SKIN 0 "flak_bomb.png"
+   MODEL 0 "flak_bomb.md3"
+   Scale 1.8 1.8 -2.07
+   PITCHFROMMOMENTUM
+   FrameIndex MDZC A 0 0
+}
+
+Model UTFlakBombDM_Modded
+{
+   Path "MD3/PROJECTILES/Modded/FlakCannon"
+   SKIN 0 "flak_bomb.png"
+   MODEL 0 "flak_bomb.md3"
+   Scale 1.8 1.8 -2.07
+   PITCHFROMMOMENTUM
+   FrameIndex MDZC A 0 0
+}
+
 Model UTFlakBombIllusion
 {
    Path "MD3/PROJECTILES"

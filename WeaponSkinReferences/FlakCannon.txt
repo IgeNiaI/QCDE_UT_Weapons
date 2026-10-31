@@ -1,0 +1,20 @@
+Flak Cannon
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/FlakCannon/
+Sounds: Sounds/Weapons/FlakCannon/
+Modded models and model textures: MD3/PROJECTILES/Modded/FlakCannon/
+Menu previews: Graphics/Menu/SkinPreviews/FlakCannon/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Primary fire            E      A-V       F
+Alternate fire          G      A-R       H
+
+Other Modded frames
+
+Grenade projectile (all eight viewing angles; model)        MDZC A
