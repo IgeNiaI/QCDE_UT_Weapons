@@ -169,6 +169,17 @@ UTDE/Weapons/FlakMini/Quad/Fire_U1Flak			"Sounds/Weapons/FlakMini/U1Flak/Quad/FL
 UTDE/Weapons/FlakMini/Fire_U1Stinger			"Sounds/Weapons/FlakMini/U1Stinger/FLM_Fire.wav"
 UTDE/Weapons/FlakMini/Quad/Fire_U1Stinger		"Sounds/Weapons/FlakMini/U1Stinger/Quad/FLM_Fire.wav"
 
+// Modded Flak Mini
+//UTDE/Weapons/FlakMini/Prepare_Modded			"Sounds/Weapons/FlakMini/Modded/FLM_Prepare.ogg"
+//UTDE/Weapons/FlakMini/Idle_Modded				"Sounds/Weapons/FlakMini/Modded/FLM_Idle.ogg"
+
+UTDE/Weapons/FlakMini/Fire_Modded				"Sounds/Weapons/FlakMini/Modded/FLM_Fire.wav"
+UTDE/Weapons/FlakMini/Quad/Fire_Modded			"Sounds/Weapons/FlakMini/Modded/Quad/FLM_Fire.wav"
+UTDE/Weapons/FlakMini/Bounce1_Modded			"Sounds/Weapons/FlakMini/Modded/FLM_Bounce1.wav"
+UTDE/Weapons/FlakMini/Bounce2_Modded			"Sounds/Weapons/FlakMini/Modded/FLM_Bounce2.wav"
+UTDE/Weapons/FlakMini/Bounce3_Modded			"Sounds/Weapons/FlakMini/Modded/FLM_Bounce3.wav"
+$random UTDE/Weapons/FlakMini/Bounce_Modded { UTDE/Weapons/FlakMini/Bounce1_Modded UTDE/Weapons/FlakMini/Bounce2_Modded UTDE/Weapons/FlakMini/Bounce3_Modded }
+
 
 //********************
 // Flak Cannon

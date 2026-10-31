@@ -1,0 +1,14 @@
+Flak Cannon Mini
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/FlakCannonMini/
+Sounds: Sounds/Weapons/FlakMini/
+Menu previews: Graphics/Menu/SkinPreviews/FlakMini/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Fire                    E      A-P       F
