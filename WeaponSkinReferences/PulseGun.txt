@@ -1,0 +1,22 @@
+Pulse Gun
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/PulseGun/
+Sounds: Sounds/Weapons/PulseGun/
+Menu previews: Graphics/Menu/SkinPreviews/PulseGun/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Primary fire            E      A-N       F
+Alternate fire          I      A-R       J
+Primary fire end        K      A-T       L
+
+Other Modded frames
+
+Projectile in flight        MDZD A
+Impact animation            MDZD B-H
+Lava-upgrade explosion      MDZD I-O
