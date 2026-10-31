@@ -485,6 +485,7 @@ OptionValue "LGskin"
 	-1, "Class Based"
 	4, "UT2004"
 	6, "UC2"
+	20, "$WeaponSkin_LinkGun_Modded"
 }
 
 OptionValue "LGskinBG"
@@ -492,6 +493,7 @@ OptionValue "LGskinBG"
 	-1, "SKINUNKN"
 	4, "SKING4U4"
 	6, "SKING4U6"
+	20, "SKING4MD"
 }
 
 OptionValue "PGskin"

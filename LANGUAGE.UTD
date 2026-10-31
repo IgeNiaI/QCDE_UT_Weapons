@@ -9,6 +9,7 @@ WeaponSkin_Minigun_Modded = "Modded";
 WeaponSkin_DispersionPistol_Modded = "Modded";
 WeaponSkin_FlakMini_Modded = "Modded";
 WeaponSkin_FlakCannon_Modded = "Modded";
+WeaponSkin_LinkGun_Modded = "Modded";
 
 WeaponSkin_Enforcer_ScreenBlend_Modded = "Yellow";
 WeaponSkin_Minigun_ScreenBlend_Modded = "Yellow";
@@ -17,6 +18,7 @@ WeaponSkin_DispersionPistol_ScreenBlend_OneUpgrade_Modded = "Green";
 WeaponSkin_DispersionPistol_ScreenBlend_TwoUpgrades_Modded = "Red";
 WeaponSkin_FlakMini_ScreenBlend_Modded = "Yellow";
 WeaponSkin_FlakCannon_ScreenBlend_Modded = "Yellow";
+WeaponSkin_LinkGun_ScreenBlend_Modded = "Green";
 
 Control_Slot1	= "Impact Hammer";
 Control_Slot2	= "Minigun / Enforcer";
