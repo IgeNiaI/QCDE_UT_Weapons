@@ -247,6 +247,26 @@ $random UTDE/Weapons/LinkGun/Impact_Modded { UTDE/Weapons/LinkGun/Impact1_Modded
 
 //********************
 // Pulse Gun
+//UTDE/Weapons/PulseGun/Prepare_Modded "Sounds/Weapons/PulseGun/Modded/PG_Prepare.ogg"
+//UTDE/Weapons/PulseGun/Idle_Modded "Sounds/Weapons/PulseGun/Modded/PG_Idle.ogg"
+UTDE/Weapons/PulseGun/FireStartLoop_Modded "Sounds/Weapons/PulseGun/Modded/PG_Start_Loop.wav"
+UTDE/Weapons/PulseGun/Quad/FireStartLoop_Modded "Sounds/Weapons/PulseGun/Modded/Quad/PG_Start_Loop.wav"
+UTDE/Weapons/PulseGun/FireEnd_Modded "Sounds/Weapons/PulseGun/Modded/PG_End.wav"
+UTDE/Weapons/PulseGun/AltFireStartLoop_Modded "Sounds/Weapons/PulseGun/Modded/PG_Start_Loop_Alt.wav"
+UTDE/Weapons/PulseGun/Quad/AltFireStartLoop_Modded "Sounds/Weapons/PulseGun/Modded/Quad/PG_Start_Loop_Alt.wav"
+$volume UTDE/Weapons/PulseGun/FireStartLoop_Modded 0.60
+$volume UTDE/Weapons/PulseGun/Quad/FireStartLoop_Modded 0.60
+$volume UTDE/Weapons/PulseGun/FireEnd_Modded 0.60
+$volume UTDE/Weapons/PulseGun/AltFireStartLoop_Modded 0.80
+$volume UTDE/Weapons/PulseGun/Quad/AltFireStartLoop_Modded 0.80
+UTDE/Weapons/PulseGun/Impact1_Modded "Sounds/Weapons/PulseGun/Modded/PG_Impact1.wav"
+UTDE/Weapons/PulseGun/Impact2_Modded "Sounds/Weapons/PulseGun/Modded/PG_Impact2.wav"
+UTDE/Weapons/PulseGun/Impact3_Modded "Sounds/Weapons/PulseGun/Modded/PG_Impact3.wav"
+UTDE/Weapons/PulseGun/Impact4_Modded "Sounds/Weapons/PulseGun/Modded/PG_Impact4.wav"
+UTDE/Weapons/PulseGun/Impact5_Modded "Sounds/Weapons/PulseGun/Modded/PG_Impact5.wav"
+UTDE/Weapons/PulseGun/Impact6_Modded "Sounds/Weapons/PulseGun/Modded/PG_Impact6.wav"
+UTDE/Weapons/PulseGun/Impact7_Modded "Sounds/Weapons/PulseGun/Modded/PG_Impact7.wav"
+$random UTDE/Weapons/PulseGun/Impact_Modded { UTDE/Weapons/PulseGun/Impact1_Modded UTDE/Weapons/PulseGun/Impact2_Modded UTDE/Weapons/PulseGun/Impact3_Modded UTDE/Weapons/PulseGun/Impact4_Modded UTDE/Weapons/PulseGun/Impact5_Modded UTDE/Weapons/PulseGun/Impact6_Modded UTDE/Weapons/PulseGun/Impact7_Modded }
 UTDE/Weapons/PulseGun/FireStartLoop_UT2003			"Sounds/Weapons/PulseGun/UT2003/PG_Start_Loop.wav"
 UTDE/Weapons/PulseGun/Quad/FireStartLoop_UT2003		"Sounds/Weapons/PulseGun/UT2003/Quad/PG_Start_Loop.wav"
 UTDE/Weapons/PulseGun/FireEnd_UT2003				"Sounds/Weapons/PulseGun/UT2003/PG_End.wav"

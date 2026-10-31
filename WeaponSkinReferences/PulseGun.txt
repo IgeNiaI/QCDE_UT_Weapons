@@ -1,0 +1,32 @@
+Pulse Gun
+
+Sprites/Weapons/PulseGun/: UT2003, UC1, UT99 and Modded (ID 20).
+Prepare: A set, A-Z, 1 tic each; firing is allowed.
+Idle: C set, A-F, 1 tic each; current artwork is static.
+Primary fire: E set, A-N; alternating five-tic shots and original refire.
+Alternate fire: I set, A-R; original two-tic beam pairs and one-tic fire end.
+Matching brightmap sets: B, D, F and J.
+Sprite prefixes: U3, U5, U9 and MD. Fourth character: D.
+Legacy G sprites and brightmaps remain as compatibility sources and pickups.
+Existing skins use aliases for repeated frames. Modded has 64 independent
+weapon images and brightmaps, based on UT2003.
+
+Sounds: Sounds/Weapons/PulseGun/Modded/.
+Prepare/idle sounds are silent placeholders with commented SNDINFO mappings.
+Primary loop/end, alternate loop, Quad loops and seven impacts are separate.
+Original sound volumes (0.60 primary, 0.80 alternate) are preserved.
+Menu preview: Graphics/Menu/SkinPreviews/PulseGun/SKINGDMD.png.
+Screen flash color: WeaponSkin_PulseGun_ScreenBlend_Modded in LANGUAGE.UTD.
+
+MDZD A-O: projectile, normal impact and Lava explosion in Modded/_Z_projectile/.
+UTPulseStrong_Modded and UTPulseStrongDM_Modded preserve their original
+damage, flags, hit feedback, Lava upgrade and explosion timings.
+PulseBeamPuff_Modded, PulseBeamPuffDM_Modded, PulseBeamPuffNoSound_Modded,
+PGworldactor_Modded and PGworldactor2_Modded are separate beam/effect hooks;
+these retain original artwork until their inherited states are replaced.
+Seeker piercing, DM damage, invisible-beam option, ammo flags, lights,
+recoil/flash toggles and UT99's original fire-end animation are unchanged.
+
+Tools/WeaponSkinAssets/PulseGun.json describes the generated resource section.
+Run node Tools/WeaponSkinAssets.cjs Tools/WeaponSkinAssets/PulseGun.json
+from the repository root to verify/regenerate assets and resource definitions.

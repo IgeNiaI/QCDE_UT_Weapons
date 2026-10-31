@@ -502,6 +502,7 @@ OptionValue "PGskin"
 	9, "UT99"
 	3, "UT2003"
 	5, "UC1"
+	20, "$WeaponSkin_PulseGun_Modded"
 }
 
 OptionValue "PGskinBG"
@@ -510,6 +511,7 @@ OptionValue "PGskinBG"
 	9, "SKINGDU9"
 	3, "SKINGDU3"
 	5, "SKINGDU5"
+	20, "SKINGDMD"
 }
 
 OptionValue "RPskin"

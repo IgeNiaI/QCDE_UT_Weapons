@@ -1,0 +1,16 @@
+{
+  "weapon": "PulseGun",
+  "id": "D",
+  "base": "UT2003",
+  "skins": [
+    {"name": "UT2003", "prefix": "U3"},
+    {"name": "UC1", "prefix": "U5"},
+    {"name": "UT99", "prefix": "U9"}
+  ],
+  "phases": [
+    {"set": "A", "name": "prepare", "map": "B", "source": "AAAAAAAAAAAAAAAAAAAAAAAAAA"},
+    {"set": "C", "name": "idle", "map": "D", "source": "AAAAAA"},
+    {"set": "E", "name": "fire", "map": "F", "source": "ABCDEFGHIJKLMN"},
+    {"set": "I", "name": "altfire", "map": "J", "source": "ABCDEFGHIJKLMNOPQR"}
+  ]
+}
