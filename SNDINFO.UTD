@@ -354,6 +354,21 @@ UTDE/Weapons/Ripper/Bounce_UC2						"Sounds/Weapons/Ripper/UC2/RP_Bounce.wav"
 //********************
 // Bio Rifle
 UTDE/Weapons/BioRifle/Fire_UT2004				"Sounds/Weapons/BioRifle/UT2004/BR_Fire.wav"
+// Modded Bio Rifle
+//UTDE/Weapons/BioRifle/Prepare_Modded "Sounds/Weapons/BioRifle/Modded/BR_Prepare.ogg"
+//UTDE/Weapons/BioRifle/Idle_Modded "Sounds/Weapons/BioRifle/Modded/BR_Idle.ogg"
+UTDE/Weapons/BioRifle/Fire_Modded "Sounds/Weapons/BioRifle/Modded/BR_Fire.wav"
+UTDE/Weapons/BioRifle/Quad/Fire_Modded "Sounds/Weapons/BioRifle/Modded/Quad/BR_Fire.wav"
+UTDE/Weapons/BioRifle/Charge_Modded "Sounds/Weapons/BioRifle/Modded/BR_Charge.wav"
+UTDE/Weapons/BioRifle/Impact1_Modded "Sounds/Weapons/BioRifle/Modded/BR_Impact1.wav"
+UTDE/Weapons/BioRifle/Impact2_Modded "Sounds/Weapons/BioRifle/Modded/BR_Impact2.wav"
+UTDE/Weapons/BioRifle/Impact3_Modded "Sounds/Weapons/BioRifle/Modded/BR_Impact3.wav"
+UTDE/Weapons/BioRifle/Impact4_Modded "Sounds/Weapons/BioRifle/Modded/BR_Impact4.wav"
+UTDE/Weapons/BioRifle/Impact5_Modded "Sounds/Weapons/BioRifle/Modded/BR_Impact5.wav"
+UTDE/Weapons/BioRifle/Impact6_Modded "Sounds/Weapons/BioRifle/Modded/BR_Impact6.wav"
+UTDE/Weapons/BioRifle/Impact7_Modded "Sounds/Weapons/BioRifle/Modded/BR_Impact7.wav"
+UTDE/Weapons/BioRifle/Impact8_Modded "Sounds/Weapons/BioRifle/Modded/BR_Impact8.wav"
+$random UTDE/Weapons/BioRifle/Impact_Modded { UTDE/Weapons/BioRifle/Impact1_Modded UTDE/Weapons/BioRifle/Impact2_Modded UTDE/Weapons/BioRifle/Impact3_Modded UTDE/Weapons/BioRifle/Impact4_Modded UTDE/Weapons/BioRifle/Impact5_Modded UTDE/Weapons/BioRifle/Impact6_Modded UTDE/Weapons/BioRifle/Impact7_Modded UTDE/Weapons/BioRifle/Impact8_Modded }
 UTDE/Weapons/BioRifle/Quad/Fire_UT2004			"Sounds/Weapons/BioRifle/UT2004/Quad/BR_Fire.wav"
 UTDE/Weapons/BioRifle/Charge_UT2004				"Sounds/Weapons/BioRifle/UT2004/BR_Charge.wav"
 

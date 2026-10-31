@@ -1097,11 +1097,11 @@ Actor QCTriboltDM : QCWeapon
 	Spawn:
 		TNT1 A 1
 		U4GE Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
-		Goto Idle
+		Goto SpawnIdle
 	DMSpawn:
 		U4GE ZZZZZZZZZZZZZZZ 35 Bright
 		Stop
-	Idle:
+	SpawnIdle:
 		U4GE Y -1
 		Wait
 
@@ -1109,6 +1109,7 @@ Actor QCTriboltDM : QCWeapon
 	// Select/Deselect Seq
 	//-----------------------
 	Select:
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Select.Modded")
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Select.UT99")
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Select.UT99") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Select.UT99") // Fallback to another skin
@@ -1119,19 +1120,22 @@ Actor QCTriboltDM : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 2, "Select.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 1, "Select.U1")
 	Select.U1:
-		U1GE A 0
+		U1AE A 0
 		Goto SelectCont
 	Select.UT2004:
-		U4GE A 0
+		U4AE A 0
 		Goto SelectCont
 	Select.UC1:
-		U5GE A 0
+		U5AE A 0
 		Goto SelectCont
 	Select.UC2:
-		U6GE A 0
+		U6AE A 0
 		Goto SelectCont
 	Select.UT99:
-		U9GE A 0
+		U9AE A 0
+		Goto SelectCont
+	Select.Modded:
+		MDAE A 0
 		Goto SelectCont
 
 	SelectCont:
@@ -1155,6 +1159,7 @@ Actor QCTriboltDM : QCWeapon
 	// Ready Seq
 	//-----------------------
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Prepare.Modded")
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Ready.UT99")
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Ready.UT99") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Ready.UT99") // Fallback to another skin
@@ -1165,24 +1170,54 @@ Actor QCTriboltDM : QCWeapon
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 2, "Ready.U1") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 1, "Ready.U1")
 	Ready.U1:
-		U1GE A 0
+		U1AE A 0
 		Goto ReadyCont
 	Ready.UT2004:
-		U4GE A 0
+		U4AE A 0
 		Goto ReadyCont
 	Ready.UC1:
-		U5GE A 0
+		U5AE A 0
 		Goto ReadyCont
 	Ready.UC2:
-		U6GE A 0
+		U6AE A 0
 		Goto ReadyCont
 	Ready.UT99:
-		U9GE A 0
+		U9AE A 0
+		Goto ReadyCont
+	Prepare.Modded:
+		MDAE A 0 A_PlaySound("UTDE/Weapons/BioRifle/Prepare_Modded",CHAN_WEAPON,1,0,3)
 		Goto ReadyCont
 
 	ReadyCont:
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
-		"####" A 3 A_WeaponReady
+		"####" ABCDEFGHIJKLMNOPQRSTUVWXYZ 1 A_WeaponReady
+		Goto Idle
+	Idle:
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Idle.Modded")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",7,"Idle.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",6,"Idle.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",5,"Idle.UC1")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",3,"Idle.UT2004")
+	Idle.U1:
+		U1CE A 0
+		Goto IdleCont
+	Idle.UT2004:
+		U4CE A 0
+		Goto IdleCont
+	Idle.UC1:
+		U5CE A 0
+		Goto IdleCont
+	Idle.UC2:
+		U6CE A 0
+		Goto IdleCont
+	Idle.UT99:
+		U9CE A 0
+		Goto IdleCont
+	Idle.Modded:
+		MDCE A 0 A_PlaySound("UTDE/Weapons/BioRifle/Idle_Modded",CHAN_WEAPON,1,1)
+	IdleCont:
+		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+		"####" ABCDEF 1 A_WeaponReady
 		Loop
 
 		ReadyCantFire:
@@ -1197,6 +1232,30 @@ Actor QCTriboltDM : QCWeapon
 	// Fire Seq
 	//-----------------------
 	Fire:
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",20,"FireSprite.Modded")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",7,"FireSprite.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",6,"FireSprite.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",5,"FireSprite.UC1")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",3,"FireSprite.UT2004")
+	FireSprite.U1:
+		U1EE A 0
+		Goto FireSpriteCont
+	FireSprite.UT2004:
+		U4EE A 0
+		Goto FireSpriteCont
+	FireSprite.UC1:
+		U5EE A 0
+		Goto FireSpriteCont
+	FireSprite.UC2:
+		U6EE A 0
+		Goto FireSpriteCont
+	FireSprite.UT99:
+		U9EE A 0
+		Goto FireSpriteCont
+	FireSprite.Modded:
+		MDEE A 0
+	FireSpriteCont:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire.UT99") // Fallback to another skin
@@ -1215,11 +1274,38 @@ Actor QCTriboltDM : QCWeapon
 	Fire.UC2:
 		"####" A 0 A_FireCustomMissile("BioBall1DM", 0, true, 1, 2, 0, 3)
 		Goto PostFire
+	Fire.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall1DM_Modded", 0, true, 1, 2, 0, 3)
+		Goto PostFire
 
 	//-----------------------
 	// AltFire Seq
 	//-----------------------
 	AltFire:
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",20,"AltFireSprite.Modded")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",7,"AltFireSprite.UT99")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",6,"AltFireSprite.UC2")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",5,"AltFireSprite.UC1")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",3,"AltFireSprite.UT2004")
+	AltFireSprite.U1:
+		U1IE A 0
+		Goto AltFireSpriteCont
+	AltFireSprite.UT2004:
+		U4IE A 0
+		Goto AltFireSpriteCont
+	AltFireSprite.UC1:
+		U5IE A 0
+		Goto AltFireSpriteCont
+	AltFireSprite.UC2:
+		U6IE A 0
+		Goto AltFireSpriteCont
+	AltFireSprite.UT99:
+		U9IE A 0
+		Goto AltFireSpriteCont
+	AltFireSprite.Modded:
+		MDIE A 0
+	AltFireSpriteCont:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Charge.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "AltFire.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "AltFire.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "AltFire.UT99") // Fallback to another skin
@@ -1237,6 +1323,9 @@ Actor QCTriboltDM : QCWeapon
 	AltFire.UC1:
 	AltFire.UC2:
 		"####" A 0 A_PlaySound("UTDE/Weapons/BioRifle/Charge_UT2004",CHAN_WEAPON,1.0,0)
+		Goto Charge10
+	Charge.Modded:
+		"####" A 0 A_PlaySound("UTDE/Weapons/BioRifle/Charge_Modded",CHAN_WEAPON,1.0,0)
 		Goto Charge10
 
 	// Charge 1
@@ -1827,6 +1916,7 @@ Actor QCTriboltDM : QCWeapon
 	// Actually firing alternative bio ball
 	//-----------------------
 	Fire1:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire1.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire1.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire1.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire1.UT99") // Fallback to another skin
@@ -1846,6 +1936,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto PostFire
 
 	Fire2:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire2.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire2.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire2.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire2.UT99") // Fallback to another skin
@@ -1866,6 +1957,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto PostFire
 
 	Fire3:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire3.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire3.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire3.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire3.UT99") // Fallback to another skin
@@ -1886,6 +1978,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto PostFire
 
 	Fire4:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire4.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire4.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire4.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire4.UT99") // Fallback to another skin
@@ -1906,6 +1999,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto PostFire
 
 	Fire5:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire5.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire5.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire5.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire5.UT99") // Fallback to another skin
@@ -1926,6 +2020,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto PostFire
 
 	Fire6:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire6.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire6.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire6.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire6.UT99") // Fallback to another skin
@@ -1946,6 +2041,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto PostFire
 
 	Fire7:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire7.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire7.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire7.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire7.UT99") // Fallback to another skin
@@ -1966,6 +2062,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto PostFire
 
 	Fire8:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire8.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire8.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire8.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire8.UT99") // Fallback to another skin
@@ -1986,6 +2083,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto PostFire
 
 	Fire9:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire9.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire9.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire9.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire9.UT99") // Fallback to another skin
@@ -2006,6 +2104,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto PostFire
 
 	Fire10:
+		"####" A 0 A_JumpIfInventory("UTBioRifleSkin",20,"Fire10.Modded")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "Fire10.UT99")
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "Fire10.UT99") // Fallback to another skin
 		"####" A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "Fire10.UT99") // Fallback to another skin
@@ -2023,6 +2122,37 @@ Actor QCTriboltDM : QCWeapon
 	Fire10.UC1:
 	Fire10.UC2:
 		"####" A 0 A_FireCustomMissile("BioBall10DM", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+
+	Fire1.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall1DM_Modded", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+	Fire2.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall2DM_Modded", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+	Fire3.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall3DM_Modded", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+	Fire4.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall4DM_Modded", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+	Fire5.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall5DM_Modded", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+	Fire6.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall6DM_Modded", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+	Fire7.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall7DM_Modded", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+	Fire8.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall8DM_Modded", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+	Fire9.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall9DM_Modded", 0, false, 1, 2, 0, 3)
+		Goto PostFire
+	Fire10.Modded:
+		"####" A 0 A_FireCustomMissile("BioBall10DM_Modded", 0, false, 1, 2, 0, 3)
 		Goto PostFire
 
 	PostFire:
@@ -2046,6 +2176,7 @@ Actor QCTriboltDM : QCWeapon
 		Goto NormalSound
 
 		NormalSound:
+			TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",20,"NormalSound.Modded")
 			TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "NormalSound.UT99")
 			TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "NormalSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "NormalSound.UT99") // Fallback to another skin
@@ -2066,8 +2197,12 @@ Actor QCTriboltDM : QCWeapon
 		NormalSound.UC2:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/BioRifle/Fire_UC2",CHAN_WEAPON,1.0,0)
 			Goto EndFlash
+		NormalSound.Modded:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/BioRifle/Fire_Modded",CHAN_WEAPON,1.0,0)
+			Goto EndFlash
 
 		QuadSound:
+			TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",20,"QuadSound.Modded")
 			TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 9, "QuadSound.UT99")
 			TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 8, "QuadSound.UT99") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin", 7, "QuadSound.UT99") // Fallback to another skin
@@ -2088,10 +2223,17 @@ Actor QCTriboltDM : QCWeapon
 		QuadSound.UC2:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/BioRifle/Quad/Fire_UC2",CHAN_WEAPON,1.0,0)
 			Goto EndFlash
+		QuadSound.Modded:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/BioRifle/Quad/Fire_Modded",CHAN_WEAPON,1.0,0)
+			Goto EndFlash
 
 	EndFlash:
 		TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"EndFlashCont")
+		TNT1 A 0 A_JumpIfInventory("UTBioRifleSkin",20,"EndFlash.Modded")
 		TNT1 A 0 A_SetBlend("Green",0.03,3)
+		Goto EndFlashCont
+	EndFlash.Modded:
+		TNT1 A 0 A_SetBlend("$WeaponSkin_BioRifle_ScreenBlend_Modded",0.03,3)
 	EndFlashCont:
 		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"EndFlashNoRecoil")
 		TNT1 A 2 A_SetPitch(pitch-0.6)
@@ -2777,3 +2919,5 @@ Actor UTBioRifleSkin	: Token { Inventory.MaxAmount 20 }
 
 Actor TB_UG_Long : Token {}
 Actor TB_UG_Grenade : Token {}
+
+#include "Decorate/Weapons/Modded/BioRifle.QCD"

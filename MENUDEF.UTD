@@ -540,6 +540,7 @@ OptionValue "BRskin"
 	4, "UT2004"
 	5, "UC1"
 	6, "UC2"
+	20, "$WeaponSkin_BioRifle_Modded"
 }
 
 OptionValue "BRskinBG"
@@ -550,6 +551,7 @@ OptionValue "BRskinBG"
 	4, "SKINGEU4"
 	5, "SKINGEU5"
 	6, "SKINGEU6"
+	20, "SKINGEMD"
 }
 
 OptionValue "RLskin"

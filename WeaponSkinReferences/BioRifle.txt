@@ -1,0 +1,31 @@
+Bio Rifle (deathmatch)
+
+Sprites/Weapons/BioRifle/: U1, UT2004, UC1, UC2, UT99 and Modded (ID 20).
+Prefixes U1/U4/U5/U6/U9/MD; fourth sprite character E.
+Prepare: A set A-Z, 1 tic each, firing allowed; current artwork static.
+Idle: C set A-F, 1 tic each, static artwork.
+Primary/recovery: E set A-C, original ten-tic animation and weapon offsets.
+Charge/alternate/recovery: I set A-V; all ten original charge stages and
+their no-ammo/prediction hold states are preserved. A-C are recovery frames.
+Brightmap sets B/D/F/J; 57 independent Modded frames/maps, UT2004 base.
+Original G sprites/brightmaps remain as compatibility and pickup sources.
+
+Sounds/Weapons/BioRifle/Modded/: fire, Quad fire, charge and eight impacts.
+Prepare/idle are silent placeholders with commented SNDINFO mappings.
+Screen flash: WeaponSkin_BioRifle_ScreenBlend_Modded in LANGUAGE.UTD.
+Menu preview: Graphics/Menu/SkinPreviews/BioRifle/SKINGEMD.png.
+
+MDZE A-F: projectile, sticky glob and impact sprites in Modded/_Z_projectile/.
+Models and six animated skins: MD3/PROJECTILES/Modded/BioRifle/.
+Decorate/Weapons/Modded/BioRifle.QCD contains independent copies of all ten
+BioBall1DM_Modded through BioBall10DM_Modded projectiles, three
+BioBallSticky1DM_Modded through BioBallSticky3DM_Modded variants, and
+BioBallDeathFX_Modded (currently using core DB63 artwork).
+These retain all gameplay properties, direct/splash damage, sticky lifetime,
+hit feedback, debris counts, client-prediction workarounds and unlag waits.
+The original actors, Unreal variants, Ripper and world pickups are untouched.
+
+Generation manifests: Tools/WeaponSkinAssets/BioRifle.json and
+Tools/WeaponSkinAssets/BioRifleActors.json. Run the corresponding
+Tools/WeaponSkinAssets.cjs and Tools/WeaponSkinActors.cjs generators.
+Generators refuse to overwrite customized output.
