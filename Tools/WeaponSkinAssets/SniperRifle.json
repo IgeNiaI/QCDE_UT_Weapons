@@ -1,9 +1,0 @@
-{
-  "weapon":"SniperRifle", "id":"8", "base":"UT2004",
-  "skins":[{"name":"U1","prefix":"U1"},{"name":"UT2003","prefix":"U3"},{"name":"UT2004","prefix":"U4"},{"name":"UC2","prefix":"U6"},{"name":"UT99","prefix":"U9"}],
-  "phases":[
-    {"set":"A","name":"prepare","map":"B","source":"AAAAAAAAAAAAAAAAAAAAAAAAAA"},
-    {"set":"C","name":"idle","map":"D","source":"ABCDEF"},
-    {"set":"E","name":"fire_reload","map":"F","frames":"AGHIJKLMNOP","source":"AGHIJKLMNOP"}
-  ]
-}

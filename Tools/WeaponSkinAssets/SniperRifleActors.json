@@ -1,5 +1,0 @@
-{
-  "weapon":"SniperRifle", "sources":["Decorate/Weapons/Railgun.QCD","Decorate/Weapons/HMachinegun.QCD"],
-  "actors":["SniperTrail","SniperTrailUpgraded","SniperRiflePuff","SniperRiflePuff_DM","SniperPuffFx","SniperSmokeSpawner","MachinegunSmoke","RailgunWhoosher"],
-  "sounds":{"QC/Weapons/Railgun/Impact":"UTDE/Weapons/SniperRifle/Impact_Modded","QC/Weapons/Railgun/Whoosh":"UTDE/Weapons/SniperRifle/Whoosh_Modded"}
-}
