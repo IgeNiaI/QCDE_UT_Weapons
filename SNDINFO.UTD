@@ -150,7 +150,24 @@ UTDE/Weapons/Dispr/Fire_UC2						"Sounds/Weapons/DispersionPistol/UC2/DP_Fire.wa
 UTDE/Weapons/Dispr/Quad/Fire_UC2				"Sounds/Weapons/DispersionPistol/UC2/Quad/DP_Fire.wav"
 
 
-UTDE/Weapons/Dispr/Impact						"Sounds/Weapons/DispersionPistol/DP_Impact.wav"
+UTDE/Weapons/Dispr/Impact1						"Sounds/Weapons/DispersionPistol/DP_Impact1.wav"
+UTDE/Weapons/Dispr/Impact2						"Sounds/Weapons/DispersionPistol/DP_Impact2.wav"
+UTDE/Weapons/Dispr/Impact3						"Sounds/Weapons/DispersionPistol/DP_Impact3.wav"
+UTDE/Weapons/Dispr/Impact4						"Sounds/Weapons/DispersionPistol/DP_Impact4.wav"
+$random UTDE/Weapons/Dispr/Impact { UTDE/Weapons/Dispr/Impact1 UTDE/Weapons/Dispr/Impact2 UTDE/Weapons/Dispr/Impact3 UTDE/Weapons/Dispr/Impact4 }
+
+// Modded Dispersion Pistol
+//UTDE/Weapons/Dispr/Prepare_Modded				"Sounds/Weapons/DispersionPistol/Modded/DP_Prepare.ogg"
+//UTDE/Weapons/Dispr/Idle_Modded				"Sounds/Weapons/DispersionPistol/Modded/DP_Idle.ogg"
+
+UTDE/Weapons/Dispr/Fire_Modded					"Sounds/Weapons/DispersionPistol/Modded/DP_Fire.wav"
+UTDE/Weapons/Dispr/Quad/Fire_Modded				"Sounds/Weapons/DispersionPistol/Modded/Quad/DP_Fire.wav"
+
+UTDE/Weapons/Dispr/Impact1_Modded						"Sounds/Weapons/DispersionPistol/Modded/DP_Impact1.wav"
+UTDE/Weapons/Dispr/Impact2_Modded						"Sounds/Weapons/DispersionPistol/Modded/DP_Impact2.wav"
+UTDE/Weapons/Dispr/Impact3_Modded						"Sounds/Weapons/DispersionPistol/Modded/DP_Impact3.wav"
+UTDE/Weapons/Dispr/Impact4_Modded						"Sounds/Weapons/DispersionPistol/Modded/DP_Impact4.wav"
+$random UTDE/Weapons/Dispr/Impact_Modded { UTDE/Weapons/Dispr/Impact1_Modded UTDE/Weapons/Dispr/Impact2_Modded UTDE/Weapons/Dispr/Impact3_Modded UTDE/Weapons/Dispr/Impact4_Modded }
 
 
 //********************
