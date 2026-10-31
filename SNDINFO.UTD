@@ -206,6 +206,19 @@ UTDE/Weapons/Flak/Bounce1						"Sounds/Weapons/FlakCannon/FL_Bounce1.wav"
 UTDE/Weapons/Flak/Bounce2						"Sounds/Weapons/FlakCannon/FL_Bounce2.wav"
 UTDE/Weapons/Flak/Bounce3						"Sounds/Weapons/FlakCannon/FL_Bounce3.wav"
 
+// Modded Flak Cannon
+//UTDE/Weapons/Flak/Prepare_Modded				"Sounds/Weapons/FlakCannon/Modded/FL_Prepare.ogg"
+//UTDE/Weapons/Flak/Idle_Modded				"Sounds/Weapons/FlakCannon/Modded/FL_Idle.ogg"
+UTDE/Weapons/Flak/Fire_Modded					"Sounds/Weapons/FlakCannon/Modded/FL_Fire.wav"
+UTDE/Weapons/Flak/Quad/Fire_Modded				"Sounds/Weapons/FlakCannon/Modded/Quad/FL_Fire.wav"
+UTDE/Weapons/Flak/AltFire_Modded				"Sounds/Weapons/FlakCannon/Modded/FL_Fire_Alt.wav"
+UTDE/Weapons/Flak/Quad/AltFire_Modded			"Sounds/Weapons/FlakCannon/Modded/Quad/FL_Fire_Alt.wav"
+UTDE/Weapons/Flak/Explo_Modded					"Sounds/Weapons/FlakCannon/Modded/FL_Explo.wav"
+UTDE/Weapons/Flak/Bounce1_Modded				"Sounds/Weapons/FlakCannon/Modded/FL_Bounce1.wav"
+UTDE/Weapons/Flak/Bounce2_Modded				"Sounds/Weapons/FlakCannon/Modded/FL_Bounce2.wav"
+UTDE/Weapons/Flak/Bounce3_Modded				"Sounds/Weapons/FlakCannon/Modded/FL_Bounce3.wav"
+$random UTDE/Weapons/Flak/Bounce_Modded { UTDE/Weapons/Flak/Bounce1_Modded UTDE/Weapons/Flak/Bounce2_Modded UTDE/Weapons/Flak/Bounce3_Modded }
+
 
 //********************
 // Link Gun
