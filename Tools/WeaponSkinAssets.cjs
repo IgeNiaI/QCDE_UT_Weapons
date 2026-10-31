@@ -53,7 +53,7 @@ for (const skin of [...manifest.skins, {name: 'Modded', prefix: 'MD', source: ma
     assert.equal(letters.length, phase.source.length);
     for (let i = 0; i < letters.length; i++) {
       const f = letters[i], old = phase.source[i], name = `${skin.prefix}${phase.set}${manifest.id}${f}0`;
-      const oldName = `${source.prefix}G${manifest.id}${old}0`;
+      const oldName = `${source.prefix}G${phase.sourceId || manifest.id}${old}0`;
       const bytes = fs.readFileSync(`${root}/${source.name}/${oldName}.png`);
       const dir = `${root}/${skin.name}/_${phase.set}_${phase.name}`;
       if (!modded && unique.has(old)) {
