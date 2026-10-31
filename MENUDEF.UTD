@@ -467,6 +467,7 @@ OptionValue "FLskin"
 	4, "UT2004"
 	5, "UC1"
 	6, "UC2"
+	20, "$WeaponSkin_FlakCannon_Modded"
 }
 
 OptionValue "FLskinBG"
@@ -476,6 +477,7 @@ OptionValue "FLskinBG"
 	4, "SKINGCU4"
 	5, "SKINGCU5"
 	6, "SKINGCU6"
+	20, "SKINGCMD"
 }
 
 OptionValue "LGskin"

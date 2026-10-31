@@ -1,0 +1,64 @@
+Flak Cannon
+
+Assets
+
+Weapon sprites and brightmaps: Sprites/Weapons/FlakCannon/
+Sounds: Sounds/Weapons/FlakCannon/
+Menu previews: Graphics/Menu/SkinPreviews/FlakCannon/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Primary fire            E      A-V       F
+Alternate fire          G      A-R       H
+
+Sprite prefixes: U4 for UT2004; U5 for UC1; U6 for UC2; U9 for UT99; MD for Modded.
+The fourth sprite-name character is C (Flak Cannon).
+Skin folders: UT2004, UC1, UC2 and UT99.
+
+Prepare: 26 frames, 1 tic each; firing is allowed.
+Idle: 6 frames, 1 tic each. Current artwork is static.
+Primary fire: A is resting; B-V preserve the original 27-tic sequence.
+Alternate fire: A is resting; B-R reuse original F-V, preserving 33 tics.
+Both firing modes retain their original per-tic weapon offsets.
+Identical frames share images through TEXTURES.UTD.
+UT99 brightmaps follow the original frames; UC1 uses one shared brightmap.
+UT2004 and UC2 have no brightmaps.
+
+World pickup frames U4GC Y/Z and original grenade sprites FLAK are unchanged.
+Gameplay properties, upgrades, ammo use, sounds and recoil are unchanged.
+
+Modded skin (ID 20)
+
+Modded assets are in the Modded subfolders above, using UT2004 as the base.
+All 72 weapon frames have independent images and black placeholder brightmaps.
+Prepare and idle sounds are silent placeholders; their SNDINFO mappings are
+commented out until replaced. Primary/alternate fire, their Quad variants,
+explosion and three bounce sounds have separate assets.
+The screen flash color is configurable in LANGUAGE.UTD.
+
+MDZC A1-A8: directional grenade sprites in Modded/_Z_grenade/.
+Grenade model and skin: MD3/PROJECTILES/Modded/FlakCannon/.
+MODELDEF.WPN maps both normal and deathmatch Modded grenades independently.
+
+Projectile/effect replacement hooks in Decorate/Weapons/SShotgun.QCD:
+UTFlakShell_Modded and UTFlakShellDM_Modded;
+UTFlakShellBounced_Modded, UTFlakShellBouncedUpgraded_Modded,
+and UTFlakShellBouncedDM_Modded;
+UTFlakBomb_Modded and UTFlakBombDM_Modded;
+UTFlakShellTrailFX_Modded, UTFlakShellTrailFXBounced_Modded,
+and UTBombTrailFX_Modded;
+UTFlakExploDebris_Modded, UTFlakExploDebrisDM_Modded,
+UTFlakExploParticle_Modded, UTFlakExplosion_Modded,
+and UTFlakExplosionDM_Modded.
+
+Fragment/trail/explosion hooks currently retain core artwork (including
+NAIL, DB60 and X037). Replace their states to use custom effect sprites.
+The normal primary volley fires 9 fragments, or 17 with the Flame upgrade;
+deathmatch always fires 9 with its original deterministic spread.
+Normal grenades spawn 10 debris pieces, or 19 with Flame; Speed makes debris
+safe for its owner. Deathmatch retains 10 debris pieces and its own damage.
+Hit feedback, obituary tics, bounce behavior and the normal 99-tic versus
+deathmatch 10-tic explosion lifetime are preserved.
