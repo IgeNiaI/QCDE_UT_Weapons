@@ -562,6 +562,7 @@ OptionValue "RLskin"
 	4, "UT2004"
 	5, "UC1"
 	6, "UC2"
+	20, "$WeaponSkin_RocketLauncher_Modded"
 }
 
 OptionValue "RLskinBG"
@@ -572,6 +573,7 @@ OptionValue "RLskinBG"
 	4, "SKING6U4"
 	5, "SKING6U5"
 	6, "SKING6U6"
+	20, "SKING6MD"
 }
 
 OptionValue "SRskin"

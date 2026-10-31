@@ -1,0 +1,563 @@
+// Generated from Tools/WeaponSkinAssets/RocketLauncherActors.json by Tools/WeaponSkinActors.cjs.
+// Customize this independent copy; regeneration refuses changed output.
+
+Actor UTRocketMissile_Modded
+{
+	Projectile
+	+DEHEXPLOSION
+	+EXTREMEDEATH
+	+FORCERADIUSDMG
+	-ROCKETTRAIL
+	+SEEKERMISSILE //Not actually used for anything other than checking radius.
+	+MTHRUSPECIES
+	+DONTBLAST
+	Radius 3
+	Height 6
+	Speed 34
+	Damage (random(60, 80))
+	Scale 0.6
+	Obituary "$OB_UTRocketLauncher"
+	SeeSound ""
+	DeathSound "UTDE/Weapons/RocketLauncher/RocketExplo_Modded"
+	Decal "D4ExploScorch"
+	DamageType "RocketDamage"
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MDZ6 A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MDZ6 A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_SpawnItemEx("RocketTrailSmoke_Modded",-8,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		Loop
+
+	Xdeath:	//Direct hit
+		TNT1 A 0 A_GiveToTarget("HitBeepBig",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
+		TNT1 A 0 A_JumpIfInTargetInventory("RL_UG_Cluster", 1, "ExplodeUpgraded")
+		TNT1 A 0 A_Jump(256,"ExplodeNormal") //for virtual jump to inherited versions
+		Goto ExplodeNormal
+
+	Death: //crashed somewhere and checks for splash
+		TNT1 A 0 A_ChangeFlag("NOINTERACTION",1)
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_SeekerMissile(0,0,SMF_LOOK|SMF_CURSPEED,256)
+		TNT1 A 0 A_JumpIfTargetInLOS("RadiusHit",360,JLOSF_PROJECTILE,192)
+		TNT1 A 0 A_JumpIfInTargetInventory("RL_UG_Cluster", 1, "ExplodeUpgraded")
+		TNT1 A 0 A_Jump(256,"ExplodeNormal") //for virtual jump to inherited versions
+		Goto ExplodeNormal
+
+		RadiusHit:	//splash damage beep
+			TNT1 A 0 A_GiveToTarget("HitBeepMid",1,AAPTR_DEFAULT,GIF_FORCESERVERSIDE)
+			TNT1 A 0 A_JumpIfInTargetInventory("RL_UG_Cluster", 1, "ExplodeUpgraded")
+			TNT1 A 0 A_Jump(256,"ExplodeNormal") //for virtual jump to inherited versions
+			Goto ExplodeNormal
+
+	ExplodeNormal:
+		TNT1 A 0 A_JumpIfInTargetInventory("Class_Ranger",1,"ExplodeNormalRanger")
+		TNT1 A 0 A_RadiusThrust(40,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//thrust players only this way, without damage
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(40,128,XF_HURTSOURCE,0,18)
+		TNT1 A 0 A_Explode(random(80,105),128,0,0,18)	//then another 80-105 extra damage for impacting a player + (60-100)dmg on the projectile =180-225dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		Goto DeathCont
+
+	ExplodeNormalRanger:
+		TNT1 A 0 A_RadiusThrust(40,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//thrust players only this way, without damage
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(32,128,XF_HURTSOURCE,0,18)
+		TNT1 A 0 A_Explode(random(88,112),128,0,0,18)	//then another 88-112 extra damage for impacting a player + (60-100)dmg on the projectile =180-225dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		Goto DeathCont
+
+	ExplodeUpgraded:
+		TNT1 A 0 A_JumpIfInTargetInventory("Class_Ranger",1,"ExplodeUpgradedRanger")
+		TNT1 A 0 A_RadiusThrust(40,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//thrust players only this way, without damage
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(40,128,XF_HURTSOURCE,0,128)
+		TNT1 A 0 A_Explode(random(80,105),128,0,0,128)	//then another 80-105 extra damage for impacting a player + (60-100)dmg on the projectile =180-225dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		Goto DeathCont
+
+	ExplodeUpgradedRanger:
+		TNT1 A 0 A_RadiusThrust(40,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//thrust players only this way, without damage
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(32,128,XF_HURTSOURCE,0,128)	//self rocket damage with rocket jump is 32
+		TNT1 A 0 A_Explode(random(88,112),128,0,0,128)	//then another 88-112 extra damage for impacting a player + (60-100)dmg on the projectile =180-225dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		Goto DeathCont
+
+	DeathCont:
+		TNT1 A 0 A_StopSound(CHAN_5) // Stop whoosh sound
+		TNT1 A 0 A_SpawnItemEx("QCRocketExploDebris_Modded",-1,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		TNT1 AAAAA 0 A_SpawnItemEx("QCRocketExploParticle_Modded",3,0,0,frandom(3,5.5),frandom(3,5.5),frandom(1,6),random(0,359),SXF_NOCHECKPOSITION)
+		TNT1 A 0 A_SpawnItemEx("QCRocketExplosion_Modded",-2,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		TNT1 A 99 // We need this for proper rocket jump unlagged when exploding too soon
+		Stop
+	}
+}
+
+Actor UTRocketMissileSpinningTop_Modded : UTRocketMissile_Modded
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MDZ6 A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MDZ6 A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_SpawnItemEx("RocketTrailSmoke_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_Weave(2,2,1.2,1.2)
+		Loop
+	}
+}
+
+Actor UTRocketMissileSpinningBottom_Modded : UTRocketMissile_Modded
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MDZ6 AAAAAAAAAAAAAAAAAA 0 A_Weave(2,2,1.2,1.2)
+		MDZ6 A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MDZ6 A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_SpawnItemEx("RocketTrailSmoke_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_Weave(2,2,1.2,1.2)
+		Loop
+	}
+}
+
+Actor UTRocketMissileSpinningBottomLeft_Modded : UTRocketMissile_Modded
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MDZ6 AAAAAAAAAAAA 0 A_Weave(2,2,1.2,1.2)
+		MDZ6 A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MDZ6 A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_SpawnItemEx("RocketTrailSmoke_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_Weave(2,2,1.2,1.2)
+		Loop
+	}
+}
+
+Actor UTRocketMissileSpinningBottomRight_Modded : UTRocketMissile_Modded
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MDZ6 AAAAAAAAAAAAAAAAAAAAAAAA 0 A_Weave(2,2,1.2,1.2)
+		MDZ6 A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MDZ6 A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_SpawnItemEx("RocketTrailSmoke_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_Weave(2,2,1.2,1.2)
+		Loop
+	}
+}
+
+Actor UTRocketMissileDM_Modded : UTRocketMissile_Modded
+{
+	-MTHRUSPECIES
+	-DONTBLAST
+	Damage (15)
+	States
+	{
+	ExplodeNormal:
+		TNT1 A 0 A_JumpIfInTargetInventory("Class_Ranger",1,"ExplodeNormalRanger")
+		TNT1 A 0 A_RadiusThrust(40,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//thrust players only this way, without damage
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(40,128,XF_HURTSOURCE,0,18)
+		TNT1 A 0 A_Explode(35,128,0,0,18)		//then another 35 extra damage for impacting a player + (15)dmg on the projectile =90dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		Goto DeathCont
+
+	ExplodeNormalRanger:
+		TNT1 A 0 A_RadiusThrust(40,128,RTF_AFFECTSOURCE|RTF_THRUSTZ)	//thrust players only this way, without damage
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", true)
+		TNT1 A 0 A_Explode(32,128,XF_HURTSOURCE,0,18)
+		TNT1 A 0 A_Explode(43,128,0,0,18)		//then another 43 extra damage for impacting a player + (15)dmg on the projectile =90dmg
+		TNT1 A 0 A_ChangeFlag("NODAMAGETHRUST", false)
+		Goto DeathCont
+	}
+}
+
+Actor UTRocketMissileSpinningTopDM_Modded : UTRocketMissileDM_Modded
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MDZ6 A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MDZ6 A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_SpawnItemEx("RocketTrailSmoke_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_Weave(2,2,1.2,1.2)
+		Loop
+	}
+}
+
+Actor UTRocketMissileSpinningBottomDM_Modded : UTRocketMissileDM_Modded
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MDZ6 AAAAAAAAAAAAAAAAAA 0 A_Weave(2,2,1.2,1.2)
+		MDZ6 A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MDZ6 A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_SpawnItemEx("RocketTrailSmoke_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_Weave(2,2,1.2,1.2)
+		Loop
+	}
+}
+
+Actor UTRocketMissileSpinningBottomLeftDM_Modded : UTRocketMissileDM_Modded
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MDZ6 AAAAAAAAAAAA 0 A_Weave(2,2,1.2,1.2)
+		MDZ6 A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MDZ6 A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_SpawnItemEx("RocketTrailSmoke_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_Weave(2,2,1.2,1.2)
+		Loop
+	}
+}
+
+Actor UTRocketMissileSpinningBottomRightDM_Modded : UTRocketMissileDM_Modded
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay ACS_NamedExecuteAlways("QCDE_AttachWhoosh")
+		MDZ6 AAAAAAAAAAAAAAAAAAAAAAAA 0 A_Weave(2,2,1.2,1.2)
+		MDZ6 A 2 Light("YellowMediumPoint2") Bright //no trails for a bit
+	Looper:
+		MDZ6 A 1 Light("YellowMediumPoint2") Bright A_SpawnItemEx("PlayerRocketTrailFire_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_SpawnItemEx("RocketTrailSmoke_Modded",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		MDZ6 A 0 A_Weave(2,2,1.2,1.2)
+		Loop
+	}
+}
+
+Actor QCRocketExplosion_Modded
+{
+	+NOINTERACTION +NOTONAUTOMAP
+	+CLIENTSIDEONLY +NONETID
+	+FORCEXYBILLBOARD
+	+DONTBLAST
+	Scale 0.15
+	States
+	{
+	Spawn:
+		X125 A 0
+		X125 A 1 Light("YellowSmallFlicker2") 	Bright A_SetScale(scalex+0.1125)
+		X125 A 1 Light("YellowMediumFlicker3") 	Bright A_SetScale(scalex+0.1125)
+		X125 B 1 Light("YellowMediumFlicker1") 	Bright A_SetScale(scalex+0.075)
+		X125 B 1 Light("YellowBigFlicker3") 	Bright A_SetScale(scalex+0.075)
+		X125 C 1 Light("YellowBigFlicker3") 	Bright A_SetScale(scalex+0.0525)
+		X125 C 1 Light("YellowBigFlicker3") 	Bright A_SetScale(scalex+0.0525)
+		X125 D 1 Light("YellowBigFlicker3") 	Bright
+		X125 D 1 Light("YellowBigFlicker3") 	Bright
+		X125 E 1 Light("YellowBigFlicker3")		Bright A_SetScale(scalex*1.05)
+		X125 E 1 Light("YellowMediumFlicker1")	Bright
+		X125 F 1 Light("YellowMediumFlicker1")	Bright A_SetScale(scalex*1.05)
+		X125 F 1 Light("YellowMediumFlicker2")	Bright
+		X125 G 1 Light("YellowMediumFlicker2")	Bright A_SetScale(scalex*1.05)
+		X125 G 1 Light("YellowMediumFlicker3")	Bright
+		X125 H 0 Light("YellowSmallFlicker1")	Bright A_SetScale(scalex*1.05)
+		X125 H 1 Light("YellowSmallFlicker1")	Bright A_FadeOut(0.075)
+		X125 H 1 Light("YellowSmallFlicker2")	Bright A_FadeOut(0.075)
+		X125 I 0 Light("YellowSmallFlicker3")	Bright A_SetScale(scalex*1.05)
+		X125 I 1 Light("YellowSmallFlicker3")	Bright A_FadeOut(0.075)
+		X125 I 1 Bright A_FadeOut(0.075)
+		X125 J 0 Bright A_SetScale(scalex*1.05)
+		X125 J 1 Bright A_FadeOut(0.075)
+		X125 J 1 Bright A_FadeOut(0.075)
+		X125 K 0 Bright A_SetScale(scalex*1.05)
+		X125 K 1 Bright A_FadeOut(0.075)
+		X125 K 1 Bright A_FadeOut(0.075)
+		X125 L 0 Bright A_FadeOut(0.075)
+		X125 L 1 Bright A_SetScale(scalex*1.05)
+		X125 L 1 Bright A_FadeOut(0.075)
+		X125 M 0 Bright A_FadeOut(0.075)
+		X125 M 1 Bright A_SetScale(scalex*1.05)
+		X125 M 1 Bright A_FadeOut(0.075)
+		X125 N 0 Bright A_FadeOut(0.075)
+		X125 N 1 Bright A_SetScale(scalex*1.05)
+		X125 N 1 Bright A_FadeOut(0.075)
+		X125 O 0 Bright A_FadeOut(0.075)
+		X125 O 1 Bright A_SetScale(scalex*1.05)
+		X125 O 1 Bright A_FadeOut(0.075)
+		X125 P 0 Bright A_FadeOut(0.075)
+		X125 P 1 Bright A_SetScale(scalex*1.05)
+		X125 P 1 Bright A_FadeOut(0.075)
+		X125 Q 0 Bright A_FadeOut(0.075)
+		X125 Q 1 Bright A_SetScale(scalex*1.05)
+		X125 Q 1 Bright A_FadeOut(0.075)
+		X125 R 0 Bright A_FadeOut(0.075)
+		X125 R 1 Bright A_SetScale(scalex*1.05)
+		X125 R 1 Bright A_FadeOut(0.075)
+		Stop
+	}
+}
+
+Actor QCRocketExplosionDM_Modded : QCRocketExplosion_Modded	//fades out much faster
+{
+	States
+	{
+	Spawn:
+		X125 A 0
+		X125 A 1 Light("YellowSmallFlicker2") 	Bright A_SetScale(scalex+0.1125)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 A 1 Light("YellowMediumFlicker3") 	Bright A_SetScale(scalex+0.1125)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 B 1 Light("YellowMediumFlicker1") 	Bright A_SetScale(scalex+0.075)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 B 1 Light("YellowBigFlicker3") 	Bright A_SetScale(scalex+0.075)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 C 1 Light("YellowBigFlicker3") 	Bright A_SetScale(scalex+0.0525)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 C 1 Light("YellowBigFlicker3") 	Bright A_SetScale(scalex+0.0525)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 D 1 Light("YellowBigFlicker3") 	Bright
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 D 1 Light("YellowBigFlicker3") 	Bright
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 E 1 Light("YellowBigFlicker3")		Bright A_SetScale(scalex*1.05)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 E 1 Light("YellowMediumFlicker1")	Bright
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 F 1 Light("YellowMediumFlicker1")	Bright A_SetScale(scalex*1.05)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 F 1 Light("YellowMediumFlicker2")	Bright
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 G 1 Light("YellowMediumFlicker2")	Bright A_SetScale(scalex*1.05)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 G 1 Light("YellowMediumFlicker3")	Bright
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 H 0 Light("YellowSmallFlicker1")	Bright A_SetScale(scalex*1.05)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 H 1 Light("YellowSmallFlicker1")	Bright A_FadeOut(0.075)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 H 1 Light("YellowSmallFlicker2")	Bright A_FadeOut(0.075)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 I 0 Light("YellowSmallFlicker3")	Bright A_SetScale(scalex*1.05)
+		TNT1 A 0 A_FadeOut(0.04)
+		X125 I 1 Light("YellowSmallFlicker3")	Bright A_FadeOut(0.075)
+		X125 I 1 Bright A_FadeOut(0.03)
+		X125 J 0 Bright A_SetScale(scalex*1.05)
+		X125 J 1 Bright A_FadeOut(0.03)
+		X125 J 1 Bright A_FadeOut(0.03)
+		X125 K 0 Bright A_SetScale(scalex*1.05)
+		X125 K 1 Bright A_FadeOut(0.03)
+		X125 K 1 Bright A_FadeOut(0.03)
+		X125 L 0 Bright A_FadeOut(0.03)
+		X125 L 1 Bright A_SetScale(scalex*1.05)
+		X125 L 1 Bright A_FadeOut(0.03)
+		X125 M 0 Bright A_FadeOut(0.03)
+		X125 M 1 Bright A_SetScale(scalex*1.05)
+		X125 M 1 Bright A_FadeOut(0.03)
+		X125 N 0 Bright A_FadeOut(0.03)
+		X125 N 1 Bright A_SetScale(scalex*1.05)
+		X125 N 1 Bright A_FadeOut(0.03)
+		X125 O 0 Bright A_FadeOut(0.03)
+		X125 O 1 Bright A_SetScale(scalex*1.05)
+		X125 O 1 Bright A_FadeOut(0.03)
+		X125 P 0 Bright A_FadeOut(0.03)
+		X125 P 1 Bright A_SetScale(scalex*1.05)
+		X125 P 1 Bright A_FadeOut(0.03)
+		X125 Q 0 Bright A_FadeOut(0.03)
+		X125 Q 1 Bright A_SetScale(scalex*1.05)
+		X125 Q 1 Bright A_FadeOut(0.03)
+		X125 R 0 Bright A_FadeOut(0.03)
+		X125 R 1 Bright A_SetScale(scalex*1.05)
+		X125 R 1 Bright A_FadeOut(0.03)
+		Stop
+	}
+}
+
+Actor QCRocketExplosionBigger_Modded
+{
+	+NOINTERACTION +NOTONAUTOMAP
+	+CLIENTSIDEONLY +NONETID
+	+FORCEXYBILLBOARD
+	Scale 0.2
+	States
+	{
+	Spawn:
+		X125 AA 1 NODELAY Bright A_SetScale(scalex+0.15)
+		X125 BB 1 Bright A_SetScale(scalex+0.1)
+		X125 CC 1 Bright A_SetScale(scalex+0.07)
+		X125 DEFGHIJKLMNOPQR 2 Bright A_SetScale(scalex*1.05)
+		Stop
+	}
+}
+
+Actor PlayerRocketTrailFire_Modded
+{
+	+CLIENTSIDEONLY +NONETID
+	+NOINTERACTION +NOTONAUTOMAP
+	+FORCEXYBILLBOARD
+	+DONTBLAST
+	RenderStyle Add
+	Alpha 0.5
+	Scale 0.12
+	States
+	{
+	Spawn:
+		TNT1 A 2
+		TNT1 A 0 A_Jump(256,"One","Two")
+	One:
+		X007 CDE 1 Bright
+		X007 FGHIJ 1 Bright
+		Stop
+	Two:
+		X007 MNO 1 Bright
+		X007 PQRST 1 Bright
+		Stop
+	}
+}
+
+Actor RocketTrailSmoke_Modded	//centered smoke
+{
+	+CLIENTSIDEONLY +NONETID
+	+NOINTERACTION +NOTONAUTOMAP
+	+FORCEXYBILLBOARD
+	+DONTBLAST
+	RenderStyle Translucent
+	Alpha 0.2
+	Scale 0.0
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_Jump(256,1,2,3,4)
+		X037 A 0 A_SetScale(frandom(0,0.2)) Goto Missile
+		X037 B 0 A_SetScale(frandom(0,0.2)) Goto Missile
+		X037 C 0 A_SetScale(frandom(0,0.2)) Goto Missile
+		X037 D 0 A_SetScale(frandom(0,0.2)) Goto Missile
+	Missile:
+		"####" "#" 1 A_SetScale(ScaleX+0.007)	"####" "#" 0 A_FadeIn(0.02)
+		"####" "#" 1 A_SetScale(ScaleX+0.007)	"####" "#" 0 A_FadeIn(0.02)
+		"####" "#" 1 A_SetScale(ScaleX+0.007)	"####" "#" 0 A_FadeIn(0.02)
+		"####" "#" 1 A_SetScale(ScaleX+0.007)	"####" "#" 0 A_FadeIn(0.02)
+		"####" "#" 1 A_SetScale(ScaleX+0.007)	"####" "#" 0 A_FadeIn(0.02)
+		"####" "#" 1 A_SetScale(ScaleX+0.007)	"####" "#" 0 A_FadeIn(0.02)
+		"####" "#" 1 A_SetScale(ScaleX+0.007)	"####" "#" 0 A_FadeIn(0.02)
+		"####" "#" 1 A_SetScale(ScaleX+0.007)	"####" "#" 0 A_FadeIn(0.02)
+		Goto Continue
+	Continue:
+		"####" "#" 1 A_FadeOut(0.025)
+		"####" "#" 1 A_SetScale(ScaleX+0.007)
+		Loop
+	}
+}
+
+Actor QCRocketExploDebris_Modded
+{
+	+NOINTERACTION +NOTONAUTOMAP
+	+CLIENTSIDEONLY +NONETID
+	+FORCEXYBILLBOARD
+	+DONTBLAST
+	scale 1.4
+	States
+	{
+	Spawn:
+		DB01 A 0 NODELAY A_Jump(256,"T1","T2","T3","T4","T5","T6","T7","T8")
+		Goto PlayOff
+	T1:	DB01 A 0
+		Goto PlayOff
+	T2:	DB02 A 0
+		Goto PlayOff
+	T3:	DB03 A 0
+		Goto PlayOff
+	T4:	DB04 A 0
+		Goto PlayOff
+	T5:	DB05 A 0
+		Goto PlayOff
+	T6:	DB06 A 0
+		Goto PlayOff
+	T7:	DB07 A 0
+		Goto PlayOff
+	T8:	DB08 A 0
+		Goto PlayOff
+	PlayOff:
+		"####" ABCDEFGHIJKLL 1 Bright
+		"####" MMNNOOPPQQRRSSTTUUVVWWXXYYZZ 1 Bright A_FadeOut(0.07)
+		"####" Z 1 Bright A_FadeOut(0.05)
+		Wait
+	}
+}
+
+Actor QCRocketExploDebrisDM_Modded : QCRocketExploDebris_Modded	//fades out much faster
+{
+	+NOINTERACTION +NOTONAUTOMAP
+	+CLIENTSIDEONLY +NONETID
+	+FORCEXYBILLBOARD
+	+DONTBLAST
+	scale 1.4
+	States
+	{
+	Spawn:
+		DB01 A 0 NODELAY A_Jump(256,"T1","T2","T3","T4","T5","T6","T7","T8")
+		Goto PlayOff
+	T1:	DB01 A 0
+		Goto PlayOff
+	T2:	DB02 A 0
+		Goto PlayOff
+	T3:	DB03 A 0
+		Goto PlayOff
+	T4:	DB04 A 0
+		Goto PlayOff
+	T5:	DB05 A 0
+		Goto PlayOff
+	T6:	DB06 A 0
+		Goto PlayOff
+	T7:	DB07 A 0
+		Goto PlayOff
+	T8:	DB08 A 0
+		Goto PlayOff
+	PlayOff:
+		"####" ABCDEFGHIJKLL 1 Bright A_FadeOut(0.035)
+		"####" MNOPQRSTUVWXYZ 1 Bright A_FadeOut(0.02)
+		"####" Z 1 Bright A_FadeOut(0.05)
+		Wait
+	}
+}
+
+Actor QCRocketExploParticle_Modded
+{
+	Projectile
+	Speed 10
+	-NOGRAVITY
+	+THRUACTORS
+	+PAINLESS
+	+DOOMBOUNCE
+	+FORCEXYBILLBOARD
+	+CLIENTSIDEONLY +NONETID
+	+NOTONAUTOMAP
+	+DONTBLAST
+	Radius 2
+	Height 5
+	Gravity 0.2
+	BounceFactor 0.2
+	WallBounceFactor 1.0
+	RenderStyle Add
+	Translation "0:255=%[0,0,0]:[1.5,0.78,0]"
+	Scale 0.05
+	states
+	{
+	Spawn:
+		FX01 A 15 Bright
+		FX01 A 1 Bright A_FadeOut(0.11)
+		Wait
+	}
+}

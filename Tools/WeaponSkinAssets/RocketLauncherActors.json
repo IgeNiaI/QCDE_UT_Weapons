@@ -1,0 +1,7 @@
+{
+  "weapon":"RocketLauncher", "sources":["Decorate/Weapons/RocketLauncher.QCD"],
+  "actors":["UTRocketMissile","UTRocketMissileSpinningTop","UTRocketMissileSpinningBottom","UTRocketMissileSpinningBottomLeft","UTRocketMissileSpinningBottomRight","UTRocketMissileDM","UTRocketMissileSpinningTopDM","UTRocketMissileSpinningBottomDM","UTRocketMissileSpinningBottomLeftDM","UTRocketMissileSpinningBottomRightDM","QCRocketExplosion","QCRocketExplosionDM","QCRocketExplosionBigger","PlayerRocketTrailFire","RocketTrailSmoke","QCRocketExploDebris","QCRocketExploDebrisDM","QCRocketExploParticle"],
+  "sprites":{"RLRK":"MDZ6"},
+  "sounds":{"UTDE/Weapons/RocketLauncher/RocketExplo":"UTDE/Weapons/RocketLauncher/RocketExplo_Modded"},
+  "modelPath":"MD3/PROJECTILES/Modded/RocketLauncher"
+}

@@ -1,0 +1,29 @@
+Rocket Launcher
+
+Sprites/Weapons/RocketLauncher/: U1, UT2004, UC1, UC2, UT99, Modded (ID 20).
+Prefixes U1/U4/U5/U6/U9/MD; fourth sprite character 6.
+Prepare: A set A-Z, 1 tic each; firing allowed, static artwork.
+Idle: C set A-F, 1 tic each; static artwork.
+Fire/reload: E set A-P; original 26-tic animation, or 19 with Control.
+Charge: I set A-Y, reusing original GF artwork and all three charge levels.
+Brightmap sets B/D/F/J; 73 independent Modded images/maps, UT2004 base.
+Original G6/GF artwork and brightmaps remain as compatibility/pickup sources.
+
+Sounds/Weapons/RocketLauncher/Modded/: primary, multi-rocket, Quad variants,
+loading and explosion (original attenuation/voice limit retained).
+Prepare/idle sounds are silent placeholders with commented mappings.
+Screen flash: WeaponSkin_RocketLauncher_ScreenBlend_Modded in LANGUAGE.UTD.
+Preview: Graphics/Menu/SkinPreviews/RocketLauncher/SKING6MD.png.
+
+MDZ6 A1-A8: grenade/rocket artwork in Modded/_Z_projectile/.
+Model/skin: MD3/PROJECTILES/Modded/RocketLauncher/.
+Decorate/Weapons/Modded/RocketLauncher.QCD contains independent copies of
+ten normal/DM straight/spinning rocket types and eight trail/explosion hooks.
+Trails/explosions retain core artwork until their states are customized.
+Control/Cluster, Ranger damage differences, Rocket Arena ammo handling,
+straight/spinning 1/2/3-rocket volleys, weave phases, damage, thrust, hit
+feedback, multiplayer prediction and 99-tic unlag lifetimes are preserved.
+The external QCDE_AttachWhoosh script still provides the original flight sound.
+
+Generation manifests: Tools/WeaponSkinAssets/RocketLauncher.json and
+Tools/WeaponSkinAssets/RocketLauncherActors.json.
