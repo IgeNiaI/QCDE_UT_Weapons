@@ -1246,3 +1246,85 @@ Sprite U9CDE0, 206, 285 { Offset -157, -34		Patch U9CDA0, 0, 0 }
 Sprite U9CDF0, 206, 285 { Offset -157, -34		Patch U9CDA0, 0, 0 }
 // Modded PulseGun
 // END GENERATED PulseGun SKIN FRAMES
+
+// BEGIN GENERATED Ripper SKIN FRAMES
+// U1 Ripper
+Sprite U1A5B0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5C0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5D0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5E0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5F0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5G0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5H0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5I0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5J0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5K0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5L0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5M0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5N0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5O0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5P0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5Q0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5R0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5S0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5T0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5U0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5V0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5W0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5X0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5Y0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+Sprite U1A5Z0, 188, 102 { Offset -145, -110		Patch U1A5A0, 0, 0 }
+// UC2 Ripper
+Sprite U6A5B0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5C0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5D0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5E0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5F0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5G0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5H0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5I0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5J0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5K0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5L0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5M0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5N0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5O0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5P0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5Q0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5R0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5S0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5T0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5U0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5V0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5W0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5X0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5Y0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+Sprite U6A5Z0, 212, 197 { Offset -165, -80		Patch U6A5A0, 0, 0 }
+// UT99 Ripper
+Sprite U9A5B0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5C0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5D0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5E0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5F0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5G0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5H0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5I0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5J0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5K0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5L0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5M0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5N0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5O0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5P0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5Q0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5R0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5S0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5T0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5U0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5V0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5W0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5X0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5Y0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+Sprite U9A5Z0, 122, 208 { Offset -165, -80		Patch U9A5A0, 0, 0 }
+// Modded Ripper
+// END GENERATED Ripper SKIN FRAMES

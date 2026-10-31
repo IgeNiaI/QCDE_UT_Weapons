@@ -1,0 +1,31 @@
+Ripper
+
+Sprites/Weapons/Ripper/: U1, UC2, UT99 and Modded (ID 20, UT99 base).
+Sprite prefixes U1/U6/U9/MD; fourth character 5.
+Prepare: A set A-Z, 1 tic each, firing allowed; current artwork static.
+Idle: C set A-R, 3 tics per frame; original 54-tic animated loop.
+Primary: E set A,T-X, original 13-tic shot and per-tic offsets.
+Alternate: I set A,T-X, original 23-tic shot and per-tic offsets.
+Matching brightmap sets B/D/F/J. A is resting in both firing sets.
+Modded has 56 independent weapon frames and brightmaps.
+Original G sprites/brightmaps remain as compatibility/pickup sources.
+Asset generation manifest: Tools/WeaponSkinAssets/Ripper.json.
+
+Sounds/Weapons/Ripper/Modded/: primary, alternate, both Quad variants,
+bounce and impact; prepare/idle are silent, commented SNDINFO placeholders.
+Modded RP_Impact.wav uses the available UT99 RP_Hit.wav; the legacy mappings
+refer to missing RP_Impact.wav files and are left unchanged.
+No screen blend is added; the original Ripper has none.
+Menu preview: Graphics/Menu/SkinPreviews/Ripper/SKING5MD.png.
+
+MDZ5 A: directional blade sprites in Modded/_Z_projectile/.
+MD3/PROJECTILES/Modded/Ripper/: independent model, blade skin and trail skin.
+MODELDEF.WPN maps all five Modded projectile variants.
+UTRipperBlade_Modded, UTRipperBladeUpgraded_Modded,
+UTRipperBladeAlt_Modded, UTRipperBladeAltUpgraded_Modded,
+UTRipperBladeAltUpgradedRipper_Modded retain original gameplay and hit feedback.
+UTRipperBladeFX_Modded and UTRipperParticle_Modded are replaceable effect hooks
+that retain core explosion/particle artwork until their states are replaced.
+The Long upgrade keeps its 15-bounce countdown and owner-safe behavior;
+Grenade retains velocity transfer, spawned ripper, damage and explosion paths.
+Bio Rifle and world pickups are unaffected by this skin.

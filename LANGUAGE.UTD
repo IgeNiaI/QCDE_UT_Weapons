@@ -11,6 +11,7 @@ WeaponSkin_FlakMini_Modded = "Modded";
 WeaponSkin_FlakCannon_Modded = "Modded";
 WeaponSkin_LinkGun_Modded = "Modded";
 WeaponSkin_PulseGun_Modded = "Modded";
+WeaponSkin_Ripper_Modded = "Modded";
 
 WeaponSkin_Enforcer_ScreenBlend_Modded = "Yellow";
 WeaponSkin_Minigun_ScreenBlend_Modded = "Yellow";

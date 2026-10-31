@@ -272,8 +272,60 @@ Model UTRipperBladeAltUpgradedRipper_UC2
 }
 
 
-// Bio Rifle
+// Modded Ripper
+// Independent Modded Ripper model/skin/trail, shared by its five variants.
+Model UTRipperBlade_Modded
+{
+   Path "MD3/PROJECTILES/Modded/Ripper"
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex MDZ5 A 0 0
+}
+Model UTRipperBladeUpgraded_Modded
+{
+   Path "MD3/PROJECTILES/Modded/Ripper"
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex MDZ5 A 0 0
+}
+Model UTRipperBladeAlt_Modded
+{
+   Path "MD3/PROJECTILES/Modded/Ripper"
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex MDZ5 A 0 0
+}
+Model UTRipperBladeAltUpgraded_Modded
+{
+   Path "MD3/PROJECTILES/Modded/Ripper"
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex MDZ5 A 0 0
+}
+Model UTRipperBladeAltUpgradedRipper_Modded
+{
+   Path "MD3/PROJECTILES/Modded/Ripper"
+   SurfaceSkin 0 0 "Ripper9Skin.png"
+   SurfaceSkin 0 1 "Ripper9Trail.png"
+   MODEL 0 "Ripper9Blade.md3"
+   Scale 3.0 3.0 3.45
+   PITCHFROMMOMENTUM
+   FrameIndex MDZ5 A 0 0
+}
 
+// Bio Rifle
 Model BioBall1DM
 {
    Path "MD3/PROJECTILES"
