@@ -1,0 +1,19 @@
+Link Gun
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/LinkGun/
+Sounds: Sounds/Weapons/LinkGun/
+Menu previews: Graphics/Menu/SkinPreviews/LinkGun/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-J       D
+Fire                    E      A-O       F
+
+Other Modded frames
+
+Projectile in flight / initial impact frame         MDZ4 A
+Impact animation                                    MDZ4 B-H
