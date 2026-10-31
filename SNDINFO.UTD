@@ -411,6 +411,17 @@ UTDE/Weapons/BioRifle/Charge_UC2				"Sounds/Weapons/BioRifle/UC2/BR_Charge.wav"
 //********************
 // Rocket Launcher
 UTDE/Weapons/RocketLauncher/Fire_UT2004			"Sounds/Weapons/RocketLauncher/UT2004/RL_Fire.wav"
+// Modded Rocket Launcher
+//UTDE/Weapons/RocketLauncher/Prepare_Modded "Sounds/Weapons/RocketLauncher/Modded/RL_Prepare.ogg"
+//UTDE/Weapons/RocketLauncher/Idle_Modded "Sounds/Weapons/RocketLauncher/Modded/RL_Idle.ogg"
+UTDE/Weapons/RocketLauncher/Fire_Modded "Sounds/Weapons/RocketLauncher/Modded/RL_Fire.wav"
+UTDE/Weapons/RocketLauncher/Quad/Fire_Modded "Sounds/Weapons/RocketLauncher/Modded/Quad/RL_Fire.wav"
+UTDE/Weapons/RocketLauncher/AltFire_Modded "Sounds/Weapons/RocketLauncher/Modded/RL_Fire_Alt.wav"
+UTDE/Weapons/RocketLauncher/Quad/AltFire_Modded "Sounds/Weapons/RocketLauncher/Modded/Quad/RL_Fire_Alt.wav"
+UTDE/Weapons/RocketLauncher/Load_Modded "Sounds/Weapons/RocketLauncher/Modded/RL_Load.wav"
+UTDE/Weapons/RocketLauncher/RocketExplo_Modded "Sounds/Weapons/RocketLauncher/Modded/RL_Explo.wav"
+$attenuation UTDE/Weapons/RocketLauncher/RocketExplo_Modded 0.8
+$limit UTDE/Weapons/RocketLauncher/RocketExplo_Modded 3
 UTDE/Weapons/RocketLauncher/Quad/Fire_UT2004	"Sounds/Weapons/RocketLauncher/UT2004/Quad/RL_Fire.wav"
 UTDE/Weapons/RocketLauncher/AltFire_UT2004		"Sounds/Weapons/RocketLauncher/UT2004/RL_Fire_Alt.wav"
 UTDE/Weapons/RocketLauncher/Quad/AltFire_UT2004	"Sounds/Weapons/RocketLauncher/UT2004/Quad/RL_Fire_Alt.wav"

@@ -1,0 +1,20 @@
+Rocket Launcher
+
+Assets
+
+Weapon and effect sprites: Sprites/Weapons/RocketLauncher/
+Sounds: Sounds/Weapons/RocketLauncher/
+Modded models and model textures: MD3/PROJECTILES/Modded/RocketLauncher/
+Menu previews: Graphics/Menu/SkinPreviews/RocketLauncher/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Fire / reload           E      A-P       F
+Charge                  I      A-Y       J
+
+Other Modded frames
+
+Rocket projectile       MDZ6 A
