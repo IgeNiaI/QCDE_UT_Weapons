@@ -814,12 +814,12 @@ Actor QCShotgunDM : QCShotgun
 	Spawn:
 		TNT1 A 1
 		U1G3 Y 35 A_JumpIf(ACS_NamedExecuteWithResult("MultiplayerCheck",0,0,0,0) == 2,"DMSpawn")
-		Goto Idle
+		Goto SpawnIdle
 	DMSpawn:
 		U1G3 Z 0 Bright A_ChangeFlag("NOBLOCKMAP",1)	//in DM, if a player drops this weapon, cant be picked
 		TNT1 Z 3	//and disappears
 		Stop
-	Idle:
+	SpawnIdle:
 		U1G3 Y -1
 		Wait
 
@@ -827,6 +827,7 @@ Actor QCShotgunDM : QCShotgun
 	// Select/Deselect Seq
 	//-----------------------
 	Select:
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 20, "Select.Modded")
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "Select.U1Flak") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "Select.U1Flak") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "Select.U1Flak") // Fallback to another skin
@@ -837,10 +838,13 @@ Actor QCShotgunDM : QCShotgun
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "Select.U1Stinger")
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "Select.U1Flak")
 	Select.U1Flak:
-		U1G3 A 0
+		U1A3 A 0
 		Goto SelectCont
 	Select.U1Stinger:
-		U2G3 A 0
+		U2A3 A 0
+		Goto SelectCont
+	Select.Modded:
+		MDA3 A 0
 		Goto SelectCont
 
 	SelectCont:
@@ -864,25 +868,56 @@ Actor QCShotgunDM : QCShotgun
 	// Ready Seq
 	//-----------------------
 	Ready:
-		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "Ready.U1Flak") // Fallback to another skin
-		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "Ready.U1Flak") // Fallback to another skin
-		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "Ready.U1Flak") // Fallback to another skin
-		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 6, "Ready.U1Stinger") // Fallback to another skin
-		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 5, "Ready.U1Stinger") // Fallback to another skin
-		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 4, "Ready.U1Stinger") // Fallback to another skin
-		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 3, "Ready.U1Stinger") // Fallback to another skin
-		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "Ready.U1Stinger")
-		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "Ready.U1Flak")
-	Ready.U1Flak:
-		U1G3 A 0
-		Goto ReadyCont
-	Ready.U1Stinger:
-		U2G3 A 0
-		Goto ReadyCont
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 20, "Prepare.Modded")
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "Prepare.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "Prepare.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "Prepare.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 6, "Prepare.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 5, "Prepare.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 4, "Prepare.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 3, "Prepare.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "Prepare.U1Stinger")
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "Prepare.U1Flak")
+	Prepare.U1Flak:
+		U1A3 A 0
+		Goto PrepareCont
+	Prepare.U1Stinger:
+		U2A3 A 0
+		Goto PrepareCont
+	Prepare.Modded:
+		MDA3 A 0 A_PlaySound("UTDE/Weapons/FlakMini/Prepare_Modded",CHAN_WEAPON,1,0,3)
+		Goto PrepareCont
 
-	ReadyCont:
+	PrepareCont:
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
-		"####" A 3 A_WeaponReady
+		"####" ABCDEFGHIJKLMNOPQRSTUVWXYZ 1 A_WeaponReady
+		Goto Idle
+
+	Idle:
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 20, "Idle.Modded")
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "Idle.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "Idle.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "Idle.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 6, "Idle.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 5, "Idle.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 4, "Idle.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 3, "Idle.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "Idle.U1Stinger")
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "Idle.U1Flak")
+	Idle.U1Flak:
+		U1C3 A 0
+		Goto IdleCont
+	Idle.U1Stinger:
+		U2C3 A 0
+		Goto IdleCont
+	Idle.Modded:
+		MDC3 A 0 A_PlaySound("UTDE/Weapons/FlakMini/Idle_Modded",CHAN_WEAPON,1,1)
+		Goto IdleCont
+
+	IdleCont:
+		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
+	IdleLoop:
+		"####" ABCDEF 1 A_WeaponReady
 		Loop
 
 		ReadyCantFire:
@@ -897,6 +932,27 @@ Actor QCShotgunDM : QCShotgun
 	// Fire Seq
 	//-----------------------
 	Fire: 	//27 tics, 0.77sec
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 20, "Fire.Modded")
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "Fire.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "Fire.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "Fire.U1Flak") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 6, "Fire.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 5, "Fire.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 4, "Fire.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 3, "Fire.U1Stinger") // Fallback to another skin
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 2, "Fire.U1Stinger")
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 1, "Fire.U1Flak")
+	Fire.U1Flak:
+		U1E3 A 0
+		Goto FireCont
+	Fire.U1Stinger:
+		U2E3 A 0
+		Goto FireCont
+	Fire.Modded:
+		MDE3 A 0
+		Goto FireCont
+
+	FireCont:
 		"####" A 0 A_JumpIfInventory("NoWeaponFireToken",1,"ReadyCantFire")
 		"####" B 0 A_GunFlash("Flash")
 		"####" B 1
@@ -907,7 +963,7 @@ Actor QCShotgunDM : QCShotgun
 		"####" F 1 Offset(16,45)
 		"####" F 1 Offset(19,49)
 		"####" G 1
-		"####" G 1 Offset(18,48)  //10
+		"####" G 1 Offset(18,48)
 		"####" H 1 Offset(17,48)
 		"####" H 1 Offset(16,47)
 		"####" I 1 Offset(15,47)
@@ -917,7 +973,7 @@ Actor QCShotgunDM : QCShotgun
 		"####" K 1 Offset(11,43)
 		"####" K 1 Offset(10,42)
 		"####" L 1 Offset(9,41)
-		"####" L 1 Offset(8,40)	//20
+		"####" L 1 Offset(8,40)
 		"####" M 1 Offset(7,39)
 		"####" M 1 Offset(6,38)
 		"####" N 1 Offset(5,37)
@@ -925,11 +981,12 @@ Actor QCShotgunDM : QCShotgun
 		"####" O 1 Offset(3,35)
 		"####" O 1 Offset(2,34)
 		"####" P 1 Offset(1,33)
-		"####" P 1 Offset(0,32)	//28
+		"####" P 1 Offset(0,32)
 		Goto Ready
 
 	Flash:
 		TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 20, "Flash.Modded")
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "Flash.U1Flak") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "Flash.U1Flak") // Fallback to another skin
 		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "Flash.U1Flak") // Fallback to another skin
@@ -961,6 +1018,17 @@ Actor QCShotgunDM : QCShotgun
 		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Stinger", sin(270)*4.0, false,1,4,0, cos(270)*4.0)
 		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Stinger", sin(315)*4.0, false,1,4,0, cos(315)*4.0)
 		Goto FlashCheckSound
+	Flash.Modded:
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Modded",0,true,1,4,0,0) // Use ammo
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Modded",   sin(0)*4.0, false,1,4,0,   cos(0)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Modded",  sin(45)*4.0, false,1,4,0,  cos(45)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Modded",  sin(90)*4.0, false,1,4,0,  cos(90)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Modded", sin(135)*4.0, false,1,4,0, cos(135)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Modded", sin(180)*4.0, false,1,4,0, cos(180)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Modded", sin(225)*4.0, false,1,4,0, cos(225)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Modded", sin(270)*4.0, false,1,4,0, cos(270)*4.0)
+		TNT1 A 0 A_FireCustomMissile("UTFlakMiniShellDM_Modded", sin(315)*4.0, false,1,4,0, cos(315)*4.0)
+		Goto FlashCheckSound
 
 	FlashCheckSound:
 		TNT1 A 0 A_JumpIfInventory("PowerQuad",1,"QuadSound")
@@ -968,6 +1036,7 @@ Actor QCShotgunDM : QCShotgun
 		Goto NormalSound
 
 		NormalSound:
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 20, "NormalSound.Modded")
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "NormalSound.U1Flak") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "NormalSound.U1Flak") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "NormalSound.U1Flak") // Fallback to another skin
@@ -983,8 +1052,12 @@ Actor QCShotgunDM : QCShotgun
 		NormalSound.U1Stinger:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/FlakMini/Fire_U1Stinger",CHAN_WEAPON)
 			Goto FlashEnder
+		NormalSound.Modded:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/FlakMini/Fire_Modded",CHAN_WEAPON)
+			Goto FlashEnder
 
 		QuadSound:
+			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 20, "QuadSound.Modded")
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 9, "QuadSound.U1Flak") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 8, "QuadSound.U1Flak") // Fallback to another skin
 			TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin", 7, "QuadSound.U1Flak") // Fallback to another skin
@@ -1000,10 +1073,17 @@ Actor QCShotgunDM : QCShotgun
 		QuadSound.U1Stinger:
 			TNT1 A 0 A_PlaySound("UTDE/Weapons/FlakMini/Quad/Fire_U1Stinger",CHAN_WEAPON)
 			Goto FlashEnder
+		QuadSound.Modded:
+			TNT1 A 0 A_PlaySound("UTDE/Weapons/FlakMini/Quad/Fire_Modded",CHAN_WEAPON)
+			Goto FlashEnder
 
 	FlashEnder:
 		TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"FlashEnderCont")
+		TNT1 A 0 A_JumpIfInventory("UTFlakMiniSkin",20,"FlashEnder.Modded")
 		TNT1 A 0 A_SetBlend("Yellow",0.05,7)
+		Goto FlashEnderCont
+	FlashEnder.Modded:
+		TNT1 A 0 A_SetBlend("$WeaponSkin_FlakMini_ScreenBlend_Modded",0.05,7)
 	FlashEnderCont:
 		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil")
 		TNT1 A 0 A_SetPitch(pitch-3.5)
@@ -1140,6 +1220,41 @@ Actor UTFlakMiniShellBouncedDM_Stinger : UTFlakMiniShellBouncedDM
 		Goto FlyLoop
 	}
 }
+
+// --------------------------------------------------------------------------
+// Modded Flak Mini projectile and trail replacement hooks
+// --------------------------------------------------------------------------
+Actor UTFlakMiniShellDM_Modded : UTFlakMiniShellDM
+{
+	MissileType "UTFlakMiniTrailFX_Modded"
+	States
+	{
+	Death:
+		TNT1 A 0 A_SpawnItemEx("UTFlakMiniShellBouncedDM_Modded", 0, 0, 0, user_velx, user_vely, user_velz, 0, SXF_ABSOLUTEVELOCITY|SXF_TRANSFERPOINTERS)
+		TNT1 A 1 // Preserve the extra tic for the obituary message
+		Stop
+	}
+}
+
+Actor UTFlakMiniShellBouncedDM_Modded : UTFlakMiniShellBouncedDM
+{
+	States
+	{
+	Spawn:
+		NAIL A 0 BRIGHT A_Countdown
+		Goto FlyLoop
+	FlyLoop:
+		"####" A 0 BRIGHT A_SpawnItemEx("UTFlakMiniTrailFXBounced_Modded")
+		"####" A 1 A_Jump(192, "Spawn")
+		Goto FlyLoop
+	Bounce:
+		TNT1 A 0 A_PlaySound("UTDE/Weapons/FlakMini/Bounce_Modded",CHAN_AUTO,1,0,1)
+		Goto Spawn
+	}
+}
+
+Actor UTFlakMiniTrailFX_Modded : UTFlakShellTrailFX {}
+Actor UTFlakMiniTrailFXBounced_Modded : UTFlakShellTrailFXBounced {}
 
 // ==========================================================================
 // ==========================================================================

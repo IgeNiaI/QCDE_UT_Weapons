@@ -1,0 +1,43 @@
+Flak Cannon Mini
+
+Assets
+
+Weapon sprites and brightmaps: Sprites/Weapons/FlakCannonMini/
+Sounds: Sounds/Weapons/FlakMini/
+Menu previews: Graphics/Menu/SkinPreviews/FlakMini/
+
+Weapon frames
+
+Use                     Set    Frames    Brightmap set
+Prepare                 A      A-Z       B
+Idle                    C      A-F       D
+Fire                    E      A-P       F
+
+Sprite prefixes: U1 for Unreal 1 Flak; U2 for Unreal 1 Stinger; MD for Modded.
+The fourth sprite-name character is 3 (Flak Mini).
+Skin folders: U1_Flak and U1_Stinger.
+
+Prepare: 26 frames, 1 tic each; firing is allowed.
+Idle: 6 frames, 1 tic each. Current artwork is static.
+Fire: A is resting; B-D run for 1 tic each; E-P run for 2 tics each.
+The firing sequence remains 27 tics, with the original per-tic offsets.
+Identical frames and brightmaps share images through TEXTURES.UTD and GLDEFS.UTD.
+Stinger uses one shared brightmap for all frames.
+
+World pickup frames U1G3 Y/Z and Stinger projectile sprites TRYD are unchanged.
+Projectile behavior, damage, ammunition use, sounds and recoil are unchanged.
+
+Modded skin (ID 20)
+
+Modded assets are in the Modded subfolders above, using Unreal 1 Flak as the base.
+Each weapon frame has its own image and brightmap, including repeated frames.
+Prepare and idle sounds are silent placeholders; their SNDINFO mappings are
+commented out until replaced. Fire, Quad fire and bounce sounds are separate.
+The screen flash color is configurable in LANGUAGE.UTD.
+
+UTFlakMiniShellDM_Modded and UTFlakMiniShellBouncedDM_Modded inherit the
+original projectile properties and hit feedback, with separate trail hooks:
+UTFlakMiniTrailFX_Modded and UTFlakMiniTrailFXBounced_Modded.
+These currently reuse the core NAIL projectile and DB60 trail sprites.
+The nine-projectile volley, ammo use, bounce behavior and extra obituary tic
+are unchanged. World pickup frames are not affected by this skin.

@@ -779,3 +779,77 @@ Sprite U6QGI0, 111, 141 { Offset -160, -65		Patch U6EGA0, 0, 0 }
 Sprite U6QGJ0, 111, 141 { Offset -160, -65		Patch U6EGA0, 0, 0 }
 Sprite U6QGK0, 111, 141 { Offset -160, -65		Patch U6EGA0, 0, 0 }
 Sprite U6QGL0, 111, 141 { Offset -160, -65		Patch U6EGA0, 0, 0 }
+
+//=============================================================================
+//
+// Flak Cannon Mini animation frames
+//
+//=============================================================================
+
+// Unreal 1 Flak
+Sprite U1A3B0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3C0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3D0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3E0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3F0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3G0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3H0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3I0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3J0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3K0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3L0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3M0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3N0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3O0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3P0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3Q0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3R0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3S0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3T0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3U0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3V0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3W0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3X0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3Y0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1A3Z0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1C3A0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1C3B0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1C3C0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1C3D0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1C3E0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1C3F0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+Sprite U1E3A0, 188, 179 { Offset -125, -25		Patch U1A3A0, 0, 0 }
+
+// Unreal 1 Stinger
+Sprite U2A3B0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3C0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3D0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3E0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3F0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3G0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3H0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3I0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3J0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3K0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3L0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3M0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3N0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3O0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3P0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3Q0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3R0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3S0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3T0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3U0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3V0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3W0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3X0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3Y0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2A3Z0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2C3A0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2C3B0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2C3C0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2C3D0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2C3E0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2C3F0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
+Sprite U2E3A0, 281, 265 { Offset -125, -25		Patch U2A3A0, 0, 0 }
