@@ -442,7 +442,7 @@ Actor QCShotgun : QCWeapon
 		TNT1 A 0 A_SetBlend("Blue",0.10,10)
 		Goto FlashEnder1Cont
 	FlashEnder1.Modded:
-		TNT1 A 0 A_SetBlend("$WeaponSkin_DispersionPistol_ScreenBlend_Modded",0.10,10)
+		TNT1 A 0 ACS_NamedExecuteWithResult("QCDE_ModdedWeaponBlend",2,100,10)
 	FlashEnder1Cont:
 		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil1")
 		TNT1 A 0 A_SetPitch(pitch-0.5)
@@ -545,7 +545,7 @@ Actor QCShotgun : QCWeapon
 		TNT1 A 0 A_SetBlend("Green",0.10,13)
 		Goto FlashEnder3Cont
 	FlashEnder3.Modded:
-		TNT1 A 0 A_SetBlend("$WeaponSkin_DispersionPistol_ScreenBlend_OneUpgrade_Modded",0.10,13)
+		TNT1 A 0 ACS_NamedExecuteWithResult("QCDE_ModdedWeaponBlend",3,100,13)
 	FlashEnder3Cont:
 		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil3")
 		TNT1 A 0 A_SetPitch(pitch-1.5)
@@ -648,7 +648,7 @@ Actor QCShotgun : QCWeapon
 		TNT1 A 0 A_SetBlend("Red",0.10,15)
 		Goto FlashEnder5Cont
 	FlashEnder5.Modded:
-		TNT1 A 0 A_SetBlend("$WeaponSkin_DispersionPistol_ScreenBlend_TwoUpgrades_Modded",0.10,15)
+		TNT1 A 0 ACS_NamedExecuteWithResult("QCDE_ModdedWeaponBlend",4,100,15)
 	FlashEnder5Cont:
 		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil5")
 		TNT1 A 0 A_SetPitch(pitch-1.5)
@@ -1096,7 +1096,7 @@ Actor QCShotgunDM : QCShotgun
 		TNT1 A 0 A_SetBlend("Yellow",0.05,7)
 		Goto FlashEnderCont
 	FlashEnder.Modded:
-		TNT1 A 0 A_SetBlend("$WeaponSkin_FlakMini_ScreenBlend_Modded",0.05,7)
+		TNT1 A 0 ACS_NamedExecuteWithResult("QCDE_ModdedWeaponBlend",5,50,7)
 	FlashEnderCont:
 		TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"FlashEnderNoRecoil")
 		TNT1 A 0 A_SetPitch(pitch-3.5)

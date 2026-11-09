@@ -584,7 +584,7 @@ Actor QCHeavyMachinegun : QCWeapon
 		EndFlash.Modded:
 			TNT1 A 0 A_FireCustomMissile("BulletSmallTracerUTMG_Modded",frandom(1,-1),false,9,-3,FPF_NOUNLAGGED|FPF_SKIPOWNER,frandom(1,-1))
 			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"EndFlashCont")
-			TNT1 A 0 A_SetBlend("$WeaponSkin_Minigun_ScreenBlend_Modded",0.03,3)
+			TNT1 A 0 ACS_NamedExecuteWithResult("QCDE_ModdedWeaponBlend",1,30,3)
 			Goto EndFlashCont
 
 		EndFlashCont:
@@ -1213,7 +1213,7 @@ Actor QCHeavyMachinegun : QCWeapon
 			Goto AltEndFlashCont
 		AltEndFlash.Modded:
 			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"AltEndFlashCont")
-			TNT1 A 0 A_SetBlend("$WeaponSkin_Minigun_ScreenBlend_Modded",0.03,3)
+			TNT1 A 0 ACS_NamedExecuteWithResult("QCDE_ModdedWeaponBlend",1,30,3)
 			Goto AltEndFlashCont
 		AltEndFlashCont:
 			TNT1 A 0 A_JumpIfInventory("WepNoRecoilToken",1,"AltEndFlashNoRecoil")
@@ -1319,7 +1319,7 @@ Actor QCHeavyMachinegun : QCWeapon
 			Goto AltEndFlashSuperFastCont
 		AltEndFlashSuperFast.Modded:
 			TNT1 A 0 A_JumpIfInventory("WepNoFlashToken",1,"AltEndFlashSuperFastCont")
-			TNT1 A 0 A_SetBlend("$WeaponSkin_Minigun_ScreenBlend_Modded",0.03,3)
+			TNT1 A 0 ACS_NamedExecuteWithResult("QCDE_ModdedWeaponBlend",1,30,3)
 			Goto AltEndFlashSuperFastCont
 		AltEndFlashSuperFastCont:
 			TNT1 A 1 A_SetPitch(Pitch-0.4)
