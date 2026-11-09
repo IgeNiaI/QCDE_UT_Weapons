@@ -216,17 +216,16 @@ Script "QCDE_RocketControl" (void)
 		if(triggers & (BT_ATTACK | BT_ALTATTACK))
 			GiveInventory("ImDead",1);
 	}
+	Thing_ChangeTID(tid, 0);
+	delay(35); // Some delay before switching back to the player
 	greymask[plr] = false;
-	while(IsTidUsed(tid))
-	{
-		delay(1);
-	}
 	SetNetworkReplicationFlags( NETREP_SKIPOWNER );
 	SetActorAngle(plrtid, origa);
 	SetActorPitch(plrtid, origP);
 	SetNetworkReplicationFlags( 0 );
 
 	SetActivator(plrtid);
+	ChangeCamera(0, false, false);
 	SetPlayerProperty(0,0,PROP_TOTALLYFROZEN);
 }
 
