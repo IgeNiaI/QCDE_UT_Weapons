@@ -3,7 +3,7 @@
 //	Weapons
 //==============================================================================
 
-$random UTDE/Other/BulletImpact { UTDE/Other/BulletImpact1 UTDE/Other/BulletImpact2 UTDE/Other/BulletImpact3 UTDE/Other/BulletImpact4 UTDE/Other/BulletImpact5 UTDE/Other/BulletImpact6 UTDE/Other/BulletImpact7 UTDE/Other/BulletImpact8 UTDE/Other/BulletImpact9 UTDE/Other/BulletImpact10 UTDE/Other/BulletImpact11 UTDE/Other/BulletImpact12 UTDE/Other/BulletImpact13 UTDE/Other/BulletImpact14 }
+$random UTDE/Other/BulletImpact { UTDE/Other/BulletImpact1 UTDE/Other/BulletImpact2 UTDE/Other/BulletImpact3 UTDE/Other/BulletImpact4 UTDE/Other/BulletImpact5 UTDE/Other/BulletImpact6 UTDE/Other/BulletImpact7 UTDE/Other/BulletImpact8 UTDE/Other/BulletImpact9 UTDE/Other/BulletImpact10 UTDE/Other/BulletImpact11 UTDE/Other/BulletImpact12 UTDE/Other/BulletImpact13 }
 
 UTDE/Other/BulletImpact1			"Sounds/Misc/BulletImpact1.wav"
 UTDE/Other/BulletImpact2			"Sounds/Misc/BulletImpact2.wav"
@@ -18,7 +18,6 @@ UTDE/Other/BulletImpact10			"Sounds/Misc/BulletImpact10.wav"
 UTDE/Other/BulletImpact11			"Sounds/Misc/BulletImpact11.wav"
 UTDE/Other/BulletImpact12			"Sounds/Misc/BulletImpact12.wav"
 UTDE/Other/BulletImpact13			"Sounds/Misc/BulletImpact13.wav"
-UTDE/Other/BulletImpact14			"Sounds/Misc/BulletImpact14.wav"
 
 
 //********************
@@ -613,7 +612,7 @@ $limit "UTDE/Weapons/Redeemer/RocketExplo" 3
 $limit "UTDE/Weapons/Redeemer/Fly" 5
 
 //Misc
-UTDE/Other/SpreeSound "Sounds/UTAnnounce/misc/SpreeSound.wav"
+UTDE/Other/SpreeSound "Sounds/UTAnnounce/SpreeSound.wav"
 
 
 //Announcer - Default UT99
